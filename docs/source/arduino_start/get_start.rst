@@ -1,0 +1,24 @@
+
+.. _get_start_arduino_ide:
+
+Get Started with Arduino IDE
+=======================================
+
+Arduino is an open source platform with simple software and hardware.
+You can pick it up in short time even if you are a beginner. It provides
+an integrated development environment (IDE) for code compiling,
+compatible with multiple control boards. So you can just download the
+Arduino IDE, upload the sketches (i.e. the code files) to the board, and
+then you can see relative experimental phenomena. For more information,
+refer to http://www.arduino.cc.
+
+Please follow the tutorial below to learn how to install the Arduino IDE, add libraries and upload code.
+
+.. toctree::
+    :maxdepth: 1
+
+    install_arduino_ide
+    download_add
+    upload_code
+
+
