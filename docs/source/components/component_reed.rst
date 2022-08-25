@@ -5,7 +5,7 @@ Reed Switch
 
 .. image:: img/reed.png
 
-The Reed Switch is an electrical switch that operates by means of an applied magnetic field. It was invented by Walter B. Ellwood of Bell Telephone Laboratories in 1936 and patented in the United States on June 27, 1940, under patent number 2264746 .
+The Reed Switch is an electrical switch that operates by means of an applied magnetic field. It was invented by Walter B. Ellwood of Bell Telephone Laboratories in 1936 and patented in the United States on June 27, 1940, under patent number 2264746.
 
 The principle of operation of a reed switch is very simple. Two reeds (usually made of iron and nickel, two metals) that overlap at the end points are sealed in a glass tube, with the two reeds overlapping and separated by a small gap (only about a few microns). The glass tube is filled with a high purity inert gas (such as nitrogen), and some reed switches are made to have a vacuum inside to enhance their high voltage performance. 
 

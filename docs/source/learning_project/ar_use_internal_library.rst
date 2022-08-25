@@ -1,13 +1,12 @@
 .. _ar_servo:
 
-5.2 Swinging Servo
-=========================
+5.5 Use Internal Library
+=======================================
 
-In this project, you will learn something about Servo. Servo is a kind of
-driver whose position (angular) can be adjustable and kept or a rotary
-actuator that allows for precise control of angular position. Currently,
-it is widely used in upscale remote control toys, such as airplane,
-submarine, telerobot and so on.
+
+In the Arduino IDE, you can use many built-in libraries by adding the corresponding ``.h`` file directly to your code.
+
+This project uses the ``Servo`` library to drive the Servo, so that it can rotate between 0° and 180°.
 
 
 **Schematic**
@@ -15,7 +14,7 @@ submarine, telerobot and so on.
 
 .. image:: img/circuit_6.2_servo.png
 
-In this example, we use PWM pin 9 to drive the Servo, and get the orange
+In this project, we use PWM pin 9 to drive the Servo, and get the orange
 wire of the servo connected to the PWM pin 9, the red one to 5V, and the
 brown one to GND.
 
@@ -31,15 +30,15 @@ brown one to GND.
 
 .. note::
 
-    * Open the ``5.2.swinging_servo.ino`` file under the path of ``3in1-kit\learning_project\5.2.swinging_servo`` .
+    * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\learning_project\5.5.use_internal_library``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/6382bc4e-7319-42a2-97cb-88b88dc2e755/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/fa27db71-b191-4eda-b5c7-bbbe5f2652ca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 Once you finish uploading the codes to the R3 board, you can see the servo arm rotating in the range 0°~180°.
 
 **How it works?**

@@ -1,6 +1,6 @@
 .. _ar_add_libraries:
 
-6. Components that Require a Library
+5.11 Add External Libraries
 =======================================
 
 Some components require special libraries, which are not included in the Arduino IDE and need to be added manually before compiling, otherwise you will get a "No such file or directory" message.

@@ -1,16 +1,16 @@
-.. _ar_74hc_7seg:
+.. _ar_segment:
 
-5.5 Number Display
-=======================
 
-7-segment Display can be seen everywhere in life.
-For example, on an air conditioner, it can be used to display temperature; on a traffic indicator, it can be used to display a timer.
+5.10 ShiftOut(Segment Display)
+===================================
+
+Previously, we used the ``shiftout()`` function to light up eight LEDs; here we use it to display 0-9 on the 7-aegment Display.
 
 The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 strip-shaped LEDs form an "8" shape, and there is a slightly smaller dotted LED as a decimal point. These LEDs are marked as a, b, c, d, e, f, g, and dp. They have their own anode pins and share cathodes. Their pin locations are shown in the figure below.
 
 .. image:: img/segment_cathode.png
-
-This means that it needs to be controlled by 8 digital pins at the same time to fully work and the 74HC595 can do this.
+    :width: 600
+    :align: center
 
 
 **Schematic**
@@ -18,9 +18,6 @@ This means that it needs to be controlled by 8 digital pins at the same time to 
 .. image:: img/circuit_6.5_segment.png
 
 **Wiring**
-
-
-
 
 .. list-table:: Wiring
     :widths: 15 25
@@ -46,6 +43,8 @@ This means that it needs to be controlled by 8 digital pins at the same time to 
         - dp
 
 .. image:: img/segment_bb.jpg
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -59,7 +58,7 @@ This means that it needs to be controlled by 8 digital pins at the same time to 
 
 .. note::
 
-    * Open the ``5.5.number_display.ino`` file under the path of ``3in1-kit\learning_project\5.5.number_display`` .
+    * Open the ``5.10.shiftout_segment.ino`` file under the path of ``3in1-kit\learning_project\5.10.shiftout_segment``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
@@ -67,27 +66,31 @@ This means that it needs to be controlled by 8 digital pins at the same time to 
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/644f2d1a-b163-4618-ae09-73d3283d61db/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/23b9a3ea-c648-4f33-8622-e279d94ee507/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 After the code is uploaded successfully, you will be able to see the LED Segment Display display 0~9 in sequence.
 
 **How it works?**
+
 
 ``shiftOut()`` will make 74HC595 output 8 digital signals.
 It outputs the last bit of the binary number to Q0, 
 and the output of the first bit to Q7. In other words, 
 writing the binary number "00000001" will make Q0 output high level and Q1~Q7 output low level.
 
-Suppose that the 7-segment Display display the number "1", 
-we need to write a high level for b, c, and write a low level for a, d, e, f, g, and dg.
-That is, the binary number "00000110" needs to be written. 
-For readability, we will use hexadecimal notation as "0x06".
+Suppose that the 7-segment Display display the number "2", 
+we need to write a high level for a, b, d, e and g, and write a low level for c, f and dp.
+That is, the binary number " 01011011" needs to be written. 
+For readability, we will use hexadecimal notation as "0x5b".
+
+.. image:: img/7_segment2.png
+
 
 * `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
 * `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-Similarly, we can also make the LED Segment Display display other numbers in the same way. 
+Similarly, we can also make the 7-Segment Display display other numbers in the same way. 
 The following table shows the codes corresponding to these numbers.
 
 .. list-table:: Glyph Code

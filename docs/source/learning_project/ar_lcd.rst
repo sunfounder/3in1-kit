@@ -1,6 +1,6 @@
 .. _ar_lcd1602:
 
-6.1 Liquid Crystal Display
+5.11.1 Liquid Crystal Display
 ===============================
 
 An I2C LCD1602 is composed of an LCD1602 and an I2C module, LCD1602 can be used to display characters, numbers, etc., but need to take up a lot of pins of the main control, after configuring an I2C module, only 2 I/0 pins are needed to drive this LCD1602.
@@ -16,6 +16,8 @@ Now look at how to make this I2C CDL1602 work.
 **Wiring**
 
 .. image:: img/lcd_bb.jpg
+    :width: 800
+    :align: center
 
 .. note::
     The SDA and SCL of the R3 board are the pins A4 and A5.
@@ -28,14 +30,14 @@ Now look at how to make this I2C CDL1602 work.
 
 .. note::
 
-    * Open the ``6.1.liquid_crystal_display.ino`` file under the path of ``3in1-kit\learning_project\6.1.liquid_crystal_display``.
+    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\learning_project\5.11.liquid_crystal_display``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/b4f91d26-166a-41ca-8394-b75944332611/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, you will see "Hello, Sunfounder!" on the I2C LCD1602.
 
 

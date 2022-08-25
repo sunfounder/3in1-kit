@@ -23,6 +23,8 @@ Therefore, a soil moisture sensor is required.
 
 
 .. image:: img/measure_the_moisture_bb.jpg
+    :width: 800
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_wires`
@@ -32,15 +34,15 @@ Therefore, a soil moisture sensor is required.
 
 .. note::
 
-    * Open the ``4.4.measure_soil_moisture.ino`` file under the path of ``3in1-kit\learning_project\4.4.measure_soil_moisture`` .
+    * Open the ``4.4.measure_soil_moisture.ino`` file under the path of ``3in1-kit\learning_project\4.4.measure_soil_moisture``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1b40d3d5-e400-412e-ba9a-567b5f35f9ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/b6f7e756-0f14-4117-9bb2-ee5083b6445f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
 
 By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.

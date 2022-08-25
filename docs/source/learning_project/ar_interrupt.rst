@@ -1,6 +1,6 @@
 .. _ar_interrupt:
 
-7.6 Interrupt
+5.13 Interrupt
 =======================
 
 If you use some ``delay()`` in a project that uses sensors, you may find that when you trigger these sensors, the program may have no effect.
@@ -27,7 +27,8 @@ Put the button to control the buzzer into the ISR, so that it will not be distur
 **Wiring**
 
 .. image:: img/interrupt_bb.jpg
-
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -41,15 +42,14 @@ Put the button to control the buzzer into the ISR, so that it will not be distur
 
 .. note::
 
-    * Open the ``7.6.interrupt.ino`` file under the path of ``3in1-kit\learning_project\7.6.interrupt`` .
+    * Open the ``5.13.interrupt.ino`` file under the path of ``3in1-kit\learning_project\5.13.interrupt``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/20996597-dbcf-4efd-bb9d-57c0cb389fc2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/6111757d-dd63-4c4c-95b5-9d96fb0843f0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is successfully uploaded, turn on the Serial Monitor and you will see an auto-incrementing number printed out every second. If you press the button, the buzzer will sound.
 The button-controlled buzzer function and the timing function do not conflict with each other.

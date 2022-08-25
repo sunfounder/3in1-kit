@@ -16,6 +16,8 @@ The principle of this circuit is simple and the current direction is shown in th
 **Wiring**
 
 .. image:: img/wiring_led.png
+    :width: 400
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -39,7 +41,7 @@ The principle of this circuit is simple and the current direction is shown in th
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e5110a9b-75eb-41cb-8ca8-6b448e0610bf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/0497f915-5bf8-41a2-8e0f-b013130a57f5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is uploaded successfully, you will see the LED blinking.
 

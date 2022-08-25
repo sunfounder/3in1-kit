@@ -21,6 +21,8 @@ Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
 
 
 .. image:: img/detect_the_obstacle_bb.jpg
+    :width: 800
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_avoid`
@@ -38,6 +40,6 @@ Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/b60b6136-1f68-40dc-bd08-0a1086b5d016/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/535a0304-684e-481d-b85d-403911b3a4e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 When the IR obstacle avoidance module detects something blocking in front of it, [0] will appear on the serial monitor, otherwise [1] will be displayed.

@@ -1,7 +1,9 @@
-.. _ar_74hc595:
+.. _ar_shiftout:
 
-5.4 Microchip - 74HC595
-=============================
+5.9 ShiftOut(LED)
+=======================
+
+``shiftOut()`` will make 74HC595 output 8 digital signals. It outputs the last bit of the binary number to Q0, and the output of the first bit to Q7. In other words, writing the binary number “00000001” will make Q0 output high level and Q1~Q7 output low level.
 
 In this project, you will learn how to use 74HC595. 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
 
@@ -24,6 +26,8 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 **Wiring**
 
 .. image:: img/74hc595_bb.jpg
+    :width: 800
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -36,7 +40,7 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 
 .. note::
 
-    * Open the ``5.4.microchip_74hc595.ino`` file under the path of ``3in1-kit\learning_project\74hc595`` .
+    * Open the ``5.9.shiftout_led.ino`` file under the path of ``3in1-kit\learning_project\5.9.shiftout_led``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
@@ -44,8 +48,8 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/f41a30d0-4d49-4eba-b643-e34b28abb377/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/4c208eb3-67f0-40f7-999a-0eeca8b6b466/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 When you finish uploading the codes to the R3 board, you can see the LEDs turning on one after another.
 
 **How it works?**

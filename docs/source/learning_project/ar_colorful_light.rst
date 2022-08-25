@@ -38,6 +38,8 @@ the left pin next to the longest pin is Red, and the 2 pins on the right are Gre
 
 
 .. image:: img/colorful_light_bb.jpg
+    :width: 500
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -59,8 +61,7 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bf5d9d89-6cc1-4a56-8049-d7e57f996744/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/5d70e864-4f34-4090-b65d-904350091936/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. image:: img/edit_colors.png
 

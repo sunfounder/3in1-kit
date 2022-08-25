@@ -1,6 +1,6 @@
 .. _ar_map:
 
-7.3 Map
+5.6 Map
 ===================
 
 If you observe carefully, you will notice that many values have different ranges in programming.
@@ -21,6 +21,8 @@ Now let's see how to achieve it.
 **Wiring**
 
 .. image:: img/map_bb.jpg
+    :width: 800
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -32,15 +34,15 @@ Now let's see how to achieve it.
 
 .. note::
 
-    * Open the ``7.3.map.ino`` file under the path of ``3in1-kit\learning_project\7.3.map``.
+    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\learning_project\5.6.map``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/b8865dab-8346-4a06-a1dc-3be4d69c4fa0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/f00e4c4c-fb13-4445-9d89-eb2857b5fe87/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, you can rotate the potentiometer back and forth, and the output shaft of the servo will rotate back and forth.
 
 **How it works?**

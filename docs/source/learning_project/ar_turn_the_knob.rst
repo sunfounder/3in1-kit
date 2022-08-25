@@ -26,6 +26,8 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 **Wiring**
 
 .. image:: img/turn_thek_knob_bb.jpg
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -44,7 +46,8 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/aa6f7d92-7520-4b25-8f2f-0c7244c04111/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/d931f2c9-74bc-4a53-8531-39a21a07dbaf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
     
 After uploading the codes to the board, you can open the serial
 monitor to see the reading value of the pin. When rotating the axis of

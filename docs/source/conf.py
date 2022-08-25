@@ -19,7 +19,7 @@
 import sphinx_rtd_theme
 
 project = 'SunFounder 3in1 Kit'
-copyright = '2021, SunFounder'
+copyright = '2022, SunFounder'
 author = 'www.sunfounder.com'
 
 
@@ -52,16 +52,16 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # SunFounder logo
 
 html_js_files = [
-    'https://ezblock.cc/readDocFile/topHead.js',
+    'https://ezblock.cc/readDocFile/custom.js',
 ]
 html_css_files = [
-    'https://ezblock.cc/readDocFile/topHead.css',
+    'https://ezblock.cc/readDocFile/custom.css',
 ]
 
 #### RTD+
 
 # html_js_files = [
-#     'https://ezblock.cc/readDocFile/topHead.js',
+#     'https://ezblock.cc/readDocFile/custom.js',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/js/ace.js',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/js/ext-language_tools.js',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/js/theme-chrome.js',
@@ -74,7 +74,7 @@ html_css_files = [
 
 # ]
 # html_css_files = [
-#     'https://ezblock.cc/readDocFile/topHead.css',
+#     'https://ezblock.cc/readDocFile/custom.css',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/css/index.css',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/css/xterm.css',
 # ]

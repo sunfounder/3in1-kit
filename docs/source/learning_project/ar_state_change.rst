@@ -1,6 +1,6 @@
 .. _ar_state_change:
 
-7.4 State Change Detection
+5.3 State Change Detection
 ===========================
 
 When the button controls other devices, it can not only work when it is pressed, but stop when it is released.
@@ -20,6 +20,8 @@ In this project, we will use the button to control the motor.
 **Wiring**
 
 .. image:: img/state_change_bb.jpg
+    :width: 800
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -34,15 +36,15 @@ In this project, we will use the button to control the motor.
 
 .. note::
 
-    * Open the ``7.4.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\7.4.state_change_detection``.
+    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\5.3.state_change_detection``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e32881f0-aabb-4572-9068-831d7bbfcb1d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/67a62a3d-46d3-4f5f-889c-364cbdf9b66f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, you press the button and the motor will turn; until you press the button again, the motor will stop.
 
 

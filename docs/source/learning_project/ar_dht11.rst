@@ -1,7 +1,7 @@
 .. _ar_dht11:
 
 
-6.3 Temperature - Humidity
+5.11.3 Temperature - Humidity
 =======================================
 
 Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
@@ -39,13 +39,13 @@ The dht11, a digital temperature and humidity sensor, is provided in this kit. I
 
 .. note::
 
-    * Open the ``6.3.temperature_humidity.ino`` file under the path of ``3in1-kit\learning_project\6.3.temperature_humidity``.
+    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\learning_project\5.11.temperature_humidity``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8b7f94fa-a05d-4a7b-85e1-7be6e60103af/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/c5b4c902-f39d-45a6-9a17-1308056041a8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
 

@@ -1,10 +1,15 @@
 .. _ar_passive_buzzer:
 
-5.1 Custom Tone
-===================
+5.7 ``Tone()`` or ``noTone()``
+===============================
 
-In this project, you will get to know about passive buzzer. Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used. But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as “doh, re, mi, fa, sol, la, ti”.
 
+``Tone()`` is used to generate a square wave of the specified frequency (and 50% duty cycle) on a pin. A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
+
+In this project, use this two functions to make the passive buzzer vibrate to make sound. 
+Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. 
+The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used. 
+But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as “doh, re, mi, fa, sol, la, ti”.
 
 
 **Schematic**
@@ -28,7 +33,7 @@ Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9.
 
 .. note::
 
-    * Open the ``5.1.custom_tone.ino`` file under the path of ``3in1-kit\learning_project\5.1.custom_tone`` .
+    * Open the ``5.7.tone_notone.ino`` file under the path of ``3in1-kit\learning_project\5.7.tone_notone``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
@@ -36,8 +41,8 @@ Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/81641438-a95c-4e29-a0ea-896cefe68f7e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/9212e985-1f31-4bd9-bee6-f29357035aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 At the time when you finish uploading the codes to the R3 board, you can hear a melody containing seven notes. 
 
 **How it works?**
@@ -58,7 +63,7 @@ There are two points needing your attention:
     * ``duration``: The duration of the tone in milliseconds (optional)
 
 
-Generates a square wave of the specified frequency (and 50% duty cycle) on a pin (so as to make the passive buzzer vibrate to make sound). A duration can be specified, otherwise the wave continues until a call to noTone(). 
+Generates a square wave of the specified frequency (and 50% duty cycle) on a pin (so as to make the passive buzzer vibrate to make sound). A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
 The pin can be connected to a piezo buzzer or other speaker to play tones.
 
 Only one tone can be generated at a time. If a tone is already playing on a different pin, the call to ``tone()`` will have no effect. If the tone is playing on the same pin, the call will set its frequency.

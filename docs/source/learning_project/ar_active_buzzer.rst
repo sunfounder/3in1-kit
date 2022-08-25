@@ -19,6 +19,8 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
 **Wiring**
 
 .. image:: img/wiring_active_buzzer.png
+    :width: 400
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -37,6 +39,6 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
 
 .. raw:: html
     
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a4345ce8-58e4-45b6-ae8b-c6e4bf0a1aa2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/95570ca2-11c6-404c-a23f-bf03094d8085/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is uploaded successfully, you will hear a beep every second.

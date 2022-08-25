@@ -38,6 +38,8 @@ The calculation formula is shown below.
     * The thermistor is black or green and marked 103.
 
 .. image:: img/thermistor_bb.jpg
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -50,7 +52,7 @@ The calculation formula is shown below.
 
 .. note::
 
-   * You can open the file ``2.13_thermometer.ino`` under the path of ``euler-kit/arduino/2.13_thermometer``. 
+   * You can open the file ``4.5_thermometer.ino`` under the path of ``euler-kit/arduino/4.5_thermometer``. 
    * Or copy this code into **Arduino IDE**.
    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
@@ -60,8 +62,8 @@ The calculation formula is shown below.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/2349e406-f25a-402e-9980-23b8747b0493/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/1ceb0ea2-a330-4052-824d-bd6762c6f0e0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 
 After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
 

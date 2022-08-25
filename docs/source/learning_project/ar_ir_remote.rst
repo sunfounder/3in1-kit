@@ -1,6 +1,6 @@
 .. _ar_receiver:
 
-6.2 IR Receiver
+5.11.2 IR Receiver
 =========================
 
 
@@ -34,14 +34,15 @@ the middle pin to GND, and the right pin to 5V.
 
 .. note::
 
-    * Open the ``6.2.ir_remote_control.ino`` file under the path of ``3in1-kit\learning_project\6.2.ir_remote_control`` .
+    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\learning_project\5.11.ir_receiver``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
 
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/20205df9-1753-42d8-bb63-ef4766d03702/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 
 After uploading the codes to the R3 board, you can see that the
 current value of the pressed button of IR Remote Controller displays on

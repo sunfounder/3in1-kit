@@ -49,10 +49,10 @@ You need the ``analogRead(pin)`` function to read the value of the analog pin.
 Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   ar_turn_the_knob
-   ar_photoresistor
-   ar_thermistor
-   ar_joystick
-   ar_moisture
+    ar_turn_the_knob
+    ar_photoresistor
+    ar_joystick
+    ar_moisture
+    ar_thermistor

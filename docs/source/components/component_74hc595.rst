@@ -27,7 +27,8 @@ Pins of 74HC595 and their functions:
 
 **Example**
 
-* :ref:`ar_74hc595` (Learning Project)
+* :ref:`ar_shiftout` (Learning Project)
+* :ref:`ar_segment` (Learning Project)
 * :ref:`iot_gate` (IoT Project)
 
 

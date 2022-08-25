@@ -25,9 +25,10 @@ pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 
 **Wiring**
 
-* :ref:`cpn_button`
 
 .. image:: img/read_the_button_value_bb.jpg
+    :width: 600
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -48,7 +49,7 @@ pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/3efe5497-7782-410c-a655-27d9343360a0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/b456ff57-4dfb-4231-9d91-f1e9a5777de2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is uploaded successfully, click the magnifying glass icon in the upper right corner of the Arduino IDE (Serial Monitor).
 

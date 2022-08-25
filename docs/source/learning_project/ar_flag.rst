@@ -1,6 +1,6 @@
 .. _ar_if_else:
 
-7.1 If else
+5.1 If else
 ==============
 
 Usually we use conditional judgment to complete the most basic reality interaction projects.
@@ -17,6 +17,8 @@ When the door is closed, the magnet is close to the reed switch, which will turn
 **Wiring**
 
 .. image:: img/if_else_bb.jpg
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -30,15 +32,15 @@ When the door is closed, the magnet is close to the reed switch, which will turn
 
 .. note::
 
-    * Open the ``7.1.if_else.ino`` file under the path of ``3in1-kit\learning_project\7.1.if_else`` .
+    * Open the ``5.1.if_else.ino`` file under the path of ``3in1-kit\learning_project\5.1.if_else``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e3b38c56-0b12-45d9-9976-f0a09799440e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/c7bf6236-1276-45a0-8d34-008d2d838476/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, if you do not close the door, the LED will light up, prompting you to close the door.
 
 By the way, if we need the opposite effect (lighting up the LED when the door is closed), we just need to modify the condition in the ``if``.

@@ -26,6 +26,9 @@ GND to GND, OUT to digital pin 2.
 
 
 .. image:: img/detect_the_line_bb.jpg
+    :width: 500
+    :align: center
+
 
 * :ref:`cpn_uno`
 * :ref:`cpn_track`
@@ -43,6 +46,6 @@ GND to GND, OUT to digital pin 2.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/defc3ca0-f4b5-4f96-83b1-ef507f055e29/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/9795add6-c838-4a66-b484-0c39f252a7b4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 When the line tracking module detects there is black line, there appears [1] on the Serial Monitor; otherwise, [0] is displayed.

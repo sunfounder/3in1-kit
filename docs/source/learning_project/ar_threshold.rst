@@ -1,6 +1,6 @@
 .. _ar_threshold:
 
-7.2 Threshold
+5.2 Threshold
 =======================
 
 In many projects, you will encounter such a need.
@@ -16,7 +16,7 @@ For example, if I like a brighter living environment, I can increase the thresho
 Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
 
 
-Here we use soil moisture sensor and RGB LED to make a pot monitor. If the soil is too dry, the light will be red; if the soil is moist enough, the light will be blue. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
 
 
 **Schematic**
@@ -25,13 +25,15 @@ Here we use soil moisture sensor and RGB LED to make a pot monitor. If the soil 
 
 **Wiring**
 
-.. image:: img/threshold_bb.jpg
+.. image:: img/threshold_bb.png
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_resistor`
-* :ref:`cpn_rgb`
+* :ref:`cpn_led`
 * :ref:`cpn_soil_moisture`
 * 
 
@@ -39,15 +41,15 @@ Here we use soil moisture sensor and RGB LED to make a pot monitor. If the soil 
 
 .. note::
 
-    * Open the ``7.2.threshold.ino`` file under the path of ``3in1-kit\learning_project\7.2.threshold`` .
+    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\learning_project\5.2.threshold``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e379d512-6ee8-40cc-92a9-b378e3d9f4bf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
-After the code is uploaded successfully, if your threshold is set correctly, you will see the RGB LED show red when the soil is dry to remind you that you need to water; after watering, the color of the RGB LED will change to blue.
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
+After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
 
 **How it works**
 
@@ -55,22 +57,21 @@ After the code is uploaded successfully, if your threshold is set correctly, you
 
     ...
 
-    int threshold = 900;
-
-    ...
     void loop() {
         int sensorValue = analogRead(soilMoisture);
         Serial.println(sensorValue);
-        if(sensorValue>threshold){
-            color(255,0,252); // red
-        }else{
-            color(0,112,255); // blue
+        if (sensorValue > threshold) {
+            digitalWrite(redPin, HIGH); // Turn the red LED
+            digitalWrite(greenPin, LOW); // green
+        } else {
+            digitalWrite(greenPin, HIGH); // Turn on the green LED
+            digitalWrite(redPin, LOW); // red
         }
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the RGB LED show red, otherwise it will show blue.
+First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the humidity value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
+This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
 
 

@@ -31,6 +31,8 @@ This kit also includes a joystick with a digital input. It is activated when the
 
 
 .. image:: img/toggle_the_joystick_bb.jpg
+    :width: 800
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -43,14 +45,14 @@ This kit also includes a joystick with a digital input. It is activated when the
 
 .. note::
 
-    * Open the ``4.3.toggle_the_joystick.ino`` file under the path of ``3in1-kit\learning_project\4.3.toggle_the_joystick`` .
+    * Open the ``4.3.toggle_the_joystick.ino`` file under the path of ``3in1-kit\learning_project\4.3.toggle_the_joystick``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/76cddb07-2861-4678-8f13-4fda860b196a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/f678a03f-546c-42ed-bfae-b8c7daa5eec9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
 

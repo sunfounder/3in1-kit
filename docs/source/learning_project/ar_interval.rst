@@ -1,6 +1,6 @@
 .. _ar_interval:
 
-7.5 Interval
+5.4 Interval
 ================
 
 Sometimes you need to do two things at once. For example you might want
@@ -41,6 +41,8 @@ it will not be disturbed by the buzzer playing music.
 **Wiring**
 
 .. image:: img/interval_bb.jpg
+    :width: 600
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -54,15 +56,15 @@ it will not be disturbed by the buzzer playing music.
 
 .. note::
 
-    * Open the ``7.5.interval.ino`` file under the path of ``3in1-kit\learning_project\7.5.interval`` .
+    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\learning_project\5.4.interval``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/9c329fa2-c807-4987-b6a3-0a38d4eb5243/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
 
 **How it works?**

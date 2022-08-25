@@ -31,7 +31,8 @@ The calculation formula is shown below.
 **Wiring**
 
 .. image:: img/feel_the_light_bb.jpg
-
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -43,14 +44,14 @@ The calculation formula is shown below.
 
 .. note::
 
-    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\learning_project\4.2.feel_the_light`` .
+    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\learning_project\4.2.feel_the_light``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/837d3277-73a8-4a9e-9a4f-a2048885b00b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/e1bc4c8b-788e-4bfe-a0a1-532d4fdc7753/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, the serial monitor prints out the photoresistor values. 
 The stronger the current ambient brightness, the larger the value displayed on the serial monitor.

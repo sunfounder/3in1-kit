@@ -25,6 +25,8 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 
 
 .. image:: img/feel_the_magnetism_bb.jpg
+    :width: 600
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -44,7 +46,7 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fec151b3-5e1e-4513-863b-86b738d53b05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/d28c942e-5144-44a1-85d8-d5e6894fc5df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, when a magnet is near the reed switch, the serial monitor will print 1.
 

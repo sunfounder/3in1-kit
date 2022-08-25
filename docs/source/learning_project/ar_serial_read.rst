@@ -1,6 +1,6 @@
 .. _ar_serial_read:
 
-7.7 Serial Read
+5.12 Serial Read
 ======================
 
 You may have noticed this when using the ``Serial.print()`` function.
@@ -18,6 +18,8 @@ In this project, we will use the I2C LCD1602 to display the text entered in the 
 **Wiring**
 
 .. image:: img/lcd_bb.jpg
+    :width: 800
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -28,15 +30,15 @@ In this project, we will use the I2C LCD1602 to display the text entered in the 
 
 .. note::
 
-    * Open the ``7.7.serial_read.ino`` file under the path of ``3in1-kit\learning_project\7.7.serial_read``.
+    * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\learning_project\5.12.serial_read``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/133220ea-74b1-4f73-a358-e8a80186fe97/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/a6197c53-6969-402e-8930-84a9165397b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, you can enter text in the text box on the serial monitor, and the LCD will display the information.
 
 

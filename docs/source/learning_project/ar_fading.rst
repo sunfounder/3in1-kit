@@ -17,6 +17,8 @@ The former is to make the LED light on or off by outputting a digital signal (0&
 **Wiring**
 
 .. image:: img/wiring_led.png
+    :width: 500
+    :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`
@@ -37,6 +39,6 @@ The former is to make the LED light on or off by outputting a digital signal (0&
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/2ef115b2-72d5-436f-b634-43455c00cb7e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a7e52a4-fcb3-4c3b-98ff-f3f657822d72/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    
 After the code is uploaded successfully, you can see the LED breathing.

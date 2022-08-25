@@ -1,6 +1,6 @@
 .. _ar_calibration:
 
-7.8 Calibration
+5.14 Calibration
 ==========================
 
 When you use analog input components, such as photoresistors, soil moisture sensors, etc., you may find that their reading range is not 0 to 1023, but rather a range like 0 to 800 or 600 to 1000, because it is impossible to reach the limits of these devices with normal use.
@@ -22,6 +22,8 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 **Wiring**
 
 .. image:: img/calibration_bb.jpg
+    :width: 600
+    :align: center
 
 
 * :ref:`cpn_uno`
@@ -36,14 +38,15 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 
 .. note::
 
-    * Open the ``7.8.calibration.ino`` file under the path of ``3in1-kit\learning_project\7.8.calibration``.
+    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\learning_project\5.14.calibration``.
     * Or copy this code into **Arduino IDE**.
     * For detailed tutorials, please refer to :ref:`ar_upload_code`.
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/141ec396-913c-4641-bc8b-5d440a484355/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/9cbcaae0-3c9d-4e33-9957-548f92a9aab7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
 
 After the code is uploaded successfully, the LED will light up, and we will have 5 seconds to calibrate the detection range of the photoresistor. This is because we may be in a different light environment each time we use it (e.g. the light intensity is different between midday and dusk).
 
