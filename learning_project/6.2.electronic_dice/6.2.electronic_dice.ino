@@ -1,11 +1,10 @@
-#include <EEPROM.h>
-
 const int STcp = 12;//Pin connected to ST_CP of 74HC595
 const int SHcp = 8;//Pin connected to SH_CP of 74HC595
-const int DS = 11; //Pin connected to DS of 7 4HC595
+const int DS = 11; //Pin connected to DS of 74HC595
 const int buttonPin = 2;
 int datArray[] = { 0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f,  0x6f};
-
+int number = 0;
+int state = 0;
 
 void setup ()
 {
@@ -14,8 +13,16 @@ void setup ()
   pinMode(SHcp, OUTPUT);
   pinMode(DS, OUTPUT);
   pinMode(buttonPin, INPUT);
-  Serial.begin(9600);
+
   attachInterrupt(digitalPinToInterrupt(buttonPin), rollDice, FALLING);
+}
+
+void loop()
+{
+  if (state == 0) {
+    showNumber((int)random(1, 7));
+    delay(50);
+  }
 }
 
 void showNumber(int num) {
@@ -26,15 +33,7 @@ void showNumber(int num) {
   digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
 }
 
-void loop()
-{
-  int number = EEPROM.read(0);
-  Serial.println(number);
-  showNumber(number);
-  delay(500);
-}
 
 void rollDice() {
-  EEPROM.write(0, (int)random(1, 7));
-  
+  state = !state;
 }
