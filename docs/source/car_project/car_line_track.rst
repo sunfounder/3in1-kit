@@ -54,7 +54,7 @@ Observe the signal LED on the module to make sure it lights up on the white tabl
 
 If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
 
-.. image:: img/line_track_cali.jpg
+.. image:: img/line_track_cali.JPG
 
 **Code**
 

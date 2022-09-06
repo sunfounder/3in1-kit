@@ -6,13 +6,13 @@
 We used the Blynk APP on the cell phone to control the car for this project. But you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
 In the era of 5G network popularity, this mode may become one of the main production methods in many industries, so let's experience this play in advance.
 
-**Wiring**
+**1. Build the Cirduit**
 
-.. image:: img/wiring_car.jpg
+.. image:: img/wiring_iot_car.jpg
     :width: 800
 
 
-**Dashboard**
+**2. Edit Dashboard**
 
 
 Blynk on mobile cannot edit Datastream, so we still need to do these steps on the web side.
@@ -46,24 +46,38 @@ Next you need to do the following on your phone.
 .. image:: img/APP_3.jpg
 
 
-**Code**
+**3. Run the Code**
 
 
-Open the ``8.iot_car.ino`` file under the path of ``3in1-kit\iot_project\8.iot_car``, or copy this code into **Arduino IDE**, for detailed tutorials, please refer to :ref:`ar_upload_code`.
+#. Open the ``8.iot_car.ino`` file under the path of ``3in1-kit\iot_project\8.iot_car``, or copy this code into **Arduino IDE**.
+
+    .. raw:: html 
+        
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/a1db6c35-2f26-425c-8636-53d2df7936d7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
+#. After selecting the correct board and port, click the **Upoad** button.
+
+#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+
+    .. image:: img/2_ready.png
+
+    .. note::
+
+        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+
+        * Make sure the 9V battery is plugged in.
+        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
+        * Press the reset button on the R3 board.
+
+        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+
+#. Now unplug the USB cable and power the cart with a 9V battery alone, then wait for the LED to light up, representing that the car is connected to Blynk.
+#. Open Blynk on your phone and you can use the Joystick widget to control the movement of the car.
+
+    .. image:: img/iot_car.jpg
 
 
-.. note::
-    Before using the sample code, be sure to replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using.
-
-
-.. raw:: html 
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/a1db6c35-2f26-425c-8636-53d2df7936d7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-
-You will need a 9V battery to power the car once the code has been uploaded successfully. Wait for the LED to light up to indicate that the car is connected to Blynk.
-
-At this time, control the Joystick widget on Blynk, the car will follow the movement.
 
 **How it works?**
 

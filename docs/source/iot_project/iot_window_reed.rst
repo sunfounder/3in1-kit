@@ -13,7 +13,13 @@ Blynk.cloud will receive this value so that you can see if your house's doors an
 Now we will use an LED widget in Blynk to indicate if your windows and doors are closed (i.e. if the Reed Switch is on or off).
 
 
-**Wiring**
+**1. Build the Cirduit**
+
+
+.. note::
+
+    The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
+
 
 .. image:: img/wiring_reed.jpg
 
@@ -23,7 +29,7 @@ Now we will use an LED widget in Blynk to indicate if your windows and doors are
 * :ref:`cpn_reed`
 
 
-**Dashboard**
+**2. Edit Dashboard**
 
 #. Create a **Datastream** of type **Virtual Pin** in the **Datastream** page to get the value of Reed Switch. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **1**.
 
@@ -37,22 +43,36 @@ Now we will use an LED widget in Blynk to indicate if your windows and doors are
 
     .. image:: img/sp220609_163502.png
 
-**Code**
+**3. Run the Code**
 
-Open the ``3.push_data_to_blynk.ino`` file under the path of ``3in1-kit\iot_project\3.push_data_to_blynk``, or copy this code into **Arduino IDE**, for detailed tutorials, please refer to :ref:`ar_upload_code`.
-
-.. note::
-    Before using the sample code, be sure to replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using.
+#. Open the ``3.push_data_to_blynk.ino`` file under the path of ``3in1-kit\iot_project\3.push_data_to_blynk``, or copy this code into **Arduino IDE**.
 
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e81b0024-c11e-4507-8d43-aeb3b6656c2c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. raw:: html
+        
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/e81b0024-c11e-4507-8d43-aeb3b6656c2c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
+#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
+#. After selecting the correct board and port, click the **Upoad** button.
 
-After uploading the code to the R3 board, wait for the serial monitor to show ``ready`` and the status of Blynk to change to online, at which point Blynk will show the status of your doors and windows.
-If your doors and windows are closed, the LED widget will be green, otherwise, it will be gray.
+#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+
+    .. image:: img/2_ready.png
+
+    .. note::
+
+        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+
+        * Make sure the 9V battery is plugged in.
+        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
+        * Press the reset button on the R3 board.
+
+        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+
+#. Now, Blynk will show the status of your doors and windows. If your doors and windows are closed, the LED widget will be green, otherwise, it will be gray.
+
+#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
 
 
 

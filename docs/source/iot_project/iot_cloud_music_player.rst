@@ -7,7 +7,11 @@ The goal of this project is to create a music player using Blynk.
 Music is played in the same way as in :ref:`ar_passive_buzzer`, by writing the song in the program and playing it with a passive buzzer.
 however, in this example, we can click the switch to play/pause and slide the slider to change the playback progress.
 
-**Wiring**
+**1. Build the Cirduit**
+
+.. note::
+
+    The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
 
 .. image:: img/wiring_buzzer.jpg
 
@@ -16,7 +20,7 @@ however, in this example, we can click the switch to play/pause and slide the sl
 * :ref:`cpn_esp8266`
 * :ref:`cpn_buzzer`
 
-**Dashboard**
+**2. Edit Dashboard**
 
 #. Create a **Datastream** of type **Virtual Pin** on the **Datastream** page as the value modified by the Slider widget added later or code. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **30**.
 
@@ -36,21 +40,38 @@ however, in this example, we can click the switch to play/pause and slide the sl
 
 
 
-**Code**
+**3. Run the Code**
 
-Open the ``4.cloud_music_player.ino`` file under the path of ``3in1-kit\iot_project\4.cloud_music_player``, or copy this code into **Arduino IDE**, for detailed tutorials, please refer to :ref:`ar_upload_code`.
+#. Open the ``4.cloud_music_player.ino`` file under the path of ``3in1-kit\iot_project\4.cloud_music_player``.
 
-.. note::
-    Before using the sample code, be sure to replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using.
+    .. raw:: html
+
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/34a49c4b-9eb4-4d03-bd78-fe1daefc9f5c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
+#. After selecting the correct board and port, click the **Upoad** button.
+
+#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
 
 
-.. raw:: html
+    .. image:: img/2_ready.png
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/34a49c4b-9eb4-4d03-bd78-fe1daefc9f5c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. note::
 
+        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
 
+        * Make sure the 9V battery is plugged in.
+        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
+        * Press the reset button on the R3 board.
 
-After the code is uploaded successfully, you can use Blynk's Button Control widget to start/pause the music and the Slider to adjust the playback progress, and you'll also see the name of the music.
+        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+
+#. Now, you can use Blynk's Button Control widget to start/pause the music and the Slider to adjust the playback progress, and you'll also see the name of the music.
+
+    .. image:: img/sp220610_110105.png
+
+#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+
 
 **How it works?**
 

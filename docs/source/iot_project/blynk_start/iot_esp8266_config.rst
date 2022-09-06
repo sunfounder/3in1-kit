@@ -17,7 +17,7 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
         void loop() {
         }
 
-2. Wiring
+2. Build the circuit.
 
     .. image:: img/wiring_01.jpg
 

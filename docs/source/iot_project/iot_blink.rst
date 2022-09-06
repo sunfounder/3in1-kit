@@ -5,7 +5,11 @@
 
 You will learn how to control the circuit with Blynk in this chapter. Let's light up the LEDs over the Internet!
 
-**Wiring**
+**1. Build the Cirduit**
+
+.. note::
+
+    The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
 
 .. image:: img/wiring_led.jpg
 
@@ -17,7 +21,7 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
 
 
-**Dashboard**
+**2. Edit Dashboard**
 
 #. Go to the **Quickstart Device** you created earlier, click on the menu icon in the upper right corner and select **edit dashboard**.
 
@@ -63,22 +67,39 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
     .. image:: img/sp220609_141733.png
 
-**Code**
+**3. Run the Code**
 
-Open the ``2.get_data_from_blynk.ino`` file under the path of ``3in1-kit\iot_project\2.get_data_from_blynk``, or copy this code into **Arduino IDE**, for detailed tutorials, please refer to :ref:`ar_upload_code`.
+#. Open the ``2.get_data_from_blynk.ino`` file under the path of ``3in1-kit\iot_project\2.get_data_from_blynk``, or copy this code into **Arduino IDE**.
 
-.. note::
-    Before using the sample code, be sure to replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using.
+    .. raw:: html
+        
+        <iframe src=https://create.arduino.cc/editor/sunfounder01/06b187a8-dabf-4866-b38c-742e0446cc3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
 
+#. After selecting the correct board and port, click the **Upoad** button.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/06b187a8-dabf-4866-b38c-742e0446cc3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    .. image:: img/2_upload.png
 
+#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
 
+    .. image:: img/2_ready.png
 
-After uploading the code to the R3 board, wait for the serial monitor shows ``ready`` and the status of Blynk changes to online, you can use the switch widget on Blynk to control the LED connected to the R3 board.
+    .. note::
+
+        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+
+        * Make sure the 9V battery is plugged in.
+        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
+        * Press the reset button on the R3 board.
+
+        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+
+#. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R3 board.
+
+    .. image:: img/2_blynk_button.png
+
+#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
 
 
 **How it works?**

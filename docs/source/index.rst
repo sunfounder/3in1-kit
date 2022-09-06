@@ -51,6 +51,7 @@ The steps are as follows.
     car_project/car_project
     iot_project/iot_project
     pictoblox/play_with_scratch
+    faq
     thank-learning
 
 Copyright Notice

@@ -5,6 +5,10 @@
 
 #. Reconnect the ESP8266 module and R3 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R3 board respectively.
 
+    .. note::
+
+        The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
+
     .. image:: img/wiring_23.jpg
 
 #. Open the ``1.connect.ino`` file under the path of ``3in1-kit\iot_project\1.connect``. Or copy this code into **Arduino IDE**.
@@ -30,15 +34,19 @@
         char ssid[] = "ssid";
         char pass[] = "password";
 
-#. Connect 9V power supply for R3 board, this is because ESP8266 needs higher current to provide stable working environment when it is connected to internet.
-
 #. Upload the code to the R3 board, then open the serial monitor and set the baud rate to 115200. when the R3 board communicates with Blynk successfully, the serial monitor will show the ``ready`` character.
 
     .. image:: img/sp220607_170223.png
 
     .. note::
+    
+        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
 
-        If ``ESP is not responding`` prompt appears when connecting, please check if the 9V power connection is normal, and try to reset the ESP8266 module by connecting the pin RST to GND for about 1 second and then unplug it, and then turn on the serial monitor again.
+        * Make sure the 9V battery is plugged in.
+        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
+        * Press the reset button on the R3 board.
+
+        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
 
 #. The status of Blynk will change from **offline** to **online**.
 
