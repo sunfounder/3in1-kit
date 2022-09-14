@@ -16,7 +16,7 @@ The count is displayed with a 7-segment display and is also uploaded to the Blyn
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
+    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 
 .. image:: img/wiring_servo_segment.jpg

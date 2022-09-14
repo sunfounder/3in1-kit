@@ -12,7 +12,7 @@ By sending these values to Blynk, you will be able to know the environment of yo
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment when connected to the Internet, so make sure the 9V battery is plugged in.
+    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 .. image:: img/wiring_dht11.jpg
 
