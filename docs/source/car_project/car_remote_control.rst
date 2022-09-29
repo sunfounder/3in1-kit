@@ -78,7 +78,7 @@ The effect of this project is to make the car move by reading the key value of t
     .. code-block:: arduino
 
         #include <IRremote.h>
-        const int recvPin = 11;
+        const int recvPin = 12;
         IRrecv irrecv(recvPin);
         decode_results results;
     
