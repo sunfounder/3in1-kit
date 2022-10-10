@@ -58,6 +58,7 @@ Pins of ESP8266 and their functions:
 
 
 * `ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_
+* `ESP8266 AT Instruction Set <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
 
 ESP8266 Adapter
 ---------------
