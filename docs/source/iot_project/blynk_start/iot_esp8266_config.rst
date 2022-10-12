@@ -15,16 +15,15 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
 
     .. image:: img/sp20220524113020.png
 
-    .. note::
+    .. warning::
+        
+        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-        If "ready" doesn't appear, you can try to reset the ESP8266 module by connecting the RST pin on the ESP8266 adapter board to GND and unplugging it after about 1 second.
+        * In addition, if the result is OK, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
 
 3. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
 
     .. image:: img/sp20220524113702.png
-
-    .. warning::
-        If you enter AT and it does not return OK, but you have reset the ESP8266 module, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
 
 4. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
 

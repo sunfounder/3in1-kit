@@ -124,7 +124,7 @@ Connect ESP8266 and SunFounder R3 board.
 
     .. note::
 
-        If "ready" doesn't appear, you can try to reset the ESP8266 module by connecting the RST pin on the ESP8266 adapter board to GND and unplugging it after about 1 second.
+        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
 #. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
 
