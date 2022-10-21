@@ -32,7 +32,7 @@ In this project, we will use the I2C LCD1602 to display the text entered in the 
 
     * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\learning_project\5.12.serial_read``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

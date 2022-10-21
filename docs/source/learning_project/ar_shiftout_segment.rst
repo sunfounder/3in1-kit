@@ -60,7 +60,7 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
 
     * Open the ``5.10.shiftout_segment.ino`` file under the path of ``3in1-kit\learning_project\5.10.shiftout_segment``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 

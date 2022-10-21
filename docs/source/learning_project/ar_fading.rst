@@ -32,7 +32,7 @@ The former is to make the LED light on or off by outputting a digital signal (0&
 
    * You can open the file ``2.1.fading.ino`` under the path of ``3in1-kit\learning_project\2.analogWrite\2.1.fading``. 
    * Or copy this code into **Arduino IDE**.
-   * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+   
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 

@@ -62,7 +62,7 @@ If not, you need to adjust the potentiometer on the module, so that it can do th
 
     * Open the ``4.follow_the_line.ino`` file under the path of ``3in1-kit\car_project\4.follow_the_line``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

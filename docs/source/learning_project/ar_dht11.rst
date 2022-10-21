@@ -41,7 +41,7 @@ The dht11, a digital temperature and humidity sensor, is provided in this kit. I
 
     * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\learning_project\5.11.temperature_humidity``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
 
 .. raw:: html
     

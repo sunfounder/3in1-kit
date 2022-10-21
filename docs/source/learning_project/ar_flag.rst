@@ -34,7 +34,7 @@ When the door is closed, the magnet is close to the reed switch, which will turn
 
     * Open the ``5.1.if_else.ino`` file under the path of ``3in1-kit\learning_project\5.1.if_else``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

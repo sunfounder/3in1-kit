@@ -47,7 +47,7 @@ Now build the circuit according to the diagram below.
 
     * Open the ``9.remote_control.ino`` file under the path of ``3in1-kit\car_project\9.remote_control``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
 
 .. raw:: html
     

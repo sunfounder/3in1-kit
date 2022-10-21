@@ -4,6 +4,8 @@ SunFounder 3 in 1 IoT/Smart Car/Learning Kit
 .. image:: img/3in_kit.png
     :width: 800
 
+
+
 This is a learning kit that allows you to learn Arduino language programming in knowledge points.
 
 This is also a smart car kit that allows you to build a fully functional smart car with the simplest structure and components.
@@ -47,11 +49,12 @@ The steps are as follows.
 
     components/component_list
     arduino_start/get_start
+    download_code
     learning_project/learning_project
     car_project/car_project
     iot_project/iot_project
     pictoblox/play_with_scratch
-    faq
+    faq/faq
     thank-learning
 
 Copyright Notice

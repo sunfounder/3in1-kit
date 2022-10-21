@@ -32,7 +32,7 @@ Now look at how to make this I2C CDL1602 work.
 
     * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\learning_project\5.11.liquid_crystal_display``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
 
 .. raw:: html
 

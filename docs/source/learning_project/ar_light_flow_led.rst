@@ -31,7 +31,7 @@ In this experiment, we will use eight LEDs to show the light intensity. The high
 
     * Open the ``6.1.light_control_led.ino`` file under the path of ``3in1-kit\learning_project\6.1.light_control_led``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

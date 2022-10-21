@@ -33,7 +33,7 @@ You can also write data to it in one program and read it in another. For example
 
     * Open the ``5.15.eeproom.ino`` file under the path of ``3in1-kit\learning_project\5.15.eeproom``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 

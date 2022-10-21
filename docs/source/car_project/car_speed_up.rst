@@ -21,7 +21,7 @@ This project is the same wiring as :ref:`car_move_code`.
 
     * Open the ``3.speed_up.ino`` file under the path of ``3in1-kit\car_project\3.speed_up``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

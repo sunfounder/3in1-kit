@@ -42,7 +42,7 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 
     * Open the ``5.9.shiftout_led.ino`` file under the path of ``3in1-kit\learning_project\5.9.shiftout_led``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 

@@ -66,7 +66,7 @@ Connect the wires between the L298N module and the R3 board according to the dia
 
     * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

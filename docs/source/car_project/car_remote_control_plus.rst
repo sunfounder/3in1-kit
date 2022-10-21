@@ -16,7 +16,7 @@ In this project, we have integrated the previous projects - line following, foll
 
     * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
 
 .. raw:: html
     

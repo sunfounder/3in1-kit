@@ -40,7 +40,7 @@ Next, we will make a high temperature alarm device using thermistor, push button
 
     * You can open the file ``6.3.high_tem_alarm.ino`` under the path of ``3in1-kit\learning_project\6.3.high_tem_alarm`` directly.
     * Or copy this code into Arduino IDE 1/2.
-    * Then :ref:`ar_upload_code` to the board.
+    
     * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`add_libraries_ar`.
 
 

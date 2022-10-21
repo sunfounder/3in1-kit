@@ -36,7 +36,7 @@ Now let's see how to achieve it.
 
     * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\learning_project\5.6.map``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html

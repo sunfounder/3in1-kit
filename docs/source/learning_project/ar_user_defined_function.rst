@@ -46,7 +46,7 @@ In this project, define a function to read the value of the ultrasonic module.
 
     * Open the ``5.8.user_function.ino`` file under the path of ``3in1-kit\learning_project\5.8.user_function``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 

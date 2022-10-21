@@ -36,7 +36,7 @@ the middle pin to GND, and the right pin to 5V.
 
     * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\learning_project\5.11.ir_receiver``.
     * Or copy this code into **Arduino IDE**.
-    * For detailed tutorials, please refer to :ref:`ar_upload_code`.
+    
 
 
 .. raw:: html
