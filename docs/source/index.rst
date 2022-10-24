@@ -4,23 +4,21 @@ SunFounder 3 in 1 IoT/Smart Car/Learning Kit
 .. image:: img/3in_kit.png
     :width: 800
 
+When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
 
+Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
 
-This is a learning kit that allows you to learn Arduino language programming in knowledge points.
+Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
 
-This is also a smart car kit that allows you to build a fully functional smart car with the simplest structure and components.
+All these problems can be solved with our 3 in 1 ultimate kit.
 
-Also, this is an IoT learning kit that gives you the ability to easily communicate with the famous IoT platform, Blynk, by configuring the Arduino board with the ESP8266 module.
+In the 3-in-1 ultimate kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
 
-It should be said that this is a 3-in-1 kit that integrates the basic learning kit, smart cart and IoT into one kit, allowing you to learn these 3 different types of projects at once. The corresponding knowledge points, operation instructions, wiring schematics, etc. of each project type are provided so you can learn step by step until you actually start making things.
+In addition, the kit also provides 30+ Scratch programming projects for younger students and enthusiasts, so beginners don't need any programming experience to write and make their own creations!
 
-Besides Arduino programming language (C++), we also provide more than 30 interesting Scratch projects so that you can learn while playing.
+Come on! Start programing Arduino with confidence from zero to hero!
 
-So let's start exploring this fun kit now. Please check out the code at `SunFounder 3 in 1 Kit for Arduino - GitHub <https://github.com/sunfounder/3in1-kit>`_
-
-If you want to learn another projects which we don’t have, please feel free to send Email and we will update to our online tutorials as soon as possible, any suggestions are welcomed.
-
-Here is the Email: cs@sunfounder.com.
+If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
 
 **About the display language**
 
