@@ -45,10 +45,13 @@ as follows.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6bafb36d-6763-460c-98b7-aba48120e718/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+After the code is successfully uploaded, the welcome characters will appear on the LCD1602. Now press the number according to the range prompt on the screen, the display will get smaller and smaller unless you guess that lucky number.
 
-.. image:: img/Part_three_4_Example_Explanation.png
-    :align: center
+.. note::
+    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+
+
+**How it works?**
 
 In order to make the number guessing game become vivid and funny, we
 need to achieve the following functions:
@@ -75,4 +78,9 @@ need to achieve the following functions:
    button in the upper left corner).
 
 In conclusion, the work flow of the project is shown in the flow chart.
+
+.. image:: img/Part_three_4_Example_Explanation.png
+    :align: center
+
+
 

@@ -4,7 +4,11 @@
 ====================================
 
 
-Next, we will make a high temperature alarm device using thermistor, push button, potentiometer and LCD. The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, which can be adjusted using a potentiometer. The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, the buzzer will sound.
+Next, we will make a high temperature alarm device using thermistor, push button, potentiometer and LCD. 
+The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, 
+which can be adjusted using a potentiometer. 
+The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, 
+the buzzer will sound.
 
 
 
@@ -48,6 +52,10 @@ Next, we will make a high temperature alarm device using thermistor, push button
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1341b79d-c87e-4cea-ad90-189c2ebf40ee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+After the code is successfully uploaded, The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, which can be adjusted using a potentiometer. The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, the buzzer will sound.
+
+.. note::
+    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
 
 **How it works?**
 

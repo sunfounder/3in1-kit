@@ -5,7 +5,7 @@
 
 With the development of science and technology, a lot of high-tech
 products have been installed in cars, among which the reversing assist
-system is one of them. Here we use ultrasonic sensors, LCD, LED and
+system is one of them. Here we use ultrasonic module, LCD, LED and
 buzzer to make a simple ultrasonic reversing assist system.
 
 
@@ -45,6 +45,12 @@ buzzer to make a simple ultrasonic reversing assist system.
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d6848669-fe79-42e9-afd7-0f083f96a6d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+
+.. note::
+    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+
 
 **How it works?**
 

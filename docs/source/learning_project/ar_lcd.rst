@@ -40,6 +40,8 @@ Now look at how to make this I2C CDL1602 work.
     
 After the code is uploaded successfully, you will see "Hello, Sunfounder!" on the I2C LCD1602.
 
+.. note::
+    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
 
 **How it works?**
 

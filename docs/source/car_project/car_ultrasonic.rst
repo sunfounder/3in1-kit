@@ -68,7 +68,7 @@ This project is based on the distance read by the ultrasonic module to make the 
         void setup() {
         ...
 
-        //IR obstacle
+    //ultrasonic
         pinMode(echoPin, INPUT);
         pinMode(trigPin, OUTPUT);
         }
