@@ -68,9 +68,9 @@ This project is based on the distance read by the ultrasonic module to make the 
         void setup() {
         ...
 
-    //ultrasonic
-        pinMode(echoPin, INPUT);
-        pinMode(trigPin, OUTPUT);
+        //ultrasonic
+            pinMode(echoPin, INPUT);
+            pinMode(trigPin, OUTPUT);
         }
 
 #. First read the distance value obtained from the ultrasonic module, if the distance is greater than 25, let the car move forward; if the distance is between 2-10cm, let the car move backward, otherwise (between 10~25) stop.
