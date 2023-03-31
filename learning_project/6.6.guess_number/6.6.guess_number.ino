@@ -3,7 +3,6 @@
 #include <IRremote.h>
 
 const int recvPin = 5;
-const int ledPin = 4;
 
 const long interval = 1000;
 
@@ -23,14 +22,12 @@ void setup() {
   lcd.init();
   lcd.backlight();
   Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);
   irrecv.enableIRIn();
   initNewValue();
 }
 
 void loop() {
   if (irrecv.decode(&results)) {
-    digitalWrite(ledPin, HIGH);
     delay(300);
     bool result = 0;
     String num = decodeKeyValue(results.value);
@@ -50,7 +47,7 @@ void loop() {
       lcdShowInput(result);
     }
     irrecv.resume();
-    digitalWrite(ledPin, LOW);
+  
   }
 }
 

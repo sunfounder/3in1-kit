@@ -38,7 +38,7 @@ int angle = 90;
 const int irPin = 13; //Pin connected to entrance IR obstale sensor
 const int servoPin = 9; //Pin connected to Servo
 const int STcp = 12;//Pin connected to ST_CP of 74HC595
-const int SHcp = 10;//Pin connected to SH_CP of 74HC595
+const int SHcp = 8;//Pin connected to SH_CP of 74HC595
 const int DS = 11; //Pin connected to DS of 74HC595
 
 int datArray[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};

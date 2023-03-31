@@ -38,9 +38,6 @@ const int in1 = 5; // in1,2 for right wheel
 const int in2 = 6;
 const int in3 = 9; // in3,4 for left wheel
 const int in4 = 10;
-const int rightIR = 7;
-const int leftIR = 8;
-const int lineTrackPin = 12;
 const int ledPin = 13;
 
 void moveForward(int speed) {
@@ -110,13 +107,6 @@ void setup()
   pinMode(in2, OUTPUT);
   pinMode(in3, OUTPUT);
   pinMode(in4, OUTPUT);
-
-  //IR obstacle
-  pinMode(leftIR, INPUT);
-  pinMode(rightIR, INPUT);
-
-  //Line Track Module
-  pinMode(lineTrackPin, INPUT);
 
   //LED
   pinMode(ledPin, OUTPUT);

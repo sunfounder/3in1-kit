@@ -1,5 +1,5 @@
 #include <IRremote.h>
-const int recvPin = 11;
+const int recvPin = 12;
 IRrecv irrecv(recvPin); //Create an instance of the ``IRrecv`` class, specifying the pins it's attached to.
 decode_results results;
 

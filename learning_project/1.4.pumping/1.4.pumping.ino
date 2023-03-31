@@ -1,6 +1,6 @@
 
-const int motorPinA = 8;
-const int motorPinB = 9;
+const int motorPinA = 9;
+const int motorPinB = 10;
 
 void setup()
 {
