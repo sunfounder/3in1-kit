@@ -61,7 +61,7 @@ copy all libraries and add them at a time, but first you need to find the path w
 .. image:: img/image294.png
    :align: center
 
-**Step 2**: Go to the directory ``3in1-kit/learning_project/libraries`` and copy all the folders inside.
+**Step 2**: Go to the directory ``3in1-kit/learning_project/libraries`` and **unzip** and copy all the folders inside.
 
 .. image:: img/image295.png
    :align: center
@@ -71,7 +71,7 @@ copy all libraries and add them at a time, but first you need to find the path w
 .. image:: img/image296.png
    :align: center
 
-**Step 4**: Paste all the libraries copied before to the ``libraries`` folder.
+**Step 4**: Paste all the **unzipped** folders of libraries into the ``libraries`` folder.
 
 .. image:: img/image297.png
    :align: center
