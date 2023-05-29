@@ -104,6 +104,17 @@ rst_epilog = """
 
     <a href="https://www.asciitable.com/" target="_blank">ASCII table of characters</a>
 
+.. |link_video_scott| raw:: html
+
+    <a href="https://www.circuitbasics.com/ultimate-guide-to-the-arduino/" target="_blank">Ultimate Guide to Arduino</a>
+
+.. |link_video_roboja| raw:: html
+
+    <a href="https://www.youtube.com/playlist?list=PLHvJ4bw0xno5CYSnnLbPzdJYw7vXoNORj" target="_blank">Video Tutorials for Car Projects</a>
+
+.. |link_video_roboja_iot| raw:: html
+
+    <a href="hhttps://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
 
 
 """

@@ -48,10 +48,11 @@ The steps are as follows.
     components/component_list
     arduino_start/get_start
     download_code
-    learning_project/learning_project
+    basic_project/basic_project
     car_project/car_project
     iot_project/iot_project
     pictoblox/play_with_scratch
+    video_course
     faq/faq
     thank-learning
 
