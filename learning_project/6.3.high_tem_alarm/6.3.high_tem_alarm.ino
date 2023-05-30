@@ -9,9 +9,12 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define potPin A0
 
 /*Thermistor Constat*/
-#define temPin  A1  //the thermistor attach to 
-#define beta 3950  //the beta of the thermistor
-#define resistance 10  //the value of the pull-down resistor
+const float referenceResistor = 10000;  // the 'other' resistor
+const float beta = 3950;                // Beta value (Typical Value)
+const float nominalTemperature = 25;    // Nominal temperature for calculating the temperature coefficient
+const float nominalResistance = 10000;  // Resistance value at nominal temperature
+
+const int thermistorPin = A1;  // Pin connected to the thermistor
 
 /*Temperature Threshold*/
 float upperTem = 0.00;
@@ -69,9 +72,21 @@ void upperTemSetting()
 
 void monitoringTemp()
 {
-  long a = analogRead(temPin);
-  float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
-  float tempF = 1.8 * tempC + 32.0;
+  float adcValue = analogRead(thermistorPin);
+
+  // Convert the reading to resistance
+  float voltage = (adcValue / 1023) * 5.0;
+  float Rt = referenceResistor * (5.0 - voltage) / voltage;
+
+  // Use the Beta parameter equation to calculate temperature in Kelvin
+  float tempK = 1 / (((log(Rt / nominalResistance)) / beta) + (1 / (nominalTemperature + 273.15)));
+
+  // Convert to Celsius
+  float tempC = tempK - 273.15;
+
+  // Convert to Fahrenheit
+  float tempF = tempC * 1.8 + 32;
+  
   lcd.setCursor(0, 0);
   lcd.print("Temp: ");
   lcd.print(tempC);
