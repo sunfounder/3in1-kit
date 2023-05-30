@@ -7,7 +7,7 @@ Video Courses
     If you find the content in the online documentation difficult to comprehend, you can enhance your learning experience by following a progressive video course. These videos will make Arduino more engaging and visually appealing for you.
 
 
-    .. image:: img/video_car.png
+    .. image:: img/video_learn.png
         :width: 800
 
 
@@ -16,15 +16,12 @@ Video Courses
 
     In these videos, you'll discover fascinating experiments and projects that present Arduino concepts and principles in a fun and interactive manner. By watching the videos and participating in hands-on activities, you'll have an exciting and enjoyable learning experience with Arduino.
 
-    This course aims to ignite your creativity and enhance your problem-solving skills, while nurturing your curiosity and passion for technology. Get ready to embark on a fascinating journey into the world of Arduino!
-
-
 
 * For the :ref:`car_projects` Sections
 
     I recommend watching the following YouTube playlists to gain more guidance and hands-on experience: |link_video_roboja|.
 
-    .. image:: img/video_learn.png
+    .. image:: img/video_car.png
         :width: 800
 
     In these video, you will learn the fundamentals of robotics and Arduino through captivating video lessons. Step-by-step, you'll assemble a robot car while understanding the workings of motors, obstacle avoidance modules, line tracking modules, and infrared receivers. Explore how the car achieves various functions and unleash your creativity in the world of robotics and technology.
