@@ -33,8 +33,7 @@ void loop() {
 
   if (distance>5 && distance<10){
     moveForward(speed);
-  }
-  if(!left&&right){
+  }else if(!left&&right){
     turnLeft(speed);
   }else if(left&&!right){
     turnRight(speed);
