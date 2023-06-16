@@ -68,5 +68,3 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5f8e4f33-883b-4c06-9516-f1754ea2121d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
-Install the clear rubber tube that comes with the kit to the pump, and then place the pump in the container with water, leaving one end of the rubber tube outside the container. After the code is successfully uploaded, the water inside the container will drain outward. To prevent short circuits, avoid letting the control board touch the water.
