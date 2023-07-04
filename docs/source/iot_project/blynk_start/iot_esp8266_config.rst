@@ -8,10 +8,33 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
 
 1. Build the circuit.
 
-    .. image:: img/connect_esp826612.png
+    .. image:: img/iot_1_at_set_bb.jpg
         :width: 800
 
-2. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+2. Upload the following code.
+
+    .. code-block:: Arduino
+
+        #include <SoftwareSerial.h>
+        SoftwareSerial bleSerial(2, 3); //Rx,Tx
+
+        void setup() {
+            // put your setup code here, to run once:
+            Serial.begin(115200);
+            bleSerial.begin(115200);
+        }
+
+        void loop() {
+            if (bleSerial.available()) {
+                Serial.write(bleSerial.read());
+            }
+            if (Serial.available()) {
+                bleSerial.write(Serial.read());
+            }
+        }
+
+
+3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**, wait for a while, you can see the information of the ESP8266 module.
 
     .. image:: img/sp20220524113020.png
 
@@ -21,19 +44,19 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
 
         * In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
 
-3. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+4. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
 
     .. image:: img/sp20220524113702.png
 
-4. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
+5. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
 
     .. image:: img/sp20220524114032.png
 
-5. In order to use the software serial later, you must input **AT+UART=9600,8,1,0,0** to modify the ESP8266's baud rate to 9600.
+6. In order to use the software serial later, you must input **AT+UART=9600,8,1,0,0** to modify the ESP8266's baud rate to 9600.
 
     .. image:: img/PIC4_sp220615_150321.png
 
-6. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
+7. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
 
 
     .. image:: img/PIC5_sp220615_150431.png
