@@ -11,7 +11,7 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
     .. image:: img/iot_1_at_set_bb.jpg
         :width: 800
 
-2. Upload the following code.
+2. Open the ``1.set_software_serial.ino`` file under the path of ``3in1-kit\iot_project\1.set_software_serial``. Or copy this code into **Arduino IDE**.
 
     .. code-block:: Arduino
 
