@@ -16,25 +16,25 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
     .. code-block:: Arduino
 
         #include <SoftwareSerial.h>
-        SoftwareSerial bleSerial(2, 3); //Rx,Tx
+        SoftwareSerial espSerial(2, 3); //Rx,Tx
 
         void setup() {
             // put your setup code here, to run once:
             Serial.begin(115200);
-            bleSerial.begin(115200);
+            espSerial.begin(115200);
         }
 
         void loop() {
-            if (bleSerial.available()) {
-                Serial.write(bleSerial.read());
+            if (espSerial.available()) {
+                Serial.write(espSerial.read());
             }
             if (Serial.available()) {
-                bleSerial.write(Serial.read());
+                espSerial.write(Serial.read());
             }
         }
 
 
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**, wait for a while, you can see the information of the ESP8266 module.
+3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)
 
     .. image:: img/sp20220524113020.png
 
@@ -52,12 +52,12 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
 
     .. image:: img/sp20220524114032.png
 
-6. In order to use the software serial later, you must input **AT+UART=9600,8,1,0,0** to modify the ESP8266's baud rate to 9600.
+6. In order to use the software serial later, you must input ``AT+UART=9600,8,1,0,0`` to modify the ESP8266's baud rate to 9600.
 
     .. image:: img/PIC4_sp220615_150321.png
 
-7. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
+.. 7. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
 
 
-    .. image:: img/PIC5_sp220615_150431.png
+..     .. image:: img/PIC5_sp220615_150431.png
 
