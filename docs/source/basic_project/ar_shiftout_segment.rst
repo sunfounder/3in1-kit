@@ -42,7 +42,7 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
     *   - Q7
         - dp
 
-.. image:: img/segment_bb.jpg
+.. image:: img/5.10_segment_bb.png
     :width: 600
     :align: center
 

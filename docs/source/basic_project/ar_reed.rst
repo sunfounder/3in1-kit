@@ -24,7 +24,7 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 **Wiring**
 
 
-.. image:: img/feel_the_magnetism_bb.jpg
+.. image:: img/3.2_feel_the_magnetism_bb.png
     :width: 600
     :align: center
 

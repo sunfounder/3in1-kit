@@ -43,7 +43,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
       - 
       - one wire of the motor
 
-.. image:: img/pumping_bb.jpg
+.. image:: img/1.4_pumping_bb.png
     :width: 800
     :align: center
 

@@ -27,7 +27,7 @@ The dht11, a digital temperature and humidity sensor, is provided in this kit. I
 
 **Wiring**
 
-.. image:: img/dht11_bb.jpg
+.. image:: img/5.11_dht11_bb.png
 
 
 * :ref:`cpn_uno`

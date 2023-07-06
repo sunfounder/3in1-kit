@@ -14,7 +14,7 @@ By sending these values to Blynk, you will be able to know the environment of yo
 
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
-.. image:: img/wiring_dht11.jpg
+.. image:: img/iot_5_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`

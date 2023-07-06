@@ -9,7 +9,7 @@
 
         The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
-    .. image:: img/wiring_23.jpg
+    .. image:: img/iot_1.4_bb.png
 
 #. Open the ``1.connect.ino`` file under the path of ``3in1-kit\iot_project\1.connect``. Or copy this code into **Arduino IDE**.
 

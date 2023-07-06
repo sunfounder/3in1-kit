@@ -16,7 +16,7 @@ LCD to output outcomes.
 
 **Schematic Diagram**
 
-.. image:: img/wiring_guess_number.png
+.. image:: img/6.6_guess_number_bb.png
     :align: center
 
 

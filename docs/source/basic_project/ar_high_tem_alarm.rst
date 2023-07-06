@@ -14,7 +14,7 @@ the buzzer will sound.
 
 **Schematic Diagram**
 
-.. image:: img/wiring_high_tem.png
+.. image:: img/6.3_high_tem_alarm_bb.png
    :align: center
 
 

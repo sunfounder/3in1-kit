@@ -21,7 +21,7 @@ Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9.
 
 **Wiring**
 
-.. image:: img/custom_tone_bb.jpg
+.. image:: img/5.7_tone_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`

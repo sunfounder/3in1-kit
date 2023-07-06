@@ -20,7 +20,7 @@ Now let's see how to achieve it.
 
 **Wiring**
 
-.. image:: img/map_bb.jpg
+.. image:: img/5.6_map_bb.png
     :width: 800
     :align: center
 

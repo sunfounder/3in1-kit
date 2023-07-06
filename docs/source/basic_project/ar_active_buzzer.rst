@@ -18,7 +18,7 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
 
 **Wiring**
 
-.. image:: img/wiring_active_buzzer.png
+.. image:: img/1.2_beep_bb.png
     :width: 400
     :align: center
 

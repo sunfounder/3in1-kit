@@ -31,7 +31,7 @@ This allows the RGB LED to display a specific color by superimposing light on th
 
 **Wiring**
 
-.. image:: img/rgb_led_sch.png
+.. image:: img/2.2_colorful_light_bb.png
 
 An RGB LED has 4 pins: the longest pin is the common cathode pin, which is usually connected to GND, 
 the left pin next to the longest pin is Red, and the 2 pins on the right are Green and Blue.

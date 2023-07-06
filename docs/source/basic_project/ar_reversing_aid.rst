@@ -12,7 +12,7 @@ buzzer to make a simple ultrasonic reversing assist system.
 
 **Schematic Diagram**
 
-.. image:: img/image265.png
+.. image:: img/6.4_reversing_aid_bb.png
     :width: 800
     :align: center
 

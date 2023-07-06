@@ -20,7 +20,7 @@ Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
 
 
 
-.. image:: img/detect_the_obstacle_bb.jpg
+.. image:: img/3.3_detect_the_obstacle_bb.png
     :width: 800
     :align: center
 

@@ -30,7 +30,7 @@ This kit also includes a joystick with a digital input. It is activated when the
 
 
 
-.. image:: img/toggle_the_joystick_bb.jpg
+.. image:: img/4.3_toggle_the_joystick_bb.png
     :width: 800
     :align: center
 

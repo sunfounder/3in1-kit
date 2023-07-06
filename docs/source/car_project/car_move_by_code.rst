@@ -49,7 +49,7 @@ Connect the wires between the L298N module and the R3 board according to the dia
       - 
       - Red wire of left motor
 
-.. image:: img/car_motor1.jpg
+.. image:: img/car_2.png
     :width: 800
 
 

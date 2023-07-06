@@ -11,7 +11,7 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
-.. image:: img/wiring_led.jpg
+.. image:: img/iot_2_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`

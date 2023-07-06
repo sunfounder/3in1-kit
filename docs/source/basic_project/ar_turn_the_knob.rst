@@ -25,7 +25,7 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 
 **Wiring**
 
-.. image:: img/turn_thek_knob_bb.jpg
+.. image:: img/4.1_turn_thek_knob_bb.png
     :width: 600
     :align: center
 

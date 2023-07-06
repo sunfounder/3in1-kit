@@ -26,7 +26,7 @@ Put the button to control the buzzer into the ISR, so that it will not be distur
 
 **Wiring**
 
-.. image:: img/interrupt_bb.jpg
+.. image:: img/5.13_interrupt_bb.png
     :width: 600
     :align: center
 

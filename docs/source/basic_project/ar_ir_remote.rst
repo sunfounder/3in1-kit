@@ -22,7 +22,7 @@ It is similar with a normal plastic-packaged transistor in size and is suitable 
 In this example, we wire up the left pin of IR Receiver to pin 11, 
 the middle pin to GND, and the right pin to 5V.
 
-.. image:: img/ir_remote_control_bb.jpg
+.. image:: img/5.11_ir_recv_bb.png
 
 
 * :ref:`cpn_uno`

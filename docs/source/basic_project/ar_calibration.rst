@@ -21,7 +21,7 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 
 **Wiring**
 
-.. image:: img/calibration_bb.jpg
+.. image:: img/5.14_calibration_bb.png
     :width: 600
     :align: center
 

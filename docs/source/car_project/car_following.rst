@@ -51,7 +51,7 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
     * - VCC
       - 5V
 
-.. image:: img/car_avoid_ultrasonic.jpg
+.. image:: img/car_7_8.png
     :width: 800
 
 

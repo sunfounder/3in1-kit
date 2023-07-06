@@ -33,7 +33,7 @@ Build the circuit according to the following diagram.
     * - G
       - GND
 
-.. image:: img/car_track.jpg
+.. image:: img/car_4.png
     :width: 800
 
 * :ref:`cpn_uno`

@@ -25,7 +25,7 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 
 **Wiring**
 
-.. image:: img/74hc595_bb.jpg
+.. image:: img/5.9_74hc595_bb.png
     :width: 800
     :align: center
 

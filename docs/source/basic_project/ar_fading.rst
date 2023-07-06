@@ -16,7 +16,7 @@ The former is to make the LED light on or off by outputting a digital signal (0&
 
 **Wiring**
 
-.. image:: img/wiring_led.png
+.. image:: img/1.1_hello_led_bb.png
     :width: 500
     :align: center
 

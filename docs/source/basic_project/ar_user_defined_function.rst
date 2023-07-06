@@ -32,7 +32,7 @@ In this project, define a function to read the value of the ultrasonic module.
 
 **Wiring**
 
-.. image:: img/ultrasonic_bb.jpg
+.. image:: img/5.8_ultrasonic_bb.png
     :width: 600
     :align: center
 

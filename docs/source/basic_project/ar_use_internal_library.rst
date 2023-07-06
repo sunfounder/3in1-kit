@@ -20,7 +20,7 @@ brown one to GND.
 
 **Wiring**
 
-.. image:: img/swinging_servo_bb.jpg
+.. image:: img/5.5_swinging_servo_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_wires`

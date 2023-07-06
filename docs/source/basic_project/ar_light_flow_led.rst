@@ -13,7 +13,7 @@ In this experiment, we will use eight LEDs to show the light intensity. The high
 
 **Wiring**
 
-.. image:: img/light_control_led.png
+.. image:: img/6.1_light_flow_led_bb.png
     :width: 800
     :align: center
 

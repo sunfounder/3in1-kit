@@ -26,7 +26,7 @@ pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 **Wiring**
 
 
-.. image:: img/read_the_button_value_bb.jpg
+.. image:: img/3.1_reading_button_value_bb.png
     :width: 600
     :align: center
 

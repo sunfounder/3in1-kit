@@ -25,7 +25,7 @@ GND to GND, OUT to digital pin 2.
 
 
 
-.. image:: img/detect_the_line_bb.jpg
+.. image:: img/3.4_detect_the_line_bb.png
     :width: 500
     :align: center
 

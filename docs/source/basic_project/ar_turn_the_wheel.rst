@@ -47,7 +47,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
       - 
       - one wire of the motor
 
-.. image:: img/turn_the_wheel_bb.jpg
+.. image:: img/1.3_turn_the_wheel_bb.png
     :width: 800
     :align: center
 

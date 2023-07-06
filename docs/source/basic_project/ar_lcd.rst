@@ -15,7 +15,7 @@ Now look at how to make this I2C CDL1602 work.
 
 **Wiring**
 
-.. image:: img/lcd_bb.jpg
+.. image:: img/5.11_lcd_bb.png
     :width: 800
     :align: center
 

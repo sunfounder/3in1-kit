@@ -113,7 +113,7 @@ Now let's connect the input of L298N module directly to 12V and GND respectively
       - 
       - Red wire of left motor
 
-.. image:: img/1.move_1.png
+.. image:: img/car_1.png
     :width: 800
 
 

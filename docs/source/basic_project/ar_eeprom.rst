@@ -16,7 +16,7 @@ You can also write data to it in one program and read it in another. For example
 
 **Wiring**
 
-.. image:: img/eeprom_servo.png
+.. image:: img/5.15_eeprom_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`

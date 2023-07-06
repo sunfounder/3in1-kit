@@ -30,7 +30,7 @@ The calculation formula is shown below.
 
 **Wiring**
 
-.. image:: img/feel_the_light_bb.jpg
+.. image:: img/4.2_feel_the_light_bb.png
     :width: 600
     :align: center
 

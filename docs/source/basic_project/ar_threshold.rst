@@ -25,7 +25,7 @@ Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil i
 
 **Wiring**
 
-.. image:: img/threshold_bb.png
+.. image:: img/5.2_threshold_bb.png
     :width: 600
     :align: center
 

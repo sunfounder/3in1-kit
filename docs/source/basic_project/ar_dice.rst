@@ -13,7 +13,7 @@ Each time the button is pressed, a random number ranging from 1 to 6 is generate
 
 **Wiring**
 
-.. image:: img/wiring_electronic_dice.png
+.. image:: img/6.2_electronic_dice_bb.png
     :width: 800
     :align: center
 

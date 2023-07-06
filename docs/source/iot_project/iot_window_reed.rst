@@ -21,7 +21,7 @@ Now we will use an LED widget in Blynk to indicate if your windows and doors are
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 
-.. image:: img/wiring_reed.jpg
+.. image:: img/iot_3_bb.png
 
 * :ref:`cpn_uno`
 * :ref:`cpn_breadboard`

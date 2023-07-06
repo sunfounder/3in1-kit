@@ -37,7 +37,7 @@ Now build the circuit according to the diagram below.
     * - VCC
       - 5V
 
-.. image:: img/car_avoid.jpg
+.. image:: img/car_5.png
     :width: 800
 
 * :ref:`cpn_uno`

@@ -22,7 +22,7 @@ Therefore, a soil moisture sensor is required.
 
 
 
-.. image:: img/measure_the_moisture_bb.jpg
+.. image:: img/4.4_measure_the_moisture_bb.png
     :width: 800
     :align: center
 

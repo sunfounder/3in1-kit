@@ -15,7 +15,7 @@ The principle of this circuit is simple and the current direction is shown in th
 
 **Wiring**
 
-.. image:: img/wiring_led.png
+.. image:: img/1.1_hello_led_bb.png
     :width: 400
     :align: center
 

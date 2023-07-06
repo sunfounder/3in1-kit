@@ -16,7 +16,7 @@ When the door is closed, the magnet is close to the reed switch, which will turn
 
 **Wiring**
 
-.. image:: img/if_else_bb.jpg
+.. image:: img/5.1_if_else_bb.png
     :width: 600
     :align: center
 

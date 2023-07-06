@@ -47,7 +47,7 @@ Here is the relation between the resistance and temperature:
 .. note::
     * The thermistor is black or green and marked 103.
 
-.. image:: img/thermistor_bb.png
+.. image:: img/4.5_thermistor_bb.png
     :width: 600
     :align: center
 

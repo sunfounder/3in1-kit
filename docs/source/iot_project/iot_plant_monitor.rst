@@ -14,7 +14,7 @@ As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start wor
 
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
-.. image:: img/wiring_soil_pump.jpg
+.. image:: img/iot_6_bb.png
     :width: 800
 
 * :ref:`cpn_uno`

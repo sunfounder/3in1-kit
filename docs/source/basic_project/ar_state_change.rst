@@ -19,7 +19,7 @@ In this project, we will use the button to control the motor.
 
 **Wiring**
 
-.. image:: img/state_change_bb.jpg
+.. image:: img/5.3_state_change_bb.png
     :width: 800
     :align: center
 

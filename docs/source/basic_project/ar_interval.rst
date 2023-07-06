@@ -40,7 +40,7 @@ it will not be disturbed by the buzzer playing music.
 
 **Wiring**
 
-.. image:: img/interval_bb.jpg
+.. image:: img/5.4_interval_bb.png
     :width: 600
     :align: center
 
