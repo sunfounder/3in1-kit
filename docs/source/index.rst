@@ -51,7 +51,6 @@ The steps are as follows.
     basic_project/basic_project
     car_project/car_project
     iot_project/iot_project
-    video_course
     faq/faq
     thank-learning
 
