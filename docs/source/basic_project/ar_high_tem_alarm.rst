@@ -14,13 +14,13 @@ the buzzer will sound.
 
 **Schematic Diagram**
 
-.. image:: img/6.3_high_tem_alarm_bb.png
+.. image:: img/wiring_high_tem.png
    :align: center
 
 
 **Fritzing Circuit**
 
-.. image:: img/tem_alarm.png
+.. image:: img/6.3_high_tem_alarm_bb.png
     :width: 800
     :align: center
 

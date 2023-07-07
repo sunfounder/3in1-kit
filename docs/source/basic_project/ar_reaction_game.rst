@@ -15,14 +15,14 @@ The Arduino records the time difference between when the LED lights up and when 
 
 **Schematic Diagram**
 
-.. image:: img/6.5_reaction_game_bb.png
+.. image:: img/wiring_reaction_game.png
     :align: center
 
 
 
 **Fritzing Circuit**
 
-.. image:: img/reaction_game.png
+.. image:: img/6.5_reaction_game_bb.png
     :align: center
 
 * :ref:`cpn_uno`

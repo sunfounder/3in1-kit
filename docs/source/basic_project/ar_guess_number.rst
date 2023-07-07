@@ -16,7 +16,7 @@ LCD to output outcomes.
 
 **Schematic Diagram**
 
-.. image:: img/6.6_guess_number_bb.png
+.. image:: img/circuit_guess_number.png
     :align: center
 
 
@@ -25,7 +25,7 @@ LCD to output outcomes.
 In this example, the wiring of LCD1602 and infrared receiving module is
 as follows.
 
-.. image:: img/circuit_guess_number.png
+.. image:: img/6.6_guess_number_bb.png
     :align: center
 
 
