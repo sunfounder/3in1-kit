@@ -122,7 +122,25 @@ Connect ESP8266 and SunFounder R3 board.
     .. image:: img/faq_at_burn_bb.jpg
         :width: 800
 
-**2. Burning the firmware**
+**2. Upload the Following Code to R4**
+
+.. code-block:: Arduino
+
+    void setup() {
+        Serial.begin(115200);
+        Serial1.begin(115200);
+    }
+
+    void loop() {
+        if (Serial.available()) {      // If anything comes in Serial (USB),
+            Serial1.write(Serial.read());   // read it and send it out Serial1 (pins 0 & 1)
+        }
+            if (Serial1.available()) {     // If anything comes in Serial1 (pins 0 & 1)
+            Serial.write(Serial1.read());   // read it and send it out Serial (USB)
+        }
+    }
+
+**3. Burning the firmware**
 
 * Follow the steps below to burn the firmware if you are using **Windows**.
 
@@ -195,7 +213,7 @@ Connect ESP8266 and SunFounder R3 board.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
             * Reopen the install.bat file.
 
-**3. Test**
+**4. Test**
 
 #. On the basis of the original wiring, connect IO1 to 3V3.
 
