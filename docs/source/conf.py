@@ -116,5 +116,17 @@ rst_epilog = """
 
     <a href="hhttps://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
 
+.. |link_r4_datasheet| raw:: html
+
+    <a href="https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf?_gl=1*16qnlvk*_ga*Mjg1NTE4ODk0LjE2ODAxNzA0Mzk.*_ga_NEXN8H46L5*MTY4OTA2MjE5My4xOC4wLjE2ODkwNjIxOTMuMC4wLjA." target="_blank">Datasheet</a>
+
+.. |link_r4_schematic| raw:: html
+
+    <a href="https://docs.arduino.cc/resources/schematics/ABX00080-schematics.pdf?_gl=1*ivcnqf*_ga*Mjg1NTE4ODk0LjE2ODAxNzA0Mzk.*_ga_NEXN8H46L5*MTY4OTA2MjE5My4xOC4xLjE2ODkwNjI4MDQuMC4wLjA." target="_blank">Schematic</a>
+
+.. |link_r4_doc| raw:: html
+
+    <a href="https://docs.arduino.cc/hardware/uno-r4-minima?_gl=1*qizwsy*_ga*Mjg1NTE4ODk0LjE2ODAxNzA0Mzk.*_ga_NEXN8H46L5*MTY4OTA2MjE5My4xOC4xLjE2ODkwNjI4NDcuMC4wLjA." target="_blank">Full Technical Documentation</a>
+
 
 """

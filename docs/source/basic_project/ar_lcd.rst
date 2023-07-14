@@ -20,7 +20,7 @@ Now look at how to make this I2C CDL1602 work.
     :align: center
 
 .. note::
-    The SDA and SCL of the R3 board are the pins A4 and A5.
+    The SDA and SCL of the R4 board are the pins A4 and A5.
 
 * :ref:`cpn_uno`
 * :ref:`cpn_wires`

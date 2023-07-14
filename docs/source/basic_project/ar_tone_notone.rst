@@ -43,7 +43,7 @@ Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9212e985-1f31-4bd9-bee6-f29357035aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R3 board, you can hear a melody containing seven notes. 
+At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
 
 **How it works?**
 

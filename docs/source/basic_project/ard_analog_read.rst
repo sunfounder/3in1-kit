@@ -5,7 +5,7 @@
 
 The Arduino can read the connected analog sensors through the analog pins.
 
-The R3 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+The R4 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
 
 You need the ``analogRead(pin)`` function to read the value of the analog pin.
 

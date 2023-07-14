@@ -46,7 +46,7 @@ This is the function needed to write the PWM wave.
 
 **Notes and Warnings**
 
-* Looking closely at the R3 board, the pins marked with the "~" symbol have analog output function.
+* Looking closely at the R4 board, the pins marked with the "~" symbol have analog output function.
 * The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the ``millis()`` and ``delay()`` functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
 
 

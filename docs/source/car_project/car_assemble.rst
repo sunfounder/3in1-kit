@@ -7,7 +7,7 @@ Please follow the steps below to complete the assembly of the car.
 
     .. image:: img/IMG_6509.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Place the board on the table as shown in the picture, the side with the same hole as the R4 board, we call A; the back is B. This will help you avoid mistakes during assembly.
 
     .. image:: img/IMG_6518.jpg
 
@@ -43,7 +43,7 @@ Please follow the steps below to complete the assembly of the car.
 
     .. image:: img/IMG_6617.jpg
 
-11. Mount the R3 board with M3x6mm screws.
+11. Mount the R4 board with M3x6mm screws.
 
     .. image:: img/IMG_6630.jpg
 

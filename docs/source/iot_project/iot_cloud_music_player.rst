@@ -62,7 +62,7 @@ however, in this example, we can click the switch to play/pause and slide the sl
 
         * Make sure the 9V battery is plugged in.
         * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Press the reset button on the R4 board.
 
         Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
 

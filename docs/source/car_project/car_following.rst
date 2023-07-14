@@ -9,13 +9,13 @@ Think of this car as your pet here, and when you will wave to him, it comes runn
 
 Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
 
-Wire the ultrasonic to the R3 board as follows.
+Wire the ultrasonic to the R4 board as follows.
 
 .. list-table:: 
     :header-rows: 1
 
     * - Ultrasonic Module
-      - R3 Board
+      - R4 Board
     * - Vcc
       - 5V
     * - Trig
@@ -25,13 +25,13 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 
 .. list-table:: 
     :header-rows: 1
 
     * - Left IR Module
-      - R3 Board
+      - R4 Board
     * - OUT
       - 8
     * - GND
@@ -43,7 +43,7 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
     :header-rows: 1
 
     * - Right IR Module
-      - R3 Board
+      - R4 Board
     * - OUT
       - 7
     * - GND

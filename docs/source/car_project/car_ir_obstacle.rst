@@ -17,7 +17,7 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - Left IR Module
-      - R3 Board
+      - R4 Board
     * - OUT
       - 8
     * - GND
@@ -29,7 +29,7 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - Right IR Module
-      - R3 Board
+      - R4 Board
     * - OUT
       - 7
     * - GND
@@ -49,7 +49,7 @@ Now build the circuit according to the diagram below.
 
 Before starting the project, you need to adjust the detection distance of the module.
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Wiring according to the above diagram, power up the R4 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
 
 Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
 

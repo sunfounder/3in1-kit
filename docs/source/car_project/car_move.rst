@@ -85,14 +85,14 @@ The working relationship between ENB and IN3,IN4 is as follows.
 Now let's connect the input of L298N module directly to 12V and GND respectively to make the car move.
 
 
-1. Connect R3 board, L298N module and 2 motors.
+1. Connect R4 board, L298N module and 2 motors.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
+      - R4 Board
       - Motor
     * - 12V
       - 5V

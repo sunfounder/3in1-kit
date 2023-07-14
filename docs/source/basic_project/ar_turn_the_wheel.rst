@@ -4,8 +4,8 @@
 ============================
 
 A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, and the large current may damage the main control board such as R3 board.
-Therefore, an L298N module is used in this occasion, which is a good helper for the R3 board to control the motor safely.
+However, the motor needs to be driven with a large current, and the large current may damage the main control board such as R4 board.
+Therefore, an L298N module is used in this occasion, which is a good helper for the R4 board to control the motor safely.
 
 
 
@@ -26,7 +26,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
     :header-rows: 1
 
     * - L298N
-      - R3 Board
+      - R4 Board
       - Motor
     * - 12V
       - 5V

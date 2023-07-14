@@ -7,7 +7,7 @@
 This chapter will show you how to send data to Blynk.
 
 We create a door and window detection device here. The circuit with the reed switch is placed next to the door and window, and the magnet is mounted on the edge of the door and window.
-When the door or window is closed, the Reed Switch will be turned on by the magnetic force and the corresponding pin value on the R3 board will change.
+When the door or window is closed, the Reed Switch will be turned on by the magnetic force and the corresponding pin value on the R4 board will change.
 Blynk.cloud will receive this value so that you can see if your house's doors and windows are closed even when you're away from home. 
 
 Now we will use an LED widget in Blynk to indicate if your windows and doors are closed (i.e. if the Reed Switch is on or off).
@@ -66,7 +66,7 @@ Now we will use an LED widget in Blynk to indicate if your windows and doors are
 
         * Make sure the 9V battery is plugged in.
         * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Press the reset button on the R4 board.
 
         Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
 

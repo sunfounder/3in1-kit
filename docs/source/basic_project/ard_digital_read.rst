@@ -63,7 +63,7 @@ Here are the required functions.
 
 2. About Pin13.
 
-    All digital pins (1-13) on the R3 board can be used as ``digitalRead()``.
+    All digital pins (1-13) on the R4 board can be used as ``digitalRead()``.
     But digital pin 13 is more difficult to use as a digital input than other digital pins.
     Because it connects an LED and resistor, it is soldered on most boards.
     If you enable its internal 20k pull-up resistor, it will hang around 1.7V instead of the expected 5V because the onboard LED and series resistor pull the voltage level low, which means it always returns LOW. If you must use pin 13 as a digital input, set its ``pinMode()`` to INPUT and use an external pull-down resistor.

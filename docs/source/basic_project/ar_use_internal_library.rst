@@ -39,7 +39,7 @@ brown one to GND.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fa27db71-b191-4eda-b5c7-bbbe5f2652ca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once you finish uploading the codes to the R3 board, you can see the servo arm rotating in the range 0°~180°.
+Once you finish uploading the codes to the R4 board, you can see the servo arm rotating in the range 0°~180°.
 
 **How it works?**
 

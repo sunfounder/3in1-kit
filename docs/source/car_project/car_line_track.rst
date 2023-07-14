@@ -25,7 +25,7 @@ Build the circuit according to the following diagram.
     :header-rows: 1
 
     * - Line Tracking Module
-      - R3 Board
+      - R4 Board
     * - S
       - 2
     * - V+
@@ -46,7 +46,7 @@ Build the circuit according to the following diagram.
 
 Before starting the project, you need to adjust the sensitivity of the module.
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+Wiring according to the above diagram, then power up the R4 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
 
 Stick a black electrical tape on the table and put the cart on it.
 
@@ -69,7 +69,7 @@ If not, you need to adjust the potentiometer on the module, so that it can do th
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2779e9eb-b7b0-4d47-b8c0-78fed39828c3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+After uploading the code to the R4 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
 
 
 **How it works?**

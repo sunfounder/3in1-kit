@@ -22,7 +22,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
     :header-rows: 1
 
     * - L298N
-      - R3 Board
+      - R4 Board
       - Motor
     * - 12V
       - 5V

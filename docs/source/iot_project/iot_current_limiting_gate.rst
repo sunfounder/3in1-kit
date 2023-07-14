@@ -64,7 +64,7 @@ The count is displayed with a 7-segment display and is also uploaded to the Blyn
 
         * Make sure the 9V battery is plugged in.
         * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Press the reset button on the R4 board.
 
         Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
 

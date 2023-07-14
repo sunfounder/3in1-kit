@@ -42,7 +42,7 @@ This project is the same wiring as :ref:`car_move_code`.
 
         EEPROM.write(0, 100) // 0 means the right motor, 100 means the speed is 100%, can be set to 90, 95, etc., depending on the actual situation. 3.
 
-3. After modifying the code, upload the code to R3 board to see the effect. Repeat the above steps until the car is almost straight.
+3. After modifying the code, upload the code to R4 board to see the effect. Repeat the above steps until the car is almost straight.
 
 4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eepromfor>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
 

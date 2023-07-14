@@ -19,7 +19,7 @@ Now build the circuit according to the following diagram.
     :header-rows: 1
 
     * - Ultrasonic Module
-      - R3 Board
+      - R4 Board
     * - Vcc
       - 5V
     * - Trig

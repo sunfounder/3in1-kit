@@ -14,7 +14,7 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - IR Receiver
-      - R3 Board
+      - R4 Board
     * - OUT
       - 12
     * - GND
@@ -26,7 +26,7 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - LED
-      - R3 Board
+      - R4 Board
     * - Anode(The longer pin)
       - 13
     * - Cathode

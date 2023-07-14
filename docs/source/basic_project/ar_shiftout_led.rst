@@ -50,7 +50,7 @@ Specifically, 74hc595 can replace 8 pins for digital signal output by writing an
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4c208eb3-67f0-40f7-999a-0eeca8b6b466/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-When you finish uploading the codes to the R3 board, you can see the LEDs turning on one after another.
+When you finish uploading the codes to the R4 board, you can see the LEDs turning on one after another.
 
 **How it works?**
 
