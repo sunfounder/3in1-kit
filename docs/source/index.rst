@@ -1,7 +1,7 @@
 SunFounder 3 in 1 IoT/Smart Car/Learning Kit
 ==================================================
 
-.. image:: img/3in_kit.png
+.. image:: img/3in_kit_r4.png
     :width: 800
 
 When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
