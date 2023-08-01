@@ -59,7 +59,7 @@ To use this circuit, you simply press the button to begin recording and input th
         bool recording = false;
         ...
     
-    Please note that ``/MUST be less than EEPROM.length()``, in ``setup()`` it will print the memory of your board's EEPROM, which should be 1024 for SunFounder R3 board. If you are using a different board, you can change the value of the variable ``resolution``.
+    Please note that ``/MUST be less than EEPROM.length()``, in ``setup()`` it will print the memory of your board's EEPROM, which should be 1024 for your board. If you are using a different board, you can change the value of the variable ``resolution``.
 
 #. Print the EEPROM memory of your board.
 

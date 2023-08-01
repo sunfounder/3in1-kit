@@ -72,4 +72,4 @@ The button-controlled buzzer function and the timing function do not conflict wi
           * ``FALLING`` for when the pin goes from high to low.
 
 .. note:: 
-    Different main control boards can use interrupt pins differently. On R3 board, only pin 2 and pin 3 can use interrupt.
+    Different main control boards can use interrupt pins differently. On your board, only pin 2 and pin 3 can use interrupt.

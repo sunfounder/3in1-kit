@@ -27,7 +27,7 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
     .. image:: img/sp220609_112825.png
 
-#. Datastreams allow the widgets on Blynk and the code on the R3 board to recognize each other. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
+#. Datastreams allow the widgets on Blynk and the code on your board to recognize each other. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
 
     .. image:: img/sp220609_114723.png
 
@@ -91,11 +91,12 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
         * Make sure the 9V battery is plugged in.
         * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Press the reset button on your board.
 
         Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
 
-#. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R3 board.
+
+#. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R4 board.
 
     .. image:: img/2_blynk_button.png
 
