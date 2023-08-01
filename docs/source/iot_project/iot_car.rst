@@ -8,7 +8,7 @@ In the era of 5G network popularity, this mode may become one of the main produc
 
 **1. Build the Cirduit**
 
-.. image:: img/iot_8.jpg
+.. image:: img/iot_car.png
     :width: 800
 
 
