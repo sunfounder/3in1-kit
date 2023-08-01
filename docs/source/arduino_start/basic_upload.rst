@@ -12,7 +12,7 @@ Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino 
     .. image:: img/board_port.png
 
 
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino AVR Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
+If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino UNO R4 Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
 
     .. image:: img/upload1.png
 
