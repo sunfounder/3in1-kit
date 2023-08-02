@@ -12,7 +12,7 @@ The circuit has an over-temperature protection function, and the built-in clamp 
 L9110S is widely used in toy car motor drives, stepper motor drive and switching power tube circuit.
 
 
-.. image:: img/l9100s.jpg
+.. image:: img/l9110s.jpg
     :width: 400
     :align: center
 
@@ -27,19 +27,19 @@ L9110S is widely used in toy car motor drives, stepper motor drive and switching
 
 **Features**
 
-● Low quiescent operating current
-● Wide supply voltage range: 2.5V-12V
-● Continuous current output capability of each channel (1.0A: VCC=8V DIP8 package; 0.8A: VCC=8V SOP8 package)
-● Lower saturation pressure drop
-● With over-temperature protection function
-● The output has three states: forward rotation, reverse rotation and high impedance
-● TTL/CMOS output level compatible, can be directly connected to CPU
-● Output built-in clamping diode, suitable for inductive load
-● Control and drive integrated in a single IC
-● Suitable for three to six dry battery power supply systems
-● With pin high voltage protection function
-● Antistatic ability: 4000V (HBM)
-● Working temperature range: -20℃～+80℃
+* Low quiescent operating current
+* Wide supply voltage range: 2.5V-12V
+* Continuous current output capability of each channel (1.0A: VCC=8V DIP8 package; 0.8A: VCC=8V SOP8 package)
+* Lower saturation pressure drop
+* With over-temperature protection function
+* The output has three states: forward rotation, reverse rotation and high impedance
+* TTL/CMOS output level compatible, can be directly connected to CPU
+* Output built-in clamping diode, suitable for inductive load
+* Control and drive integrated in a single IC
+* Suitable for three to six dry battery power supply systems
+* With pin high voltage protection function
+* Antistatic ability: 4000V (HBM)
+* Working temperature range: -20℃～+80℃
 
 **Logical relationship**
 
