@@ -4,7 +4,7 @@
 ===============
 
 .. image:: ../components/img/l9110s.jpg
-    :width: 400
+    :width: 800
     :align: center
 
 Before we start programming, let's review the working principle of L9110s.

@@ -13,7 +13,7 @@ L9110S is widely used in toy car motor drives, stepper motor drive and switching
 
 
 .. image:: img/l9110s.jpg
-    :width: 400
+    :width: 800
     :align: center
 
 **0A & OB(A)** : Output pins of Motor A.
@@ -39,7 +39,7 @@ L9110S is widely used in toy car motor drives, stepper motor drive and switching
 * Suitable for three to six dry battery power supply systems
 * With pin high voltage protection function
 * Antistatic ability: 4000V (HBM)
-* Working temperature range: -20℃～+80℃
+* Working temperature range: -20℃ ~ +80℃
 
 **Logical relationship**
 
