@@ -65,7 +65,7 @@ Below is the introduction to each component, which contains the operating princi
     component_tt_motor
     component_servo
     component_pump
-    component_l298n_module
+    component_l9110s
 
 
 **Controller**
