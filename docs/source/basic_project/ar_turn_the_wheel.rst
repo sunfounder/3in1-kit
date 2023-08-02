@@ -4,20 +4,22 @@
 ============================
 
 A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, and the large current may damage the main control board such as R4 board.
-Therefore, an L298N module is used in this occasion, which is a good helper for the R4 board to control the motor safely.
+However, the motor needs to be driven with a large current, 
+and the large current may damage the main control board such as R4 board.
+Therefore, an motor driver module is used in this occasion, 
+which is a good helper for the R4 board to control the motor safely.
 
 
 
-**Schematic**
+.. **Schematic**
 
 
-.. image:: img/circuit_1.3_wheel.png
+.. .. image:: img/circuit_1.3_wheel.png
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
 
-A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
+.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
 
 **Wiring**
 
@@ -25,25 +27,25 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L298N
+    * - L9110S
       - R4 Board
       - Motor
-    * - 12V
+    * - VCC
       - 5V
       - 
     * - GND
       - GND
       - 
-    * - IN3
+    * - B-1B
       - 9
       -
-    * - IN4
+    * - B-1A
       - 10
       - 
-    * - OUT3
+    * - OA
       - 
       - one wire of the motor
-    * - OUT4
+    * - OB
       - 
       - one wire of the motor
 
@@ -54,7 +56,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
 * :ref:`cpn_uno`
 * :ref:`cpn_wires`
 * :ref:`cpn_tt_motor`
-* :ref:`cpn_l298n`
+* :ref:`cpn_l9110s`
 
 **Code**
 

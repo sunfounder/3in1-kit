@@ -13,9 +13,9 @@ In this project, we will use the button to control the motor.
 
 
 
-**Schematic**
+.. **Schematic**
 
-.. image:: img/circuit_8.3_statechange.png
+.. .. image:: img/circuit_8.3_statechange.png
 
 **Wiring**
 
@@ -29,7 +29,7 @@ In this project, we will use the button to control the motor.
 * :ref:`cpn_resistor`
 * :ref:`cpn_button`
 * :ref:`cpn_tt_motor`
-* :ref:`cpn_l298n`
+* :ref:`cpn_l9110s`
 
 
 **Code**

@@ -5,51 +5,49 @@
 
 The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
 
-**Schematic**
+.. **Schematic**
 
-.. image:: img/circuit_1.3_wheel.png
+.. .. image:: img/circuit_1.3_wheel.png
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
 
-A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
+.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
 
 **Wiring**
-
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L298N
+    * - L9110S
       - R4 Board
       - Motor
-    * - 12V
+    * - VCC
       - 5V
       - 
     * - GND
       - GND
       - 
-    * - IN3
+    * - B-1B
       - 9
       -
-    * - IN4
+    * - B-1A
       - 10
       - 
-    * - OUT3
+    * - OA
       - 
       - one wire of the motor
-    * - OUT4
+    * - OB
       - 
       - one wire of the motor
-
 .. image:: img/1.4_pumping_bb.png
     :width: 800
     :align: center
 
 * :ref:`cpn_uno`
 * :ref:`cpn_wires`
-* :ref:`cpn_l298n`
+* :ref:`cpn_l9110s`
 * :ref:`cpn_pump`
 
 **Code**
