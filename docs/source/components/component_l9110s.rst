@@ -16,12 +16,12 @@ L9110S is widely used in toy car motor drives, stepper motor drive and switching
     :width: 800
     :align: center
 
-**0A & OB(A)** : Output pins of Motor A.
-**0A & OB(B)** : Output pins of Motor B.
-**A-1A & A-1B**: Motor A input pins. Used to control the spinning direction of Motor A.
-**B-1A & B-1B**: Motor B input pins. Used to control the spinning direction of Motor B.
-**VCC**: Supplies power for the switching logic circuitry inside IC.
-**GND**: Ground pin.
+* **0A & OB(A)** : Output pins of Motor A.
+* **0A & OB(B)** : Output pins of Motor B.
+* **A-1A & A-1B**: Motor A input pins. Used to control the spinning direction of Motor A.
+* **B-1A & B-1B**: Motor B input pins. Used to control the spinning direction of Motor B.
+* **VCC**: Supplies power for the switching logic circuitry inside IC.
+* **GND**: Ground pin.
 
 
 
