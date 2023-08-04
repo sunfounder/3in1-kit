@@ -117,7 +117,7 @@ Re-brun the Firmware with R4
 
 **1. Build the circuit**
 
-Connect ESP8266 and SunFounder R3 board.
+Connect ESP8266 and Arduino UNO R4 board.
 
     .. image:: img/faq_at_burn_bb.jpg
         :width: 800
@@ -157,7 +157,7 @@ Connect ESP8266 and SunFounder R3 board.
         * ``install_r3.bat``: This is the command package for Windows system, double click this file will run all the commands inside the file.
         * ``install_r4.bai``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
-    #. Double click ``install_r3.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
+    #. Double click ``install_r4.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
 
         .. image:: img/install_firmware.png
 
@@ -228,7 +228,7 @@ Connect ESP8266 and SunFounder R3 board.
 
         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
 
     .. image:: img/sp20220524113702.png
 
