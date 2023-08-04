@@ -29,7 +29,7 @@ Connect ESP8266 and SunFounder R3 board.
         * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
         * ``esptool.exe``: This is a command-line utility for Windows.
         * ``install_r3.bat``: This is the command package for Windows system, double click this file will run all the commands inside the file.
-        * ``install_r4.bai``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
     #. Double click ``install_r3.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
 
@@ -65,7 +65,7 @@ Connect ESP8266 and SunFounder R3 board.
         * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
         * ``esptool.exe``: This is a command-line utility for Windows.
         * ``install_r3.bat``: This is the command package for Windows system.
-        * ``install_r4.bai``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
 
     #. Open a terminal and use the ``cd`` command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.
@@ -155,7 +155,7 @@ Connect ESP8266 and Arduino UNO R4 board.
         * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
         * ``esptool.exe``: This is a command-line utility for Windows.
         * ``install_r3.bat``: This is the command package for Windows system, double click this file will run all the commands inside the file.
-        * ``install_r4.bai``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
     #. Double click ``install_r4.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
 
@@ -191,7 +191,7 @@ Connect ESP8266 and Arduino UNO R4 board.
         * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
         * ``esptool.exe``: This is a command-line utility for Windows.
         * ``install_r3.bat``: This is the command package for Windows system.
-        * ``install_r4.bai``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
 
     #. Open a terminal and use the ``cd`` command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.
