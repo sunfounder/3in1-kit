@@ -5,70 +5,70 @@
 
 This project is based on :ref:`sh_test` to make the car move in all directions.
 
-Before we start programming, let's review the working principle of L298N.
+.. Before we start programming, let's review the working principle of L298N.
 
-The working relationship between ENA and IN1,IN2 is as follows.
+.. The working relationship between ENA and IN1,IN2 is as follows.
 
 
-.. list-table:: 
-    :widths: 25 25 25 50
-    :header-rows: 1
+.. .. list-table:: 
+..     :widths: 25 25 25 50
+..     :header-rows: 1
 
-    * - ENA
-      - IN1
-      - IN2
-      - The state of right motor(A)
-    * - 0
-      - X
-      - X
-      - Stop
-    * - 1
-      - 0
-      - 0
-      - Brake
-    * - 1
-      - 0
-      - 1
-      - Rotate clockwise
-    * - 1
-      - 1
-      - 0
-      - Rotate counterclockwise
-    * - 1
-      - 1
-      - 1
-      - Brake
+..     * - ENA
+..       - IN1
+..       - IN2
+..       - The state of right motor(A)
+..     * - 0
+..       - X
+..       - X
+..       - Stop
+..     * - 1
+..       - 0
+..       - 0
+..       - Brake
+..     * - 1
+..       - 0
+..       - 1
+..       - Rotate clockwise
+..     * - 1
+..       - 1
+..       - 0
+..       - Rotate counterclockwise
+..     * - 1
+..       - 1
+..       - 1
+..       - Brake
 
-The working relationship between ENB and IN3,IN4 is as follows.
+.. The working relationship between ENB and IN3,IN4 is as follows.
 
-.. list-table:: 
-    :widths: 25 25 25 50
-    :header-rows: 1
+.. .. list-table:: 
+..     :widths: 25 25 25 50
+..     :header-rows: 1
 
-    * - ENB
-      - IN3
-      - IN4
-      - The state of left motor(B)
-    * - 0
-      - X
-      - X
-      - Stop
-    * - 1
-      - 0
-      - 0
-      - Brake
-    * - 1
-      - 0
-      - 1
-      - Rotate clockwise
-    * - 1
-      - 1
-      - 0
-      - Rotate counterclockwise
-    * - 1
-      - 1
-      - 1
-      - Brake
+..     * - ENB
+..       - IN3
+..       - IN4
+..       - The state of left motor(B)
+..     * - 0
+..       - X
+..       - X
+..       - Stop
+..     * - 1
+..       - 0
+..       - 0
+..       - Brake
+..     * - 1
+..       - 0
+..       - 1
+..       - Rotate clockwise
+..     * - 1
+..       - 1
+..       - 0
+..       - Rotate counterclockwise
+..     * - 1
+..       - 1
+..       - 1
+..       - Brake
 
 
 

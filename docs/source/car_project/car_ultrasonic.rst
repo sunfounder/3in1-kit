@@ -29,11 +29,11 @@ Now build the circuit according to the following diagram.
     * - Gnd
       - GND
 
-.. image:: img/car_ultrasonic.jpg
+.. image:: img/car_6.png
     :width: 800
 
 * :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
+* :ref:`cpn_l9110s` 
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_ultrasonic`
 

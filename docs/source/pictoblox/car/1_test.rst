@@ -10,49 +10,49 @@ But before you start the project, you need to know the steps to use PictoBlox in
 Build the Circuit
 -----------------------
 
-The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
+.. The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
 
-Connect the wires between the L298N module and the R3 board according to the diagram below.
+.. Connect the wires between the L298N module and the R3 board according to the diagram below.
 
 
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
+.. .. list-table:: 
+..     :widths: 25 25 50
+..     :header-rows: 1
 
-    * - L298N
-      - R3 Board
-      - Motor
-    * - IN1
-      - 5
-      - 
-    * - IN2
-      - 6
-      - 
-    * - IN3
-      - 9
-      - 
-    * - IN4
-      - 10
-      - 
-    * - OUT1
-      - 
-      - Black wire of right motor
-    * - OUT2
-      - 
-      - Red wire of right motor
-    * - OUT3
-      - 
-      - Black wire of left motor
-    * - OUT4
-      - 
-      - Red wire of left motor
+..     * - L298N
+..       - R3 Board
+..       - Motor
+..     * - IN1
+..       - 5
+..       - 
+..     * - IN2
+..       - 6
+..       - 
+..     * - IN3
+..       - 9
+..       - 
+..     * - IN4
+..       - 10
+..       - 
+..     * - OUT1
+..       - 
+..       - Black wire of right motor
+..     * - OUT2
+..       - 
+..       - Red wire of right motor
+..     * - OUT3
+..       - 
+..       - Black wire of left motor
+..     * - OUT4
+..       - 
+..       - Red wire of left motor
 
-.. image:: img/car_motor1.jpg
-    :width: 800
+.. .. image:: img/car_motor1.jpg
+..     :width: 800
 
 
 * :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
+* :ref:`cpn_l9110s` 
 * :ref:`cpn_tt_motor`
 
 

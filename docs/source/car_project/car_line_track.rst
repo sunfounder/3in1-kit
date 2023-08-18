@@ -33,13 +33,14 @@ Build the circuit according to the following diagram.
     * - G
       - GND
 
-.. image:: img/car_track.jpg
+.. image:: img/car_4.png
     :width: 800
 
 * :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
+* :ref:`cpn_l9110s` 
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_track`
+
 
 **Adjust the Module**
 

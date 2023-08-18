@@ -59,7 +59,7 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 
 * :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
+* :ref:`cpn_l9110s` 
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_ultrasonic`
 * :ref:`cpn_avoid` 

@@ -32,11 +32,11 @@ Now build the circuit according to the diagram below.
     * - Cathode
       - GND
 
-.. image:: img/car_remote.jpg
+.. image:: img/car_9.png
     :width: 800
 
 * :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
+* :ref:`cpn_l9110s` 
 * :ref:`cpn_tt_motor`
 * :ref:`cpn_led`
 * :ref:`cpn_receiver`

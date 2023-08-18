@@ -4,7 +4,7 @@
 3. Speed Up
 ===================
 
-In addition to the digital signal (HIGH/LOW), the input of L298N can also receive PWM signal to control the speed of the output.
+In addition to the digital signal (HIGH/LOW), the input of l9110s can also receive PWM signal to control the speed of the output.
 
 In other words, we can use ``AnalogWrite()`` to control the moving speed of the car.
 

@@ -3,136 +3,80 @@
 1. Move
 ===============
 
-.. image:: ../components/img/l298n_pin.jpg
-    :width: 400
+.. image:: ../components/img/l9110s.jpg
+    :width: 800
     :align: center
 
-Before we start programming, let's review the working principle of L298N.
+Before we start programming, let's review the working principle of L9110s.
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+IA & IB are the inputs of the L9110S module, and OA & OB are the outputs.
 
-A simple way to use them is: input high level for IN1, OUT1 will output high level; input low level for IN1, OUT1 will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate.OUT3 and OUT4 can be used in the same way.
+A simple way to use them is: 
+input high level for IA(A)(A-1A), OA(A) will output high level; 
+input low level for IA(A)(A-1A), OA(A) will output low level.
+Connecting the two ends of the motor to OA(A) and OB(A), 
+inputting opposite level signals for IA(A)(A-1A) and IB(A)(A-1B) will make the motor rotate. 
+OA(B) and OB(B) can be used in the same way.
 
-The working relationship between ENA and IN1,IN2 is as follows.
+The working relationship between IA,IB & OA,OB is as follows.
 
 
 .. list-table:: 
-    :widths: 25 25 25 50
+    :widths: 25 25 50 50
     :header-rows: 1
 
-    * - ENA
-      - IN1
-      - IN2
-      - The state of right motor(A)
-    * - 0
-      - X
-      - X
-      - Stop
-    * - 1
-      - 0
-      - 0
-      - Brake
-    * - 1
-      - 0
-      - 1
-      - Rotate clockwise
-    * - 1
-      - 1
-      - 0
-      - Rotate counterclockwise
-    * - 1
-      - 1
-      - 1
-      - Brake
-
-The working relationship between ENB and IN3,IN4 is as follows.
-
-.. list-table:: 
-    :widths: 25 25 25 50
-    :header-rows: 1
-
-    * - ENB
-      - IN3
-      - IN4
-      - The state of left motor(B)
-    * - 0
-      - X
-      - X
-      - Stop
-    * - 1
-      - 0
-      - 0
-      - Brake
-    * - 1
-      - 0
-      - 1
-      - Rotate clockwise
-    * - 1
-      - 1
-      - 0
-      - Rotate counterclockwise
-    * - 1
-      - 1
-      - 1
-      - Brake
+    * - IA 
+      - IB 
+      - OA
+      - OB
+    * - H 
+      - L 
+      - H
+      - L
+    * - L 
+      - H 
+      - L
+      - H
+    * - L 
+      - L 
+      - high resistance
+      - high resistance
+    * - H 
+      - H 
+      - high resistance
+      - high resistance
 
 
-* :ref:`cpn_l298n`
+* :ref:`cpn_l9110s`
 
 **Forward**
 
-Now let's connect the input of L298N module directly to 12V and GND respectively to make the car move.
+Now let's connect the input of L9110S module directly to 12V and GND respectively to make the car move.
 
 
-1. Connect R3 board, L298N module and 2 motors.
+1. Connect R4 board, L9110S module and 2 motors.
 
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
 
-    * - L298N
-      - R3 Board
-      - Motor
-    * - 12V
-      - 5V
-      - 
-    * - GND
-      - GND
-      - 
-    * - OUT1
-      - 
-      - Black wire of right motor
-    * - OUT2
-      - 
-      - Red wire of right motor
-    * - OUT3
-      - 
-      - Black wire of left motor
-    * - OUT4
-      - 
-      - Red wire of left motor
-
-.. image:: img/1.move_1.png
+.. image:: img/car_1.png
     :width: 800
 
-
-2. Connect IN2 and IN3 to 12V, and IN1 and IN4 to GND, then you will be able to see the car moving forward.
+2. Connect IB(B) and IA(A) to VCC, and IA(B) and IB(A) to GND, then you will be able to see the car moving forward.
 
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+If not both turn forward, but the following situations occur, 
+you need to readjust the wiring of the two motors.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OUT1 and OUT2 swap, OUT3 and OUT4 swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OUT3 and OUT4 of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OUT1 and OUT1 of the right motor.
+* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
+* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
+* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
 
 
 **Backward**
 
-Connect IN2 and IN3 to GND, and IN1 and IN4 to 12V, then you will be able to see the car moving backward.
+Connect IB(B)  and IA(A) to GND, and IA(B)  and IB(A) to VCC, then you will be able to see the car moving backward.
 
 
 .. image:: img/1.move_back.png 
@@ -142,7 +86,8 @@ Connect IN2 and IN3 to GND, and IN1 and IN4 to 12V, then you will be able to see
 
 **Turn Left**
 
-If you want to make the car turn left, that is, make both motors turn clockwise. You need to connect IN1 and IN3 to GND, and IN2 and IN4 to 12V.
+If you want to make the car turn left, that is, make both motors turn clockwise. 
+You need to connect IA(B)  and IA(A) to GND, and IB(B)  and IB(A) to VCC.
 
 
 .. image:: img/1.move_left.png 
@@ -151,7 +96,8 @@ If you want to make the car turn left, that is, make both motors turn clockwise.
 
 **Turn Right**
 
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. You need to connect IN1 and IN3 to 12V and IN2 and IN4 to GND.
+Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
+You need to connect IA(B)  and IA(A) to VCC and IB(B)  and IB(A) to GND.
 
 
 .. image:: img/1.move_right.png 
@@ -161,6 +107,6 @@ Conversely, if you want to turn the car to the right, that is, make both motors 
 
 **Stop**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect IN1 and IN2 to 12V or 5V at the same time, and the same for IN3 and IN4.
+To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect IA(B)  and IB(B)  to 12V or 5V at the same time, and the same for IA(A) and IB(A).
 
 This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
