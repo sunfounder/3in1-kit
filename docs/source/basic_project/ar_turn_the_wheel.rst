@@ -19,7 +19,7 @@ Therefore, an l9110s module is used in this occasion, which is a good helper for
 .. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
 .. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
 
-.. **Wiring**
+**Wiring**
 
 .. .. list-table:: 
 ..     :widths: 25 25 50

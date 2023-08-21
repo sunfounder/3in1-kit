@@ -7,7 +7,7 @@ In the previous project, we have tried to control the operation of the motor by 
 
 If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
 
-..Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R3 board in turn.
+.. Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R3 board in turn.
 
 
 **Wiring**
