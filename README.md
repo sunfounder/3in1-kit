@@ -1,5 +1,5 @@
 # SunFounder 3in1 Kit
-This repository is for SunFounder Uno Kit and SunFounder 3in1 Kit. you can buy it on [our website](https://www.sunfounder.com/), or search sunfounder in Amazon.
+This repository is for SunFounder 3in1 Kit. you can buy it on [our website](https://www.sunfounder.com/), or search sunfounder in Amazon.
 
 Quick Links:
 
@@ -13,8 +13,19 @@ Quick Links:
 <a id="about_this_kit"></a>
 ## About this kit:
 
+In the 3-in-1 ultimate kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+
+
 <a id="update"></a>
 ## Update:
+
+2023-09-07:
+- Added .yaml file
+- Modified Requirement.txt and conf.py files
+- Updated the tutorial for installing libraries on Arduino
+- Code modification and analysis for a project involving libraries.
+ 
+
 2022-06-30:
  - New Release
 

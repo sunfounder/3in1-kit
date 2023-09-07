@@ -42,7 +42,7 @@ Put the button to control the buzzer into the ISR, so that it will not be distur
 
 .. note::
 
-    * Open the ``5.13.interrupt.ino`` file under the path of ``3in1-kit\learning_project\5.13.interrupt``.
+    * Open the ``5.13.interrupt.ino`` file under the path of ``3in1-kit\basic_project\5.13.interrupt``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

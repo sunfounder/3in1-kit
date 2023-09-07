@@ -30,7 +30,7 @@ brown one to GND.
 
 .. note::
 
-    * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\learning_project\5.5.use_internal_library``.
+    * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\basic_project\5.5.use_internal_library``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

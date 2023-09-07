@@ -38,10 +38,10 @@ The Arduino records the time difference between when the LED lights up and when 
 
 .. note::
 
-    * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\learning_project\6.5_reversingAid`` directly.
+    * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\basic_project\6.5_reversingAid`` directly.
     * Or copy this code into Arduino IDE 1/2.
     
-    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`add_libraries_ar`.
+    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`install_libraries_ar`.
 
 
 .. raw:: html

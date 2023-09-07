@@ -13,7 +13,7 @@ Depending on the components, the basic control methods of Arduino can be divided
 * :ref:`ar_analog_read`: Read the voltage of the analog pin, which can be used to read the working condition of the knob.
 
 
-There are also some components that require additional libraries for use, and these are grouped under the section :ref:`ar_add_libraries`.
+There are also some components that require additional libraries for use, and these are grouped under the section :ref:`install_libraries_ar`.
 
 Finally, the kit also provides some :ref:`ar_funny_project`, which includes many simple and useful manipulations.
 Try this section of code and you will understand how most simple projects work.

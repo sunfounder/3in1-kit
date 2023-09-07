@@ -41,7 +41,7 @@ Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil i
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\learning_project\5.2.threshold``.
+    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\basic_project\5.2.threshold``.
     * Or copy this code into **Arduino IDE**.
     
 

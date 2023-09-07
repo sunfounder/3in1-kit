@@ -41,7 +41,7 @@ pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 
 .. note::
 
-   * You can open the file ``3.1.read_button_value.ino`` under the path of ``3in1-kit\learning_project\3.1.read_button_value``. 
+   * You can open the file ``3.1.read_button_value.ino`` under the path of ``3in1-kit\basic_project\3.1.read_button_value``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

@@ -46,15 +46,15 @@ So in this project we will learn how to receive data from the Arduino board.
 .. image:: img/serial2.png
     :align: center
 
-* **1**：Option to select between automatically scroll and not scroll.
-* **2**：Option to show timestamp prior to data displayed on Serial Monitor.
-* **3**：Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
+* **1**: Option to select between automatically scroll and not scroll.
+* **2**: Option to show timestamp prior to data displayed on Serial Monitor.
+* **3**: Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
 
         * **No line Ending** just sends what you type; 
-        * **Newline** is ``\n`` and will sends an ASCII new line code after what you type；
+        * **Newline** is ``\n`` and will sends an ASCII new line code after what you type;
         * **Carriage Return** is ``\r``, which will send an ASCII carriage return character after what you type; 
         * **Both NL & CR** is ``\r\n`` which will send both a carriage return and a new line character after what you type.
-* **4**：Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
-* **5**：Clear all text on the output console.
-* **6**：A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
+* **4**: Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
+* **5**: Clear all text on the output console.
+* **6**: A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
 

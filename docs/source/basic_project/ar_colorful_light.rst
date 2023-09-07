@@ -53,7 +53,7 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. note::
 
-   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\learning_project\2.analogWrite\2.2.colorful_light``. 
+   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

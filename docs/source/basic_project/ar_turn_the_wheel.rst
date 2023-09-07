@@ -60,7 +60,7 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
 
 .. note::
 
-   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\learning_project\1.3.turn_the_wheel``. 
+   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\basic_project\1.3.turn_the_wheel``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

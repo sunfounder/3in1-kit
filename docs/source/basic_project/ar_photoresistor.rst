@@ -44,7 +44,7 @@ The calculation formula is shown below.
 
 .. note::
 
-    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\learning_project\4.2.feel_the_light``.
+    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\basic_project\4.2.feel_the_light``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

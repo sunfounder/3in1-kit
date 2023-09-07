@@ -34,9 +34,11 @@ the middle pin to GND, and the right pin to 5V.
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\learning_project\5.11.ir_receiver``.
+    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\basic_project\5.11.ir_receiver``.
     * Or copy this code into **Arduino IDE**.
-    
+    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+  
+        .. image:: ../img/lib_irremote.png
 
 
 .. raw:: html
@@ -50,49 +52,48 @@ the serial monitor.
 
 **How it works?**
 
-There are two important parts to notice in this program.
+This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
 
-#. The code uses an extra file ``decodeKeyValue.ino`` to decode the values in
-class ``decode_result`` into key name. The file will be opened together with
-the main file.
-
-#. Import the library ``IRremote``, here you will need to refer to :ref:`add_libraries_ar` to add this library.
+#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
 
     .. code-block:: arduino
 
-        const int recvPin = 11;
+        #include <IRremote.h>
 
-        IRrecv irrecv(recvPin);
-        decode_results results;
-
-    * ``IRrecv irrecv(recvPin)``: Create an instance of the ``IRrecv`` class, specifying the pins it's attached to.
-    * ``decode_results results``: Create an instance of the ``decode_results`` class, which is the result returned by the decoder.
-
-#. Initialize the IR receiver and set the baudrate of the Serial Monitor to 9600bps.
+#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
 
     .. code-block:: arduino
 
-        void setup()
-        {
-            Serial.begin(9600);
-            irrecv.enableIRIn(); // Start the receiver
+        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
+        String lastDecodedValue = "";  // Variable to store the last decoded value
+
+#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+
+    .. code-block:: arduino
+
+        void setup() {
+            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
         }
-#. When you press a key on the remote control, the serial monitor will print the key name if it is received by the IR receiver.
 
+#. The loop runs continuously to process incoming IR remote signals.
 
     .. code-block:: arduino
 
         void loop() {
-            if (irrecv.decode(&results)) {
-                //Serial.println(results.value,HEX);
-                if (decodeKeyValue(results.value)!="ERROR")
-                {
-                    Serial.println(decodeKeyValue(results.value));
+            if (IrReceiver.decode()) {
+                String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
+                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                    Serial.println(decodedValue);
+                    lastDecodedValue = decodedValue;  // Update the last decoded value
                 }
-                irrecv.resume(); // Receive the next value
+                IrReceiver.resume();  // Enable receiving of the next value
             }
         }
-
-    * ``irrecv.decode(&results)``: Decodes the received IR message. Returns 0 if no data ready, 1 if data ready. Results of decoding are stored in ``results``.
-    * ``decodeKeyValue(results.value)``: ``results.value`` is the decoded value, usually in 8-bit hexadecimal, and ``decodeKeyValue()`` is to convert these values to the key names on the remote control.
-    * ``irrecv.resume()``: Restart for receiving an other value.
+    
+    * Checks if an IR signal is received and successfully decoded.
+    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
+    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Prints the decoded IR value to the serial monitor.
+    * Updates the ``lastDecodedValue`` with the new decoded value.
+    * Resumes IR signal reception for the next signal.

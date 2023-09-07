@@ -18,7 +18,7 @@ When you have a creative idea in mind, programming will no longer be challenging
     ar_user_defined_function
     ar_shiftout_led
     ar_shiftout_segment
-    ar_add_libraries
+    ar_install_libraries
     ar_serial_read
     ar_interrupt
     ar_calibration

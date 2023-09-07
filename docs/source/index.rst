@@ -18,33 +18,22 @@ In addition, the kit also provides 30+ Scratch programming projects for younger 
 
 Come on! Start programing Arduino with confidence from zero to hero!
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+If you have any questions, please send an email to service@sunfounder.com and we will respond as soon as possible.
 
 **About the display language**
 
-In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-In the meantime, we recommend using Google Translate to convert English to the language you want to see.
+This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
 
-The steps are as follows.
+.. image:: img/translation.png
 
-* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
 
-.. image:: img/translate1.png
-    :align: center
-
-* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
-
-.. image:: img/translate2.png
-    :align: center
-
-* Select the language from the inverted triangle box, and then click **Done**.
-
-.. image:: img/translate3.png
-    :align: center
+**Contents**
 
 .. toctree::
     :maxdepth: 2
 
+
+    About this Kit <self>
     components/component_list
     arduino_start/get_start
     download_code

@@ -38,7 +38,7 @@ GND to GND, OUT to digital pin 2.
 
 .. note::
 
-   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\learning_project\3.4.detect_the_line``. 
+   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\basic_project\3.4.detect_the_line``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

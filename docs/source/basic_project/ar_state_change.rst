@@ -36,7 +36,7 @@ In this project, we will use the button to control the motor.
 
 .. note::
 
-    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\5.3.state_change_detection``.
+    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\basic_project\5.3.state_change_detection``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

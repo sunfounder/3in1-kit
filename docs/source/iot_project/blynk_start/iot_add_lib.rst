@@ -13,6 +13,10 @@ You need to add the correct libraries for the Arduino IDE to use Blynk.
 
     .. image:: img/sp220607_155155.png
     
-#. Copy them all and add them to the ``libraries`` folder of your sketchbook, see :ref:`add_lib_manual` for details.
+#. Copy them all and paste them to the default libraries directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
 
     .. image:: img/sp20220614180720.png
+
+#. If your libraries directory is different, you can check it by going to **File** -> **Preferences**.
+
+    .. image:: img/install_lib1.png

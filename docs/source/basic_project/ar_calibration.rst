@@ -38,7 +38,7 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 
 .. note::
 
-    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\learning_project\5.14.calibration``.
+    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\basic_project\5.14.calibration``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

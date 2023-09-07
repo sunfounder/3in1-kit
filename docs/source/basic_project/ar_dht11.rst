@@ -39,9 +39,11 @@ The dht11, a digital temperature and humidity sensor, is provided in this kit. I
 
 .. note::
 
-    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\learning_project\5.11.temperature_humidity``.
+    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\basic_project\5.11.temperature_humidity``.
     * Or copy this code into **Arduino IDE**.
-    
+    * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_dht11.png
 
 .. raw:: html
     
@@ -51,32 +53,55 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
 
 **How it works?**
 
-The function of the module is included in the library ``dht.h``.
+#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    #include <dht.h> 
+        #include "DHT.h"
 
-Library Functions:
+        #define DHTPIN 11  // Set the pin connected to the DHT11 data pin
+        #define DHTTYPE DHT11 // DHT 11 
 
-.. code-block:: arduino
-    
-    dht
+        DHT dht(DHTPIN, DHTTYPE);
 
-Creates a new instance of the ``dht`` class.
+#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    int read11(uint8_t pin)
+        void setup() {
+            Serial.begin(115200);
+            Serial.println("DHT11 test!");
+            dht.begin();
+        }
 
-This function will return CHECK values.
+#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
 
-* ``DHTLIB_OK`` means that DHT-11 is in good condition;
-* ``DHTLIB_ERROR_CHECKSUM`` represents that the value may be abnormal;
-* ``DHTLIB_ERROR_TIMEOUT`` indicates that there is timeout.
+    .. code-block:: arduino
 
-The function will store the detected humidity and temperature into the
-variables with the same name in ``dht`` class.
+        void loop() {
+            // Wait a few seconds between measurements.
+            delay(2000);
 
-The variables can be called and used directly in the main program.
-(e.g. ``Serial.println(DHT.temperature,1);`` )
+            // Reading temperature or humidity takes about 250 milliseconds!
+            // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+            float humidity = dht.readHumidity();
+            // Read temperature as Celsius (the default)
+            float temperture = dht.readTemperature();
+
+            // Check if any reads failed and exit early (to try again).
+            if (isnan(humidity) || isnan(temperture)) {
+                Serial.println("Failed to read from DHT sensor!");
+                return;
+            }
+            // Print the humidity and temperature
+            Serial.print("Humidity: "); 
+            Serial.print(humidity);
+            Serial.print(" %\t");
+            Serial.print("Temperature: "); 
+            Serial.print(temperture);
+            Serial.println(" *C");
+        }
+
+    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
+    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
+    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.

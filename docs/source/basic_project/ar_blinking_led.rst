@@ -32,7 +32,7 @@ The principle of this circuit is simple and the current direction is shown in th
 
 .. note::
 
-   * You can open the file ``1.1.hello_led.ino`` under the path of ``3in1-kit\learning_project\1.1.hello_led``. 
+   * You can open the file ``1.1.hello_led.ino`` under the path of ``3in1-kit\basic_project\1.1.hello_led``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
