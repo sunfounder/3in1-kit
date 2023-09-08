@@ -1,8 +1,8 @@
 // Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
 // See the Device Info tab, or Template settings
-#define BLYNK_TEMPLATE_ID "xxxxxx"
+#define BLYNK_TEMPLATE_ID "xxxx"
 #define BLYNK_DEVICE_NAME "Quickstart Template"
-#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxx"
+#define BLYNK_AUTH_TOKEN "xxxxxxxx"
 
 // Comment this out to disable prints and save space
 #define BLYNK_PRINT Serial
@@ -29,20 +29,23 @@ SoftwareSerial EspSerial(2, 3); // RX, TX
 
 ESP8266 wifi(&EspSerial);
 
-#include <dht.h>
-dht DHT;
-#define DHT11_PIN 4
+#include "DHT.h"
+
+#define DHTPIN 4       // Set the pin connected to the DHT11 data pin
+#define DHTTYPE DHT11  // DHT 11
+
+DHT dht(DHTPIN, DHTTYPE);
+
 #define lightPin A0
 #define moisturePin A1
 #define pumpA 8
 
-double roomHumidity = 0;
-double roomTemperature = 0;
+float humidity = 0;
+float temperature = 0;
 
 BlynkTimer timer;
 
-BLYNK_WRITE(V0)
-{
+BLYNK_WRITE(V0) {
   if (param.asInt() == 1) {
     digitalWrite(pumpA, HIGH);
   } else {
@@ -59,40 +62,38 @@ int readLight() {
 }
 
 bool readDHT() {
-  int chk = DHT.read11(DHT11_PIN);
-  switch (chk)
-  {
-    case DHTLIB_OK:
-      roomHumidity = DHT.humidity;
-      roomTemperature = DHT.temperature;
-      return true;
-    case DHTLIB_ERROR_CHECKSUM:
-      break;
-    case DHTLIB_ERROR_TIMEOUT:
-      break;
-    default:
-      break;
+
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+  humidity = dht.readHumidity();
+  // Read temperature as Celsius (the default)
+  temperature = dht.readTemperature();
+
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(humidity) || isnan(temperature)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return false;
   }
-  return false;
+  return true;
 }
 
-void myTimerEvent()
-{
+void myTimerEvent() {
   bool chk = readDHT();
   int light = readLight();
   int moisture = readMoisture();
-  if (chk == true) {
-    Blynk.virtualWrite(V4, roomHumidity);
-    Blynk.virtualWrite(V5, roomTemperature);
+  if (chk) {
+    Blynk.virtualWrite(V4, humidity);
+    Blynk.virtualWrite(V5, temperature);
   }
   Blynk.virtualWrite(V6, light);
   Blynk.virtualWrite(V7, moisture);
 }
 
-void setup()
-{
+void setup() {
   // Debug console
   Serial.begin(115200);
+
+  dht.begin();
 
   // Set ESP8266 baud rate
   EspSerial.begin(ESP8266_BAUD);
@@ -108,8 +109,7 @@ void setup()
   pinMode(pumpA, OUTPUT);
 }
 
-void loop()
-{
+void loop() {
   Blynk.run();
-  timer.run(); // Initiates BlynkTimer
+  timer.run();  // Initiates BlynkTimer
 }

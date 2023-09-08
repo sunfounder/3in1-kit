@@ -1,12 +1,11 @@
 #include <IRremote.h>
-const int recvPin = 12;
-IRrecv irrecv(recvPin);
-decode_results results;
 
+const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+String lastDecodedValue = "";   // Variable to store the last decoded value
 
-const int in1 = 5; // in1,2 for right wheel
+const int in1 = 5;  // in1,2 for right wheel
 const int in2 = 6;
-const int in3 = 9; // in3,4 for left wheel
+const int in3 = 9;  // in3,4 for left wheel
 const int in4 = 10;
 
 const int echoPin = 4;
@@ -41,8 +40,8 @@ void setup() {
   //Line Track Module
   pinMode(lineTrackPin, INPUT);
 
-  //UR remote
-  irrecv.enableIRIn(); // Start the receiver
+  //IR remote
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
   Serial.println("REMOTE CONTROL START");
 
   //LED
@@ -51,13 +50,15 @@ void setup() {
 
 void loop() {
 
-  if (irrecv.decode(&results)) {
+  if (IrReceiver.decode()) {
     //    Serial.println(results.value,HEX);
-    String key = decodeKeyValue(results.value);
-    if ( key != "ERROR")
-    {
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+    if (key != "ERROR" && key != lastDecodedValue) {
+      Serial.println(key);
+      lastDecodedValue = key;  // Update the last decoded value
       Serial.println(key);
       blinkLED();
+
       if (key == "+") {
         speed += 50;
         Serial.println(speed);
@@ -107,7 +108,7 @@ void loop() {
       stopMove();
     }
 
-    irrecv.resume(); // Receive the next value
+    IrReceiver.resume();  // Enable receiving of the next value
   }
   if (flag == "AUTO") {
     AutoDrive(speed);
@@ -129,7 +130,7 @@ float readSensorData() {
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
-  float distance = pulseIn(echoPin, HIGH) / 58.00; //Equivalent to (340m/s*1us)/2
+  float distance = pulseIn(echoPin, HIGH) / 58.00;  //Equivalent to (340m/s*1us)/2
   return distance;
 }
 
@@ -219,9 +220,9 @@ void AutoDrive(int speed) {
   } else {
     float distance = readSensorData();
     Serial.println(distance);
-    if (distance > 50) { // Safe
+    if (distance > 50) {  // Safe
       moveForward(200);
-    } else if (distance < 10 && distance > 2) { // Attention
+    } else if (distance < 10 && distance > 2) {  // Attention
       moveBackward(200);
       delay(1000);
       backLeft(150);
@@ -251,7 +252,7 @@ void following(int speed) {
 }
 
 void lineTrack(int speed) {
-  int lineColor = digitalRead(lineTrackPin); // 0:white  1:black
+  int lineColor = digitalRead(lineTrackPin);  // 0:white  1:black
   Serial.println(lineColor);
   if (lineColor) {
     moveLeft(speed);
@@ -280,8 +281,7 @@ void ultrasonicExample(int speed) {
   Serial.println(distance);
   if (distance > 25) {
     moveForward(speed);
-  }
-  else if (distance < 10 && distance > 2) {
+  } else if (distance < 10 && distance > 2) {
     moveBackward(speed);
   } else {
     stopMove();

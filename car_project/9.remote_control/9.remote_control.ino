@@ -1,11 +1,11 @@
 #include <IRremote.h>
-const int recvPin = 12;
-IRrecv irrecv(recvPin); //Create an instance of the ``IRrecv`` class, specifying the pins it's attached to.
-decode_results results;
 
-const int in1 = 5; // in1,2 for right wheel
+const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+String lastDecodedValue = "";   // Variable to store the last decoded value
+
+const int in1 = 5;  // in1,2 for right wheel
 const int in2 = 6;
-const int in3 = 9; // in3,4 for left wheel
+const int in3 = 9;  // in3,4 for left wheel
 const int in4 = 10;
 
 const int ledPin = 13;
@@ -20,8 +20,8 @@ void setup() {
   pinMode(in3, OUTPUT);
   pinMode(in4, OUTPUT);
 
-  //UR remote
-  irrecv.enableIRIn(); // Start the receiver
+  //IR remote
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
   Serial.println("REMOTE CONTROL START");
 
   //LED
@@ -30,13 +30,14 @@ void setup() {
 
 void loop() {
 
-  if (irrecv.decode(&results)) {
+  if (IrReceiver.decode()) {
     //    Serial.println(results.value,HEX);
-    String key = decodeKeyValue(results.value);
-    if ( key != "ERROR")
-    {
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+    if (key != "ERROR" && key != lastDecodedValue) {
       Serial.println(key);
+      lastDecodedValue = key;  // Update the last decoded value
       blinkLED();
+
       if (key == "+") {
         speed += 50;
       } else if (key == "-") {
@@ -71,7 +72,7 @@ void loop() {
       stopMove();
     }
 
-    irrecv.resume(); // Receive the next value
+    IrReceiver.resume();  // Enable receiving of the next value
   }
 }
 
