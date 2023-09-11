@@ -20,7 +20,8 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 ## Update:
 
 2023-09-11:
-- add the links of components
+- Add the links of components
+- Add a language translation file
 
 
 2023-09-07:
