@@ -8,7 +8,48 @@ products have been installed in cars, among which the reversing assist
 system is one of them. Here we use ultrasonic module, LCD, LED and
 buzzer to make a simple ultrasonic reversing assist system.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_buzzer`
+        - |link_passive_buzzer_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
 
 **Schematic Diagram**
 
@@ -22,17 +63,7 @@ buzzer to make a simple ultrasonic reversing assist system.
     :width: 800
     :align: center
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_buzzer`
-* :ref:`cpn_i2c_lcd1602`
-* :ref:`cpn_ultrasonic`
-
-
-
 **Code**
-
 
 .. note::
 

@@ -17,6 +17,42 @@ Since the electric signal is provided for each anode pin, the light of the corre
 By changing the electrical signal intensity of each anode, it can be made to produce various colors.
 
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_rgb`
+        - |link_rgb_led_buy|
 
 
 **Schematic**
@@ -40,12 +76,6 @@ the left pin next to the longest pin is Red, and the 2 pins on the right are Gre
 .. image:: img/colorful_light_bb.jpg
     :width: 500
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_rgb`
-
 
 **Code**
 

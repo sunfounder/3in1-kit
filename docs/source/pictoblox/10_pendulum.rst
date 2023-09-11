@@ -13,6 +13,40 @@ You Will Learn
 - How the servo works and the angle range
 - Draw a sprite and put the center point on the tail.
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_servo` 
+        - |link_servo_buy|
+
 Build the Circuit
 -----------------------
 
@@ -25,10 +59,6 @@ The servo has three wires: the brown wire is GND, the red one is VCC (connect to
 Now build the circuit according to the diagram below.
 
 .. image:: img/circuit/servo_circuit.png
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_servo` 
 
 Programming
 ------------------

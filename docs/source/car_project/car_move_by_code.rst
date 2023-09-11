@@ -8,6 +8,39 @@ In the previous project, we have tried to control the operation of the motor by 
 If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
 Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R3 board in turn.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l298n`
+        - |link_l298n_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+
 
 **Wiring**
 
@@ -51,14 +84,6 @@ Connect the wires between the L298N module and the R3 board according to the dia
 
 .. image:: img/car_motor1.jpg
     :width: 800
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
-* :ref:`cpn_tt_motor`
-
-
-
 
 **Code**
 

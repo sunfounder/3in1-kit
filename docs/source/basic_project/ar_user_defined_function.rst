@@ -3,7 +3,6 @@
 5.8 User-defined Function
 ======================================
 
-
 In c, we can divide a large program into the basic building blocks known as function. 
 The function contains the set of programming statements enclosed by {}. 
 A function can be called multiple times to provide reusability and modularity to the C program. 
@@ -26,6 +25,40 @@ There are two types of functions in C programming:
 
 In this project, define a function to read the value of the ultrasonic module.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+
+
 **Schematic**
 
 .. image:: img/circuit_6.3_ultrasonic.png
@@ -35,10 +68,6 @@ In this project, define a function to read the value of the ultrasonic module.
 .. image:: img/ultrasonic_bb.jpg
     :width: 600
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_ultrasonic`
 
 **Code**
 

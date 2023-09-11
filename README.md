@@ -13,11 +13,15 @@ Quick Links:
 <a id="about_this_kit"></a>
 ## About this kit:
 
-In the 3-in-1 ultimate kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
 
 
 <a id="update"></a>
 ## Update:
+
+2023-09-11:
+- add the links of components
+
 
 2023-09-07:
 - Added .yaml file

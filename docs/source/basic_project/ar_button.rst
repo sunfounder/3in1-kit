@@ -3,10 +3,44 @@
 3.1 Reading Button Value
 ==============================================
 
-
 In the previous projects, we used the output function, in this chapter we will use the input function to input read the button value.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
 
 **Schematic**
 
@@ -21,21 +55,11 @@ pin 2 is in a suspended state and may be high or low.
 In order to get a stable low level when the button is not pressed, 
 pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 
-
-
 **Wiring**
-
 
 .. image:: img/read_the_button_value_bb.jpg
     :width: 600
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_button`
 
 **Code**
 

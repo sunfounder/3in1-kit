@@ -3,8 +3,44 @@
 9. Remote Control
 =================================
 
-
 This kit comes with an IR receiver, which allows you to use an IR remote control to control the movement of the car.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l298n`
+        - |link_l298n_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_receiver`
+        - \-
 
 **Wiring**
 
@@ -34,12 +70,6 @@ Now build the circuit according to the diagram below.
 
 .. image:: img/car_remote.jpg
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_led`
-* :ref:`cpn_receiver`
 
 **Code**
 

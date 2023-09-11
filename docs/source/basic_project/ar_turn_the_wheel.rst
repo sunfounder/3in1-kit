@@ -7,7 +7,40 @@ A motor is a typical digital output device, and it is used in the same way as an
 However, the motor needs to be driven with a large current, and the large current may damage the main control board such as R3 board.
 Therefore, an L298N module is used in this occasion, which is a good helper for the R3 board to control the motor safely.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_l298n`
+        - |link_l298n_buy|
 
 **Schematic**
 
@@ -50,11 +83,6 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
 .. image:: img/turn_the_wheel_bb.jpg
     :width: 800
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_l298n`
 
 **Code**
 

@@ -7,6 +7,44 @@ In the :ref:`sh_follow1` project only the ultrasonic module is used, it can only
 
 In this project, we use 2 IR obstacle avoidance modules at the same time, so that the car can follow your hand left or right.
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l298n` 
+        - |link_l298n_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+    *   - :ref:`cpn_avoid` 
+        - |link_obstacle_avoidance_buy|
+
 Build the Circuit
 -----------------------
 
@@ -53,12 +91,6 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. image:: img/car_avoid_ultrasonic.jpg
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l298n` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_ultrasonic`
-* :ref:`cpn_avoid` 
 
 Programming
 ---------------

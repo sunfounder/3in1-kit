@@ -8,7 +8,7 @@ This is because the two motors may not have the same speed at the factory.
 But we can write offset to the two motors to make their rotational speeds converge.
 
 In this project, 
-we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eepromfor>`_, the point of this is that after each calibration, 
+we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, the point of this is that after each calibration, 
 all projects can get the offset value directly from the EEPROM, 
 so that the car can go in a straight line smoothly.
 
@@ -44,7 +44,7 @@ This project is the same wiring as :ref:`car_move_code`.
 
 3. After modifying the code, upload the code to R3 board to see the effect. Repeat the above steps until the car is almost straight.
 
-4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eepromfor>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
+4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
 
 
 .. code-block:: arduino

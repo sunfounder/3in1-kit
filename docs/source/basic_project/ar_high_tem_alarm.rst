@@ -3,20 +3,61 @@
 6.3 High Temperature Alarm
 ====================================
 
-
 Next, we will make a high temperature alarm device using thermistor, push button, potentiometer and LCD. 
 The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, 
 which can be adjusted using a potentiometer. 
 The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, 
 the buzzer will sound.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_buzzer`
+        - \-
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
+    *   - :ref:`cpn_thermistor`
+        - |link_thermistor_buy|
+    *   - :ref:`cpn_potentiometer`
+        - |link_potentiometer_buy|
 
 **Schematic Diagram**
 
 .. image:: img/wiring_high_tem.png
    :align: center
-
 
 **Fritzing Circuit**
 
@@ -24,21 +65,7 @@ the buzzer will sound.
     :width: 800
     :align: center
 
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
-* :ref:`cpn_button`
-* :ref:`cpn_i2c_lcd1602`
-* :ref:`cpn_thermistor`
-* :ref:`cpn_potentiometer`
-
-
-
 **Code**
-
 
 .. note::
 
