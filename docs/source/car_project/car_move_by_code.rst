@@ -9,6 +9,38 @@ If we modify the level signals through the program, then we can control the move
 
 .. Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R4 board in turn.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110s` 
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
 
 **Wiring**
 
@@ -52,14 +84,6 @@ If we modify the level signals through the program, then we can control the move
 
 .. image:: img/car_2.png
     :width: 800
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-
-
-
 
 **Code**
 

@@ -3,14 +3,44 @@
 5.5 Use Internal Library
 =======================================
 
-
 In the Arduino IDE, you can use many built-in libraries by adding the corresponding ``.h`` file directly to your code.
 
 This project uses the ``Servo`` library to drive the Servo, so that it can rotate between 0° and 180°.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_servo`
+        - |link_servo_buy|
 
 **Schematic**
-
 
 .. image:: img/circuit_6.2_servo.png
 
@@ -21,10 +51,6 @@ brown one to GND.
 **Wiring**
 
 .. image:: img/5.5_swinging_servo_bb.png
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_servo`
 
 **Code**
 

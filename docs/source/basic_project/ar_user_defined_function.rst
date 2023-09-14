@@ -3,7 +3,6 @@
 5.8 User-defined Function
 ======================================
 
-
 In c, we can divide a large program into the basic building blocks known as function. 
 The function contains the set of programming statements enclosed by {}. 
 A function can be called multiple times to provide reusability and modularity to the C program. 
@@ -18,13 +17,45 @@ There are the following advantages of functions.
 * Reusability is the main achievement of C functions.
 * However, Function calling is always a overhead in a C program.
 
-
 There are two types of functions in C programming:
 
 * **Library Functions**: the functions which are declared in the C header files.
 * **User-defined functions**: the functions which are created by the C programmer, so that he/she can use it many times. It reduces the complexity of a big program and optimizes the code.
 
 In this project, define a function to read the value of the ultrasonic module.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
 
 **Schematic**
 
@@ -35,10 +66,6 @@ In this project, define a function to read the value of the ultrasonic module.
 .. image:: img/5.8_ultrasonic_bb.png
     :width: 600
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_ultrasonic`
 
 **Code**
 

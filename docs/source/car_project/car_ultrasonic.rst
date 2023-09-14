@@ -7,6 +7,40 @@ In :ref:`car_ir_obstacle` project, the 2 infrared obstacle avoidance modules are
 
 In this project, we use ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110s` 
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
 
 **Wiring**
 
@@ -31,11 +65,6 @@ Now build the circuit according to the following diagram.
 
 .. image:: img/car_6.png
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_ultrasonic`
 
 **Code**
 

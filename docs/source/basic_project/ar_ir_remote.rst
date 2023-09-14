@@ -3,13 +3,45 @@
 5.11.3 IR Receiver
 =========================
 
-
 In this project, you will learn to use IR Receiver. 
 
 An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
 It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_receiver`
+        - \-
 
 **Schematic**
 
@@ -17,18 +49,10 @@ It is similar with a normal plastic-packaged transistor in size and is suitable 
 
 **Wiring**
 
-
-
 In this example, we wire up the left pin of IR Receiver to pin 11, 
 the middle pin to GND, and the right pin to 5V.
 
 .. image:: img/5.11_ir_recv_bb.png
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_receiver`
 
 **Code**
 

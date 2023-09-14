@@ -9,7 +9,38 @@ Yes, you guessed it, there are ways to control programs and circuits by entering
 
 In this project, we will use the I2C LCD1602 to display the text entered in the Serial Monitor in order to experience the usage of ``Serial.read()``.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
 
 **Schematic**
 
@@ -20,11 +51,6 @@ In this project, we will use the I2C LCD1602 to display the text entered in the 
 .. image:: img/5.11_lcd_bb.png
     :width: 800
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_i2c_lcd1602`
 
 **Code**
 

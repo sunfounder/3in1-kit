@@ -1,12 +1,52 @@
 .. _iot_home:
 
-
 5. Home Environment Monitoring
 ================================
 
 In this chapter, we will use Blynk to create a home environment monitor.
 You can measure the temperature, humidity, and light intensity of a room using the DHT11 and photoresistor.
 By sending these values to Blynk, you will be able to know the environment of your home via the internet.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_esp8266`
+        - |link_esp8266_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_photoresistor`
+        - |link_photoresistor_buy|
+    *   - :ref:`cpn_dht11`
+        - \-
 
 **1. Build the Cirduit**
 
@@ -15,13 +55,6 @@ By sending these values to Blynk, you will be able to know the environment of yo
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 .. image:: img/iot_5_bb.png
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_esp8266`
-* :ref:`cpn_photoresistor`
-* :ref:`cpn_dht11`
-* :ref:`cpn_resistor`
 
 **2. Edit Dashboard**
 

@@ -13,7 +13,46 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 .. note::
     The `theremin <https://en.wikipedia.org/wiki/Theremin>`_ is an electronic musical instrument that requires no physical contact. It generates different tones by sensing the position of the player's hands.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_buzzer`
+        - |link_passive_buzzer_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_photoresistor`
+        - |link_photoresistor_buy|
 
 **Schematic**
 
@@ -24,15 +63,6 @@ In this project, we use a photoresistor and a passive buzzer to implement a `the
 .. image:: img/5.14_calibration_bb.png
     :width: 600
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_buzzer`
-* :ref:`cpn_led` 
-* :ref:`cpn_photoresistor` 
 
 **Code**
 

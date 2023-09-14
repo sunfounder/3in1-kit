@@ -1,6 +1,5 @@
 .. _iot_gate:
 
-
 7. Current Limiting Gate
 ==================================
 
@@ -9,8 +8,50 @@ Some situations, such as parking lots, require quantity management.
 Here we create a smart gate: a servo is used as the gate, and an IR obstacle detector is placed in front of it; if an object (like a car) is detected, the gate will open and the number will be increased by 1.
 The count is displayed with a 7-segment display and is also uploaded to the Blynk Cloud for you to view remotely. Finally, Blynk has a Switch widget to enable or disable this smart gate system.
 
+**Required Components**
 
+In this project, we need the following components. 
 
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_esp8266`
+        - |link_esp8266_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_servo`
+        - |link_servo_buy|
+    *   - :ref:`cpn_avoid`
+        - |link_obstacle_avoidance_buy|
+    *   - :ref:`cpn_7_segment`
+        - |link_7segment_buy|
+    *   - :ref:`cpn_74hc595`
+        - |link_74hc595_buy|
 
 **1. Build the Cirduit**
 
@@ -18,29 +59,18 @@ The count is displayed with a 7-segment display and is also uploaded to the Blyn
 
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
-
 .. image:: img/iot_7_bb.png
     :width: 800
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_esp8266`
-* :ref:`cpn_servo`
-* :ref:`cpn_avoid`
-* :ref:`cpn_7_segment`
-
 **2. Edit Dashboard**
 
-
 #. To record the number, create a **Datastream** of type **Virtual Pin** on the **Datastream** page. Set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``10``.
-
 
     .. image:: img/sp220610_165328.png
  
 #. Now go to the **Wed Dashboard** page, drag a **Switch** widget to set its data stream to **V0** and a **Label** widget to set its data stream to **V8**.
 
     .. image:: img/sp220610_165548.png
-
 
 **3. Run the Code**
 
@@ -54,7 +84,6 @@ The count is displayed with a 7-segment display and is also uploaded to the Blyn
 #. After selecting the correct board and port, click the **Upoad** button.
 
 #. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
-
 
     .. image:: img/2_ready.png
 
@@ -78,9 +107,7 @@ The count is displayed with a 7-segment display and is also uploaded to the Blyn
 
 **How it works?**
 
-
 The function ``BLYNK_WRITE(V0)`` gets the status of the **Switch** widget and assigns it to the variable ``doorFlag``, which will be used to determine if the smart gate system is enabled or not.
-
 
 .. code-block:: arduino
 
@@ -105,7 +132,6 @@ The main function of the gate is ``channelEntrance()``.
 When an object approaches the gate (the sensor detects that there is an obstacle), the ``count`` is increased by 1.
 Write ``count`` to the datastream ``V8``  of Blynk Cloud and 7-segment display on the circuit, and open the door.
 If the object goes from present to absent, which means the object has entered the door, close the door.
-
 
 .. code-block:: arduino
 

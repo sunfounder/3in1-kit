@@ -5,6 +5,45 @@
 
 You will learn how to control the circuit with Blynk in this chapter. Let's light up the LEDs over the Internet!
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_esp8266`
+        - |link_esp8266_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+
 **1. Build the Cirduit**
 
 .. note::
@@ -12,14 +51,6 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 .. image:: img/iot_2_bb.png
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_esp8266`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
-
-
 
 **2. Edit Dashboard**
 
@@ -105,9 +136,7 @@ You will learn how to control the circuit with Blynk in this chapter. Let's ligh
 
 **How it works?**
 
-
 The difference between the code in this project and the code in the previous chapter :ref:`connect_blynk` is the following lines.
-
 
 .. code-block:: arduino
 
@@ -126,7 +155,6 @@ The difference between the code in this project and the code in the previous cha
     {
         pinMode(ledPin,OUTPUT);
     }
-
 
 Regarding the ``pinMode`` and ``digitalWrite`` of the ledPin, I'm sure you're already familiar with them, so I won't go over them again. What you need to focus on is the ``BLYNK_WRITE(V0)`` function.
 
@@ -148,5 +176,3 @@ Get the value of V0 and assign it to the variable ``pinValue``.
     digitalWrite(ledPin,pinValue);
 
 Write the value of V0 obtained to the ledPin, so that the Switch widget on Blynk can control the LED.
-
-

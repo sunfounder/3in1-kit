@@ -8,13 +8,48 @@ A thermometer has two important elements: (1) a temperature sensor (e.g. the bul
 and (2) some means of converting this change into a numerical value (e.g. the visible scale that is marked on a mercury-in-glass thermometer or the digital readout on an infrared model). 
 Thermometers are widely used in technology and industry to monitor processes, in meteorology, in medicine, and in scientific research.
 
-
 A thermistor is a type of temperature sensor whose resistance is strongly dependent on temperature, and it has two types: 
 Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC), 
 also known as NTC and PTC. The resistance of PTC thermistor increases with temperature, while the condition of NTC is opposite to the former.
 
 In this experiment we use an **NTC thermistor** to make a thermometer.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_thermistor`
+        - |link_thermistor_buy|
 
 **Schematic**
 
@@ -41,7 +76,6 @@ Here is the relation between the resistance and temperature:
 
     This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
 
-
 **Wiring**
 
 .. note::
@@ -50,13 +84,6 @@ Here is the relation between the resistance and temperature:
 .. image:: img/4.5_thermistor_bb.png
     :width: 600
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_thermistor`
-
 
 **Code**
 

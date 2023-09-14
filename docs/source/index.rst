@@ -45,6 +45,7 @@ The steps are as follows.
 .. toctree::
     :maxdepth: 2
 
+    About this Kit <self>
     components/component_list
     arduino_start/get_start
     download_code

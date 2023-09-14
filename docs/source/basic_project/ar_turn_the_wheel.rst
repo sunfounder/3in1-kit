@@ -9,10 +9,7 @@ and the large current may damage the main control board such as R4 board.
 Therefore, an motor driver module is used in this occasion, 
 which is a good helper for the R4 board to control the motor safely.
 
-
-
 .. **Schematic**
-
 
 .. .. image:: img/circuit_1.3_wheel.png
 
@@ -20,6 +17,41 @@ which is a good helper for the R4 board to control the motor safely.
 
 .. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
 .. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_l9110s`
+        - \-
 
 **Wiring**
 
@@ -52,11 +84,6 @@ which is a good helper for the R4 board to control the motor safely.
 .. image:: img/1.3_turn_the_wheel_bb.png
     :width: 800
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_l9110s`
 
 **Code**
 

@@ -10,7 +10,38 @@ If it detects reflected light, it means the ground is currently white. If not de
 
 That's how it works.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_track`
+        - |link_track_buy|
 
 
 **Schematic**
@@ -28,11 +59,6 @@ GND to GND, OUT to digital pin 2.
 .. image:: img/3.4_detect_the_line_bb.png
     :width: 500
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_track`
-* :ref:`cpn_wires`
 
 **Code**
 

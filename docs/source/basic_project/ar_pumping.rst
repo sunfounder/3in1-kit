@@ -14,6 +14,41 @@ The water pump is also a motor, which converts the mechanical energy of the moto
 .. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
 .. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_l9110s`
+        - \-
+    *   - :ref:`cpn_pump`
+        - \-
+
 **Wiring**
 
 .. list-table:: 
@@ -44,11 +79,6 @@ The water pump is also a motor, which converts the mechanical energy of the moto
 .. image:: img/1.4_pumping_bb.png
     :width: 800
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_l9110s`
-* :ref:`cpn_pump`
 
 **Code**
 

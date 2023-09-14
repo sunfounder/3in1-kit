@@ -31,7 +31,46 @@ lags on a single instruction.
 Based on this condition, we can add the code of the button to control the LED, 
 it will not be disturbed by the buzzer playing music.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_buzzer`
+        - |link_passive_buzzer_buy|
 
 **Schematic**
 
@@ -43,16 +82,6 @@ it will not be disturbed by the buzzer playing music.
 .. image:: img/5.4_interval_bb.png
     :width: 600
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_led`
-* :ref:`cpn_button`
-* :ref:`cpn_buzzer`
-
 
 .. note::
 

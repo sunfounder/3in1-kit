@@ -5,8 +5,42 @@
 
 The photoresistor is a typical device for analog inputs and it is used in a very similar way to a potentiometer. Its resistance value depends on the intensity of the light, the stronger the irradiated light, the smaller its resistance value; conversely, it increases.
 
+**Required Components**
 
+In this project, we need the following components. 
 
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_photoresistor`
+        - |link_photoresistor_buy|
 
 **Schematic**
 
@@ -21,24 +55,15 @@ At this time, the 10K resistor plays a protective role, so that 5V and GND are n
 If you place the photoresistor in a dark situation, the value of pin A0 will decrease. 
 In a dark enough situation, the resistance of the photoresistor will be infinite, and its voltage will be close to 5V (the 10K resistor is negligible), and the value of pin A0 will be close to 0.
 
-
 The calculation formula is shown below.
 
     (Vp/5V) x 1023 = Ap
-
-
 
 **Wiring**
 
 .. image:: img/4.2_feel_the_light_bb.png
     :width: 600
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_photoresistor`
 
 **Code**
 

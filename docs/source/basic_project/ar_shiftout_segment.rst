@@ -12,6 +12,44 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
     :width: 600
     :align: center
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_7_segment`
+        - |link_7segment_buy|
+    *   - :ref:`cpn_74hc595`
+        - |link_74hc595_buy|
 
 **Schematic**
 
@@ -46,15 +84,7 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
     :width: 600
     :align: center
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_7_segment`
-* :ref:`cpn_74hc595` 
-
 **Code**
-
 
 .. note::
 
@@ -63,7 +93,6 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
-
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/23b9a3ea-c648-4f33-8622-e279d94ee507/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -71,7 +100,6 @@ The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 str
 After the code is uploaded successfully, you will be able to see the LED Segment Display display 0~9 in sequence.
 
 **How it works?**
-
 
 ``shiftOut()`` will make 74HC595 output 8 digital signals.
 It outputs the last bit of the binary number to Q0, 
@@ -84,7 +112,6 @@ That is, the binary number " 01011011" needs to be written.
 For readability, we will use hexadecimal notation as "0x5b".
 
 .. image:: img/7_segment2.png
-
 
 * `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
