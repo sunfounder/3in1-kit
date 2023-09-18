@@ -1,31 +1,14 @@
 .. _cpn_wires:
 
-Jumper Wires
+ジャンパーワイヤー
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+二つの端子を接続するワイヤーをジャンパーワイヤーと呼びます。さまざまな種類のジャンパーワイヤーがありますが、ここではブレッドボードで使用されるものに焦点を当てます。特に、ブレッドボードの任意の位置からマイクロコントローラの入出力ピンに電気信号を伝送するために使用されます。
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+ジャンパーワイヤは、その"端子コネクタ"をブレッドボードに提供されるスロットに挿入することで取り付けられ、その表面の下には、エリアに応じて行または列のグループでスロットを接続する平行なプレートのセットがいくつかあります。 "端子コネクタ"は、特定のプロトタイプで接続する必要がある特定のスロットにはんだ付けせずにブレッドボードに挿入されます。
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+ジャンパーワイヤーには、メス-メス、オス-オス、およびオス-メスの3つのタイプがあります。オスからメスと呼ぶ理由は、一方の端に突出した先端と沈んだメスの端があるためです。オス-オスは両側がオスであり、メス-メスは両端がメスであることを意味します。
 
 .. image:: img/image414.png
 
-
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+プロジェクトには複数のタイプが使用されることがあります。ジャンプワイヤの色は異なりますが、それがそれぞれの機能が異なることを意味するわけではありません。それは各回路間の接続をより簡単に識別するために設計されています。

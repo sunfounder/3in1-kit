@@ -1,9 +1,9 @@
-Variable
+変数
 ========
 
-The variable is one of the most powerful and critical tools in a program. It helps us to store and call data in our programs.
+変数はプログラム内で最も強力で重要なツールの一つです。これにより、私たちのプログラム内でデータを保存し、呼び出すことができます。
 
-The following sketch file uses variables. It stores the pin numbers of the on-board LED in the variable ``ledPin`` and a number "500" in the variable ``delayTime``.
+以下のスケッチファイルは変数を使用しています。オンボードLEDのピン番号を変数 ``ledPin`` に、数字 "500" を変数 ``delayTime`` に保存します。
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -22,12 +22,12 @@ The following sketch file uses variables. It stores the pin numbers of the on-bo
         delay(delayTime);
     }
 
-Wait, is this a duplicate of what ``#define`` does? The answer is NO.
+待って、これは ``#define`` の動作を複製しているのでしょうか？答えはNOです。
 
-* The role of ``#define`` is to simply and directly replace text, it is not considered by the compiler as part of the program. 
-* A ``variable``, on the other hand, exists within the program and is used to store and call value. A variable can also modify its value within the program, something that a define cannot do.
+* ``#define`` の役割はテキストを単純かつ直接に置き換えることであり、プログラムの一部としてコンパイラに認識されることはありません。
+* 一方、 ``variable`` はプログラム内に存在し、値を保存し呼び出すために使用されます。defineではできないことですが、プログラム内でその値を変更することもできます。
 
-The sketch file below self-adds to the variable and it will cause the on-board LED to blink longer after each blink.
+以下のスケッチファイルでは、変数に自己追加が行われ、各点滅ごとにオンボードLEDの点滅が長くなります。
 
 .. code-block:: C
 
@@ -43,64 +43,60 @@ The sketch file below self-adds to the variable and it will cause the on-board L
         delay(delayTime); 
         digitalWrite(ledPin,LOW); 
         delay(delayTime);
-        delayTime = delayTime+200; //Each execution increments the value by 200
+        delayTime = delayTime+200; // 実行ごとに値を200増やします
     }
 
-Declare a variable
+変数の宣言
 -------------------
 
-Declaring a variable means creating a variable. 
+変数を宣言するとは、変数を作成することを意味します。
 
-To declare a variable, you need two things: the data type, and the variable name. The data type needs to be separated from the variable by a space, and the variable declaration needs to be terminated by a ``;``.
+変数を宣言するには、データ型と変数名の2つが必要です。データ型は変数からスペースで区切り、変数の宣言は ``;`` で終了する必要があります。
 
-Let's use this variable as an example.
+この変数を例に取り上げてみましょう。
 
 .. code-block:: C
 
     int delayTime;
 
-**Data Type**
+**データ型**
 
-Here ``int`` is a data type called integer type, which can be used to store integers from -32768 to 32766. It can also not be used to store decimals.
+ここで ``int`` は整数型と呼ばれるデータ型であり、-32768から32766までの整数を保存するために使用できます。また、小数を保存するためには使用できません。
 
-Variables can hold different kinds of data other than integers. The Arduino language (which, remember, is C++) has built-in support for a few of them (only the most frequently used and useful are listed here):
+変数は整数以外のさまざまなデータを保持することができます。Arduino言語（実際にはC++です）は、以下に挙げる最も頻繁に使用されるものに対して組み込みのサポートを持っています。
 
-* ``float``: Store a decimal number, for example 3.1415926.
-* ``byte``: Can hold numbers from 0 to 255.
-* ``boolean``: Holds only two possible values, ``True`` or ``False``, even though it occupies a byte in memory.
-* ``char``: Holds a number from -127 to 127. Because it is marked as a ``char`` the compiler will try to match it to a character from the |link_ascii|.
-* ``string``: Can stores a string of characters, e.g. ``Halloween``.
+* ``float``: 小数点数を保存します、例：3.1415926。
+* ``byte``: 0から255までの数値を保持します。
+* ``boolean``: ``True`` または ``False`` の2つの可能な値のみを保持しますが、メモリ内で1バイトを占有します。
+* ``char``: -127から127までの数値を保持します。 ``char`` としてマークされると、コンパイラはそれを |link_ascii| の文字に一致させようとします。
+* ``string``: 文字列、例： ``Halloween`` を保存できます。
 
+**変数名**
 
-**Variable Name**
+変数名は好きな名前に設定できます。例えば、 ``i``、 ``apple``、 ``Bruce``、 ``R2D2``、 ``Sectumsempra`` などですが、守るべき基本的なルールがいくつかあります。
 
+1. それが何のために使用されるのかを説明します。ここでは、変数をdelayTimeと名付けたので、それが何をするのかを簡単に理解できます。変数名を ``barryAllen`` にするのも構いませんが、コードを見ている人に混乱をもたらします。
 
-You can set the variable to any name you want, such as ``i``, ``apple``, ``Bruce``, ``R2D2``, ``Sectumsempra``, but there are some basic rules to follow.
+2. 一般的な命名法を使用します。CamelCaseを使用することができ、私は ``delayTime`` の初めのTを使用して、変数が2つの単語で構成されていることが容易に分かるようにしました。また、UnderScoreCaseを使用して変数を ``delay_time`` として書くこともできます。プログラムの実行に影響はありませんが、好みの命名法を使用すると、プログラマがコードを読むのが容易になります。
 
-1. describe what it is used for. Here, I named the variable delayTime, so you can easily understand what it does. It works fine if I name the variable ``barryAllen``, but it confuses the person looking at the code.
+3. キーワードを使用しないでください。"int"をタイプするときと同じように、Arduino IDEはそれが特別な目的を持つ単語であることを思い出させるためにそれを色付けします。それは変数名として使用することができません。もしそれが色付けされていれば、変数の名前を変更します。
 
-2. Use regular nomenclature. You can use CamelCase like I did, with the initial T in ``delayTime`` so that it is easy to see that the variable consists of two words. Also, you can use UnderScoreCase to write the variable as ``delay_time``. It doesn't affect the program's running, but it would help the programmer to read the code if you use the nomenclature you prefer.
+4. 特別な記号は許可されていません。例えば、スペース、#, $, /, +, %などです。英字（大文字・小文字を区別）、アンダースコア、数字の組み合わせは十分ですが、数字は変数名の最初の文字として使用することはできません。
 
-3. Don't use keywords. Similar to what happens when we type "int", the Arduino IDE will color it to remind you that it is a word with a special purpose and cannot be used as a variable name. Change the name of the variable if it is colored. 
+**変数に値を割り当てる**
 
-4. Special symbols are not allowed. For example, space, #, $, /, +, %, etc. The combination of English letters (case sensitive), underscores, and numbers (but numbers cannot be used as the first character of a variable name) is rich enough.
+変数を宣言したら、データを格納する時が来ます。代入演算子（すなわち ``=``）を使用して変数に値を入れます。
 
-
-**Assign a value to a variable**
-
-Once we have declared the variable, it is time to store the data. We use the assignment operator (i.e. ``=``) to put value into the variable.
-
-We can assign values to the variable as soon as we declare it.
-
+変数を宣言すると同時にその値を割り当てることができます。
 
 .. code-block:: C
 
     int delayTime = 500;
 
-It is also possible to assign a new value to it at some time.
+また、ある時点で新しい値を割り当てることも可能です。
 
 .. code-block:: C
 
-    int delayTime; // no value
-    delayTime = 500; // value is 500
-    delayTime = delayTime +200; // value is 700
+    int delayTime; // 値なし
+    delayTime = 500; // 値は500
+    delayTime = delayTime +200; // 値は700

@@ -1,47 +1,47 @@
 .. _sh_colorful_ball:
 
-2.3 Colorful Balls
+2.3 カラフルボール
 =====================
 
-In this project, we will make the RGB LEDs display different colors.
+このプロジェクトでは、RGB LEDを使ってさまざまな色を表示させます。
 
-Clicking on different colored balls on the stage area will cause the RGB LED to light up in different colors.
+ステージエリアの異なる色のボールをクリックすると、RGB LEDが異なる色で点灯します。
 
 .. image:: img/4_color.png
 
-You Will Learn
+学べること
 ---------------------
 
-- The principle of RGB LED
-- Copy sprites and select different costumes
-- Three primary colors superimposed
+- RGB LEDの原理
+- スプライトの複製と異なるコスチュームの選択
+- 三原色の重ね合わせ
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのが確かに便利です。リンクはこちら： 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,74 +54,69 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-Build the Circuit
+回路の作成
 ---------------------
 
-An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors.
+RGB LEDは、赤、緑、青の3つのLEDを透明または半透明のプラスチックシェルにパッケージングします。3つのピンの入力電圧を変えることでさまざまな色を表示でき、それらを重ね合わせることで、統計によれば16,777,216色の異なる色を作り出すことができます。
 
 .. image:: img/4_rgb.png
     :width: 300
 
 .. image:: img/circuit/rgb_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select sprite**
+**1. スプライトの選択**
 
-
-Delete the default sprite, then choose the **Ball** sprite.
+デフォルトのスプライトを削除し、 **Ball** スプライトを選択します。
 
 .. image:: img/4_ball.png
 
-And duplicate it 5 times.
+それを5回複製します。
 
 .. image:: img/4_duplicate_ball.png
 
-Choose different costumes for these 5 **Ball** sprites and move them to the corresponding positions.
+これらの5つの **Ball** スプライトに異なるコスチュームを選び、それぞれの位置に移動させます。
 
 .. note::
 
-    **Ball3** sprite costume color needs to be manually changed to red.
+    **Ball3** のスプライトのコスチュームの色は、手動で赤に変更する必要があります。
 
 .. image:: img/4_rgb1.png
     :width: 800
 
-**2. Make RGB LEDs light up in the appropriate color**
+**2. RGB LEDを適切な色で点灯させる**
 
-Before understanding the code, we need to understand the `RGB color model <https://en.wikipedia.org/wiki/RGB_color_model>`_.
+コードを理解する前に、 `RGB 色モデル <https://en.wikipedia.org/wiki/RGB_color_model>`_ を理解する必要があります。
 
-The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. 
+RGB色モデルは、赤、緑、青の光をさまざまな方法で加えて、幅広い色を再現する加色モデルです。
 
-Additive color mixing: adding red to green yields yellow; adding green to blue yields cyan; adding blue to red yields magenta; adding all three primary colors together yields white.
+加色混合：赤と緑を加えると黄色、緑と青を加えるとシアン、青と赤を加えるとマゼンタ、3つの原色をすべて加えると白になります。
 
 .. image:: img/4_rgb_addition.png
   :width: 400
 
-So the code to make the RGB LED light yellow is as follows.
+RGB LEDを黄色に点灯させるコードは以下の通りです。
 
 .. image:: img/4_yellow.png
 
+ボールスプライト（黄色のボール）がクリックされたとき、ピン11をハイ（赤いLED点灯）、ピン10をハイ（緑のLED点灯）、ピン9をロー（青いLED消灯）に設定して、RGB LEDが黄色に点灯するようにします。
 
-When the Ball sprite (yellow ball) is clicked, we set pin 11 high (red LED on), pin 10 high (green LED on) and pin 9 low (blue LED off) so that the RGB LED will light yellow.
+他のスプライトにも、対応する色でRGB LEDを点灯させるコードを書くことができます。
 
-You can write codes to other sprites in the same way to make the RGB LEDs light up in the corresponding colors.
-
-**3. Ball2 sprite (light blue)**
+**3. Ball2 スプライト（ライトブルー）**
 
 .. image:: img/4_blue.png
 
-**4. Ball3 sprite (red)**
+**4. Ball3 スプライト（赤）**
 
 .. image:: img/4_red.png
 
-**5. Ball4 sprite (green)**
+**5. Ball4 スプライト（緑）**
 
 .. image:: img/4_green.png
 
-**6. Ball5 sprite (purple)**
+**6. Ball5 スプライト（紫）**
 
 .. image:: img/4_purple.png
-
-
-

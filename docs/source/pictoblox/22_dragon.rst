@@ -1,40 +1,40 @@
 .. _sh_dragon:
 
-2.22 GAME - Kill Dragon
+2.22 GAME - ドラゴン討伐
 ============================
 
-Here, we use the joystick to play a game of dragon killing.
+このゲームでは、ジョイスティックを使ってドラゴンを討伐します。
 
-When clicking on green, the dragon will float up and down on the right side and blow fire intermittently. You need to use the joystick to control the movement of the magic wand and launch star attacks at the dragon, while avoiding the flames it shoots, and finally defeat it.
+緑色をクリックすると、ドラゴンは右側で上下に浮かび、時々火を吹きます。魔法の杖の動きをジョイスティックで制御し、ドラゴンに向かって星の攻撃を打ち出しつつ、ドラゴンが放つ炎を避けて、最終的に倒す必要があります。
 
 .. image:: img/19_dragon.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入することは非常に便利です。リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,161 +43,150 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-Build the Circuit
+回路の作成
 -----------------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots.
+ジョイスティックは、ベース上で旋回するスティックを持つ入力デバイスで、制御するデバイスにその角度や方向を報告します。ジョイスティックは、ビデオゲームやロボットの制御によく使用されます。
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick’s position on two axes – the X-axis (left to right) and the Y-axis (up and down).
+コンピュータに完全な動きを伝えるために、ジョイスティックはスティックの位置を2つの軸で測定する必要があります – X軸（左から右）とY軸（上から下）です。
 
-The motion coordinates of the joystick are shown in the following figure.
+ジョイスティックの動きの座標は以下の図に示されています。
 
 .. note::
 
-    * The x coordinate is from left to right, the range is 0-1023.
-    * y coordinate is from top to bottom, range is 0-1023.
+    * x座標は左から右へ、範囲は0-1023。
+    * y座標は上から下へ、範囲は0-1023。
 
 .. image:: img/16_joystick.png
 
-
-Now build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
 .. image:: img/circuit/joystick_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Dragon**
+**1. ドラゴン**
 
-**Woods** backdrop added via the **Choose a Backdrop** button.
+**Woods** の背景は **Choose a Backdrop** ボタンから追加します。
 
 .. image:: img/19_dragon01.png
 
-* Delete the default sprite and add the **Dragon** sprite.
+* デフォルトのスプライトを削除し、 **Dragon** スプライトを追加します。
 
 .. image:: img/19_dragon0.png
 
-* Go to the **Costumes** page and flip the dragon-b and dragon-c horizontally.
+* **Costumes** ページに移動し、dragon-b と dragon-c を水平に反転します。
 
 .. image:: img/19_dragon1.png
 
-* Set the size to 50%.
+* サイズを50%に設定します。
 
 .. image:: img/19_dragon3.png
 
-* Now create a variable - **dragon** to record the dragon's life points, and set the initial value to 50.
+* 変数 - **dragon** を作成して、ドラゴンのライフポイントを記録し、初期値を50に設定します。
 
 .. image:: img/19_dragon2.png
 
-* Next, switch the sprite costume to **dragon-b** and have the **Dragon** sprite up and down in a range.
+* 次に、スプライトのコスチュームを **dragon-b** に切り替え、 **Dragon** スプライトを一定の範囲で上下に動かします。
 
 .. image:: img/19_dragon4.png
 
-
-* Add a **Lightning** sprite as the fire blown by the **Dragon** sprite. You need to rotate it 90° clockwise in the Costumes page, this is to make the **Lightning** sprite move in the right direction.
+* **Dragon** スプライトが吹き出す火として、 **Lightning** スプライトを追加します。Costumesページで90°時計回りに回転させ、 **Lightning** スプライトが正しい方向に動くようにします。
 
 .. note::
-    When adjusting the **Lightning** sprite's costume, you may move it off-center, which must be avoided! The center point must be right in the middle of the sprite!
+    **Lightning** スプライトのコスチュームを調整する際、中心から外れてしまうことがありますが、それは避ける必要があります！ 中心点はスプライトの真ん中に合わせてください！
 
 .. image:: img/19_lightning1.png
 
-
-
-* Then adjust the **dragon-c** costume of the **Dragon** sprite so that its center point should be at the tail of the fire. This will make the positions of the **Dragon** sprite and the **Lightning** sprite correct, and prevent **Lightning** from launching from the dragon's feet. 
+* まず、 **Dragon** スプライトの **dragon-c** コスチュームを調整し、その中心点が火の尾に位置するようにします。これにより、 **Dragon** スプライトと **Lightning** スプライトの位置が正確になり、 **Lightning** がドラゴンの足元から発射されるのを防ぎます。
 
 .. image:: img/19_dragon5.png
 
-* Correspondingly, **dragon-b** needs to make the head of the dragon coincide with the center point.
+* 対応するように、 **dragon-b** はドラゴンの頭を中心点と一致させる必要があります。
 
 .. image:: img/19_dragon5.png
 
-* Adjust the size and orientation of the **Lightning** sprite to make the image look more harmonious.
+* **Lightning** スプライトのサイズと方向を調整し、画像がより調和のとれたものになるようにします。
 
 .. image:: img/19_lightning3.png
 
-* Now script the **Lightning** sprite. This is easy, just have it follow the **Dragon** sprite all the time. At this point, click on the green flag and you will see **Dragon** moving around with lightning in its mouth.
+* 今度は **Lightning** スプライトをスクリプト化します。これは簡単で、 **Dragon** スプライトを常に追従させるだけです。この時点で緑の旗をクリックすると、 **Dragon** が稲妻を口にくわえて動き回るのが見えるでしょう。
 
 .. image:: img/19_lightning4.png
 
-* Back to the **Dragon** sprite, now have it blow out fire, being careful not to let the fire in its mouth shoot out, but to create a clone for the **Lightning** sprite.
+* **Dragon** スプライトに戻り、口から火を吹き出すようにします。口の中の火を発射しないよう注意し、 **Lightning** スプライトのクローンを作成します。
 
 .. image:: img/19_dragon6.png
 
-* Click on the **Lightning** sprite and let the **Lightning** clone shoot out at a random angle, it will bounce off the wall and disappear after a certain amount of time.
+* **Lightning** スプライトをクリックし、 **Lightning** のクローンをランダムな角度で発射します。一定の時間が経過すると、壁から跳ね返り消えます。
 
 .. image:: img/19_lightning5.png
 
-* In the **Lightning** sprite, hide its body and show the clone.
+* **Lightning** スプライトで、その本体を隠し、クローンを表示します。
 
 .. image:: img/19_lightning6.png
 
-Now the dragon can move up and down and blow out fire.
+これでドラゴンは上下に動きながら火を吹き出すことができます。
 
+**2. Wand**
 
-**2.Wand**
-
-* Create a **Wand** sprite and rotate its direction to 180 to point to the right.
+* **Wand** スプライトを作成し、方向を180にして右を向かせます。
 
 .. image:: img/19_wand1.png
 
-* Now create a variable **hp** to record its life value, initially set to 3. Then read the Joystick's value, which is used to control the wand's movement.
+* 変数 **hp** を作成して、そのライフ値を記録します。初期設定は3にします。次に、ジョイスティックの値を読み取り、それを使用してワンドの動きを制御します。
 
 .. image:: img/19_wand2.png
 
-* The dragon has lightning, and the wand that crushes it has its "magic bullet"! Create a **Star** sprite, resize it, and script it to always follow the **Wand** sprite, and limit the number of stars to three.
+* ドラゴンは雷を持っており、それを砕くワンドには「魔法の弾丸」があります！ **Star** スプライトを作成し、サイズを変更して、常に **Wand** スプライトに従い、星の数を3つに制限します。
 
 .. image:: img/19_star2.png
 
-* Make the **Wand** sprite shoot stars automatically. The **Wand** sprite shoots stars the same way the dragon blows fire -- by creating clones.
+* **Wand** スプライトが星を自動的に撃つようにします。 **Wand** スプライトが星を撃つ方法は、ドラゴンが火を吹き出す方法と同じです。クローンを作成するだけです。
 
 .. image:: img/19_wand3.png
 
-
-* Go back to the **Star** sprite and script its clone to spin and shoot to the right, disappear after going beyond the stage and restoring the number of stars. Same as **Lightning** sprite, hide the body and show the clone.
+* **Star** スプライトに戻り、そのクローンが右に回転して撃つようにスクリプトを書きます。ステージの外に出た後に消え、星の数を回復します。 **Lightning** スプライトと同様に、本体を隠してクローンを表示します。
 
 .. image:: img/19_star3.png
 
-Now we have a wand that shoots star bullets.
+これで、星の弾丸を撃つワンドができました。
 
 **3. Fight!**
 
-The wand and the dragon are currently still at odds with each other, and we're going to make them fight. The dragon is strong, and the wand is the brave man who crusades against the dragon. The interaction between them consists of the following parts.
+ワンドとドラゴンは現在まだ互いに対立していますが、それらを戦わせることにします。ドラゴンは強力であり、ワンドはドラゴンに対して聖戦を行う勇敢な人です。彼らの間の相互作用は、以下の部分で構成されます。
 
+1. ワンドがドラゴンに触れると、ワンドは後ろに打ち退けられ、ライフポイントを失います。
+2. 雷がワンドに当たると、ワンドはライフポイントを失います。
+3. 星の弾丸がドラゴンに当たると、ドラゴンはライフポイントを失います。
 
-1. if the wand touches the dragon, it will be knocked back and lose life points.
-2. if lightning strikes the wand, the wand will lose life points.
-3. if the star bullet hits the dragon, the dragon will lose life points.
+その後、各スプライトのスクリプトを変更する作業に進みます。
 
-
-Once that's sorted out, let's move on to changing the scripts for each sprite.
-
-* If the **Wand** hits the **Dragon**, it will be knocked back and lose life points.
+* **Wand** が **Dragon** に当たると、後ろに打ち退けられ、ライフポイントを失います。
 
 .. image:: img/19_wand4.png
 
-* If **Lightning** (a **Lightning** sprite clone) hits the **Wand** sprite, it will make a pop sound and disappear, and the **Wand** will lose life points.
+* **Lightning** （ **Lightning** スプライトのクローン）が **Wand** スプライトに当たると、ポップ音を鳴らして消え、 **Wand** はライフポイントを失います。
 
 .. image:: img/19_lightning7.png
 
-* If a **Star** (clone of the **Star** sprite) hits the **Dragon**, it will emit a collect sound and disappear, while restoring the **Star** count, and the **Dragon** will lose life points.
+* **Star** （ **Star** スプライトのクローン）が **Dragon** に当たると、収集音を発して消え、 **Star** の数を回復し、 **Dragon** はライフポイントを失います。
 
 .. image:: img/19_star4.png
 
+**4. ステージ**
 
-**4. stage**
+**Wand** と **Dragon** の戦いは最終的に勝者と敗者に分かれることになりますが、それはステージで表現します。
 
-The battle between the **Wand** and the **Dragon** will eventually be divided into winners and losers, which we represent with the stage.
-
-* Add **Blue Sky** backgdrop, and write the character "WIN!" on it to represent that the dragon has been defeated and the dawn has come.
-
+* **Blue Sky** の背景を追加し、それに「WIN!」の文字を書き、ドラゴンが倒され、夜明けが来たことを示します。
 
 .. image:: img/19_sky0.png
 
-* And modify the blank backdrop as follows, to represent that the game has failed and everything will be in darkness.
+* そして、次のように空白の背景を修正して、ゲームが失敗し、全てが闇になることを示します。
 
 .. image:: img/19_night.png
 
-* Now write a script to switch these backgdrops, when the green flag is clicked, switch to **Woods** backgdrop; if the dragon's life point is less than 1 , then the game succeeds and switch the backdrop to **Blue Sky**; if the life value point of the **Wand** is less than 1, then switch to **Night** backdrop and the game fails.
-
+* これらの背景を切り替えるスクリプトを書きます。緑の旗がクリックされると、 **Woods** の背景に切り替えます。ドラゴンのライフポイントが1未満の場合、ゲームが成功し、背景を **Blue Sky** に切り替えます。 **Wand** のライフポイントが1未満の場合、 **Night** の背景に切り替え、ゲームが失敗します。
 
 .. image:: img/19_sky1.png

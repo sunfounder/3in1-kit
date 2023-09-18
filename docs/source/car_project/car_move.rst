@@ -1,21 +1,21 @@
 .. _car_move:
 
-1. Move
+
+1. 移動
 ===============
 
 .. image:: ../components/img/l298n_pin.jpg
     :width: 400
     :align: center
 
-Before we start programming, let's review the working principle of L298N.
+プログラミングを始める前に、L298Nの動作原理を確認しましょう。
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+IN1～IN4はL298Nモジュールの入力、OUT1～OUT4は出力です。
 
-A simple way to use them is: input high level for IN1, OUT1 will output high level; input low level for IN1, OUT1 will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate.OUT3 and OUT4 can be used in the same way.
+これらを使用する簡単な方法は：IN1に高レベルを入力すると、OUT1は高レベルを出力します。IN1に低レベルを入力すると、OUT1は低レベルを出力します。
+モータの両端をOUT1とOUT2に接続し、IN1とIN2に逆のレベル信号を入力すると、モータが回転します。OUT3とOUT4も同じ方法で使用できます。
 
-The working relationship between ENA and IN1,IN2 is as follows.
-
+ENAとIN1,IN2の間の動作関係は以下の通りです。
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -24,29 +24,29 @@ The working relationship between ENA and IN1,IN2 is as follows.
     * - ENA
       - IN1
       - IN2
-      - The state of right motor(A)
+      - 右モータ(A)の状態
     * - 0
       - X
       - X
-      - Stop
+      - 停止
     * - 1
       - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - 時計回りに回転
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 1
       - 1
       - 1
-      - Brake
+      - ブレーキ
 
-The working relationship between ENB and IN3,IN4 is as follows.
+ENBとIN3,IN4の間の動作関係は以下の通りです。
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -55,73 +55,70 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of left motor(B)
+      - 左モータ(B)の状態
     * - 0
       - X
       - X
-      - Stop
+      - 停止
     * - 1
       - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - 時計回りに回転
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 1
       - 1
       - 1
-      - Brake
+      - ブレーキ
 
+**必要な部品**
 
-**Required Components**
+このプロジェクトでは、以下の部品が必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのは確かに便利です、リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれの部品を個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_l298n`
         - |link_l298n_buy|
 
+**前進**
 
-**Forward**
+L298Nモジュールの入力を直接12VとGNDに接続することで、車を動かしてみましょう。
 
-Now let's connect the input of L298N module directly to 12V and GND respectively to make the car move.
-
-
-1. Connect R3 board, L298N module and 2 motors.
+1. R3ボード、L298Nモジュール、2つのモータを接続します。
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
-      - Motor
+      - R3ボード
+      - モーター
     * - 12V
       - 5V
       - 
@@ -130,65 +127,56 @@ Now let's connect the input of L298N module directly to 12V and GND respectively
       - 
     * - OUT1
       - 
-      - Black wire of right motor
+      - 右モータの黒線
     * - OUT2
       - 
-      - Red wire of right motor
+      - 右モータの赤線
     * - OUT3
       - 
-      - Black wire of left motor
+      - 左モータの黒線
     * - OUT4
       - 
-      - Red wire of left motor
+      - 左モータの赤線
 
 .. image:: img/1.move_1.png
     :width: 800
 
-
-2. Connect IN2 and IN3 to 12V, and IN1 and IN4 to GND, then you will be able to see the car moving forward.
-
+2. IN2とIN3を12Vに、IN1とIN4をGNDに接続すると、車が前進するのがわかります。
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+両方のモータが前進しない場合、次の状況が発生した場合は、2つのモータの配線を再調整する必要があります。
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OUT1 and OUT2 swap, OUT3 and OUT4 swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OUT3 and OUT4 of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OUT1 and OUT1 of the right motor.
+* 両方のモータが同時に後退する場合（左モータが時計回り、右モータが反時計回り）、左と右のモータの配線を同時に交換します。OUT1とOUT2、OUT3とOUT4を交換します。
+* 左モータが後退する場合（時計回り）、左モータのOUT3とOUT4の配線を交換します。
+* 右モータが後退する場合（反時計回り）、右モータのOUT1とOUT1の配線を交換します。
 
+**後退**
 
-**Backward**
-
-Connect IN2 and IN3 to GND, and IN1 and IN4 to 12V, then you will be able to see the car moving backward.
-
+IN2とIN3をGNDに、IN1とIN4を12Vに接続すると、車が後退するのがわかります。
 
 .. image:: img/1.move_back.png 
     :width: 800
 
+**左折**
 
-
-**Turn Left**
-
-If you want to make the car turn left, that is, make both motors turn clockwise. You need to connect IN1 and IN3 to GND, and IN2 and IN4 to 12V.
-
+車を左に曲げたい場合、すなわち、両方のモータを反対の方向に回転させる場合、IN1を12Vに、IN2をGNDに、IN3をGNDに、IN4を12Vに接続します。
 
 .. image:: img/1.move_left.png 
     :width: 800
 
+**右折**
 
-**Turn Right**
-
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. You need to connect IN1 and IN3 to 12V and IN2 and IN4 to GND.
-
+車を右に曲げたい場合、すなわち、両方のモータを反対の方向に回転させる場合、IN1をGNDに、IN2を12Vに、IN3を12Vに、IN4をGNDに接続します。
 
 .. image:: img/1.move_right.png 
     :width: 800
 
+**停止**
+
+モーターを停止するには、同じ側の入力を同時に12VまたはGNDに接続します。例えば、IN1とIN2を同時に12Vまたは5Vに接続し、IN3とIN4も同様に接続します。
 
 
-**Stop**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect IN1 and IN2 to 12V or 5V at the same time, and the same for IN3 and IN4.
-
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+これはもちろん理論的なもので、後にコードで制御する際に必要となる。ここで、車への電源供給を停止することができます削除します。

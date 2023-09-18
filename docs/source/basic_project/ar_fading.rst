@@ -1,36 +1,36 @@
 .. _ar_fading:
 
-2.1 Fading
+2.1 フェージング
 =================
 
-This project is similar to :ref:`ar_blink` , the difference is the signal type.
-The former is to make the LED light on or off by outputting a digital signal (0&1), this project is to control the brightness of the LED by outputting an analog signal.
+このプロジェクトは :ref:`ar_blink` に似ていますが、信号の種類が異なります。
+前者はデジタル信号（0&1）を出力してLEDの点灯/消灯を制御するのに対し、このプロジェクトはアナログ信号を出力してLEDの明るさを調節します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると非常に便利です。リンクは以下の通りです。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、個別にも購入可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,29 +43,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.1_led.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/wiring_led.png
     :width: 500
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``2.1.fading.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.1.fading``. 
-   * Or copy this code into **Arduino IDE**.
+   * ``3in1-kit\basic_project\2.analogWrite\2.1.fading`` のパスの下の ``2.1.fading.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
-
+   * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8a7e52a4-fcb3-4c3b-98ff-f3f657822d72/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you can see the LED breathing.
+コードが正常にアップロードされた後、LEDが息を吹きかえしているのが見えます。

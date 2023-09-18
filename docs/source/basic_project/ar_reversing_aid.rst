@@ -1,38 +1,35 @@
 .. _ar_reversing_aid:
 
-6.4 Reversing Aid
+6.4 駐車補助
 ===================
 
-With the development of science and technology, a lot of high-tech
-products have been installed in cars, among which the reversing assist
-system is one of them. Here we use ultrasonic module, LCD, LED and
-buzzer to make a simple ultrasonic reversing assist system.
+科学技術の発展に伴い、多くのハイテク製品が車に取り付けられています。その中で、バックアップアシストシステムはその一つです。このプロジェクトでは、超音波モジュール、LCD、LED、およびブザーを使用して、シンプルな超音波駐車補助システムを作成します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,25 +48,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic Diagram**
+**回路図**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Fritzing Circuit**
+**配線図**
 
 .. image:: img/backcar.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\basic_project\6.4_reversingAid`` directly.
-    * Or copy this code into Arduino IDE 1/2.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * ``3in1-kit\basic_project\6.4_reversingAid`` のパスの下の ``6.4_reversingAid.ino`` ファイルを直接開くことができます。
+    * または、このコードをArduino IDE 1/2にコピーします。
+    * ここでは ``LiquidCrystal I2C`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
 
@@ -77,24 +74,14 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d6848669-fe79-42e9-afd7-0f083f96a6d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+コードのアップロードが成功すると、現在検出された距離がLCDに表示されます。そして、ブザーは異なる距離に応じて音の周波数を変えます。
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    コードと配線が正しいのに、LCDに内容が表示されない場合は、裏側のポテンショメーターを回してみてください。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-In this project, we need to avoid the interference between the LCD
-screen and the alarm system as much as possible (for example, the LED
-flicker time is too long and the LCD refresh is delayed), so please
-avoid using the ``delay()`` statement and use two separate intervals to
-control the working frequency of the LCD and alarm system respectively.
-Its workflow is shown in the flow chart. For analysis of Interval
-function, refer to :ref:`ar_interval`.
+このプロジェクトでは、LCD画面とアラームシステムの間の干渉をできるだけ避ける必要があります（例えば、LEDの点滅時間が長すぎるとLCDのリフレッシュが遅れる）。そのため、 ``delay()`` 文を使用せず、LCDとアラームシステムの動作周波数をそれぞれ制御するための2つの別々のインターバルを使用してください。そのワークフローはフローチャートで示されています。Interval関数の解析については、 :ref:`ar_interval` を参照してください。
 
 .. image:: img/Part_three_1_Example_Explanation.png
    :align: center
-
-
-

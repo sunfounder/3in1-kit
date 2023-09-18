@@ -1,38 +1,38 @@
 .. _car_move_code:
 
-2. Move by Code
+2. コードでの移動
 ======================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L298N.
+前のプロジェクトでは、L298Nの入力の異なるレベルの信号を使用してモーターの操作を制御しました。
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
-Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R3 board in turn.
+プログラムを通じてレベル信号を変更することで、車の動きを柔軟に制御することができます。
+ここでは、L298NのIN1〜IN4ピンをR3ボードの5、6、9、10ピンに順に接続します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると非常に便利です。リンクは以下のとおりです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,21 +42,19 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**配線図**
 
+L298Nモータードライバモジュールは、DCモーターとステッピングモーターを駆動するための高出力モータードライバモジュールです。L298Nモジュールは、最大で4台のDCモーター、または方向と速度の制御が可能な2台のDCモーターを制御することができます。
 
-The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
-
-Connect the wires between the L298N module and the R3 board according to the diagram below.
-
+以下の図に従って、L298NモジュールとR3ボードの間にワイヤーを接続してください。
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
-      - Motor
+      - R3ボード
+      - モーター
     * - IN1
       - 5
       - 
@@ -71,41 +69,41 @@ Connect the wires between the L298N module and the R3 board according to the dia
       - 
     * - OUT1
       - 
-      - Black wire of right motor
+      - 右モーターの黒ワイヤー
     * - OUT2
       - 
-      - Red wire of right motor
+      - 右モーターの赤ワイヤー
     * - OUT3
       - 
-      - Black wire of left motor
+      - 左モーターの黒ワイヤー
     * - OUT4
       - 
-      - Red wire of left motor
+      - 左モーターの赤ワイヤー
 
 .. image:: img/car_motor1.jpg
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\car_project\2.move`` のパスの下の ``2.move.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーしてください。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+コードをアップロードすると、車はそれぞれ2秒間で前進、後退、左右に移動します。
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
 
-**How it works?**
+**どのように動作するのか？**
 
-This project is basically the same as the previous one, which is to make the car move forward, backward, left and right and stop by giving different levels from IN1 to IN4.
+このプロジェクトは基本的に前回のものと同じで、IN1からIN4までの異なるレベルを与えることで車を前進、後退、左右に動かし、停止させるものです。
 
-#. Initialize the pin wiring of IN1~IN4.
+#. IN1~IN4のピン配線を初期化する。
 
     .. code-block:: arduino
 
@@ -121,7 +119,7 @@ This project is basically the same as the previous one, which is to make the car
             pinMode(in4, OUTPUT);
         }
 
-#. Set IN1~IN4 to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. 左右のモーターの回転を制御するためにIN1~IN4を異なるハイまたはローレベルに設定し、それらを個別の関数にカプセル化する。
 
     .. code-block:: arduino
 
@@ -139,7 +137,8 @@ This project is basically the same as the previous one, which is to make the car
             digitalWrite(in4, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+
+#. ``loop()`` でこれらの関数を呼び出す。
 
     .. code-block:: arduino
 
@@ -157,21 +156,21 @@ This project is basically the same as the previous one, which is to make the car
 
 * `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin``: Arduinoのピン番号。
+    * ``value``: HIGHまたはLOW。
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+    デジタルピンにHIGHまたはLOWの値を書き込む。ピンが ``pinMode()`` で ``OUTPUT`` として設定されていれば、その電圧は対応する値に設定されます：HIGHの場合は5V（または3.3Vボードで3.3V）、LOWの場合は0V（グラウンド）。
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin``: モードを設定するArduinoのピン番号。
+    * ``mode``: INPUT、OUTPUT、またはINPUT_PULLUP。
     
-    Configures the specified pin to behave either as an input or an output.
+    指定されたピンを入力または出力として動作するように設定します。
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms``: 一時停止するミリ秒数。許可されるデータタイプ: unsigned long。
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    パラメータとして指定された時間（ミリ秒）の間、プログラムを一時停止します。（1秒には1000ミリ秒があります。）
+

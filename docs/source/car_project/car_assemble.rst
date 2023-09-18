@@ -1,70 +1,70 @@
-Assemble the Car
+車の組み立て
 =====================
 
-Please follow the steps below to complete the assembly of the car.
+以下の手順に従って、車の組み立てを完了させてください。
 
-1. Remove the protective film on the acrylic.
+1. アクリルの保護フィルムを取り外してください。
 
     .. image:: img/IMG_6509.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. 画像に示されているように、ボードをテーブルに置いてください。R3ボードと同じ穴がある側をAと呼び、裏側をBと呼ぶことにします。これにより、組み立て中のミスを避けるのに役立ちます。
 
     .. image:: img/IMG_6518.jpg
 
-3. Turn to the B side, use M3x30mm screws and M3 nuts to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+3. B側に向け、M3x30mmのネジとM3のナットを使用してTTモーターを取り付けます。注意点は2つ: 1 - 出力軸はコウモリの形をした側を向いていること、2 - モーターケーブルは内側を向いていること。
 
     .. image:: img/IMG_6554.JPG
 
-4. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+4. 別のTTモーターを取り付けます。出力軸とケーブルの方向にも同様の注意が必要です。
 
     .. image:: img/IMG_6558.jpg
 
-5. Use M3x6mm screws to mount the M3x12mm standoff in the position as shown below.
+5. M3x6mmのネジを使用して、下に示されている位置にM3x12mmのスペーサーを取り付けます。
 
     .. image:: img/IMG_6568.jpg
 
-6. Use M3x6mm screws to mount the universal wheel.
+6. M3x6mmのネジを使用して、万能車輪を取り付けてください。
 
     .. image:: img/IMG_6572.jpg
 
-7. Putting on the 2 wheels and the car's basic structure has been completed.
+7. 2つの車輪を取り付けると、車の基本構造が完成します。
 
     .. image:: img/IMG_6582.jpg
 
-8. Attach the M3x12mm bracket to the rear of the car with M3x6mm screws
+8. M3x6mmのネジで車の後部にM3x12mmのブラケットを取り付けます。
 
     .. image:: img/IMG_6599.jpg
 
-9.  Attach the L298N module with M3x6mm screws.
+9. M3x6mmのネジでL298Nモジュールを取り付けてください。
 
     .. image:: img/IMG_6611.jpg
 
-10. Mount the M3x24mm standoff with M3x6mm screws in the position as shown below.
+10. 以下に示されている位置にM3x6mmのネジでM3x24mmのスペーサーを取り付けます。
 
     .. image:: img/IMG_6617.jpg
 
-11. Mount the R3 board with M3x6mm screws.
+11. M3x6mmのネジでR3ボードを取り付けてください。
 
     .. image:: img/IMG_6630.jpg
 
-12. Assemble the two IR Obstacle Modules with M3x10mm screws and M3 nuts.
+12. M3x10mmのネジとM3のナットを使用して、2つのIR障害物モジュールを組み立ててください。
 
     .. image:: img/IMG_6649.jpg
 
-13. Turn to side B and attach the Line Track module with four M3x6mm screws and two M3x24mm standoffs.
+13. B側に向けて、4つのM3x6mmのネジと2つのM3x24mmのスペーサーを使用して、ライントラックモジュールを取り付けます。
 
     .. image:: img/IMG_6655.jpg
 
-14. Stick the velcro on the 9V battery (rechargeable is recommended) and put on the battery clip.
+14. 9Vのバッテリー（充電式がおすすめ）にベルクロを貼り、バッテリークリップを取り付けてください。
 
     .. image:: img/IMG_6481.jpg
 
-15. Stick the other section of the Velcro on the car to secure the battery.
+15. バッテリーを固定するために、車にベルクロのもう一方の部分を貼り付けてください。
 
     .. image:: img/IMG_6666.jpg
 
-16. Turn over to side A and attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+16. A側に戻して、ブレッドボードを車の前部に取り付けます。その後、プロジェクトに必要に応じて、ブレッドボードに異なるコンポーネント（例：超音波モジュール）を追加できます。
 
     .. image:: img/IMG_6675.jpg
 
-17. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+17. 車を動かすためには、配線とコードの記述も必要です。これに関する詳細は、後続のセクションで記述されます。

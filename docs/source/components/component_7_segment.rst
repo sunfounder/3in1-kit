@@ -1,31 +1,30 @@
 .. _cpn_7_segment:
 
-7-segment Display
+7セグメント表示
 ======================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+7セグメント表示は、8の形をした7つのLEDを搭載した部品です。各LEDはセグメントと呼ばれ、エネルギーを供給すると、表示する数字の一部を形成します。
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+ピンの接続には2つのタイプがあります：共通カソード(CC)と共通アノード(CA)。CC表示は、7つのLEDのカソードがすべて接続されているのに対し、CA表示は7つのセグメントのアノードがすべて接続されています。
 
-In this kit, we use the Common Cathode 7-segment display, here is the electronic symbol.
+このキットでは、共通カソードの7セグメント表示を使用しています。以下はその電子記号です。
 
 .. image:: img/segment_cathode.png
     :width: 800
 
-Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package. These LED pins are labeled from "a" through to "g" representing each individual LED. The other LED pins are connected together forming a common pin. So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+表示内のLEDのそれぞれは、位置を持つセグメントとして与えられ、接続ピンの1つが長方形のプラスチックパッケージから外に引き出されています。これらのLEDピンは、「a」から「g」までのラベルが付けられ、各個々のLEDを表しています。他のLEDのピンは一緒になっており、共通のピンを形成しています。したがって、LEDのセグメントの適切なピンに順方向のバイアスをかけることで、一部のセグメントが明るくなり、他のセグメントが暗くなり、対応する文字が表示上に表示されます。
 
-**Display Codes** 
+**表示コード**
 
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1, For example, 00111111 means that DP and G are set to 0, while others are set to 1. Therefore, the number 0 is displayed on the 7-segment display, while HEX Code corresponds to hexadecimal number.
+7セグメント表示（共通カソード）が数字をどのように表示するかを理解するために、以下の表を描きました。Numbersは7セグメント表示に表示される数字0-Fを示し、(DP) GFEDCBAは対応するLEDが0または1に設定されていることを示します。たとえば、00111111はDPとGが0に設定されている一方、他のものは1に設定されていることを意味します。したがって、7セグメント表示には数字0が表示され、HEX Codeは16進数に対応します。
 
 .. image:: img/segment_code.png
 
-**Example**
+**例**
 
-* :ref:`ar_74hc_7seg` (Learning Project)
-* :ref:`iot_gate` (IoT Project)
-
+* :ref:`ar_74hc_7seg` (学習プロジェクト)
+* :ref:`iot_gate` (IoTプロジェクト)

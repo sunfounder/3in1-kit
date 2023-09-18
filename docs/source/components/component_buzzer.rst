@@ -1,33 +1,30 @@
 .. _cpn_buzzer:
 
-Buzzer
+ブザー
 =======
 
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+ブザーはDC電源で駆動される統合型の電子ブザーとして、コンピュータ、プリンタ、コピー機、アラーム、電子おもちゃ、自動車電子機器、電話、タイマーなどの電子製品や音声デバイスに広く使用されています。
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+ブザーは、アクティブなものとパッシブなものに分類できます（下の写真を参照）。ブザーを上向きにして、緑の回路基板が付いているブザーはパッシブブザーで、黒いテープで囲まれているものはアクティブブザーです。
 
-The difference between an active buzzer and a passive buzzer: 
+アクティブブザーとパッシブブザーの違い：
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+アクティブブザーには振動源が内蔵されているため、電力を供給すると音がします。しかし、パッシブブザーにはそのような源がないため、DC信号を使用してもビープ音はしない。代わりに、2Kから5Kの範囲の正方形の波形を使用して駆動する必要があります。アクティブブザーは、複数の内蔵振動回路のため、パッシブブザーよりも高価なことがよくあります。
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+以下はブザーの電気記号です。プラスとマイナスの極を持つ2つのピンがあります。表面に+があるものが陽極で、他方が陰極です。
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don’t mix them up when connecting, otherwise the buzzer will not make sound. 
+ブザーのピンをチェックすると、長い方が陽極で、短い方が陰極です。接続する際に間違えないようにしてください。そうしないと、ブザーは音を出しません。
 
-`Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
+`ブザー - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**例**
 
-* :ref:`ar_beep` (Learning Project)
-* :ref:`ar_passive_buzzer` (Learning Project)
-* :ref:`iot_music` (IoT Project)
-
-
-
+* :ref:`ar_beep` (学習プロジェクト)
+* :ref:`ar_passive_buzzer` (学習プロジェクト)
+* :ref:`iot_music` (IoTプロジェクト)

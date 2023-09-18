@@ -1,82 +1,78 @@
 .. _ar_digital_read:
 
-3. Digital Read
+3. デジタルリード
 ===================
 
-Sensors capture real-world information, which is then communicated to the main board via pins (some digital, some analog) so that the computer can know the reality of the situation.
+センサーは実世界の情報をキャッチし、デジタルやアナログのピンを通じてメインボードに情報を伝達します。これにより、コンピュータは現状を知ることができます。
 
-Therefore, the Arduino board can know the working status of digital sensors by reading the value of digital pins like buttons, IR obstacle avoidance module.
+したがって、Arduinoボードは、ボタンやIR障害回避モジュールのようなデジタルピンの値を読むことで、デジタルセンサーの動作状況を知ることができます。
 
+以下は必要な関数です。
 
-Here are the required functions.
+* ``pinMode(pin, mode)``: 指定のピンを ``INPUT`` か ``OUTPUT`` として設定します。この場合は ``INPUT`` として設定する必要があります。
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``INPUT``. 
-
-   **Syntax**
+   **構文**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+   **パラメータ**
+    * ``pin``: モードを設定するArduinoのピン番号。
+    * ``mode``: INPUT、OUTPUT、または INPUT_PULLUP。
 
+* ``digitalRead(pin)``: 指定されたデジタルピンからの値（レベル状態）を読み取ります。
 
-
-* ``digitalRead(pin)``: Read the value (level state) from the specified digital pin.
-
-   **Syntax**
+   **構文**
       digitalRead(pin)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number you want to read
+   **パラメータ**
+    * ``pin``: 読み取りたいArduinoのピン番号
 
-   **Returns**
-      HIGH or LOW
+   **返り値**
+      HIGH または LOW
 
 
-**Example of Digital Read**
+**デジタルリードの例**
 
 .. code-block:: arduino
 
-   int ledPin = 13;  // LED connected to digital pin 13
-   int inPin = 7;    // pushbutton connected to digital pin 7
-   int val = 0;      // variable to store the read value
+   int ledPin = 13;  // LEDはデジタルピン13に接続されています
+   int inPin = 7;    // プッシュボタンはデジタルピン7に接続されています
+   int val = 0;      // 読み取った値を保存する変数
 
    void setup() {
-      pinMode(ledPin, OUTPUT);  // sets the digital pin 13 as output
-      pinMode(inPin, INPUT);    // sets the digital pin 7 as input
+      pinMode(ledPin, OUTPUT);  // デジタルピン13を出力として設定
+      pinMode(inPin, INPUT);    // デジタルピン7を入力として設定
    }
 
    void loop() {
-      val = digitalRead(inPin);   // read the input pin
-      digitalWrite(ledPin, val);  // sets the LED to the button's value
-   }
+      val = digitalRead(inPin);   // 入力ピンを読み取り
+      digitalWrite(ledPin, val);  // LEDをボタンの値に設定
 
 
-**Notes and Warnings**
+**注意事項と警告**
 
-1. Pull Up & Pull Down.
+1. プルアップ & プルダウン。
 
-    ``digitalRead()`` may produce random, indeterminate values if the pin is not getting a level signal. So directing the input pins to a known state can make the project more reliable.
-    When using an input component such as a button, it is usually necessary to connect a pull-up or pull-down resistor in parallel to the digital input pin.
+    ピンがレベル信号を受け取っていない場合、 ``digitalRead()`` はランダムな、不確定な値を出力する可能性があります。入力ピンを既知の状態に指向させることで、プロジェクトの信頼性を高めることができます。
+    デジタル入力ピンに並列してプルアップまたはプルダウン抵抗を接続することが通常必要です。
 
-    Apart from connecting a pull-up resistor, you can also set the pin mode to ``INPUT_PULLUP`` in the code, for example ``pinMode(pin,INPUT_PULLUP)``. In this case, the pin will access the Atmega's built-in pull-up resistor via software, and it will have the same effect as connecting a pull-up resistor.
+    プルアップ抵抗を直接接続するのではなく、コード内でピンモードを ``INPUT_PULLUP`` に設定することもできます。例： ``pinMode(pin,INPUT_PULLUP)`` 。この場合、ピンはソフトウェア経由でAtmegaの内蔵プルアップ抵抗にアクセスし、プルアップ抵抗を接続するのと同じ効果が得られます。
 
-2. About Pin13.
+2. Pin13について。
 
-    All digital pins (1-13) on the R3 board can be used as ``digitalRead()``.
-    But digital pin 13 is more difficult to use as a digital input than other digital pins.
-    Because it connects an LED and resistor, it is soldered on most boards.
-    If you enable its internal 20k pull-up resistor, it will hang around 1.7V instead of the expected 5V because the onboard LED and series resistor pull the voltage level low, which means it always returns LOW. If you must use pin 13 as a digital input, set its ``pinMode()`` to INPUT and use an external pull-down resistor.
+    R3ボード上のすべてのデジタルピン（1-13）は ``digitalRead()`` として使用できます。
+    ただし、デジタルピン13は他のデジタルピンよりもデジタル入力として使用するのが難しいです。
+    これは、LEDと抵抗が接続されていて、ほとんどのボードにはんだ付けされているためです。
+    内蔵の20kプルアップ抵抗を有効にすると、オンボードのLEDと系列抵抗が電圧レベルを低くするため、期待される5Vの代わりに約1.7Vになります。これは、常にLOWを返すことを意味します。もしピン13をデジタル入力として使用する必要がある場合は、 ``pinMode()`` をINPUTに設定し、外部のプルダウン抵抗を使用してください。
 
-3. Analog pins.
+3. アナログピン。
 
-    If the digital pins are not enough, the analog pins (A0-A5) can also be used as digital pins.
-    It needs to be set to INPUT with ``pinMode(pin,mode)``.
+    デジタルピンが不足している場合、アナログピン（A0-A5）もデジタルピンとして使用できます。
+    ``pinMode(pin,mode)`` でINPUTに設定する必要があります。
 
+**関連コンポーネント**
 
-**Related Components**
+以下は関連コンポーネントです。クリックして使用方法を学ぶことができます。
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
     :maxdepth: 2

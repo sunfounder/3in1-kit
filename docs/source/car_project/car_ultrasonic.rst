@@ -1,37 +1,37 @@
 .. _car_ultrasonic:
 
-6. Play with Ultrasonic Module
+6. 超音波モジュールで遊ぶ
 =====================================
 
-In :ref:`car_ir_obstacle` project, the 2 infrared obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+:ref:`car_ir_obstacle` プロジェクトでは、2つの赤外線障害物回避モジュールを障害物回避のために使用していますが、IR障害物回避モジュールの検出距離は短いため、車が障害物を避けるのが遅くなる可能性があります。
 
-In this project, we use ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+このプロジェクトでは、超音波モジュールを使って遠距離の検出を行い、車がもっと遠くの障害物を感知して判断できるようにします。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると非常に便利です。リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,18 +42,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Wiring**
+**配線図**
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+超音波センサモジュールは、超音波を使って物体までの距離を測定する機器です。
+2つのプローブがあります。1つは超音波を送信し、もう1つは超音波を受信して送受信の時間を距離に変換し、装置と障害物との間の距離を検出します。
 
-Now build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - 超音波モジュール
+      - R3ボード
     * - Vcc
       - 5V
     * - Trig
@@ -66,27 +66,27 @@ Now build the circuit according to the following diagram.
 .. image:: img/car_ultrasonic.jpg
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.ultrasonic_module.ino`` file under the path of ``3in1-kit\car_project\6.ultrasonic_module``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\car_project\6.ultrasonic_module`` のパスの下で ``6.ultrasonic_module.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ae97f966-9d72-40e6-aa9f-e0767ddf5bd5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, turn the car towards the wall. If the distance is too far, it will move forward; if it is too close, it will move backward; if it is at a safe distance, it will stop.
+コードが正常にアップロードされた後、車を壁に向けてください。距離が遠すぎる場合は前進し、近すぎる場合は後退し、安全な距離であれば停止します。
 
-**How it works?**
+**どのように動作するのか？**
 
-This project is based on the distance read by the ultrasonic module to make the car move accordingly.
+このプロジェクトは、超音波モジュールから読み取った距離に基づいて、車に適切な動作をさせるものです。
 
-#. Add the pin definition for the ultrasonic module, ``trigPin`` is used to transmit ultrasonic wave, so set it to ``OUTPUT``; ``echoPin`` is set to ``INPUT`` to receive ultrasonic wave.
+#. 超音波モジュールのピン定義を追加します。 ``trigPin`` は超音波を送信するために使用され、 ``OUTPUT`` に設定されます。 ``echoPin`` は超音波を受信するために ``INPUT`` に設定されます。
 
     .. code-block:: arduino
 
@@ -97,12 +97,12 @@ This project is based on the distance read by the ultrasonic module to make the 
         void setup() {
         ...
 
-        //ultrasonic
+        //超音波
             pinMode(echoPin, INPUT);
             pinMode(trigPin, OUTPUT);
         }
 
-#. First read the distance value obtained from the ultrasonic module, if the distance is greater than 25, let the car move forward; if the distance is between 2-10cm, let the car move backward, otherwise (between 10~25) stop.
+#. まず、超音波モジュールから取得した距離の値を読み取ります。距離が25より大きい場合、車を前進させます。距離が2~10cmの間であれば、車を後退させます。それ以外の場合（10~25の間）、停止します。
 
     .. code-block:: arduino
 
@@ -118,9 +118,9 @@ This project is based on the distance read by the ultrasonic module to make the 
             }
         }
 
-#. About ``readSensorData()`` function.
+#. ``readSensorData()`` 関数について。
 
-    The transmitter of the ultrasonic module transmits a 10us square wave signal every 2us, and the receiver receives a high level signal if there is an obstacle within the range. Use the ``pulseIn()`` function to record the time from sending to receiving, divide by the speed of sound 340m/s, and then divide by 2, the result is the distance between this module and the obstacle with units: cm.
+    超音波モジュールの送信機は、2usごとに10usの正方形の波形信号を送信し、範囲内に障害物がある場合、受信機は高レベル信号を受信します。 ``pulseIn()`` 関数を使用して、送信から受信までの時間を記録し、音速340m/sで除算し、さらに2で除算すると、このモジュールと障害物との距離がcm単位で得られます。
 
     .. code-block:: arduino
 
@@ -130,13 +130,13 @@ This project is based on the distance read by the ultrasonic module to make the 
             digitalWrite(trigPin, HIGH);
             delayMicroseconds(10);
             digitalWrite(trigPin, LOW);
-            float distance = pulseIn(echoPin, HIGH) / 58.00; //Equivalent to (340m/s*1us)/2
+            float distance = pulseIn(echoPin, HIGH) / 58.00; //(340m/s*1us)/2に相当。
             return distance;
         }
 
 * `pulseIn(pin, value) <https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/>`_
 
-    * ``pin``: the number of the Arduino pin on which you want to read the pulse. Allowed data types: int.
-    * ``value``: type of pulse to read: either HIGH or LOW. Allowed data types: int.
+    * ``pin``: パルスを読みたいArduinoのピンの番号。許可されているデータ型: int。
+    * ``value``: 読みたいパルスの種類：HIGHまたはLOW。許可されているデータ型: int。
 
-    Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, ``pulseIn()`` waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW and stops timing.
+    ピン上でのパルス（HIGHまたはLOW）を読み取ります。例えば、valueがHIGHの場合、 ``pulseIn()`` は、ピンがLOWからHIGHになるのを待ち、タイミングを開始し、次にピンがLOWになるのを待ち、タイミングを停止します。

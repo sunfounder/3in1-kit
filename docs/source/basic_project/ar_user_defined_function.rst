@@ -1,55 +1,54 @@
 .. _ar_ultrasonic:
 
-5.8 User-defined Function
+5.8 ユーザー定義関数
 ======================================
 
-In c, we can divide a large program into the basic building blocks known as function. 
-The function contains the set of programming statements enclosed by {}. 
-A function can be called multiple times to provide reusability and modularity to the C program. 
-In other words, we can say that the collection of functions creates a program. 
-The function is also known as procedureor subroutinein other programming languages.
+C言語では、大きなプログラムを関数として知られる基本的な構築ブロックに分割することができます。
+関数には、{}で囲まれた一連のプログラム文が含まれます。
+関数は、Cプログラムに再利用性とモジュール性を提供するために、複数回呼び出すことができます。
+言い換えれば、関数の集合がプログラムを構築すると言えます。
+関数は、他のプログラミング言語で手続きやサブルーチンとしても知られています。
 
-There are the following advantages of functions.
+関数の以下のような利点があります。
 
-* By using functions, we can avoid rewriting same logic/code again and again in a program.
-* We can call C functions any number of times in a program and from any place in a program.
-* We can track a large C program easily when it is divided into multiple functions.
-* Reusability is the main achievement of C functions.
-* However, Function calling is always a overhead in a C program.
+* 関数を使用することで、同じロジック/コードをプログラム内で何度も書く必要がなくなります。
+* Cの関数は、プログラム内の任意の場所から、任意の回数呼び出すことができます。
+* 多数の関数に分割された大きなCプログラムは、追跡が容易です。
+* 再利用性は、C関数の主要な成果です。
+* ただし、関数の呼び出しは、Cプログラム内で常にオーバーヘッドとなります。
 
+Cプログラミングには2種類の関数があります：
 
-There are two types of functions in C programming:
+* **ライブラリ関数**：Cのヘッダーファイルで宣言されている関数。
+* **ユーザー定義関数**：Cプログラマーが作成した関数で、何度も使用することができます。これにより、大きなプログラムの複雑さが軽減され、コードが最適化されます。
 
-* **Library Functions**: the functions which are declared in the C header files.
-* **User-defined functions**: the functions which are created by the C programmer, so that he/she can use it many times. It reduces the complexity of a big program and optimizes the code.
+このプロジェクトでは、超音波モジュールの値を読む関数を定義します。
 
-In this project, define a function to read the value of the ultrasonic module.
+**必要な部品**
 
-**Required Components**
+このプロジェクトでは、以下の部品が必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。購入リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -58,43 +57,39 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_6.3_ultrasonic.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/ultrasonic_bb.jpg
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.8.user_function.ino`` file under the path of ``3in1-kit\basic_project\5.8.user_function``.
-    * Or copy this code into **Arduino IDE**.
-    
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+    * ``3in1-kit\basic_project\5.8.user_function`` のパスの下で ``5.8.user_function.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/11717782-3ee6-4eca-bbb9-094385d9eb4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
+コードが正常にアップロードされると、シリアルモニタは超音波センサと前方の障害物との間の距離を表示します。
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+**どのように動作するのか？**
 
-**How it works?**
-
-About the application of ultrasonic sensor, we can directly check the subfunction.
+超音波センサの使用方法については、サブ関数を直接確認できます。
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us
+超音波モジュールの ``trigPin`` は、2usごとに10usの方形波信号を送信します。
 
 .. code-block:: arduino
 
@@ -104,21 +99,19 @@ The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal eve
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW); 
 
-
-The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+``echoPin`` は、範囲内に障害物が存在する場合に高レベルの信号を受信し、 ``pulseIn()`` 関数を使用して送信から受信までの時間を記録します。
 
 .. code-block:: arduino
 
     microsecond=pulseIn(echoPin, HIGH);
 
-The speed of sound is 340 m/s or 29 microseconds per centimeter.
+音の速度は、340 m/sまたは29マイクロ秒/センチメートルです。
 
-This gives the distance travelled by the square wave, outbound and return, so
-we divide by 2 to get the distance of the obstacle.
+これにより、方形波が往復する距離が得られるので、障害物の距離を得るために2で割ります。
 
 .. code-block:: arduino
 
     float distance = microsecond / 29.00 / 2;  
 
+超音波センサは動作中にプログラムを一時停止するので、複雑なプロジェクトを書いているときに若干の遅延が発生することがあります。
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.

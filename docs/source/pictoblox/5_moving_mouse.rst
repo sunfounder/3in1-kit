@@ -1,48 +1,48 @@
 .. _sh_moving_mouse:
 
-2.5 Moving Mouse
+2.5 移動するマウス
 ===================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+今日は、ポテンショメーターで制御されるマウスのおもちゃを作成します。
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+緑の旗がクリックされたとき、ステージ上のマウスが前進し、ポテンショメーターを回すと、マウスが移動の方向を変えます。
 
 .. image:: img/6_mouse.png
 
-You Will Learn
+学べること
 ---------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- ポテンショメーターの原理
+- アナログピンと範囲の読み取り
+- ある範囲を別の範囲にマッピングする
+- スプライトの移動と方向変更
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入することは確かに便利です、リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -53,61 +53,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to A0. After conversion by the ADC converter of the Arduino board, the value range is 0-1023.
+ポテンショメーターは3端子の抵抗素子で、2つの側面ピンは5VとGNDに接続され、中央のピンはA0に接続されます。ArduinoボードのADCコンバーターによる変換後、値の範囲は0-1023です。
 
 .. image:: img/circuit/potentiometer_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Choose a sprite**
+**1. スプライトを選択する**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下にある **Choose a Sprite** ボタンをクリックします。検索ボックスに **mouse** を入力し、それをクリックして追加します。
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. 変数の作成**
 
-Create a variable called **value** to store the value of the potentiometer read.
+ポテンショメータの読み取り値を保存するための変数 **value** を作成します。
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+作成すると、 **value** が **Variables** パレット内に表示され、チェックされた状態で表示されます。これは、この変数がステージに表示されることを意味します。
 
 .. image:: img/6_value.png
 
-**3. Read the value of A0**
+**3. A0の値を読み取る**
 
-Store the value of A0 read into the variable **value**.
+A0の読み取り値を変数 **value** に保存します。
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin A0]: Read the value of A0~A5 in the range of 0-1023.
+* [set my variable to 0]: 変数の値を設定します。
+* [read analog pin A0]: A0~A5の値を0-1023の範囲で読み取ります。
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+全体を読むためには、[forever]ブロックを使用する必要があります。このスクリプトをクリックして実行し、ポテンショメーターを両方向に回転させると、値の範囲が0-1023であることがわかります。
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. スプライトを移動する**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+[move steps]ブロックを使用してスプライトを移動します。スクリプトを実行すると、スプライトが中央から右に移動するのが見えます。
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. スプライトの方向を変える**
 
-Now change the direction of the sprite's movement by the value of A0. Since the value of A0 ranges from 0-1023, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+A0の値によってスプライトの移動方向を変えます。A0の値の範囲は0-1023ですが、スプライトの回転方向は-180~180ですので、[map]ブロックを使用する必要があります。
 
-Also add [when green flag clicked] at the beginning to start the script.
+また、スクリプトの開始時に[when green flag clicked]を追加します。
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: スプライトの操舵角を設定します。 **Motion** パレットから。
+* [map from to]: ある範囲を別の範囲にマッピングします。
 
 .. image:: img/6_direction.png
-
-
-
-
 

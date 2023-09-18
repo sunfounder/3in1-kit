@@ -1,35 +1,33 @@
 .. _cpn_pump:
 
-Centrifugal Pump
+遠心ポンプ
 ================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+遠心ポンプは回転運動エネルギーを水力エネルギーに変換して液体を輸送します。この回転エネルギーは電動モーターから供給されます。液体は、回転する軸の近くやその周りを通ってポンプのインペラに入り、インペラによって加速され、放射状に外向きにディフューザやボルート室に流れ、そこから流れ出します。
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
+遠心ポンプの一般的な用途には、水、下水、農業、石油、石油化学のポンプが含まれます。
 
+* `遠心ポンプ - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
 
-* `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
+**特徴**
+    * **電圧範囲**: DC 3 ~ 4.5V
+    * **動作電流**: 120 ~ 180mA
+    * **出力**: 0.36 ~ 0.91W
+    * **最大揚水高**: 0.35 ~ 0.55M
+    * **最大流量**: 80 ~ 100 L/H
+    * **連続動作時間**: 100時間
+    * **防水等級**: IP68
+    * **駆動方式**: DC、磁気駆動
+    * **材料**: エンジニアリングプラスチック
+    * **出口外径**: 7.8 mm
+    * **出口内径**: 6.5 mm
+    * このポンプは水中ポンプであり、そのように使用する必要があります。水中にして使用しない場合、過度に加熱してオーバーヒートのリスクがあります。
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**例**
 
-**Example**
-
-* :ref:`ar_pump` (Learning Project)
-* :ref:`iot_plant` (IoT Project)
-
+* :ref:`ar_pump` (学習プロジェクト)
+* :ref:`iot_plant` (IoTプロジェクト)

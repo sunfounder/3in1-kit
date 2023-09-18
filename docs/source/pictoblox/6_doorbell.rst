@@ -1,50 +1,49 @@
 .. _sh_doorbell:
 
-2.6 Doorbell
+2.6 ドアベル
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+このプロジェクトでは、ステージ上のボタンとベルを使ってドアベルを作成します。
 
-
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+緑のフラグがクリックされた後、ボタンを押すとステージ上のベルが音を鳴らします。
 
 .. image:: img/7_doorbell.png
 
-You Will Learn
+学べること
 ---------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- ボタンの動作方法
+- デジタルピンと範囲の読み取り
+- 条件ループの作成
+- 背景の追加
+- 音の再生
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのが便利です。リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,50 +58,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_capacitor`
         - |link_capacitor_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ボタンは4ピンのデバイスであり、ピン1がピン2に、ピン3がピン4に接続されています。ボタンが押されると、4つのピンが接続され、回路が閉じます。
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立てます。
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* ボタンの左側のピンの一つを、プルダウン抵抗と0.1uF（104）キャパシター（ボタン動作時のジッタを除去し、ボタンが動作するときの安定したレベルを出力するため）に接続されているピン12に接続します。
+* 抵抗とキャパシターのもう一方の端子をGNDに、ボタンの右側のピンの一つを5Vに接続します。
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Add a Backdrop**
+**1. 背景を追加する**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+右下の **Choose a Backdrop** ボタンをクリックします。
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+**Bedroom 1** を選択します。
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. スプライトを選択する**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下の **Choose a Sprite** ボタンをクリックして、検索ボックスに **bell** を入力し、それを追加します。
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+ステージ上の **bell** スプライトを選択し、正しい位置に移動します。
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. ボタンを押すとベルが音を鳴らす**
 
+[if then]を使用して条件文を作成します。ピン12の読み取り値が1（キーが押されている）の場合、 **xylo1** の音が再生されます。
 
-Use [if then] to make a conditional statement that when the value of the pin12 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **Arduino Uno** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: from the Sound palette, used to play specific sounds.
+* [read status of digital pin]: このブロックは **Arduino Uno** パレットから来ており、デジタルピンの値を読むために使用され、結果は0または1です。
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: このブロックは制御ブロックであり、 **Control** パレットから来ています。そのブーリアン条件が真である場合、その中に保持されているブロックが実行され、その後関与するスクリプトが続行されます。条件が偽の場合、ブロック内のスクリプトは無視されます。条件は一度だけチェックされます。ブロック内のスクリプトが実行されている間に条件が偽に変わっても、完了するまで実行し続けます。
+* [play sound until done]: Soundパレットから、特定の音を再生するために使用されます。
 
 .. image:: img/7_bell.png

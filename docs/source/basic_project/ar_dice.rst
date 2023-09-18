@@ -1,36 +1,36 @@
 .. _ar_eeprom:
 
-6.2 Electronic Dice
+6.2 電子サイコロ
 =============================
 
-Here we use button, 7-segment and 74hc595 to make an electronic dice. 
-Each time the button is pressed, a random number ranging from 1 to 6 is generated and displayed on the 7-segment Display.
+このプロジェクトでは、ボタン、7セグメント、および74hc595を使用して電子サイコロを作成します。
+ボタンが押されるたびに、1から6までのランダムな数字が生成され、7セグメントディスプレイに表示されます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは確かに便利です、リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから部品を個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,36 +47,36 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7_segment`
         - |link_7segment_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_8.9_eeprom.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/wiring_electronic_dice.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\basic_project\6.2.electronic_dice``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\basic_project\6.2.electronic_dice`` のパスの下にある ``6.2.electronic_dice.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8d8ad340-b1de-4518-917b-caaf07e4baf4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the code is uploaded successfully, the 7-segment Display will display 0-7 in a fast scroll, and when you press the button, it will display a random number and stop scrolling. The scrolling display starts again when you press the button again.
+コードが正常にアップロードされると、7セグメントディスプレイは0-7を高速でスクロールして表示し、ボタンを押すとランダムな数字が表示されてスクロールが停止します。ボタンを再度押すと、スクロール表示が再開されます。
 
-**How it works?**
+**どのように動作するのか？**
 
-This project is based on :ref:`ar_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+このプロジェクトは :ref:`ar_segment` を基にしており、7セグメントディスプレイ上のスクロール表示を開始/一時停止するボタンが付いています。
 
-#. Initialize each pin and read the value of the button.
+1. 各ピンを初期化し、ボタンの値を読み取ります。
 
     .. code-block:: arduino
 
@@ -87,11 +87,11 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             attachInterrupt(digitalPinToInterrupt(buttonPin), rollDice, FALLING);
         }
 
-    * The interrupt is used here to read the state of the button. The default value of ``buttonPin`` is low, which changes from low to high when the button is pressed.
-    * ``rollDice`` represents the function to be called when the interrupt is triggered, it is used to toggle the value of the variable ``state``.
-    * ``FALLING`` means the interrupt is triggered when the ``buttonPin`` goes from low to high.
+    * ここで割り込みは、ボタンの状態を読むために使用されます。 ``buttonPin`` のデフォルト値は低く、ボタンが押されると低から高に変わります。
+    * ``rollDice`` は割り込みがトリガされたときに呼び出される関数を表しており、変数 ``state`` の値をトグルするために使用されます。
+    * ``FALLING`` は、 ``buttonPin`` が低から高に移行するときに割り込みがトリガされることを意味します。
 
-#. When the variable ``state`` is 0, the function ``showNumber()`` is called to make the 7-segment Display randomly display a number between 1 and 7.
+2. 変数 ``state`` が0の場合、関数 ``showNumber()`` が呼び出され、7セグメントディスプレイが1から7までのランダムな数字を表示します。
 
     .. code-block:: arduino
 
@@ -103,7 +103,7 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             }
         }
 
-#. About ``rollDice()`` function.
+3. ``rollDice()`` 関数について。
 
     .. code-block:: arduino
 
@@ -111,18 +111,18 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             state = !state;
         }
     
-    When this function is called, it toggles the value of state, such as 1 last time and 0 this time.
+    この関数が呼び出されると、stateの値をトグルします。例えば、前回が1で、今回が0です。
 
-#. About ``showNumber()`` function.
+4. ``showNumber()`` 関数について。
 
     .. code-block:: arduino
 
         void showNumber(int num) {
-            digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
+            digitalWrite(STcp, LOW); //ST_CPを接地し、送信している間だけLowを保持する
             shiftOut(DS, SHcp, MSBFIRST, datArray[num]);
-            //return the latch pin high to signal chip that it
-            //no longer needs to listen for information
-            digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
+            //ラッチ・ピンをハイ・レベルに戻し、チップにそれを知らせる
+            //もはや情報をリッスンする必要はない
+            digitalWrite(STcp, HIGH); //ST_CPST_CPをプルしてデータを保存する。
         }
     
-    This is the code inside ``loop()`` in the project :ref:`ar_segment` into the function ``showNumber()``.
+    これはプロジェクト :ref:`ar_segment` の ``loop()`` 内のコードを関数 ``showNumber()`` に移したものです。

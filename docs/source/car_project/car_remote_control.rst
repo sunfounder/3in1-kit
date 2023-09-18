@@ -1,35 +1,35 @@
 .. _car_remote:
 
-9. Remote Control
+9. リモートコントロール
 =================================
 
-This kit comes with an IR receiver, which allows you to use an IR remote control to control the movement of the car.
+このキットには、IRレシーバーが含まれているので、IRリモートコントロールを使用して車の動きをコントロールすることができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのが便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれのアイテムを購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,15 +42,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Wiring**
+**配線図**
 
-Now build the circuit according to the diagram below.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - IR Receiver
-      - R3 Board
+    * - IR レシーバー
+      - R3 ボード
     * - OUT
       - 12
     * - GND
@@ -62,22 +62,22 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - LED
-      - R3 Board
-    * - Anode(The longer pin)
+      - R3 ボード
+    * - アノード(長いピン)
       - 13
-    * - Cathode
+    * - カソード
       - GND
 
 .. image:: img/car_remote.jpg
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``9.remote_control.ino`` file under the path of ``3in1-kit\car_project\9.remote_control``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * ``3in1-kit\car_project\9.remote_control`` のパスにある ``9.remote_control.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``IRremote`` ライブラリが使用されています。 **Library Manager** からインストールできます。
   
         .. image:: ../img/lib_irremote.png
 
@@ -85,36 +85,34 @@ Now build the circuit according to the diagram below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7c78450d-fcd2-4288-a00d-499c71ad2d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+コードのアップロードが成功したら、リモートコントロールのボタンを押すと、LEDが一回点滅して信号が受信されたことを示し、ボタンの指示に従って車が動きます。以下のキーを押して車を操作することができます。
 
-After the code is uploaded successfully, press the button on the remote control, the LED will blink once to represent that the signal has been received, and the car will move according to the button you pressed. You can press the following keys to control the car.
-
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Forward to the left
-* **2**: Forward
-* **3**: Forward to the right
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward
-* **9**: Backward to the right
+* **+**：加速
+* **-**：減速
+* **1**：左前方へ進む
+* **2**：前進
+* **3**：右前方へ進む
+* **4**：左折
+* **6**：右折
+* **7**：左後方へ後退
+* **8**：後退
+* **9**：右後方へ後退
 
 
-**How it works?**
+**どのように動作するのか？**
 
-The effect of this project is to make the car move by reading the key value of the IR remote control. In addition, an LED is added to indicate that the IR signal has been successfully received.
+このプロジェクトの効果は、IRリモートコントロールのキー値を読み取り、車を動かすことです。さらに、IR信号が正常に受信されたことを示すためにLEDが追加されます。
 
-#. Import the ``IRremote`` library, you can install it from the **Library Manager**.
-
+#. ``IRremote`` ライブラリをインポートします。 **Library Manager** からインストールできます。
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-        const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
+        const int IR_RECEIVE_PIN = 12;  // IRセンサのピン番号を定義する
+        String lastDecodedValue = "";   // 最後にデコードされた値を保存する変数
 
-#. Initialize the IR receiver and the LED.
+#. IRレシーバとLEDを初期化します。
 
     .. code-block:: arduino
 
@@ -125,18 +123,15 @@ The effect of this project is to make the car move by reading the key value of t
         void setup() {
 
             ...
-            //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+            //IR リモート
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IRレシーバを開始する
             Serial.println("REMOTE CONTROL START");
-
 
             //LED
             pinMode(ledPin, OUTPUT);
         }
 
-
-#. When you press the keys on the remote control, the LED will blink and the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
-
+#. リモートコントロールのキーを押すと、LEDが点滅し、赤外線受信機はどのキーが押されたかを知り、車は対応するキー値に従って動きます。
 
     .. code-block:: arduino
 
@@ -147,7 +142,7 @@ The effect of this project is to make the car move by reading the key value of t
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (key != "ERROR" && key != lastDecodedValue) {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
+                    lastDecodedValue = key;  // 最後のデコード値を更新
                     blinkLED();
 
                     if (key == "+") {
@@ -159,21 +154,20 @@ The effect of this project is to make the car move by reading the key value of t
                         delay(1000);
                     ...
                     }
-                    IrReceiver.resume();  // Enable receiving of the next value
-
+                    IrReceiver.resume();  // 次の値の受信を有効にする
             }
         }
 
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
-    * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
-    * Resumes IR signal reception for the next signal.
+    * IR信号が受信され、正常にデコードされたかどうかを確認する。
+    * IRコマンドをデコードし、カスタム ``decodeKeyValue()`` 関数を使用して ``key`` に保存する。
+    * デコードされた値がエラーでなく、最後にデコードされた値と異なるかどうかを確認する。
+    * デコードされたIR値をシリアルモニタに表示する。
+    * 新しいデコード値で ``lastDecodedValue`` を更新する。
+    * 次の信号のIR信号受信を再開する。
 
-#. About the ``blinkLED()`` function.
-    
-    When this function is called, have the LED repeat the toggle from on-off three times so that you see the LED blink 3 times.
+#. ``blinkLED()`` 関数について。
+
+    この関数が呼び出されると、LEDが3回点滅するように、LEDをオンオフのトグルを3回繰り返します。
 
     .. code-block:: arduino
 
@@ -185,4 +179,5 @@ The effect of this project is to make the car move by reading the key value of t
                 delay(50);
             }
         }
+
 

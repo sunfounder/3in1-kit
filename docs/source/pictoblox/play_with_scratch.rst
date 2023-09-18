@@ -1,24 +1,24 @@
 .. _play_with_scratch:
 
-Play with Scratch
+Scratchで遊ぼう
 ========================
 
-Besides programming on the Arduino IDE, we can also use graphical programming.
+Arduino IDEでのプログラミングだけでなく、グラフィカルなプログラミングも利用できます。
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for Arduino boards (Uno, Mega2560 and Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+ここではScratchを使用したプログラミングを推奨していますが、現在の公式ScratchはRaspberry Piとのみ互換性があります。そこで、STEMPediaという企業と提携し、Arduinoボード（Uno, Mega2560, Nano）用のScratch 3ベースのグラフィカルプログラミングソフトウェア「 `PictoBlox <https://thestempedia.com/product/pictoblox/>`_ 」を開発しました。
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+これはScratch 3の基本機能を保持しながら、Arduino Uno、Mega、Nano、ESP32、Microbit、およびSTEMPediaのホームメイドのメインボードなどの制御ボードを追加しています。これにより、外部センサーやロボットを使用してステージ上のスプライトを制御することができ、強力なハードウェア対話機能が備わっています。
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+さらに、AIや機械学習の機能もあります。プログラミングの基礎があまりなくても、これらの人気の高いハイテク技術を学び、使用することができます。
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Scratchのコーディングブロックをドラッグアンドドロップするだけで、クールなゲームやアニメーション、インタラクティブなプロジェクト、そしてロボットを自分の思い通りに制御することができます！
+
+さあ、この発見の旅を始めましょう！
 
 
-Now let's start the journey of discovery!
-
-**1. Get Started**
+**1. はじめに**
 
 .. toctree::
     :maxdepth: 2
@@ -29,17 +29,17 @@ Now let's start the journey of discovery!
 
     
 
-**2. Projects**
+**2. プロジェクト**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+以下のプロジェクトはプログラミングの難易度の順に書かれています。これらの本を順番に読むことをおすすめします。
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+各プロジェクトでは、回路の組み立て方やプログラムの手順をステップバイステップで非常に詳細に教えています。最終結果を達成するための方法も含まれています。
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+もちろん、スクリプトを直接開いて実行することもできますが、関連する資料を `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ からダウンロードしたことを確認する必要があります。
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+ダウンロードが完了したら、それを解凍します。 :ref:`stage_mode` を参照して、個々のスクリプトを直接実行します。
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
+ただし、 :ref:`sh_humiture` は :ref:`upload_mode` を使用しています。
 
 
 .. toctree::
@@ -70,15 +70,15 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
 
 .. _sh_car:
 
-**3. Play Car with Scratch**
+**3. Scratchで車を操作する**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+以下のプロジェクトはプログラミングの難易度の順に書かれています。これらの本を順番に読むことをおすすめします。
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+各プロジェクトでは、回路の組み立て方やプログラムの手順をステップバイステップで非常に詳細に教えています。最終結果を達成するための方法も含まれています。
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+もちろん、スクリプトを直接開いて実行することもできますが、関連する資料を `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ からダウンロードしたことを確認する必要があります。
 
-Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
+ダウンロードが完了したら、それを解凍します。 :ref:`upload_mode` を参照して、個々のスクリプトを直接実行します。
 
 
 .. toctree::

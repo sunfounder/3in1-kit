@@ -1,41 +1,41 @@
 .. _ar_state_change:
 
-5.3 State Change Detection
+5.3 ステート変更の検出
 ===========================
 
-When the button controls other devices, it can not only work when it is pressed, but stop when it is released.
-It is also possible to switch the working state each time the button is pressed.
+ボタンが他のデバイスを制御する際、ボタンが押されている間だけ動作するわけではなく、離されると動作が停止することもあります。
+ボタンが押されるたびに動作状態を切り替えることも可能です。
 
-In order to achieve this effect, you need to know how to toggle the working state between off and on when the button is pressed,
-That is "state change detection".
+この効果を実現するためには、ボタンが押されるとオフとオンの間で動作状態を切り替える方法を知っておく必要があります。
+それは「ステート変更の検出」と言います。
 
-In this project, we will use the button to control the motor.
+このプロジェクトでは、ボタンを使用してモーターを制御します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトで必要な部品は以下の通りです。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは非常に便利です。リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,35 +52,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l298n`
         - |link_l298n_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_8.3_statechange.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/state_change_bb.jpg
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\basic_project\5.3.state_change_detection``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\basic_project\5.3.state_change_detection`` のパスの下にある ``5.3.state_change_detection.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/67a62a3d-46d3-4f5f-889c-364cbdf9b66f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you press the button and the motor will turn; until you press the button again, the motor will stop.
+コードが正常にアップロードされた後、ボタンを押すとモーターが回転し、再びボタンを押すとモーターが停止します。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-#. Create variables and define pins for the motor and button.
+1. モーターやボタンのピンの変数を作成し、ピンを定義します。
 
     .. code-block:: arduino
 
@@ -89,10 +88,10 @@ After the code is uploaded successfully, you press the button and the motor will
         int buttonState = 0;         
         int lastButtonState = 0;    
 
-    * ``detectionState`` is a flag whose value changes each time the button is pressed, e.g., 0 this time, 1 the next, and so on alternately.
-    * ``buttonState`` and ``lastButtonState`` are used to record the state of the button this time and the last time, to compare whether the button was pressed or released.
+    * ``detectionState`` は、ボタンが押されるたびに値が変わるフラグです。例えば、今回は0、次回は1と交互になります。
+    * ``buttonState`` と ``lastButtonState`` は、今回と前回のボタンの状態を記録するためのもので、ボタンが押されたか、放されたかを比較するために使用されます。
 
-#. Initialize each pin and set the baud rate of the serial monitor.
+2. 各ピンを初期化し、シリアルモニタのボーレートを設定します。
 
     .. code-block:: arduino
 
@@ -103,25 +102,24 @@ After the code is uploaded successfully, you press the button and the motor will
             pinMode(motorPinB,OUTPUT);
         }
 
-
-#. First read the state of the button, and if the button is pressed, the variable ``detectionState`` will switch its value from 0 to 1 or 1 to 0. When ``detectionState`` is 1, the motor will be turned. It has the effect that this time the button is pressed, the motor turns, the next time the button is pressed, the motor stops, and so on alternately.
+3. ボタンの状態を最初に読み取り、ボタンが押されると、変数 ``detectionState`` が0から1、または1から0に切り替えられます。 ``detectionState`` が1の場合、モーターが回転します。この回路の効果は、ボタンが押されるたびにモーターが回転し、次にボタンが押されるとモーターが停止する、というものです。
 
     .. code-block:: arduino
 
         void loop() {
-        // Toggle the detectionState each time the button is pressed
+        // ボタンが押されるたびにdetectionStateを切り替えます
         buttonState = digitalRead(buttonPin);
         if (buttonState != lastButtonState) {
             if (buttonState == HIGH) {
             detectionState=(detectionState+1)%2;
-            Serial.print("The detection state is: ");
+            Serial.print("検出状態は：");
             Serial.println(detectionState);
             } 
             delay(50);
         }
         lastButtonState = buttonState;
-        
-        // According to the detectionState, start the motor
+
+        // detectionStateに従って、モーターを起動します
         if(detectionState==1){
             digitalWrite(motorPinA,HIGH);
             digitalWrite(motorPinB,LOW);
@@ -131,15 +129,15 @@ After the code is uploaded successfully, you press the button and the motor will
         }
         }
 
-    The entire workflow is as follows.
+    全体のワークフローは以下の通りです。
 
-    * Read the button value.
+    * ボタンの値を読み取ります。
 
     .. code-block:: arduino
 
         buttonState = digitalRead(buttonPin);
 
-    * If ``buttonState`` and ``lastButtonState`` are not equal, it means that the button state has changed, continue with the next judgment, and store the button state at this time into the variable ``lastButtonState``. ``delay(50)`` is used to eliminate jitter.
+    * ``buttonState`` と ``lastButtonState`` が等しくない場合、ボタンの状態が変更されたことを意味します。次の判断を続け、この時点のボタンの状態を変数 ``lastButtonState`` に格納します。 ``delay(50)`` はジッタを排除するために使用されます。
     
     .. code-block:: arduino
 
@@ -149,17 +147,17 @@ After the code is uploaded successfully, you press the button and the motor will
         }
         lastButtonState = buttonState;
 
-    * When the button is pressed, its value is HIGH. Here, when the button is pressed, the value of the variable ``detectionState`` is changed, e.g., from 0 to 1 after an operation.
+    * ボタンが押されると、その値はHIGHになります。ここで、ボタンが押されると、変数 ``detectionState`` の値が変更されます。例えば、1つの操作後に0から1になります。
 
     .. code-block:: arduino
 
         if (buttonState == HIGH) {
             detectionState=(detectionState+1)%2;
-            Serial.print("The detection state is: ");
+            Serial.print("検出状態は：");
             Serial.println(detectionState);
             }
 
-    * When the variable ``detectionState`` is 1, let the motor rotate, otherwise stop.
+    * 変数 ``detectionState`` が1の場合、モーターを回転させ、それ以外の場合は停止します。
 
     .. code-block:: arduino
 

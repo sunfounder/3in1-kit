@@ -1,47 +1,46 @@
 .. _sh_tap_tile:
 
-2.20 GAME - Don't Tap on The White Tile
+2.20 ゲーム - 白いタイルをタップしないで
 ==========================================
 
-I'm sure many of you have played this game on your cell phones. This game is played by tapping on randomly appearing black to add points, the speed will get faster and faster, tap on white blocks or miss black blocks game over.
+多くの方がスマートフォンでこのゲームをプレイしたことがあると思います。このゲームは、ランダムに出現する黒いタイルをタップしてポイントを追加し、スピードはどんどん速くなります。白いブロックをタップしたり、黒いブロックを見逃したりするとゲームオーバーです。
 
-Now we use PictoBlox to replicate it.
+今回は、PictoBloxを使用してこれを再現します。
 
-Insert two IR obstacle avoidance modules vertically on the breadboard, when your hand is placed above one of the IR modules, a blink dot will appear on the stage, representing a tap was made.
+ブレッドボード上に2つのIR障害物回避モジュールを縦に挿入します。手をIRモジュールの上に置くと、ステージ上に点滅するドットが表示され、タップが行われたことを示します。
 
-If the tap to the black block, the score plus 1, touch the white block, the score minus 1.
+黒いブロックにタップすると、スコアは1増え、白いブロックに触れると、スコアは1減ります。
 
-You need to decide whether to place your hand on top of the IR module on the left or on top of the IR module on the right, depending on the position of the black block on the stage.
-
+ステージ上の黒いブロックの位置に応じて、左のIRモジュールの上か、右のIRモジュールの上に手を置くかを決める必要があります。
 
 .. image:: img/21_tile.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを購入するのは確かに便利です。リンクはこちら:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,121 +51,120 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-
-Build the Circuit
+回路の作成
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+障害物回避モジュールは、出力が通常は高く、障害物が検出されると低くなる距離調整可能な赤外線近接センサーです。
 
-Now build the circuit according to the diagram below.
+以下の図に従って回路を組み立てます。
 
 .. image:: img/circuit/2avoid_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-Here we need to have 3 sprites, **Tile** , **Left IR** and **Right IR**.
+ここでは3つのスプライト、 **Tile** 、 **Left IR** 、 **Right IR** が必要です。
 
-* **Tile** sprite: used to achieve the effect of alternating black and white tiles downward, in the cell phone this game is generally 4 columns, here we only do two columns.
-* **Left IR** sprite: used to achieve the click effect, when the left IR module senses your hand, it will send a message - **left** to **Left IR** sprite, let it start working. If it touches the black tile on the stage, the score will be increased by 1, otherwise the score will be decreased by 1.
-* **Right IR** sprite: The function is basically the same as **Left IR**, except that it receives **Right** information.
+* **Tile** スプライト: 黒と白のタイルが交互に下方向に移動する効果を実現するために使用されます。スマートフォンのこのゲームは通常4列ですが、ここでは2列だけを行います。
+* **Left IR** スプライト: クリック効果を実現するために使用されます。左のIRモジュールがあなたの手を感知すると、 **Left IR** スプライトにメッセージ - **left** を送信し、それを起動します。ステージ上の黒いタイルに触れると、スコアは1増加し、それ以外の場合はスコアは1減少します。
+* **Right IR** スプライト: 機能は **Left IR** とほぼ同じですが、 **Right** の情報を受け取ります。
 
-**1. Paint a Tile sprite**.
+**1. Tileスプライトを描く**。
 
-Delete the default sprite, mouse over the **Add Sprite** icon, select **Paint** and a blank sprite will appear and name it **Tile**.
+デフォルトのスプライトを削除し、 **Add Sprite** アイコンにマウスオーバーして **Paint** を選択し、空のスプライトが表示され、それを **Tile** と名付けます。
 
 .. image:: img/21_tile1.png
 
-Go to the **Costumes** page and use the **Rectangle** tool to draw a rectangle.
+**Costumes** ページに移動し、 **Rectangle** ツールを使用して長方形を描きます。
 
 .. image:: img/21_tile2.png
 
-Select the rectangle and click **Copy** -> **Paste** to make an identical rectangle, then move the two rectangles to a flush position.
+長方形を選択し、 **Copy** -> **Paste** をクリックして同じ長方形を作成し、2つの長方形をフラッシュポジションに移動します。
 
 .. image:: img/21_tile01.png
 
-Select one of the rectangles and choose a fill color of black.
+長方形の1つを選択し、塗りつぶしの色を黒に選択します。
 
 .. image:: img/21_tile02.png
 
-Now select both rectangles and move them so that their center points match the center of the canvas.
+2つの長方形を選択して、キャンバスの中心点が一致するように移動します。
 
 .. image:: img/21_tile0.png
 
-Duplicate costume1, alternating the fill colors of the two rectangles. For example, the fill color of costume1 is white on the left and black on the right, and the fill color of costume2 is black on the left and white on the right.
+costume1を複製し、2つの長方形の塗りつぶしの色を交互に変更します。例えば、costume1の塗りつぶしの色は左が白で右が黒、costume2の塗りつぶしの色は左が黒で右が白です。
 
 .. image:: img/21_tile3.png
 
-**2. Scripting the Tile sprite**
 
-Now go back to the **Blocks** page and set the initial position of the **Tile** sprite so that it is at the top of the stage.
+**2. Tile スプライトのスクリプト作成**
+
+**Blocks** ページに戻り、 **Tile** スプライトの初期位置をステージの上部に設定します。
 
 .. image:: img/21_tile4.png
 
-Create a variable -**blocks** and give it an initial value to determine the number of times the **Tile** sprite will appear. Use the [repeat until] block to make the variable **blocks** gradually decrease until **blocks** is 0. During this time, have the sprite **Tile** randomly switch its costume.
+変数 - **blocks** を作成し、**Tile** スプライトが何回現れるかを決定する初期値を設定します。[repeat until] ブロックを使用して、 **blocks** 変数を徐々に減少させ、 **blocks** が 0 になるまで続けます。この間、スプライト **Tile** のコスチュームをランダムに切り替えます。
 
-After clicking on the green flag, you will see the **Tile** sprite on the stage quickly switch costumes.
+緑の旗をクリックすると、ステージ上で **Tile** スプライトがコスチュームを素早く切り替えるのを見ることができます。
 
 .. image:: img/21_tile5.png
 
-Create clones of the **Tile** sprite while the variable **blocks** is decreasing, and stop the script from running when blocks is 0. Two [wait () seconds] blocks are used here, the first to limit the interval between **Tile's** clones and the second is to let the variable blocks decrease to 0 without stopping the program immediately, giving the last tile sprite enough time to move.
-
+**blocks** 変数が減少している間、 **Tile** スプライトのクローンを作成し、blocks が 0 になったらスクリプトの実行を停止します。ここでは2つの [wait () seconds] ブロックが使用されています。1つ目は **Tile** のクローン間の間隔を制限するため、2つ目は変数 blocks がすぐにプログラムを停止せずに0に減少させるため、最後のタイルスプライトに十分な移動時間を与えるためです。
 
 .. image:: img/21_tile6.png
 
-Now script the clone of the **Tile** sprite to move down slowly and delete it when it reaches the bottom of the stage. The change in the y coordinate affects the drop speed, the larger the value, the faster the drop speed.
+**Tile** スプライトのクローンがゆっくりと下に移動し、ステージの底に達したら削除するようにスクリプトを書きます。y座標の変化は、落下速度に影響を与えます。値が大きいほど、落下速度は速くなります。
 
 .. image:: img/21_tile7.png
 
-Hide the body and show the clone.
+本体を非表示にし、クローンを表示します。
 
 .. image:: img/21_tile8.png
 
-**3. Read the values of the 2 IR modules**
+**3. 2つのIRモジュールの値を読む**
 
-In the backdrop, read the values of the 2 IR modules and make the corresponding actions.
+バックドロップで、2つのIRモジュールの値を読み取り、対応するアクションを行います。
 
-* If the left IR obstacle avoidance module senses your hand, broadcast a message - **left**.
-* If the left IR avoidance module senses your hand, broadcast a message - **right**.
+* 左のIR障害物回避モジュールが手を感知した場合、メッセージ - **left** をブロードキャストします。
+* 左のIR回避モジュールが手を感知した場合、メッセージ - **right** をブロードキャストします。
 
 .. image:: img/21_tile9.png
 
-**4. Left IR sprite**
+**4. Left IR スプライト**
 
-Again, mouse over the **Add sprite** icon and select **Paint** to create a new sprite called **Left IR**.
+再度、 **Add sprite** アイコンの上にマウスを置き、 **Paint** を選択して **Left IR** という新しいスプライトを作成します。
 
 .. image:: img/21_tile10.png
 
-Go to the **Costumes** page of the **Left IR** sprite, select the fill color (any color out of black and white) and draw a circle.
+**Left IR** スプライトの **Costumes** ページに移動し、塗りつぶし色（黒と白を除く任意の色）を選択し、円を描きます。
 
 .. image:: img/21_tile11.png
 
-Now start scripting the **Left IR** sprite. When the message - **left** is received (the IR receiver module on the left detects an obstacle), then determine if the black block of the **Tile** sprite is touched, and if it is, let the variable **count** add 1, otherwise subtract 1.
+次に、 **Left IR** スプライトのスクリプトを開始します。メッセージ - **left** が受信されたとき（左のIR受信モジュールが障害物を検出した場合）、 **Tile** スプライトの黒ブロックがタッチされているかどうかを判断し、タッチされていれば、変数 **count** を1増やし、そうでなければ1減らします。
 
 .. image:: img/21_tile12.png
 
 .. note::
 
-    You need to make the **Tile** sprite appear on the stage, and then absorb the color of the black block in the **Tile** sprite.
+    **Tile** スプライトをステージに表示させ、 **Tile** スプライトの黒ブロックの色を吸収する必要があります。
 
     .. image:: img/21_tile13.png
 
-Now let's do the sensing effect (zoom in and out) for **Left IR**.
+**Left IR** のセンシング効果（ズームイン/アウト）を実装しましょう。
 
 .. image:: img/21_tile14.png
 
-Make the **Left IR** sprite hide when the green flag is clicked, show when the message - **left** is received, and finally hide again.
+緑の旗がクリックされたときに **Left IR** スプライトを非表示にし、メッセージ - **left** が受信されたときに表示し、最終的に再び非表示にします。
 
 .. image:: img/21_tile15.png
 
-**5. Right IR sprite**
+**5. Right IR スプライト**
 
-Copy the **Left IR** sprite and rename it to **Right IR**.
+**Left IR** スプライトをコピーして、 **Right IR** に名前を変更します。
 
 .. image:: img/21_tile16.png
 
-Then change the receive message to - **right**.
+次に、受信メッセージを - **right** に変更します。
 
 .. image:: img/21_tile17.png
 
-Now all the scripting is done and you can click on the green flag to run the script.
+すべてのスクリプト作成が完了したら、緑の旗をクリックしてスクリプトを実行できます。

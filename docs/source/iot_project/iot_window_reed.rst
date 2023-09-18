@@ -1,42 +1,41 @@
-
 .. _iot_window:
 
-3. Push Data to Blynk
+3. Blynkへデータをプッシュ
 =============================
 
-This chapter will show you how to send data to Blynk.
+この章では、Blynkにデータを送信する方法を紹介します。
 
-We create a door and window detection device here. The circuit with the reed switch is placed next to the door and window, and the magnet is mounted on the edge of the door and window.
-When the door or window is closed, the Reed Switch will be turned on by the magnetic force and the corresponding pin value on the R3 board will change.
-Blynk.cloud will receive this value so that you can see if your house's doors and windows are closed even when you're away from home. 
+ここでは、ドアと窓の検出デバイスを作成します。リードスイッチの回路はドアや窓の隣に配置され、磁石はドアや窓の端に取り付けられます。
+ドアや窓が閉じている場合、磁力でリードスイッチがオンになり、R3ボード上の対応するピンの値が変わります。
+Blynk.cloudはこの値を受け取るので、家を離れていても家のドアや窓が閉まっているかどうかを確認できます。
 
-Now we will use an LED widget in Blynk to indicate if your windows and doors are closed (i.e. if the Reed Switch is on or off).
+今、BlynkのLEDウィジェットを使用して、窓やドアが閉まっているか（すなわち、リードスイッチがオンかオフか）を表示します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが確実に便利です。以下にリンクを示します：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,66 +50,60 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
-
+    ESP8266モジュールは安定した動作環境を提供するために高い電流が必要ですので、9Vの電池が接続されていることを確認してください。
 
 .. image:: img/wiring_reed.jpg
 
-**2. Edit Dashboard**
+**2. ダッシュボードを編集**
 
-#. Create a **Datastream** of type **Virtual Pin** in the **Datastream** page to get the value of Reed Switch. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **1**.
+#. **Datastream** ページで、リードスイッチの値を取得するための **Virtual Pin** タイプの **Datastream** を作成します。データタイプは **Integer** 、MINとMAXを **0** および **1** に設定します。
 
     .. image:: img/sp220609_162548.png
 
-#. Drag and drop an **LED widget** on the **Wed Dashboard** page, at a value of 1, it will light up (with color), otherwise it will be white.
+#. **Wed Dashboard** ページに **LED widget** をドラッグアンドドロップします。値が1の場合、それは光る（色付き）、それ以外の場合、それは白になります。
 
     .. image:: img/sp220609_163350.png
 
-#. In the settings page of the **LED widget**, select **Datastream** as **Reed(V1)**, and save it.
+#. **LED widget** の設定ページで、 **Datastream** として **Reed(V1)** を選択し、保存します。
 
     .. image:: img/sp220609_163502.png
 
-**3. Run the Code**
+**3. コードの実行**
 
-#. Open the ``3.push_data_to_blynk.ino`` file under the path of ``3in1-kit\iot_project\3.push_data_to_blynk``, or copy this code into **Arduino IDE**.
-
+#. ``3in1-kit\iot_project\3.push_data_to_blynk`` のパスの下にある ``3.push_data_to_blynk.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーします。
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/e81b0024-c11e-4507-8d43-aeb3b6656c2c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+#. あなた自身の ``Template ID`` 、 ``Device Name`` 、および ``Auth Token`` で置き換えます。また、使用しているWiFiの ``ssid`` と ``password`` を入力する必要があります。詳しいチュートリアルは、 :ref:`connect_blynk` を参照してください。
+#. 正しいボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
-
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニタを開き（ボーレートを115200に設定）、成功した接続などのプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示される場合、以下の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * 9Vのバッテリーが接続されていることを確認してください。
+        * RSTピンをGNDに1秒間接続してESP8266モジュールをリセットし、その後、それを抜きます。
+        * R3ボード上のリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        ときどき、上記の操作を3〜5回繰り返す必要がある場合がありますので、お待ちください。
 
-#. Now, Blynk will show the status of your doors and windows. If your doors and windows are closed, the LED widget will be green, otherwise, it will be gray.
+#. これで、Blynkはあなたのドアや窓の状態を表示します。ドアや窓が閉まっている場合、LEDウィジェットは緑色になり、それ以外の場合は灰色になります。
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Blynkをモバイルデバイスで使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
+**どのように動作するのか？**
 
-
-**How it works?**
-
-
-For this example, you should focus on the following lines. "Write data every second to Blynk Cloud's V1 Datastream" is defined by these lines.
+この例では、以下の行に注目する必要があります。「Blynk CloudのV1 Datastreamに毎秒データを書き込む」は、これらの行で定義されています。
 
 .. code-block:: arduino
 
@@ -128,29 +121,28 @@ For this example, you should focus on the following lines. "Write data every sec
 
     void loop()
     {
-        timer.run(); // Initiates BlynkTimer
+        timer.run(); // BlynkTimerを起動
     }
 
-Blynk library provides a built-in timer, first we create a timer object.
+Blynkライブラリは組み込みのタイマーを提供しています、まずタイマーオブジェクトを作成します。
 
 .. code-block:: arduino
 
     BlynkTimer timer;
 
-Set the timer interval in ``setup()``, here we set to execute the ``myTimerEvent()`` function every 1000ms
+``setup()`` 内でタイマーの間隔を設定します。ここでは、1000msごとに ``myTimerEvent()`` 関数を実行するように設定しています。
 
 .. code-block:: arduino
 
     timer.setInterval(1000L, myTimerEvent);
 
-
-Run BlynkTimer in ``loop()``.
+``loop()`` でBlynkTimerを実行します。
 
 .. code-block:: arduino
 
     timer.run();
 
-Edit the custom function ``myTimerEvent()``, the code ``Blynk.virtualWrite(V1, pinValue)`` is used to write the data pinValue for V1.
+カスタム関数 ``myTimerEvent()`` を編集します。コード ``Blynk.virtualWrite(V1, pinValue)`` は、V1のデータpinValueを書き込むために使用されます。
 
 .. code-block:: arduino
 
@@ -158,4 +150,3 @@ Edit the custom function ``myTimerEvent()``, the code ``Blynk.virtualWrite(V1, p
     {
         Blynk.virtualWrite(V1, pinValue);
     }
-

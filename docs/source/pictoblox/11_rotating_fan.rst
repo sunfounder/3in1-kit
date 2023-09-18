@@ -1,47 +1,47 @@
 .. _sh_rotating_fan:
 
-2.11 Rotating Fan
+2.11 回転する扇風機
 ========================
 
-In this project, we will make a spinning star sprite and fan.
+このプロジェクトでは、回転する星のスプライトと扇風機を作ります。
 
-Clicking on the left and right arrow sprites on the stage will control the clockwise and counterclockwise rotation of the motor and star sprite, click on the star sprite to stop the rotation.
+ステージ上の左右の矢印スプライトをクリックすると、モーターと星のスプライトの時計回りと反時計回りの回転を制御でき、星のスプライトをクリックすると回転が停止します。
 
 .. image:: img/13_fan.png
 
-You Will Learn
+学べること
 ---------------------
 
-- Motor working principle
-- Broadcast function
-- Stop other script in sprite block
+- モーターの動作原理
+- ブロードキャストの機能
+- スプライト内の他のスクリプトを停止するブロック
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,54 +52,52 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l298n` 
         - |link_l298n_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
 .. image:: img/circuit/motor_circuit.png
 
-Programming
+プログラミング
 ------------------
-The effect we want to achieve is to use 2 arrow sprites to control the clockwise and counterclockwise rotation of the motor and the star sprite respectively, clicking on the star sprite will stop the motor from rotating.
 
-**1. Add sprites**
+目指す効果は、2つの矢印スプライトを使用してモーターと星のスプライトの時計回りと反時計回りの回転をそれぞれ制御し、星のスプライトをクリックするとモーターの回転を停止させることです。
 
-Delete the default sprite, then select the **Star** sprite and the **Arrow1** sprite, and copy **Arrow1** once.
+**1. スプライトの追加**
+
+デフォルトのスプライトを削除し、 **Star** スプライトと **Arrow1** スプライトを選択し、 **Arrow1** を1つコピーします。
 
 .. image:: img/13_star.png
 
-In the **Costumes** option, change the **Arrow1** sprite to a different direction costume.
+**Costumes** オプションで、 **Arrow1** スプライトを異なる方向のコスチュームに変更します。
 
 .. image:: img/13_star1.png
 
-Adjust the size and position of the sprite appropriately.
+スプライトのサイズと位置を適切に調整します。
 
 .. image:: img/13_star2.png
 
-**2. Left arrow sprite**
+**2. 左の矢印スプライト**
 
-When this sprite is clicked, it broadcasts a message - turn, then sets digital pin 9 to low and pin 10 to high, and sets the variable **flag** to 1. If you click the left arrow sprite, you will find that the motor turns counterclockwise, if your turn is clockwise, then you swap the positions of pin 9 and pin 10.
+このスプライトをクリックすると、メッセージ - turnをブロードキャストし、デジタルピン9をローにし、ピン10をハイに設定し、変数 **flag** を1に設定します。左の矢印スプライトをクリックすると、モーターが反時計回りに回転します。もし時計回りに回転する場合は、ピン9とピン10の位置を交換してください。
 
-There are 2 points to note here.
+注意点が2つあります。
 
-* `[broadcast <https://en.scratch-wiki.info/wiki/Broadcast>`_]: from the **Events** palette, used to broadcast a message to the other sprites, when the other sprites receive this message, it will perform a specific event. For example, here is **turn**, when the **star** sprite receives this message, it executes the rotation script.
-* variable flag: The direction of rotation of the star sprite is determined by the value of flag. So when you create the **flag** variable, you need to make it apply to all sprites.
+* `[broadcast <https://en.scratch-wiki.info/wiki/Broadcast>`_]: **Events** パレットから、他のスプライトにメッセージをブロードキャストするために使用します。他のスプライトがこのメッセージを受け取ると、特定のイベントを実行します。例えば、ここでは **turn** で、 **star** スプライトがこのメッセージを受け取ると、回転スクリプトを実行します。
+* 変数 flag: 星のスプライトの回転方向はflagの値によって決まります。ですので、 **flag** 変数を作成する際には、すべてのスプライトに適用する必要があります。
 
 .. image:: img/13_left.png
 
-**3. right-arrow sprite**
+**3. 右の矢印スプライト**
 
-When this sprite is clicked, broadcast a message turn, then set digital pin 9 high and pin 10 low to make the motor turn clockwise and set the **flag** variable to 0.
+このスプライトをクリックすると、メッセージ turnをブロードキャストし、デジタルピン9をハイにし、ピン10をローにしてモーターを時計回りに回転させ、 **flag** 変数を0に設定します。
 
 .. image:: img/13_right.png
 
-**4. star sprite**
+**4. 星のスプライト**
 
-There are 2 events included here.
+ここには2つのイベントが含まれています。
 
-* When the **star** sprite receives the broadcasted message turn, it determines the value of flag; if flag is 1, it turns 10 degrees to the left, otherwise it reverses. Since it is in [FOREVER], it will keep turning.
-* When this sprite is clicked, set both pins of the motor to high to make it stop rotating and stop the other scripts in this sprite.
+* **star** スプライトがブロードキャストされたメッセージ turnを受け取ると、flagの値を判断します。もしflagが1なら、左に10度回転し、それ以外の場合は逆になります。[FOREVER] にあるので、常に回転し続けます。
+* このスプライトをクリックすると、モーターの両方のピンをハイにして回転を停止させ、このスプライト内の他のスクリプトを停止させます。
 
 .. image:: img/13_broadcast.png
-
-
-

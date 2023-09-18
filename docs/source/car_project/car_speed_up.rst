@@ -1,42 +1,38 @@
-
 .. _car_speed:
 
-3. Speed Up
+3. スピードアップ
 ===================
 
-In addition to the digital signal (HIGH/LOW), the input of L298N can also receive PWM signal to control the speed of the output.
+デジタル信号（HIGH/LOW）に加えて、L298Nの入力はPWM信号も受け取ることができ、これにより出力の速度を制御することができます。
 
-In other words, we can use ``AnalogWrite()`` to control the moving speed of the car.
+つまり、 ``AnalogWrite()`` を使用して車の移動速度を制御することができます。
 
-In this project, we let the car gradually change its forward speed, first accelerating and then decelerating.
+このプロジェクトでは、車が前進する速度を徐々に変えるようにしています。最初は加速し、その後は減速します。
 
+**配線図**
 
-**Wiring**
+このプロジェクトの配線は、 :ref:`car_move_code` と同じです。
 
-This project is the same wiring as :ref:`car_move_code`.
-
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``3.speed_up.ino`` file under the path of ``3in1-kit\car_project\3.speed_up``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\car_project\3.speed_up`` のパスの下で ``3.speed_up.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c15276c1-2359-4de6-ac82-a14a72e041c6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+プログラムが実行されると、車は徐々に加速し、その後徐々に減速します。
 
-After the program runs, the car will gradually accelerate and then gradually decelerate.
+**どのように動作するのか？**
 
-**How it works?**
+このプロジェクトの目的は、IN1~IN4に異なるPWMの値を書き込むことで、車の前進速度を制御することです。
 
-The purpose of this project is to write different PWM values to IN1~IN4 to control the forward speed of the car.
-
-
-#. Use the ``for()`` statement to give ``speed`` in steps of 5, writing values from 0 to 255 so you can see the change in the car's forward speed.
+#. ``for()`` 文を使用して、0から255までの値を5のステップで ``speed`` に与え、車の前進速度の変化を確認します。
 
     .. code-block:: arduino
 
@@ -51,9 +47,9 @@ The purpose of this project is to write different PWM values to IN1~IN4 to contr
             }
         }
 
-#. About the ``moveForward()`` function.
+#. ``moveForward()`` 関数について。
 
-    As opposed to :ref:`car_move_code` which directly gives high/low levels to IN1~IN4, here we pass a parameter ``speed`` to where we need to give high levels.
+    :ref:`car_move_code` ではIN1~IN4に直接高/低のレベルを与えていましたが、ここでは高いレベルを与える必要がある場所に ``speed`` パラメータを渡します。
 
     .. code-block:: arduino
 
@@ -64,10 +60,9 @@ The purpose of this project is to write different PWM values to IN1~IN4 to contr
             analogWrite(in4, 0);
         }
 
-
 * `for <https://www.arduino.cc/reference/en/language/structure/control-structure/for/>`_
 
-The ``for`` statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop. 
+``for`` 文は、波括弧で囲まれた文のブロックを繰り返し実行するために使用されます。増分カウンタは通常、ループを増分および終了するために使用されます。
 
     .. code-block:: arduino
 
@@ -75,6 +70,6 @@ The ``for`` statement is used to repeat a block of statements enclosed in curly 
         // statement(s);
         }
 
-    * ``initialization``: happens first and exactly once.
-    * ``condition``: each time through the loop, condition is tested; if it’s true, the statement block, and the increment is executed, then the condition is tested again. When the condition becomes false, the loop ends.
-    * ``increment``: executed each time through the loop when condition is true.
+    * ``initialization``: 最初に一度だけ実行されます。
+    * ``condition``: ループを通るたびに、conditionがテストされます。trueであれば、文のブロックと増分が実行され、その後で再びconditionがテストされます。conditionがfalseになると、ループは終了します。
+    * ``increment``: conditionがtrueのとき、ループを通じて実行されます。

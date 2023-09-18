@@ -1,52 +1,51 @@
 .. _ar_analog_read:
 
-4. Analog Read
+4. アナログ読み取り
 ======================
 
-The Arduino can read the connected analog sensors through the analog pins.
+Arduinoはアナログピンを介して接続されたアナログセンサーの値を読み取ることができます。
 
-The R3 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+R3ボードには、多チャンネル、10ビットのアナログ-デジタル変換器が含まれています。これは、入力電圧を0から動作電圧（5Vまたは3.3V）の間の整数値0から1023にマッピングすることを意味します。
 
-You need the ``analogRead(pin)`` function to read the value of the analog pin.
+アナログピンの値を読み取るには、 ``analogRead(pin)`` 関数が必要です。
 
-* ``analogRead(pin)``: Read the value from the specified analog pin.
+* ``analogRead(pin)``: 指定されたアナログピンの値を読み取ります。
 
-   **Syntax**
+   **構文**
       analogRead(pin)
 
-   **Parameters**
-        * ``pin``: the name of the analog input pin to read from (A0 to A5).
+   **パラメータ**
+        * ``pin``: 読み取りを行うアナログ入力ピンの名前（A0からA5）。
 
-   **Returns**
-      0-1023. Data type: int.
+   **戻り値**
+      0-1023。データ型: int。
 
-
-**Example of Analog Read**
+**アナログ読み取りの例**
 
 .. code-block:: arduino
 
-   int analogPin = A0; // device connected to analog pin A0
-                     // outside leads to ground and +5V
-   int val = 0;  // variable to store the value read
+   int analogPin = A0; // アナログピンA0に接続されたデバイス
+                     // 外部はグラウンドと+5Vにつながる
+   int val = 0;  // 読み取り値を保存する変数
 
    void setup() {
-      Serial.begin(9600);           //  setup serial
+      Serial.begin(9600);           // シリアルのセットアップ
    }
 
    void loop() {
-      val = analogRead(analogPin);  // read the input pin
-      Serial.println(val);          // debug value
+      val = analogRead(analogPin);  // 入力ピンを読み取る
+      Serial.println(val);          // 値のデバッグ表示
    }
 
+**注意点と警告**
 
-**Notes and Warnings**
+* アナログピンはA0-A5です。
+* アナログピンを呼び出す前に ``pinMode()`` を呼び出す必要はありませんが、ピンが以前 ``OUTPUT`` に設定されていた場合、 ``analogRead()`` 関数は正しく動作しません。その場合、 ``pinMode()`` を呼び出して ``INPUT`` に戻す必要があります。
 
-* The analog pins are A0-A5.
-* You don't need to call ``pinMode()`` before calling the analog pin, but if the pin was previously set to ``OUTPUT``, the function ``analogRead()`` will not work properly, in which case you need to call ``pinMode()`` to set it back to ``INTPUT``.
+**関連部品**
 
-**Related Components**
+以下は関連する部品です。クリックして使用方法を学ぶことができます。
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
     :maxdepth: 2

@@ -6,26 +6,25 @@ RGB LED
 .. image:: img/rgb_led.png
     :width: 100
     
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+RGB LEDは、さまざまな色の光を発するものです。赤、緑、青の3色のLEDを透明または半透明のプラスチックケースに収めたものです。3つのピンの入力電圧を変えて重ね合わせることで、統計によれば1677万7216色の異なる色を作り出すことができます。
 
 .. image:: img/rgb_light.png
     :width: 600
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+RGB LEDには、共通アノード型と共通カソード型の2種類があります。このキットでは後者を使用しています。 **共通カソード** 、またはCC、は3つのLEDのカソードを接続することを意味します。これをGNDに接続し、3つのピンを挿入すると、LEDは対応する色で点滅します。
 
-Its circuit symbol is shown as figure.
+その回路記号は、以下の図のように示されています。
 
 .. image:: img/rgb_symbol.png
     :width: 300
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+RGB LEDには4つのピンがあります。最も長いものがGNDで、残りの3つは赤、緑、青です。プラスチックケースに触れると、切り込みがあります。その切り込みに最も近いピンが最初のピンで、赤としてマークされ、次にGND、緑、青の順になります。
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-**Example**
+**例**
 
-* :ref:`ar_rgb` (Learning Project)
-* :ref:`ar_threshold` (Learning Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
-
+* :ref:`ar_rgb` (学習プロジェクト)
+* :ref:`ar_threshold` (学習プロジェクト)
+* :ref:`sh_colorful_ball` (Scratchプロジェクト)

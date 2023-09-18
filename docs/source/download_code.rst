@@ -1,9 +1,10 @@
-Download the Code
+コードをダウンロード
 ========================
 
-Download the relevant code from the link below.
+以下のリンクから関連するコードをダウンロードしてください。
 
-* :download:`SunFounder 3 in 1 Kit for Arduino <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`
+* :download:`Arduino用 SunFounder 3 in 1 キット <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`
 
-* Or check out the code at `SunFounder 3 in 1 Kit for Arduino - GitHub <https://github.com/sunfounder/3in1-kit>`_
+* また、 `Arduino用 SunFounder 3 in 1 キット - GitHub <https://github.com/sunfounder/3in1-kit>`_ でコードを確認してください。
+
 

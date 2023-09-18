@@ -1,39 +1,39 @@
 .. _ar_beep:
 
-1.2 Beep
+1.2 ビープ
 ==================
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+アクティブブザーはLEDを点灯させるのと同じくらい簡単に使える典型的なデジタル出力デバイスです！
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+アクティブブザーを使用する必要があります。裏返してみると、密封された背面（露出しているPCBではない）が必要なものです。
 
 .. image:: img/buzzer.png
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのは非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,30 +44,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.2_beep.png
 
-
-**Wiring**
+**配線図**
 
 .. image:: img/wiring_active_buzzer.png
     :width: 400
     :align: center
 
-**Code**
-
+**コード**
 
 .. note::
 
-   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\basic_project\1.2.beep``. 
-   * Or copy this code into **Arduino IDE**.
+   * ファイル ``1.2.beep.ino`` を ``3in1-kit\basic_project\1.2.beep`` のパスで開くことができます。
+   * または、このコードを **Arduino IDE** にコピーします。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95570ca2-11c6-404c-a23f-bf03094d8085/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+コードが正常にアップロードされると、毎秒ビープ音が聞こえます。

@@ -1,22 +1,22 @@
 .. _car_remote_plus:
 
-10. One Touch Start
+10. ワンタッチスタート
 =============================
 
-In this project, we have integrated the previous projects - line following, following, obstacle avoidance, self-driving, etc. together. They can be switched by buttons on the remote control, so you can start the car and experience all functions at once.
+このプロジェクトでは、これまでのプロジェクト（ライン追従、追跡、障害物回避、自動運転など）を統合しました。リモコンのボタンで切り替えることができるので、車をスタートしてすべての機能を一度に体験できます。
 
-**Wiring**
+**配線図**
 
 .. image:: img/car_all.jpg
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * ``3in1-kit\car_project\10.one_touch_start`` のパスの下の ``10.one_touch_start.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``IRremote`` ライブラリが使用されています。 **ライブラリマネージャー** からインストールできます。
   
         .. image:: ../img/lib_irremote.png
     
@@ -26,23 +26,21 @@ In this project, we have integrated the previous projects - line following, foll
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d873724f-120e-4679-b4ec-8d72ad583c8c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, the LED will flash rapidly 3 times for every signal received from the remote control by the IR receiver. You can press the following keys to operate the cart.
+コードが正常にアップロードされた後、IRレシーバーがリモートコントロールからの信号を受信するたびに、LEDが3回急速に点滅します。カートを操作するための以下のキーを押すことができます。
 
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Move to the left front
-* **2**: Forward
-* **3**: Move to the right.
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward.
-* **9**: Backward to the right
-* **CYCLE**: Follow the line
-* **U/SD**: Self-driving
-* **▷▷|**: Obstacle avoidance with ultrasonic module
-* **|◁◁**: Obstacle avoidance with IR Obstacle module
-* **EQ**: Follow your hand
-* **0**: Stop
-
-
+* **+**: 加速
+* **-**: 減速
+* **1**: 左前方に移動
+* **2**: 前進
+* **3**: 右に移動
+* **4**: 左を向く
+* **6**: 右を向く
+* **7**: 左に後退
+* **8**: 後退
+* **9**: 右に後退
+* **CYCLE**: ラインを追従
+* **U/SD**: 自動運転
+* **▷▷|**: 超音波モジュールを使用した障害物回避
+* **|◁◁**: IR障害物モジュールを使用した障害物回避
+* **EQ**: 手を追跡
+* **0**: 停止

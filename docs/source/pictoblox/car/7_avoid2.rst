@@ -1,38 +1,38 @@
 .. _sh_avoid2:
 
-3.7 Obstacle avoidance 2
+3.7 障害物回避 2
 ==================================
 
-In :ref:`sh_avoid1` project, only 2 IR obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+:ref:`sh_avoid1` プロジェクトでは、2つのIR障害物回避モジュールのみが障害物回避のために使用されていましたが、IR障害物回避モジュールの検出距離は短く、車が障害物を避けるのが遅すぎることがあります。
 
-In this project, we also add ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+このプロジェクトでは、遠距離検出のために超音波モジュールも追加します。これにより、車はより遠くの障害物を感知して判断を下すことができます。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確実に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,17 +45,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+超音波モジュールと2つのIR障害物回避モジュールを同時に接続します。
 
-Wire the ultrasonic to the R3 board as follows.
+超音波をR3ボードに次のように接続します。
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - 超音波モジュール
+      - R3 ボード
     * - Vcc
       - 5V
     * - Trig
@@ -65,12 +65,12 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+2つのIR障害物回避モジュールのR3ボードへの配線は次のとおりです。
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - 左 IR モジュール
+      - R3 ボード
     * - OUT
       - 8
     * - GND
@@ -80,8 +80,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - 右 IR モジュール
+      - R3 ボード
     * - OUT
       - 7
     * - GND
@@ -92,35 +92,35 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_avoid_ultrasonic.jpg
     :width: 800
 
-Programming
+プログラミング
 ---------------
 
-**1. Create function**
+**1. 関数を作成する**
 
-Make the car go forward and backward.
+車を前後に動かします。
 
 .. image:: img/7_avoid2_1.png
 
-Make the car to go backward to the left and backward to the right.
+車を左後ろおよび右後ろに動かします。
 
 .. image:: img/7_avoid2_2.png
 
-Make the car stop.
+車を停止させます。
 
 .. image:: img/7_avoid2_3.png
 
-**2. Emergency obstacle avoidance**
+**2. 緊急障害物回避**
 
-The 2 infrared obstacle avoidance modules on the car are used for emergency obstacle avoidance, detecting obstacles at short distances, corners or relatively small obstacles.
+車の2つの赤外線障害物回避モジュールは、緊急障害物回避のために使用され、短距離、角度、または比較的小さな障害物での障害物を検出します。
 
-* If the left infrared module detects an obstacle, the car backs up to the left.
-* If the right IR module detects an obstacle, the car recedes to the right rear.
-* If 2 modules detect the obstacle at the same time, the car goes backward directly.
+* 左の赤外線モジュールが障害物を検出すると、車は左に後退します。
+* 右のIRモジュールが障害物を検出すると、車は右後ろに後退します。
+* 2つのモジュールが同時に障害物を検出すると、車は直接後ろに後退します。
 
 .. image:: img/7_avoid2_4.png
 
-**2. Long range obstacle avoidance**
+**3. 長距離障害物回避**
 
-Read the value of ultrasonic module, when the detected value is less than 10, the car will go backward; otherwise it keeps going forward.
+超音波モジュールの値を読み取り、検出された値が10未満の場合、車は後退します。それ以外の場合は前進を続けます。
 
 .. image:: img/7_avoid2_5.png

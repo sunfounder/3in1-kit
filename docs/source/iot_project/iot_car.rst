@@ -1,87 +1,81 @@
 .. _iot_car:
 
-8. IoT Car
+8. IoT カー
 ====================
 
-We used the Blynk APP on the cell phone to control the car for this project. But you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
-In the era of 5G network popularity, this mode may become one of the main production methods in many industries, so let's experience this play in advance.
+このプロジェクトでは、スマホのBlynkアプリを使用して車を制御しました。しかし、車を組み立て、基本的な理解を得るためには :ref:`car_projects` を参照する必要があります。
+5Gネットワークが普及する時代に、このモードは多くの産業での主要な生産方法の一つになるかもしれません。先取りしてこの遊びを体験しましょう。
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. image:: img/wiring_iot_car.jpg
     :width: 800
 
+**2. ダッシュボードを編集**
 
-**2. Edit Dashboard**
+携帯のBlynkではデータストリームを編集できないため、これらの手順はWeb側で行う必要があります。
 
-
-Blynk on mobile cannot edit Datastream, so we still need to do these steps on the web side.
-
-#. Create a **Datastream** of type **Virtual Pin** on the **Datastream** page, to record the X-axis value of the joystick. Set NAME to ``Xvalue``, DATA TYPE to ``Integer``, and MIN and MAX to ``-10`` and ``10``.
+#. **Datastream** ページで、ジョイスティックのX軸の値を記録するための **Virtual Pin** タイプの **Datastream** を作成します。名前は ``Xvalue`` 、データタイプは ``Integer`` 、最小値と最大値は ``-10`` と ``10`` に設定します。
 
     .. image:: img/sp220613_164507.png
 
-#. Create a **Datastream** of type **Virtual Pin** to record the Y-axis value of the joystick. Set NAME to ``Yvalue``, DATA TYPE to ``Integer``, MIN and MAX to ``-10`` and ``10``.
+#. ジョイスティックのY軸値を記録するために、 **Virtual Pin** 型の **Datastream** を作成します。NAMEを ``Yvalue`` 、DATA TYPEを ``Integer`` 、MINとMAXを ``-10`` と ``10`` に設定する。
 
     .. image:: img/sp220613_164717.png
 
-Next you need to do the following on your phone.
+次に、携帯電話で以下の操作を行う必要があります。
 
-1. Search for "Blynk IoT" (not Blynk(legacy)) in GOOGLE Play or APP Store to download it.
-2. After opening the APP, sign in, this account should be the same as the account used on the web client.
-3. Then go to Dashboard (if you don't have one, create one) and you will see that the Dashboard for mobile and web are independent of each other.
+1. GOOGLE PlayまたはAPP Storeで "Blynk IoT" (Blynk(legacy)ではない) を検索してダウンロードします。
+2. アプリを開いた後、ログインします。このアカウントは、Webクライアントで使用されたものと同じである必要があります。
+3. 次に、ダッシュボードに移動します(持っていない場合は作成します)。ここで、モバイル用とWeb用のダッシュボードが互いに独立していることがわかります。
 
 .. image:: img/APP_1.jpg
 
-4. Click Edit Icon.
-5. Click on the blank area. 
-6. Select a Joystick widget.
+4. 編集アイコンをクリックします。
+5. 空白のエリアをクリックします。
+6. ジョイスティックウィジェットを選択します。
 
 .. image:: img/APP_2.jpg
 
-7. Now you will see a Joystick widget appear in the blank area, click on it.
-8. Joystick Settings will appear, select the Xvalue and Yvalue you just set in the datastreams.
-9. Go back to the Dashboard page and you can operate the Joystick when you want.
+7. 空白のエリアにジョイスティックウィジェットが表示されますので、それをクリックします。
+8. ジョイスティックの設定が表示されますので、データストリームで先ほど設定したXvalueとYvalueを選択します。
+9. ダッシュボードページに戻り、ジョイスティックを操作することができます。
 
 .. image:: img/APP_3.jpg
 
+**3. コードの実行**
 
-**3. Run the Code**
-
-
-#. Open the ``8.iot_car.ino`` file under the path of ``3in1-kit\iot_project\8.iot_car``, or copy this code into **Arduino IDE**.
+#. パス ``3in1-kit\iot_project\8.iot_car`` の下にある ``8.iot_car.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
     .. raw:: html 
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/a1db6c35-2f26-425c-8636-53d2df7936d7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. ``Template ID`` 、 ``Device Name`` 、および ``Auth Token`` を自分のものに置き換えます。また、使用しているWiFiの ``ssid`` および ``password`` を入力する必要があります。詳しいチュートリアルは、 :ref:`connect_blynk` を参照してください。
+#. 正しいボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニターを開き(ボーレートを115200に設定)、接続成功のようなプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示された場合は、以下の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * 9Vのバッテリーが接続されていることを確認します。
+        * ESP8266モジュールのRSTピンを1秒間GNDに接続してリセットし、その後、取り外します。
+        * R3ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        これらの操作を3-5回繰り返す必要があることもありますので、お待ちください。
 
-#. Now unplug the USB cable and power the cart with a 9V battery alone, then wait for the LED to light up, representing that the car is connected to Blynk.
-#. Open Blynk on your phone and you can use the Joystick widget to control the movement of the car.
+#. USBケーブルを抜いて、9Vのバッテリーだけでカートに電力を供給します。LEDが点灯すると、車がBlynkに接続されていることを示しています。
+#. 携帯電話のBlynkを開き、ジョイスティックウィジェットを使用して車の動きを制御します。
 
     .. image:: img/iot_car.jpg
 
+**どのように動作するか?**
 
-
-**How it works?**
-
-These functions are used to control the movement of the car.
+これらの関数は、車の動きを制御するために使用されます。
 
 .. code-block:: arduino
 
@@ -91,7 +85,7 @@ These functions are used to control the movement of the car.
     void turnLeft(int speed) {...}
     void stopMove() {...}
 
-The IoT section reads the values of the Joystick widget and assigns them to the variables ``Xvalue`` and ``Yvalue``.
+IoTセクションでは、ジョイスティックウィジェットの値を読み取り、 ``Xvalue`` と ``Yvalue`` の変数に代入します。
 
 .. code-block:: arduino
 
@@ -108,7 +102,7 @@ The IoT section reads the values of the Joystick widget and assigns them to the 
         Yvalue = param.asInt();
     }
 
-At ``loop()``, make the car perform different actions based on ``Xvalue`` and ``Yvalue``.
+``loop()`` の中で、 ``Xvalue`` と ``Yvalue`` に基づいて車が異なるアクションを実行するようにします。
 
 .. code-block:: arduino
 
@@ -124,7 +118,7 @@ At ``loop()``, make the car perform different actions based on ``Xvalue`` and ``
         stopMove();
     }
 
-Also, add a network status determination to ``loop()`` to light up an LED if it is connected to Blynk Cloud.
+また、 ``loop()`` にBlynk Cloudに接続されている場合にLEDを点灯するネットワークステータスの判定を追加します。
 
 .. code-block:: arduino
 

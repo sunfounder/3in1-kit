@@ -1,47 +1,46 @@
 .. _ar_rgb:
 
-2.2 Colorful Light
+2.2 カラフルな光
 ==============================================
 
-As we know, light can be superimposed. For example, mix blue light and green light give cyan light, red light and green light give yellow light.
-This is called "The additive method of color mixing".
+光は重ね合わせることができることは周知の通りです。例えば、青い光と緑の光を混ぜるとシアン色の光が得られ、赤い光と緑の光を混ぜると黄色の光が得られます。
+これは「加色混色の方法」と呼ばれます。
 
-* `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
+* `加色混色 - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different specific gravity. For example, orange can be produced by more red and less green.
+この方法に基づいて、三原色を使用して、異なる比重に従って任意の色の可視光を混合することができます。例えば、赤色を多く、緑色を少なくすることでオレンジ色が得られます。
 
-In this chapter, we will use RGB LED to explore the mystery of additive color mixing!
+この章では、RGB LEDを使用して、加色混色のミステリーを探求します！
 
-RGB LED is equivalent to encapsulating Red LED, Green LED, Blue LED under one lamp cap, and the three LEDs share one cathode pin.
-Since the electric signal is provided for each anode pin, the light of the corresponding color can be displayed. 
-By changing the electrical signal intensity of each anode, it can be made to produce various colors.
+RGB LEDは、一つのランプキャップの下に赤、緑、青のLEDを一つずつカプセル化したものと同等であり、これら三つのLEDは共通のカソードピンを共有しています。
+各アノードピンに電気信号が供給されるので、対応する色の光が表示されます。
+各アノードの電気信号の強度を変更することで、さまざまな色を出力することができます。
 
+**必要な部品**
 
-**Required Components**
+このプロジェクトには、以下のコンポーネントが必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは非常に便利です。以下はリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、個別にも購入可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,40 +53,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_2.2_rgb.png
 
+PWMピンの11、10、9は、それぞれRGB LEDの赤、緑、青のピンを制御し、共通のカソードピンをGNDに接続します。
+これにより、異なるPWM値でこれらのピンの光を重ね合わせることで、RGB LEDが特定の色を表示することができます。
 
-The PWM pins 11, 10 and 9 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. 
-This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
-
-
-
-**Wiring**
+**配線図**
 
 .. image:: img/rgb_led_sch.png
 
-An RGB LED has 4 pins: the longest pin is the common cathode pin, which is usually connected to GND, 
-the left pin next to the longest pin is Red, and the 2 pins on the right are Green and Blue.
-
+RGB LEDには4つのピンがあります：最も長いピンは共通のカソードピンで、通常はGNDに接続されます。
+最も長いピンの隣の左側のピンは赤で、右側の2つのピンは緑と青です。
 
 .. image:: img/colorful_light_bb.jpg
     :width: 500
     :align: center
 
-**Code**
+**コード**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+ここでは、お気に入りの色を描画ソフトウェア（例：ペイント）で選択し、RGB LEDで表示することができます。
 
 .. note::
 
-   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
-   * Or copy this code into **Arduino IDE**.
+   * ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light`` のパスの下の ``2.2.colorful_light.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+   * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
@@ -95,12 +88,11 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+``color_set()`` にRGB値を書き込むと、希望する色でRGBが点灯します。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-In this example, the function used to assign values to the three pins of RGB is packaged in an independent subfunction ``color()``.
+この例では、RGBの三つのピンに値を割り当てるために使用される関数は、独立したサブ関数 ``color()`` にパッケージされています。
 
 .. code-block:: arduino
 
@@ -111,16 +103,17 @@ In this example, the function used to assign values to the three pins of RGB is 
         analogWrite(bluePin, blue);
     }
 
-In ``loop()``, RGB value works as an input argument to call the function ``color()`` to realize that the RGB can emit different colors.
+``loop()`` 内で、RGB値は ``color()`` 関数を呼び出して、RGBが異なる色を発することを実現する入力引数として動作します。
 
 .. code-block:: arduino
 
     void loop() 
     {    
-        color(255, 0, 0); //  red 
+        color(255, 0, 0); //  赤 
         delay(1000); 
-        color(0,255, 0); //  green  
+        color(0,255, 0); //  緑  
         delay(1000);  
-        color(0, 0, 255); //  blue  
+        color(0, 0, 255); //  青  
         delay(1000);
     }
+

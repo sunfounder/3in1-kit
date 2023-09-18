@@ -115,7 +115,7 @@ rst_epilog = """
 
 .. |link_video_roboja_iot| raw:: html
 
-    <a href="hhttps://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
+    <a href="https://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
 
 
 

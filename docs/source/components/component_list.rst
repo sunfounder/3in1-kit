@@ -1,13 +1,12 @@
-Components List and Introduction
+コンポーネントリストと紹介
 ====================================
 
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+パッケージを開封した後、コンポーネントの数量が商品説明と一致しているか、およびすべてのコンポーネントが良好な状態であるかどうかを確認してください。
 
-* :download:`3 in 1 Kit Components List <https://github.com/sunfounder/sf-pdf/raw/master/components_list/k0407V10-a0000838-3in1-kit.pdf>`
+* :download:`3 in 1キットコンポーネントリスト <https://github.com/sunfounder/sf-pdf/raw/master/components_list/k0407V10-a0000838-3in1-kit.pdf>`
 
-
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+以下は、各コンポーネントの紹介です。これには、コンポーネントの動作原理と対応するプロジェクトが含まれています。
 
 **Control Board**
 

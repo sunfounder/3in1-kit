@@ -1,11 +1,11 @@
 .. _sh_guide:
 
-1.3 Quick Guide on PictoBlox
+1.3 PictoBloxのクイックガイド
 ====================================
 
-Now let's learn how to use PictoBlox in two modes.
+PictoBloxの2つのモードでの使い方を学びましょう。
 
-Also, there is an On-board LED connected to Pin 13 on the R3 board, we will learn to make this LED blink in 2 different modes.
+また、R3ボードのPin 13に接続されたオンボードLEDがありますので、2つの異なるモードでこのLEDを点滅させる方法を学びます。
 
 .. image:: img/1_led.jpg
     :width: 500
@@ -13,177 +13,175 @@ Also, there is an On-board LED connected to Pin 13 on the R3 board, we will lear
 
 .. _stage_mode:
 
-Stage Mode
+ステージモード
 ---------------
 
-**1. Connect to Arduino Board**
+**1. Arduinoボードを接続**
 
-Connect your Arduino board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+USBケーブルでArduinoボードをコンピュータに接続します。通常、コンピュータは自動的にボードを認識し、最終的にCOMポートを割り当てます。
 
-Open PictoBlox, the Python programming interface will open by default. And we need to switch to the Blocks interface.
+PictoBloxを開くと、Pythonのプログラミングインターフェースがデフォルトで開きます。ブロックインターフェースに切り替える必要があります。
 
 .. image:: img/0_choose_blocks.png
 
-Then you will see the top right corner for mode switching. The default is Stage mode, where Tobi is standing on the stage.
+次に、モード切替のための右上隅が表示されます。デフォルトはステージモードで、Tobiがステージに立っています。
 
 .. image:: img/1_stage_upload.png
 
-Click **Board** in the upper right navigation bar to select the board.
+上部のナビゲーションバーで **Board** をクリックしてボードを選択します。
 
 .. image:: img/1_board.png
 
-For example, choose **Arduino Uno**.
+例として、 **Arduino Uno** を選びます。
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+次に、接続するポートを選択するための接続ウィンドウが表示されます。接続が完了するとホームページに戻ります。使用中に接続が切れた場合は、 **Connect** をクリックして再接続することもできます。
 
 .. image:: img/1_connect.png
 
-At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
+同時に、 **Block Palette** にArduino Uno関連のパレット、例えばArduino UnoやActuatorsなどが表示されます。
 
 .. image:: img/1_arduino_uno.png
 
-**2. Upload Firmware**
+**2. ファームウェアのアップロード**
 
-Since we’re going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+ステージモードで作業を行うためには、ボードにファームウェアをアップロードする必要があります。これによりボードとコンピュータ間のリアルタイム通信が可能となります。ファームウェアのアップロードは一度だけのプロセスです。Upload Firmwareボタンをクリックして行います。
 
-After waiting for a while, the upload success message will appear.
+少し待つと、アップロード成功のメッセージが表示されます。
 
 .. note::
 
-    If you are using this Arduino board in PictoBlox for the first time, or if this Arduino was previously uploaded with the Arduino IDE. Then you need to tap **Upload Firmware** before you can use it.
-
+    このArduinoボードをPictoBloxで初めて使用する場合、またはこのArduinoが以前Arduino IDEでアップロードされていた場合は、使用する前に **Upload Firmware** をタップする必要があります。
 
 .. image:: img/1_firmware.png
 
+**3. プログラミング**
 
-**3. Programming**
+* スクリプトを直接開くと実行
 
-* Open and run the script directly
+もちろん、スクリプトを直接開いて実行することもできますが、まず `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ からダウンロードしてください。
 
-Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ first.
-
-You can click on **File** in the top right corner and then choose **Open**.
+右上隅の **File** をクリックし、 **Open** を選択します。
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+**Open from Computer** を選択します。
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``3in1-kit\scratch_project\code``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+``3in1-kit\scratch_project\code`` のパスに移動して、 **1. Stage Mode.sb3** を開きます。必要なコードを `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ からダウンロードしたことを確認してください。
 
 .. image:: img/0_stage.png
 
-Click directly on the script to run it, some projects are click on the green flag or click on the sprite.
+スクリプトを直接クリックして実行します。いくつかのプロジェクトは緑の旗をクリックするか、スプライトをクリックします。
 
 .. image:: img/1_more.png
 
-* Program step by step
+* ステップバイステップのプログラム
 
-You can also write the script step by step by following these steps.
+これらの手順に従って、スクリプトをステップバイステップで書くこともできます。
 
-Click on the **Arduino Uno** palette.
+**Arduino Uno** のパレットをクリックします。
 
 .. image:: img/1_arduino_uno.png
 
-The LED on the Arduino board is controlled by the digital pin 13 (only 2 states, HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+Arduinoボード上のLEDは、デジタルピン13で制御されます（2つの状態、HIGHまたはLOWのみ）。そのため、[set digital pin out as]ブロックをスクリプトエリアにドラッグします。
 
-Since the default state of the LED is lit, now set pin 13 to LOW and click on this block and you will see the LED go off.
+LEDのデフォルトの状態は点灯しているため、ピン13をLOWに設定して、このブロックをクリックするとLEDが消灯するのを確認できます。
 
-* [set digital pin out as]: Set the digital pins (2~13) to (HIGH/LOW) level.
+* [set digital pin out as]: デジタルピン(2〜13)を(HIGH/LOW)レベルに設定する。
 
 .. image:: img/1_digital.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+連続してLEDを点滅させる効果を確認するには、 **Control** パレット内の[Wait 1 seconds]ブロックと[forever]ブロックを使用する必要があります。これらのブロックを書いた後にクリックすると、黄色のハロが表示されていることを意味します。
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless manually paused.
+* [Wait 1 seconds]: **Control** パレットから、2つのブロックの間の時間間隔を設定するために使用されます。
+* [forever]: **Control** パレットから、手動で一時停止しない限りスクリプトを継続的に実行するために使用されます。
 
 .. image:: img/1_more.png
 
+
 .. _upload_mode:
 
-Upload Mode
----------------
+アップロードモード
+------------------
 
-**1. Connect to Arduino Board**
+**1. Arduinoボードに接続する**
 
-Connect your Arduino board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+ArduinoボードをUSBケーブルでコンピュータに接続します。通常、コンピュータはボードを自動的に認識し、最終的にCOMポートを割り当てます。
 
-Open PictoBlox and click **Board** in the top right navigation bar to select the board.
+PictoBloxを開き、右上のナビゲーションバーで **Board** をクリックしてボードを選択します。
 
 .. image:: img/1_board.png
 
-For example, choose **Arduino Uno**.
+例として、 **Arduino Uno** を選択します。
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+接続ウィンドウが表示され、接続するポートを選択します。接続が完了するとホームページに戻ります。使用中に接続が切れた場合は、 **Connect** をクリックして再接続できます。
 
 .. image:: img/1_connect.png
 
-At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
+同時に、 **Block Palette** にArduino Uno関連のパレット、例えばArduino Unoやアクチュエータなどが表示されます。
 
 .. image:: img/1_upload_uno.png
 
-After selecting Upload mode, the stage will switch to the original Arduino code area.
+アップロードモードを選択すると、ステージは元のArduinoコードエリアに切り替わります。
 
 .. image:: img/1_upload.png
 
-**2. Programming**
+**2. プログラミング**
 
-* Open and run the script directly
+* スクリプトを直接開く・実行する
 
-You can click on **File** in the top right corner.
+右上のコーナーの **File** をクリックします。
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+**Open from Computer** を選択します。
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``3in1-kit\scratch_project\code``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+``3in1-kit\scratch_project\code`` のパスに移動して、 **1. Upload Mode.sb3** を開きます。必要なコードは `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ からダウンロードしたことを確認してください。
 
 .. image:: img/0_upload.png
 
-Finally, click the **Upload Code** button.
+最後に、 **Upload Code** ボタンをクリックします。
 
 .. image:: img/1_upload_code.png
 
+* ステップバイステップでプログラムする
 
-* Program step by step
+これらの手順に従って、スクリプトをステップバイステップで記述することもできます。
 
-You can also write the script step by step by following these steps.
-
-Click on the **Arduino Uno** palette.
+**Arduino Uno** パレットをクリックします。
 
 .. image:: img/1_upload_uno.png
 
-Drag [when Arduino Uno starts up] to the script area, which is required for every script.
+スクリプトエリアに[when Arduino Uno starts up]をドラッグします。これはすべてのスクリプトに必要です。
 
 .. image:: img/1_uno_starts.png
 
-The LED on the Arduino board is controlled by the digital pin13 (only 2 states HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+ArduinoボードのLEDはデジタルpin13（2つの状態のみHIGHまたはLOW）によって制御されるため、[set digital pin out as]ブロックをスクリプトエリアにドラッグします。
 
-Since the default state of the LED is lit, now set pin 13 to LOW and click on this block and you will see the LED go off.
+LEDのデフォルトの状態は点灯しているので、pin 13をLOWに設定し、このブロックをクリックするとLEDが消えます。
 
-* [set digital pin out as]: Set the digital pin (2~13) to (HIGH/LOW) level.
+* [set digital pin out as]: デジタルピン（2〜13）を(HIGH/LOW)レベルに設定します。
 
 .. image:: img/1_upload_digital.png
 
-At this point you will see the Arduino code appear on the right side, if you want to edit this code, then you can turn Edit mode on.
+この時点で、右側にArduinoコードが表示されます。このコードを編集したい場合は、編集モードをオンにできます。
 
 .. image:: img/1_upload1.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+連続して点滅するLEDの効果を見るために、 **Control** パレットの[Wait 1 seconds]と[forever]ブロックを使用する必要があります。これらのブロックを書き込んだ後、クリックすると黄色いハローが表示されていることを確認してください。これは、それが実行中であることを意味します。
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless the power is off.
+* [Wait 1 seconds]: **Control** パレットから、2つのブロック間の時間間隔を設定するために使用します。
+* [forever]: **Control** パレットから、スクリプトを手動で一時停止するまで実行し続けることができます。
 
 .. image:: img/1_upload_more.png
 
-Finally, click the **Upload Code** button.
+最後に、 **Upload Code** ボタンをクリックします。
 
 .. image:: img/1_upload_code.png

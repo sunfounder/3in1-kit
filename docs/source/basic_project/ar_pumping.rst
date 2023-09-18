@@ -1,35 +1,35 @@
 .. _ar_pump:
 
-1.4 Pumping
+1.4 ポンピング
 ===================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+水ポンプもモーターの一つで、モーターや他の外部エネルギーの機械エネルギーを特別な構造を通じて液体を輸送するものです。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると非常に便利です、リンクは以下です:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,25 +40,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.3_wheel.png
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+IN1～IN4はL298Nモジュールの入力であり、OUT1～OUT4は出力です。
 
-A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+それらを使う簡単な方法は：INxに高レベルを入力すると、OUTxは高レベルを出力します。INxに低レベルを入力すると、OUTxは低レベルを出力します。
+モーターの両端をOUT1とOUT2に接続し、IN1とIN2に逆のレベルの信号を入力するとモーターが回転します。OUT3とOUT4も同じように使用できます。
 
-**Wiring**
-
+**配線図**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
-      - Motor
+      - R3 ボード
+      - モーター
     * - 12V
       - 5V
       - 
@@ -73,28 +72,27 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
       - 
     * - OUT3
       - 
-      - one wire of the motor
+      - モーターのワイヤーの一方
     * - OUT4
       - 
-      - one wire of the motor
+      - モーターのワイヤーの一方
 
 .. image:: img/pumping_bb.jpg
     :width: 800
     :align: center
 
-
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\basic_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * ファイル ``1.4.pumping.ino`` を ``3in1-kit\basic_project\1.4.pumping`` のパスから開くことができます。
+   * また、このコードを **Arduino IDE** にコピーしてください。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を使ってコードをアップロードしてください。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f829508f-2475-4de6-bc2f-ab0a68d707b1/preview?F=undefined?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+ポンプにチューブを追加して、それをベースンに置きます。コードが正常にアップロードされた後、しばらくするとベースンの水が排水されるのを確認できます。
+この実験を行う際は、短絡を避けるため回路を水から離してください！

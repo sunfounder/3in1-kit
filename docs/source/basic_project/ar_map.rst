@@ -1,42 +1,42 @@
 .. _ar_map:
 
-5.6 Map
+5.6 マッピング
 ===================
 
-If you observe carefully, you will notice that many values have different ranges in programming.
-For example, the range of values for analog inputs is (0~1023).
-The value range for the analog output is (0~255).
-The output angle of the servo is (0~180).
+よく観察してみると、多くの値がプログラミングの中で異なる範囲を持っていることに気がつくでしょう。
+例えば、アナログ入力の値範囲は(0~1023)です。
+アナログ出力の値範囲は(0~255)です。
+サーボの出力角度は(0~180)です。
 
-This means that if we want to use the potentiometer to control the brightness of the LED or the angle of the servo, we need to go through a mapping operation.
+これは、ポテンショメーターを使用してLEDの明るさやサーボの角度を制御したい場合、マッピング操作を行う必要があることを意味します。
 
-Now let's see how to achieve it.
+では、それをどのように実現するのか見てみましょう。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入する方が便利です。以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,47 +49,47 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_8.3_amp.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/map_bb.jpg
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\basic_project\5.6.map``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\basic_project\5.6.map`` のパスの下で ``5.6.map.ino`` ファイルを開きます。
+    * またはこのコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ でコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f00e4c4c-fb13-4445-9d89-eb2857b5fe87/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you can rotate the potentiometer back and forth, and the output shaft of the servo will rotate back and forth.
+コードが正常にアップロードされた後、ポテンショメータを前後に回転させると、サーボの出力軸も前後に回転します。
 
-**How it works?**
+**どのように動作するのか？**
 
-``map(value, fromLow, fromHigh, toLow, toHigh)``: Map a number from one range to another.
-That is, a fromLow value is mapped to toLow, and a fromHigh value is mapped to toHigh.
+``map(value, fromLow, fromHigh, toLow, toHigh)``: ある範囲の数字を別の範囲にマッピングします。
+すなわち、fromLowの値はtoLowに、fromHighの値はtoHighにマッピングされます。
 
-    **Syntax**
+    **構文**
         map(value, fromLow, fromHigh, toLow, toHigh)
 
-    **Parameters**
-        * ``value``: the number to map.
-        * ``fromLow``: the lower bound of the value’s current range.
-        * ``fromHigh``: the upper bound of the value’s curr+ent range.
-        * ``toLow``: the lower bound of the value’s target range.
-        * ``toHigh``: the upper bound of the value’s target range.
+    **パラメータ**
+        * ``value``: マッピングする数字。
+        * ``fromLow``: 値の現在の範囲の下限。
+        * ``fromHigh``: 値の現在の範囲の上限。
+        * ``toLow``: 値の目標範囲の下限。
+        * ``toHigh``: 値の目標範囲の上限。
 
-If the potentiometer controls the LED, you can also use the map to complete the task.
+ポテンショメーターでLEDを制御する場合、マップを使用してタスクを完了することもできます。
 
 .. code-block:: arduino
 
@@ -97,19 +97,18 @@ If the potentiometer controls the LED, you can also use the map to complete the 
     int y = map(x,0,1023,0,255);
     analogWrite(led,y);
 
+**注意と警告**
 
-**Notes and Warnings**
-
-* The "lower bound" of both ranges may be larger or smaller than the "upper bound", which means that the ``map()`` function can be used to reverse a range of numbers.
+* 両方の範囲の"下限"は"上限"より大きくまたは小さい場合があります。これは、 ``map()`` 関数が数の範囲を逆転させるために使用できることを意味します。
 
   .. code-block:: arduino
 
     y = map(x,0,180,180,0);
 
-* Mapping also works well for negative numbers.
+* マッピングは負の数にも適用されます。
 
   .. code-block:: arduino
 
     y = map(x,0,1023,-90,90);
 
-* The mapping uses integers, and the decimal places of floats are discarded.
+* マッピングは整数を使用し、浮動小数点の小数部は破棄されます。

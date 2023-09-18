@@ -1,42 +1,42 @@
 
 .. _follow_the_line:
 
-4. Follow the line
+4. ラインフォロー
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+この車にはライントラックモジュールが装備されており、黒いラインに沿って車を走らせることができます。
 
-When the line following module detects the black line, the right motor rotates while the left motor does not, so that the car moves one step to the left front.
-As the car moves, the line module will be moved out of the line, then the left motor turns and the right motor does not turn, the car will move one step to the right to return to the line.
-Repeat the above two steps, the car can move along the black line.
+ラインフォローモジュールが黒いラインを検出すると、右のモーターが回転し、左のモーターは回転しないため、車は左前方に一歩移動します。
+車が移動すると、ラインモジュールはラインから外れ、次に左のモーターが回転し、右のモーターは回転しないため、車は右に一歩移動してラインに戻ります。
+上記の2つのステップを繰り返すことで、車は黒いラインに沿って移動します。
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+プロジェクトを開始する前に、黒いラインテープでカーブマップを作成する必要があります。推奨されるラインの幅は0.8-1.5cmで、曲がり角の角度は90度未満であってはなりません。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのは確かに便利です、リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,18 +47,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-**Wiring**
+**配線図**
 
+これはデジタルライントラッキングモジュールで、黒いラインが検出されると1を出力し、白いラインが検出されると0の値を出力します。さらに、モジュール上のポテンショメータを通じて感知距離を調整することができます。
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
-
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Line Tracking Module
-      - R3 Board
+    * - ライントラッキングモジュール
+      - R3ボード
     * - S
       - 2
     * - V+
@@ -69,43 +68,41 @@ Build the circuit according to the following diagram.
 .. image:: img/car_track.jpg
     :width: 800
 
-**Adjust the Module**
+**モジュールの調整**
 
+プロジェクトを開始する前に、モジュールの感度を調整する必要があります。
 
-Before starting the project, you need to adjust the sensitivity of the module.
+上記の図に従って配線を行い、R3ボードに電源を供給します（USBケーブルを直接接続するか、9Vのバッテリーボタンケーブルを使用）。コードをアップロードしないでください。
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+テーブルに黒い電気テープを貼り、その上にカートを置きます。
 
-Stick a black electrical tape on the table and put the cart on it.
+モジュールの信号LEDを観察して、白いテーブル上で点灯し、黒いテープ上で消灯することを確認します。
 
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
-
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+もしそうでない場合、モジュール上のポテンショメータを調整して、上記の効果を得るようにします。
 
 .. image:: img/line_track_cali.JPG
 
-**Code**
+
+**コード**
 
 .. note::
 
-    * Open the ``4.follow_the_line.ino`` file under the path of ``3in1-kit\car_project\4.follow_the_line``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\car_project\4.follow_the_line`` のパスの下で ``4.follow_the_line.ino`` ファイルを開きます。
+    * あるいは、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * また、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードすることもできます。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2779e9eb-b7b0-4d47-b8c0-78fed39828c3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
 
+R3ボードにコードをアップロードした後、車の下のライントラッキングモジュールを黒いラインに合わせると、車がラインを追従するのを見ることができます。
 
-**How it works?**
+**どのように動作するのか？**
 
-In this code, it is letting the two motors micro-rotate left and right according to the value of the Line Track module so that you can see the car following the black line.
+このコードでは、ライントラックモジュールの値に応じて、2つのモーターを微調整して左右に回転させることで、車が黒いラインを追従するのを見ることができます。
 
-
-#. Add the pin definition for the Line Tracking module, here it is set to ``INPUT``. Here also initialize the serial monitor and set the baud rate to 9600bps.
+#. ライントラッキングモジュールのピン定義を追加し、 ``INPUT`` として設定します。ここではシリアルモニタも初期化し、ボーレートを9600bpsに設定します。
 
     .. code-block:: arduino
 
@@ -117,7 +114,7 @@ In this code, it is letting the two motors micro-rotate left and right according
             pinMode(lineTrack, INPUT);
         }
 
-#. Read the value of the Line Tracking module, if it is 1, then let the car go forward to the left; otherwise go forward to the right. Also you can open the serial monitor by clicking the magnifying glass icon in the upper right corner to see the change of the Line Tracking module value on the black and white line before unplugging the USB cable.
+#. ライントラッキングモジュールの値を読み取ります。もし値が1ならば、車を左に前進させます。それ以外の場合は、右に前進させます。また、右上の虫眼鏡アイコンをクリックしてシリアルモニタを開くことで、USBケーブルを抜く前に黒と白のライン上でのライントラッキングモジュールの値の変化を見ることができます。
 
     .. code-block:: arduino
     
@@ -125,7 +122,7 @@ In this code, it is letting the two motors micro-rotate left and right according
 
             int speed = 150;
 
-            int lineColor = digitalRead(lineTrack); // 0:white    1:black
+            int lineColor = digitalRead(lineTrack); // 0:白 1:黒
             Serial.println(lineColor); 
             if (lineColor) {
                 moveLeft(speed);
@@ -134,9 +131,9 @@ In this code, it is letting the two motors micro-rotate left and right according
             }
         }
 
-#. About the ``moveLeft()`` and ``moveRight()`` functions.
+#. ``moveLeft()`` および ``moveRight()`` 関数について。
 
-    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of IN2 or IN3 each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to IN2 and all others to 0, it will make the right motor turn clockwise and the left motor not move.
+    プロジェクト :ref:`car_move_code` の左右のターン機能とは異なり、ここでは小さな左右のターンだけが必要です。したがって、IN2またはIN3の値を毎回調整するだけでよいです。例えば、左前に移動する場合（ ``moveLeft()`` ）、IN2のスピードを設定して、他のすべてを0に設定するだけで、右のモーターは時計回りに回転し、左のモーターは動かないようになります。
 
     .. code-block:: arduino
     
@@ -157,11 +154,11 @@ In this code, it is letting the two motors micro-rotate left and right according
 
 * `Serial <https://www.arduino.cc/reference/en/language/functions/communication/serial/>`_
 
-    Used for communication between the Arduino board and a computer or other devices
+    Arduinoボードとコンピュータや他のデバイスとの通信に使用されます。
 
-    * ``Serial.begin()``: Sets the data rate in bits per second (baud) for serial data transmission.
-    * ``Serial.println()``: Prints data to the serial port as human-readable ASCII text followed by a car return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). 
+    * ``Serial.begin()``: シリアルデータ伝送のビットレート（ボーレート）を設定します。
+    * ``Serial.println()``: データをシリアルポートに人間が読めるASCIIテキストとして印刷し、次にキャリッジリターン文字（ASCII 13、または '\r'）および改行文字（ASCII 10、または '\n'）が続きます。
 
 * `if else <https://www.arduino.cc/reference/en/language/structure/control-structure/else/>`_
 
-    The ``if else`` allows greater control over the flow of code than the basic if statement, by allowing multiple tests to be grouped.
+    ``if else`` ステートメントは、基本的なifステートメントよりもコードの流れをより制御することができます。複数のテストをグループ化できます。

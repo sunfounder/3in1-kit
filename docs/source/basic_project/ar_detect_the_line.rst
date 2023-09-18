@@ -1,40 +1,40 @@
 .. _ar_line_track:
 
-3.4 Detect the Line
+3.4 ラインを検出する
 ===================================
 
-The line tracking module is used to detect whether there are black areas on the ground, such as black lines pasted with electrical tape.
+ライントラッキングモジュールは、地面に黒いエリア（電気テープで貼られた黒いラインなど）があるかどうかを検出するために使用されます。
 
-One of its LEDs emits appropriate infrared light to the ground, and the black surface has a relatively strong ability to absorb light and a weaker reflection ability. White surfaces are the opposite.
-If it detects reflected light, it means the ground is currently white. If not detected, it means black.
+モジュールのLEDの一つが地面に適切な赤外線を放射し、黒い表面は光を吸収する能力が比較的強く、反射能力が弱いです。白い表面はその逆です。
+反射光を検出した場合、現在の地面が白いことを意味します。検出されない場合、黒いことを意味します。
 
-That's how it works.
+それが動作原理です。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,32 +43,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_3.4_line.png
 
-The digital pin 2 is used to read the
-signal of line track module. We get the VCC of the module connected to 5V, 
-GND to GND, OUT to digital pin 2.
+デジタルピン2は、ライントラックモジュールの信号を読み取るために使用されます。モジュールのVCCを5Vに接続し、GNDをGNDに、OUTをデジタルピン2に接続します。
 
-**Wiring**
+**配線図**
 
 .. image:: img/detect_the_line_bb.jpg
     :width: 500
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\basic_project\3.4.detect_the_line``. 
-   * Or copy this code into **Arduino IDE**.
+   * ``3in1-kit\basic_project\3.4.detect_the_line`` のパスの下で ``3.4.detect_the_line.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーします。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+   * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9795add6-c838-4a66-b484-0c39f252a7b4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the line tracking module detects there is black line, there appears [1] on the Serial Monitor; otherwise, [0] is displayed.
+ライントラッキングモジュールが黒いラインを検出した場合、シリアルモニターに[1]が表示されます。それ以外の場合は、[0]が表示されます。

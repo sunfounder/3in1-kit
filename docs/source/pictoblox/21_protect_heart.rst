@@ -1,46 +1,46 @@
 .. _sh_protect_heart:
 
-2.21 GAME -  Protect Your Heart
+2.21 GAME - 心を守れ
 =====================================
 
-In this project, let's make a game that tests reaction speed.
+このプロジェクトでは、反応速度を試すゲームを作成しましょう。
 
-In the stage, there is a heart protected in a rectangular box, and there are arrows flying towards this heart from any position on the stage. The color of the arrow will alternate between black and white at random and the arrow will fly faster and faster.
+舞台には矩形の箱に守られた心があり、舞台の任意の位置からこの心に向かって矢が飛んできます。矢の色はランダムに黒と白の間で変わり、矢はますます速く飛びます。
 
-If the color of the rectangular box and the arrow color are the same, the arrow is blocked outside and level is added 1; if the color of both is not the same, the arrow will shoot through the heart and the game is over.
+矩形の箱の色と矢の色が同じ場合、矢は外部にブロックされ、レベルが1追加されます。両方の色が同じでない場合、矢は心を撃ち抜き、ゲームは終了します。
 
-Here the color of the rectangle box is controlled by the Line Tracking module. When the module is placed on a black surface (a surface that is reflective), the color of the rectangle box is black, otherwise it is white.
+ここでは、矩形のボックスの色はLine Trackingモジュールによって制御されます。モジュールが黒い表面（反射する表面）に置かれたとき、矩形のボックスの色は黒であり、それ以外の場合は白です。
 
-So you need to decide whether to put the Line Tracking module on a white surface or a black surface according to the arrow color.
+従って、矢の色に応じて、Line Trackingモジュールを白い表面または黒い表面に置くかどうかを決定する必要があります。
 
 .. image:: img/22_heart.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -50,136 +50,135 @@ You can also buy them separately from the links below.
         - |link_track_buy|
 
 
-Build the Circuit
+回路の作成
 -----------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+これはデジタルのLine Trackingモジュールであり、黒い線が検出されると1を出力し、白い線が検出されると0の値を出力します。さらに、モジュール上のポテンショメータを通じて感知距離を調整することができます。
 
-Now build the circuit according to the diagram below.
+次の図に従って回路を組み立ててください。
 
 .. image:: img/circuit/linetrack_circuit.png
 
 .. note::
 
-    Before starting the project, you need to adjust the sensitivity of the module.
+    プロジェクトを開始する前に、モジュールの感度を調整する必要があります。
 
-    Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+    上記の図に従って配線し、R3ボードに電源を供給します（USBケーブルを直接挿入するか、9Vの電池ボタンケーブルを使用）。コードをアップロードせずに。
 
-    Now stick a black electrical tape on the desktop, put the Line Track module at a height of 2cm from the desktop.
+    机の上に黒い電気テープを貼り、Line Trackモジュールを机から2cmの高さに置きます。
 
-    With the sensor facing down, observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+    センサーを下に向け、モジュールの信号LEDが白いテーブルで点灯し、黒いテープで消灯することを確認します。
 
-    If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+    そうでない場合、モジュール上のポテンショメータを調整して、上記の効果を実現できるようにします。
 
-
-Programming
+プログラミング
 ------------------
 
-Here we need to create 3 sprites, **Heart**, **Square Box** and **Arrow1**.
+ここでは、 **Heart** 、 **Square Box** 、 **Arrow1** の3つのスプライトを作成する必要があります。
 
-* **Heart**: stops in the middle of the stage, if touched by **Arrow1** sprite, the game is over.
-* **Square Box**: There are two types of costumes, black and white, and will switch costumes according to the value of Line Tracking module.
-* **Arrow**: flies towards the middle of the stage from any position in black/white; if its color matches the color of the **Square Box** sprite, it is blocked and re-flies towards the middle of the stage from a random position; if its color does not match the color of the **Square Box** sprite, it passes through the **Heart** sprite and the game is over.
+* **Heart**：舞台の真ん中で止まっていて、 **Arrow1** スプライトに触れるとゲームが終了します。
+* **Square Box**：コスチュームが2種類あり、黒と白で、Line Trackingモジュールの値に応じてコスチュームを切り替えます。
+* **Arrow**：任意の位置から舞台の中央に向かって黒/白で飛びます。その色が **Square Box** スプライトの色と一致する場合、それはブロックされ、ランダムな位置から舞台の中央に再び飛ぶ。その色が **Square Box** スプライトの色と一致しない場合、 **Heart** スプライトを通過し、ゲームが終了します。
 
-**1. Add Square Box sprite**
+**1. Square Boxスプライトを追加する**
 
-Since the Arrow1 and Square Box sprite both have white costumes, in order for them to be displayed on the stage, now fill the background with a color that can be any color except black, white, and red.
+Arrow1とSquare Boxスプライトの両方が白いコスチュームを持っているため、それらを舞台に表示するために、今、背景を黒、白、赤を除く任意の色で塗りつぶします。
 
-* Click on **Backdrop1** to go to its **Backdrops** page.
-* Select the color you want to fill.
-* Use the **Rectangle** tool to draw a rectangle the same size as the drawing board.
+* **Backdrop1** をクリックして、その **Backdrops** ページに移動します。
+* 塗りつぶす色を選択します。
+* 描画ボードと同じサイズの矩形を描画するために **Rectangle** ツールを使用します。
 
 .. image:: img/22_heart0.png
 
-Delete the default sprite, use the **Choose a Sprite** button to add the **Square Box** sprite, and set its x and y to (0, 0).
+デフォルトのスプライトを削除し、 **Choose a Sprite** ボタンを使用して **Square Box** スプライトを追加し、そのxとyを(0, 0)に設定します。
 
 .. image:: img/22_heart1.png
 
-Go to the **Square Box** sprite's **Costumes** page and set the black and white costumes.
+**Square Box** スプライトの **Costumes** ページに移動して、黒と白のコスチュームを設定します。
 
-* Click the selection tool
-* Select the rectangle on the canvas
-* Select the fill color as black
-* and name the costume **Black**
+* 選択ツールをクリックします。
+* キャンバス上の矩形を選択します。
+* 塗りつぶしの色を黒に設定します。
+* そして、コスチュームの名前を **Black** とします。
 
 .. image:: img/22_heart2.png
 
-Select the second costume, set the fill color to white, name it White, and delete the rest of the costume.
+2番目のコスチュームを選択し、塗りつぶしの色を白に設定し、その名前をWhiteに設定し、残りのコスチュームを削除します。
 
 .. image:: img/22_heart3.png
 
-**2. Add Heart sprite**
 
-Also add a **Heart** sprite, set its position to (0, 0), and shrink its size so that it appears to be located inside the Square Box.
+**2. Heartスプライトの追加**
+
+**Heart** スプライトを追加し、その位置を(0, 0)に設定し、Square Boxの中に位置しているようにサイズを縮小します。
 
 .. image:: img/22_heart5.png
 
-On the **Costumes** page, adjust the heart purple costume so that it appears to be broken.
+**Costumes** ページで、紫色のハートのコスチュームを破損しているように調整します。
 
 .. image:: img/22_heart6.png
 
-**3. Add Arrow1 sprite**
+**3. Arrow1スプライトの追加**
 
-Add an **Arrow1** sprite.
+**Arrow1** スプライトを追加します。
 
 .. image:: img/22_heart7.png
 
-On the **Costumes** page, keep and copy the rightward facing costume and set its color to black and white.
+**Costumes** ページで、右向きのコスチュームを保持・複製し、その色を黒と白に設定します。
 
 .. image:: img/22_heart8.png
 
+**4. Square Boxスプライトのスクリプト作成**
 
-**4. Scripting for Square Box sprite**
+**Blocks** ページに戻り、 **Square Box** スプライトのスクリプトを作成します。
 
-Go back to the **Blocks** page and script **Square Box** sprite.
-
-* So when the value of the digital pin 2 (Line Following module) is 1 (black line detected), then switch the costume to **Black**.
-* Otherwise toggle the costume to **White**.
+* デジタルピン2（ラインフォローモジュール）の値が1（黒い線が検出された場合）の場合、コスチュームを **Black** に切り替えます。
+* それ以外の場合は、コスチュームを **White** に切り替えます。
 
 .. image:: img/22_heart4.png
 
+**5. Heartスプライトのスクリプト作成**
 
-**5. Scripting for Heart sprite**
-
-**Heart** sprite is protected inside **Square Box**, and by default is a red costume. When the Arrow1 sprite is touched, the game ends.
+**Heart** スプライトは **Square Box** 内に保護されており、デフォルトでは赤いコスチュームです。Arrow1スプライトが触れた場合、ゲームは終了します。
 
 .. image:: img/22_heart9.png
 
-**6. Scripting for Arrow1 sprite**
+**6. Arrow1スプライトのスクリプト作成**
 
-Make the **Arrow1** sprite hide and create a clone when the green flag is clicked.
+緑のフラグがクリックされたとき、 **Arrow1** スプライトを非表示にし、クローンを作成します。
 
 .. image:: img/22_heart10.png
 
-Create an [init] block to initialize the **Arrow1** sprite's position, orientation and color.
+[init] ブロックを作成して、 **Arrow1** スプライトの位置、向き、色を初期化します。
 
-It appears at a random location, and if the distance between it and the **Heart** sprite is less than 200, it moves outward until the distance is greater than 200.
+ランダムな位置で現れ、それと **Heart** スプライトとの距離が200未満の場合、距離が200以上になるまで外向きに移動します。
 
 .. image:: img/22_heart11.png
 
-Set its direction to face the **Heart** sprite.
+**Heart** スプライトの方向に向けてその方向を設定します。
 
 .. image:: img/22_heart12.png
 
-Make its color alternate randomly between black/white.
+色を黒/白の間でランダムに切り替えます。
 
-* Variable color is 0, toggle costume to **White**.
-* Variable color is 1, toggles the outfit to **Black**.
+* 変数の色が0の場合、コスチュームを **White** に切り替えます。
+* 変数の色が1の場合、コスチュームを **Black** に切り替えます。
 
 .. image:: img/22_heart14.png
 
-Now let it start moving, it will move faster as the value of the variable **level** increases.
+これで、移動を開始します。変数 **level** の値が増加すると、移動速度が速くなります。
 
 .. image:: img/22_heart13.png
 
-Now set its collision effect with the **Square Box** sprite.
+**Square Box** スプライトとの衝突効果を設定します。
 
-* If the **Arrow1** sprite and the **Square Box** sprite have the same color (which will be modified according to the value of the Line Track module), either black or white, a new clone is created and the game continues.
-* If their colors do not match, the **Arrow1** sprite continues to move and the game ends when it hits the **Heart** sprite.
+* **Arrow1** スプライトと **Square Box** スプライトの色が同じ（Line Trackモジュールの値に応じて変更される）場合、新しいクローンが作成され、ゲームは続行されます。
+* 彼らの色が一致しない場合、 **Arrow1** スプライトは移動を続け、 **Heart** スプライトに当たるとゲームが終了します。
 
 .. image:: img/22_heart15.png
 
 .. note::
-    The two [touch color()] blocks need to pick up the black/white costumes of Square Box separately.
+    ２つの [touch color()] ブロックは、Square Boxの黒/白のコスチュームをそれぞれ別々に取得する必要があります。
 
     .. image:: img/22_heart16.png
+
