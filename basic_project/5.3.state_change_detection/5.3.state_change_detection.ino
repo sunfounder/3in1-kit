@@ -1,6 +1,6 @@
 const int  buttonPin = 2;    
-const int motorPinA = 9;
-const int motorPinB = 10;
+const int B_1A = 9;
+const int B_1B = 10;
 
 int detectionState = 0;   
 int buttonState = 0;         
@@ -10,8 +10,8 @@ int lastButtonState = 0;
 void setup() {
   pinMode(buttonPin, INPUT);
   Serial.begin(9600);
-  pinMode(motorPinA,OUTPUT);
-  pinMode(motorPinB,OUTPUT);
+  pinMode(B_1A,OUTPUT);
+  pinMode(B_1B,OUTPUT);
 }
 
 void loop() {
@@ -29,10 +29,10 @@ void loop() {
   
   // According to the detectionState, start the motor
   if(detectionState==1){
-    digitalWrite(motorPinA,HIGH);
-    digitalWrite(motorPinB,LOW);
+    digitalWrite(B_1A,HIGH);
+    digitalWrite(B_1B,LOW);
   }else{
-    digitalWrite(motorPinA,LOW);
-    digitalWrite(motorPinB,LOW);
+    digitalWrite(B_1A,LOW);
+    digitalWrite(B_1B,LOW);
   }
 }

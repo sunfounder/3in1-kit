@@ -1,13 +1,13 @@
-const int in1 = 5;
-const int in2 = 6;
-const int in3 = 9;
-const int in4 = 10;
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
 
 void setup() {
-  pinMode(in1, OUTPUT);
-  pinMode(in2, OUTPUT);
-  pinMode(in3, OUTPUT);
-  pinMode(in4, OUTPUT);
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
 }
 
 void loop() {
@@ -22,8 +22,8 @@ void loop() {
 }
 
 void moveForward(int speed) {
-  analogWrite(in1, 0);
-  analogWrite(in2, speed);
-  analogWrite(in3, speed);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
 }

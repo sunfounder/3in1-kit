@@ -34,45 +34,45 @@ ESP8266 wifi(&EspSerial);
 
 /*car init*/
 
-const int in1 = 5; // in1,2 for right wheel
-const int in2 = 6;
-const int in3 = 9; // in3,4 for left wheel
-const int in4 = 10;
+const int A_1B = 5; // in1,2 for right wheel
+const int A_1A = 6;
+const int B_1B = 9; // in3,4 for left wheel
+const int B_1A = 10;
 const int ledPin = 13;
 
 void moveForward(int speed) {
-  analogWrite(in1, 0);
-  analogWrite(in2, speed);
-  analogWrite(in3, speed);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
 }
 
 void moveBackward(int speed) {
-  analogWrite(in1, speed);
-  analogWrite(in2, 0);
-  analogWrite(in3, 0);
-  analogWrite(in4, speed);
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
 }
 
 void turnRight(int speed) {
-  analogWrite(in1, speed);
-  analogWrite(in2, 0);
-  analogWrite(in3, speed);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
 }
 
 void turnLeft(int speed) {
-  analogWrite(in1, 0);
-  analogWrite(in2, speed);
-  analogWrite(in3, 0);
-  analogWrite(in4, speed);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
 }
 
 void stopMove() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 0);
-  analogWrite(in3, 0);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
 }
 
 int Xvalue = 0;
@@ -103,10 +103,10 @@ void setup()
   //Blynk.begin(auth, wifi, ssid, pass, IPAddress(192,168,1,100), 8080);
 
   //motor
-  pinMode(in1, OUTPUT);
-  pinMode(in2, OUTPUT);
-  pinMode(in3, OUTPUT);
-  pinMode(in4, OUTPUT);
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
 
   //LED
   pinMode(ledPin, OUTPUT);

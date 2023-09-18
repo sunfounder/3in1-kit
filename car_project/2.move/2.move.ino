@@ -1,13 +1,13 @@
-const int in1 = 5;
-const int in2 = 6;
-const int in3 = 9;
-const int in4 = 10;
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
 
 void setup() {
-  pinMode(in1, OUTPUT);
-  pinMode(in2, OUTPUT);
-  pinMode(in3, OUTPUT);
-  pinMode(in4, OUTPUT);
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
 }
 
 void loop() {
@@ -33,36 +33,36 @@ void loop() {
 }
 
 void moveForward() {
-  digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);
-  digitalWrite(in3, HIGH);
-  digitalWrite(in4, LOW);
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, HIGH);
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
 }
 
 void moveBackward() {
-  digitalWrite(in1, HIGH);
-  digitalWrite(in2, LOW);
-  digitalWrite(in3, LOW);
-  digitalWrite(in4, HIGH);
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
 }
 
 void turnRight() {
-  digitalWrite(in1, HIGH);
-  digitalWrite(in2, LOW);
-  digitalWrite(in3, HIGH);
-  digitalWrite(in4, LOW);
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
 }
 
 void turnLeft() {
-  digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);
-  digitalWrite(in3, LOW);
-  digitalWrite(in4, HIGH);
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, HIGH);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
 }
 
 void stopMove() {
-  digitalWrite(in1, LOW);
-  digitalWrite(in2, LOW);
-  digitalWrite(in3, LOW);
-  digitalWrite(in4, LOW);
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, LOW);
 }

@@ -1,7 +1,7 @@
-const int in1 = 5; // in1,2 for right motor
-const int in2 = 6;
-const int in3 = 9; // in3,4 for left motor
-const int in4 = 10;
+const int A_1B = 5; // in1,2 for right motor
+const int A_1A = 6;
+const int B_1B = 9; // in3,4 for left motor
+const int B_1A = 10;
 
 const int lineTrack = 2;
 
@@ -9,10 +9,10 @@ void setup() {
   Serial.begin(9600);
 
   //motor
-  pinMode(in1, OUTPUT);
-  pinMode(in2, OUTPUT);
-  pinMode(in3, OUTPUT);
-  pinMode(in4, OUTPUT);
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
   //line track
   pinMode(lineTrack, INPUT);
 }
@@ -30,15 +30,15 @@ void loop() {
   }
 }
 void moveLeft(int speed) {
-  analogWrite(in1, 0);
-  analogWrite(in2, speed);
-  analogWrite(in3, 0);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
 }
 
 void moveRight(int speed) {
-  analogWrite(in1, 0);
-  analogWrite(in2, 0);
-  analogWrite(in3, speed);
-  analogWrite(in4, 0);
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
 }
