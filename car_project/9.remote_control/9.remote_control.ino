@@ -3,9 +3,9 @@
 const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
 String lastDecodedValue = "";   // Variable to store the last decoded value
 
-const int A_1B = 5;  // in1,2 for right wheel
+const int A_1B = 5;
 const int A_1A = 6;
-const int B_1B = 9;  // in3,4 for left wheel
+const int B_1B = 9;
 const int B_1A = 10;
 
 const int ledPin = 13;
