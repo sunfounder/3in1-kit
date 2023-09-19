@@ -101,7 +101,7 @@ R3ボードに超音波を次のように接続します。
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/584e42c8-8842-4db0-93b5-f6f949b6ffca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/1e2872d1-178c-4294-8729-3b0162f5521b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 コードが正常にアップロードされたら、車を地面に置きます。車の前に手を5〜10cm程度近づけると、車は手の方向に進むように追従します。IR障害物モジュールの両側に手を近づけると、対応する方向にも曲がります。
 
