@@ -10,9 +10,42 @@ When the line following module detects the black line, the right motor rotates w
 As the car moves, the line module will be moved out of the line, then the left motor turns and the right motor does not turn, the car will move one step to the right to return to the line.
 Repeat the above two steps, the car can move along the black line.
 
-
 Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110`
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_track`
+        - |link_track_buy|
 
 **Wiring**
 
@@ -35,12 +68,6 @@ Build the circuit according to the following diagram.
 
 .. image:: img/car_4.png
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_track`
-
 
 **Adjust the Module**
 
@@ -109,23 +136,23 @@ In this code, it is letting the two motors micro-rotate left and right according
 
 #. About the ``moveLeft()`` and ``moveRight()`` functions.
 
-    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of IN2 or IN3 each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to IN2 and all others to 0, it will make the right motor turn clockwise and the left motor not move.
+    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of ``A_1A`` or ``B_1B`` each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to ``A_1A`` and all others to 0, it will make the right motor turn clockwise and the left motor not move.
 
     .. code-block:: arduino
     
 
         void moveLeft(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, speed);
-            analogWrite(in3, 0);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, speed);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, 0);
         }
 
         void moveRight(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, 0);
-            analogWrite(in3, speed);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, speed);
+            analogWrite(B_1A, 0);
         }
 
 * `Serial <https://www.arduino.cc/reference/en/language/functions/communication/serial/>`_

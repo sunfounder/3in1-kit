@@ -3,7 +3,6 @@
 6.6 Guess Number
 ==================
 
-
 Guessing Numbers is a fun party game where you and your friends take
 turns inputting a number (0~99). The range will be smaller with the
 inputting of the number till a player answers the riddle correctly. Then
@@ -13,6 +12,44 @@ of number range changes to 50~99; if the player 2 inputs 70, the range
 of number can be 50~70; if the player 3 inputs 51, he or she is the
 unlucky one. Here, we use IR Remote Controller to input numbers and use
 LCD to output outcomes.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
+    *   - :ref:`cpn_receiver`
+        - \-
+
 
 **Schematic Diagram**
 
@@ -34,10 +71,9 @@ as follows.
 
 .. note::
 
-    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\learning_project\6.6.guess_number`` directly.
+    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\basic_project\6.6.guess_number`` directly.
     * Or copy this code into Arduino IDE 1/2.
-    
-    * Please make sure you have added the ``IRremote`` and ``LiquidCrystal_I2C`` libraries, detailed tutorials refer to :ref:`add_libraries_ar`.
+    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
 
 
 .. raw:: html

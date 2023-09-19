@@ -7,6 +7,39 @@ An I2C LCD1602 is composed of an LCD1602 and an I2C module, LCD1602 can be used 
 
 Now look at how to make this I2C CDL1602 work.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
+
 
 **Schematic**
 
@@ -22,23 +55,22 @@ Now look at how to make this I2C CDL1602 work.
 .. note::
     The SDA and SCL of the R3 board are the pins A4 and A5.
 
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_i2c_lcd1602`
-
 **Code**
 
 .. note::
 
-    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\learning_project\5.11.liquid_crystal_display``.
+    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
     * Or copy this code into **Arduino IDE**.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_liquidcrystal_i2c.png
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will see "Hello, Sunfounder!" on the I2C LCD1602.
+After the code is uploaded successfully, you will see "SunFounder", "Hello World" on the I2C LCD1602.
 
 .. note::
     If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.

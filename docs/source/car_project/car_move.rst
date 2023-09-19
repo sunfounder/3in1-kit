@@ -3,64 +3,71 @@
 1. Move
 ===============
 
-.. image:: ../components/img/l9110s.jpg
-    :width: 800
+.. image:: ../components/img/l9110_module.jpg
+    :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110s.
+Before we start programming, let's review the working principle of L9110 module.
 
-IA & IB are the inputs of the L9110S module, and OA & OB are the outputs.
-
-A simple way to use them is: 
-input high level for IA(A)(A-1A), OA(A) will output high level; 
-input low level for IA(A)(A-1A), OA(A) will output low level.
-Connecting the two ends of the motor to OA(A) and OB(A), 
-inputting opposite level signals for IA(A)(A-1A) and IB(A)(A-1B) will make the motor rotate. 
-OA(B) and OB(B) can be used in the same way.
-
-The working relationship between IA,IB & OA,OB is as follows.
-
+Here is the truth table of Motor B:
 
 .. list-table:: 
-    :widths: 25 25 50 50
+    :widths: 25 25 50
     :header-rows: 1
 
-    * - IA 
-      - IB 
-      - OA
-      - OB
-    * - H 
-      - L 
-      - H
-      - L
-    * - L 
-      - H 
-      - L
-      - H
-    * - L 
-      - L 
-      - high resistance
-      - high resistance
-    * - H 
-      - H 
-      - high resistance
-      - high resistance
+    * - B-1A
+      - B-1B
+      - The state of Motor B
+    * - 1
+      - 0
+      - Rotate clockwise
+    * - 0
+      - 1
+      - Rotate counterclockwise
+    * - 0
+      - 0
+      - Brake
+    * - 1
+      - 1
+      - Stop
+
+Here is the truth table of Motor A:
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * - A-1A
+      - A-1B
+      - The state of Motor B
+    * - 1
+      - 0
+      - Rotate clockwise
+    * - 0
+      - 1
+      - Rotate counterclockwise
+    * - 0
+      - 0
+      - Brake
+    * - 1
+      - 1
+      - Stop
 
 
-* :ref:`cpn_l9110s`
+* :ref:`cpn_l9110`
 
 **Forward**
 
-Now let's connect the input of L9110S module directly to 12V and GND respectively to make the car move.
+Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
 
 
-1. Connect R4 board, L9110S module and 2 motors.
+1. Connect R3 board, L9110 module and 2 motors.
 
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect IB(B) and IA(A) to VCC, and IA(B) and IB(A) to GND, then you will be able to see the car moving forward.
+2. Connect B-1B and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
 
 
 .. image:: img/1.move_4.png 
@@ -76,7 +83,7 @@ you need to readjust the wiring of the two motors.
 
 **Backward**
 
-Connect IB(B)  and IA(A) to GND, and IA(B)  and IB(A) to VCC, then you will be able to see the car moving backward.
+Connect B-1B  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
 
 
 .. image:: img/1.move_back.png 
@@ -87,7 +94,7 @@ Connect IB(B)  and IA(A) to GND, and IA(B)  and IB(A) to VCC, then you will be a
 **Turn Left**
 
 If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect IA(B)  and IA(A) to GND, and IB(B)  and IB(A) to VCC.
+You need to connect B-1A  and A-1A to GND, and B-1B  and A-1B to VCC.
 
 
 .. image:: img/1.move_left.png 
@@ -97,7 +104,7 @@ You need to connect IA(B)  and IA(A) to GND, and IB(B)  and IB(A) to VCC.
 **Turn Right**
 
 Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect IA(B)  and IA(A) to VCC and IB(B)  and IB(A) to GND.
+You need to connect B-1A  and A-1A to VCC and B-1B  and A-1B to GND.
 
 
 .. image:: img/1.move_right.png 
@@ -107,6 +114,6 @@ You need to connect IA(B)  and IA(A) to VCC and IB(B)  and IB(A) to GND.
 
 **Stop**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect IA(B)  and IB(B)  to 12V or 5V at the same time, and the same for IA(A) and IB(A).
+To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B  to 12V or 5V at the same time, and the same for A-1A and A-1B.
 
 This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.

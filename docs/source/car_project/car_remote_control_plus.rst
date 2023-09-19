@@ -16,6 +16,9 @@ In this project, we have integrated the previous projects - line following, foll
 
     * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
     * Or copy this code into **Arduino IDE**.
+    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+  
+        .. image:: ../img/lib_irremote.png
     
 
 .. raw:: html

@@ -10,8 +10,38 @@ If it detects reflected light, it means the ground is currently white. If not de
 
 That's how it works.
 
+**Required Components**
 
+In this project, we need the following components. 
 
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_track`
+        - |link_track_buy|
 
 **Schematic**
 
@@ -23,22 +53,15 @@ GND to GND, OUT to digital pin 2.
 
 **Wiring**
 
-
-
 .. image:: img/detect_the_line_bb.jpg
     :width: 500
     :align: center
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_track`
-* :ref:`cpn_wires`
 
 **Code**
 
 .. note::
 
-   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\learning_project\3.4.detect_the_line``. 
+   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\basic_project\3.4.detect_the_line``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

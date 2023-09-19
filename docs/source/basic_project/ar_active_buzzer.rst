@@ -9,6 +9,40 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
 
 .. image:: img/buzzer.png
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_buzzer`
+        - \-
 
 
 **Schematic**
@@ -22,17 +56,12 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
     :width: 400
     :align: center
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_buzzer`
-
 **Code**
 
 
 .. note::
 
-   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\learning_project\1.2.beep``. 
+   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\basic_project\1.2.beep``. 
    * Or copy this code into **Arduino IDE**.
    
    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

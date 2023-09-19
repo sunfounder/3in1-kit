@@ -7,6 +7,52 @@ The purpose of this project is to create a smart watering system that detects th
 
 As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start working and the plants will be hydrated.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_esp8266`
+        - |link_esp8266_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_photoresistor`
+        - |link_photoresistor_buy|
+    *   - :ref:`cpn_dht11`
+        - \-
+    *   - :ref:`cpn_soil_moisture`
+        - |link_soil_moisture_buy|
+    *   - :ref:`cpn_l9110`
+        - \-
+    *   - :ref:`cpn_pump`
+        - \-
 
 **1. Build the Cirduit**
 
@@ -16,14 +62,6 @@ As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start wor
 
 .. image:: img/wiring_soil_pump.jpg
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_esp8266`
-* :ref:`cpn_photoresistor`
-* :ref:`cpn_dht11`
-* :ref:`cpn_resistor`
-* :ref:`cpn_soil_moisture`
 
 **2. Edit Dashboard**
 
@@ -41,6 +79,12 @@ As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start wor
 **3. Run the Code**
 
 Open the ``6.plant_monitoring.ino`` file under the path of ``3in1-kit\iot_project\6.plant_monitoring``, or copy this code into **Arduino IDE**.
+
+    .. note::
+
+        * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+
+            .. image:: ../img/lib_dht11.png
 
     .. raw:: html
         
@@ -100,21 +144,19 @@ These three functions are used to get the current environment temperature, humid
     }
 
     bool readDHT() {
-        int chk = DHT.read11(DHT11_PIN);
-        switch (chk)
-        {
-            case DHTLIB_OK:
-                roomHumidity = DHT.humidity;
-                roomTemperature = DHT.temperature;
-                return true;
-            case DHTLIB_ERROR_CHECKSUM:
-                break;
-            case DHTLIB_ERROR_TIMEOUT:
-                break;
-            default:
-                break;
+
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+        humidity = dht.readHumidity();
+        // Read temperature as Celsius (the default)
+        temperature = dht.readTemperature();
+
+        // Check if any reads failed and exit early (to try again).
+        if (isnan(humidity) || isnan(temperature)) {
+            Serial.println("Failed to read from DHT sensor!");
+            return false;
         }
-        return false;
+        return true;
     }
 
 With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and soil moisture are obtained every second and sent to the data stream on the **Blynk Cloud**, from which the widgets display the data.
@@ -127,9 +169,9 @@ With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and
         bool chk = readDHT();
         int light = readLight();
         int moisture = readMoisture();
-        if(chk==true){
-            Blynk.virtualWrite(V4,roomHumidity);
-            Blynk.virtualWrite(V5,roomTemperature);
+        if(chk){
+            Blynk.virtualWrite(V4,humidity);
+            Blynk.virtualWrite(V5,temperature);
         }
         Blynk.virtualWrite(V6,light);
         Blynk.virtualWrite(V7,moisture);

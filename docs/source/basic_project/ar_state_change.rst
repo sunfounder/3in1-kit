@@ -11,7 +11,46 @@ That is "state change detection".
 
 In this project, we will use the button to control the motor.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_l9110`
+        - \-
 
 **Schematic**
 
@@ -19,24 +58,15 @@ In this project, we will use the button to control the motor.
 
 **Wiring**
 
-.. image:: img/state_change_bb.jpg
+.. image:: img/5.3_state_change_l9110_bb.png
     :width: 800
     :align: center
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_button`
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_l9110s`
-
 
 **Code**
 
 .. note::
 
-    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\5.3.state_change_detection``.
+    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\basic_project\5.3.state_change_detection``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
@@ -69,8 +99,8 @@ After the code is uploaded successfully, you press the button and the motor will
         void setup() {
             pinMode(buttonPin, INPUT);
             Serial.begin(9600);
-            pinMode(motorPinA,OUTPUT);
-            pinMode(motorPinB,OUTPUT);
+            pinMode(B_1A, OUTPUT);
+            pinMode(B_1B, OUTPUT);
         }
 
 
@@ -93,11 +123,11 @@ After the code is uploaded successfully, you press the button and the motor will
         
         // According to the detectionState, start the motor
         if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(B_1A,HIGH);
+            digitalWrite(B_1B,LOW);
         }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(B_1A,LOW);
+            digitalWrite(B_1B,LOW);
         }
         }
 
@@ -134,10 +164,10 @@ After the code is uploaded successfully, you press the button and the motor will
     .. code-block:: arduino
 
         if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(B_1A,HIGH);
+            digitalWrite(B_1B,LOW);
         }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(B_1A,LOW);
+            digitalWrite(B_1B,LOW);
         }
 

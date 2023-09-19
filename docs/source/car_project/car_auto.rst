@@ -7,6 +7,42 @@ This project is a combination of the two projects :ref:`car_ultrasonic` and :ref
 2 infrared obstacle avoidance modules do short distance or edge detection, 
 and ultrasonic modules do long distance detection to confirm that the car does not hit an obstacle during the free driving process.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110`
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+    *   - :ref:`cpn_avoid`
+        - |link_obstacle_avoidance_buy|
 
 **Wiring**
 
@@ -54,15 +90,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
     * - VCC
       - 5V
 
-.. image:: img/car_avoid_ultrasonic.jpg
+.. image:: img/car_7_8.png
     :width: 800
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_ultrasonic`
-* :ref:`cpn_avoid` 
 
 **Code**
 

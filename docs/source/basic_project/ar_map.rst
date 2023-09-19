@@ -12,7 +12,42 @@ This means that if we want to use the potentiometer to control the brightness of
 
 Now let's see how to achieve it.
 
+**Required Components**
 
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_servo`
+        - |link_servo_buy|
+    *   - :ref:`cpn_potentiometer`
+        - |link_potentiometer_buy|
 
 **Schematic**
 
@@ -24,17 +59,11 @@ Now let's see how to achieve it.
     :width: 800
     :align: center
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_servo`
-* :ref:`cpn_potentiometer`
-
 **Code**
 
 .. note::
 
-    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\learning_project\5.6.map``.
+    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\basic_project\5.6.map``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

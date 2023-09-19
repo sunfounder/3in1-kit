@@ -10,6 +10,40 @@ You need to control the distance between your hand and the ultrasonic module so 
 
 .. image:: img/15_parrot.png
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+
 Build the Circuit
 -----------------------
 
@@ -19,10 +53,6 @@ It has two probes. One is to send ultrasonic waves and the other is to receive t
 Now build the circuit according to the following diagram.
 
 .. image:: img/circuit/ultrasonic_circuit.png
-
-
-* :ref:`cpn_uno`
-* :ref:`cpn_ultrasonic`
 
 Programming
 ------------------

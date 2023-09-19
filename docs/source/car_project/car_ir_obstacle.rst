@@ -7,6 +7,41 @@ Two infrared obstacle avoidance modules are mounted on the front of the car, whi
 
 In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110`
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_avoid` 
+        - |link_obstacle_avoidance_buy|
+
 **Wiring**
 
 The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
@@ -39,11 +74,6 @@ Now build the circuit according to the diagram below.
 
 .. image:: img/car_5.png
     :width: 800
-
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_avoid` 
 
 **Adjust the Module**
 
@@ -129,10 +159,10 @@ This project is based on the value of the left and right infrared obstacle avoid
     .. code-block:: arduino
 
         void backLeft(int speed) {
-            analogWrite(in1, speed);
-            analogWrite(in2, 0);
-            analogWrite(in3, 0);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, speed);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, 0);
         }
 
 #. About the ``backLeft()`` function.
@@ -142,10 +172,10 @@ This project is based on the value of the left and right infrared obstacle avoid
     .. code-block:: arduino
 
         void backRight(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, 0);
-            analogWrite(in3, 0);
-            analogWrite(in4, speed);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, speed);
         }
 
 * `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logical AND results in true only if both operands are true.

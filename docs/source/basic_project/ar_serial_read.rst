@@ -9,6 +9,38 @@ Yes, you guessed it, there are ways to control programs and circuits by entering
 
 In this project, we will use the I2C LCD1602 to display the text entered in the Serial Monitor in order to experience the usage of ``Serial.read()``.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_i2c_lcd1602`
+        - |link_i2clcd1602_buy|
 
 
 **Schematic**
@@ -21,18 +53,15 @@ In this project, we will use the I2C LCD1602 to display the text entered in the 
     :width: 800
     :align: center
 
-
-* :ref:`cpn_uno`
-* :ref:`cpn_wires`
-* :ref:`cpn_i2c_lcd1602`
-
 **Code**
 
 .. note::
 
-    * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\learning_project\5.12.serial_read``.
+    * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\basic_project\5.12.serial_read``.
     * Or copy this code into **Arduino IDE**.
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_liquidcrystal_i2c.png
 
 .. raw:: html
     

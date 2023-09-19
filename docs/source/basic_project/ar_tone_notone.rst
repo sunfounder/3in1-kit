@@ -3,13 +3,47 @@
 5.7 ``Tone()`` or ``noTone()``
 ===============================
 
-
 ``Tone()`` is used to generate a square wave of the specified frequency (and 50% duty cycle) on a pin. A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
 
 In this project, use this two functions to make the passive buzzer vibrate to make sound. 
 Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. 
 The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used. 
 But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as “doh, re, mi, fa, sol, la, ti”.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_buzzer`
+        - |link_passive_buzzer_buy|
 
 
 **Schematic**
@@ -23,17 +57,11 @@ Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9.
 
 .. image:: img/custom_tone_bb.jpg
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_buzzer`
-
-
 **Code**
 
 .. note::
 
-    * Open the ``5.7.tone_notone.ino`` file under the path of ``3in1-kit\learning_project\5.7.tone_notone``.
+    * Open the ``5.7.tone_notone.ino`` file under the path of ``3in1-kit\basic_project\5.7.tone_notone``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

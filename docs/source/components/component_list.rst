@@ -4,7 +4,9 @@ Components List and Introduction
 
 After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
 
-* :download:`3 in 1 Kit Components List <https://github.com/sunfounder/sf-pdf/raw/master/components_list/k0407V10-a0000838-3in1-kit.pdf>`
+.. image:: img/components_list.jpg
+    :width: 800
+    :align: center
 
 
 Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
@@ -65,7 +67,7 @@ Below is the introduction to each component, which contains the operating princi
     component_tt_motor
     component_servo
     component_pump
-    component_l9110s
+    component_l9110_module
 
 
 **Controller**

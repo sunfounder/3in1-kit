@@ -16,6 +16,43 @@ You Will Learn
 - Copy sprites and select different costumes
 - Three primary colors superimposed
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_rgb`
+        - |link_rgb_led_buy|
 
 Build the Circuit
 ---------------------
@@ -26,12 +63,6 @@ An RGB LED packages three LEDs of red, green, and blue into a transparent or sem
     :width: 300
 
 .. image:: img/circuit/rgb_circuit.png
-
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_rgb`
-* :ref:`cpn_resistor`
-
 
 Programming
 ------------------

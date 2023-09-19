@@ -3,8 +3,44 @@
 9. Remote Control
 =================================
 
-
 This kit comes with an IR receiver, which allows you to use an IR remote control to control the movement of the car.
+
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110`
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_receiver`
+        - \-
 
 **Wiring**
 
@@ -35,19 +71,15 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_9.png
     :width: 800
 
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
-* :ref:`cpn_led`
-* :ref:`cpn_receiver`
-
 **Code**
 
 .. note::
 
     * Open the ``9.remote_control.ino`` file under the path of ``3in1-kit\car_project\9.remote_control``.
     * Or copy this code into **Arduino IDE**.
-    
+    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+  
+        .. image:: ../img/lib_irremote.png
 
 .. raw:: html
     
@@ -72,18 +104,15 @@ After the code is uploaded successfully, press the button on the remote control,
 
 The effect of this project is to make the car move by reading the key value of the IR remote control. In addition, an LED is added to indicate that the IR signal has been successfully received.
 
-#. Import the library ``IRremote``, here you will need to refer to :ref:`add_libraries_ar` to add this library.
+#. Import the ``IRremote`` library, you can install it from the **Library Manager**.
 
 
     .. code-block:: arduino
 
         #include <IRremote.h>
-        const int recvPin = 12;
-        IRrecv irrecv(recvPin);
-        decode_results results;
-    
-    * ``IRrecv irrecv(recvPin)``: Create an instance of the ``IRrecv`` class, specifying the pins it's attached to.
-    * ``decode_results results``: Create an instance of the ``decode_results`` class, which is the result returned by the decoder.
+
+        const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+        String lastDecodedValue = "";   // Variable to store the last decoded value
 
 #. Initialize the IR receiver and the LED.
 
@@ -96,9 +125,10 @@ The effect of this project is to make the car move by reading the key value of t
         void setup() {
 
             ...
-            //UR remote
-            irrecv.enableIRIn(); // Start the receiver
+            //IR remote
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
             Serial.println("REMOTE CONTROL START");
+
 
             //LED
             pinMode(ledPin, OUTPUT);
@@ -112,13 +142,14 @@ The effect of this project is to make the car move by reading the key value of t
 
         void loop() {
 
-            if (irrecv.decode(&results)) {
+            if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
-                String key = decodeKeyValue(results.value);
-                if ( key != "ERROR")
-                {
+                String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+                if (key != "ERROR" && key != lastDecodedValue) {
                     Serial.println(key);
+                    lastDecodedValue = key;  // Update the last decoded value
                     blinkLED();
+
                     if (key == "+") {
                         speed += 50;
                     } else if (key == "-") {
@@ -126,15 +157,19 @@ The effect of this project is to make the car move by reading the key value of t
                     } else if (key == "2") {
                         moveForward(speed);
                         delay(1000);
-                ...
-                }
-                irrecv.resume(); // Receive the next value
+                    ...
+                    }
+                    IrReceiver.resume();  // Enable receiving of the next value
+
             }
         }
 
-    * ``irrecv.decode(&results)``: Decodes the received IR message. Returns 0 if no data ready, 1 if data ready. Results of decoding are stored in ``results``.
-    * ``decodeKeyValue(results.value)``: ``results.value`` is the decoded value, usually in 8-bit hexadecimal, and ``decodeKeyValue()`` is to convert these values to the key names on the remote control.
-    * ``irrecv.resume()``: Restart for receiving an other value.
+    * Checks if an IR signal is received and successfully decoded.
+    * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
+    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Prints the decoded IR value to the serial monitor.
+    * Updates the ``lastDecodedValue`` with the new decoded value.
+    * Resumes IR signal reception for the next signal.
 
 #. About the ``blinkLED()`` function.
     

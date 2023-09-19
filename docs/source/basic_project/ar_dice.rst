@@ -1,11 +1,51 @@
 .. _ar_eeprom:
 
-6.2 Electronic Dice
+6.2 Digital Dice
 =============================
 
 Here we use button, 7-segment and 74hc595 to make an electronic dice. 
 Each time the button is pressed, a random number ranging from 1 to 6 is generated and displayed on the 7-segment Display.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_74hc595`
+        - |link_74hc595_buy|
+    *   - :ref:`cpn_7_segment`
+        - |link_7segment_buy|
 
 **Schematic**
 
@@ -17,19 +57,11 @@ Each time the button is pressed, a random number ranging from 1 to 6 is generate
     :width: 800
     :align: center
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_resistor`
-* :ref:`cpn_button`
-* :ref:`cpn_74hc595`
-* :ref:`cpn_7_segment`
-
 **Code**
 
 .. note::
 
-    * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\learning_project\6.2.electronic_dice``.
+    * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\basic_project\6.2.electronic_dice``.
     * Or copy this code into **Arduino IDE**.
     
     * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.

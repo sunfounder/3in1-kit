@@ -13,8 +13,42 @@ Here the color of the rectangle box is controlled by the Line Tracking module. W
 
 So you need to decide whether to put the Line Tracking module on a white surface or a black surface according to the arrow color.
 
-
 .. image:: img/22_heart.png
+
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_track` 
+        - |link_track_buy|
+
 
 Build the Circuit
 -----------------------
@@ -24,9 +58,6 @@ This is a digital Line Tracking module, when a black line is detected, it output
 Now build the circuit according to the diagram below.
 
 .. image:: img/circuit/linetrack_circuit.png
-
-* :ref:`cpn_uno`
-* :ref:`cpn_track` 
 
 .. note::
 

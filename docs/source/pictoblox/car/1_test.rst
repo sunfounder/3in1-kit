@@ -7,54 +7,83 @@ Hear, you will learn how to write scripts to make the car go forward, but you ne
 
 But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
 
+Required Components
+---------------------
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - 3 in 1 Starter Kit
+        - 380+
+        - |link_3IN1_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`cpn_uno`
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110` 
+        - \-
+    *   - :ref:`cpn_tt_motor`
+        - \-
+
 Build the Circuit
 -----------------------
 
-.. The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
-
-.. Connect the wires between the L298N module and the R3 board according to the diagram below.
+The L9110 motor driver module is a high power motor driver module for driving DC and stepper motors. The L9110 module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
 
 
-.. .. list-table:: 
-..     :widths: 25 25 50
-..     :header-rows: 1
-
-..     * - L298N
-..       - R3 Board
-..       - Motor
-..     * - IN1
-..       - 5
-..       - 
-..     * - IN2
-..       - 6
-..       - 
-..     * - IN3
-..       - 9
-..       - 
-..     * - IN4
-..       - 10
-..       - 
-..     * - OUT1
-..       - 
-..       - Black wire of right motor
-..     * - OUT2
-..       - 
-..       - Red wire of right motor
-..     * - OUT3
-..       - 
-..       - Black wire of left motor
-..     * - OUT4
-..       - 
-..       - Red wire of left motor
-
-.. .. image:: img/car_motor1.jpg
-..     :width: 800
+Connect the wires between the L9110 module and the R3 board according to the diagram below.
 
 
-* :ref:`cpn_uno`
-* :ref:`cpn_l9110s` 
-* :ref:`cpn_tt_motor`
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
 
+    * - L9110 Module
+      - R3 Board
+      - Motor
+    * - A-1B
+      - 5
+      - 
+    * - A-1A
+      - 6
+      - 
+    * - B-1B
+      - 9
+      - 
+    * - B-1A
+      - 10
+      - 
+    * - OB(B)
+      - 
+      - Black wire of right motor
+    * - OA(B)
+      - 
+      - Red wire of right motor
+    * - OB(A)
+      - 
+      - Black wire of left motor
+    * - OA(A)
+      - 
+      - Red wire of left motor
+
+.. image:: img/car_2.png
+    :width: 800
 
 Programming
 -------------------
@@ -71,9 +100,10 @@ Click the **Upload Code** button to upload the code to the R3 board. When it's d
 
 If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OUT1 and OUT2 swap, OUT3 and OUT4 swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OUT3 and OUT4 of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OUT1 and OUT1 of the right motor.
+* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
+* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
+* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+
 
 **2. Creating block**
 
