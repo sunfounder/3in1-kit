@@ -21,6 +21,6 @@
 
 **例**
 
-* :ref:`ar_servo` (学習プロジェクト)
+* :ref:`ar_servo` (基本プロジェクト)
 * :ref:`iot_gate` (IoTプロジェクト)
 * :ref:`sh_pendulum` (Scratchプロジェクト)

@@ -42,3 +42,5 @@
 **例**
 
 * :ref:`sh_low_temperature` (Scratchプロジェクト)
+* :ref:`ar_high_tem_alarm` (基本プロジェクト)
+* :ref:`ar_temp` (基本プロジェクト)

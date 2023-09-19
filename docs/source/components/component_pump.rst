@@ -29,5 +29,5 @@
 
 **例**
 
-* :ref:`ar_pump` (学習プロジェクト)
+* :ref:`ar_pump` (基本プロジェクト)
 * :ref:`iot_plant` (IoTプロジェクト)

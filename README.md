@@ -18,6 +18,11 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-09-19:
+- Replace some project code links
+- Full text (Learning Project), replaced by (Basic Project)
+- Add two more course links to the example in component_thermistor.rst
+
 2023-09-18:
 - Translate Japanese
 

@@ -23,7 +23,7 @@ IR障害物回避モジュールは、環境光への適応性が強く、赤外
 
 **例**
 
-* :ref:`ar_ir_obstacle` (学習プロジェクト)
+* :ref:`ar_ir_obstacle` (基本プロジェクト)
 * :ref:`car_ir_obstacle` (カープロジェクト)
 * :ref:`self_driving` (カープロジェクト)
 * :ref:`iot_gate` (IoTプロジェクト)

@@ -25,6 +25,6 @@ DHT11 湿度温度センサ
 
 **例**
 
-* :ref:`ar_dht11` (学習プロジェクト)
+* :ref:`ar_dht11` (基本プロジェクト)
 * :ref:`iot_home` (IoTプロジェクト)
 * :ref:`iot_plant` (IoTプロジェクト)

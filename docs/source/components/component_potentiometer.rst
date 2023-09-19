@@ -39,6 +39,6 @@
 
 **例**
 
-* :ref:`ar_potentiometer` (学習プロジェクト)
+* :ref:`ar_potentiometer` (基本プロジェクト)
 * :ref:`sh_moving_mouse` (Scratchプロジェクト)
 * :ref:`sh_breakout_clone` (Scratchプロジェクト)

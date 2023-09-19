@@ -32,5 +32,5 @@
 
 **例**
 
-* :ref:`ar_moisture` (学習プロジェクト)
+* :ref:`ar_moisture` (基本プロジェクト)
 * :ref:`iot_plant` (IoTプロジェクト)

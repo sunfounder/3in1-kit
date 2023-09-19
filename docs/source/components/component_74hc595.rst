@@ -27,6 +27,6 @@ MR (pin10) がハイレベル、OE (pin13) がローレベルの時、SHcpの立
 
 **例**
 
-* :ref:`ar_shiftout` (学習プロジェクト)
-* :ref:`ar_segment` (学習プロジェクト)
+* :ref:`ar_shiftout` (基本プロジェクト)
+* :ref:`ar_segment` (基本プロジェクト)
 * :ref:`iot_gate` (IoTプロジェクト)

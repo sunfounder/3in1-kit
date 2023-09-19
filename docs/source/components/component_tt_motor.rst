@@ -32,7 +32,7 @@ TTモーター
 
 **例**
 
-* :ref:`ar_motor` (学習プロジェクト)
+* :ref:`ar_motor` (基本プロジェクト)
 * :ref:`car_move` (車のプロジェクト)
 * :ref:`car_speed` (車のプロジェクト)
 * :ref:`iot_car` (IoTプロジェクト)

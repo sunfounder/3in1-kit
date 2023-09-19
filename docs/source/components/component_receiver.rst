@@ -40,6 +40,6 @@ IRレシーバー
 
 **例**
 
-* :ref:`ar_receiver` (学習プロジェクト)
+* :ref:`ar_receiver` (基本プロジェクト)
 * :ref:`car_remote` (車プロジェクト)
 * :ref:`car_remote_plus` (車プロジェクト)

@@ -26,5 +26,5 @@
 
 **例**
 
-* :ref:`ar_74hc_7seg` (学習プロジェクト)
+* :ref:`ar_74hc_7seg` (基本プロジェクト)
 * :ref:`iot_gate` (IoTプロジェクト)

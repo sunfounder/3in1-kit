@@ -21,6 +21,6 @@
 
 **例**
 
-* :ref:`ar_joystick` (学習プロジェクト)
+* :ref:`ar_joystick` (基本プロジェクト)
 * :ref:`sh_star_crossed` (Scratchプロジェクト)
 * :ref:`sh_dragon` (Scratchプロジェクト)

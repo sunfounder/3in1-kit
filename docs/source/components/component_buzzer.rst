@@ -25,6 +25,6 @@
 
 **例**
 
-* :ref:`ar_beep` (学習プロジェクト)
-* :ref:`ar_passive_buzzer` (学習プロジェクト)
+* :ref:`ar_beep` (基本プロジェクト)
+* :ref:`ar_passive_buzzer` (基本プロジェクト)
 * :ref:`iot_music` (IoTプロジェクト)

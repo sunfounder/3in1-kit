@@ -32,7 +32,7 @@
 
 **例**
 
-* :ref:`ar_ultrasonic` (学習プロジェクト)
+* :ref:`ar_ultrasonic` (基本プロジェクト)
 * :ref:`follow_your_hand` (カープロジェクト)
 * :ref:`car_ultrasonic` (カープロジェクト)
 * :ref:`sh_parrot` (Scratchプロジェクト)

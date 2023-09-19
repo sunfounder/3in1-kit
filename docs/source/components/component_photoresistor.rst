@@ -21,6 +21,6 @@
 
 **例**
 
-* :ref:`ar_photoresistor` (学習プロジェクト)
+* :ref:`ar_photoresistor` (基本プロジェクト)
 * :ref:`iot_home` (IoTプロジェクト)
 * :ref:`iot_plant` (IoTプロジェクト)

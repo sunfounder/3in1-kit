@@ -25,6 +25,6 @@ RGB LEDには4つのピンがあります。最も長いものがGNDで、残り
 
 **例**
 
-* :ref:`ar_rgb` (学習プロジェクト)
-* :ref:`ar_threshold` (学習プロジェクト)
+* :ref:`ar_rgb` (基本プロジェクト)
+* :ref:`ar_threshold` (基本プロジェクト)
 * :ref:`sh_colorful_ball` (Scratchプロジェクト)

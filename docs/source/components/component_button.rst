@@ -24,7 +24,7 @@
 
 **例**
 
-* :ref:`ar_button` (学習プロジェクト)
+* :ref:`ar_button` (基本プロジェクト)
 * :ref:`sh_doorbell` (Scratchプロジェクト)
 * :ref:`sh_eat_apple` (Scratchプロジェクト)
 * :ref:`sh_fishing` (Scratchプロジェクト)

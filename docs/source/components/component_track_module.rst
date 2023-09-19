@@ -43,6 +43,6 @@
 
 **例**
 
-* :ref:`ar_line_track` (学習プロジェクト)
+* :ref:`ar_line_track` (基本プロジェクト)
 * :ref:`follow_the_line` (車のプロジェクト)
 * :ref:`sh_protect_heart` (スクラッチプロジェクト)

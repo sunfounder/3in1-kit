@@ -17,5 +17,5 @@
 
 **例**
 
-* :ref:`ar_reed` (学習プロジェクト)
+* :ref:`ar_reed` (基本プロジェクト)
 * :ref:`iot_gate` (IoTプロジェクト)
