@@ -24,6 +24,7 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 - ar_serial_monitor file, println() link replacement
 - iot_current_limiting_gate file, remove the link to the component introduction under the circuit diagram
 - 7_avoid2 file, change the serial number at the bottom.
+- Wikipedia link in the introduction to replacement potentiometers
 
 2023-09-11:
 - Add the links of components
