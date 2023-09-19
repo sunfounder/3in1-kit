@@ -33,7 +33,7 @@ So in this project we will learn how to receive data from the Arduino board.
         }
 
    * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Sets the data rate in bits per second (baud) for serial data transmission, here set to 9600.
-   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_: Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_.
+   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_.
 
 2. Select the correct board and port to upload the code.
 3. In the toolbar, click the magnifying glass icon to turn on Serial Monitor.

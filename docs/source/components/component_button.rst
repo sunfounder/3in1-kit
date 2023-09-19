@@ -3,7 +3,7 @@
 Button
 ==========
 
-.. image:: img/button.png
+.. image:: img/button2.png
     :width: 400
     :align: center
 

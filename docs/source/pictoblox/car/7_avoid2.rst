@@ -119,7 +119,7 @@ The 2 infrared obstacle avoidance modules on the car are used for emergency obst
 
 .. image:: img/7_avoid2_4.png
 
-**2. Long range obstacle avoidance**
+**3. Long range obstacle avoidance**
 
 Read the value of ultrasonic module, when the detected value is less than 10, the car will go backward; otherwise it keeps going forward.
 

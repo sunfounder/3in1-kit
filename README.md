@@ -19,6 +19,11 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 <a id="update"></a>
 ## Update:
 
+2023-09-19:
+- Modified the used libraries and some code.
+- Updated the project description and images related to the L9110 module.
+- Fixed some known issues.
+
 2023-09-11:
 - Add the links of components
 - Add a language translation file

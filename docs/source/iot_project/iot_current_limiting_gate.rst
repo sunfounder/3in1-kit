@@ -64,12 +64,6 @@ You can also buy them separately from the links below.
 .. image:: img/wiring_servo_segment.jpg
     :width: 800
 
-* :ref:`cpn_uno`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_esp8266`
-* :ref:`cpn_servo`
-* :ref:`cpn_avoid`
-* :ref:`cpn_7_segment`
 
 **2. Edit Dashboard**
 
