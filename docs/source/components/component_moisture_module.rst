@@ -34,7 +34,7 @@ The higher the soil moisture, the higher the capacitance of the sensor. As a res
 
 **Example**
 
-* :ref:`ar_moisture` (Learning Project)
+* :ref:`ar_moisture` (Basic Project)
 * :ref:`iot_plant` (IoT Project)
 
 

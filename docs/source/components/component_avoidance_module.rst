@@ -26,7 +26,7 @@ The detection distance can be adjusted by potentiometer, the effective distance 
 
 **Example**
 
-* :ref:`ar_ir_obstacle` (Learning Project)
+* :ref:`ar_ir_obstacle` (Basic Project)
 * :ref:`car_ir_obstacle` (Car Project)
 * :ref:`self_driving` (Car Project)
 * :ref:`iot_gate` (IoT Project)

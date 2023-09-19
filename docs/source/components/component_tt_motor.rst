@@ -33,7 +33,7 @@ Note that these are very basic motors with no built-in encoder, speed control or
 
 **Example**
 
-* :ref:`ar_motor` (Learning Project)
+* :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)
 * :ref:`car_speed` (Car Project)
 * :ref:`iot_car` (IoT Project)

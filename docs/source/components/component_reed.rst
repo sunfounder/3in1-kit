@@ -17,5 +17,5 @@ The reed acts as a magnetic flux conductor. The two reeds are not in contact whe
 
 **Example**
 
-* :ref:`ar_reed` (Learning Project)
+* :ref:`ar_reed` (Basic Project)
 * :ref:`iot_gate` (IoT Project)

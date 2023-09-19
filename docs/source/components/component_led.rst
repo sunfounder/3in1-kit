@@ -25,8 +25,8 @@ Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wiki
 
 **Example**
 
-* :ref:`ar_blink` (Learning Project)
-* :ref:`ar_fading` (Learning Project)
+* :ref:`ar_blink` (Basic Project)
+* :ref:`ar_fading` (Basic Project)
 * :ref:`iot_blink` (IoT Project)
 * :ref:`sh_breathing_led` (Scratch Project)
 * :ref:`sh_table_lamp` (Scratch Project)

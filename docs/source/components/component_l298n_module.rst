@@ -120,7 +120,7 @@ The jumper should not be placed when the power supply is greater than 12V and se
 
 **Example**
 
-* :ref:`ar_motor` (Learning Project)
+* :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)
 * :ref:`car_speed` (Car Project)
 * :ref:`iot_car` (IoT Project)

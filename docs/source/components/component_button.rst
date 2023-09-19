@@ -24,7 +24,7 @@ Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pr
 
 **Example**
 
-* :ref:`ar_button` (Learning Project)
+* :ref:`ar_button` (Basic Project)
 * :ref:`sh_doorbell` (Scratch Project)
 * :ref:`sh_eat_apple` (Scratch Project)
 * :ref:`sh_fishing` (Scratch Project)

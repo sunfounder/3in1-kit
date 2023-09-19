@@ -43,6 +43,6 @@ This is a Mini thin infrared wireless remote control with 21 function buttons an
 
 **Example**
 
-* :ref:`ar_receiver` (Learning Project)
+* :ref:`ar_receiver` (Basic Project)
 * :ref:`car_remote` (Car Project)
 * :ref:`car_remote_plus` (Car Project)
