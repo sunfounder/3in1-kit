@@ -95,7 +95,7 @@ If not, you need to adjust the potentiometer on the module, so that it can do th
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/2779e9eb-b7b0-4d47-b8c0-78fed39828c3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/452d0e93-8c2f-49c6-80e0-5a2f653145bb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
 

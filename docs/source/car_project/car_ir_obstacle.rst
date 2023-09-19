@@ -100,7 +100,7 @@ Follow the same method to adjust another infrared module.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/289ca80d-009f-4f60-b36d-1da6c5e10233/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/02f5fb43-4943-4942-9cbe-ca3487d4b433/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 The car will move forward once the code has been successfully uploaded. When the left infrared module detects an obstacle, it will go backwards to the left; when the right infrared module detects an obstacle, it will go backwards to the right; if both sides detect an obstacle, it will go backwards squarely.
 

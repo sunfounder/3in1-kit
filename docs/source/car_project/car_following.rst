@@ -102,7 +102,7 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/584e42c8-8842-4db0-93b5-f6f949b6ffca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/1e2872d1-178c-4294-8729-3b0162f5521b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 Place the car on the ground after the code has been uploaded successfully. Place your hand close to 5*10cm in front of the car, and it will follow your hand forward. If you put your hand close to the IR Obstacle module on both sides, it will also turn to the corresponding direction.
 

@@ -104,7 +104,7 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/0a74a7b1-ead6-4bea-ab5a-4da71f27f82f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/adca9313-93fb-4c78-937f-b50070194cdb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 The car will drive freely once the code has been uploaded successfully. When the IR obstruction module on both sides detects an obstacle, it will move in the opposite direction for emergency evasion; if there is an obstacle within 2~10cm directly in front of the car, it will back up to the left, adjust its direction, and then move forward.
 
