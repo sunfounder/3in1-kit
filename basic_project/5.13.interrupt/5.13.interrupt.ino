@@ -1,4 +1,4 @@
-const byte buzzerPin = 9;
+const byte buzzerPin = 8;
 const byte interruptPin = 2;
 volatile byte state = LOW;
 int count=0;
