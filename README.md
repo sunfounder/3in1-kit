@@ -18,6 +18,9 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-09-11:
+- Delete the description of serial number 14 in the car_assemble file (rechargeable is recommended)
+
 2023-09-19:
 - Replace part of the project code link
 - button introduction picture replacement
