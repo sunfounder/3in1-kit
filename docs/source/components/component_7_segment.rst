@@ -26,6 +26,6 @@ To help you get to know how 7-segment displays(Common Cathode) display Numbers, 
 
 **Example**
 
-* :ref:`ar_74hc_7seg` (Learning Project)
+* :ref:`ar_74hc_7seg` (Basic Project)
 * :ref:`iot_gate` (IoT Project)
 

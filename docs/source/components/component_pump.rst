@@ -30,6 +30,6 @@ Common uses of centrifugal pumps include water, sewage, agricultural, petroleum,
 
 **Example**
 
-* :ref:`ar_pump` (Learning Project)
+* :ref:`ar_pump` (Basic Project)
 * :ref:`iot_plant` (IoT Project)
 

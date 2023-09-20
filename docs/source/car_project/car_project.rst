@@ -21,7 +21,6 @@ Here are some projects for the car, programmed in C with the Arduino IDE, if you
 
 The following projects are written in order of programming difficulty, it is recommended to read these books in order.
 
-If you want to program a car with Scratch, please refer to: :ref:`play_with_scratch`.
 
 .. toctree::
     :maxdepth: 2
@@ -34,12 +33,12 @@ If you want to program a car with Scratch, please refer to: :ref:`play_with_scra
     car_ultrasonic
     car_following
     car_auto
+    car_remote_control
+    car_remote_control_plus
     car_speed_calibration
 
 
 
-.. car_remote_control
-.. car_remote_control_plus
 
 
 

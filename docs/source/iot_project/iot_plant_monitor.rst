@@ -49,7 +49,7 @@ You can also buy them separately from the links below.
         - \-
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
-    *   - :ref:`cpn_l9110s` 
+    *   - :ref:`cpn_l9110` 
         - \-
     *   - :ref:`cpn_pump`
         - \-
@@ -79,6 +79,13 @@ You can also buy them separately from the links below.
 **3. Run the Code**
 
 Open the ``6.plant_monitoring.ino`` file under the path of ``3in1-kit\iot_project\6.plant_monitoring``, or copy this code into **Arduino IDE**.
+
+    .. note::
+
+            * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+
+                .. image:: ../img/lib_dht11.png
+
 
     .. raw:: html
         
@@ -138,21 +145,19 @@ These three functions are used to get the current environment temperature, humid
     }
 
     bool readDHT() {
-        int chk = DHT.read11(DHT11_PIN);
-        switch (chk)
-        {
-            case DHTLIB_OK:
-                roomHumidity = DHT.humidity;
-                roomTemperature = DHT.temperature;
-                return true;
-            case DHTLIB_ERROR_CHECKSUM:
-                break;
-            case DHTLIB_ERROR_TIMEOUT:
-                break;
-            default:
-                break;
+
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+        humidity = dht.readHumidity();
+        // Read temperature as Celsius (the default)
+        temperature = dht.readTemperature();
+
+        // Check if any reads failed and exit early (to try again).
+        if (isnan(humidity) || isnan(temperature)) {
+            Serial.println("Failed to read from DHT sensor!");
+            return false;
         }
-        return false;
+        return true;
     }
 
 With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and soil moisture are obtained every second and sent to the data stream on the **Blynk Cloud**, from which the widgets display the data.
@@ -165,9 +170,9 @@ With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and
         bool chk = readDHT();
         int light = readLight();
         int moisture = readMoisture();
-        if(chk==true){
-            Blynk.virtualWrite(V4,roomHumidity);
-            Blynk.virtualWrite(V5,roomTemperature);
+        if(chk){
+            Blynk.virtualWrite(V4,humidity);
+            Blynk.virtualWrite(V5,temperature);
         }
         Blynk.virtualWrite(V6,light);
         Blynk.virtualWrite(V7,moisture);

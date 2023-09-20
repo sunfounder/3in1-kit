@@ -25,8 +25,8 @@ You can check the pins of the buzzer, the longer one is the anode and the shorte
 
 **Example**
 
-* :ref:`ar_beep` (Learning Project)
-* :ref:`ar_passive_buzzer` (Learning Project)
+* :ref:`ar_beep` (Basic Project)
+* :ref:`ar_passive_buzzer` (Basic Project)
 * :ref:`iot_music` (IoT Project)
 
 

@@ -81,6 +81,13 @@ You can also buy them separately from the links below.
 
 #. Open the ``5.home_environment_monitoring.ino`` file under the path of ``3in1-kit\iot_project\5.home_environment_monitoring``, or copy this code into **Arduino IDE**.
 
+    .. note::
+
+            * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+
+                .. image:: ../img/lib_dht11.png
+
+
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4f0ad85e-8aff-4df9-99dd-c6741aed8219/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -123,31 +130,19 @@ These two functions are used to get the temperature, humidity and light intensit
     }
 
     bool readDHT() {
-        Serial.print("DHT11, \t");
-        int chk = DHT.read11(DHT11_PIN);
-        switch (chk)
-        {
-            case DHTLIB_OK:
-            Serial.print("OK,\t");
-            roomHumidity = DHT.humidity;
-            Serial.print(roomHumidity, 1);
-            Serial.print(",\t");
-            roomTemperature = DHT.temperature;
-            Serial.println(roomTemperature, 1);
-            //    delay(1000);
-            return true;
-            case DHTLIB_ERROR_CHECKSUM:
-            Serial.println("Checksum error,\t");
-            break;
-            case DHTLIB_ERROR_TIMEOUT:
-            Serial.println("Time out error,\t");
-            //    delay(20);
-            break;
-            default:
-            Serial.println("Unknown error,\t");
-            break;
+
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+        humidity = dht.readHumidity();
+        // Read temperature as Celsius (the default)
+        temperature = dht.readTemperature();
+
+        // Check if any reads failed and exit early (to try again).
+        if (isnan(humidity) || isnan(temperature)) {
+            Serial.println("Failed to read from DHT sensor!");
+            return false;
         }
-        return false;
+        return true;
     }
 
 
@@ -159,9 +154,9 @@ With the Blynk ``Timer``, the ambient temperature, humidity, and light intensity
     {
         bool chk = readDHT();
         int light = readLight();
-        if(chk==true){
-            Blynk.virtualWrite(V4,roomHumidity);
-            Blynk.virtualWrite(V5,roomTemperature);
+        if(chk){
+            Blynk.virtualWrite(V4,humidity);
+            Blynk.virtualWrite(V5,temperature);
         }
         Blynk.virtualWrite(V6,light);
     }

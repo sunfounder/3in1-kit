@@ -4,7 +4,7 @@
 3. Speed Up
 ===================
 
-In addition to the digital signal (HIGH/LOW), the input of L298N can also receive PWM signal to control the speed of the output.
+In addition to the digital signal (HIGH/LOW), the input of L9110 module can also receive PWM signal to control the speed of the output.
 
 In other words, we can use ``AnalogWrite()`` to control the moving speed of the car.
 
@@ -33,7 +33,7 @@ After the program runs, the car will gradually accelerate and then gradually dec
 
 **How it works?**
 
-The purpose of this project is to write different PWM values to IN1~IN4 to control the forward speed of the car.
+The purpose of this project is to write different PWM values to the input pins of the L9110 module to control the forward speed of the car.
 
 
 #. Use the ``for()`` statement to give ``speed`` in steps of 5, writing values from 0 to 255 so you can see the change in the car's forward speed.
@@ -53,15 +53,15 @@ The purpose of this project is to write different PWM values to IN1~IN4 to contr
 
 #. About the ``moveForward()`` function.
 
-    As opposed to :ref:`car_move_code` which directly gives high/low levels to IN1~IN4, here we pass a parameter ``speed`` to where we need to give high levels.
+    As opposed to :ref:`car_move_code` which directly gives high/low levels to the input pins of the L9110 module, here we pass a parameter ``speed`` to where we need to give high levels.
 
     .. code-block:: arduino
 
         void moveForward(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, speed);
-            analogWrite(in3, speed);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, speed);
+            analogWrite(B_1B, speed);
+            analogWrite(B_1A, 0);
         }
 
 

@@ -9,7 +9,7 @@ Re-brun the Firmware with R3
 
 **1. Build the circuit**
 
-Connect ESP8266 and SunFounder R3 board.
+Connect ESP8266 and SunFounder R4 board.
 
     .. image:: img/connect_esp8266.png
         :width: 800
@@ -122,7 +122,7 @@ Connect ESP8266 and SunFounder R3 board.
 
         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R4 board.
 
     .. image:: img/sp20220524113702.png
 
@@ -137,7 +137,7 @@ Re-brun the Firmware with R4
 
 **1. Build the circuit**
 
-Connect ESP8266 and SunFounder R3 board.
+Connect ESP8266 and SunFounder R4 board.
 
     .. image:: img/faq_at_burn_bb.jpg
         :width: 800
@@ -249,7 +249,7 @@ Connect ESP8266 and SunFounder R3 board.
 
         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R4 board.
 
     .. image:: img/sp20220524113702.png
 

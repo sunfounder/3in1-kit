@@ -59,13 +59,16 @@ You can also buy them separately from the links below.
 
     * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\learning_project\5.11.liquid_crystal_display``.
     * Or copy this code into **Arduino IDE**.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_liquidcrystal_i2c.png
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will see "Hello, Sunfounder!" on the I2C LCD1602.
+After the code is uploaded successfully, you will see "SunFounder", "Hello World" on the I2C LCD1602.
 
 .. note::
     If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
@@ -78,7 +81,7 @@ By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD.
 
     #include "LiquidCrystal_I2C.h"
 
-Library Functions：
+Library Functions: 
 
 .. code-block:: arduino
 

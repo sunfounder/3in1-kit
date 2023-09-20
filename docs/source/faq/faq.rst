@@ -6,4 +6,3 @@ FAQ
 
     blynk_mobile
     burn_firmware
-    add_libraries_ar

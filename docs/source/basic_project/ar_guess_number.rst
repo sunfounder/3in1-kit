@@ -72,8 +72,7 @@ as follows.
 
     * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\learning_project\6.6.guess_number`` directly.
     * Or copy this code into Arduino IDE 1/2.
-    
-    * Please make sure you have added the ``IRremote`` and ``LiquidCrystal_I2C`` libraries, detailed tutorials refer to :ref:`add_libraries_ar`.
+    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
 
 
 .. raw:: html

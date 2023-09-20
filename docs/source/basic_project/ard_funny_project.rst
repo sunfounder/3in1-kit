@@ -16,8 +16,6 @@ When you have a creative idea in mind, programming will no longer be challenging
     ar_high_tem_alarm
     ar_reversing_aid
     ar_reaction_game
-    
-    
-.. ar_guess_number
+    ar_guess_number
 
 

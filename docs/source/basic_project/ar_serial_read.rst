@@ -58,7 +58,9 @@ You can also buy them separately from the links below.
 
     * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\learning_project\5.12.serial_read``.
     * Or copy this code into **Arduino IDE**.
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_liquidcrystal_i2c.png
 
 .. raw:: html
     

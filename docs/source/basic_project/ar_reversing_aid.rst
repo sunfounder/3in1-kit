@@ -69,8 +69,9 @@ You can also buy them separately from the links below.
 
     * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\learning_project\6.4_reversingAid`` directly.
     * Or copy this code into Arduino IDE 1/2.
-    
-    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`add_libraries_ar`.
+    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: ../img/lib_liquidcrystal_i2c.png
 
 .. raw:: html
 

@@ -44,10 +44,14 @@ You can also buy them separately from the links below.
         - \-
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
-    *   - :ref:`cpn_l9110s`
+    *   - :ref:`cpn_l9110`
         - \-
     *   - :ref:`cpn_pump`
         - \-
+
+**Schematic**
+
+.. image:: img/circuit_1.3_wheel_l9110.png
 
 **Wiring**
 
@@ -87,7 +91,7 @@ You can also buy them separately from the links below.
    * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\learning_project\1.4.pumping``. 
    * Or copy this code into **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   
 
 .. raw:: html
     

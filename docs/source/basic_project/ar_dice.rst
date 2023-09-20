@@ -1,6 +1,6 @@
 .. _ar_eeprom:
 
-6.2 Electronic Dice
+6.2 Digital Dice
 =============================
 
 Here we use button, 7-segment and 74hc595 to make an electronic dice. 
@@ -64,7 +64,7 @@ You can also buy them separately from the links below.
     * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\learning_project\6.2.electronic_dice``.
     * Or copy this code into **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    
 
 .. raw:: html
     

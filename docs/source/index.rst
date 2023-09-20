@@ -10,38 +10,20 @@ Or maybe you want to build your own smart car, but the ones you find online are 
 
 Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
 
-All these problems can be solved with our 3 in 1 ultimate kit.
+All these problems can be solved with our 3 in 1 starter kit.
 
-In the 3-in-1 ultimate kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
-
-In addition, the kit also provides 30+ Scratch programming projects for younger students and enthusiasts, so beginners don't need any programming experience to write and make their own creations!
+In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
 
 Come on! Start programing Arduino with confidence from zero to hero!
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
 
 **About the display language**
 
-In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-In the meantime, we recommend using Google Translate to convert English to the language you want to see.
+This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
 
-The steps are as follows.
-
-* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
-
-.. image:: img/translate1.png
-    :align: center
-
-* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
-
-.. image:: img/translate2.png
-    :align: center
-
-* Select the language from the inverted triangle box, and then click **Done**.
-
-.. image:: img/translate3.png
-    :align: center
-
+.. image:: img/translation.png
+    
 .. toctree::
     :maxdepth: 2
 

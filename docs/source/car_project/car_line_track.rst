@@ -40,7 +40,7 @@ You can also buy them separately from the links below.
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
-    *   - :ref:`cpn_l9110s` 
+    *   - :ref:`cpn_l9110`
         - \-
     *   - :ref:`cpn_tt_motor`
         - \-
@@ -48,6 +48,7 @@ You can also buy them separately from the links below.
         - |link_track_buy|
 
 **Wiring**
+
 
 This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
 
@@ -135,23 +136,23 @@ In this code, it is letting the two motors micro-rotate left and right according
 
 #. About the ``moveLeft()`` and ``moveRight()`` functions.
 
-    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of IN2 or IN3 each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to IN2 and all others to 0, it will make the right motor turn clockwise and the left motor not move.
+    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of ``A_1A`` or ``B_1B`` each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to ``A_1A`` and all others to 0, it will make the right motor turn clockwise and the left motor not move.
 
     .. code-block:: arduino
     
 
         void moveLeft(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, speed);
-            analogWrite(in3, 0);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, speed);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, 0);
         }
 
         void moveRight(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, 0);
-            analogWrite(in3, speed);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, speed);
+            analogWrite(B_1A, 0);
         }
 
 * `Serial <https://www.arduino.cc/reference/en/language/functions/communication/serial/>`_

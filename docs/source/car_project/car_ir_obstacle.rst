@@ -35,7 +35,7 @@ You can also buy them separately from the links below.
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
-    *   - :ref:`cpn_l9110s`
+    *   - :ref:`cpn_l9110`
         - \-
     *   - :ref:`cpn_tt_motor`
         - \-
@@ -159,10 +159,10 @@ This project is based on the value of the left and right infrared obstacle avoid
     .. code-block:: arduino
 
         void backLeft(int speed) {
-            analogWrite(in1, speed);
-            analogWrite(in2, 0);
-            analogWrite(in3, 0);
-            analogWrite(in4, 0);
+            analogWrite(A_1B, speed);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, 0);
         }
 
 #. About the ``backLeft()`` function.
@@ -172,10 +172,10 @@ This project is based on the value of the left and right infrared obstacle avoid
     .. code-block:: arduino
 
         void backRight(int speed) {
-            analogWrite(in1, 0);
-            analogWrite(in2, 0);
-            analogWrite(in3, 0);
-            analogWrite(in4, speed);
+            analogWrite(A_1B, 0);
+            analogWrite(A_1A, 0);
+            analogWrite(B_1B, 0);
+            analogWrite(B_1A, speed);
         }
 
 * `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logical AND results in true only if both operands are true.

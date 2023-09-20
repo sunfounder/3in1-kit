@@ -1,74 +1,101 @@
-.. _cpn_l9110s:
+.. _cpn_l9110:
 
-L9110s Module
-=======================
+L9110 Motor Driver Module
+=============================
 
-L9110S is a dual-channel push-pull power amplifier ASIC device designed for controlling and driving toy motors. It integrates discrete circuits into a single chip IC, which reduces the cost of peripheral components and improves the reliability of the whole machine.
+The L9110 motor driver module is adept at driving two motors in tandem. It houses a pair of independent L9110S driver chips, 
+each channel boasting a steady current output of up to 800mA.
 
-The input terminal of the chip is compatible with TTL/CMOS level and has good anti-interference; the circuit has a large current drive capability, and each channel can pass a continuous current of 0.8-1.0A, and the peak current capability can reach 2.5A;
+Spanning a voltage range from 2.5V to 12V, the module comfortably pairs with both 3.3V and 5V microcontrollers.
 
-The circuit has an over-temperature protection function, and the built-in clamp diode can release the reverse impact current of the inductive load.
+Serving as a streamlined solution, the L9110 motor driver module facilitates motor control across a spectrum of applications. 
+Thanks to its dual-channel architecture, it enables the independent orchestration of two motors—ideal for projects where dual motor 
+operations are paramount.
 
-L9110S is widely used in toy car motor drives, stepper motor drive and switching power tube circuit.
+Given its potent continuous current output, this module confidently powers motors from the petite to the moderately sized, 
+paving the way for diverse robotic, automation, and motor-centric endeavors. Its expansive voltage range further injects adaptability, aligning with varied power supply setups.
 
+Designed with user-friendliness in mind, the module offers intuitive input and output terminals, simplifying connections to microcontrollers 
+or akin control devices. Plus, it doesn't skimp on safety—integrated overcurrent and overtemperature safeguards bolster the trustworthiness 
+and security of motor operations.
 
-.. image:: img/l9110s.jpg
-    :width: 800
+.. image:: img/l9110_module.jpg
+    :width: 600
     :align: center
-
-* **0A & OB(A)** : Output pins of Motor A.
-* **0A & OB(B)** : Output pins of Motor B.
-* **A-1A & A-1B**: Motor A input pins. Used to control the spinning direction of Motor A.
-* **B-1A & B-1B**: Motor B input pins. Used to control the spinning direction of Motor B.
-* **VCC**: Supplies power for the switching logic circuitry inside IC.
+    
+* **B-1A & B-1B**: Input pins for controlling the spinning direction of Motor B.
+* **A-1A & A-1B**: Input pins for controlling the spinning direction of Motor A.
+* **0A & OB(A)**: Output pins of Motor A.
+* **0A & OB(B)**: Output pins of Motor B.
+* **VCC**: Power input pin (2.5V-12V).
 * **GND**: Ground pin.
-
-
 
 **Features**
 
-* Low quiescent operating current
-* Wide supply voltage range: 2.5V-12V
-* Continuous current output capability of each channel (1.0A: VCC=8V DIP8 package; 0.8A: VCC=8V SOP8 package)
-* Lower saturation pressure drop
-* With over-temperature protection function
-* The output has three states: forward rotation, reverse rotation and high impedance
-* TTL/CMOS output level compatible, can be directly connected to CPU
-* Output built-in clamping diode, suitable for inductive load
-* Control and drive integrated in a single IC
-* Suitable for three to six dry battery power supply systems
-* With pin high voltage protection function
-* Antistatic ability: 4000V (HBM)
-* Working temperature range: -20℃ ~ +80℃
+* On-board 2 L9110S motor control chip
+* Dual-channel motor control.
+* Independent motor spinning direction control.
+* High current output (800mA per channel).
+* Wide voltage range (2.5V-12V).
+* Compact design.
+* Convenient input and output terminals.
+* Built-in protective features.
+* Versatile applications.
+* PCB Size: 29.2mm x 23mm
+* Operating Temperature: -20°C ~ 80°C
+* Power-On LED indicator
 
-**Logical relationship**
+**Operating Principle**
+
+Here is the truth table of Motor B:
+
+This truth table shows the different states of Motor B based on the values of input pins B-1A and B-1B. It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor B.
 
 .. list-table:: 
-    :widths: 25 25 50 50
+    :widths: 25 25 50
     :header-rows: 1
 
-    * - IA 
-      - IB 
-      - OA
-      - OB
-    * - H 
-      - L 
-      - H
-      - L
-    * - L 
-      - H 
-      - L
-      - H
-    * - L 
-      - L 
-      - high resistance
-      - high resistance
-    * - H 
-      - H 
-      - high resistance
-      - high resistance
+    * - B-1A
+      - B-1B
+      - The state of Motor B
+    * - 1
+      - 0
+      - Rotate clockwise
+    * - 0
+      - 1
+      - Rotate counterclockwise
+    * - 0
+      - 0
+      - Brake
+    * - 1
+      - 1
+      - Stop
 
-* :ref:`ar_motor` (Learning Project)
+Here is the truth table of Motor A:
+
+This truth table shows the different states of Motor A based on the values of input pins A-1A and A-1B. It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor A.
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * - A-1A
+      - A-1B
+      - The state of Motor B
+    * - 1
+      - 0
+      - Rotate clockwise
+    * - 0
+      - 1
+      - Rotate counterclockwise
+    * - 0
+      - 0
+      - Brake
+    * - 1
+      - 1
+      - Stop
+
+* :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)
 * :ref:`car_speed` (Car Project)
 * :ref:`iot_car` (IoT Project)

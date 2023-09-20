@@ -53,8 +53,12 @@ You can also buy them separately from the links below.
         - |link_button_buy|
     *   - :ref:`cpn_tt_motor`
         - \-
-    *   - :ref:`cpn_l9110s`
+    *   - :ref:`cpn_l9110`
         - \-
+
+**Schematic**
+
+.. image:: img/circuit_8.3_statechange.png
 
 **Wiring**
 
@@ -69,7 +73,7 @@ You can also buy them separately from the links below.
     * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\5.3.state_change_detection``.
     * Or copy this code into **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    
 
 .. raw:: html
     

@@ -28,7 +28,7 @@ There are 103 or 104 label on the ceramic capacitors, which represent the capaci
 
 **Example**
 
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
+.. * :ref:`sh_doorbell` (Scratch Project)
+.. * :ref:`sh_eat_apple` (Scratch Project)
+.. * :ref:`sh_fishing` (Scratch Project)
 

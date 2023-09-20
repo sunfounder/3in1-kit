@@ -36,7 +36,8 @@ trigger signal and the echo signal.
 
 **Example**
 
-* :ref:`ar_ultrasonic` (Learning Project)
+* :ref:`ar_ultrasonic` (Basic Project)
 * :ref:`follow_your_hand` (Car Project)
 * :ref:`car_ultrasonic` (Car Project)
-* :ref:`sh_parrot` (Scratch Project)
+
+.. * :ref:`sh_parrot` (Scratch Project)

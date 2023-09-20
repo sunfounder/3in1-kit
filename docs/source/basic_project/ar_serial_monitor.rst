@@ -33,7 +33,7 @@ So in this project we will learn how to receive data from the Arduino board.
         }
 
    * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Sets the data rate in bits per second (baud) for serial data transmission, here set to 9600.
-   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_: Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_.
+   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_: Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_.
 
 2. Select the correct board and port to upload the code.
 3. In the toolbar, click the magnifying glass icon to turn on Serial Monitor.
@@ -46,15 +46,15 @@ So in this project we will learn how to receive data from the Arduino board.
 .. image:: img/serial2.png
     :align: center
 
-* **1**：Option to select between automatically scroll and not scroll.
-* **2**：Option to show timestamp prior to data displayed on Serial Monitor.
-* **3**：Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
+* **1**: Option to select between automatically scroll and not scroll.
+* **2**: Option to show timestamp prior to data displayed on Serial Monitor.
+* **3**: Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
 
         * **No line Ending** just sends what you type; 
         * **Newline** is ``\n`` and will sends an ASCII new line code after what you type；
         * **Carriage Return** is ``\r``, which will send an ASCII carriage return character after what you type; 
         * **Both NL & CR** is ``\r\n`` which will send both a carriage return and a new line character after what you type.
-* **4**：Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
-* **5**：Clear all text on the output console.
-* **6**：A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
+* **4**: Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
+* **5**: Clear all text on the output console.
+* **6**: A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
 

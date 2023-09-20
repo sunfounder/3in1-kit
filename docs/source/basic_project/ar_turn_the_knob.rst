@@ -67,8 +67,6 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 
    * You can open the file ``4.1.turn_the_knob.ino`` under the path of ``3in1-kit\learning_project\4.1.turn_the_knob``. 
    * Or copy this code into **Arduino IDE**.
-   
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 

@@ -17,9 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
+import time  ###
 
 project = 'SunFounder 3in1 Kit'
-copyright = '2022, SunFounder'
+copyright = f'{time.localtime().tm_year}, SunFounder'  ###
 author = 'www.sunfounder.com'
 
 
@@ -52,8 +53,8 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # SunFounder logo
 
 html_js_files = [
-    'https://ezblock.cc/readDocFile/custom.js',
-    # './lang.js', # new
+    'https://ezblock.cc/readDocFile/custom.js', 
+    './lang.js', # new
 ]
 html_css_files = [
     'https://ezblock.cc/readDocFile/custom.css',

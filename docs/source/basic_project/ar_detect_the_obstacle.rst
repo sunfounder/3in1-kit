@@ -61,7 +61,7 @@ Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
    * You can open the file ``3.3.detect_the_obstacle.ino`` under the path of ``3in1-kit\learning_project\3.3.detect_the_obstacle``. 
    * Or copy this code into **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   
 
 
 .. raw:: html

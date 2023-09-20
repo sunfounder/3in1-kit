@@ -59,7 +59,7 @@ brown one to GND.
     * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\learning_project\5.5.use_internal_library``.
     * Or copy this code into **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    
 
 .. raw:: html
 
@@ -75,7 +75,7 @@ By calling the library ``Servo.h``, you can drive the servo easily.
 
     #include <Servo.h> 
 
-Library Functions：
+Library Functions: 
 
 .. code-block:: arduino
 

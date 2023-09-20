@@ -34,8 +34,8 @@ You can also buy them separately from the links below.
         - PURCHASE LINK
 
     *   - :ref:`cpn_uno`
-        - \-
-    *   - :ref:`cpn_l9110s` 
+        - |link_Uno_R3_buy|
+    *   - :ref:`cpn_l9110`
         - \-
     *   - :ref:`cpn_tt_motor`
         - \-

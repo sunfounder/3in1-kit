@@ -21,6 +21,7 @@ The joystick also has a digital input that is actuated when the joystick is pres
 	
 **Example**
 
-* :ref:`ar_joystick` (Learning Project)
-* :ref:`sh_star_crossed` (Scratch Project)
-* :ref:`sh_dragon` (Scratch Project)
+* :ref:`ar_joystick` (Basic Project)
+
+.. * :ref:`sh_star_crossed` (Scratch Project)
+.. * :ref:`sh_dragon` (Scratch Project)

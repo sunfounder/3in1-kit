@@ -56,7 +56,7 @@ To this day, electronics enthusiasts worldwide continue to develop creative elec
 .. ----------------------
 
 .. The Arduino team has open sourced the Arduino development board, this means that others can manufacture products from Arduino designs. So there are currently two types of development boards available on the market. One is the official development board provided by Arduino, and the other is the compatible development board produced by other companies. ARDUINO original boards are produced by ARDUINO with arduino's Certification. Compatible development boards for Arduino are assembled and produced by third-party companies, which will be more favorable in terms of price. The Arduino team has done a lot for Arduino, so if you want to support them, consider buying Arduino original boards on the Arduino website. You can choose which board to buy according to your situation.
-.. We recommend purchasing an Arduino Uno R3 board or an compatible board for Arduino Uno R3 for a consistent learning experience in our tutorials.
+.. We recommend purchasing an Arduino Uno R4 board or an compatible board for Arduino Uno R4 for a consistent learning experience in our tutorials.
 
 
 

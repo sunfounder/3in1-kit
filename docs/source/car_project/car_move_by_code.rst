@@ -3,11 +3,9 @@
 2. Move by Code
 ======================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L298N.
+In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L9110 module.
 
 If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
-
-.. Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R4 board in turn.
 
 **Required Components**
 
@@ -37,50 +35,49 @@ You can also buy them separately from the links below.
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
-    *   - :ref:`cpn_l9110s` 
+    *   - :ref:`cpn_l9110`
         - \-
     *   - :ref:`cpn_tt_motor`
         - \-
 
+
 **Wiring**
 
 
-.. The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
-
-.. Connect the wires between the L298N module and the R4 board according to the diagram below.
+Connect the wires between the L9110 module and the R4 board according to the diagram below.
 
 
-.. .. list-table:: 
-..     :widths: 25 25 50
-..     :header-rows: 1
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
 
-..     * - L298N
-..       - R4 Board
-..       - Motor
-..     * - IN1
-..       - 5
-..       - 
-..     * - IN2
-..       - 6
-..       - 
-..     * - IN3
-..       - 9
-..       - 
-..     * - IN4
-..       - 10
-..       - 
-..     * - OUT1
-..       - 
-..       - Black wire of right motor
-..     * - OUT2
-..       - 
-..       - Red wire of right motor
-..     * - OUT3
-..       - 
-..       - Black wire of left motor
-..     * - OUT4
-..       - 
-..       - Red wire of left motor
+    * - L9110 Module
+      - R4 Board
+      - Motor
+    * - A-1B
+      - 5
+      - 
+    * - A-1A
+      - 6
+      - 
+    * - B-1B
+      - 9
+      - 
+    * - B-1A
+      - 10
+      - 
+    * - OB(B)
+      - 
+      - Black wire of right motor
+    * - OA(B)
+      - 
+      - Red wire of right motor
+    * - OB(A)
+      - 
+      - Black wire of left motor
+    * - OA(A)
+      - 
+      - Red wire of left motor
 
 .. image:: img/car_2.png
     :width: 800
@@ -91,8 +88,6 @@ You can also buy them separately from the links below.
 
     * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
     * Or copy this code into **Arduino IDE**.
-    
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
@@ -103,40 +98,40 @@ After the code is uploaded, the car will move forward, backward, left and right 
 
 **How it works?**
 
-This project is basically the same as the previous one, which is to make the car move forward, backward, left and right and stop by giving different levels from IN1 to IN4.
+This project is essentially the same as the previous one, involving making the car move forward, backward, left, and right, as well as stopping by providing different signal levels to the input pins of the L9110 module.
 
-#. Initialize the pin wiring of IN1~IN4.
+#. Initialize the pins of L9110 module.
 
     .. code-block:: arduino
 
-        const int in1 = 5;
-        const int in2 = 6;
-        const int in3 = 9;
-        const int in4 = 10;
+        const int A_1B = 5;
+        const int A_1A = 6;
+        const int B_1B = 9;
+        const int B_1A = 10;
 
         void setup() {
-            pinMode(in1, OUTPUT);
-            pinMode(in2, OUTPUT);
-            pinMode(in3, OUTPUT);
-            pinMode(in4, OUTPUT);
+            pinMode(A_1B, OUTPUT);
+            pinMode(A_1A, OUTPUT);
+            pinMode(B_1B, OUTPUT);
+            pinMode(B_1A, OUTPUT);
         }
 
-#. Set IN1~IN4 to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Set the input pins to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
 
     .. code-block:: arduino
 
         void moveForward() {
-            digitalWrite(in1, LOW);
-            digitalWrite(in2, HIGH);
-            digitalWrite(in3, HIGH);
-            digitalWrite(in4, LOW);
+            digitalWrite(A_1B, LOW);
+            digitalWrite(A_1A, HIGH);
+            digitalWrite(B_1B, HIGH);
+            digitalWrite(B_1A, LOW);
         }
 
         void moveBackward() {
-            digitalWrite(in1, HIGH);
-            digitalWrite(in2, LOW);
-            digitalWrite(in3, LOW);
-            digitalWrite(in4, HIGH);
+            digitalWrite(A_1B, HIGH);
+            digitalWrite(A_1A, LOW);
+            digitalWrite(B_1B, LOW);
+            digitalWrite(B_1A, HIGH);
         }
         ...
 #. Call these functions in ``loop()``.
