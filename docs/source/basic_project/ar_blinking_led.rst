@@ -95,7 +95,7 @@ In ``loop()``, ``digitalWrite()`` is used to provide 5V high level signal for le
 
     digitalWrite(ledPin, HIGH);
 
-If the level signal is changed to LOW, the ledPin’s signal will be returned to 0 V to turn LED off.
+If the level signal is changed to LOW, the ledPin's signal will be returned to 0 V to turn LED off.
 
 .. code-block:: arduino
 

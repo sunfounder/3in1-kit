@@ -38,7 +38,7 @@ This L298N Motor Driver Module is a high power motor driver module for driving D
 
 The driver module can drive two motors. The enabled terminals ENA and ENB are effective at high level. 
 
-The working relationship between ENA and IN1,IN2 is as follows：
+The working relationship between ENA and IN1,IN2 is as follows: 
 
 
 .. list-table:: 
@@ -120,7 +120,7 @@ The jumper should not be placed when the power supply is greater than 12V and se
 
 **Example**
 
-* :ref:`ar_motor` (Learning Project)
+* :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)
 * :ref:`car_speed` (Car Project)
 * :ref:`iot_car` (IoT Project)

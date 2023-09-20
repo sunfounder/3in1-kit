@@ -26,6 +26,6 @@ ends are female.
 
 
 More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
+jump wires is different but it doesn't mean their function is different
 accordingly; it's just designed so to better identify the connection
 between each circuit.

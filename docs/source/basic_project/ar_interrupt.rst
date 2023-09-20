@@ -14,7 +14,7 @@ In the ``loop()`` function, ``delay(1000)`` is used to count seconds.
 Put the button to control the buzzer into the ISR, so that it will not be disturbed by the delay and complete the task smoothly.
 
 .. note::
-    ISRs are special kinds of functions that have some unique limitations most other functions do not have. An ISR cannot have any parameters, and they shouldn’t return anything.
+    ISRs are special kinds of functions that have some unique limitations most other functions do not have. An ISR cannot have any parameters, and they shouldn't return anything.
     Generally, an ISR should be as short and fast as possible. If your sketch uses multiple ISRs, only one can run at a time, other interrupts will be executed after the current one finishes in an order that depends on the priority they have.
 
 **Required Components**

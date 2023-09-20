@@ -8,7 +8,7 @@ Line Tracking Module
     :align: center
 
 * S: Usually low level, high level when the black line is detected.
-* V+：Power supply, 3.3v~5V
+* V+: Power supply, 3.3v~5V
 * G: Ground
 
 This is a 1-channel Line Tracking module which, as the name suggests, tracks black lines on a white background or white lines against a black background.
@@ -46,6 +46,6 @@ Similarly, when it shines on a white surface, the reflected light will become mo
 
 **Example**
 
-* :ref:`ar_line_track` (Learning Project)
+* :ref:`ar_line_track` (Basic Project)
 * :ref:`follow_the_line` (Car Project)
 * :ref:`sh_protect_heart` (Scratch Project)

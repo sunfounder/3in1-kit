@@ -83,7 +83,7 @@ By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD.
 
     #include "LiquidCrystal_I2C.h"
 
-Library Functions：
+Library Functions: 
 
 .. code-block:: arduino
 

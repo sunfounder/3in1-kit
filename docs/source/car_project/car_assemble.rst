@@ -56,7 +56,7 @@ Please follow the steps below to complete the assembly of the car.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery (rechargeable is recommended) and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
 
     .. image:: img/IMG_9189.JPG
 

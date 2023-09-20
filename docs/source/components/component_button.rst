@@ -3,7 +3,7 @@
 Button
 ==========
 
-.. image:: img/button2.png
+.. image:: img/button.png
     :width: 400
     :align: center
 
@@ -18,13 +18,13 @@ The following is the internal structure of a button. The symbol on the right bel
 
 Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
 
-.. image:: img/button2.jpg
+.. image:: img/button2.png
     :width: 600
     :align: center
 
 **Example**
 
-* :ref:`ar_button` (Learning Project)
+* :ref:`ar_button` (Basic Project)
 * :ref:`sh_doorbell` (Scratch Project)
 * :ref:`sh_eat_apple` (Scratch Project)
 * :ref:`sh_fishing` (Scratch Project)

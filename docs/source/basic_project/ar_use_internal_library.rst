@@ -77,7 +77,7 @@ By calling the library ``Servo.h``, you can drive the servo easily.
 
     #include <Servo.h> 
 
-Library Functions：
+Library Functions: 
 
 .. code-block:: arduino
 

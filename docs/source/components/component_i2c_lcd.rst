@@ -40,5 +40,5 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
 
 **Example**
 
-* :ref:`ar_lcd1602` (Learning Project)
-* :ref:`ar_serial_read` (Learning Project)
+* :ref:`ar_lcd1602` (Basic Project)
+* :ref:`ar_serial_read` (Basic Project)

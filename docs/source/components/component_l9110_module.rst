@@ -95,7 +95,7 @@ This truth table shows the different states of Motor A based on the values of in
       - 1
       - Stop
 
-* :ref:`ar_motor` (Learning Project)
+* :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)
 * :ref:`car_speed` (Car Project)
 * :ref:`iot_car` (IoT Project)

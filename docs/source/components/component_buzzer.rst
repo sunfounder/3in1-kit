@@ -19,14 +19,14 @@ The following is the electrical symbol of a buzzer. It has two pins with positiv
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don’t mix them up when connecting, otherwise the buzzer will not make sound. 
+You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don't mix them up when connecting, otherwise the buzzer will not make sound. 
 
 `Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
 **Example**
 
-* :ref:`ar_beep` (Learning Project)
-* :ref:`ar_passive_buzzer` (Learning Project)
+* :ref:`ar_beep` (Basic Project)
+* :ref:`ar_passive_buzzer` (Basic Project)
 * :ref:`iot_music` (IoT Project)
 
 

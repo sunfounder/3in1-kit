@@ -9,7 +9,7 @@ IR Receiver
     :align: center
 
 * OUT: Signal output
-* GND：GND
+* GND: GND
 * VCC: power supply, 3.3v~5V
 
 An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
@@ -43,6 +43,6 @@ This is a Mini thin infrared wireless remote control with 21 function buttons an
 
 **Example**
 
-* :ref:`ar_receiver` (Learning Project)
+* :ref:`ar_receiver` (Basic Project)
 * :ref:`car_remote` (Car Project)
 * :ref:`car_remote_plus` (Car Project)

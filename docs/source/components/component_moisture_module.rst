@@ -6,7 +6,7 @@ Soil Moisture Module
 .. image:: img/soil_mositure.png
 
 * GND: Ground
-* VCC：Power supply, 3.3v~5V
+* VCC: Power supply, 3.3v~5V
 * AOUT: Outputs the soil moisture value, the wetter the soil, the smaller its value.
 
 This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
@@ -34,7 +34,7 @@ The higher the soil moisture, the higher the capacitance of the sensor. As a res
 
 **Example**
 
-* :ref:`ar_moisture` (Learning Project)
+* :ref:`ar_moisture` (Basic Project)
 * :ref:`iot_plant` (IoT Project)
 
 

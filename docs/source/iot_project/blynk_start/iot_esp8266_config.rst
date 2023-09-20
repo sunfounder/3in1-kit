@@ -34,7 +34,7 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
         }
 
 
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)
+3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn't matter, just go to the next step.)
 
     .. image:: img/sp20220524113020.png
 

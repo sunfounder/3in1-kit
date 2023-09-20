@@ -84,10 +84,10 @@ That is, a fromLow value is mapped to toLow, and a fromHigh value is mapped to t
 
     **Parameters**
         * ``value``: the number to map.
-        * ``fromLow``: the lower bound of the value’s current range.
-        * ``fromHigh``: the upper bound of the value’s curr+ent range.
-        * ``toLow``: the lower bound of the value’s target range.
-        * ``toHigh``: the upper bound of the value’s target range.
+        * ``fromLow``: the lower bound of the value's current range.
+        * ``fromHigh``: the upper bound of the value's curr+ent range.
+        * ``toLow``: the lower bound of the value's target range.
+        * ``toHigh``: the upper bound of the value's target range.
 
 If the potentiometer controls the LED, you can also use the map to complete the task.
 

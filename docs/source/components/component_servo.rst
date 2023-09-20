@@ -22,7 +22,7 @@ When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a
 
 **Example**
 
-* :ref:`ar_servo` (Learning Project)
+* :ref:`ar_servo` (Basic Project)
 * :ref:`iot_gate` (IoT Project)
 * :ref:`sh_pendulum` (Scratch Project)
 

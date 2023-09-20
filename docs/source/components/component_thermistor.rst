@@ -41,4 +41,7 @@ This relation is an empirical formula. It is accurate only when the temperature 
 
 **Example**
 
+* :ref:`ar_high_tem_alarm` (Basic Project)
+* :ref:`ar_temp` (Basic Project)
+
 * :ref:`sh_low_temperature` (Scratch Project)
