@@ -54,12 +54,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/wiring_high_tem.png
    :align: center
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/tem_alarm.png
     :width: 800

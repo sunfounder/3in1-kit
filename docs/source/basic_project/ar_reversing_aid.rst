@@ -51,13 +51,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/backcar.png
     :width: 800

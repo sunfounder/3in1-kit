@@ -51,13 +51,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic Diagram**
-
-.. image:: img/wiring_guess_number.png
-    :align: center
-
-
-**Fritzing Circuit**
+**Schematic**
 
 In this example, the wiring of LCD1602 and infrared receiving module is
 as follows.
@@ -65,9 +59,12 @@ as follows.
 .. image:: img/circuit_guess_number.png
     :align: center
 
+**Wiring**
+
+.. image:: img/wiring_guess_number.png
+    :align: center
 
 **Code**
-
 
 .. note::
 

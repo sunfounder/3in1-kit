@@ -50,12 +50,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/wiring_reaction_game.png
     :align: center
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/reaction_game.png
     :align: center
