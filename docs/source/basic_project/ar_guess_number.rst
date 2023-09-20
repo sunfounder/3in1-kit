@@ -44,14 +44,14 @@
 
 **回路図**
 
-.. image:: img/wiring_guess_number.png
+この例では、LCD1602と赤外線受信モジュールの配線は以下の通りです。
+
+.. image:: img/circuit_guess_number.png
     :align: center
 
 **配線図**
 
-この例では、LCD1602と赤外線受信モジュールの配線は以下の通りです。
-
-.. image:: img/circuit_guess_number.png
+.. image:: img/wiring_guess_number.png
     :align: center
 
 **コード**
