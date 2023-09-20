@@ -88,18 +88,18 @@
 
     .. code-block:: arduino
 
-    const int buzzerPin = 9;
-    const int ledPin = 8;
-    const int photocellPin = A0;  //フォトレジスタはA2に接続
+        const int buzzerPin = 9;
+        const int ledPin = 8;
+        const int photocellPin = A0;  //フォトレジスタはA2に接続
 
-    int lightLow = 1023;
-    int lightHigh = 0;
+        int lightLow = 1023;
+        int lightHigh = 0;
 
-    int sensorValue = 0;        // センサーから読み取った値
-    int pitch = 0;           // センサーの値をLED 'バー'に変換
+        int sensorValue = 0;        // センサーから読み取った値
+        int pitch = 0;           // センサーの値をLED 'バー'に変換
 
-    unsigned long previousMillis = 0;
-    const long interval = 5000;
+        unsigned long previousMillis = 0;
+        const long interval = 5000;
 
 #. ``setup()`` でのキャリブレーションプロセスを設定します。
 
