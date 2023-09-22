@@ -51,13 +51,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/backcar.png
     :width: 800
@@ -68,7 +68,7 @@ You can also buy them separately from the links below.
 .. note::
 
     * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\basic_project\6.4_reversingAid`` directly.
-    * Or copy this code into Arduino IDE 1/2.
+    * Or copy this code into Arduino IDE .
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
@@ -85,16 +85,53 @@ After the code is successfully uploaded, the current detected distance will be d
 
 **How it works?**
 
-In this project, we need to avoid the interference between the LCD
-screen and the alarm system as much as possible (for example, the LED
-flicker time is too long and the LCD refresh is delayed), so please
-avoid using the ``delay()`` statement and use two separate intervals to
-control the working frequency of the LCD and alarm system respectively.
-Its workflow is shown in the flow chart. For analysis of Interval
-function, refer to :ref:`ar_interval`.
+This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
 
-.. image:: img/Part_three_1_Example_Explanation.png
-   :align: center
+The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
 
+#. Loop to read distance and update parameters
 
+    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
 
+    .. code-block:: arduino
+
+        // Update the distance
+        distance = readDistance();
+
+        // Update intervals based on distance
+        if (distance <= 10) {
+            intervals = 300;
+        } else if (distance <= 20) {
+            intervals = 500;
+        } else if (distance <= 50) {
+            intervals = 1000;
+        } else {
+            intervals = 2000;
+        }
+
+#. Check if it's time to beep
+
+    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+
+    .. code-block:: arduino
+
+        unsigned long currentMillis = millis();
+        if (currentMillis - previousMillis >= intervals) {
+            Serial.println("Beeping!");
+            beep();
+            previousMillis = currentMillis;
+        }
+
+#. Update LCD display
+
+    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+
+    .. code-block:: arduino
+
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("Dis: ");
+        lcd.print(distance);
+        lcd.print(" cm");
+
+        delay(100);

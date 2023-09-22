@@ -20,6 +20,10 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 ## Update:
 
 2023-09-20:
+- Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
+- Addressed various minor corrections.
+
+2023-09-20:
 - Fixed some issues.
 
 2023-09-19:
