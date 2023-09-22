@@ -13,8 +13,8 @@ const long interval = 5000;
 
 void setup()
 {
-  pinMode(buzzerPin, OUTPUT);// make all the LED pins outputs
-
+  pinMode(buzzerPin, OUTPUT); // make buzzer output
+  pinMode(ledPin, OUTPUT); // make the LED pin output
 
   /* calibrate the photoresistor max & min values */
   previousMillis = millis();
