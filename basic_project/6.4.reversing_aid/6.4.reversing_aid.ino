@@ -28,6 +28,9 @@ void setup() {
   // Initialize the buzzer pin
   pinMode(buzzerPin, OUTPUT);
 
+  // Initialize the led pin
+  pinMode(ledPin, OUTPUT);
+  
   // Start the LCD
   lcd.clear();
   lcd.init();
