@@ -50,12 +50,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/wiring_reaction_game.png
     :align: center
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/6.5_reaction_game_bb.png
     :align: center
@@ -65,7 +65,7 @@ You can also buy them separately from the links below.
 .. note::
 
     * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\learning_project\6.5_reversingAid`` directly.
-    * Or copy this code into Arduino IDE 1/2.
+    * Or copy this code into Arduino IDE.
     
     * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`install_libraries_ar`.
 

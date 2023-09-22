@@ -50,13 +50,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/circuit_guess_number.png
     :align: center
 
 
-**Fritzing Circuit**
+**Wiring**
 
 In this example, the wiring of LCD1602 and infrared receiving module is
 as follows.
@@ -71,7 +71,7 @@ as follows.
 .. note::
 
     * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\learning_project\6.6.guess_number`` directly.
-    * Or copy this code into Arduino IDE 1/2.
+    * Or copy this code into Arduino IDE.
     * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
 
 

@@ -55,13 +55,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic Diagram**
+**Schematic**
 
 .. image:: img/wiring_high_tem.png
    :align: center
 
 
-**Fritzing Circuit**
+**Wiring**
 
 .. image:: img/6.3_high_tem_alarm_bb.png
     :width: 800
@@ -73,7 +73,7 @@ You can also buy them separately from the links below.
 .. note::
 
     * You can open the file ``6.3.high_tem_alarm.ino`` under the path of ``3in1-kit\learning_project\6.3.high_tem_alarm`` directly.
-    * Or copy this code into Arduino IDE 1/2.
+    * Or copy this code into Arduino IDE.
     * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png

@@ -18,6 +18,10 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-09-22:
+- Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
+- Made corrections to 1.2_beep_bb.png and 5.15_eeprom_bb.png as there were pin errors.
+- Addressed various minor corrections.
 
 2023-09-20:
 - Modify the description and code of projects involving libraries.
