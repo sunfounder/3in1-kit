@@ -81,7 +81,55 @@
 
 **どのように動作するのか？**
 
-このプロジェクトでは、LCD画面とアラームシステムの間の干渉をできるだけ避ける必要があります（例えば、LEDの点滅時間が長すぎるとLCDのリフレッシュが遅れる）。そのため、 ``delay()`` 文を使用せず、LCDとアラームシステムの動作周波数をそれぞれ制御するための2つの別々のインターバルを使用してください。そのワークフローはフローチャートで示されています。Interval関数の解析については、 :ref:`ar_interval` を参照してください。
 
-.. image:: img/Part_three_1_Example_Explanation.png
-   :align: center
+このコードを使用すると、オブジェクト間の距離を測定し、LCDディスプレイとブザーを通じてフィードバックを提供するシンプルな距離測定装置を作成できます。
+
+``loop()`` 関数はプログラムの主要なロジックを含み、連続して実行されます。 ``loop()`` 関数について詳しく見てみましょう。
+
+#. 距離を読み取り、パラメータを更新するループ
+
+    ``loop`` 内で、コードはまず超音波モジュールで測定された距離を読み取り、その距離に基づいてインターバルパラメータを更新します。
+
+    .. code-block:: arduino
+
+        // 距離を更新
+        distance = readDistance();
+
+        // 距離に基づいてインターバルを更新
+        if (distance <= 10) {
+            intervals = 300;
+        } else if (distance <= 20) {
+            intervals = 500;
+        } else if (distance <= 50) {
+            intervals = 1000;
+        } else {
+            intervals = 2000;
+        }
+
+#. ビープ音を鳴らすタイミングを確認
+
+    コードは現在の時間と前回のビープ音の時間の差を計算し、その差がインターバル時間以上であれば、ブザーを鳴らして前回のビープ音の時間を更新します。
+
+    .. code-block:: arduino
+
+        unsigned long currentMillis = millis();
+        if (currentMillis - previousMillis >= intervals) {
+            Serial.println("ビーピング!");
+            beep();
+            previousMillis = currentMillis;
+        }
+
+#. LCDディスプレイを更新
+
+    コードはLCDディスプレイをクリアし、最初の行に"Dis:"と現在の距離（センチメートル）を表示します。
+
+    .. code-block:: arduino
+
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("Dis: ");
+        lcd.print(distance);
+        lcd.print(" cm");
+
+        delay(100);
+

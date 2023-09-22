@@ -108,6 +108,7 @@
         void setup()
         {
             pinMode(buzzerPin, OUTPUT);// すべてのLEDピンを出力に設定
+            pinMode(ledPin, OUTPUT); //LEDピンを出力させる
 
             /* フォトレジスタの最大値 & 最小値のキャリブレーション */
             previousMillis = millis();
