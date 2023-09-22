@@ -1,33 +1,30 @@
 .. _cpn_buzzer:
 
-Buzzer
+Summer
 =======
 
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+Als eine Art von elektronischem Summer mit integrierter Struktur, die mit Gleichstrom versorgt werden, werden Summer häufig in Computern, Druckern, Fotokopierern, Alarmen, elektronischen Spielzeugen, automobilen Elektronikgeräten, Telefonen, Timern und anderen elektronischen Produkten oder Sprachgeräten verwendet.
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+Man kann Summer in aktive und passive unterteilen (siehe folgendes Bild). Wenn man den Summer so dreht, dass seine Pins nach oben zeigen, dann ist der Summer mit einer grünen Platine ein passiver Summer, während der mit schwarzem Klebeband umwickelte ein aktiver Summer ist.
 
-The difference between an active buzzer and a passive buzzer: 
+Der Unterschied zwischen einem aktiven und einem passiven Summer: 
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+Ein aktiver Summer hat eine eingebaute Oszillationsquelle, daher gibt er Töne von sich, wenn er elektrifiziert wird. Ein passiver Summer hat jedoch keine solche Quelle und gibt daher keinen Ton von sich, wenn Gleichstromsignale verwendet werden. Stattdessen müssen Sie ihn mit Rechteckwellen antreiben, deren Frequenz zwischen 2K und 5K liegt. Der aktive Summer ist oft teurer als der passive aufgrund der eingebauten Oszillationskreise.
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+Das Folgende ist das elektrische Symbol eines Summers. Er hat zwei Pins, einen positiven und einen negativen Pol. Ein + auf der Oberfläche stellt die Anode dar, und der andere ist die Kathode.
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don’t mix them up when connecting, otherwise the buzzer will not make sound. 
+Sie können die Pins des Summers überprüfen: der längere ist die Anode und der kürzere die Kathode. Bitte verwechseln Sie sie nicht beim Anschließen, sonst gibt der Summer keinen Ton von sich.
 
-`Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
+`Summer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_beep` (Learning Project)
-* :ref:`ar_passive_buzzer` (Learning Project)
-* :ref:`iot_music` (IoT Project)
-
-
-
+* :ref:`ar_beep` (Grundlegendes Projekt)
+* :ref:`ar_passive_buzzer` (Grundlegendes Projekt)
+* :ref:`iot_music` (IoT-Projekt)

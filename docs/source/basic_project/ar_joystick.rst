@@ -1,44 +1,42 @@
 .. _ar_joystick:
 
-4.3 Toggle the Joystick
+4.3 Den Joystick betätigen
 ================================
 
-The joystick should be very familiar to anyone who plays video games regularly.
-It is usually used to move characters or rotate the screen.
+Jeder, der regelmäßig Videospiele spielt, sollte den Joystick gut kennen.
+Er wird normalerweise verwendet, um Charaktere zu bewegen oder den Bildschirm zu drehen.
 
-Our movements can be read by the Joystick, which works on a very simple principle.
-It consists of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick in both vertical and horizontal directions, producing a value (x,y) in a planar right-angle coordinate system.
+Unsere Bewegungen können vom Joystick erkannt werden, der nach einem sehr einfachen Prinzip funktioniert.
+Er besteht aus zwei Potentiometern, die senkrecht zueinander stehen.
+Diese beiden Potentiometer messen den analogen Wert des Joysticks in vertikaler und horizontaler Richtung und erzeugen einen Wert (x,y) in einem planaren rechtwinkligen Koordinatensystem.
 
+Dieses Set beinhaltet auch einen Joystick mit digitalem Eingang. Er wird aktiviert, wenn der Joystick gedrückt wird.
 
-This kit also includes a joystick with a digital input. It is activated when the joystick is pressed.
+**Benötigte Komponenten**
 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-**Required Components**
-
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,16 +49,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_5.3_joystick.png
 
 .. note::
-    The SW pin is connected to a 10K pull-up resistor, 
-    the reason is to be able to get a stable high level on the SW pin (Z axis) when the joystick is not pressed; 
-    otherwise the SW is in a suspended state and the output value may vary between 0/1.
+    Der SW-Pin ist mit einem 10K Pull-up-Widerstand verbunden, 
+    um ein stabiles Hochpegelsignal am SW-Pin (Z-Achse) zu erhalten, wenn der Joystick nicht gedrückt ist; 
+    sonst befindet sich der SW in einem schwebenden Zustand, und der Ausgabewert kann zwischen 0/1 variieren.
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/toggle_the_joystick_bb.jpg
     :width: 800
@@ -70,16 +68,16 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``4.3.toggle_the_joystick.ino`` file under the path of ``3in1-kit\basic_project\4.3.toggle_the_joystick``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``4.3.toggle_the_joystick.ino`` im Pfad ``3in1-kit\basic_project\4.3.toggle_the_joystick``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f678a03f-546c-42ed-bfae-b8c7daa5eec9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
+Öffnen Sie den seriellen Monitor, nachdem der Code erfolgreich hochgeladen wurde, um die x,y,z-Werte des Joysticks zu sehen.
 
-* The x-axis and y-axis values are analog values that vary from 0 to 1023.
-* The Z-axis is a digital value with a status of 1 or 0 ( when pressed , it is 0 ).
+* Die Werte der x- und y-Achse sind analoge Werte, die von 0 bis 1023 variieren.
+* Die Z-Achse hat einen digitalen Wert mit einem Status von 1 oder 0 (wenn gedrückt, ist es 0).

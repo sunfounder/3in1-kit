@@ -1,36 +1,35 @@
 .. _ar_potentiometer:
 
-4.1 Turn the Knob
-===================
+4.1 Den Drehknopf drehen
+============================
 
-Potentiometer is a resistor component with 3 terminals and its resistance value can be
-adjusted according to some regular variation.
+Ein Potentiometer ist ein Widerstandskomponente mit 3 Anschlüssen, dessen Widerstandswert nach einer bestimmten Regelung variiert werden kann.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,22 +41,13 @@ You can also buy them separately from the links below.
         - |link_potentiometer_buy|
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_5.1_potentiometer.png
 
-In this example, we use the analog pin (A0) to read the value
-of the potentiometer. By rotating the axis of the potentiometer, you can
-change the distribution of resistance among these three pins, changing
-the voltage on the middle pin. When the resistance between the middle
-and a outside pin connected to 5V is close to zero (and the resistance
-between the middle and the other outside pin is close to 10kΩ), the
-voltage at the middle pin is close to 5V. The reverse operation (the
-resistance between the middle and a outside pin connected to 5V is close
-to 10kΩ) will make the voltage at the middle pin be close to 0V.
+In diesem Beispiel verwenden wir den analogen Pin (A0), um den Wert des Potentiometers auszulesen. Durch das Drehen der Achse des Potentiometers können Sie die Widerstandsverteilung zwischen diesen drei Pins ändern und so die Spannung am mittleren Pin verändern. Wenn der Widerstand zwischen dem mittleren und einem äußeren, mit 5V verbundenen Pin nahezu null ist (und der Widerstand zwischen dem mittleren und dem anderen äußeren Pin nahe 10kΩ liegt), liegt die Spannung am mittleren Pin nahe 5V. Die umgekehrte Operation (Widerstand zwischen dem mittleren und einem äußeren, mit 5V verbundenen Pin ist nahe 10kΩ) führt dazu, dass die Spannung am mittleren Pin nahe 0V liegt.
 
-
-**Wiring**
+**Verkabelung**
 
 .. image:: img/turn_thek_knob_bb.jpg
     :width: 600
@@ -65,20 +55,15 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 
 **Code**
 
-
 .. note::
 
-   * You can open the file ``4.1.turn_the_knob.ino`` under the path of ``3in1-kit\basic_project\4.1.turn_the_knob``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``4.1.turn_the_knob.ino`` im Pfad ``3in1-kit\basic_project\4.1.turn_the_knob`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d931f2c9-74bc-4a53-8531-39a21a07dbaf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-    
-After uploading the codes to the board, you can open the serial
-monitor to see the reading value of the pin. When rotating the axis of
-the potentiometer, the serial monitor will print the value
-「0」~「1023」. 
+Nachdem Sie die Codes auf das Board geladen haben, können Sie den seriellen Monitor öffnen, um den gelesenen Wert des Pins zu sehen. Wenn Sie die Achse des Potentiometers drehen, wird der serielle Monitor den Wert zwischen「0」und「1023」anzeigen.

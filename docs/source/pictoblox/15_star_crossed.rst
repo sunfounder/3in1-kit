@@ -1,48 +1,48 @@
 .. _sh_star_crossed:
 
-2.15 GAME - Star-Crossed
-==========================
+2.15 SPIEL - Sternengekreuzt
+===============================
 
-In the next projects, we will play some fun mini-games in PictoBlox.
+In den nächsten Projekten werden wir einige spaßige Minispiele in PictoBlox spielen.
 
-Here we use Joystick module to play a Star-Crossed game.
+Hier verwenden wir das Joystick-Modul, um das Spiel "Sternengekreuzt" zu spielen.
 
-After the script is run, stars will appear randomly on the stage, you need to use Joystick to control Rocketship to avoid the stars, if you touch it, the game will be over.
+Nachdem das Skript gestartet wurde, erscheinen zufällig Sterne auf der Bühne. Mit dem Joystick steuern Sie das Raumschiff, um den Sternen auszuweichen. Wenn Sie sie berühren, endet das Spiel.
 
 .. image:: img/16_rocket.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+------------------------
 
-- How Joystick module works
-- Set the x and y coordinates of the sprite
+- Wie das Joystick-Modul funktioniert
+- Das Festlegen der x- und y-Koordinaten des Sprites
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,76 +51,74 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots.
+Ein Joystick ist ein Eingabegerät, das aus einem Stick besteht, der auf einer Basis schwenkt und seinen Winkel oder seine Richtung an das zu steuernde Gerät meldet. Joysticks werden oft verwendet, um Videospiele und Roboter zu steuern.
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick’s position on two axes – the X-axis (left to right) and the Y-axis (up and down).
+Um dem Computer eine vollständige Bewegungsfreiheit zu melden, muss ein Joystick die Stickposition in zwei Achsen messen – der X-Achse (links nach rechts) und der Y-Achse (oben nach unten).
 
-The motion coordinates of the joystick are shown in the following figure.
+Die Bewegungskoordinaten des Joysticks sind in der folgenden Abbildung dargestellt.
 
 .. note::
 
-    * The x coordinate is from left to right, the range is 0-1023.
-    * y coordinate is from top to bottom, range is 0-1023.
+    * Die x-Koordinate geht von links nach rechts, der Bereich liegt zwischen 0-1023.
+    * Die y-Koordinate geht von oben nach unten, Bereich 0-1023.
 
 .. image:: img/16_joystick.png
 
-
-Now build the circuit according to the following diagram.
+Bauen Sie jetzt die Schaltung gemäß dem folgenden Diagramm.
 
 .. image:: img/circuit/joystick_circuit.png
 
-Programming
+Programmierung
 ------------------
-The whole script is to achieve the effect that when the green flag is clicked, the **Stars** sprite moves in a curve on the stage and you need to use the joystick to move the **Rocketship**, so that it will not be touched by the **Star** sprite.
+Das gesamte Skript soll den Effekt erzielen, dass bei Klick auf die grüne Flagge der **Stars**-Sprite in einer Kurve auf der Bühne bewegt wird und Sie den Joystick verwenden müssen, um das **Rocketship** zu bewegen, damit es nicht vom **Stars**-Sprite berührt wird.
 
-**1. Add sprites and backdrops**
+**1. Sprites und Hintergründe hinzufügen**
 
-Delete the default sprite, and use the **Choose a Sprite** button to add the **Rocketship** sprite and the **Star** sprite. Note that the **Rocket** sprite size is set to 50%.
+Löschen Sie den Standard-Sprite und verwenden Sie die Schaltfläche **Choose a Sprite** zum Hinzufügen des **Rocketship**-Sprites und des **Star**-Sprites. Beachten Sie, dass die Größe des **Rocket**-Sprites auf 50% eingestellt ist.
 
 .. image:: img/16_sprite.png
 
-Now add the **Stars** backdrop by **Choose a Backdrop**.
+Fügen Sie jetzt den **Stars**-Hintergrund durch **Choose a Backdrop** hinzu.
 
 .. image:: img/16_sprite1.png
 
-**2. Scripting for Rocketship**
+**2. Skripting für Raumschiff**
 
-The **Rocketship** sprite is to achieve the effect that it will appear at a random position and then be controlled by the joystick to move it up, down, left, and right.
+Der **Rocketship**-Sprite soll den Effekt erzielen, dass er an einer zufälligen Position erscheint und dann durch den Joystick gesteuert wird, um ihn nach oben, unten, links und rechts zu bewegen.
 
-The workflow is as follows.
+Der Ablauf ist wie folgt.
 
-* When the green flag is clicked, have the sprite go to a random location and create 2 variables **x** and **y**, which store the values read from A0 (VRX of Joystick) and A1 (VRY of Joystick), respectively. You can let the script run, toggling the joystick up and down, left and right, to see the range of values for x and y.
+* Wenn auf die grüne Flagge geklickt wird, lassen Sie den Sprite zu einer zufälligen Position gehen und erstellen Sie 2 Variablen **x** und **y**, die die Werte lesen, die von A0 (VRX des Joysticks) bzw. A1 (VRY des Joysticks) kommen. Sie können das Skript ausführen und den Joystick hoch und runter, links und rechts kippen, um den Wertebereich für x und y zu sehen.
 
 .. image:: img/16_roc2.png
 
-* The value of A0 is in the range 0-1023 (the middle is about 512). Use ``x-512>200`` to determine if Joystick is toggling to the right, and if so, make the x coordinate of the sprite +30 (to move the sprite to the right).
+* Der Wert von A0 liegt im Bereich 0-1023 (die Mitte liegt bei etwa 512). Verwenden Sie ``x-512>200``, um festzustellen, ob der Joystick nach rechts gekippt wird, und wenn ja, lassen Sie die x-Koordinate des Sprites +30 sein (um den Sprite nach rechts zu bewegen).
 
 .. image:: img/16_roc3.png
 
-* If the Joystick is toggled to the left (``x-512<-200``), let the x coordinate of the sprite be -30 (let the sprite move to the left).
+* Wenn der Joystick nach links gekippt wird (``x-512<-200``), lassen Sie die x-Koordinate des Sprites -30 sein (um den Sprite nach links zu bewegen).
 
 .. image:: img/16_roc4.png
 
-* Since the Joystick's y coordinate is from up (0) to down (1023), and the sprite's y coordinate is from down to up. So in order to move the Joystick upwards and the sprite upwards, the y-coordinate must be -30 in the script.
+* Da die y-Koordinate des Joysticks von oben (0) nach unten (1023) geht und die y-Koordinate des Sprites von unten nach oben geht, muss die y-Koordinate im Skript -30 sein, um den Joystick nach oben und den Sprite nach oben zu bewegen.
 
 .. image:: img/16_roc5.png
 
-* If the joystick is flicked down, the y-coordinate of the sprite is +30.
-
+* Wenn der Joystick nach unten gekippt wird, ist die y-Koordinate des Sprites +30.
 
 .. image:: img/16_roc6.png
 
-**3. Scripting for Star**
+**3. Skripting für Stern**
 
-The effect to be achieved by the **Star** sprite is to appear at a random location, and if it hits **Rocketship**, the script stops running and the game ends.
+Der Effekt, den der **Star**-Sprite erzielen soll, ist, dass er an einer zufälligen Stelle erscheint, und wenn er das **Rocketship** trifft, stoppt das Skript und das Spiel endet.
 
-* When the green flag is clicked and the sprite goes to a random location, the [turn degrees] block is to make the **Star** sprite move forward with a bit of an angle change so you can see that it is moving in a curve and if on edge, bounce.
+* Wenn auf die grüne Flagge geklickt wird und der Sprite zu einer zufälligen Position geht, dient der Block [turn degrees] dazu, den **Star**-Sprite mit einer leichten Winkeländerung vorwärts zu bewegen, sodass Sie sehen können, dass er sich in einer Kurve bewegt, und wenn er am Rand ist, prallt er ab.
 
 .. image:: img/16_star1.png
 
-* If the sprite touches the **Rocketship** sprite while it's moving, stop the script from running.
+* Wenn der Sprite während seiner Bewegung den **Rocketship**-Sprite berührt, stoppen Sie das Skript.
 
 .. image:: img/16_star2.png

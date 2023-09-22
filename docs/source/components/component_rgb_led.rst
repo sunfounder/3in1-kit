@@ -5,27 +5,26 @@ RGB LED
 
 .. image:: img/rgb_led.png
     :width: 100
-    
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+
+RGB-LEDs emittieren Licht in verschiedenen Farben. Eine RGB-LED kombiniert drei LEDs in den Farben Rot, Grün und Blau in einer transparenten oder halbtransparenten Kunststoffhülle. Durch das Ändern der Eingangsspannung der drei Pins und deren Überlagerung kann sie, statistischen Angaben zufolge, 16.777.216 verschiedene Farben erzeugen.
 
 .. image:: img/rgb_light.png
     :width: 600
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+RGB-LEDs können in gemeinsame Anoden und gemeinsame Kathoden unterteilt werden. In diesem Bausatz wird die letztere verwendet. Die **gemeinsame Kathode**, oder GK, bedeutet, dass die Kathoden der drei LEDs verbunden sind. Wenn man sie mit GND verbindet und die drei Pins anschließt, wird die LED die entsprechende Farbe anzeigen.
 
-Its circuit symbol is shown as figure.
+Ihr Schaltungssymbol ist im folgenden Bild dargestellt.
 
 .. image:: img/rgb_symbol.png
     :width: 300
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+Eine RGB-LED hat 4 Pins: Der längste ist GND; die anderen sind Rot, Grün und Blau. Wenn man die Kunststoffhülle berührt, findet man eine Kerbe. Der dem Einschnitt am nächsten gelegene Pin ist der erste Pin, gekennzeichnet als Rot, dann GND, Grün und anschließend Blau.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_rgb` (Learning Project)
-* :ref:`ar_threshold` (Learning Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
-
+* :ref:`ar_rgb` (Grundlegendes Projekt)
+* :ref:`ar_threshold` (Grundlegendes Projekt)
+* :ref:`sh_colorful_ball` (Scratch-Projekt)

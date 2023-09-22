@@ -1,47 +1,46 @@
 .. _sh_tap_tile:
 
-2.20 GAME - Don't Tap on The White Tile
-==========================================
+2.20 SPIEL - Klicke nicht auf das weiße Feld
+===============================================
 
-I'm sure many of you have played this game on your cell phones. This game is played by tapping on randomly appearing black to add points, the speed will get faster and faster, tap on white blocks or miss black blocks game over.
+Viele von Ihnen haben dieses Spiel sicherlich schon auf Ihrem Handy gespielt. In diesem Spiel geht es darum, auf zufällig erscheinende schwarze Felder zu klicken, um Punkte zu sammeln. Die Geschwindigkeit erhöht sich stetig. Wenn man auf ein weißes Feld klickt oder ein schwarzes Feld verfehlt, ist das Spiel vorbei.
 
-Now we use PictoBlox to replicate it.
+Jetzt replizieren wir es mit PictoBlox.
 
-Insert two IR obstacle avoidance modules vertically on the breadboard, when your hand is placed above one of the IR modules, a blink dot will appear on the stage, representing a tap was made.
+Setzen Sie zwei IR-Hindernisvermeidungsmodule vertikal auf das Steckbrett. Wenn Sie Ihre Hand über eines der IR-Module legen, erscheint ein blinkender Punkt auf der Bühne, der einen getätigten Klick darstellt.
 
-If the tap to the black block, the score plus 1, touch the white block, the score minus 1.
+Wenn Sie auf das schwarze Feld klicken, wird der Punktestand um 1 erhöht; berühren Sie das weiße Feld, wird der Punktestand um 1 verringert.
 
-You need to decide whether to place your hand on top of the IR module on the left or on top of the IR module on the right, depending on the position of the black block on the stage.
-
+Je nach Position des schwarzen Blocks auf der Bühne müssen Sie entscheiden, ob Sie Ihre Hand über das linke oder das rechte IR-Modul legen.
 
 .. image:: img/21_tile.png
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,124 +48,123 @@ You can also buy them separately from the links below.
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
-    *   - :ref:`cpn_avoid` 
+    *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Das Hindernisvermeidungsmodul ist ein infrarotbasierter Näherungssensor mit einstellbarer Entfernung, dessen Ausgang normalerweise hoch ist und niedrig wird, wenn ein Hindernis erkannt wird.
 
-Now build the circuit according to the diagram below.
+Bauen Sie die Schaltung entsprechend dem untenstehenden Diagramm.
 
 .. image:: img/circuit/2avoid_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-Here we need to have 3 sprites, **Tile** , **Left IR** and **Right IR**.
+Hier benötigen wir 3 Sprites: **Tile**, **Left IR** und **Right IR**.
 
-* **Tile** sprite: used to achieve the effect of alternating black and white tiles downward, in the cell phone this game is generally 4 columns, here we only do two columns.
-* **Left IR** sprite: used to achieve the click effect, when the left IR module senses your hand, it will send a message - **left** to **Left IR** sprite, let it start working. If it touches the black tile on the stage, the score will be increased by 1, otherwise the score will be decreased by 1.
-* **Right IR** sprite: The function is basically the same as **Left IR**, except that it receives **Right** information.
+* **Tile**-Sprite: Dient zur Darstellung von abwechselnd schwarzen und weißen Feldern, die nach unten gehen. In der Handy-Version dieses Spiels gibt es normalerweise 4 Spalten, hier machen wir nur zwei.
+* **Left IR**-Sprite: Dient zur Darstellung des Klick-Effekts. Wenn das linke IR-Modul Ihre Hand erkennt, sendet es eine Nachricht - **left** an den **Left IR**-Sprite, um ihn zu aktivieren. Berührt er das schwarze Feld auf der Bühne, erhöht sich der Punktestand um 1, andernfalls verringert er sich um 1.
+* **Right IR**-Sprite: Die Funktion ist im Wesentlichen die gleiche wie bei **Left IR**, außer dass er die Information **Right** erhält.
 
-**1. Paint a Tile sprite**.
+**1. Erstellen Sie ein Tile-Sprite**.
 
-Delete the default sprite, mouse over the **Add Sprite** icon, select **Paint** and a blank sprite will appear and name it **Tile**.
+Löschen Sie das Standard-Sprite, bewegen Sie die Maus über das Symbol **Add Sprite**, wählen Sie **Paint** und ein leeres Sprite erscheint, welches Sie **Tile** nennen.
 
 .. image:: img/21_tile1.png
 
-Go to the **Costumes** page and use the **Rectangle** tool to draw a rectangle.
+Gehen Sie zur **Costumes**-Seite und verwenden Sie das **Rectangle**-Werkzeug, um ein Rechteck zu zeichnen.
 
 .. image:: img/21_tile2.png
 
-Select the rectangle and click **Copy** -> **Paste** to make an identical rectangle, then move the two rectangles to a flush position.
+Wählen Sie das Rechteck aus und klicken Sie auf **Copy** -> **Paste**, um ein identisches Rechteck zu erstellen. Anschließend verschieben Sie die beiden Rechtecke so, dass sie bündig zueinander stehen.
 
 .. image:: img/21_tile01.png
 
-Select one of the rectangles and choose a fill color of black.
+Wählen Sie eines der Rechtecke aus und wählen Sie eine schwarze Füllfarbe.
 
 .. image:: img/21_tile02.png
 
-Now select both rectangles and move them so that their center points match the center of the canvas.
+Jetzt wählen Sie beide Rechtecke aus und verschieben Sie sie so, dass ihre Mittelpunkte mit dem Zentrum der Leinwand übereinstimmen.
 
 .. image:: img/21_tile0.png
 
-Duplicate costume1, alternating the fill colors of the two rectangles. For example, the fill color of costume1 is white on the left and black on the right, and the fill color of costume2 is black on the left and white on the right.
+Duplizieren Sie das Kostüm1 und wechseln Sie die Füllfarben der beiden Rechtecke. Zum Beispiel hat Kostüm1 links die Füllfarbe Weiß und rechts die Füllfarbe Schwarz, bei Kostüm2 ist es umgekehrt.
 
 .. image:: img/21_tile3.png
 
-**2. Scripting the Tile sprite**
 
-Now go back to the **Blocks** page and set the initial position of the **Tile** sprite so that it is at the top of the stage.
+**2. Das Script für den Tile-Sprite erstellen**
+
+Gehen Sie nun zurück zur **Blocks**-Seite und legen Sie die Anfangsposition des **Tile**-Sprites fest, damit dieser am oberen Bühnenrand positioniert ist.
 
 .. image:: img/21_tile4.png
 
-Create a variable -**blocks** and give it an initial value to determine the number of times the **Tile** sprite will appear. Use the [repeat until] block to make the variable **blocks** gradually decrease until **blocks** is 0. During this time, have the sprite **Tile** randomly switch its costume.
+Erstellen Sie eine Variable - **blocks** und geben Sie ihr einen Startwert, um die Anzahl der Erscheinungen des **Tile**-Sprites zu bestimmen. Nutzen Sie den [Wiederhole bis]-Block, damit die Variable **blocks** stetig verringert wird, bis **blocks** 0 erreicht. Währenddessen sollte der Sprite **Tile** zufällig sein Kostüm wechseln.
 
-After clicking on the green flag, you will see the **Tile** sprite on the stage quickly switch costumes.
+Nachdem Sie auf die grüne Flagge geklickt haben, wird der **Tile**-Sprite auf der Bühne schnell die Kostüme wechseln.
 
 .. image:: img/21_tile5.png
 
-Create clones of the **Tile** sprite while the variable **blocks** is decreasing, and stop the script from running when blocks is 0. Two [wait () seconds] blocks are used here, the first to limit the interval between **Tile's** clones and the second is to let the variable blocks decrease to 0 without stopping the program immediately, giving the last tile sprite enough time to move.
-
+Erstellen Sie Klone des **Tile**-Sprites, während die Variable **blocks** abnimmt, und stoppen Sie das Skript, wenn blocks 0 ist. Hier werden zwei [wait () seconds]-Blöcke verwendet: Der erste begrenzt das Intervall zwischen **Tiles** Klonen und der zweite lässt die Variable blocks auf 0 sinken, ohne das Programm sofort zu stoppen, sodass dem letzten Tile-Sprite genügend Zeit zum Bewegen bleibt.
 
 .. image:: img/21_tile6.png
 
-Now script the clone of the **Tile** sprite to move down slowly and delete it when it reaches the bottom of the stage. The change in the y coordinate affects the drop speed, the larger the value, the faster the drop speed.
+Nun soll der Klon des **Tile**-Sprites langsam nach unten bewegen und gelöscht werden, sobald er den unteren Bühnenrand erreicht. Die Änderung in der y-Koordinate beeinflusst die Fallgeschwindigkeit: Je größer der Wert, desto schneller die Geschwindigkeit.
 
 .. image:: img/21_tile7.png
 
-Hide the body and show the clone.
+Das Original verstecken und den Klon anzeigen.
 
 .. image:: img/21_tile8.png
 
-**3. Read the values of the 2 IR modules**
+**3. Die Werte der 2 IR-Module auslesen**
 
-In the backdrop, read the values of the 2 IR modules and make the corresponding actions.
+Im Hintergrund lesen Sie die Werte der 2 IR-Module aus und führen die entsprechenden Aktionen durch.
 
-* If the left IR obstacle avoidance module senses your hand, broadcast a message - **left**.
-* If the left IR avoidance module senses your hand, broadcast a message - **right**.
+* Wenn das linke IR-Hindernisvermeidungsmodul Ihre Hand erkennt, senden Sie eine Nachricht - **left**.
+* Wenn das rechte IR-Hindernisvermeidungsmodul Ihre Hand erkennt, senden Sie eine Nachricht - **right**.
 
 .. image:: img/21_tile9.png
 
-**4. Left IR sprite**
+**4. Left IR-Sprite**
 
-Again, mouse over the **Add sprite** icon and select **Paint** to create a new sprite called **Left IR**.
+Fahren Sie erneut mit der Maus über das **Add sprite**-Symbol und wählen Sie **Paint**, um einen neuen Sprite namens **Left IR** zu erstellen.
 
 .. image:: img/21_tile10.png
 
-Go to the **Costumes** page of the **Left IR** sprite, select the fill color (any color out of black and white) and draw a circle.
+Gehen Sie zur **Costumes**-Seite des **Left IR**-Sprites, wählen Sie eine Füllfarbe (eine beliebige Farbe außer Schwarz und Weiß) und zeichnen Sie einen Kreis.
 
 .. image:: img/21_tile11.png
 
-Now start scripting the **Left IR** sprite. When the message - **left** is received (the IR receiver module on the left detects an obstacle), then determine if the black block of the **Tile** sprite is touched, and if it is, let the variable **count** add 1, otherwise subtract 1.
+Beginnen Sie nun, den **Left IR**-Sprite zu scripten. Wenn die Nachricht - **left** empfangen wird (das IR-Empfängermodul links erkennt ein Hindernis), dann prüfen Sie, ob der schwarze Block des **Tile**-Sprites berührt wird, und wenn ja, erhöhen Sie die Variable **count** um 1, andernfalls verringern Sie sie um 1.
 
 .. image:: img/21_tile12.png
 
 .. note::
 
-    You need to make the **Tile** sprite appear on the stage, and then absorb the color of the black block in the **Tile** sprite.
+    Sie müssen den **Tile**-Sprite auf der Bühne anzeigen lassen und dann die Farbe des schwarzen Blocks im **Tile**-Sprite aufnehmen.
 
     .. image:: img/21_tile13.png
 
-Now let's do the sensing effect (zoom in and out) for **Left IR**.
+Führen Sie nun den Sensor-Effekt (Vergrößern/Verkleinern) für **Left IR** durch.
 
 .. image:: img/21_tile14.png
 
-Make the **Left IR** sprite hide when the green flag is clicked, show when the message - **left** is received, and finally hide again.
+Lassen Sie den **Left IR**-Sprite verstecken, wenn auf die grüne Flagge geklickt wird, zeigen Sie ihn an, wenn die Nachricht - **left** empfangen wird, und verstecken Sie ihn schließlich wieder.
 
 .. image:: img/21_tile15.png
 
-**5. Right IR sprite**
+**5. Right IR-Sprite**
 
-Copy the **Left IR** sprite and rename it to **Right IR**.
+Kopieren Sie den **Left IR**-Sprite und benennen Sie ihn in **Right IR** um.
 
 .. image:: img/21_tile16.png
 
-Then change the receive message to - **right**.
+Ändern Sie anschließend die empfangene Nachricht in - **right**.
 
 .. image:: img/21_tile17.png
 
-Now all the scripting is done and you can click on the green flag to run the script.
+Nun sind alle Skripte fertig, und Sie können auf die grüne Flagge klicken, um das Skript auszuführen.

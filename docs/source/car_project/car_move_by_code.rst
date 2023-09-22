@@ -1,38 +1,38 @@
 .. _car_move_code:
 
-2. Move by Code
-======================
+2. Steuerung durch Code
+===============================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L298N.
+Im vorherigen Projekt haben wir versucht, den Motor durch verschiedene Pegelsignale am Eingang des L298N zu steuern.
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
-Here we connect the pins IN1~IN4 of L298N to pins 5, 6, 9 and 10 on the R3 board in turn.
+Wenn wir die Pegelsignale über das Programm ändern, können wir die Bewegung des Autos flexibel steuern. 
+Hier verbinden wir die Pins IN1~IN4 des L298N der Reihe nach mit den Pins 5, 6, 9 und 10 auf dem R3-Board.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,14 +41,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
+**Verdrahtung**
 
-**Wiring**
+Das L298N-Motortreibermodul ist ein leistungsstarkes Treibermodul für DC- und Schrittmotoren. Das L298N-Modul kann bis zu 4 Gleichstrommotoren steuern oder 2 Gleichstrommotoren mit Richtungs- und Geschwindigkeitssteuerung.
 
-
-The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
-
-Connect the wires between the L298N module and the R3 board according to the diagram below.
-
+Verbinden Sie die Drähte zwischen dem L298N-Modul und dem R3-Board gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
     :widths: 25 25 50
@@ -71,41 +68,41 @@ Connect the wires between the L298N module and the R3 board according to the dia
       - 
     * - OUT1
       - 
-      - Black wire of right motor
+      - Schwarzes Kabel des rechten Motors
     * - OUT2
       - 
-      - Red wire of right motor
+      - Rotes Kabel des rechten Motors
     * - OUT3
       - 
-      - Black wire of left motor
+      - Schwarzes Kabel des linken Motors
     * - OUT4
       - 
-      - Red wire of left motor
+      - Rotes Kabel des linken Motors
 
 .. image:: img/car_motor1.jpg
     :width: 800
+
 
 **Code**
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``2.move.ino`` im Pfad ``3in1-kit\car_project\2.move``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d9c830d3-1371-4867-a2e7-18d85d0b9d25/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Nachdem der Code hochgeladen wurde, wird das Auto jeweils zwei Sekunden lang vorwärts, rückwärts, links und rechts fahren.
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
+**Wie funktioniert das?**
 
-**How it works?**
+Dieses Projekt entspricht im Wesentlichen dem vorherigen. Es soll das Auto durch Ausgabe verschiedener Pegel von IN1 bis IN4 vorwärts, rückwärts, links, rechts fahren und anhalten lassen.
 
-This project is basically the same as the previous one, which is to make the car move forward, backward, left and right and stop by giving different levels from IN1 to IN4.
-
-#. Initialize the pin wiring of IN1~IN4.
+#. Initialisieren Sie die Pin-Verdrahtung von IN1~IN4.
 
     .. code-block:: arduino
 
@@ -121,7 +118,7 @@ This project is basically the same as the previous one, which is to make the car
             pinMode(in4, OUTPUT);
         }
 
-#. Set IN1~IN4 to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Setzen Sie IN1~IN4 auf verschiedene hohe oder niedrige Pegel, um die Rotation der linken und rechten Motoren zu steuern, und kapseln Sie sie dann in einzelne Funktionen.
 
     .. code-block:: arduino
 
@@ -139,7 +136,8 @@ This project is basically the same as the previous one, which is to make the car
             digitalWrite(in4, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+
+#. Rufen Sie diese Funktionen in ``loop()`` auf.
 
     .. code-block:: arduino
 
@@ -157,21 +155,21 @@ This project is basically the same as the previous one, which is to make the car
 
 * `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin``: die Arduino-Pinnummer.
+    * ``value``: HIGH oder LOW.
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+    Schreibt einen HIGH- oder LOW-Wert auf einen digitalen Pin. Wenn der Pin mit ``pinMode()`` als ``OUTPUT`` konfiguriert wurde, wird seine Spannung auf den entsprechenden Wert gesetzt: 5V (oder 3,3V bei 3,3V-Platinen) für HIGH, 0V (Masse) für LOW.
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin``: die Arduino-Pinnummer, für die der Modus eingestellt werden soll.
+    * ``mode``: INPUT, OUTPUT oder INPUT_PULLUP.
     
-    Configures the specified pin to behave either as an input or an output.
+    Konfiguriert den angegebenen Pin, um entweder als Eingang oder als Ausgang zu fungieren.
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms``: die Anzahl der Millisekunden zur Pause. Zulässige Datentypen: unsigned long.
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    Unterbricht das Programm für die als Parameter angegebene Zeit (in Millisekunden). (Eine Sekunde enthält 1000 Millisekunden.)
+

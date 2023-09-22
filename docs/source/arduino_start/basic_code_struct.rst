@@ -1,54 +1,54 @@
-Arduino Program Structure
-===========================
+Struktur eines Arduino-Programms
+======================================
 
-Let's take a look at the new sketch file. Although it has a few lines of code itself, it is actually an "empty" sketch. 
-Uploading this sketch to the development board will cause nothing to happen.
+Werfen wir einen Blick auf die neue Skizze. Obwohl sie nur wenige Codezeilen enthält, handelt es sich tatsächlich um eine "leere" Skizze.
+Das Hochladen dieser Skizze auf das Entwicklungsboard wird keine Aktion auslösen.
 
 .. code-block:: C
 
     void setup() {
-    // put your setup code here, to run once:
+    // Fügen Sie Ihren Setup-Code hier ein, der einmal ausgeführt wird:
 
     }
 
     void loop() {
-    // put your main code here, to run repeatedly:
+    // Fügen Sie Ihren Hauptcode hier ein, der wiederholt ausgeführt wird:
 
     }
 
-If we remove ``setup()`` and ``loop()`` and make the sketch a real ``blank`` file, you will find that it does not pass the verification. 
-They are the equivalent of the human skeleton, and they are indispensable.
+Wenn wir ``setup()`` und ``loop()`` entfernen und die Skizze zu einer wirklichen ``leeren`` Datei machen, werden Sie feststellen, dass sie die Überprüfung nicht besteht.
+Sie sind das Äquivalent zum menschlichen Skelett und unverzichtbar.
 
-During sketching, ``setup()`` is run first, and the code inside it (inside ``{}``) is run after the board is powered up or reset and only once. 
-``loop()`` is used to write the main feature, and the code inside it will run in a loop after ``setup()`` is executed.
+Während des Skizzierens wird ``setup()`` zuerst ausgeführt und der Code darin (innerhalb von ``{}``) wird nach dem Einschalten oder Zurücksetzen des Boards einmal ausgeführt. 
+``loop()`` dient zum Schreiben der Hauptfunktion, und der darin enthaltene Code wird in einer Schleife nach der Ausführung von ``setup()`` wiederholt.
 
-To better understand setup() and loop(), let's use four sketches. Their purpose is to make the on-board LED of the Arduino blink. Please run each experiment in turn and record them specific effects.
+Um setup() und loop() besser zu verstehen, betrachten wir vier Skizzen. Ihr Ziel ist es, die integrierte LED des Arduino blinken zu lassen. Bitte führen Sie jedes Experiment nacheinander aus und notieren Sie die spezifischen Effekte.
 
-* Sketch 1: Make the on-board LED blink continuously.
+* Skizze 1: Lassen Sie die integrierte LED kontinuierlich blinken.
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
 
     void setup() {
-        // put your setup code here, to run once:
+        // Fügen Sie Ihren Setup-Code hier ein, der einmal ausgeführt wird:
         pinMode(13,OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Fügen Sie Ihren Hauptcode hier ein, der wiederholt ausgeführt wird:
         digitalWrite(13,HIGH);
         delay(500);
         digitalWrite(13,LOW);
         delay(500);
     }
 
-* Sketch 2: Make the on-board LED blink only once. 
+* Skizze 2: Lassen Sie die integrierte LED nur einmal blinken. 
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7
 
     void setup() {
-        // put your setup code here, to run once:
+        // Fügen Sie Ihren Setup-Code hier ein, der einmal ausgeführt wird:
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(500);
@@ -57,16 +57,16 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Fügen Sie Ihren Hauptcode hier ein, der wiederholt ausgeführt wird:
     }
 
-* Sketch 3: Make the on-board LED blink slowly once and then blink quickly. 
+* Skizze 3: Lassen Sie die integrierte LED einmal langsam und dann schnell blinken.
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7,12,13,14,15
 
     void setup() {
-        // put your setup code here, to run once:
+        // Fügen Sie Ihren Setup-Code hier ein, der einmal ausgeführt wird:
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(1000);
@@ -75,20 +75,20 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Fügen Sie Ihren Hauptcode hier ein, der wiederholt ausgeführt wird:
         digitalWrite(13,HIGH);
         delay(200);
         digitalWrite(13,LOW);
         delay(200);
     }    
 
-* Sketch 4: Report an error.
+* Skizze 4: Meldet einen Fehler.
 
 .. code-block:: C
     :emphasize-lines: 6,7,8,9
 
     void setup() {
-        // put your setup code here, to run once:
+        // Fügen Sie Ihren Setup-Code hier ein, der einmal ausgeführt wird:
         pinMode(13,OUTPUT);
     }
 
@@ -98,17 +98,15 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     delay(1000);
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Fügen Sie Ihren Hauptcode hier ein, der wiederholt ausgeführt wird:
     }    
 
-With the help of these sketches, we can summarize several features of ``setup-loop``.
+Mit Hilfe dieser Skizzen können wir mehrere Merkmale von ``setup-loop`` zusammenfassen.
 
-* ``loop()`` will be run repeatedly after the board is powered up. 
-* ``setup()`` will run only once after the board is powered up. 
-* After the board is powered up, ``setup()`` will run first, followed by ``loop()``. 
-* The code needs to be written within the ``{}`` scope of ``setup()`` or ``loop()``, out of the framework will be an error.
+* ``loop()`` wird wiederholt ausgeführt, nachdem das Board eingeschaltet wurde.
+* ``setup()`` wird nur einmal ausgeführt, nachdem das Board eingeschaltet wurde.
+* Nach dem Einschalten des Boards wird zuerst ``setup()`` und dann ``loop()`` ausgeführt.
+* Der Code muss innerhalb des ``{}``-Bereichs von ``setup()`` oder ``loop()`` geschrieben werden, außerhalb des Rahmens tritt ein Fehler auf.
 
 .. note::  
-    Statements such as ``digitalWrite(13,HIGH)`` are used to control the on-board LED, and we will talk about their usage in detail in later chapters.
-
-
+    Anweisungen wie ``digitalWrite(13,HIGH)`` dienen zur Steuerung der integrierten LED, und ihre Verwendung wird in späteren Kapiteln ausführlich besprochen.

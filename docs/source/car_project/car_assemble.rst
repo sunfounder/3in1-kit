@@ -1,70 +1,70 @@
-Assemble the Car
+Auto zusammenbauen
 =====================
 
-Please follow the steps below to complete the assembly of the car.
+Bitte befolgen Sie die nachstehenden Schritte, um die Montage des Autos abzuschließen.
 
-1. Remove the protective film on the acrylic.
+1. Entfernen Sie die Schutzfolie vom Acryl.
 
     .. image:: img/IMG_6509.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Legen Sie das Board so auf den Tisch, wie es auf dem Bild gezeigt ist. Die Seite, die dasselbe Loch wie das R3-Board hat, nennen wir A; die Rückseite ist B. Das hilft Ihnen, Fehler während des Zusammenbaus zu vermeiden.
 
     .. image:: img/IMG_6518.jpg
 
-3. Turn to the B side, use M3x30mm screws and M3 nuts to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+3. Drehen Sie auf die B-Seite und verwenden Sie M3x30mm Schrauben sowie M3 Muttern, um den TT-Motor zu befestigen. Zwei Details: 1 - die Ausgangswelle zeigt zur fledermausförmigen Seite; 2 - das Motorkabel zeigt nach innen.
 
     .. image:: img/IMG_6554.JPG
 
-4. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+4. Montieren Sie einen weiteren TT-Motor. Achten Sie ebenso auf die Richtung der Ausgangswelle und die Ausrichtung des Kabels.
 
     .. image:: img/IMG_6558.jpg
 
-5. Use M3x6mm screws to mount the M3x12mm standoff in the position as shown below.
+5. Verwenden Sie M3x6mm Schrauben, um den M3x12mm Abstandshalter wie unten gezeigt zu montieren.
 
     .. image:: img/IMG_6568.jpg
 
-6. Use M3x6mm screws to mount the universal wheel.
+6. Verwenden Sie M3x6mm Schrauben, um das Universalrad zu montieren.
 
     .. image:: img/IMG_6572.jpg
 
-7. Putting on the 2 wheels and the car's basic structure has been completed.
+7. Montieren Sie die 2 Räder und die Grundstruktur des Autos ist fertig.
 
     .. image:: img/IMG_6582.jpg
 
-8. Attach the M3x12mm bracket to the rear of the car with M3x6mm screws
+8. Befestigen Sie den M3x12mm Halter mit M3x6mm Schrauben an der Rückseite des Autos.
 
     .. image:: img/IMG_6599.jpg
 
-9.  Attach the L298N module with M3x6mm screws.
+9. Montieren Sie das L298N-Modul mit M3x6mm Schrauben.
 
     .. image:: img/IMG_6611.jpg
 
-10. Mount the M3x24mm standoff with M3x6mm screws in the position as shown below.
+10. Montieren Sie den M3x24mm Abstandshalter mit M3x6mm Schrauben wie unten gezeigt.
 
     .. image:: img/IMG_6617.jpg
 
-11. Mount the R3 board with M3x6mm screws.
+11. Montieren Sie das R3-Board mit M3x6mm Schrauben.
 
     .. image:: img/IMG_6630.jpg
 
-12. Assemble the two IR Obstacle Modules with M3x10mm screws and M3 nuts.
+12. Montieren Sie die beiden IR-Hindernismodule mit M3x10mm Schrauben und M3 Muttern.
 
     .. image:: img/IMG_6649.jpg
 
-13. Turn to side B and attach the Line Track module with four M3x6mm screws and two M3x24mm standoffs.
+13. Drehen Sie zu Seite B und befestigen Sie das Line-Track-Modul mit vier M3x6mm Schrauben und zwei M3x24mm Abstandshaltern.
 
     .. image:: img/IMG_6655.jpg
 
-14. Stick the velcro on the 9V battery (rechargeable is recommended) and put on the battery clip.
+14. Kleben Sie den Klettverschluss auf die 9V-Batterie und setzen Sie die Batterieklemme auf.
 
     .. image:: img/IMG_6481.jpg
 
-15. Stick the other section of the Velcro on the car to secure the battery.
+15. Befestigen Sie den anderen Teil des Klettverschlusses am Auto, um die Batterie zu sichern.
 
     .. image:: img/IMG_6666.jpg
 
-16. Turn over to side A and attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+16. Drehen Sie zu Seite A und befestigen Sie das Steckbrett vorne am Auto. Danach können Sie je nach Projektanforderung verschiedene Komponenten (z. B. Ultraschallmodul) auf das Steckbrett setzen.
 
     .. image:: img/IMG_6675.jpg
 
-17. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+17. Um das Auto zum Laufen zu bringen, müssen Sie es auch verkabeln und einen Code schreiben, was in den folgenden Abschnitten erläutert wird.

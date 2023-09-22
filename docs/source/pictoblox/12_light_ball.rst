@@ -1,44 +1,44 @@
 .. _sh_light_ball:
 
-2.12 Light Sensitive Ball
+2.12 Lichtempfindlicher Ball
 ==============================
 
-In this project, we use Photoresistor to make the ball on the stage fly upwards. Place your hand on top of the photoresistor to control the light intensity it receives. The closer your hand is to the photoresistor, the smaller its value and the higher the ball flies on the stage, otherwise it will fall. When the ball touches the string, it makes a nice sound as well as a twinkling starlight.
+In diesem Projekt nutzen wir einen Fotowiderstand, um den Ball auf der Bühne nach oben fliegen zu lassen. Platzieren Sie Ihre Hand über dem Fotowiderstand, um die Lichtintensität zu steuern, die er erhält. Je näher Ihre Hand am Fotowiderstand ist, desto kleiner wird sein Wert und desto höher fliegt der Ball auf der Bühne, ansonsten fällt er. Wenn der Ball die Schnur berührt, ertönt ein angenehmes Geräusch und ein funkelndes Sternenlicht erscheint.
 
 .. image:: img/18_ball.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+------------------------
 
-- Fill the sprite with colors
-- Touch between the sprites
+- Ein Sprite mit Farben zu füllen
+- Berührung zwischen den Sprites
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten:
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,93 +51,90 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor` 
         - |link_photoresistor_buy|
 
-Build the Circuit
+Schaltkreis aufbauen
 -----------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Ein Fotowiderstand oder Fotodiode ist ein lichtgesteuerter variabler Widerstand. Der Widerstand eines Fotowiderstands verringert sich mit zunehmender Lichteinstrahlung.
 
-Build the circuit according to the following diagram.
+Bauen Sie den Schaltkreis gemäß dem folgenden Diagramm auf.
 
-Connect one end of the photoresistor to 5V, the other end to A0, and connect a 10K resistor in series with GND at this end.
+Verbinden Sie ein Ende des Fotowiderstands mit 5V, das andere Ende mit A0 und schließen Sie einen 10K Widerstand in Reihe mit GND an diesem Ende an.
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by A0 becomes larger.
+Wenn also die Lichtintensität zunimmt, verringert sich der Widerstand des Fotowiderstands, die Spannungsteilung des 10K Widerstands erhöht sich und der von A0 erhaltene Wert wird größer.
 
 .. image:: img/circuit/photoresistor_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-The effect we want to get is that the closer your hand is to the photoresistor, the ball sprite on the stage keeps going up, otherwise it will fall on the bowl sprite. If it touches the Line sprite while walking up or falling down, it will make a musical sound and emit star sprites in all directions.
+Das gewünschte Ergebnis ist, dass, je näher Ihre Hand am Fotowiderstand ist, der Ball-Sprite auf der Bühne kontinuierlich nach oben geht, sonst fällt er auf den Bowl-Sprite. Wenn er beim Aufsteigen oder Fallen den Line-Sprite berührt, gibt er einen musikalischen Klang von sich und sendet Stern-Sprites in alle Richtungen.
 
+**1. Sprite und Hintergrund auswählen**
 
-**1. Select sprite and backdrop**
-
-Delete the default sprite, select the **Ball**, **Bowl** and **Star** sprite.
+Löschen Sie den Standard-Sprite und wählen Sie den **Ball**, **Bowl** und **Star** Sprite aus.
 
 .. image:: img/18_ball1.png
 
-
-Move the **Bowl** sprite to the bottom center of the stage and enlarge its size.
+Verschieben Sie den **Bowl** Sprite in die untere Mitte der Bühne und vergrößern Sie seine Größe.
 
 .. image:: img/18_ball3.png
 
-Because we need to move it upwards, so set direction of **Ball** sprite to 0.
+Da wir ihn nach oben bewegen müssen, setzen Sie die Richtung des **Ball** Sprites auf 0.
 
 .. image:: img/18_ball4.png
 
-Set the size and direction of the **Star** sprite to 180 because we need it to fall down, or you can change it to another angle.
+Stellen Sie die Größe und Richtung des **Star** Sprites auf 180 ein, da er nach unten fallen muss, oder Sie können ihn in einen anderen Winkel ändern.
 
 .. image:: img/18_ball12.png
 
-Now add the **Stars** backdrop.
+Jetzt fügen Sie den **Stars** Hintergrund hinzu.
 
 .. image:: img/18_ball2.png
 
-**2. Draw a Line sprite**
+**2. Einen Linien-Sprite zeichnen**
 
-Add a Line sprite.
+Fügen Sie einen Linien-Sprite hinzu.
 
 .. image:: img/18_ball7.png
 
-Go to the **Costumes** page of the **Line** sprite, reduce the width of the red line on the canvas slightly, then copy it 5 times and align the lines.
+Gehen Sie zur **Costumes**-Seite des **Line** Sprites, verringern Sie die Breite der roten Linie auf der Leinwand etwas, kopieren Sie sie dann 5-mal und richten Sie die Linien aus.
 
 .. image:: img/18_ball8.png
 
-Now fill the lines with different colors. First choose a color you like, then click on the **Fill** tool and move the mouse over the line to fill it with color.
+Jetzt füllen Sie die Linien mit verschiedenen Farben. Wählen Sie zuerst eine Farbe, die Ihnen gefällt, klicken Sie dann auf das **Fill**-Werkzeug und fahren Sie mit der Maus über die Linie, um sie zu füllen.
 
 .. image:: img/18_ball9.png
 
-Follow the same method to change the color of the other lines.
+Verfahren Sie auf die gleiche Weise, um die Farbe der anderen Linien zu ändern.
 
 .. image:: img/18_ball10.png
 
+**3. Skript für den Ball-Sprite**
 
-**3. Scripting the Ball sprite**
+Setzen Sie die Anfangsposition des **Ball** Sprites. Wenn der Lichtwert kleiner als 800 ist (es kann ein anderer Wert sein, abhängig von Ihrer aktuellen Umgebung), soll der Ball nach oben bewegen.
 
-Set the initial position of the **Ball** sprite, then when the light value is less than 800 (it can be any other value, depending on your current environment.), let the Ball move up.
-
-You can make the variable light_value show up on the stage to observe the change of light intensity at any time.
+Sie können die Variable Lichtwert auf der Bühne anzeigen lassen, um die Lichtintensitätsänderung jederzeit zu beobachten.
 
 .. image:: img/18_ball5.png
 
-Otherwise, the **Ball** sprite will fall and limit its Y coordinate to a minimum of -100. This can be modified to make it look like it is falling on the **Bowl** sprite.
+Andernfalls wird der **Ball** Sprite fallen und seine Y-Koordinate auf ein Minimum von -100 begrenzen. Dies kann angepasst werden, damit es so aussieht, als ob er auf den **Bowl** Sprite fällt.
 
 .. image:: img/18_ball6.png
 
-When the **Line** sprite is hit, the current Y coordinate is saved to the variable **ball_coor** and a **Bling** message is broadcast.
+Wenn der **Line** Sprite getroffen wird, wird die aktuelle Y-Koordinate in die Variable **ball_coor** gespeichert und eine **Bling** Nachricht gesendet.
 
 .. image:: img/18_ball11.png
 
-**4. Scripting the Star sprite**
+**4. Skript für den Stern-Sprite**
 
-When the script starts, first hide the **Star** sprite. When the **Bling** message is received, clone the **Star** sprite.
+Wenn das Skript startet, verstecken Sie zuerst den **Star** Sprite. Wenn die **Bling** Nachricht empfangen wird, klone den **Star** Sprite.
 
 .. image:: img/18_ball13.png
 
-When the **Star** sprite appears as a clone, play the sound effect and set its coordinates to be in sync with the **Ball** sprite.
+Wenn der **Star** Sprite als Klon erscheint, spiele den Soundeffekt ab und setze seine Koordinaten synchron zum **Ball** Sprite.
 
 .. image:: img/18_ball14.png
 
-Create the effect of the **Star** sprite appearing, and adjust it as needed.
+Erstelle den Effekt des erscheinenden **Star** Sprites und passe ihn bei Bedarf an.
 
 .. image:: img/18_ball15.png

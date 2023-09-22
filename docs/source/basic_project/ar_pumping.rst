@@ -1,35 +1,35 @@
 .. _ar_pump:
 
-1.4 Pumping
+1.4 Pumpen
 ===================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+Die Wasserpumpe ist ebenfalls ein Motor, der durch eine spezielle Struktur die mechanische Energie des Motors oder andere externe Energien umwandelt, um die Flüssigkeit zu transportieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,24 +40,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_1.3_wheel.png
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+IN1~IN4 sind die Eingänge des L298N-Moduls, und OUT1~OUT4 sind die Ausgänge.
 
-A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+Eine einfache Verwendungsweise ist: Wird ein hohes Signalniveau an INx angelegt, gibt OUTx ein hohes Signalniveau aus; wird ein niedriges Signalniveau an INx angelegt, gibt OUTx ein niedriges Signalniveau aus.
+Wenn die beiden Enden des Motors an OUT1 und OUT2 angeschlossen sind und für IN1 und IN2 entgegengesetzte Signalniveaus eingegeben werden, dreht sich der Motor. OUT3 und OUT4 können auf die gleiche Weise verwendet werden.
 
-**Wiring**
-
+**Verdrahtung**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
+      - R3-Board
       - Motor
     * - 12V
       - 5V
@@ -73,28 +72,27 @@ Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level 
       - 
     * - OUT3
       - 
-      - one wire of the motor
+      - ein Draht des Motors
     * - OUT4
       - 
-      - one wire of the motor
+      - ein Draht des Motors
 
 .. image:: img/pumping_bb.jpg
     :width: 800
     :align: center
 
-
 **Code**
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\basic_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``1.4.pumping.ino`` unter dem Pfad ``3in1-kit\basic_project\1.4.pumping`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/aadf3a3f-3384-49ae-9a52-44d6eaa6a211/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+
+Fügen Sie den Schlauch zur Pumpe hinzu und platzieren Sie ihn im Becken. Nachdem der Code erfolgreich hochgeladen wurde, können Sie sehen, dass das Wasser im Becken nach einer Weile abgelassen wird.
+Während dieses Experiments halten Sie bitte die Schaltung vom Wasser fern, um Kurzschlüsse zu vermeiden!

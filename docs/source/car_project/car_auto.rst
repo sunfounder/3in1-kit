@@ -1,37 +1,37 @@
 .. _self_driving:
 
-8. Self-Driving Car
+8. Selbstfahrendes Auto
 =========================
 
-This project is a combination of the two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`. 
-2 infrared obstacle avoidance modules do short distance or edge detection, 
-and ultrasonic modules do long distance detection to confirm that the car does not hit an obstacle during the free driving process.
+Dieses Projekt kombiniert die beiden Projekte :ref:`car_ultrasonic` und :ref:`car_ir_obstacle`. 
+2 Infrarot-Hindernisvermeidungsmodule führen die Kurzstrecken- oder Randdetektion durch,
+und Ultraschallmodule übernehmen die Langstreckendetektion, um sicherzustellen, dass das Auto während des freien Fahrens kein Hindernis trifft.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,17 +44,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Verdrahtung**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Verbinden Sie das Ultraschallmodul und die 2 IR-Hindernisvermeidungsmodule gleichzeitig.
 
-Wire the ultrasonic to the R3 board as follows.
+Verdrahten Sie das Ultraschallmodul wie folgt an das R3-Board.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Ultraschallmodul
+      - R3-Board
     * - Vcc
       - 5V
     * - Trig
@@ -64,13 +64,13 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+Die Verdrahtung der 2 IR-Hindernisvermeidungsmodule an das R3-Board ist wie folgt.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R3 Board
+    * - Linkes IR-Modul
+      - R3-Board
     * - OUT
       - 8
     * - GND
@@ -81,8 +81,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R3 Board
+    * - Rechtes IR-Modul
+      - R3-Board
     * - OUT
       - 7
     * - GND
@@ -97,37 +97,35 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. note::
 
-    * Open the ``8.self_driving_car.ino`` file under the path of ``3in1-kit\car_project\8.self_driving_car``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``8.self_driving_car.ino`` im Pfad ``3in1-kit\car_project\8.self_driving_car``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/adca9313-93fb-4c78-937f-b50070194cdb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will drive freely once the code has been uploaded successfully. When the IR obstruction module on both sides detects an obstacle, it will move in the opposite direction for emergency evasion; if there is an obstacle within 2~10cm directly in front of the car, it will back up to the left, adjust its direction, and then move forward.
+Das Auto fährt von alleine, sobald der Code erfolgreich hochgeladen wurde. Wenn das IR-Hindernismodul auf beiden Seiten ein Hindernis erkennt, wird es zur Notausweichung in die entgegengesetzte Richtung fahren; befindet sich ein Hindernis direkt vor dem Auto im Abstand von 2~10 cm, wird es nach links zurücksetzen, seine Richtung korrigieren und dann vorwärts fahren.
 
+**Wie funktioniert das?**
 
-**How it works?**
+Der Arbeitsablauf dieses Projekts ist wie folgt.
 
-The workflow of this project is as follows.
-
-* Priority read the value of left and right IR obstacle avoidance module.
-* If the left IR module is 0 (obstacle detected), the right IR module is 1, let the car back up to the left.
-* If the right IR module is 0 (obstacle detected), let the car back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will back up.
-* Otherwise read the distance detected by the ultrasonic module.
-* If the distance is greater than 50cm, let the car go forward.
-* If the distance is between 2-10cm, let the car backward before turning.
-* If the distance is between 10-50cm, let the car go forward at low speed.
-
+* Priorität beim Lesen des Wertes des linken und rechten IR-Hindernisvermeidungsmoduls.
+* Wenn das linke IR-Modul 0 ist (Hindernis erkannt) und das rechte IR-Modul 1, lässt das Auto nach links zurücksetzen.
+* Wenn das rechte IR-Modul 0 ist (Hindernis erkannt), lässt das Auto nach rechts zurücksetzen.
+* Wenn beide IR-Module gleichzeitig ein Hindernis erkennen, wird das Auto zurücksetzen.
+* Andernfalls lesen Sie die vom Ultraschallmodul erkannte Entfernung.
+* Ist die Entfernung größer als 50 cm, lässt das Auto vorwärts fahren.
+* Liegt die Entfernung zwischen 2-10 cm, lässt das Auto zurücksetzen, bevor es sich dreht.
+* Ist die Entfernung zwischen 10-50 cm, lässt das Auto mit niedriger Geschwindigkeit vorwärts fahren.
 
 .. code-block:: arduino
 
     void loop() {
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0: Verstopft 1: Leer
         int right = digitalRead(rightIR);
 
         if (!left && right) {
@@ -141,7 +139,7 @@ The workflow of this project is as follows.
             Serial.println(distance);
             if (distance > 50) { // Safe
                 moveForward(200);
-            } else if (distance < 10 && distance > 2) { // Attention
+            } else if (distance < 10 && distance > 2) { // Aufmerksamkeit
                 moveBackward(200);
                 delay(1000);
                 backLeft(150);

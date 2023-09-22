@@ -1,35 +1,35 @@
 .. _car_remote:
 
-9. Remote Control
+9. Fernsteuerung
 =================================
 
-This kit comes with an IR receiver, which allows you to use an IR remote control to control the movement of the car.
+Dieses Set wird mit einem IR-Empfänger geliefert, der es ermöglicht, das Fahrzeug mit einer IR-Fernbedienung zu steuern.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,15 +42,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Wiring**
+**Verdrahtung**
 
-Now build the circuit according to the diagram below.
+Bauen Sie den Schaltkreis nun gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - IR Receiver
-      - R3 Board
+    * - IR-Empfänger
+      - R3-Board
     * - OUT
       - 12
     * - GND
@@ -62,10 +62,10 @@ Now build the circuit according to the diagram below.
     :header-rows: 1
 
     * - LED
-      - R3 Board
-    * - Anode(The longer pin)
+      - R3-Board
+    * - Anode(Der längere Pin)
       - 13
-    * - Cathode
+    * - Kathode
       - GND
 
 .. image:: img/car_remote.jpg
@@ -75,46 +75,45 @@ Now build the circuit according to the diagram below.
 
 .. note::
 
-    * Open the ``9.remote_control.ino`` file under the path of ``3in1-kit\car_project\9.remote_control``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
-  
+    * Öffnen Sie die Datei ``9.remote_control.ino`` im Pfad ``3in1-kit\car_project\9.remote_control``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
+    * Die Bibliothek ``IRremote`` wird hier verwendet. Sie können sie über den **Library Manager** installieren.
+    
         .. image:: ../img/lib_irremote.png
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b5d87f03-c8e9-49de-a6d1-3b51036e1f5c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie eine Taste auf der Fernbedienung. Die LED blinkt einmal, um anzuzeigen, dass das Signal empfangen wurde, und das Auto bewegt sich entsprechend der gedrückten Taste. Sie können die folgenden Tasten verwenden, um das Auto zu steuern:
 
-After the code is uploaded successfully, press the button on the remote control, the LED will blink once to represent that the signal has been received, and the car will move according to the button you pressed. You can press the following keys to control the car.
-
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Forward to the left
-* **2**: Forward
-* **3**: Forward to the right
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward
-* **9**: Backward to the right
+* **+**: Beschleunigen
+* **-**: Verlangsamen
+* **1**: Vorwärts links
+* **2**: Vorwärts
+* **3**: Vorwärts rechts
+* **4**: Nach links drehen
+* **6**: Nach rechts drehen
+* **7**: Rückwärts links
+* **8**: Rückwärts
+* **9**: Rückwärts rechts
 
 
-**How it works?**
 
-The effect of this project is to make the car move by reading the key value of the IR remote control. In addition, an LED is added to indicate that the IR signal has been successfully received.
+**Wie funktioniert das?**
 
-#. Import the ``IRremote`` library, you can install it from the **Library Manager**.
+Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR-Fernbedienung zu bewegen. Zusätzlich wird eine LED hinzugefügt, um anzuzeigen, dass das IR-Signal erfolgreich empfangen wurde.
 
+#. Importieren Sie die ``IRremote``-Bibliothek. Sie können sie über den **Library Manager** installieren.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-        const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
+        const int IR_RECEIVE_PIN = 12;  // Definiere die Pin-Nummer für den IR-Sensor
+        String lastDecodedValue = "";   // Variable zur Speicherung des zuletzt dekodierten Werts
 
-#. Initialize the IR receiver and the LED.
+#. Initialisieren Sie den IR-Empfänger und die LED.
 
     .. code-block:: arduino
 
@@ -125,29 +124,26 @@ The effect of this project is to make the car move by reading the key value of t
         void setup() {
 
             ...
-            //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
-            Serial.println("REMOTE CONTROL START");
-
+            //IR-Fernbedienung
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Starten Sie den IR-Empfänger
+            Serial.println("FERNBEDIENUNG STARTET");
 
             //LED
             pinMode(ledPin, OUTPUT);
         }
 
-
-#. When you press the keys on the remote control, the LED will blink and the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
-
+#. Wenn Sie die Tasten auf der Fernbedienung drücken, blinkt die LED, und der Infrarot-Empfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Schlüsselwert.
 
     .. code-block:: arduino
 
         void loop() {
 
             if (IrReceiver.decode()) {
-                //    Serial.println(results.value,HEX);
+                // Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (key != "ERROR" && key != lastDecodedValue) {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
+                    lastDecodedValue = key;  // Aktualisieren Sie den zuletzt dekodierten Wert
                     blinkLED();
 
                     if (key == "+") {
@@ -159,21 +155,21 @@ The effect of this project is to make the car move by reading the key value of t
                         delay(1000);
                     ...
                     }
-                    IrReceiver.resume();  // Enable receiving of the next value
+                    IrReceiver.resume();  // Empfang des nächsten Werts ermöglichen
 
             }
         }
 
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
-    * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
-    * Resumes IR signal reception for the next signal.
+    * Überprüft, ob ein IR-Signal empfangen und erfolgreich dekodiert wurde.
+    * Dekodiert den IR-Befehl und speichert ihn in ``key`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
+    * Überprüft, ob der dekodierte Wert kein Fehler ist und sich vom zuletzt dekodierten Wert unterscheidet.
+    * Gibt den dekodierten IR-Wert auf dem seriellen Monitor aus.
+    * Aktualisiert den ``lastDecodedValue`` mit dem neuen dekodierten Wert.
+    * Setzt den IR-Signalempfang für das nächste Signal fort.
 
-#. About the ``blinkLED()`` function.
+#. Über die Funktion ``blinkLED()``.
     
-    When this function is called, have the LED repeat the toggle from on-off three times so that you see the LED blink 3 times.
+    Wenn diese Funktion aufgerufen wird, sollte die LED dreimal von Ein auf Aus wechseln, sodass Sie die LED 3-mal blinken sehen.
 
     .. code-block:: arduino
 
@@ -185,4 +181,5 @@ The effect of this project is to make the car move by reading the key value of t
                 delay(50);
             }
         }
+
 

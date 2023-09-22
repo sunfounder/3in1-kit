@@ -1,62 +1,59 @@
 .. _ar_digital_write:
 
-1. Digital Write
+1. Digitaler Schreibvorgang
 ==============================
 
-**Digital Write** is to output or write a digital signal to a digital pin. The digital signal has only two states, 0 or 1, 0V or 5V, so it allows some components, such as the LED and buzzer, to be on or off.
+**Digitaler Schreibvorgang** dient dazu, ein digitales Signal an einen digitalen Pin auszugeben oder zu schreiben. Das digitale Signal hat nur zwei Zustände, 0 oder 1, 0V oder 5V, so dass einige Komponenten, wie die LED und der Summer, ein- oder ausgeschaltet werden können.
 
-On the Arduino R3 board, there are 14 digital I/0 pins from 0 to 13, now use the ``pinMode()`` and ``digitalWrite()`` functions to write a high or low level to these digital pins.
+Auf dem Arduino R3-Board gibt es 14 digitale I/O-Pins von 0 bis 13. Verwenden Sie nun die Funktionen ``pinMode()`` und ``digitalWrite()`` um diesen digitalen Pins ein hohes oder niedriges Signal zu schreiben.
 
-
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``OUTPUT``. 
+* ``pinMode(pin, mode)``: Konfiguriert den spezifischen Pin als ``INPUT`` oder ``OUTPUT``, hier muss er als ``OUTPUT`` eingestellt werden.
 
    **Syntax**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: ``INPUT``, ``OUTPUT``, or ``INPUT_PULLUP``.
+   **Parameter**
+    * ``pin``: Die Pin-Nummer von Arduino, für die der Modus gesetzt werden soll.
+    * ``mode``: ``INPUT``, ``OUTPUT`` oder ``INPUT_PULLUP``.
 
-
-* ``digitalWrite(pin, value)``: Write a high level (5V) or a low level (0V) to a digital pin to change the operating state of the component. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+* ``digitalWrite(pin, value)``: Schreiben Sie ein hohes Signal (5V) oder ein niedriges Signal (0V) auf einen digitalen Pin, um den Betriebszustand der Komponente zu ändern. Wenn der Pin mit pinMode() als OUTPUT konfiguriert wurde, wird seine Spannung auf den entsprechenden Wert gesetzt: 5V (oder 3,3V auf 3,3V-Boards) für HIGH, 0V (Erdung) für LOW.
 
    **Syntax**
       digitalWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number.
-    * ``value``: ``HIGH`` or ``LOW``.
+   **Parameter**
+    * ``pin``: Die Pin-Nummer von Arduino.
+    * ``value``: ``HIGH`` oder ``LOW``.
 
-**Example of Digital Write:**
+**Beispiel für Digitaler Schreibvorgang:**
 
 .. code-block:: arduino
 
    const int pin = 13;
 
    void setup() {
-      pinMode(pin, OUTPUT);    // sets the digital pin as output
+      pinMode(pin, OUTPUT);    // setzt den digitalen Pin als Ausgang
    }
 
    void loop() {
-      digitalWrite(pin, HIGH); // sets the digital pin on
-      delay(1000);            // waits for a second
-      digitalWrite(pin, LOW);  // sets the digital pin off
-      delay(1000);            // waits for a second
+      digitalWrite(pin, HIGH); // schaltet den digitalen Pin ein
+      delay(1000);            // wartet eine Sekunde
+      digitalWrite(pin, LOW);  // schaltet den digitalen Pin aus
+      delay(1000);            // wartet eine Sekunde
    }
 
 .. image:: img/1_led.jpg
 
+**Anmerkungen und Warnungen**
 
-**Notes and Warnings**
+* Die Pins 0~13 sind alle digitale Pins.
+* Verwenden Sie nicht die Pins 0 und 1, da sie zur Kommunikation mit dem Computer verwendet werden. Ein Anschluss an diese Pins stört die Kommunikation, einschließlich der Verhinderung des Hochladens auf das Board.
+* Wenn die digitalen Pins aufgebraucht sind, können die analogen Pins (A0-A5) auch als digitale Pins verwendet werden.
 
-* The pins 0~13 are all digital pins.
-* Do not use pins 0 and 1, as they are used to communicate with the computer. Connecting anything to these pins will interfere with communication, including causing the upload board to fail.
-* If the digital pins are used up, the analog pins (A0-A5) can also be used as digital pins.
+**Zugehörige Komponenten**
 
-**Related Components**
+Unten finden Sie die zugehörigen Komponenten, auf die Sie klicken können, um zu erfahren, wie sie verwendet werden.
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

@@ -18,6 +18,13 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-09-22:
+- German translation
+- Modify the format of the first line of how it works in ar_calibration.rst. The second line needs to add more code to set the LED to OUTPUT.
+- Change **Fritzing Circuit** to wiring
+- Change **Schematic Diagram** to **Schematic**
+- Replace all how it works in ar_reversing_aid.rst.
+
 2023-09-19:
 - Replace part of the project code link
 - button introduction picture replacement

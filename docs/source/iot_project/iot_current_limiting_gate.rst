@@ -1,38 +1,38 @@
 .. _iot_gate:
 
-7. Current Limiting Gate
+7. Strombegrenzendes Tor
 ==================================
 
-Some situations, such as parking lots, require quantity management.
+In manchen Situationen, wie zum Beispiel auf Parkplätzen, ist eine Mengensteuerung erforderlich.
 
-Here we create a smart gate: a servo is used as the gate, and an IR obstacle detector is placed in front of it; if an object (like a car) is detected, the gate will open and the number will be increased by 1.
-The count is displayed with a 7-segment display and is also uploaded to the Blynk Cloud for you to view remotely. Finally, Blynk has a Switch widget to enable or disable this smart gate system.
+Hier erstellen wir ein intelligentes Tor: Ein Servo dient als Tor und ein IR-Hinderniserkennungsdetektor wird davor platziert; wird ein Objekt (wie ein Auto) erkannt, öffnet sich das Tor und die Anzahl erhöht sich um 1.
+Die Anzahl wird auf einer 7-Segment-Anzeige dargestellt und auch auf die Blynk Cloud hochgeladen, damit Sie sie aus der Ferne einsehen können. Schließlich verfügt Blynk über ein Schalter-Widget, um dieses intelligente Torsystem zu aktivieren oder zu deaktivieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,77 +54,71 @@ You can also buy them separately from the links below.
         - |link_74hc595_buy|
 
 
-**1. Build the Cirduit**
+**1. Bauen Sie den Schaltkreis**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
-
+    Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten, also stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
 
 .. image:: img/wiring_servo_segment.jpg
     :width: 800
 
-**2. Edit Dashboard**
+**2. Dashboard bearbeiten**
 
-
-#. To record the number, create a **Datastream** of type **Virtual Pin** on the **Datastream** page. Set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``10``.
-
+#. Um die Anzahl aufzuzeichnen, erstellen Sie einen **Datastream** vom Typ **Virtual Pin** auf der **Datastream**-Seite. Setzen Sie den DATENTYP auf ``Integer`` und MIN und MAX auf ``0`` und ``10``.
 
     .. image:: img/sp220610_165328.png
  
-#. Now go to the **Wed Dashboard** page, drag a **Switch** widget to set its data stream to **V0** and a **Label** widget to set its data stream to **V8**.
+#. Gehen Sie nun zur **Wed Dashboard**-Seite, ziehen Sie ein **Switch**-Widget, um dessen Datenstrom auf **V0** und ein **Label**-Widget, um dessen Datenstrom auf **V8** zu setzen.
 
     .. image:: img/sp220610_165548.png
 
+**3. Den Code ausführen**
 
-**3. Run the Code**
-
-#. Open the ``7.current_limiting_gate.ino`` file under the path of ``3in1-kit\iot_project\7.current_limiting_gate``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``7.current_limiting_gate.ino`` unter dem Pfad ``3in1-kit\iot_project\7.current_limiting_gate`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/bd829175-652f-4c3e-85b0-048c3fda4555/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Ersetzen Sie die ``Template ID``, den ``Device Name`` und den ``Auth Token`` durch Ihre eigenen. Geben Sie auch die ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs ein. Für detaillierte Anleitungen verweisen Sie bitte auf :ref:`connect_blynk`.
+#. Nach Auswahl des richtigen Boards und Ports klicken Sie auf die Schaltfläche **Upoad**.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
-
+#. Öffnen Sie den Serienmonitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Aufforderung, wie z.B. eine erfolgreiche Verbindung.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Wenn die Meldung ``ESP antwortet nicht`` erscheint, wenn Sie sich verbinden, folgen Sie bitte diesen Schritten.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+        * Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden und dann trennen.
+        * Drücken Sie die Reset-Taste auf dem R3-Board.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Manchmal müssen Sie die obige Operation 3-5 Mal wiederholen, bitte haben Sie Geduld.
 
-#. Now click on the Button Control widget on Blynk to enable the smart door system. If the IR obstacle avoidance module detects an obstacle, the gate will open and the 7-segment display and the Count widget on Blynk will add 1.
+
+#. Klicken Sie jetzt auf das Button Control-Widget in Blynk, um das intelligente Türsystem zu aktivieren. Wenn das IR-Hinderniserkennungsmodul ein Hindernis erkennt, öffnet sich das Tor und die 7-Segment-Anzeige sowie das Count-Widget in Blynk werden um 1 erhöht.
 
     .. image:: img/sp220610_165548.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Wenn Sie Blynk auf mobilen Geräten verwenden möchten, beachten Sie bitte :ref:`blynk_mobile`.
 
     .. image:: img/mobile_gate.jpg
 
-**How it works?**
+**Wie funktioniert das?**
 
-
-The function ``BLYNK_WRITE(V0)`` gets the status of the **Switch** widget and assigns it to the variable ``doorFlag``, which will be used to determine if the smart gate system is enabled or not.
-
+Die Funktion ``BLYNK_WRITE(V0)`` erhält den Status des **Switch**-Widgets und weist ihn der Variablen ``doorFlag`` zu, die verwendet wird, um zu bestimmen, ob das intelligente Torsystem aktiviert ist oder nicht.
 
 .. code-block:: arduino
 
     BLYNK_WRITE(V0)
     {
-        doorFlag = param.asInt(); // Enable Gate
+        doorFlag = param.asInt(); // Aktiviere das Tor
     }
 
-In the Blynk Timer, ``doorFlag`` is judged every second and if it is enabled, the main function of the gate is executed.
+Im Blynk-Timer wird ``doorFlag`` jede Sekunde geprüft, und wenn es aktiviert ist, wird die Hauptfunktion des Tores ausgeführt.
 
 .. code-block:: arduino
 
@@ -136,17 +130,16 @@ In the Blynk Timer, ``doorFlag`` is judged every second and if it is enabled, th
         }
     }
 
-The main function of the gate is ``channelEntrance()``.
-When an object approaches the gate (the sensor detects that there is an obstacle), the ``count`` is increased by 1.
-Write ``count`` to the datastream ``V8``  of Blynk Cloud and 7-segment display on the circuit, and open the door.
-If the object goes from present to absent, which means the object has entered the door, close the door.
-
+Die Hauptfunktion des Tores ist ``channelEntrance()``.
+Wenn ein Objekt sich dem Tor nähert (der Sensor erkennt ein Hindernis), wird ``count`` um 1 erhöht.
+Schreiben Sie ``count`` in den Datastream ``V8`` der Blynk Cloud und die 7-Segment-Anzeige auf der Schaltung und öffnen Sie das Tor.
+Wenn das Objekt von vorhanden zu nicht vorhanden wechselt, d.h. das Objekt hat das Tor betreten, schließen Sie das Tor.
 
 .. code-block:: arduino
 
     void channelEntrance()
     {
-        int currentState = digitalRead(irPin); // 0:obstacle 1:no-obstacle
+        int currentState = digitalRead(irPin); // 0:Hindernis 1:kein Hindernis
         if (currentState == 0 && lastState == 1) {
             count=(count+1)%10;
             Blynk.virtualWrite(V8, count);
@@ -158,18 +151,18 @@ If the object goes from present to absent, which means the object has entered th
         lastState = currentState;
     }
 
-The function ``showNumber(int num)`` is used to make the 7-segment display show the value.
+Die Funktion ``showNumber(int num)`` dient dazu, die 7-Segment-Anzeige den Wert anzeigen zu lassen.
 
 .. code-block:: arduino
 
     void showNumber(int num)
     {
-        digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
+        digitalWrite(STcp, LOW); //ST_CP erden und so lange auf LOW halten, wie Daten übertragen werden
         shiftOut(DS, SHcp, MSBFIRST, datArray[num]);
-        digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
+        digitalWrite(STcp, HIGH); //ST_CP hochziehen, um die Daten zu speichern
     }
 
-The function ``operateGate(bool openGate)`` slowly opens the door when the reference is ``True``, and slowly closes the door when the reference is ``False``.
+Die Funktion ``operateGate(bool openGate)`` öffnet das Tor langsam, wenn die Referenz ``True`` ist, und schließt das Tor langsam, wenn die Referenz ``False`` ist.
 
 .. code-block:: arduino
 

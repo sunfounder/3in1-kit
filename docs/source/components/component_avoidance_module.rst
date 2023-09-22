@@ -1,40 +1,33 @@
 .. _cpn_avoid:
 
-Obstacle Avoidance Module
+Hindernisvermeidungsmodul
 ===========================================
-
 
 .. image:: img/IR_Obstacle.png
    :width: 400
    :align: center
 
-* **VCC**: Power supply, 3.3 ~ 5V DC.
-* **GND**: Ground
-* **OUT**: Signal pin, usually high level, and low level when an obstacle is detected.
+* **VCC**: Stromversorgung, 3,3 ~ 5V DC.
+* **GND**: Masse
+* **OUT**: Signalausgang, normalerweise im hohen Zustand, schaltet auf niedrig, wenn ein Hindernis erkannt wird.
 
+Das IR-Hindernisvermeidungsmodul passt sich stark dem Umgebungslicht an und verfügt über ein Paar Infrarot-Sende- und Empfangsröhren.
 
-The IR obstacle avoidance module has strong adaptability to environmental light, it has a pair of infrared transmitting and receiving tubes.
+Die Sendetube gibt eine Infrarotfrequenz ab. Trifft die Erkennungsrichtung auf ein Hindernis, wird die Infrarotstrahlung von der Empfangsröhre aufgenommen. 
+Nach der Verarbeitung im Komparator-Schaltkreis leuchtet die Anzeige auf und gibt ein niedriges Signal aus.
 
-The transmitting tube emits infrared frequency, when the detection direction encounters an obstacle, the infrared radiation is received by the receiving tube, 
-after the comparator circuit processing, the indicator will light up and output low level signal.
-
-The detection distance can be adjusted by potentiometer, the effective distance range 2-30cm.
+Die Erkennungsentfernung kann mit einem Potentiometer angepasst werden, wobei der effektive Entfernungsbereich zwischen 2-30 cm liegt.
 
 .. image:: img/IR_module.png
     :width: 600
     :align: center
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_ir_obstacle` (Learning Project)
-* :ref:`car_ir_obstacle` (Car Project)
-* :ref:`self_driving` (Car Project)
-* :ref:`iot_gate` (IoT Project)
-* :ref:`sh_shooting` (Scratch Project)
-* :ref:`sh_tap_tile` (Scratch Project)
-
-
-
-
-
+* :ref:`ar_ir_obstacle` (Grundlegendes Projekt)
+* :ref:`car_ir_obstacle` (Auto-Projekt)
+* :ref:`self_driving` (Auto-Projekt)
+* :ref:`iot_gate` (IoT-Projekt)
+* :ref:`sh_shooting` (Scratch-Projekt)
+* :ref:`sh_tap_tile` (Scratch-Projekt)
 

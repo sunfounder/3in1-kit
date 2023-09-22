@@ -1,21 +1,20 @@
 .. _car_move:
 
-1. Move
+1. Bewegung
 ===============
 
 .. image:: ../components/img/l298n_pin.jpg
     :width: 400
     :align: center
 
-Before we start programming, let's review the working principle of L298N.
+Bevor wir mit dem Programmieren beginnen, sollten wir uns das Funktionsprinzip des L298N nochmals vor Augen führen.
 
-IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+IN1~IN4 sind die Eingänge des L298N-Moduls und OUT1~OUT4 sind die Ausgänge.
 
-A simple way to use them is: input high level for IN1, OUT1 will output high level; input low level for IN1, OUT1 will output low level.
-Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate.OUT3 and OUT4 can be used in the same way.
+Eine einfache Nutzung wäre: Gibt man IN1 ein hohes Signal, wird OUT1 ebenfalls ein hohes Signal ausgeben; bei einem niedrigen Signal an IN1 gibt OUT1 ein niedriges Signal aus.
+Wenn man die beiden Enden des Motors an OUT1 und OUT2 anschließt und gegenläufige Signale an IN1 und IN2 sendet, wird der Motor sich drehen. OUT3 und OUT4 funktionieren auf die gleiche Weise.
 
-The working relationship between ENA and IN1,IN2 is as follows.
-
+Die Funktionsbeziehung zwischen ENA und IN1, IN2 ist wie folgt:
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -24,29 +23,29 @@ The working relationship between ENA and IN1,IN2 is as follows.
     * - ENA
       - IN1
       - IN2
-      - The state of right motor(A)
+      - Zustand des rechten Motors(A)
     * - 0
       - X
       - X
-      - Stop
+      - Stopp
     * - 1
       - 0
       - 0
-      - Brake
+      - Bremsen
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 1
       - 1
       - 1
-      - Brake
+      - Bremsen
 
-The working relationship between ENB and IN3,IN4 is as follows.
+Die Funktionsbeziehung zwischen ENB und IN3, IN4 ist wie folgt:
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -55,72 +54,71 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of left motor(B)
+      - Zustand des linken Motors(B)
     * - 0
       - X
       - X
-      - Stop
+      - Stopp
     * - 1
       - 0
       - 0
-      - Brake
+      - Bremsen
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 1
       - 1
       - 1
-      - Brake
+      - Bremsen
 
+**Benötigte Komponenten**
 
-**Required Components**
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein komplettes Set zu kaufen. Hier ist der Link dazu:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen:
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_l298n`
         - |link_l298n_buy|
 
 
-**Forward**
 
-Now let's connect the input of L298N module directly to 12V and GND respectively to make the car move.
+**Vorwärts**
 
+Nun verbinden wir den Eingang des L298N-Moduls direkt mit 12V und GND, damit das Auto sich bewegt.
 
-1. Connect R3 board, L298N module and 2 motors.
+1. Verbinden Sie das R3-Board, das L298N-Modul und die 2 Motoren.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L298N
-      - R3 Board
+      - R3-Board
       - Motor
     * - 12V
       - 5V
@@ -130,65 +128,54 @@ Now let's connect the input of L298N module directly to 12V and GND respectively
       - 
     * - OUT1
       - 
-      - Black wire of right motor
+      - Schwarzes Kabel des rechten Motors
     * - OUT2
       - 
-      - Red wire of right motor
+      - Rotes Kabel des rechten Motors
     * - OUT3
       - 
-      - Black wire of left motor
+      - Schwarzes Kabel des linken Motors
     * - OUT4
       - 
-      - Red wire of left motor
+      - Rotes Kabel des linken Motors
 
 .. image:: img/1.move_1.png
     :width: 800
 
-
-2. Connect IN2 and IN3 to 12V, and IN1 and IN4 to GND, then you will be able to see the car moving forward.
-
+2. Verbinden Sie IN2 und IN3 mit 12V und IN1 und IN4 mit GND. Das Auto sollte sich nun vorwärts bewegen.
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+Wenn nicht beide Motoren vorwärts drehen, sondern folgende Situationen auftreten, müssen Sie die Verkabelung der beiden Motoren neu einstellen:
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OUT1 and OUT2 swap, OUT3 and OUT4 swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OUT3 and OUT4 of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OUT1 and OUT1 of the right motor.
+* Wenn beide Motoren gleichzeitig rückwärts drehen (linker Motor dreht im Uhrzeigersinn, rechter Motor gegen den Uhrzeigersinn), tauschen Sie die Verkabelung der linken und rechten Motoren gleichzeitig. Tauschen Sie OUT1 und OUT2, sowie OUT3 und OUT4.
+* Dreht sich der linke Motor rückwärts (im Uhrzeigersinn), tauschen Sie die Verkabelung von OUT3 und OUT4 des linken Motors.
+* Dreht sich der rechte Motor rückwärts (gegen den Uhrzeigersinn), tauschen Sie die Verkabelung von OUT1 und OUT1 des rechten Motors.
 
+**Rückwärts**
 
-**Backward**
-
-Connect IN2 and IN3 to GND, and IN1 and IN4 to 12V, then you will be able to see the car moving backward.
-
+Verbinden Sie IN2 und IN3 mit GND und IN1 und IN4 mit 12V. Das Auto sollte sich nun rückwärts bewegen.
 
 .. image:: img/1.move_back.png 
     :width: 800
 
+**Links abbiegen**
 
-
-**Turn Left**
-
-If you want to make the car turn left, that is, make both motors turn clockwise. You need to connect IN1 and IN3 to GND, and IN2 and IN4 to 12V.
-
+Wenn Sie möchten, dass das Auto nach links abbiegt, d.h. beide Motoren im Uhrzeigersinn drehen, verbinden Sie IN1 und IN3 mit GND und IN2 und IN4 mit 12V.
 
 .. image:: img/1.move_left.png 
     :width: 800
 
+**Rechts abbiegen**
 
-**Turn Right**
-
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. You need to connect IN1 and IN3 to 12V and IN2 and IN4 to GND.
-
+Umgekehrt, wenn Sie möchten, dass das Auto nach rechts abbiegt, d.h. beide Motoren gegen den Uhrzeigersinn drehen, verbinden Sie IN1 und IN3 mit 12V und IN2 und IN4 mit GND.
 
 .. image:: img/1.move_right.png 
     :width: 800
 
+**Stopp**
 
+Um den Motor zu stoppen, verbinden Sie die Eingänge derselben Seite gleichzeitig mit 12V oder GND, z.B. verbinden Sie IN1 und IN2 gleichzeitig mit 12V oder 5V, ebenso IN3 und IN4.
 
-**Stop**
-
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect IN1 and IN2 to 12V or 5V at the same time, and the same for IN3 and IN4.
-
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+Dies ist natürlich theoretisch und wird später beim Steuern mit Code benötigt. Hier kann das Entfernen der Stromversorgung des Autos es stoppen.

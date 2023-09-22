@@ -1,41 +1,41 @@
 .. _sh_parrot:
 
-2.17 GAME - Flappy Parrot
+2.17 SPIEL - Flappy Papagei
 ==============================
 
-Here we use the ultrasonic module to play a flappy parrot game.
+Hier verwenden wir das Ultraschallmodul, um ein Flappy-Papagei-Spiel zu spielen.
 
-After the script runs, the green bamboo will slowly move from the right to the left at a random height. Now place your hand on top of the ultrasonic module, if the distance between your hand and the ultrasonic module is less than 10, the parrot will fly upwards, otherwise it will fall downwards.
-You need to control the distance between your hand and the ultrasonic module so that the Parrot can avoid the green bamboo (Paddle), if it touches it, the game is over.
+Nachdem das Skript ausgeführt wird, wird der grüne Bambus langsam von rechts nach links auf zufälliger Höhe bewegen. Platziere nun deine Hand über dem Ultraschallmodul. Wenn der Abstand zwischen deiner Hand und dem Modul weniger als 10 cm beträgt, fliegt der Papagei nach oben, sonst fällt er nach unten.
+Du musst den Abstand zwischen deiner Hand und dem Ultraschallmodul kontrollieren, sodass der Papagei den grünen Bambus (Schläger) vermeiden kann. Berührt er diesen, ist das Spiel vorbei.
 
 .. image:: img/15_parrot.png
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Du kannst sie auch einzeln über die folgenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,75 +44,71 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+Ein Ultraschall-Sensormodul ist ein Instrument, das den Abstand zu einem Objekt mithilfe von Ultraschallwellen misst.
+Es hat zwei Sonden. Eine sendet Ultraschallwellen und die andere empfängt die Wellen und wandelt die Sendungs- und Empfangszeit in eine Entfernung um, um so den Abstand zwischen dem Gerät und einem Hindernis zu bestimmen.
 
-Now build the circuit according to the following diagram.
+Baue jetzt die Schaltung gemäß dem folgenden Diagramm.
 
 .. image:: img/circuit/ultrasonic_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-The effect we want to achieve is to use the ultrasonic module to control the flight height of the sprite **Parrot**, while avoiding the **Paddle** sprite.
+Das gewünschte Ergebnis ist die Steuerung der Flughöhe des Sprites **Parrot** mithilfe des Ultraschallmoduls, während er den Sprite **Paddle** vermeidet.
 
+**1. Füge einen Sprite hinzu**
 
-**1. Add a sprite**
-
-Delete the default sprite, and use the **Choose a Sprite** button to add the **Parrot** sprite. Set its size to 50%, and move its position to the left center.
+Lösche den Standardsprite und verwende die Schaltfläche **Choose a Sprite**, um den Sprite **Parrot** hinzuzufügen. Setze seine Größe auf 50% und verschiebe seine Position zum linken Zentrum.
 
 .. image:: img/15_sprite.png
 
-Now add the **Paddle** sprite, set its size to 150%, set its angle to 180, and move its initial position to the top right corner.
+Füge jetzt den Sprite **Paddle** hinzu, setze seine Größe auf 150%, setze seinen Winkel auf 180 und verschiebe seine Anfangsposition in die obere rechte Ecke.
 
 .. image:: img/15_sprite1.png
 
-Go to the **Costumes** page of the **Paddle** sprite and remove the Outline.
+Gehe zur **Costumes**-Seite des Sprites **Paddle** und entferne den Umriss.
 
 .. image:: img/15_sprite2.png
 
-**2. Scripting for the Parrot Sprite**
+**2. Skripting für den Papagei-Sprite**
 
-Now script the **Parrot** sprite, which is in flight and the flight altitude is determined by the detection distance of the ultrasonic module.
+Jetzt das Skript für den **Parrot**-Sprite schreiben, der fliegt und dessen Flughöhe durch die Erkennungsentfernung des Ultraschallmoduls bestimmt wird.
 
-
-* When the green flag is clicked, switch the costume every 0.2s so that it is always in flight.
+* Wenn auf die grüne Flagge geklickt wird, wechsle das Kostüm alle 0,2s, sodass es ständig fliegt.
 
 .. image:: img/15_parr1.png
 
-* Read the value of the ultrasonic module and store it in the variable **distance** after rounding it with the [round] block.
-
+* Lies den Wert des Ultraschallmoduls und speichere ihn in der Variable **distance** nachdem er mit dem [round] Block gerundet wurde.
 
 .. image:: img/15_parr2.png
 
-* If the ultrasonic detection distance is less than 10cm, let the y coordinate increase by 50, the **Parrot** sprite will fly upwards. Otherwise, the y-coordinate value is decreased by 40, **Parrot** will fall down.
+* Wenn die Ultraschall-Erkennungsentfernung weniger als 10 cm beträgt, lass den y-Koordinatenwert um 50 erhöhen, dann wird der **Parrot**-Sprite nach oben fliegen. Andernfalls wird der y-Koordinatenwert um 40 verringert und der **Parrot** wird fallen.
 
 .. image:: img/15_parr3.png
 
-* If the **Parrot** sprite touches the **Paddle** sprite, the game ends and the script stops running.
+* Wenn der Sprite **Parrot** den Sprite **Paddle** berührt, endet das Spiel und das Skript hört auf zu laufen.
 
 .. image:: img/15_parr4.png
 
+**3. Skripting für den Schläger-Sprite**
 
-**3. Scripting for the Paddle sprite**
+Schreibe jetzt das Skript für den **Paddle**-Sprite, der zufällig auf der Bühne erscheinen muss.
 
-Now write the script for the **Paddle** sprite, which needs to appear randomly on the stage.
-
-* Hide the sprite **Paddle** when the green flag is clicked, and clone itself at the same time. The [`create clone of <https://en.scratch-wiki.info/wiki/Create_Clone_of_()_(block)>`_] block is a control block and a stack block. It creates a clone of the sprite in the argument. It can also clone the sprite it is running in, creating clones of clones, recursively.
+* Verstecke den Sprite **Paddle**, wenn auf die grüne Flagge geklickt wird, und klone ihn gleichzeitig. Der [`create clone of <https://en.scratch-wiki.info/wiki/Create_Clone_of_()_(block)>`_] Block ist ein Steuerblock und ein Stapelblock. Er erstellt einen Klon des Sprites im Argument. Er kann auch den Sprite klonen, in dem er läuft, und Klone von Klonen erstellen, rekursiv.
 
 .. image:: img/15_padd.png
 
-* When **Paddle** is presented as a clone, its position is 220 (rightmost) for the x-coordinate and its y-coordinate at (-125 to 125) random (height random).
+* Wenn **Paddle** als Klon dargestellt wird, beträgt seine Position 220 (ganz rechts) für die x-Koordinate und seine y-Koordinate liegt zufällig zwischen (-125 bis 125) (zufällige Höhe).
 
 .. image:: img/15_padd1.png
 
-* Use the [repeat] block to make its x coordinate value slowly decrease, so you can see the clone of the **Paddle** sprite slowly move from the right to the left until it disappears.
+* Verwende den [wiederholen] Block, um seinen x-Koordinatenwert langsam zu verringern. So siehst du den Klon des **Paddle**-Sprites, der langsam von rechts nach links bewegt wird, bis er verschwindet.
 
 .. image:: img/15_padd2.png
 
-* Re-clone a new **Paddle** sprite and delete the previous clone.
+* Klone einen neuen **Paddle**-Sprite und lösche den vorherigen Klon.
 
 .. image:: img/15_padd3.png

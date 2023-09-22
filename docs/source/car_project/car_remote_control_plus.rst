@@ -1,11 +1,11 @@
 .. _car_remote_plus:
 
-10. One Touch Start
+10. One-Touch-Start
 =============================
 
-In this project, we have integrated the previous projects - line following, following, obstacle avoidance, self-driving, etc. together. They can be switched by buttons on the remote control, so you can start the car and experience all functions at once.
+In diesem Projekt haben wir die vorherigen Projekte - Linienverfolgung, Verfolgung, Hindernisvermeidung, autonomes Fahren usw. zusammengeführt. Sie können mit den Tasten der Fernbedienung umgeschaltet werden, sodass Sie das Auto starten und alle Funktionen auf einmal erleben können.
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/car_all.jpg
     :width: 800
@@ -14,10 +14,10 @@ In this project, we have integrated the previous projects - line following, foll
 
 .. note::
 
-    * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
-  
+    * Öffnen Sie die Datei ``10.one_touch_start.ino`` unter dem Pfad ``3in1-kit\car_project\10.one_touch_start``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
+    * Die ``IRremote``-Bibliothek wird hier verwendet, Sie können sie aus dem **Library Manager** installieren.
+    
         .. image:: ../img/lib_irremote.png
     
 
@@ -25,24 +25,21 @@ In this project, we have integrated the previous projects - line following, foll
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d48e05be-da3a-4515-a7f0-99ff965e597e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Nach erfolgreichem Hochladen des Codes wird die LED bei jedem vom IR-Empfänger empfangenen Signal der Fernbedienung 3 Mal schnell blinken. Sie können die folgenden Tasten drücken, um den Wagen zu steuern.
 
-After the code is uploaded successfully, the LED will flash rapidly 3 times for every signal received from the remote control by the IR receiver. You can press the following keys to operate the cart.
-
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Move to the left front
-* **2**: Forward
-* **3**: Move to the right.
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward.
-* **9**: Backward to the right
-* **CYCLE**: Follow the line
-* **U/SD**: Self-driving
-* **▷▷|**: Obstacle avoidance with ultrasonic module
-* **|◁◁**: Obstacle avoidance with IR Obstacle module
-* **EQ**: Follow your hand
-* **0**: Stop
-
-
+* **+**: Beschleunigen
+* **-**: Verlangsamen
+* **1**: Nach links vorne bewegen
+* **2**: Vorwärts
+* **3**: Nach rechts bewegen
+* **4**: Links abbiegen
+* **6**: Rechts abbiegen
+* **7**: Rückwärts nach links
+* **8**: Rückwärts
+* **9**: Rückwärts nach rechts
+* **CYCLE**: Der Linie folgen
+* **U/SD**: Autonomes Fahren
+* **▷▷|**: Hindernisvermeidung mit Ultraschallmodul
+* **|◁◁**: Hindernisvermeidung mit IR-Hindernismodul
+* **EQ**: Der Hand folgen
+* **0**: Stoppen

@@ -1,49 +1,49 @@
 .. _sh_shooting:
 
-2.13 GAME - Shooting
+2.13 SPIEL - Schießen
 ====================================
 
-Have you seen those shooting games on TV? The closer a contestant shoots a bullet on the target to the bullseye, the higher his score.
+Haben Sie schon einmal diese Schießspiele im Fernsehen gesehen? Je näher ein Teilnehmer mit einer Kugel das Ziel am Bullseye trifft, desto höher ist seine Punktzahl.
 
-Today we are also doing a shooting game in Scratch. In the game, let the Crosshair shoot as far as possible to the bullseye to get a higher score.
+Heute machen wir ebenfalls ein Schießspiel in Scratch. In diesem Spiel soll das Fadenkreuz so nah wie möglich am Bullseye schießen, um eine höhere Punktzahl zu erzielen.
 
-Click on the green flag to start. Use the Obstacle Avoidance module to shoot an bullet.
+Klicken Sie auf die grüne Flagge, um zu starten. Verwenden Sie das Hindernisvermeidungsmodul, um eine Kugel abzufeuern.
 
 .. image:: img/14_shooting.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+------------------------
 
-- How the Obstacle Avoidance module works and the angle range
-- Paint different sprites
-- Touch colors
+- Wie das Hindernisvermeidungsmodul funktioniert und welcher Winkelbereich gegeben ist
+- Verschiedene Sprites malen
+- Farben berühren
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,79 +52,78 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Das Hindernisvermeidungsmodul ist ein infraroter Annäherungssensor mit einstellbarer Entfernung, dessen Ausgabe normalerweise hoch ist und auf niedrig schaltet, wenn ein Hindernis erkannt wird.
 
-Now build the circuit according to the diagram below.
+Bauen Sie die Schaltung jetzt gemäß dem untenstehenden Diagramm auf.
 
 .. image:: img/circuit/avoid_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Paint the Crosshair sprite**
+**1. Das Fadenkreuz-Sprite malen**
 
-Delete the default sprite, select the **Sprite** button and click **Paint**, a blank sprite **Sprite1** will appear and name it **Crosshair**.
+Löschen Sie das Standard-Sprite, wählen Sie den **Sprite**-Button und klicken Sie auf **Paint**. Ein leeres Sprite namens **Sprite1** erscheint. Benennen Sie es in **Crosshair** um.
 
 .. image:: img/14_shooting0.png
 
-
-Go to the **Crosshair** sprite's **Costumes** page. Click on the **Circle** tool, remove the fill color, and set the color and width of the outline.
+Gehen Sie zur **Costumes**-Seite des **Crosshair**-Sprites. Klicken Sie auf das **Circle**-Werkzeug, entfernen Sie die Füllfarbe und legen Sie die Farbe und Breite der Kontur fest.
 
 .. image:: img/14_shooting02.png
 
-Now draw a circle with the **Circle** tool. After drawing, you can click to the **Select** tool and move the circle so that the original point is aligned with the center of the canvas.
+Zeichnen Sie nun mit dem **Circle**-Werkzeug einen Kreis. Nach dem Zeichnen können Sie mit dem **Select**-Werkzeug den Kreis verschieben, sodass der Ursprungspunkt mit der Mitte der Leinwand ausgerichtet ist.
 
 .. image:: img/14_shooting03.png
 
-Using the **Line** tool, draw a cross inside the circle.
+Verwenden Sie das **Line**-Werkzeug, um ein Kreuz innerhalb des Kreises zu zeichnen.
 
 .. image:: img/14_shooting033.png
 
-**Paint the Target sprite**
+**Das Ziel-Sprite malen**
 
-Create a new sprite called **Target** sprite.
+Erstellen Sie ein neues Sprite namens **Target**.
 
 .. image:: img/14_shooting01.png
 
-Go to the Costumes page of the **Target** sprite, click on the **Circle** tool, select a fill color and remove the Outline and paint a large circle.
+Gehen Sie zur Kostümseite des **Target**-Sprites, klicken Sie auf das **Circle**-Werkzeug, wählen Sie eine Füllfarbe aus, entfernen Sie die Kontur und malen Sie einen großen Kreis.
 
 .. image:: img/14_shooting05.png
 
-Use the same method to draw additional circles, each with a different color, and you can use the **Forward** or **Backbard** tool to change the position of the overlapping circles. Note that you also need to select the tool to move the circles, so that the origin of all the circles and the center of the canvas are aligned.
+Verwenden Sie dieselbe Methode, um weitere Kreise mit jeweils unterschiedlichen Farben zu zeichnen, und Sie können die Position der überlappenden Kreise mit dem Werkzeug **Forward** oder **Backbard** ändern. Beachten Sie, dass Sie auch das Werkzeug zum Verschieben der Kreise auswählen müssen, damit der Ursprung aller Kreise und die Mitte der Leinwand ausgerichtet sind.
 
 .. image:: img/14_shooting04.png
 
-**3. Add a backdrop**
+**3. Einen Hintergrund hinzufügen**
 
-Add a suitable background which preferably does not have too many colors and does not match the colors in the **Target** sprite. Here I have chosen **Wall1** backdrop.
+Fügen Sie einen geeigneten Hintergrund hinzu, der vorzugsweise nicht zu viele Farben hat und nicht mit den Farben im **Target**-Sprite übereinstimmt. Hier habe ich den Hintergrund **Wall1** gewählt.
 
 .. image:: img/14_shooting06.png
 
-**4. Script the Crosshair sprite**
+**4. Script für das Fadenkreuz-Sprite**
 
-Set the random position and size of the **Crosshair** sprite, and let it move randomly.
+Legen Sie die zufällige Position und Größe des **Crosshair**-Sprites fest und lassen Sie es sich zufällig bewegen.
 
 .. image:: img/14_shooting4.png
 
-When a hand is placed in front of the obstacle avoidance module, it will output a low level as a transmit signal.
+Wenn eine Hand vor das Hindernisvermeidungsmodul gelegt wird, gibt es ein niedriges Signal als Übertragungssignal aus.
 
 .. image:: img/14_shooting5.png
 
-When the **shooting** message is received, the sprite stops moving and slowly shrinks, thus simulating the effect of a bullet being shot.
+Wenn die **schießen**-Nachricht empfangen wird, stoppt das Sprite seine Bewegung und schrumpft langsam, wodurch der Effekt eines abgefeuerten Geschosses simuliert wird.
 
 .. image:: img/14_shooting6.png
 
-Use the [Touch color ()] block to determine the position of the shot.
+Verwenden Sie den [Touch color ()]-Block, um die Schussposition zu bestimmen.
 
 .. image:: img/14_shooting7.png
 
-When the shot is inside the yellow circle, 10 is reported.
+Wenn der Schuss innerhalb des gelben Kreises liegt, werden 10 Punkte gemeldet.
 
 .. image:: img/14_shooting8.png
 
-Use the same method to determine the position of the bullet shot, if it is not set on the **Target** sprite, it means it is out of the circle.
+Verwenden Sie dieselbe Methode, um die Position des abgefeuerten Geschosses zu bestimmen. Wenn es nicht auf dem **Target**-Sprite eingestellt ist, bedeutet dies, dass es außerhalb des Kreises liegt.
 
 .. image:: img/14_shooting9.png

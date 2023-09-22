@@ -1,9 +1,8 @@
-Download the Code
+Code herunterladen
 ========================
 
-Download the relevant code from the link below.
+Laden Sie den relevanten Code über den untenstehenden Link herunter.
 
-* :download:`SunFounder 3 in 1 Kit for Arduino <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`
+* :download:`SunFounder 3 in 1 Kit für Arduino <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`
 
-* Or check out the code at `SunFounder 3 in 1 Kit for Arduino - GitHub <https://github.com/sunfounder/3in1-kit>`_
-
+* Oder sehen Sie sich den Code auf `SunFounder 3 in 1 Kit für Arduino - GitHub <https://github.com/sunfounder/3in1-kit>`_ an.

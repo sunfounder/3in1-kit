@@ -1,58 +1,54 @@
-
 .. _ar_analog_write:
 
-2. Analog Write
-==================
+2. Analoges Schreiben
+=========================
 
-6 of the Arduino's 14 digital pins also have PWM out function. Therefore, in addition to writing digital signals to these 6 pins, you can also write analog signals (PWM wave signals) to them. This way you can make the LEDs show different brightness or make the motor rotate at different speeds.
+6 der 14 digitalen Pins von Arduino verfügen auch über eine PWM-Ausgabefunktion. Daher können Sie neben dem Schreiben von digitalen Signalen an diese 6 Pins auch analoge Signale (PWM-Wellensignale) an sie senden. Auf diese Weise können Sie die LEDs in unterschiedlicher Helligkeit leuchten lassen oder den Motor mit unterschiedlichen Geschwindigkeiten drehen lassen.
 
-Pulse Width Modulation, or `PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_, is a technique for getting analog results with digital means. Since it may be hard to grasp the literal meaning, here is an example of controlling the intensity of an LED to help you better understand.
+Pulsweitenmodulation, oder `PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_, ist eine Technik, um analoge Ergebnisse mit digitalen Mitteln zu erzielen. Da die wörtliche Bedeutung schwer zu fassen sein mag, folgt hier ein Beispiel zur Steuerung der Intensität einer LED, um das Prinzip besser zu veranschaulichen.
 
-A digital signal consisting of high and low levels is called a pulse. The pulse width of these pins can be adjusted by changing the ON/OFF speed.
-Simply put, when we turn the LED on, off, and on again for a short period of time (like 20ms, the visual dwell time of most people),
-We won't see that it has gone out, but the brightness of the light will be slightly weaker. During this period, the longer the LED is on, the brighter the LED will be.
-That is to say, within a period, the wider the pulse, the greater the "electrical signal strength" output by the microcontroller. 
+Ein digitales Signal, das aus hohen und niedrigen Pegeln besteht, wird als Puls bezeichnet. Die Pulsbreite dieser Pins kann durch Änderung der EIN/AUS-Geschwindigkeit angepasst werden. Vereinfacht ausgedrückt: Wenn wir die LED für eine kurze Zeit (wie 20ms, die visuelle Verweildauer der meisten Menschen) ein-, aus- und wieder einschalten, werden wir nicht bemerken, dass sie ausgeschaltet war, aber die Helligkeit des Lichts wird etwas schwächer sein. In diesem Zeitraum gilt: Je länger die LED eingeschaltet ist, desto heller wird sie sein.
+Das heißt, innerhalb eines Zeitraums, je breiter der Puls, desto größer ist die "elektrische Signalstärke", die vom Mikrocontroller ausgegeben wird.
 
-This is the function needed to write the PWM wave.
+Dies ist die benötigte Funktion, um die PWM-Welle zu schreiben:
 
 * ``analogWrite(pin, value)``
 
-    Writes an analog value (PWM wave) to a pin. Different output voltages (0-5V) can be simulated by generating a specified pulse signal. The pin will hold this signal until it is called by a new read or write statement.
+    Schreibt einen analogen Wert (PWM-Welle) an einen Pin. Durch Generieren eines bestimmten Pulssignals können unterschiedliche Ausgangsspannungen (0-5V) simuliert werden. Der Pin behält dieses Signal bei, bis er durch eine neue Lese- oder Schreibanweisung aufgerufen wird.
 
    **Syntax**
       analogWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin to write to. Allowed data types: int.
-    * ``value``: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: int.
+   **Parameter**
+    * ``pin``: Der Arduino-Pin, an den geschrieben wird. Erlaubte Datentypen: int.
+    * ``value``: Das Tastverhältnis: zwischen 0 (immer aus) und 255 (immer an). Erlaubte Datentypen: int.
 
-
-**Example of Analog Write**
+**Beispiel für Analoges Schreiben**
 
 .. code-block:: arduino
 
-   int pin = 9;      //connect  to pwm pin
+   int pin = 9;      // Verbindung zum PWM-Pin
 
    void setup() {
-      pinMode(pin, OUTPUT);  // sets the pin as output
+      pinMode(pin, OUTPUT);  // Definiert den Pin als Ausgang
    }
 
    void loop() {
       for (int i = 0 ;i<255 ; i++){
-         analogWrite(pin, i); //analogWrite values from 0 to 255
+         analogWrite(pin, i); //analogWrite Werte von 0 bis 255
          delay(30);
       }
    }
 
-**Notes and Warnings**
+**Anmerkungen und Warnungen**
 
-* Looking closely at the R3 board, the pins marked with the "~" symbol have analog output function.
-* The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the ``millis()`` and ``delay()`` functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
+* Wenn Sie genau auf das R3-Board schauen, haben die mit dem Symbol "~" gekennzeichneten Pins eine analoge Ausgabefunktion.
+* Die an den Pins 5 und 6 erzeugten PWM-Ausgänge haben höhere Tastverhältnisse als erwartet. Dies liegt an Wechselwirkungen mit den Funktionen ``millis()`` und ``delay()``, die denselben internen Timer verwenden, der zum Erzeugen dieser PWM-Ausgänge genutzt wird. Dies wird vor allem bei niedrigen Tastverhältniseinstellungen (z. B. 0 - 10) bemerkbar und kann dazu führen, dass ein Wert von 0 den Ausgang an den Pins 5 und 6 nicht vollständig abschaltet.
 
+**Zugehörige Komponenten**
 
-**Related Components**
+Im Folgenden finden Sie die zugehörigen Komponenten, auf die Sie klicken können, um zu erfahren, wie sie verwendet werden.
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

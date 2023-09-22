@@ -1,23 +1,23 @@
 .. _connect_blynk:
 
-1.4 Connecting the R3 board to Blynk
---------------------------------------------
+1.4 Verbindung des R3-Boards mit Blynk herstellen
+------------------------------------------------------
 
-#. Reconnect the ESP8266 module and R3 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R3 board respectively.
+#. Verbinden Sie das ESP8266-Modul erneut mit dem R3-Board. Hier wird die Software-Serienschnittstelle verwendet, sodass TX und RX mit den Pins 2 und 3 des R3-Boards verbunden werden.
 
     .. note::
 
-        The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+        Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.
 
     .. image:: img/wiring_23.jpg
 
-#. Open the ``1.connect.ino`` file under the path of ``3in1-kit\iot_project\1.connect``. Or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``1.connect.ino`` im Pfad ``3in1-kit\iot_project\1.connect`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1c0c1a8f-2551-484f-9f4f-d5d4117cc864/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the following three lines of code that you can copy from your account's **Device info** page. These three lines of code will allow your R3 board to find your blynk account.
+#. Ersetzen Sie die folgenden drei Codezeilen, die Sie von der **Device info**-Seite Ihres Kontos kopieren können. Diese drei Zeilen ermöglichen es Ihrem R3-Board, Ihr Blynk-Konto zu finden.
 
     .. code-block:: arduino
 
@@ -27,27 +27,27 @@
     
     .. image:: img/sp20220614174721.png
 
-#. Fill in the ``ssid`` and ``password`` of the WiFi you are using.
+#. Geben Sie die ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs ein.
 
     .. code-block:: arduino
 
         char ssid[] = "ssid";
         char pass[] = "password";
 
-#. Upload the code to the R3 board, then open the serial monitor and set the baud rate to 115200. when the R3 board communicates with Blynk successfully, the serial monitor will show the ``ready`` character.
+#. Laden Sie den Code auf das R3-Board, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 115200 ein. Wenn das R3-Board erfolgreich mit Blynk kommuniziert, zeigt der serielle Monitor das Zeichen ``ready`` an.
 
     .. image:: img/sp220607_170223.png
 
     .. note::
     
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Wenn die Meldung ``ESP antwortet nicht`` erscheint, befolgen Sie bitte diese Schritte:
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+        * Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden und dann trennen.
+        * Drücken Sie die Reset-Taste auf dem R3-Board.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Manchmal müssen Sie den obigen Vorgang 3-5 Mal wiederholen. Bitte haben Sie Geduld.
 
-#. The status of Blynk will change from **offline** to **online**.
+#. Der Status von Blynk ändert sich von **offline** zu **online**.
 
     .. image:: img/sp220607_170326.png

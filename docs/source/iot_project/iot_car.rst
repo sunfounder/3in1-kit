@@ -1,87 +1,81 @@
 .. _iot_car:
 
-8. IoT Car
+8. IoT Auto
 ====================
 
-We used the Blynk APP on the cell phone to control the car for this project. But you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
-In the era of 5G network popularity, this mode may become one of the main production methods in many industries, so let's experience this play in advance.
+Für dieses Projekt haben wir die Blynk-APP auf dem Handy verwendet, um das Auto zu steuern. Sie müssen jedoch :ref:`car_projects` konsultieren, um das Auto zusammenzubauen und ein grundlegendes Verständnis dafür zu erhalten.
+Im Zeitalter der Verbreitung des 5G-Netzwerks könnte dieser Modus zu einer der Hauptproduktionsmethoden in vielen Branchen werden. Lassen Sie uns also dieses Spiel im Voraus erleben.
 
-**1. Build the Cirduit**
+**1. Schaltkreis aufbauen**
 
 .. image:: img/wiring_iot_car.jpg
     :width: 800
 
+**2. Dashboard bearbeiten**
 
-**2. Edit Dashboard**
+In Blynk auf dem Handy können keine Datastreams bearbeitet werden. Daher müssen wir diese Schritte immer noch auf der Web-Seite durchführen.
 
-
-Blynk on mobile cannot edit Datastream, so we still need to do these steps on the web side.
-
-#. Create a **Datastream** of type **Virtual Pin** on the **Datastream** page, to record the X-axis value of the joystick. Set NAME to ``Xvalue``, DATA TYPE to ``Integer``, and MIN and MAX to ``-10`` and ``10``.
+#. Erstellen Sie auf der **Datastream**-Seite einen **Datastream** vom Typ **Virtual Pin**, um den X-Achsen-Wert des Joysticks zu erfassen. Setzen Sie NAME auf ``Xvalue``, DATENTYP auf ``Integer`` und MIN und MAX auf ``-10`` und ``10``.
 
     .. image:: img/sp220613_164507.png
 
-#. Create a **Datastream** of type **Virtual Pin** to record the Y-axis value of the joystick. Set NAME to ``Yvalue``, DATA TYPE to ``Integer``, MIN and MAX to ``-10`` and ``10``.
+#. Erstellen Sie einen **Datastream** vom Typ **Virtual Pin**, um den Y-Achsen-Wert des Joysticks zu erfassen. Setzen Sie NAME auf ``Yvalue``, DATENTYP auf ``Integer``, MIN und MAX auf ``-10`` und ``10``.
 
     .. image:: img/sp220613_164717.png
 
-Next you need to do the following on your phone.
+Führen Sie dann die folgenden Schritte auf Ihrem Handy durch.
 
-1. Search for "Blynk IoT" (not Blynk(legacy)) in GOOGLE Play or APP Store to download it.
-2. After opening the APP, sign in, this account should be the same as the account used on the web client.
-3. Then go to Dashboard (if you don't have one, create one) and you will see that the Dashboard for mobile and web are independent of each other.
+1. Suchen Sie in GOOGLE Play oder im APP Store nach "Blynk IoT" (nicht Blynk(legacy)) und laden Sie es herunter.
+2. Nach dem Öffnen der APP melden Sie sich an. Dieses Konto sollte mit dem Konto auf dem Web-Client übereinstimmen.
+3. Gehen Sie dann zum Dashboard (wenn Sie keines haben, erstellen Sie eines), und Sie werden sehen, dass das Dashboard für Mobilgeräte und Web voneinander unabhängig sind.
 
 .. image:: img/APP_1.jpg
 
-4. Click Edit Icon.
-5. Click on the blank area. 
-6. Select a Joystick widget.
+4. Klicken Sie auf das Bearbeitungssymbol.
+5. Klicken Sie auf den leeren Bereich.
+6. Wählen Sie ein Joystick-Widget aus.
 
 .. image:: img/APP_2.jpg
 
-7. Now you will see a Joystick widget appear in the blank area, click on it.
-8. Joystick Settings will appear, select the Xvalue and Yvalue you just set in the datastreams.
-9. Go back to the Dashboard page and you can operate the Joystick when you want.
+7. Jetzt sehen Sie ein Joystick-Widget im leeren Bereich, klicken Sie darauf.
+8. Die Joystick-Einstellungen erscheinen, wählen Sie die von Ihnen in den Datastreams eingestellten Xvalue und Yvalue.
+9. Kehren Sie zur Dashboard-Seite zurück, und Sie können den Joystick nach Belieben bedienen.
 
 .. image:: img/APP_3.jpg
 
+**3. Code ausführen**
 
-**3. Run the Code**
-
-
-#. Open the ``8.iot_car.ino`` file under the path of ``3in1-kit\iot_project\8.iot_car``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``8.iot_car.ino`` unter dem Pfad ``3in1-kit\iot_project\8.iot_car`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. raw:: html 
-        
+
         <iframe src=https://create.arduino.cc/editor/sunfounder01/b4978cad-adbb-4a65-bc3b-f860d68c3001/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Ersetzen Sie die ``Template ID``, ``Device Name`` und ``Auth Token`` durch Ihre eigenen Angaben. Geben Sie auch die ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs ein. Für detaillierte Anleitungen konsultieren Sie bitte :ref:`connect_blynk`.
+#. Wählen Sie das richtige Board und den Port aus und klicken Sie auf den **Upoad**-Button.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie den Seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie, bis eine Meldung wie eine erfolgreiche Verbindung erscheint.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Wenn die Meldung ``ESP reagiert nicht`` erscheint, wenn Sie sich verbinden, folgen Sie bitte diesen Schritten:
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+        * Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST 1 Sekunde lang auf GND verbinden und dann abziehen.
+        * Drücken Sie die Reset-Taste auf dem R3-Board.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Manchmal müssen Sie die obige Operation 3-5 Mal wiederholen, bitte haben Sie Geduld.
 
-#. Now unplug the USB cable and power the cart with a 9V battery alone, then wait for the LED to light up, representing that the car is connected to Blynk.
-#. Open Blynk on your phone and you can use the Joystick widget to control the movement of the car.
+#. Ziehen Sie jetzt das USB-Kabel ab und versorgen Sie den Wagen nur mit einer 9V-Batterie. Warten Sie, bis die LED aufleuchtet, was bedeutet, dass das Auto mit Blynk verbunden ist.
+#. Öffnen Sie Blynk auf Ihrem Handy, und Sie können das Joystick-Widget verwenden, um die Bewegung des Autos zu steuern.
 
     .. image:: img/iot_car.jpg
 
+**Wie funktioniert das?**
 
-
-**How it works?**
-
-These functions are used to control the movement of the car.
+Diese Funktionen dienen zur Steuerung der Bewegung des Autos.
 
 .. code-block:: arduino
 
@@ -91,7 +85,7 @@ These functions are used to control the movement of the car.
     void turnLeft(int speed) {...}
     void stopMove() {...}
 
-The IoT section reads the values of the Joystick widget and assigns them to the variables ``Xvalue`` and ``Yvalue``.
+Der IoT-Bereich liest die Werte des Joystick-Widgets aus und weist sie den Variablen ``Xvalue`` und ``Yvalue`` zu.
 
 .. code-block:: arduino
 
@@ -108,7 +102,7 @@ The IoT section reads the values of the Joystick widget and assigns them to the 
         Yvalue = param.asInt();
     }
 
-At ``loop()``, make the car perform different actions based on ``Xvalue`` and ``Yvalue``.
+In ``loop()`` lässt man das Auto verschiedene Aktionen basierend auf ``Xvalue`` und ``Yvalue`` ausführen.
 
 .. code-block:: arduino
 
@@ -124,7 +118,7 @@ At ``loop()``, make the car perform different actions based on ``Xvalue`` and ``
         stopMove();
     }
 
-Also, add a network status determination to ``loop()`` to light up an LED if it is connected to Blynk Cloud.
+Ebenso fügen Sie eine Netzwerkstatus-Bestimmung zu ``loop()`` hinzu, um eine LED aufzuleuchten, wenn sie mit Blynk Cloud verbunden ist.
 
 .. code-block:: arduino
 

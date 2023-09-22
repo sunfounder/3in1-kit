@@ -3,38 +3,37 @@
 TT Motor
 ==============
 
-
 .. image:: img/tt_motor.jpg
     :width: 400
     :align: center
 
-This is a TT DC gearbox motor with a gear ratio of 1:48, it comes with 2 x 200mm wires with 0.1" male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+Dies ist ein TT Gleichstrom-Getriebemotor mit einem Übersetzungsverhältnis von 1:48. Er wird mit 2 x 200mm Kabeln mit 0,1" Steckern geliefert, die in ein Breadboard passen. Ideal für den Einsatz in einem Breadboard oder Klemmblock.
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+Diese Motoren können mit einer Spannung von 3 ~ 6VDC betrieben werden. Bei höheren Spannungen werden sie natürlich etwas schneller laufen.
 
-Note that these are very basic motors with no built-in encoder, speed control or position feedback. The voltage goes in and the spin comes out. There will be variation from motor to motor, so if you need precise motion, you'll need a separate feedback system.
+Beachten Sie, dass dies sehr einfache Motoren sind, die über keinen eingebauten Encoder, Geschwindigkeitsregelung oder Positionsrückmeldung verfügen. Die Spannung wird zugeführt und die Drehung erfolgt. Es wird Variationen von Motor zu Motor geben. Wenn Sie eine präzise Bewegung benötigen, benötigen Sie ein separates Feedback-System.
 
-**Technical Details**
+**Technische Details**
 
-* Rated Voltage: 3~6V
-* Continuous No-Load Current: 150mA +/- 10%
-* Min. Operating Speed (3V): 90+/- 10% RPM
-* Min. Operating Speed (6V): 200+/- 10% RPM
-* Stall Torque (3V): 0.4kg.cm
-* Stall Torque (6V): 0.8kg.cm
-* Gear Ratio: 1:48
-* Body Dimensions: 70 x 22 x 18mm
-* Wires Length: 200mm & 28 AWG
-* Weight: 30.6g
+* Nennspannung: 3~6V
+* Dauerhafter Leerlaufstrom: 150mA +/- 10%
+* Min. Betriebsgeschwindigkeit (3V): 90+/- 10% U/min
+* Min. Betriebsgeschwindigkeit (6V): 200+/- 10% U/min
+* Anhaltemoment (3V): 0,4kg.cm
+* Anhaltemoment (6V): 0,8kg.cm
+* Übersetzungsverhältnis: 1:48
+* Abmessungen des Gehäuses: 70 x 22 x 18mm
+* Kabellänge: 200mm & 28 AWG
+* Gewicht: 30,6g
 
-**Dimensional Drawing**
+**Abmessungszeichnung**
 
 .. image:: img/motor_size.jpg
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_motor` (Learning Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
-* :ref:`sh_test` (Scratch Project)
+* :ref:`ar_motor` (Grundlegendes Projekt)
+* :ref:`car_move` (Auto-Projekt)
+* :ref:`car_speed` (Auto-Projekt)
+* :ref:`iot_car` (IoT-Projekt)
+* :ref:`sh_test` (Scratch-Projekt)

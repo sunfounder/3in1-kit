@@ -1,48 +1,47 @@
 .. _ar_threshold:
 
-5.2 Threshold
+5.2 Schwellenwert
 =======================
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+In vielen Projekten werden Sie auf solch ein Bedürfnis stoßen.
+"Wenn xxx ein bestimmtes Level erreicht, dann..."
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+Zum Beispiel in einem Smart Home: Wenn die Lichtintensität unter 50 Lux fällt, schalte das Licht ein;
+Ein weiteres Beispiel ist auf dem Computer-Motherboard: Wenn die Betriebstemperatur des CPUs über 65 Grad Celsius steigt, schalte den Lüfter ein, und so weiter.
 
-In these requirements, the keyword "threshold" is reflected.
+In diesen Anforderungen spiegelt sich das Schlüsselwort "Schwellenwert" wider.
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+Wir können den Wert des Schwellenwerts anpassen, um den Schaltkreis besser an individuelle Bedürfnisse anzupassen.
+Zum Beispiel: Wenn ich eine hellere Wohnatmosphäre bevorzuge, kann ich den Schwellenwert für das automatische Licht im Smart Home auf 80 Lux erhöhen.
+Ein weiteres Beispiel: Das Lüftungsumfeld meines Studios ist nicht sehr gut und der Kühlbedarf höher, dann kann der Schwellenwert für das automatische Lüftereinschalten auf 50 Grad Celsius angepasst werden.
 
+Hier verwenden wir einen Bodenfeuchtigkeitssensor und 2 LEDs, um einen Pflanzentopf-Monitor zu erstellen. Wenn der Boden zu trocken ist, leuchtet die rote LED; wenn der Boden feucht genug ist, leuchtet die grüne LED. Sie müssen die Schwellenwerte manuell anpassen, um die Trockenheit und Feuchtigkeit des Bodens zu bestimmen.
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+**Benötigte Komponenten**
 
-**Required Components**
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/threshold_bb.png
     :width: 600
@@ -71,17 +70,16 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\basic_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Öffnen Sie die Datei ``5.2.threshold.ino`` unter dem Pfad ``3in1-kit\basic_project\5.2.threshold``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
 
-**How it works**
+Nachdem der Code erfolgreich hochgeladen wurde, und wenn Ihr Schwellenwert richtig eingestellt ist, wird die rote LED aufleuchten, wenn der Boden trocken ist, um Sie daran zu erinnern, dass Sie gießen müssen; nach dem Gießen wird die grüne LED aufleuchten.
+
+**Wie funktioniert das?**
 
 .. code-block:: Arduino
 
@@ -91,17 +89,15 @@ After the code is uploaded successfully, if your threshold is set correctly, you
         int sensorValue = analogRead(soilMoisture);
         Serial.println(sensorValue);
         if (sensorValue > threshold) {
-            digitalWrite(redPin, HIGH); // Turn the red LED
-            digitalWrite(greenPin, LOW); // green
+            digitalWrite(redPin, HIGH); // Rote LED einschalten
+            digitalWrite(greenPin, LOW); // Grün ausschalten
         } else {
-            digitalWrite(greenPin, HIGH); // Turn on the green LED
-            digitalWrite(redPin, LOW); // red
+            digitalWrite(greenPin, HIGH); // Grüne LED einschalten
+            digitalWrite(redPin, LOW); // Rot ausschalten
         }
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+Zunächst setzen Sie einen ``Schwellenwert`` und lesen dann den Wert des Bodenfeuchtigkeitsmoduls aus, dessen Wert mit steigendem Feuchtigkeitsgrad abnimmt. Wenn der aktuell gelesene Wert größer als der gesetzte ``Schwellenwert`` ist, lassen Sie die rote LED leuchten, andernfalls schalten Sie die grüne LED ein.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
-
-
+Dieser ``Schwellenwert`` muss je nach tatsächlicher Situation angepasst werden. Sie können zuerst den Code hochladen, dann den seriellen Monitor öffnen, um den Wert zu überprüfen, den Wert in feuchten und trockenen Zuständen aufzeichnen und dann einen Mittelwert als ``Schwellenwert`` wählen.

@@ -1,38 +1,38 @@
 .. _sh_test:
 
-3.1 Test the Car
+3.1 Das Auto testen
 ======================
 
-Hear, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
+Hier erfahren Sie, wie Sie Skripte schreiben, um das Auto vorwärts fahren zu lassen. Sie sollten sich jedoch auf :ref:`car_projects` beziehen, um das Auto zusammenzubauen und ein grundlegendes Verständnis dafür zu erlangen.
 
-But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
+Bevor Sie mit dem Projekt beginnen, sollten Sie die Schritte kennen, um PictoBlox im :ref:`upload_mode` zu verwenden.
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein gesamtes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 3-in-1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,13 +41,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The L298N motor driver module is a high power motor driver module for driving DC and stepper motors. The L298N module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
+Das L298N Motor-Treiber-Modul ist ein Hochleistungs-Motortreiber-Modul zum Antrieb von Gleichstrom- und Schrittmotoren. Das L298N-Modul kann bis zu 4 Gleichstrommotoren steuern oder 2 Gleichstrommotoren mit Richtungs- und Geschwindigkeitskontrolle.
 
-Connect the wires between the L298N module and the R3 board according to the diagram below.
-
+Verbinden Sie die Kabel zwischen dem L298N-Modul und dem R3-Board gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
     :widths: 25 25 50
@@ -70,68 +69,70 @@ Connect the wires between the L298N module and the R3 board according to the dia
       - 
     * - OUT1
       - 
-      - Black wire of right motor
+      - Schwarzes Kabel des rechten Motors
     * - OUT2
       - 
-      - Red wire of right motor
+      - Rotes Kabel des rechten Motors
     * - OUT3
       - 
-      - Black wire of left motor
+      - Schwarzes Kabel des linken Motors
     * - OUT4
       - 
-      - Red wire of left motor
+      - Rotes Kabel des linken Motors
 
 .. image:: img/car_motor1.jpg
     :width: 800
 
-Programming
+
+Programmierung
 -------------------
 
-**1. Let the car go forward**
+**1. Das Auto vorwärts fahren lassen**
 
-Based on the above wiring, we know that pins 5 and 6 are used to control the right motor rotation and pins 9 and 10 are used for the left motor rotation. Now let's write a script to make the car go forward.
+Basierend auf der oben gezeigten Verkabelung wissen wir, dass die Pins 5 und 6 verwendet werden, um die Drehung des rechten Motors zu steuern, und die Pins 9 und 10 für die Drehung des linken Motors. Lassen Sie uns nun ein Skript schreiben, um das Auto vorwärts fahren zu lassen.
 
-After selecting Board as Arduino Uno, switch to :ref:`upload_mode` and write the script according to the following diagram.
+Nachdem Sie das Board als Arduino Uno ausgewählt haben, wechseln Sie zum :ref:`upload_mode` und schreiben Sie das Skript gemäß dem folgenden Diagramm.
 
 .. image:: img/1_test1.png
 
-Click the **Upload Code** button to upload the code to the R3 board. When it's done, you will see the two motors of the car moving forward (if you put the car on the ground, it will move forward in a straight line, but maybe the car will go in a curve because the speed of the two motors is a bit different). 
+Klicken Sie auf die Schaltfläche **Upload Code**, um den Code auf das R3-Board zu laden. Wenn dies erledigt ist, sehen Sie die beiden Motoren des Autos vorwärts bewegen (wenn Sie das Auto auf den Boden setzen, wird es geradeaus fahren, aber vielleicht wird das Auto in einer Kurve fahren, da die Geschwindigkeit der beiden Motoren etwas unterschiedlich ist).
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+Wenn nicht beide vorwärts drehen, aber die folgenden Situationen auftreten, müssen Sie die Verkabelung der beiden Motoren erneut anpassen.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OUT1 and OUT2 swap, OUT3 and OUT4 swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OUT3 and OUT4 of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OUT1 and OUT1 of the right motor.
+* Wenn beide Motoren gleichzeitig rückwärts drehen (linker Motor dreht im Uhrzeigersinn, rechter Motor gegen den Uhrzeigersinn), tauschen Sie die Verkabelung der linken und rechten Motoren gleichzeitig, OUT1 und OUT2 tauschen, OUT3 und OUT4 tauschen.
+* Wenn der linke Motor rückwärts dreht (im Uhrzeigersinn), tauschen Sie die Verkabelung von OUT3 und OUT4 des linken Motors.
+* Wenn der rechte Motor rückwärts dreht (gegen den Uhrzeigersinn), tauschen Sie die Verkabelung von OUT1 und OUT1 des rechten Motors.
 
-**2. Creating block**
+**2. Block erstellen**
 
-In order to make the script more clean and easy to use, here we put all the blocks that control the forward movement into a block, and when using it, just call this block directly.
+Um das Skript übersichtlicher und benutzerfreundlicher zu gestalten, fügen wir hier alle Blöcke, die die Vorwärtsbewegung steuern, in einen Block ein, und beim Gebrauch rufen wir diesen Block direkt auf.
 
-Click **Make a Block** in the **My Blocks** palette.
+Klicken Sie in der Palette **Make a Block** auf **My Blocks**.
 
 .. image:: img/1_test31.png
 
-Enter the name of the block - **forward** and check **Add an input**, set the input name to **speed**.
+Geben Sie den Namen des Blocks - **forward** ein und setzen Sie einen Haken bei **Add an input**, setzen Sie den Eingabenamen auf **speed**.
 
 .. image:: img/1_test32.png
 
-Drag and drop the blocks that control the cars forward into **forward**, note that you need to add the parameter - **speed** to pin6 and pin9.
+Ziehen Sie die Blöcke, die die Vorwärtsbewegung des Autos steuern, in **forward** und beachten Sie, dass Sie den Parameter - **speed** zu Pin6 und Pin9 hinzufügen müssen.
 
 .. image:: img/1_test33.png
 
-Call the created block in the [Forward] block - **forward**. In Upload mode, the [When Arduino Uno starts up] block must be added at the beginning.
+Rufen Sie den erstellten Block im [Forward] Block - **forward** auf. Im Upload-Modus muss der Block [When Arduino Uno starts up] am Anfang hinzugefügt werden.
 
-* The motor rotation speed range is 100 ~ 255.
+* Der Geschwindigkeitsbereich der Motorrotation liegt zwischen 100 und 255.
 
 .. image:: img/1_test3.png
-    
-**3. Adjusting the speed of motors**
 
-Since there may be a slight difference in the speed of the 2 motors, resulting in the car not being able to move along a straight line, we can give the left and right motors different speeds to keep the car moving along a straight line as much as possible.
+**3. Geschwindigkeit der Motoren anpassen**
 
-Since my car will move slowly to the right front, so here reduce the speed of the left motor.
+Da es möglicherweise einen leichten Geschwindigkeitsunterschied zwischen den 2 Motoren gibt, was dazu führt, dass das Auto nicht genau geradeaus fährt, können wir den linken und rechten Motoren unterschiedliche Geschwindigkeiten geben, um das Auto so gerade wie möglich zu halten.
+
+Da mein Auto langsam nach rechts vorne fährt, reduziere ich hier die Geschwindigkeit des linken Motors.
 
 .. image:: img/1_test2.png
+
 
 
 

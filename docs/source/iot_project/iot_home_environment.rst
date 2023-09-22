@@ -1,38 +1,37 @@
 .. _iot_home:
 
+5. Überwachung des häuslichen Umfelds
+===========================================
 
-5. Home Environment Monitoring
-================================
+In diesem Kapitel werden wir Blynk verwenden, um einen Monitor für die häusliche Umgebung zu erstellen.
+Mit dem DHT11 und dem Fotowiderstand können Sie die Temperatur, Luftfeuchtigkeit und Lichtintensität eines Raumes messen.
+Indem Sie diese Werte an Blynk senden, können Sie die Umgebung Ihres Zuhauses über das Internet überwachen.
 
-In this chapter, we will use Blynk to create a home environment monitor.
-You can measure the temperature, humidity, and light intensity of a room using the DHT11 and photoresistor.
-By sending these values to Blynk, you will be able to know the environment of your home via the internet.
+**Benötigte Komponenten**
 
-**Required Components**
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktischer, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Alternativ können Sie diese auch über die untenstehenden Links einzeln erwerben.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,42 +48,42 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - \-
 
-**1. Build the Cirduit**
+**1. Den Schaltkreis aufbauen**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
 
 .. image:: img/wiring_dht11.jpg
 
-**2. Edit Dashboard**
+**2. Dashboard bearbeiten**
 
-
-#. For recording humidity values, create a **Datastream** of type **Virtual Pin** on the **Datastream** page. Set the DATA TYPE to **Double** and MIN and MAX to **0** and **100**. Also set the units to **Percentage, %**.
+#. Für die Erfassung von Luftfeuchtigkeitswerten erstellen Sie einen **Datastream** vom Typ **Virtual Pin** auf der **Datastream**-Seite. Legen Sie den DATENTYP auf **Double** und MIN und MAX auf **0** und **100** fest. Setzen Sie auch die Einheiten auf **Percentage, %**.
 
     .. image:: img/sp220610_145748.png
 
-#. Then create a **Datastream** of type **Virtual Pin** for recording the temperature. Set DATA TYPE to ``Double``, MIN and MAX to ``-30`` and ``50``, and units to **Celsius, °C**.
+#. Erstellen Sie anschließend einen **Datastream** vom Typ **Virtual Pin** zur Erfassung der Temperatur. Legen Sie den DATENTYP auf ``Double``, MIN und MAX auf ``-30`` und ``50`` und die Einheiten auf **Celsius, °C** fest.
 
     .. image:: img/sp220610_145811.png
 
-#. Also create a **Datastream** of type **Virtual Pin** to record the light intensity. Use the default data type - **Integer**, with MIN and MAX set to ``0`` and ``1024``.
+#. Erstellen Sie zudem einen **Datastream** vom Typ **Virtual Pin** zur Erfassung der Lichtintensität. Nutzen Sie den Standarddatentyp - **Integer** mit den Werten MIN und MAX, die auf ``0`` und ``1024`` festgelegt sind.
 
     .. image:: img/sp220610_145834.png
 
-#. Go to the **Wed Dashboard** page, drag two **Label** widgets and set their data streams to **V4** and **V5** respectively, and drag a **Gauge** widget and set the data stream to **V6**. Also in the widget setting, you can enable **Change color based on value** and select the appropriate color to make the widget look better and more intuitive.
+#. Navigieren Sie zur **Wed Dashboard**-Seite, ziehen Sie zwei **Label**-Widgets und weisen Sie ihnen die Datenströme **V4** und **V5** zu. Ziehen Sie ein **Gauge**-Widget und setzen Sie den Datenstrom auf **V6**. In den Widget-Einstellungen können Sie **Farbwechsel basierend auf Wert** aktivieren und die passende Farbe wählen, um das Widget ansprechender und intuitiver zu gestalten.
 
 .. image:: img/sp220610_150400.png
     :align: center
 
 
-**3. Run the Code**
 
-#. Open the ``5.home_environment_monitoring.ino`` file under the path of ``3in1-kit\iot_project\5.home_environment_monitoring``, or copy this code into **Arduino IDE**.
+**3. Den Code ausführen**
+
+#. Öffnen Sie die Datei ``5.home_environment_monitoring.ino`` unter dem Pfad ``3in1-kit\iot_project\5.home_environment_monitoring`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. note::
 
-        * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+        * Hier wird die ``DHT sensor library`` verwendet. Sie können sie über den **Library Manager** installieren.
 
             .. image:: ../img/lib_dht11.png
 
@@ -92,35 +91,35 @@ You can also buy them separately from the links below.
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4f0ad85e-8aff-4df9-99dd-c6741aed8219/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Ersetzen Sie die ``Template ID``, ``Device Name`` und ``Auth Token`` durch Ihre eigenen Angaben. Sie müssen auch das ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs eingeben. Für detaillierte Anleitungen verweisen Sie bitte auf :ref:`connect_blynk`.
+#. Nach Auswahl des richtigen Boards und Ports klicken Sie auf die **Upoad**-Taste.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie den seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie, bis eine Meldung wie eine erfolgreiche Verbindung erscheint.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Wenn beim Verbinden die Meldung ``ESP antwortet nicht`` erscheint, befolgen Sie bitte diese Schritte.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+        * Setzen Sie das ESP8266-Modul zurück, indem Sie den RST-Pin für 1 Sekunde auf GND setzen und dann trennen.
+        * Drücken Sie die Reset-Taste auf dem R3-Board.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Manchmal müssen Sie den oben beschriebenen Vorgang 3-5 Mal wiederholen, bitte haben Sie Geduld.
 
-#. Now, you will see the current ambient temperature, humidity and light intensity on Blynk.
+#. Nun sehen Sie die aktuelle Umgebungstemperatur, Luftfeuchtigkeit und Lichtintensität auf Blynk.
 
     .. image:: img/sp220610_150400.png
         :align: center
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Wenn Sie Blynk auf mobilen Geräten verwenden möchten, verweisen Sie bitte auf :ref:`blynk_mobile`.
 
     .. image:: img/mobile_home.jpg
 
-**How it works?**
+**Wie funktioniert das?**
 
-These two functions are used to get the temperature, humidity and light intensity of the room.
+Diese beiden Funktionen werden verwendet, um die Temperatur, Luftfeuchtigkeit und Lichtintensität des Raumes zu ermitteln.
 
 
 .. code-block:: arduino
@@ -131,22 +130,21 @@ These two functions are used to get the temperature, humidity and light intensit
 
     bool readDHT() {
 
-        // Reading temperature or humidity takes about 250 milliseconds!
-        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+        // Das Lesen von Temperatur oder Luftfeuchtigkeit dauert etwa 250 Millisekunden!
+        // Sensormessungen können auch bis zu 2 Sekunden "alt" sein (es ist ein sehr langsamer Sensor)
         humidity = dht.readHumidity();
-        // Read temperature as Celsius (the default)
+        // Temperatur als Celsius lesen (Standardwert)
         temperature = dht.readTemperature();
 
-        // Check if any reads failed and exit early (to try again).
+        // Überprüfen, ob eine Messung fehlgeschlagen ist und frühzeitig beenden (um es erneut zu versuchen).
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("Failed to read from DHT sensor!");
+            Serial.println("Fehler beim Lesen des DHT-Sensors!");
             return false;
         }
         return true;
     }
 
-
-With the Blynk ``Timer``, the ambient temperature, humidity, and light intensity are obtained every second and sent to the data stream on the Blynk Cloud, from which the widgets display the data.
+Mit dem Blynk ``Timer`` werden die Umgebungstemperatur, Luftfeuchtigkeit und Lichtintensität jede Sekunde abgerufen und an den Datenstrom auf der Blynk Cloud gesendet, von wo aus die Widgets die Daten anzeigen.
 
 .. code-block:: arduino
 

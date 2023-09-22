@@ -3,37 +3,37 @@
 5.1 If else
 ==============
 
-Usually we use conditional judgment to complete the most basic reality interaction projects.
-Here, we build a door detection system with reed switch and LED to show this logic.
+Normalerweise nutzen wir bedingte Beurteilungen, um die einfachsten Interaktionsprojekte mit der Realität abzuschließen.
+Hier erstellen wir ein Türerkennungssystem mit einem Reed-Kontakt und einer LED, um diese Logik zu zeigen.
 
-Fix the magnet on one side of the door and the reed switch (with circuit) on the other side of the door.
-When the door is closed, the magnet is close to the reed switch, which will turn it on.
+Befestigen Sie den Magneten auf einer Seite der Tür und den Reed-Kontakt (mit Schaltung) auf der anderen Seite der Tür.
+Wenn die Tür geschlossen ist, ist der Magnet dem Reed-Kontakt nahe und schaltet diesen ein.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -48,11 +48,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.1_ifelse.png
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/if_else_bb.jpg
     :width: 600
@@ -62,19 +62,19 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.1.if_else.ino`` file under the path of ``3in1-kit\basic_project\5.1.if_else``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.1.if_else.ino`` unter dem Pfad ``3in1-kit\basic_project\5.1.if_else``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c7bf6236-1276-45a0-8d34-008d2d838476/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if you do not close the door, the LED will light up, prompting you to close the door.
+Nachdem der Code erfolgreich hochgeladen wurde und wenn Sie die Tür nicht schließen, leuchtet die LED auf und fordert Sie auf, die Tür zu schließen.
 
-By the way, if we need the opposite effect (lighting up the LED when the door is closed), we just need to modify the condition in the ``if``.
+Übrigens, wenn wir den entgegengesetzten Effekt möchten (LED leuchtet, wenn die Tür geschlossen ist), müssen wir nur die Bedingung im ``if`` ändern.
 
 * `if else <https://www.arduino.cc/reference/en/language/structure/control-structure/else/>`_
 
-    The ``if else`` allows greater control over the flow of code than the basic if statement, by allowing multiple tests to be grouped.
+    Das ``if else`` ermöglicht eine bessere Kontrolle über den Code-Fluss als die grundlegende if-Anweisung, indem mehrere Tests gruppiert werden können.

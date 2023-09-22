@@ -1,4 +1,3 @@
-
 .. _cpn_breadboard:
 
 Breadboard
@@ -7,24 +6,16 @@ Breadboard
 .. image:: img/breadboard.png
     :width: 600
 
-A breadboard is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread.[1] In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term "breadboard" is commonly used to refer to these.
+Ein Breadboard ist eine Konstruktionsbasis für den Prototypenbau von Elektronik. Ursprünglich bezog sich das Wort auf ein buchstäbliches Brotschneidebrett, ein poliertes Stück Holz, das zum Brotschneiden verwendet wurde.[1] In den 1970er Jahren wurde das lötfreie Breadboard (auch als Steckbrett oder Terminalarray-Platine bekannt) eingeführt, und heutzutage bezeichnet der Begriff "Breadboard" hauptsächlich diese.
 
-It is used to build and test circuits quickly before finishing any circuit design. 
-And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. 
-The breadboard allows you to plug in and remove components easily. 
+Es wird verwendet, um Schaltkreise schnell aufzubauen und zu testen, bevor ein Schaltkreisdesign abgeschlossen wird.
+Es verfügt über viele Löcher, in die oben erwähnte Komponenten wie ICs und Widerstände sowie Jumperkabel eingesteckt werden können.
+Das Breadboard ermöglicht es Ihnen, Komponenten leicht ein- und auszustecken.
 
-The picture shows the internal structure of a breadboard. 
-Although these holes on the breadboard appear to be independent of each other, they are actually connected to each other through metal strips internally.
+Das Bild zeigt die interne Struktur eines Breadboards.
+Obwohl diese Löcher auf dem Breadboard unabhängig voneinander zu sein scheinen, sind sie tatsächlich intern durch Metallstreifen miteinander verbunden.
 
 .. image:: img/breadboard_internal.png
     :width: 600
 
-If you want to know more about breadboard, refer to: `How to Use a Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
-
-
-
-
-
-
-
-
+Wenn Sie mehr über Breadboards erfahren möchten, verweisen wir auf: `Wie man ein Breadboard benutzt - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_

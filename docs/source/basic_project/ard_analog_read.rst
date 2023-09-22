@@ -1,52 +1,51 @@
 .. _ar_analog_read:
 
-4. Analog Read
+4. Analoges Auslesen
 ======================
 
-The Arduino can read the connected analog sensors through the analog pins.
+Das Arduino kann die angeschlossenen analogen Sensoren über die analogen Pins auslesen.
 
-The R3 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+Das R3-Board enthält einen mehrkanaligen, 10-Bit-Analog-Digital-Wandler. Das bedeutet, dass es die Eingangsspannung zwischen 0 und der Betriebsspannung (5V oder 3,3V) einem Ganzzahlwert zwischen 0 und 1023 zuordnet.
 
-You need the ``analogRead(pin)`` function to read the value of the analog pin.
+Die Funktion ``analogRead(pin)`` wird benötigt, um den Wert des analogen Pins auszulesen.
 
-* ``analogRead(pin)``: Read the value from the specified analog pin.
+* ``analogRead(pin)``: Liest den Wert vom angegebenen analogen Pin.
 
    **Syntax**
       analogRead(pin)
 
-   **Parameters**
-        * ``pin``: the name of the analog input pin to read from (A0 to A5).
+   **Parameter**
+        * ``pin``: Der Name des analogen Eingangspins, von dem gelesen werden soll (A0 bis A5).
 
-   **Returns**
-      0-1023. Data type: int.
+   **Rückgabewerte**
+      0-1023. Datentyp: int.
 
-
-**Example of Analog Read**
+**Beispiel für analoges Auslesen**
 
 .. code-block:: arduino
 
-   int analogPin = A0; // device connected to analog pin A0
-                     // outside leads to ground and +5V
-   int val = 0;  // variable to store the value read
+   int analogPin = A0; // Gerät an den analogen Pin A0 angeschlossen
+                     // Äußere Leitungen führen zu Ground und +5V
+   int val = 0;  // Variable zum Speichern des gelesenen Werts
 
    void setup() {
-      Serial.begin(9600);           //  setup serial
+      Serial.begin(9600);           // Serielle Schnittstelle einrichten
    }
 
    void loop() {
-      val = analogRead(analogPin);  // read the input pin
-      Serial.println(val);          // debug value
+      val = analogRead(analogPin);  // Eingangspin auslesen
+      Serial.println(val);          // Wert zur Fehlersuche ausgeben
    }
 
+**Hinweise und Warnungen**
 
-**Notes and Warnings**
+* Die analogen Pins sind A0-A5.
+* Es ist nicht notwendig, ``pinMode()`` vor dem Aufruf des analogen Pins aufzurufen. Wenn der Pin jedoch zuvor auf ``OUTPUT`` gesetzt wurde, funktioniert die ``analogRead()``-Funktion nicht ordnungsgemäß. In diesem Fall müssen Sie ``pinMode()`` aufrufen, um ihn wieder auf ``INPUT`` zu setzen.
 
-* The analog pins are A0-A5.
-* You don't need to call ``pinMode()`` before calling the analog pin, but if the pin was previously set to ``OUTPUT``, the function ``analogRead()`` will not work properly, in which case you need to call ``pinMode()`` to set it back to ``INTPUT``.
+**Zugehörige Komponenten**
 
-**Related Components**
+Im Folgenden finden Sie die zugehörigen Komponenten. Klicken Sie darauf, um zu erfahren, wie sie verwendet werden.
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
     :maxdepth: 2

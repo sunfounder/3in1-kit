@@ -1,27 +1,26 @@
 .. _blynk_mobile:
 
-How to use Blynk on mobile device?
-======================================
+Wie verwendet man Blynk auf einem mobilen Gerät?
+==================================================
 
 .. note::
 
-    As datastreams can only be created in Blynk on the web, you will need to reference different projects to create datastreams on the web, then follow the tutorial below to create widgets in Blynk on your mobile device.
+    Da Datenströme nur auf der Blynk-Webseite erstellt werden können, müssen Sie auf verschiedene Projekte verweisen, um Datenströme im Web zu erstellen. Folgen Sie anschließend dem untenstehenden Tutorial, um Widgets in Blynk auf Ihrem mobilen Gerät zu erstellen.
 
-
-#. Open Google Play or APP Store on your mobile device and search for "Blynk IoT" (not Blynk(legacy)) to download.
-#. After opening the APP, login in, this account should be the same as the account used on the web client.
-#. Then go to **Dashboard** (if you don't have one, create one) and you will see that the **Dashboard** for mobile and web are independent of each other.
+#. Öffnen Sie Google Play oder den APP Store auf Ihrem mobilen Gerät und suchen Sie nach "Blynk IoT" (nicht Blynk(legacy)), um es herunterzuladen.
+#. Nachdem Sie die APP geöffnet haben, melden Sie sich an. Dieses Konto sollte identisch mit dem Konto sein, das Sie im Webclient verwenden.
+#. Gehen Sie dann zum **Dashboard** (falls Sie noch keines haben, erstellen Sie eines). Sie werden feststellen, dass das **Dashboard** für Mobilgeräte und Web unabhängig voneinander sind.
 
     .. image:: img/APP_1.jpg
 
-#. Click **Edit** Icon.
-#. Click on the blank area. 
-#. Choose the same widget as on the web page, such as select a **Joystick** widget.
+#. Klicken Sie auf das **Bearbeiten**-Symbol.
+#. Klicken Sie auf den leeren Bereich.
+#. Wählen Sie das gleiche Widget wie auf der Webseite, zum Beispiel ein **Joystick**-Widget.
 
     .. image:: img/APP_2.jpg
 
-#. Now you will see a **Joystick** widget appear in the blank area, click on it.
-#. **Joystick** Settings will appear, select the **Xvalue** and **Yvalue** datastreams you just set in the web page. Note that each widget corresponds to a different datastream in each project.
-#. Go back to the **Dashboard** page and you can operate the **Joystick** when you want.
+#. Jetzt sehen Sie ein **Joystick**-Widget im leeren Bereich. Klicken Sie darauf.
+#. Die **Joystick**-Einstellungen werden angezeigt. Wählen Sie die Datenströme **Xvalue** und **Yvalue**, die Sie gerade auf der Webseite eingerichtet haben. Beachten Sie, dass jedes Widget einem anderen Datenstrom in jedem Projekt entspricht.
+#. Gehen Sie zurück zur **Dashboard**-Seite, und Sie können den **Joystick** nach Belieben bedienen.
 
     .. image:: img/APP_3.jpg

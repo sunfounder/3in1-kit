@@ -1,36 +1,36 @@
 .. _ar_fading:
 
-2.1 Fading
+2.1 Überblenden
 =================
 
-This project is similar to :ref:`ar_blink` , the difference is the signal type.
-The former is to make the LED light on or off by outputting a digital signal (0&1), this project is to control the brightness of the LED by outputting an analog signal.
+Dieses Projekt ähnelt :ref:`ar_blink`. Der Unterschied liegt in der Signalart.
+Während das frühere Projekt die LED durch Ausgabe eines digitalen Signals (0&1) ein- oder ausschaltet, steuert dieses Projekt die Helligkeit der LED durch Ausgabe eines analogen Signals.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,11 +43,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_1.1_led.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/wiring_led.png
     :width: 500
@@ -57,15 +57,13 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``2.1.fading.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.1.fading``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``2.1.fading.ino`` im Pfad ``3in1-kit\basic_project\2.analogWrite\2.1.fading`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
-
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8a7e52a4-fcb3-4c3b-98ff-f3f657822d72/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, you can see the LED breathing.
+
+Nachdem der Code erfolgreich hochgeladen wurde, können Sie sehen, wie die LED atmet.

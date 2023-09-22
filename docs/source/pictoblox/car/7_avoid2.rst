@@ -1,38 +1,38 @@
 .. _sh_avoid2:
 
-3.7 Obstacle avoidance 2
+3.7 Hindernisvermeidung 2
 ==================================
 
-In :ref:`sh_avoid1` project, only 2 IR obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+Im :ref:`sh_avoid1` Projekt werden lediglich 2 IR-Hindernisvermeidungsmodule zur Hinderniserkennung eingesetzt. Allerdings ist die Erkennungsreichweite des IR-Hindernisvermeidungsmoduls begrenzt, was dazu führen kann, dass das Auto möglicherweise zu spät reagiert, um Hindernissen auszuweichen.
 
-In this project, we also add ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+In diesem Projekt fügen wir zusätzlich ein Ultraschallmodul hinzu, um Distanzen über eine längere Strecke zu erfassen. So kann das Auto Hindernisse aus größerer Entfernung wahrnehmen und entsprechend reagieren.
 
-Required Components
----------------------
+Benötigte Komponenten
+-------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Die einzelnen Komponenten können auch über die untenstehenden Links gekauft werden.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,17 +45,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+Schaltkreis aufbauen
 -----------------------
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Verbinden Sie das Ultraschallmodul und die beiden IR-Hindernisvermeidungsmodule gleichzeitig.
 
-Wire the ultrasonic to the R3 board as follows.
+Verdrahten Sie das Ultraschallmodul wie folgt mit dem R3-Board.
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Ultraschallmodul
+      - R3-Board
     * - Vcc
       - 5V
     * - Trig
@@ -65,12 +65,13 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+
+Die Verdrahtung der beiden IR-Hindernisvermeidungsmodule mit dem R3-Board erfolgt wie folgt.
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - Linkes IR-Modul
+      - R3-Board
     * - OUT
       - 8
     * - GND
@@ -80,8 +81,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - Rechtes IR-Modul
+      - R3-Board
     * - OUT
       - 7
     * - GND
@@ -92,35 +93,35 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_avoid_ultrasonic.jpg
     :width: 800
 
-Programming
+Programmierung
 ---------------
 
-**1. Create function**
+**1. Funktion erstellen**
 
-Make the car go forward and backward.
+Das Auto vorwärts und rückwärts fahren lassen.
 
 .. image:: img/7_avoid2_1.png
 
-Make the car to go backward to the left and backward to the right.
+Lassen Sie das Auto nach links rückwärts und nach rechts rückwärts fahren.
 
 .. image:: img/7_avoid2_2.png
 
-Make the car stop.
+Das Auto anhalten lassen.
 
 .. image:: img/7_avoid2_3.png
 
-**2. Emergency obstacle avoidance**
+**2. Notfall-Hindernisvermeidung**
 
-The 2 infrared obstacle avoidance modules on the car are used for emergency obstacle avoidance, detecting obstacles at short distances, corners or relatively small obstacles.
+Die beiden Infrarot-Hindernisvermeidungsmodule am Auto dienen der Notfall-Hindernisvermeidung und erkennen Hindernisse auf kurzen Distanzen, Ecken oder relativ kleine Hindernisse.
 
-* If the left infrared module detects an obstacle, the car backs up to the left.
-* If the right IR module detects an obstacle, the car recedes to the right rear.
-* If 2 modules detect the obstacle at the same time, the car goes backward directly.
+* Wenn das linke Infrarot-Modul ein Hindernis erkennt, fährt das Auto nach links zurück.
+* Wenn das rechte IR-Modul ein Hindernis erkennt, weicht das Auto nach rechts hinten aus.
+* Wenn beide Module gleichzeitig ein Hindernis erkennen, fährt das Auto direkt rückwärts.
 
 .. image:: img/7_avoid2_4.png
 
-**3. Long range obstacle avoidance**
+**3. Hindernisvermeidung über lange Distanz**
 
-Read the value of ultrasonic module, when the detected value is less than 10, the car will go backward; otherwise it keeps going forward.
+Lese den Wert des Ultraschallmoduls. Wenn der erkannte Wert kleiner als 10 ist, fährt das Auto rückwärts; ansonsten fährt es weiter vorwärts.
 
 .. image:: img/7_avoid2_5.png

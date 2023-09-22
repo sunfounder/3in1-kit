@@ -1,14 +1,13 @@
 .. _sh_move:
 
-3.2 Movement
+3.2 Bewegung
 ==================
 
-This project is based on :ref:`sh_test` to make the car move in all directions.
+Dieses Projekt basiert auf :ref:`sh_test`, um das Auto in alle Richtungen bewegen zu lassen.
 
-Before we start programming, let's review the working principle of L298N.
+Bevor wir mit der Programmierung beginnen, lassen Sie uns das Arbeitsprinzip von L298N überprüfen.
 
-The working relationship between ENA and IN1,IN2 is as follows.
-
+Die Arbeitsbeziehung zwischen ENA und IN1, IN2 ist wie folgt:
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -17,29 +16,29 @@ The working relationship between ENA and IN1,IN2 is as follows.
     * - ENA
       - IN1
       - IN2
-      - The state of right motor(A)
+      - Zustand des rechten Motors(A)
     * - 0
       - X
       - X
-      - Stop
+      - Stopp
     * - 1
       - 0
       - 0
-      - Brake
+      - Bremsen
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 1
       - 1
       - 1
-      - Brake
+      - Bremsen
 
-The working relationship between ENB and IN3,IN4 is as follows.
+Die Arbeitsbeziehung zwischen ENB und IN3, IN4 ist wie folgt:
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -48,69 +47,66 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of left motor(B)
+      - Zustand des linken Motors(B)
     * - 0
       - X
       - X
-      - Stop
+      - Stopp
     * - 1
       - 0
       - 0
-      - Brake
+      - Bremsen
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 1
       - 1
       - 1
-      - Brake
+      - Bremsen
 
 
-
-
-Programming
+Programmierung
 -------------------
 
-Now create blocks to make the car, forward, backward, left and right rotation and stop respectively.
+Erstellen Sie nun Blöcke, um das Auto vorwärts, rückwärts, links und rechts drehen und stoppen zu lassen.
 
+**1. Vorwärts fahren**
 
-**1. Move Forward**
-
-The right motor turns clockwise and the left motor turns counterclockwise to move the car forward.
+Der rechte Motor dreht sich im Uhrzeigersinn und der linke Motor gegen den Uhrzeigersinn, um das Auto vorwärts zu bewegen.
 
 .. image:: img/2_forward.png
 
-**2. Move Backward**
+**2. Rückwärts fahren**
 
-Backward is just the opposite, the right motor needs to turn counterclockwise, the left motor clockwise.
+Rückwärts ist genau das Gegenteil: Der rechte Motor muss sich gegen den Uhrzeigersinn drehen, der linke Motor im Uhrzeigersinn.
 
 .. image:: img/2_backward.png
 
-**3. Turn Left**
+**3. Links abbiegen**
 
-The left and right motors turn clockwise at the same time to make the car turn left.
+Die linken und rechten Motoren drehen sich gleichzeitig im Uhrzeigersinn, um das Auto nach links zu drehen.
 
 .. image:: img/2_turn_left.png
 
-**4. Turn Right**
+**4. Rechts abbiegen**
 
-Similarly, turn the left and right motors counterclockwise to turn the car to the right.
+Drehen Sie die linken und rechten Motoren in entgegengesetzter Richtung, um das Auto nach rechts zu drehen.
 
 .. image:: img/2_turn_right.png
 
-**5. Stop**
+**5. Stoppen**
 
-Stop the car by setting all motors to 0.
+Stoppen Sie das Auto, indem Sie alle Motoren auf 0 setzen.
 
 .. image:: img/2_stop.png
 
-**6. Make the car move**
+**6. Das Auto bewegen**
 
-Make the car move forward, backward, left and right for 1 second, then stop. Since all blocks are placed in the [Forever] block, you will see that the car repeats the above actions.
+Lassen Sie das Auto vorwärts, rückwärts, links und rechts für 1 Sekunde fahren, dann stoppen. Da alle Blöcke im [Forever]-Block platziert sind, werden Sie sehen, dass das Auto die oben genannten Aktionen wiederholt.
 
 .. image:: img/2_move.png

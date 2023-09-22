@@ -1,40 +1,40 @@
 .. _sh_eat_apple:
 
-2.16 GAME - Eat Apple
+2.16 SPIEL - Apfel essen
 ==============================
 
-In this project, we play a game that uses button to control Beetle to eat apple.
+In diesem Projekt spielen wir ein Spiel, bei dem ein Knopf verwendet wird, um einen Käfer zu steuern, der Äpfel isst.
 
-When the green flag is clicked, press the button and Beetle will rotate, press the button again and Beetle stops running and goes forward at that angle. You need to control the angle of Beetle so that it moves forward without touching the black line on the map until it eats the apple. If it touches the black line, the game is over.
+Wenn die grüne Flagge angeklickt wird, drücken Sie den Knopf und der Käfer dreht sich. Drücken Sie den Knopf erneut und der Käfer hält an und bewegt sich in diesem Winkel vorwärts. Sie müssen den Winkel des Käfers so steuern, dass er sich vorwärts bewegt, ohne die schwarze Linie auf der Karte zu berühren, bis er den Apfel isst. Wenn er die schwarze Linie berührt, ist das Spiel vorbei.
 
 .. image:: img/14_apple.png
 
-Required Components
----------------------
+Benötigte Komponenten
+-------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,94 +49,94 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Der Knopf ist ein Gerät mit 4 Pins. Da Pin 1 mit Pin 2 und Pin 3 mit Pin 4 verbunden ist, werden beim Drücken des Knopfs die 4 Pins verbunden und der Stromkreis geschlossen.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Bauen Sie den Schaltkreis gemäß dem folgenden Diagramm.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Verbinden Sie einen der Pins auf der linken Seite des Knopfs mit Pin 12, der mit einem Pull-down-Widerstand und einem 0,1uF (104) Kondensator verbunden ist (um Flackern zu vermeiden und ein stabiles Signal auszugeben, wenn der Knopf betätigt wird).
+* Verbinden Sie das andere Ende des Widerstands und des Kondensators mit GND und einen der Pins auf der rechten Seite des Knopfs mit 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programmierung
 ------------------
-The effect we want to achieve is to use the button to control the direction of the **Beetle** sprite to move forward and eat the apple without touching the black line on the **Maze** backdrop, which will switch the backdrop when eaten.
+Der Effekt, den wir erreichen möchten, besteht darin, mit der Schaltfläche die Richtung des **Beetle**-Sprites zu steuern, um sich vorwärts zu bewegen und den Apfel zu essen, ohne die schwarze Linie auf dem **Maze**-Hintergrund zu berühren, wodurch der Hintergrund gewechselt wird gegessen.
 
-Now add the relevant backdrops and sprites.
+Fügen Sie nun die entsprechenden Hintergründe und Sprites hinzu.
 
-**1. Adding backdrops and sprites**
+**1. Hintergründe und Sprites hinzufügen**
 
-Add a **Maze** backdrop via the **Choose a backdrop** button.
+Fügen Sie einen **Maze** Hintergrund über den **Choose a backdrop** Knopf hinzu.
 
 .. image:: img/14_backdrop.png
 
-Delete the default sprite, then select the **Beetle** sprite.
+Löschen Sie den Standard-Sprite und wählen Sie dann den **Beetle** Sprite aus.
 
 .. image:: img/14_sprite.png
 
-Place the **Beetle** sprite at the entrance of the **Maze** backdrop, remembering the x,y coordinate values at this point, and resize the sprite to 40%.
+Platzieren Sie den **Beetle** Sprite am Eingang des **Maze** Hintergrunds, merken Sie sich die x,y-Koordinatenwerte an dieser Stelle und ändern Sie die Größe des Sprites auf 40%.
 
 .. image:: img/14_sprite1.png
 
-**2. Draw a backdrop**
 
-Now it's time to simply draw a backdrop with the WIN! character appearing on it.
+**2. Hintergrund zeichnen**
 
-First click on the backdrop thumbnail to go to the **Backdrops** page and click on the blank backdrop1.
+Jetzt wird es Zeit, einen Hintergrund zu zeichnen, auf dem das Zeichen WIN! erscheint.
+
+Klicken Sie zunächst auf die Vorschaugrafik des Hintergrunds, um zur Seite **Backdrops** zu gelangen, und klicken Sie dann auf den leeren Hintergrund1.
 
 .. image:: img/14_paint_back.png
     :width: 800
 
-Now start drawing, you can refer to the picture below to draw, or you can draw a backdrop on your own, as long as the expression is winning.
+Beginnen Sie jetzt mit dem Zeichnen. Sie können sich an das untenstehende Bild halten oder Ihren eigenen Hintergrund entwerfen, solange die Darstellung gewinnend ist.
 
-* Using the **Circle** tool, draw an ellipse with the color set to red and no outline.
-* Then use the **Text** tool, write the character \"WIN!\", set the character color to black, and adjust the size and position of the character.
-* Name the backdrop as **Win**.
+* Verwenden Sie das **Circle**-Werkzeug, um eine Ellipse ohne Umriss und in roter Farbe zu zeichnen.
+* Verwenden Sie anschließend das **Text**-Werkzeug, um das Wort "WIN!" zu schreiben. Setzen Sie die Zeichenfarbe auf Schwarz und passen Sie die Größe und Position des Textes an.
+* Benennen Sie den Hintergrund **Win**.
 
 .. image:: img/14_win.png
 
-**3. Scripting for the backdrop**
+**3. Skripting für den Hintergrund**
 
-The backdrop needs to be switched to **Maze** every time the game starts.
+Der Hintergrund sollte beim Spielstart immer auf **Maze** wechseln.
 
 .. image:: img/14_switchback.png
 
-**4. Writing scripts for the sprite Beetle**
+**4. Skripte für den Sprite Käfer schreiben**
 
-Now write a script for the sprite **Beetle** to be able to move forward and turn direction under the control of a button. The workflow is as follows.
+Schreiben Sie jetzt ein Skript, damit der Sprite **Beetle** mit Hilfe eines Knopfes vorwärts bewegt und die Richtung geändert werden kann. Der Ablauf ist wie folgt.
 
-* When the green flag is clicked, set the **Beetle** angle to 90, and the position to (-134, -134), or replace it with the coordinate value of your own placed position. Create the variable **flag** and set the initial value to -1.
+* Wenn die grüne Flagge angeklickt wird, setzen Sie den Winkel des **Beetle** auf 90 und die Position auf (-134, -134) oder ersetzen Sie diese durch den Koordinatenwert Ihrer eigenen Position. Erstellen Sie die Variable **flag** und setzen Sie den Anfangswert auf -1.
 
 .. image:: img/14_bee1.png
 
-Next, in the [forever] block, four [if] blocks are used to determine various possible scenarios.
+Im [forever]-Block werden vier [if]-Blöcke verwendet, um verschiedene mögliche Szenarien zu bestimmen.
 
-* If the key is 1 (pressed), use the [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] block to toggle the value of the variable **flag** between 0 and 1 (alternating between 0 for this press and 1 for the next press).
+* Wenn die Taste 1 (gedrückt) ist, verwenden Sie den [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] Block, um den Wert der Variable **flag** zwischen 0 und 1 umzuschalten (abwechselnd 0 für diesen Druck und 1 für den nächsten Druck).
 
 .. image:: img/14_bee2.png
 
-* If flag=0 (this key press), let the **Beetle** sprite turn clockwise. Then determine if flag is equal to 1 (key pressed again), the **Beetle** sprite moves forward. Otherwise, it keeps turning clockwise.
+* Wenn Flagge=0 (dieser Tastendruck), soll sich der **Beetle**-Sprite im Uhrzeigersinn drehen. Wird dann festgestellt, dass Flagge gleich 1 ist (Taste erneut gedrückt), bewegt sich der **Beetle**-Sprite vorwärts. Andernfalls dreht er sich weiter im Uhrzeigersinn.
 
 .. image:: img/14_bee3.png
 
-* If the Beetle sprite touches black (the black line on the **Maze** backdrop), the game ends and the script stops running.
+* Wenn der Käfer-Sprite Schwarz berührt (die schwarze Linie im **Maze** Hintergrund), endet das Spiel und das Skript wird gestoppt.
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the color of the black line on the stage. If you choose a black arbitrarily, this [Touch color] block will not work.
-
+    Sie müssen im [Touch color]-Block auf den Farbbereich klicken und dann das Pipettenwerkzeug verwenden, um die Farbe der schwarzen Linie auf der Bühne aufzunehmen. Wenn Sie einfach Schwarz wählen, funktioniert dieser [Touch color]-Block nicht.
 
 .. image:: img/14_bee5.png
 
-* If Beetle touches red (Also use the straw tool to pick up the red color of the apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
-
+* Wenn der Käfer Rot berührt (Verwenden Sie ebenfalls das Pipettenwerkzeug, um die rote Farbe des Apfels aufzunehmen), wechselt der Hintergrund zu **Win**. Das bedeutet, das Spiel wurde erfolgreich abgeschlossen und das Skript wird gestoppt.
 
 .. image:: img/14_bee4.png
+
 
 
 

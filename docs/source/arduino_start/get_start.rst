@@ -1,18 +1,17 @@
-
 .. _get_start_arduino_ide:
 
-Get Started with Arduino
+Einstieg in Arduino
 =======================================
 
-.. Arduino is an open source platform with simple software and hardware.
-.. You can pick it up in short time even if you are a beginner. It provides
-.. an integrated development environment (IDE) for code compiling,
-.. compatible with multiple control boards. So you can just download the
-.. Arduino IDE, upload the sketches (i.e. the code files) to the board, and
-.. then you can see relative experimental phenomena. For more information,
-.. refer to http://www.arduino.cc.
+.. Arduino ist eine Open-Source-Plattform mit einfacher Software und .. Hardware.
+.. Selbst als Anfänger können Sie sie in kurzer Zeit erlernen. Es bietet
+.. eine integrierte Entwicklungsumgebung (IDE) zum Kompilieren von Code,
+.. die mit mehreren Steuerungsboards kompatibel ist. Sie können einfach die
+.. Arduino IDE herunterladen, die Skizzen (d.h. die Code-Dateien) auf das Board hochladen und
+.. dann die entsprechenden experimentellen Phänomene beobachten. Für weitere Informationen,
+.. besuchen Sie http://www.arduino.cc.
 
-.. Please follow the tutorial below to learn how to install the Arduino IDE, add libraries and upload code.
+.. Bitte folgen Sie dem untenstehenden Tutorial, um zu erfahren, wie Sie die Arduino IDE installieren, Bibliotheken hinzufügen und Code hochladen.
 
 .. .. toctree::
 ..     :maxdepth: 1
@@ -21,55 +20,51 @@ Get Started with Arduino
 ..     download_add
 ..     upload_code
 
-If you have no idea about Arduino. There are several words I would like to show you: electronics, design, programming, and even Maker. Some of you may think these words are quite far away from us, but in fact, they are not far at all. Because Arduino can take us into the world of programming and help us realize the dream of being a Maker. 
-In this session we will learn: 
+Wenn Sie keine Ahnung von Arduino haben: Es gibt einige Begriffe, die ich Ihnen zeigen möchte: Elektronik, Design, Programmierung und sogar Maker. Einige von Ihnen denken vielleicht, dass diese Worte weit von uns entfernt sind, aber in Wirklichkeit sind sie es nicht. Denn Arduino kann uns in die Welt der Programmierung entführen und uns helfen, den Traum, ein Maker zu sein, zu verwirklichen.
+In dieser Sitzung werden wir lernen:
 
-* What is Arduino?
-* what can Arduino do? 
-* How to build an Arduino Project?
+* Was ist Arduino?
+* Was kann Arduino tun?
+* Wie erstellt man ein Arduino-Projekt?
 
 .. _what_is:
 
-What is Arduino?
------------------
+Was ist Arduino?
+--------------------
 
-First of all, I will give you a brief introduction to Arduino.
+Zunächst gebe ich Ihnen eine kurze Einführung in Arduino.
 
-Arduino is a convenient, flexible, and easy-to-use open-source electronic prototyping platform, including hardware Arduino boards of various models and software Arduino IDE. It is not only suitable for engineers for rapid prototyping, but also artists, designers, hobbyists, while it is almost a must-have tool for modern Makers.
+Arduino ist eine bequeme, flexible und benutzerfreundliche Open-Source-Plattform für elektronische Prototypen, einschließlich verschiedener Hardware-Arduino-Boards und der Software Arduino IDE. Es eignet sich nicht nur für Ingenieure für schnelle Prototypen, sondern auch für Künstler, Designer, Hobbyisten und ist fast ein unverzichtbares Werkzeug für moderne Maker.
 
-Arduino is quite a large system. It has software, hardware, and a very huge online community of people who have never met each other but are able to work together because of a common hobby. Everyone in the Arduino family is using their wisdom, making with their hands, and sharing one great invention after another. And you can also be a part of it.
+Arduino ist ein ziemlich großes System. Es verfügt über Software, Hardware und eine sehr große Online-Community von Menschen, die sich noch nie getroffen haben, aber dank eines gemeinsamen Hobbys zusammenarbeiten können. Jeder in der Arduino-Familie nutzt seinen Verstand, baut mit seinen Händen und teilt eine großartige Erfindung nach der anderen. Und Sie können auch ein Teil davon sein.
 
 .. _what_cando:
 
-What can Arduino do?
----------------------
+Was kann Arduino tun?
+-------------------------
 
-Speaking of which, you may have doubts about what Arduino can actually do. Suffice it to say, Arduino will solve all your problems.
+Sie fragen sich vielleicht, was Arduino eigentlich kann. Genug gesagt, Arduino wird all Ihre Probleme lösen.
 
-Technically speaking, Arduino is a programmable logic controller. It is a development board that can be used to create many exciting and creative electronic creations: such as remote-controlled cars, robotic arms, bionic robots, smart homes, etc. 
+Technisch gesehen ist Arduino ein programmierbarer Logikcontroller. Es handelt sich um ein Entwicklungsboard, mit dem viele spannende und kreative elektronische Kreationen erstellt werden können: wie ferngesteuerte Autos, Roboterarme, bionische Roboter, Smart Homes usw.
 
-Arduino boards are straightforward, simple, and powerful, suitable for students, makers and even professional programmers. 
+Arduino-Boards sind unkompliziert, einfach und leistungsstark und eignen sich für Schüler, Maker und sogar professionelle Programmierer.
 
-To this day, electronics enthusiasts worldwide continue to develop creative electronic creations based on Arduino development boards.
+Bis heute entwickeln Elektronikbegeisterte weltweit weiterhin kreative elektronische Kreationen auf Basis von Arduino-Entwicklungsboards.
 
-.. What is Arduino UNO?
+.. Was ist Arduino UNO?
 .. ----------------------
 
-.. The Arduino team has open sourced the Arduino development board, this means that others can manufacture products from Arduino designs. So there are currently two types of development boards available on the market. One is the official development board provided by Arduino, and the other is the compatible development board produced by other companies. ARDUINO original boards are produced by ARDUINO with arduino's Certification. Compatible development boards for Arduino are assembled and produced by third-party companies, which will be more favorable in terms of price. The Arduino team has done a lot for Arduino, so if you want to support them, consider buying Arduino original boards on the Arduino website. You can choose which board to buy according to your situation.
-.. We recommend purchasing an Arduino Uno R3 board or an compatible board for Arduino Uno R3 for a consistent learning experience in our tutorials.
+.. Das Arduino-Team hat die Arduino-Entwicklungsplatine als Open Source zur Verfügung gestellt, d.h. andere können Produkte aus Arduino-Designs herstellen. Daher gibt es derzeit zwei Arten von Entwicklungsboards auf dem Markt. Die eine ist die offizielle Entwicklungsplatine, die von Arduino bereitgestellt wird, und die andere ist die kompatible Entwicklungsplatine, die von anderen Unternehmen hergestellt wird. ARDUINO-Originalplatinen werden von ARDUINO mit der Zertifizierung von Arduino hergestellt. Die kompatiblen Entwicklungsboards für Arduino werden von Drittanbietern zusammengebaut und hergestellt, die preislich günstiger sind. Das Arduino-Team hat viel für Arduino getan. Wenn Sie es also unterstützen möchten, sollten Sie in Erwägung ziehen, Arduino-Originalplatinen auf der Arduino-Website zu kaufen. Sie können je nach Ihrer Situation wählen, welches Board Sie kaufen möchten.
+.. Wir empfehlen den Kauf eines Arduino Uno R3 Boards oder eines kompatiblen Boards für Arduino Uno R3 für eine konsistente Lernerfahrung in unseren Tutorials.
 
+Wie erstellt man ein Arduino-Projekt
+---------------------------------------
 
-
-
-How to build an Arduino Project
------------------------------------
-
-Follow these steps to learn how to use Arduino from zero!
+Folgen Sie diesen Schritten, um zu lernen, wie Sie Arduino von Grund auf verwenden!
 
 
 .. toctree::
    :maxdepth: 2
-   
    
    install_arduino_ide
    introduce_ide
@@ -79,6 +74,3 @@ Follow these steps to learn how to use Arduino from zero!
    basic_further_syntax
    basic_variable
    basic_circuit
-
-   
-
