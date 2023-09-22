@@ -112,7 +112,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
         void setup()
         {
             pinMode(buzzerPin, OUTPUT);// make all the LED pins outputs
-
+            pinMode(ledPin, OUTPUT); // make the LED pin output
 
             /* calibrate the photoresistor max & min values */
             previousMillis = millis();
