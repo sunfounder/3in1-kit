@@ -21,7 +21,7 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 2023-09-26:
 - Japanese Translation
 - Remove the **Example** heading from component_capacitor.rst
-- Remove burn_firmware.rst's R4 intro moved to front
+- R4 introduction to burn_firmware.rst moved to the front
 - Modify the title of ar_ir_remote.rst to 5.11.2.
 - Modify the title of ar_dht11.rst to 5.11.3.
 
