@@ -1,6 +1,6 @@
 .. _ar_receiver:
 
-5.11.3 IR Receiver
+5.11.2 IR Receiver
 =========================
 
 In this project, you will learn to use IR Receiver. 

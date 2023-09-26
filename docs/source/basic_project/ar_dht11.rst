@@ -1,7 +1,7 @@
 .. _ar_dht11:
 
 
-5.11.2 Temperature - Humidity
+5.11.3 Temperature - Humidity
 =======================================
 
 Humidity and temperature are closely related from the physical quantity itself to the actual people's life.

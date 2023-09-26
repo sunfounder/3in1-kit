@@ -18,6 +18,12 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-09-26:
+- Remove the **Example** heading from component_capacitor.rst
+- R4 introduction to burn_firmware.rst moved to the front
+- Modify the title of ar_ir_remote.rst to 5.11.2.
+- Modify the title of ar_dht11.rst to 5.11.3.
+
 2023-09-22:
 - Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
 - Made corrections to 1.2_beep_bb.png and 5.15_eeprom_bb.png as there were pin errors.
