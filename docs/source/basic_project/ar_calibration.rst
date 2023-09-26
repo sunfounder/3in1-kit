@@ -1,43 +1,42 @@
 .. _ar_calibration:
 
-5.14 Calibration
+5.14 キャリブレーション
 ==========================
 
-When you use analog input components, such as photoresistors, soil moisture sensors, etc., you may find that their reading range is not 0 to 1023, but rather a range like 0 to 800 or 600 to 1000, because it is impossible to reach the limits of these devices with normal use.
+アナログ入力コンポーネント（例：フォトレジスタ、土壌湿度センサなど）を使用する際、読み取り範囲が0から1023でなく、0から800や600から1000のような範囲になることがあります。これは、通常の使用ではこれらのデバイスの限界に達することができないためです。
 
-In this case, a technique for calibrating the sensor inputs can be used. During startup, have the control board measure the sensor readings for five seconds and record the highest and lowest readings. This five-second reading defines the minimum and maximum expected values of the readings taken during the cycle.
+このような場合、センサ入力をキャリブレーションする技術が役立ちます。起動時に、制御ボードがセンサの読み取りを5秒間行い、最高値と最低値を記録します。この5秒間の読み取りが、サイクル中の読み取りの最小値と最大値を定義します。
 
-
-In this project, we use a photoresistor and a passive buzzer to implement a `theremin <https://en.wikipedia.org/wiki/Theremin>`_ -like game using the calibration technique described above.
+このプロジェクトでは、上記のキャリブレーション技術を使用して、フォトレジスタとパッシブブザーを使用し、 `テレミン <https://en.wikipedia.org/wiki/Theremin>`_ のようなゲームを実装します。
 
 .. note::
-    The `theremin <https://en.wikipedia.org/wiki/Theremin>`_ is an electronic musical instrument that requires no physical contact. It generates different tones by sensing the position of the player's hands.
+    `テレミン <https://en.wikipedia.org/wiki/Theremin>`_ は、物理的な接触を必要としない電子楽器です。プレイヤーの手の位置を感知して、異なる音を生成します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式のキットを購入すると非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -54,22 +53,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_8.8_calibration.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.14_calibration_bb.png
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\learning_project\5.14.calibration``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\learning_project\5.14.calibration`` のパスの下の ``5.14.calibration.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+
     
     
 
@@ -78,43 +78,41 @@ You can also buy them separately from the links below.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9cbcaae0-3c9d-4e33-9957-548f92a9aab7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, the LED will light up, and we will have 5 seconds to calibrate the detection range of the photoresistor. This is because we may be in a different light environment each time we use it (e.g. the light intensity is different between midday and dusk).
+コードが正常にアップロードされると、LEDが点灯し、フォトレジスタの検出範囲をキャリブレーションするための5秒間が与えられます。これは、毎回使用する際に異なる光環境になる可能性があるためです（例：正午と夕方では光の強度が異なる）。
 
-At this time, we need to swing our hands up and down on top of the photoresistor, and the movement range of the hand will be calibrated to the playing range of this instrument.
+このとき、フォトレジスタの上で手を上下に振る必要があります。手の動きの範囲がこの楽器の演奏範囲にキャリブレーションされます。
 
-After 5 seconds, the LED will go out and we can wave our hands on the photoresistor to play.
+5秒後、LEDが消灯し、フォトレジスタの上で手を振ることで演奏することができます。
 
+**どのように動作するのか？**
 
-
-**How it works?**
-
-#. Set the initial values and pins of all components.
+#. すべてのコンポーネントの初期値とピンを設定する。
 
     .. code-block:: arduino
 
         const int buzzerPin = 9;
         const int ledPin = 8;
-        const int photocellPin = A0;  //photoresistor attach to A2
+        const int photocellPin = A0;  //フォトレジスタはA2に接続
     
         int lightLow = 1023;
         int lightHigh = 0;
     
-        int sensorValue = 0;        // value read from the sensor
-        int pitch = 0;           // sensor value converted into LED 'bars'
+        int sensorValue = 0;        // センサからの読み取り値
+        int pitch = 0;           // センサ値をLED 'bars'に変換
     
         unsigned long previousMillis = 0;
         const long interval = 5000;
 
-#. Set up a calibration process in ``setup()``.
+#. ``setup()`` 内でキャリブレーションプロセスを設定する。
 
     .. code-block:: arduino
 
         void setup()
         {
-            pinMode(buzzerPin, OUTPUT); // make buzzer output
-            pinMode(ledPin, OUTPUT); // make the LED pin output
+            pinMode(buzzerPin, OUTPUT); // ブザーを出力として設定
+            pinMode(ledPin, OUTPUT); // LEDピンを出力として設定
 
-            /* calibrate the photoresistor max & min values */
+            /* フォトレジスタの最大値 & 最小値をキャリブレートする */
             previousMillis = millis();
             digitalWrite(ledPin, HIGH);
             while (millis() - previousMillis <= interval) {
@@ -129,9 +127,9 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             digitalWrite(ledPin, LOW);
         }
 
-    The work flow is as follows.
+    ワークフローは以下の通りです。
 
-    * using ``millis()`` for timing with an interval of 5000ms.
+    * 5000msの間隔で ``millis()`` を使ってタイミングを取る。
 
     .. code-block:: arduino
 
@@ -141,7 +139,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
         ...
         }
 
-    * During these five seconds, wave a hand around the photoresistor, the maximum and minimum values ​​of the detected light are recorded and assigned to ``lightHigh`` and ``lightLow`` respectively.
+    * この5秒間、フォトレジスタの周りで手を振ると、検出された光の最大値と最小値が記録され、それぞれ ``lightHigh`` と ``lightLow`` に割り当てられる。
 
     .. code-block:: arduino
         
@@ -153,17 +151,18 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             lightLow = sensorValue;
         }
 
-#. Now you can start playing this Thermin. Read the value of the photoresistor to ``sensorValue`` and map it from the small range to the large range to be used as the frequency of the buzzer. 
+#. これで、このテルミンを演奏することができます。フォトレジスタの値を ``sensorValue`` に読み取り、それを小さい範囲から大きい範囲にマップして、ブザーの周波数として使用します。
 
     .. code-block:: arduino
 
         void loop()
         {
-        /* play*/
-        sensorValue = analogRead(photocellPin); //read the value of A0
-        pitch = map(sensorValue, lightLow, lightHigh, 50, 6000);  // map to the buzzer frequency
+        /* 演奏 */
+        sensorValue = analogRead(photocellPin); //A0の値を読み取る
+        pitch = map(sensorValue, lightLow, lightHigh, 50, 6000);  // ブザーの周波数にマップする
         if (pitch > 50) {
             tone(buzzerPin, pitch, 20);
         }
         delay(10);
         }
+

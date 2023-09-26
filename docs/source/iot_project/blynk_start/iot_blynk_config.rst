@@ -1,49 +1,46 @@
-1.2 Configuring the Blynk
+1.2 Blynkの設定手順
 -----------------------------------
 
-
-#. Go to the `BLYNK <https://blynk.io/>`_ and click **START FREE**. 
+#. `BLYNK <https://blynk.io/>`_ サイトを開き、 **START FREE** ボタンを押下します。
 
     .. image:: img/sp220607_142551.png
 
-#. Fill in your email address to register an account.
+#. メールアドレスを入力し、アカウントを作成します。
 
     .. image:: img/sp220607_142807.png
 
-#. Go to your email address to complete your account registration.
+#. 登録したメールアドレスを開き、案内に従ってアカウントの確認を行います。
 
     .. image:: img/sp220607_142936.png
 
-#. Afterwards, **Blynk Tour** will appear and you can read it to learn the basic information about the Blynk.
+#. アカウント確認後、 **Blynk Tour** というガイドが表示されます。これを読むことでBlynkの基本情報を得ることができます。
 
     .. image:: img/sp220607_143244.png
 
-#. Next we need to create a template and device with this **Quick Start**, click **Let's go**.
-
+#. 次に、 **Quick Start** ガイドを利用してテンプレートとデバイスを作成します。そのため、 **Let's go** ボタンを押下します。
 
     .. image:: img/sp220607_143608.png
 
-#. Select the hardware and connection type.
+#. 用意したハードウェアと接続タイプを選択します。
 
     .. image:: img/sp20220614173218.png
 
-#. Here you are told which IDE you need to prepare, we recommend the **Arduino IDE**.
+#. 必要な開発環境（IDE）についての案内が表示されますが、私たちの推奨は **Arduino IDE** です。
 
     .. image:: img/sp20220614173454.png
 
-#. Here is the library you need to add, but the recommended library here is a bit problematic, we need to add other libraries manually (we will mention it later). Click **Next** here, and a new template and device will be created.
+#. 必要とされるライブラリ一覧が表示されます。しかし、こちらの推奨ライブラリには課題があるため、後述する方法で別のライブラリを手動で追加する必要があります。こちらの画面では **Next** ボタンを押下して、新たなテンプレートとデバイスの作成を進めます。
 
     .. image:: img/sp20220614173629.png
 
-#. The next steps are to upload the relevant code and connect your board to Blynk, but since there is a problem with the library provided earlier, you need to add other libraries again. So click **Cancel** here to stop **Quick Start**.
+#. 次のステップでは、関連するコードをアップロードし、Blynkにボードを接続する作業が行われます。しかし、先述したライブラリの課題のため、再度ライブラリの追加が必要です。そのため、この **Quick Start** ガイドを一時停止するため **Cancel** ボタンを押下します。
 
     .. image:: img/sp20220614174006.png
 
-#. Click the **Search** button and you will see the new device you just created.
+#. **Search** ボタンを押下すると、先程作成したデバイスの情報が表示されます。
 
     .. image:: img/sp20220614174410.png
 
-#. Go to this **Quickstart Device** and you will see ``TEMPLATE_ID``, ``DEVICE_NAME`` and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
-
+#. 表示された **Quickstart Device** ページに移動し、 **Device info** 欄に ``TEMPLATE_ID``、 ``DEVICE_NAME``、及び ``AUTH_TOKEN`` の情報が記載されています。これらの情報は後ほどコピーが必要となりますので、控えておきます。
 
     .. image:: img/sp20220614174721.png

@@ -1,35 +1,35 @@
 .. _follow_your_hand:
 
-7. Follow Your Hand
+7. 手を追う車
 =========================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+この車をペットのように考えて、手を振ると車があなたの方に走ってきます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは確かに便利です。以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,17 +42,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**配線図**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+超音波モジュールと2つのIR障害物回避モジュールを同時に接続します。
 
-Wire the ultrasonic to the R4 board as follows.
+R4ボードに超音波を次のように配線します。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R4 Board
+    * - 超音波モジュール
+      - R4ボード
     * - Vcc
       - 5V
     * - Trig
@@ -62,13 +62,13 @@ Wire the ultrasonic to the R4 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
+R4ボードへの2つのIR障害物回避モジュールの配線は次のとおりです。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R4 Board
+    * - 左IRモジュール
+      - R4ボード
     * - OUT
       - 8
     * - GND
@@ -79,8 +79,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R4 Board
+    * - 右IRモジュール
+      - R4ボード
     * - OUT
       - 7
     * - GND
@@ -91,32 +91,31 @@ The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``7.follow_your_hand.ino`` file under the path of ``3in1-kit\car_project\7.follow_your_hand``.
-    * Or copy this code into **Arduino IDE**.
-    
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * ``3in1-kit\car_project\7.follow_your_hand`` のパスの下で ``7.follow_your_hand.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+
+    * または、 `Arduino ウェブエディター <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/584e42c8-8842-4db0-93b5-f6f949b6ffca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Place the car on the ground after the code has been uploaded successfully. Place your hand close to 5*10cm in front of the car, and it will follow your hand forward. If you put your hand close to the IR Obstacle module on both sides, it will also turn to the corresponding direction.
+コードが正常にアップロードされたら、車を地面に置きます。車の前で5*10cmの距離で手を近づけると、車はあなたの手を前に追って進みます。IR障害物モジュールの両側に手を近づけると、対応する方向に転向します。
 
+**動作原理**
 
-**How it works?**
+このプロジェクトは前の2つのプロジェクト、 :ref:`car_ultrasonic` と :ref:`car_ir_obstacle` 、の組み合わせですが、実装された効果は異なります。前の2つのプロジェクトは障害物を後ろから検知していましたが、このプロジェクトでは、あなたの手が前進または方向転換を追いかけるのを検知しています。
+このプロジェクトのワークフローは以下の通りです。
 
-This project is a combination of the previous two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`, but the implemented effect is different. The previous 2 projects are detecting an obstacle backwards, but here it is detecting that your hand will follow the forward or turn direction.
-The workflow of this project is as follows.
-
-* Read the distance detected by the ultrasonic module and the value of both infrared modules.
-* If the distance is 5~10cm, let the car move with your hand.
-* If the left IR module detects your hand, turn left.
-* If the right IR module detects your hand, turn right.
-* If neither the infrared module nor the ultrasonic module detects your hand, let the car stop.
+* 超音波モジュールによって検知された距離と、両方の赤外線モジュールの値を読み取ります。
+* 距離が5〜10cmの場合、車をあなたの手と一緒に動かします。
+* 左のIRモジュールがあなたの手を検知した場合、左に曲がります。
+* 右のIRモジュールがあなたの手を検知した場合、右に曲がります。
+* 赤外線モジュールも超音波モジュールもあなたの手を検知しない場合、車を停止させます。
 
 .. code-block:: arduino
 
@@ -124,7 +123,7 @@ The workflow of this project is as follows.
 
         float distance = readSensorData();
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0: 遮蔽物あり 1: 空
         int right = digitalRead(rightIR);
         int speed = 150;
 

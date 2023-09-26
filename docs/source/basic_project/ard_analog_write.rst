@@ -1,58 +1,56 @@
-
 .. _ar_analog_write:
 
-2. Analog Write
+2. アナログライト
 ==================
 
-6 of the Arduino's 14 digital pins also have PWM out function. Therefore, in addition to writing digital signals to these 6 pins, you can also write analog signals (PWM wave signals) to them. This way you can make the LEDs show different brightness or make the motor rotate at different speeds.
+Arduinoの14のデジタルピンのうち6つはPWM出力機能も備えています。したがって、これらの6つのピンにデジタル信号を書き込むだけでなく、アナログ信号（PWM波信号）も書き込むことができます。これにより、LEDを異なる明るさで点灯させたり、モーターを異なる速度で回転させることができます。
 
-Pulse Width Modulation, or `PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_, is a technique for getting analog results with digital means. Since it may be hard to grasp the literal meaning, here is an example of controlling the intensity of an LED to help you better understand.
+パルス幅変調、あるいは `PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_ は、デジタル手段でアナログ結果を得るための技術です。文字通りの意味を理解するのが難しいかもしれませんので、LEDの強度を制御する例を以下に示します。
 
-A digital signal consisting of high and low levels is called a pulse. The pulse width of these pins can be adjusted by changing the ON/OFF speed.
-Simply put, when we turn the LED on, off, and on again for a short period of time (like 20ms, the visual dwell time of most people),
-We won't see that it has gone out, but the brightness of the light will be slightly weaker. During this period, the longer the LED is on, the brighter the LED will be.
-That is to say, within a period, the wider the pulse, the greater the "electrical signal strength" output by the microcontroller. 
+高レベルと低レベルで構成されるデジタル信号はパルスと呼ばれます。これらのピンのパルス幅は、ON/OFFの速度を変えることで調整できます。
+簡単に言えば、LEDを点灯、消灯、再び点灯させる短い期間（例えば20ms、ほとんどの人の視覚的停留時間）では、
+LEDが消灯したことには気づかないかもしれませんが、光の明るさはわずかに弱くなります。この期間中、LEDが点灯している時間が長いほど、LEDの明るさは増します。
+つまり、一定の期間内で、パルスが広いほど、マイクロコントローラから出力される「電気信号の強さ」が大きくなります。
 
-This is the function needed to write the PWM wave.
+これがPWM波を書き込むための関数です。
 
 * ``analogWrite(pin, value)``
 
-    Writes an analog value (PWM wave) to a pin. Different output voltages (0-5V) can be simulated by generating a specified pulse signal. The pin will hold this signal until it is called by a new read or write statement.
+    ピンにアナログ値（PWM波）を書き込む。指定されたパルス信号を生成することで、異なる出力電圧（0-5V）をシミュレートすることができます。この信号は、新しいreadまたはwriteステートメントで呼び出されるまでピンが保持します。
 
-   **Syntax**
+   **構文**
       analogWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin to write to. Allowed data types: int.
-    * ``value``: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: int.
+   **パラメータ**
+    * ``pin``: 書き込むArduinoのピン。許容されるデータ型: int。
+    * ``value``: デューティサイクル: 0（常にオフ）から255（常にオン）の間。許容されるデータ型: int。
 
-
-**Example of Analog Write**
+**アナログライトの例**
 
 .. code-block:: arduino
 
-   int pin = 9;      //connect  to pwm pin
+   int pin = 9;      //pwmピンに接続
 
    void setup() {
-      pinMode(pin, OUTPUT);  // sets the pin as output
+      pinMode(pin, OUTPUT);  // ピンを出力として設定
    }
 
    void loop() {
       for (int i = 0 ;i<255 ; i++){
-         analogWrite(pin, i); //analogWrite values from 0 to 255
+         analogWrite(pin, i); //analogWriteの値は0から255
          delay(30);
       }
    }
 
-**Notes and Warnings**
+**注意と警告**
 
-* Looking closely at the R4 board, the pins marked with the "~" symbol have analog output function.
-* The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles. This is because of interactions with the ``millis()`` and ``delay()`` functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g. 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
+* R4ボードをよく見ると、"~"記号でマークされたピンはアナログ出力機能があります。
+* ピン5と6で生成されるPWM出力は、予想よりもデューティサイクルが高くなることがあります。これは、 ``millis()`` 関数や ``delay()`` 関数との相互作用によるもので、これらのPWM出力を生成するために使用される内部タイマと同じものを共有しているためです。これは主に低デューティサイクルの設定（例：0 - 10）で注意され、ピン5と6の出力を完全にオフにする値0がオフにならない場合があります。
 
+**関連するコンポーネント**
 
-**Related Components**
+以下は関連するコンポーネントです。クリックすると、その使用方法を学ぶことができます。
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

@@ -1,16 +1,15 @@
-Components List and Introduction
+部品リストと紹介
 ====================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+パッケージを開けた後、部品の数量が製品の説明と一致しているか、またすべての部品が良好な状態にあるかを確認してください。
 
 .. image:: img/components_list.jpg
     :width: 800
     :align: center
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+以下は、各部品の紹介です。これには部品の動作原理と対応するプロジェクトが含まれています。
 
-**Control Board**
+**制御ボード**
 
 .. toctree::
     :maxdepth: 1
@@ -19,9 +18,7 @@ Below is the introduction to each component, which contains the operating princi
     component_esp8266
 
 
-
-
-**Basic**
+**ベーシック**
 
 .. toctree::
     :maxdepth: 1
@@ -31,7 +28,8 @@ Below is the introduction to each component, which contains the operating princi
     component_capacitor
     component_wires
 
-**Chip**
+
+**チップ**
 
 .. toctree::
     :maxdepth: 1
@@ -39,8 +37,7 @@ Below is the introduction to each component, which contains the operating princi
     component_74hc595
 
 
-
-**Display**
+**ディスプレイ**
 
 .. toctree::
     :maxdepth: 1
@@ -51,14 +48,15 @@ Below is the introduction to each component, which contains the operating princi
     component_i2c_lcd
 
 
-**Sound**
+**サウンド**
 
 .. toctree::
     :maxdepth: 1
 
     component_buzzer
 
-**Driver**
+
+**ドライバー**
 
 .. toctree::
     :maxdepth: 1
@@ -69,7 +67,7 @@ Below is the introduction to each component, which contains the operating princi
     component_l9110s
 
 
-**Controller**
+**コントローラー**
 
 .. toctree::
     :maxdepth: 1
@@ -81,7 +79,7 @@ Below is the introduction to each component, which contains the operating princi
     component_receiver
 
 
-**Sensor**
+**センサー**
 
 .. toctree::
     :maxdepth: 1

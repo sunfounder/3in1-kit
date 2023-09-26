@@ -1,38 +1,37 @@
 .. _iot_home:
 
-5. Home Environment Monitoring
+5. 家の環境モニタリング
 ================================
 
-In this chapter, we will use Blynk to create a home environment monitor.
-You can measure the temperature, humidity, and light intensity of a room using the DHT11 and photoresistor.
-By sending these values to Blynk, you will be able to know the environment of your home via the internet.
+この章では、Blynkを使用して家の環境モニタを作成します。
+DHT11とフォトレジスタを使用することで、部屋の温度、湿度、および光の強度を測定できます。
+これらのデータをBlynkに送信することで、インターネットを通じてあなたの家の環境を把握することができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式として購入するのがおすすめです。以下はそのリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
-
+    *   - コンポーネントの紹介
+        - 購入リンク
     *   - :ref:`cpn_uno`
         - \-
     *   - :ref:`cpn_breadboard`
@@ -48,80 +47,78 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - \-
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは安定した動作のために高い電流が必要なので、9Vのバッテリーが接続されていることを確認してください。
 
 .. image:: img/iot_5_bb.png
 
-**2. Edit Dashboard**
+**2. ダッシュボードを編集**
 
-
-#. For recording humidity values, create a **Datastream** of type **Virtual Pin** on the **Datastream** page. Set the DATA TYPE to **Double** and MIN and MAX to **0** and **100**. Also set the units to **Percentage, %**.
+#. 湿度のデータを記録するため、 **Datastream** ページで **Virtual Pin** タイプの **Datastream** を作成します。DATA TYPEを **Double** に設定し、MINとMAXを **0** と **100** にします。また、単位は **Percentage, %** に設定します。
 
     .. image:: img/sp220610_145748.png
 
-#. Then create a **Datastream** of type **Virtual Pin** for recording the temperature. Set DATA TYPE to ``Double``, MIN and MAX to ``-30`` and ``50``, and units to **Celsius, °C**.
+#. 温度のデータを記録するための **Virtual Pin** タイプの **Datastream** を作成します。DATA TYPEを ``Double`` に、MINとMAXを ``-30`` と ``50`` に設定し、単位を **Celsius, °C** にします。
 
     .. image:: img/sp220610_145811.png
 
-#. Also create a **Datastream** of type **Virtual Pin** to record the light intensity. Use the default data type - **Integer**, with MIN and MAX set to ``0`` and ``1024``.
+#. 光の強度のデータを記録するための **Virtual Pin** タイプの **Datastream** を作成します。デフォルトのデータタイプ、すなわち **Integer** を使用し、MINとMAXを ``0`` と ``1024`` に設定します。
 
     .. image:: img/sp220610_145834.png
 
-#. Go to the **Wed Dashboard** page, drag two **Label** widgets and set their data streams to **V4** and **V5** respectively, and drag a **Gauge** widget and set the data stream to **V6**. Also in the widget setting, you can enable **Change color based on value** and select the appropriate color to make the widget look better and more intuitive.
+#. **Wed Dashboard** ページに移動し、 **V4** および **V5** にデータストリームを設定した2つの **Label** ウィジェットを配置し、 **V6** にデータストリームを設定した **Gauge** ウィジェットを配置します。ウィジェットの設定で、 **値に応じて色を変更する** オプションを有効にし、見やすく直感的な表示のために適切な色を選択できます。
 
 .. image:: img/sp220610_150400.png
     :align: center
 
 
-**3. Run the Code**
 
-#. Open the ``5.home_environment_monitoring.ino`` file under the path of ``3in1-kit\iot_project\5.home_environment_monitoring``, or copy this code into **Arduino IDE**.
+**3. コードの実行**
+
+#. ``3in1-kit\iot_project\5.home_environment_monitoring`` のパスの下で ``5.home_environment_monitoring.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーします。
 
     .. note::
 
-            * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+            * ここでは ``DHT sensor library`` が使用されています。 **Library Manager** からインストールできます。
 
                 .. image:: ../img/lib_dht11.png
 
-
     .. raw:: html
-        
+
         <iframe src=https://create.arduino.cc/editor/sunfounder01/4f0ad85e-8aff-4df9-99dd-c6741aed8219/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. ``Template ID``、 ``Device Name``、および ``Auth Token`` を自分のものに置き換えます。使用しているWiFiの ``ssid`` と ``password`` も入力する必要があります。詳細なチュートリアルは、 :ref:`connect_blynk` を参照してください。
+#. 正しいボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニターを開いて（ボーレートを115200に設定）、成功した接続などのプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示された場合は、以下の手順を実行してください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R4 board.
+        * 9Vのバッテリーが接続されていることを確認します。
+        * RSTピンを1秒間GNDに接続してESP8266モジュールをリセットし、その後、抜きます。
+        * R4ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        こうした操作を3〜5回繰り返す必要があることもありますので、お待ちください。
 
-#. Now, you will see the current ambient temperature, humidity and light intensity on Blynk.
+#. これで、Blynk上で現在の周囲の温度、湿度、光の強度を見ることができます。
 
     .. image:: img/sp220610_150400.png
         :align: center
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Blynkをモバイルデバイスで使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
     .. image:: img/mobile_home.jpg
 
-**How it works?**
+**どのように動作するのか？**
 
-These two functions are used to get the temperature, humidity and light intensity of the room.
-
+これらの二つの関数は、部屋の温度、湿度、光の強度を取得するために使用されます。
 
 .. code-block:: arduino
 
@@ -131,22 +128,22 @@ These two functions are used to get the temperature, humidity and light intensit
 
     bool readDHT() {
 
-        // Reading temperature or humidity takes about 250 milliseconds!
-        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+        // 温度または湿度の読み取りには約250ミリ秒かかります！
+        // センサーの読み取りは、最大2秒「古い」場合があります（非常に遅いセンサーです）
         humidity = dht.readHumidity();
-        // Read temperature as Celsius (the default)
+        // 温度を摂氏で読み取る（デフォルト）
         temperature = dht.readTemperature();
 
-        // Check if any reads failed and exit early (to try again).
+        // いずれかの読み取りに失敗した場合は確認し、早期に終了します（再試行のため）。
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("Failed to read from DHT sensor!");
+            Serial.println("DHTセンサーからの読み取りに失敗しました！");
             return false;
         }
         return true;
     }
 
+Blynkの ``Timer`` を使用して、周囲の温度、湿度、光の強度は毎秒取得され、Blynk Cloud上のデータストリームに送信されます。そして、ウィジェットがデータを表示します。
 
-With the Blynk ``Timer``, the ambient temperature, humidity, and light intensity are obtained every second and sent to the data stream on the Blynk Cloud, from which the widgets display the data.
 
 .. code-block:: arduino
 

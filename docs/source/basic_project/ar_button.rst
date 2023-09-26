@@ -1,36 +1,35 @@
 .. _ar_button:
 
-3.1 Reading Button Value
+3.1 ボタンの値の読取り
 ==============================================
 
+前回のプロジェクトでは出力関数を使用しましたが、この章では入力関数を使用してボタンの値を読み取ります。
 
-In the previous projects, we used the output function, in this chapter we will use the input function to input read the button value.
+**必要な部品**
 
-**Required Components**
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入すると非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -43,46 +42,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_3.1_button.png
 
-One side of the button pin is connected to 5V, 
-and the other side pin is connected to pin 2, 
-so when the button is pressed, 
-pin 2 will be high. However, 
-when the button is not pressed, 
-pin 2 is in a suspended state and may be high or low. 
-In order to get a stable low level when the button is not pressed, 
-pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
+ボタンの片側のピンは5Vに接続され、
+もう一方のピンはピン2に接続されているため、
+ボタンが押されると、
+ピン2はハイになります。しかし、
+ボタンが押されていない場合、
+ピン2は浮遊状態であり、ハイまたはローのどちらかになる可能性があります。
+ボタンが押されていないときに安定したローレベルを得るために、
+ピン2は10Kのプルダウン抵抗を通してGNDに再接続する必要があります。
 
-
-
-**Wiring**
-
+**配線図**
 
 .. image:: img/3.1_reading_button_value_bb.png
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``3.1.read_button_value.ino`` under the path of ``3in1-kit\learning_project\3.1.read_button_value``. 
-   * Or copy this code into **Arduino IDE**.
+   * ``3in1-kit\learning_project\3.1.read_button_value`` のパスの下で ``3.1.read_button_value.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
    
-   
-
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b456ff57-4dfb-4231-9d91-f1e9a5777de2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, click the magnifying glass icon in the upper right corner of the Arduino IDE (Serial Monitor).
+コードが正常にアップロードされた後、Arduino IDEの右上隅にある虫眼鏡のアイコン（シリアルモニタ）をクリックします。
 
 .. image:: img/sp220614_152922.png
 
-When you press the button, the Serial Monitor will print "1".
-
+ボタンを押すと、シリアルモニタに「1」と表示されます。
 

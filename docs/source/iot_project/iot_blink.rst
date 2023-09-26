@@ -1,35 +1,35 @@
 .. _iot_blink:
 
-2. Get Data from Blynk
+2. Blynkからデータを取得する
 =================================
 
-You will learn how to control the circuit with Blynk in this chapter. Let's light up the LEDs over the Internet!
+この章では、Blynkを使用して回路を制御する方法を学びます。インターネットを介してLEDを点灯させましょう！
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -44,99 +44,98 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは安定した動作環境を提供するために高電流が必要ですので、9Vの電池が接続されていることを確認してください。
 
 .. image:: img/iot_2_bb.png
 
-**2. Edit Dashboard**
+**2. ダッシュボードを編集**
 
-#. Go to the **Quickstart Device** you created earlier, click on the menu icon in the upper right corner and select **edit dashboard**.
+#. 以前に作成した **Quickstart Device** に移動し、右上のメニューアイコンをクリックして **edit dashboard** を選択します。
 
     .. image:: img/sp220609_112825.png
 
-#. Datastreams allow the widgets on Blynk and the code on your board to recognize each other. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
+#. Datastreamsは、Blynkのウィジェットとボード上のコードがお互いを認識することを可能にします。完全な設定プロセスを体験するために、DatastreamsページからすべてのDatastreamsを削除します。
 
     .. image:: img/sp220609_114723.png
 
-#. Please read the warning carefully and confirm it is correct before deleting the Datastreams.
+#. Datastreamsを削除する前に、警告を慎重に読み、それが正しいことを確認してください。
 
     .. image:: img/sp220609_114929.png
 
-#. Create a Datastream of type **Virtual Pin**, which will be used to control the LED using Blynk's switch.
+#. Blynkのスイッチを使用してLEDを制御するために使用される **Virtual Pin** タイプのDatastreamを作成します。
 
     .. image:: img/sp220609_115124.png
 
-#. Configure the **Virtual Pin**. As the button and LED only need to be ON and OFF, set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``1``. 
+#. **Virtual Pin** を設定します。ボタンとLEDはONとOFFのみ必要なので、DATA TYPEを ``Integer`` に設定し、MINとMAXを ``0`` と ``1`` に設定します。
 
     .. image:: img/sp220609_115520.png
 
-#. Go to the **Web Dashboard** page and delete the existing widgets.
+#. **Web Dashboard** ページに移動し、既存のウィジェットを削除します。
 
     .. image:: img/sp220609_133707.png
 
-#. Drag and drop a **switch** widget from the **Widget Box** on the left.
+#. 左の **Widget Box** から **switch** ウィジェットをドラッグアンドドロップします。
 
     .. image:: img/sp220609_114508.png
 
-#. Now to set it up.
+#. 次に、それを設定します。
 
     .. image:: img/sp20220615180127.png
 
-#. Select **Datastream** as the one you set earlier.
+#. **Datastream** を以前に設定したものとして選択します。
 
     .. image:: img/sp220609_133741.png
 
-#. After selecting Datastream, you will see a few custom settings, then press Save.
+#. Datastreamを選択すると、いくつかのカスタム設定が表示されます。それを確認したら、保存をクリックします。
 
     .. image:: img/sp220609_133950.png
 
-#. Finally, click **Save And Apply**.
+#. 最後に、 **Save And Apply** をクリックします。
 
     .. image:: img/sp220609_141733.png
 
-**3. Run the Code**
 
-#. Open the ``2.get_data_from_blynk.ino`` file under the path of ``3in1-kit\iot_project\2.get_data_from_blynk``, or copy this code into **Arduino IDE**.
+**3. コードの実行**
+
+#. ``3in1-kit\iot_project\2.get_data_from_blynk`` のパスの下の ``2.get_data_from_blynk.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/06b187a8-dabf-4866-b38c-742e0446cc3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
+#. ``Template ID``、 ``Device Name``、および ``Auth Token`` を自分のものに置き換えてください。使用しているWiFiの ``ssid`` と ``password`` も入力する必要があります。詳しいチュートリアルについては、 :ref:`connect_blynk` を参照してください。
 
-#. After selecting the correct board and port, click the **Upoad** button.
+#. 正しいボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
     .. image:: img/2_upload.png
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニタを開く（ボーレートを115200に設定）し、成功した接続のようなプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示された場合は、以下の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on your board.
+        * 9Vの電池が接続されていることを確認してください。
+        * RSTピンを1秒間GNDに接続してESP8266モジュールをリセットし、それを抜きます。
+        * ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        こうした操作を3〜5回繰り返す必要があることもありますので、お待ちください。
 
-
-#. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R4 board.
+#. Blynkに戻ると、ステータスがオンラインに変わり、blynkのスイッチウィジェットでR4ボードに接続されたLEDを制御できるようになります。
 
     .. image:: img/2_blynk_button.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Blynkをモバイルデバイスで使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
+**どのように動作するのか？**
 
-**How it works?**
-
-The difference between the code in this project and the code in the previous chapter :ref:`connect_blynk` is the following lines.
+このプロジェクトのコードと前章の :ref:`connect_blynk` のコードの違いは以下の行です。
 
 .. code-block:: arduino
 
@@ -144,10 +143,10 @@ The difference between the code in this project and the code in the previous cha
 
     BLYNK_WRITE(V0)
     {
-        int pinValue = param.asInt(); // assigning incoming value from pin V0 to a variable
-        // You can also use:
-        // String i = param.asStr();
-        // double d = param.asDouble();
+        int pinValue = param.asInt(); // ピン V0 からの受信値を変数に代入する
+         // 以下も使用できます。
+         // 文字列 i = param.asStr();
+         // ダブル d = param.asDouble();
         digitalWrite(ledPin,pinValue);
     }
 
@@ -156,23 +155,24 @@ The difference between the code in this project and the code in the previous cha
         pinMode(ledPin,OUTPUT);
     }
 
-Regarding the ``pinMode`` and ``digitalWrite`` of the ledPin, I'm sure you're already familiar with them, so I won't go over them again. What you need to focus on is the ``BLYNK_WRITE(V0)`` function.
+ledPinの ``pinMode`` および ``digitalWrite`` に関しては、既によく知っていると思いますので、再度説明しません。注目すべきは ``BLYNK_WRITE(V0)`` 関数です。
 
-What it will do is that when the value of Blynk's ``V0`` changes, Blynk.Cloud will tell your device "I am writing to **Virtual Pin** V0", and your device will be able to perform something once it gets this information.
+これにより、Blynkの ``V0`` の値が変わると、Blynk.Cloudはデバイスに「私は **Virtual Pin** V0に書き込んでいます」と伝え、デバイスはこの情報を取得すると何かを実行できるようになります。
 
-We created the V0 Datastream in the previous step and applied it to the Switch Widget.
-This means that every time we operate the Switch Widget, ``BLYNK_WRITE(V0)`` will be triggered.
+前の手順で V0 データストリームを作成し、それをスイッチ ウィジェットに適用しました。
+これは、Switch Widget を操作するたびに ``BLYNK_WRITE(V0)`` がトリガーされることを意味します。
 
-We write two instructions in this function.
+この関数には2つの指示を書きました。
 
 .. code-block:: arduino
 
     int pinValue = param.asInt();
 
-Get the value of V0 and assign it to the variable ``pinValue``.
+V0の値を取得し、変数 ``pinValue`` に割り当てます。
 
 .. code-block:: arduino
 
     digitalWrite(ledPin,pinValue);
 
-Write the value of V0 obtained to the ledPin, so that the Switch widget on Blynk can control the LED.
+BlynkのスイッチウィジェットがLEDを制御できるように、取得したV0の値をledPinに書き込みます。
+

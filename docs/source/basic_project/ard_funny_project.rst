@@ -1,15 +1,13 @@
 .. _ar_funny_project:
 
-6. Funny Project
+6. 面白いプロジェクト
 =========================
 
-In this chapter, you will find some examples that illustrate the basic logic of how most programs interact with reality. This will help you become familiar with Arduino programming.
-When you have a creative idea in mind, programming will no longer be challenging for you.
-
+この章では、ほとんどのプログラムが現実とどのように相互作用するかの基本的なロジックを示す例をいくつか紹介します。これにより、Arduinoのプログラミングに慣れる手助けとなります。
+創造的なアイディアを思いついたとき、プログラミングはもうあなたにとって難しいものではありません。
 
 .. toctree::
     :maxdepth: 2
-
 
     ar_light_flow_led
     ar_dice
@@ -17,5 +15,3 @@ When you have a creative idea in mind, programming will no longer be challenging
     ar_reversing_aid
     ar_reaction_game
     ar_guess_number
-
-

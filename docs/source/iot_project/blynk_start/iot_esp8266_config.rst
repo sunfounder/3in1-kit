@@ -1,17 +1,16 @@
 .. _config_esp8266:
 
-1.1 Configuring the ESP8266
+1.1 ESP8266の設定
 ===============================
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below.
+キットに含まれるESP8266モジュールはすでにATファームウェアで事前に書き込まれていますが、以下の手順に従ってその設定を変更する必要があります。
 
-
-1. Build the circuit.
+1. 回路を組む。
 
     .. image:: img/iot_1.1_at_set_bb.png
         :width: 800
 
-2. Open the ``1.set_software_serial.ino`` file under the path of ``3in1-kit\iot_project\1.set_software_serial``. Or copy this code into **Arduino IDE**.
+2. ``3in1-kit\iot_project\1.set_software_serial`` のパスの下の ``1.set_software_serial.ino`` ファイルを開く。または、このコードを **Arduino IDE** にコピーします。
 
     .. code-block:: Arduino
 
@@ -19,7 +18,7 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
         SoftwareSerial espSerial(2, 3); //Rx,Tx
 
         void setup() {
-            // put your setup code here, to run once:
+            // セットアップ コードをここに配置して、1 回実行します。
             Serial.begin(115200);
             espSerial.begin(115200);
         }
@@ -33,31 +32,29 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
             }
         }
 
-
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)
+3. 右上隅の虫眼鏡のアイコン（シリアルモニター）をクリックして、ボーレートを **115200** に設定します。（私のように何か情報が表示されるかもしれませんし、表示されないかもしれませんが、問題ありません。次の手順に進んでください。）
 
     .. image:: img/sp20220524113020.png
 
     .. warning::
         
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * ``ready`` が表示されない場合、ESP8266モジュールをリセットして（RSTをGNDに接続）シリアルモニターを再度開くことができます。
 
-        * In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
+        * さらに、結果が ``OK`` の場合、ファームウェアを再度書き込む必要があるかもしれません。詳細については :ref:`burn_firmware` を参照してください。それでも解決できない場合は、シリアルモニターのスクリーンショットを sevice@sunfounder.com に送信してください。できるだけ早く問題を解決するお手伝いをいたします。
 
-4. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
+4. **NEWLINE DROPDOWN BOX** をクリックして、ドロップダウンオプションで ``both NL & CR`` を選択し、 ``AT`` を入力します。OKと返されると、ESP8266がボードとの接続に成功したことを意味します。
 
     .. image:: img/sp20220524113702.png
 
-5. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
+5. ``AT+CWMODE=3`` を入力すると、管理モードが **Station and AP** の共存に変更されます。
 
     .. image:: img/sp20220524114032.png
 
-6. In order to use the software serial later, you must input ``AT+UART=9600,8,1,0,0`` to modify the ESP8266's baud rate to 9600.
+6. 後でソフトウェアシリアルを使用するために、 ``AT+UART=9600,8,1,0,0`` を入力して、ESP8266のボーレートを9600に変更する必要があります。
 
     .. image:: img/PIC4_sp220615_150321.png
 
-.. 7. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
-
+.. 7. 今、シリアルモニターのボーレートを9600に変更し、``AT`` を入力してみてください。OKが返されると、設定が成功したことを意味します。
 
 ..     .. image:: img/PIC5_sp220615_150431.png
 

@@ -1,50 +1,47 @@
 .. _speed_calibration:
 
-11. Speed Calibration
-===========================
+11. 速度のキャリブレーション
+===============================
 
-In getting the car to move forward, you may find that the car does not travel in a straight line.
-This is because the two motors may not have the same speed at the factory. 
-But we can write offset to the two motors to make their rotational speeds converge.
+車を前進させる際、車がまっすぐ進まないことがあります。
+これは、工場出荷時に2つのモーターの速度が同じでないためです。
+しかし、2つのモーターにオフセットを書き込むことで、その回転速度を一致させることができます。
 
-In this project, 
-we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, the point of this is that after each calibration, 
-all projects can get the offset value directly from the EEPROM, 
-so that the car can go in a straight line smoothly.
+このプロジェクトでは、
+オフセットを `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ に保存する方法を学びます。これのポイントは、キャリブレーションの後、
+すべてのプロジェクトがEEPROMから直接オフセット値を取得できるため、
+車がスムーズにまっすぐ進むことができます。
 
+**配線図**
 
-**Wiring**
+このプロジェクトの配線は、 :ref:`car_move_code` と同じです。
 
-This project is the same wiring as :ref:`car_move_code`.
+**遊び方は？**
 
-
-
-**How to play?**
-
-1. Open the ``11.speed_calibration.ino`` file under the path of ``3in1-kit\car_project\11.speed_calibration``. Or copy this code into **Arduino IDE**.
+1. パス ``3in1-kit\car_project\11.speed_calibration`` の下の ``11.speed_calibration.ino`` ファイルを開く。または、このコードを **Arduino IDE** にコピーします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/66dc7ee5-31a5-418e-9aa2-43e7820cf5e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+2. コードが正常にアップロードされた後、車に9Vのバッテリーを接続し、地面に置いて前進させ、どちらの方向にオフセットされているかを確認します。
 
-2. After the code is uploaded successfully, connect the car with 9V battery, put it on the ground and let it move forward to see which side it is offset to.
-
-* If the car moves to the left front, it means the right motor speed is too fast and needs to be reduced.
-
-    .. code-block:: arduino
-
-        EEPROM.write(1, 100) // 1 means the right motor, 100 means 100% speed, can be set to 90, 95, etc., depending on the actual situation.
-
-* If the car moves to the right, it means the left motor speed is too fast and needs to be reduced.
+* 車が左前方に移動する場合、右のモーターの速度が早すぎることを意味し、減速する必要があります。
 
     .. code-block:: arduino
 
-        EEPROM.write(0, 100) // 0 means the right motor, 100 means the speed is 100%, can be set to 90, 95, etc., depending on the actual situation. 3.
+        EEPROM.write(1, 100) // 1は右モーターを意味し、100は速度が100%であることを意味します。実際の状況に応じて90、95などに設定できます。
 
-3. After modifying the code, upload the code to R4 board to see the effect. Repeat the above steps until the car is almost straight.
+* 車が右に移動する場合、左のモーターの速度が早すぎることを意味し、減速する必要があります。
 
-4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
+    .. code-block:: arduino
+
+        EEPROM.write(0, 100) // 0は左モーターを意味し、100は速度が100%であることを意味します。実際の状況に応じて90、95などに設定できます。
+
+3. コードを修正した後、R4ボードにコードをアップロードして効果を確認します。車がほぼまっすぐになるまで、上記の手順を繰り返します。
+
+4. このオフセットは `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ に記録されます。他のプロジェクトで使用する際には、このオフセットを読むだけでよく、例として :ref:`car_ir_obstacle` を参照してください。
+
 
 
 .. code-block:: arduino
@@ -76,13 +73,13 @@ This project is the same wiring as :ref:`car_move_code`.
         pinMode(leftIR, INPUT);
         pinMode(rightIR, INPUT);
 
-        leftOffset = EEPROM.read(0) * 0.01;//read the offset of the left motor
-        rightOffset = EEPROM.read(1) * 0.01;//read the offset of the right motor
+        leftOffset = EEPROM.read(0) * 0.01;//右モーターのオフセットを読み取る
+        rightOffset = EEPROM.read(1) * 0.01;//右モーターのオフセットを読み取る
     }
 
     void loop() {
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0: 遮蔽物あり 1: 空
         int right = digitalRead(rightIR);
         int speed = 150;
 

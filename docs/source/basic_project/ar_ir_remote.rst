@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.11.3 IR Receiver
+5.11.2 IR 受信機
 =========================
 
-In this project, you will learn to use IR Receiver. 
+このプロジェクトでは、IR 受信機の使用方法を学びます。
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+赤外線受信機は、赤外線信号を受信するコンポーネントで、独立して赤外線を受信し、TTLレベルと互換性のある信号を出力できます。
+通常のプラスチックパッケージのトランジスタと同じサイズで、あらゆる種類の赤外線リモコンや赤外線送信に適しています。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトで必要なコンポーネントは以下の通りです。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは非常に便利です。以下にリンクを示します。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -43,65 +43,59 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**配線図**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+この例では、IR 受信機の左ピンをピン11に、中央ピンをGNDに、右ピンを5Vに接続します。
 
 .. image:: img/5.11_ir_recv_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\learning_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
-  
+    * ``3in1-kit\learning_project\5.11.ir_receiver`` のパスで ``5.11.ir_receiver.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``IRremote`` ライブラリを使用しています。 **Library Manager** からインストールできます。
+
         .. image:: ../img/lib_irremote.png
-
-
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After uploading the codes to the R4 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+R4ボードにコードをアップロードすると、IRリモートコントローラの押されたボタンの現在の値がシリアルモニタに表示されます。
 
-**How it works?**
+**どのように動作するのか？**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+このコードは、 ``IRremote`` ライブラリを使用して赤外線（IR）リモートコントロールと連携して動作するように設計されています。以下に詳細を示します：
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. ライブラリのインクルード:  ``IRremote`` ライブラリをインクルードして、IRリモートコントロールと連携する関数を提供します。
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
+#. IRセンサのシグナルピンが接続されているArduinoのピンを定義し、最後にデコードされたIRの値を保存する変数を宣言します。
 
     .. code-block:: arduino
 
-        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";  // Variable to store the last decoded value
+        const int IR_RECEIVE_PIN = 11;  // IRセンサのピン番号を定義
+        String lastDecodedValue = "";  // 最後にデコードされた値を保存する変数
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. ボーレート9600でシリアル通信を初期化します。指定されたピン（ ``IR_RECEIVE_PIN`` ）でIR受信機を初期化し、LEDフィードバックを有効にします（該当する場合）。
 
     .. code-block:: arduino
 
         void setup() {
-            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+            Serial.begin(9600);                                     // ボーレート9600でシリアル通信を開始
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IR受信機を開始
         }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. ループは、入力されるIRリモート信号を継続的に処理するために継続的に実行されます。
 
     .. code-block:: arduino
 
@@ -110,15 +104,15 @@ This code is designed to work with an infrared (IR) remote control using the ``I
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                    lastDecodedValue = decodedValue;  // 最後にデコードされた値を更新
                 }
-                IrReceiver.resume();  // Enable receiving of the next value
+                IrReceiver.resume();  // 次の値の受信を有効にする
             }
         }
-    
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
-    * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
-    * Resumes IR signal reception for the next signal.
+
+    * IR信号が受信され、正常にデコードされたかどうかを確認します。
+    * ``decodeKeyValue()`` 関数を使用してIRコマンドをデコードし、 ``decodedValue`` に保存します。
+    * デコードされた値がエラーでなく、最後にデコードされた値と異なることを確認します。
+    * デコードされたIRの値をシリアルモニタに出力します。
+    * 新しいデコードされた値で ``lastDecodedValue`` を更新します。
+    * 次の信号のためのIR信号受信を再開します。

@@ -1,23 +1,21 @@
 .. _basic_projects:
 
-Basic Projects
+基本プロジェクト
 ========================
 
-This chapter is used to learn how to control electronic circuits using Arduino.
+この章では、Arduinoを使用して電子回路を制御する方法を学びます。
 
-Depending on the components, the basic control methods of Arduino can be divided into four types:
+コンポーネントに応じて、Arduinoの基本的な制御方法は4つのタイプに分けられます：
 
-* :ref:`ar_digital_write`: Set the output voltage of the pin to be high or low, which can be used to turn the light on and off.
-* :ref:`ar_analog_write`: Write the analog value (`PWM wave <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) to the pin, which can be used to adjust the brightness of the light.
-* :ref:`ar_digital_read`: Read the level signal of the digital pin, which can be used to read the working condition of the switch.
-* :ref:`ar_analog_read`: Read the voltage of the analog pin, which can be used to read the working condition of the knob.
+* :ref:`ar_digital_write`: ピンの出力電圧を高または低に設定し、これを使用して光をオンまたはオフにすることができます。
+* :ref:`ar_analog_write`: アナログ値 (`PWM波 <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) をピンに書き込み、これを使用して光の明るさを調整することができます。
+* :ref:`ar_digital_read`: デジタルピンのレベル信号を読み取り、これを使用してスイッチの動作状態を読み取ることができます。
+* :ref:`ar_analog_read`: アナログピンの電圧を読み取り、これを使用してノブの動作状態を読み取ることができます。
 
+また、使用するには追加のライブラリが必要なコンポーネントもあり、これらはセクション :ref:`install_libraries_ar` の下にまとめられています。
 
-There are also some components that require additional libraries for use, and these are grouped under the section :ref:`install_libraries_ar`.
-
-Finally, the kit also provides some :ref:`ar_funny_project`, which includes many simple and useful manipulations.
-Try this section of code and you will understand how most simple projects work.
-
+最後に、キットにはいくつかの :ref:`ar_funny_project` も提供されており、これには多くのシンプルで有用な操作が含まれています。
+このセクションのコードを試してみれば、ほとんどのシンプルなプロジェクトがどのように動作するかを理解することができます。
 
 .. toctree::
     :maxdepth: 2

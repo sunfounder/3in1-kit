@@ -1,154 +1,146 @@
-How to Build the Circuit
-========================
+回路の作り方
+=============
 
-Many of the things you use every day are powered by electricity, like the lights in your house and the computer you're reading.
+私たちが日常で使用する多くの物は電気で動いています。例えば、家の照明やこの文章を読んでいるコンピューターなどです。
 
-To use electricity, you must build an electrical circuit. Basically, a circuit is a path through which electricity flows, or an electronic circuit, and is made up of electrical devices and components (appliances) that are connected in a certain way, such as resistors, capacitors, power supplies, and switches.
+電気を利用するためには、電気回路を作成する必要があります。基本的に、回路とは電気が流れる道のことであり、電子回路とも呼ばれます。回路は特定の方法で接続された電気デバイスやコンポーネント（機器）で構成されています。例えば、抵抗器、コンデンサー、電源、スイッチなどです。
 
 .. image:: img/circuit.png
 
-A circuit is a closed path in which electrons move to create an electric current. To flow current, there must be a conducting path between the positive terminal of the power supply and the negative terminal, which is called a closed circuit (if it is broken, it is called an open circuit.) .
+回路は電流を作成するために電子が移動する閉じた経路です。電流を流すためには、電源の正極と負極との間に導電経路が存在しなければならず、これを閉回路と言います（途切れている場合は、開回路と呼ばれます）。
 
-
-
-The Arduino Board has some power output pins (positive) and some ground pins (negative).
-You can use these pins as the positive and negative sides of the power supply by plugging the power source into the board.
+Arduinoボードには電源出力ピン（正極）と接地ピン（負極）があります。
+これらのピンを使用して、電源の正負側としてボードに電源を接続することができます。
 
 .. image:: img/arduinoPN.jpg
 
-With electricity, you can create works with light, sound, and motion.
-You can light up an LED by connecting the long pin to the positive terminal and the short pin to the negative terminal.
-The LED will break down very quickly if you do this, so you need to add a 220* resistor inside the circuit to protect it.
+電気を使えば、光や音、動きのある作品を作成することができます。
+LEDの長いピンを正極に、短いピンを負極に接続することでLEDを点灯させることができます。
+この状態で使用すると、LEDはすぐに壊れてしまうので、回路内に220Ωの抵抗器を追加して保護する必要があります。
 
-The circuit they form is shown below.
+以下にその回路の形状を示します。
 
 .. image:: img/sp221014_181625.png
 
-You may have questions this time: how do I build this circuit? Hold the wires by hand, or tape the pins and wires?
+この時点で疑問が湧くかもしれません。この回路をどのように組み立てればよいのでしょうか。ワイヤーを手で持っているだけで、ピンとワイヤーをテープで固定するのでしょうか。
 
-In this situation, solderless breadboards will be your strongest allies.
+このような場合、はんだを使わないブレッドボードが大変役立ちます。
 
 .. _bc_bb:
 
-Hello, Breadboard!
+ブレッドボード、こんにちは！
 ------------------------------
 
-
-A breadboard is a rectangular plastic plate with a bunch of small holes. 
-These holes allow us to easily insert electronic components and build electronic circuits. 
-Breadboards do not permanently fix electronic components, so we can easily repair a circuit and start over if something goes wrong.
+ブレッドボードは小さな穴がたくさん開いている長方形のプラスチック製の板です。
+これらの穴には、電子部品を簡単に挿入して、電子回路を組むことができます。
+ブレッドボードは電子部品を恒久的に固定しないので、何か問題が発生した場合、簡単に修理や再開ができます。
 
 .. note::
-    There is no need for special tools to use breadboards. However, many electronic components are very small, and a pair of tweezers can help us to pick up small parts better.
+    ブレッドボードを使用する際に特別なツールは必要ありません。ただし、多くの電子部品は非常に小さいので、ピンセットを使用して小さな部品をより効果的に取り扱うことができます。
 
-On the Internet, we can find a lot of information about breadboards.
+インターネット上では、ブレッドボードに関する多くの情報が見つかります。
 
-* `How to Use a Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
+* `ブレッドボードの使い方 - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
 
-* `What is a BREADBOARD? - Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
+* `ブレッドボードとは何ですか? - Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
 
+ブレッドボードについて知っておくべきことは以下の通りです。
 
-Here are some things you should know about breadboards.
+#. 各ハーフロウグループ（例：1行目の列A-Eや3行目の列F-J）は接続されています。そのため、A1から電気信号が流れ込むと、B1, C1, D1, E1から流れ出すことができますが、F1やA2からは流れ出すことはできません。
 
-#. Each half-row group (such as column A-E in row 1 or column F-J in row 3) is connected. Therefore, if an electrical signal flows in from A1, it can flow out from B1, C1, D1, E1, but not from F1 or A2.
+#. ほとんどの場合、ブレッドボードの両側は電源バスとして使用され、各列の穴（約50の穴）は互いに接続されています。一般的に、正の電源は赤いワイヤーの近くの穴に、負の電源は青いワイヤーの近くの穴に接続されます。
 
-#. In most cases, both sides of the breadboard are used as power buses, and the holes in each column (about 50 holes) are connected together. As a general rule, positive power supplies are connected to the holes near the red wire, and negative power supplies are connected to the holes near the blue wire.
+#. 回路内では、負極から正極へと電流が流れます。この場合、ショート回路が発生する可能性があります。
 
-#. In a circuit, current flows from the positive pole to the negative pole after passing through the load. In this case, a short circuit may occur.
-
-
-**Let us follow the direction of the current to build the circuit!**
+**電流の流れる方向に従って、回路を組み立ててみましょう！**
 
 .. image:: img/sp221014_182229.png
 
-
-1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
-#. To protect the LED, the current must pass through a 220 ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
-
-    .. note::
-        The color ring of the 220 ohm resistor is red, red, black, black and brown.
-
-#. If you pick up the LED, you will see that one of its leads is longer than the other. Connect the longer lead to the same row as the resistor, and the shorter lead to the other row.
+1. この回路では、ボードの5Vピンを使用してLEDに電力を供給します。M2Mジャンパワイヤーを使用して、それを赤い電源バスに接続します。
+#. LEDを保護するためには、220オームの抵抗を経由して電流を流す必要があります。抵抗の一方の端子（どちらの端子でも良い）を赤い電源バスに、もう一方の端子をブレッドボードの空いている行に接続します。
 
     .. note::
-        The longer lead is the anode, which represents the positive side of the circuit; the shorter lead is the cathode, which represents the negative side. 
+        220オームの抵抗の色リングは、赤、赤、黒、黒、茶色です。
 
-        The anode needs to be connected to the GPIO pin through a resistor; the cathode needs to be connected to the GND pin.
+#. LEDを取り上げると、片方のリードが他方よりも長いことがわかります。抵抗と同じ行に長いリードを接続し、短いリードを別の行に接続します。
 
-#. Using a male-to-male (M2M) jumper wire, connect the LED short pin to the breadboard's negative power bus.
-#. Connect the GND pin of board to the negative power bus using a jumper.
+    .. note::
+        長いリードはアノード（正極）を示し、短いリードはカソード（負極）を示します。
 
-Beware of short circuits
+        アノードは抵抗を経由してGPIOピンに接続する必要があり、カソードはGNDピンに接続する必要があります。
+
+#. M2Mジャンパワイヤーを使用して、LEDの短いピンをブレッドボードの負の電源バスに接続します。
+#. ジャンパを使用して、ボードのGNDピンを負の電源バスに接続します。
+
+ショート回路に注意
 ------------------------------
-Short circuits can occur when two components that shouldn't be connected are "accidentally" connected. 
-This kit includes resistors, transistors, capacitors, LEDs, etc. that have long metal pins that can bump into each other and cause a short. Some circuits are simply prevented from functioning properly when a short occurs. Occasionally, a short circuit can damage components permanently, especially between the power supply and the ground bus, causing the circuit to get very hot, melting the plastic on the breadboard and even burning the components!
+ショート回路は、接続されるべきでない2つのコンポーネントが「偶然」接続されたときに発生します。
+このキットには、抵抗器、トランジスタ、コンデンサ、LEDなど、お互いに接触してショートを引き起こす可能性のある長い金属のピンを持つ部品が含まれています。ショートが発生すると、一部の回路は正常に動作しなくなるだけでなく、特に電源と接地バスの間で、回路が非常に高温になり、ブレッドボードのプラスチックが溶け、部品が焼損することもあります。
 
-Therefore, always make sure that the pins of all the electronics on the breadboard are not touching each other.
+そのため、ブレッドボード上のすべての電子部品のピンが互いに接触していないことを常に確認してください。
 
-Direction of the circuit
+
+回路の方向性
 -------------------------------
-There is an orientation to circuits, and the orientation plays a significant role in certain electronic components. There are some devices with polarity, which means they must be connected correctly based on their positive and negative poles. Circuits built with the wrong orientation will not function properly.
+回路には方向性があります。この方向性は、特定の電子部品において非常に重要な役割を果たします。正極と負極に基づいて正しく接続する必要がある極性を持つデバイスがあります。方向性を間違えて構築された回路は正常に動作しません。
 
 .. image:: img/sp221014_182229.png
 
-If you reverse the LED in this simple circuit that we built earlier, you will find that it no longer works.
+以前作成したこのシンプルな回路でLEDを逆にすると、LEDが動作しなくなることがわかります。
 
-In contrast, some devices have no direction, such as the resistors in this circuit, so you can try inverting them without affecting the LEDs' normal operation.
+逆に、この回路の抵抗器のように方向性を持たないデバイスもありますので、それらを逆にしてもLEDの正常な動作に影響はありません。
 
-Most components and modules with labels such as "+", "-", "GND", "VCC" or have pins of different lengths must be connected to the circuit in a specific way.
+"+"、"-"、"GND"、"VCC"などのラベルが付いている、または異なる長さのピンを持つほとんどの部品やモジュールは、特定の方法で回路に接続する必要があります。
 
 
-Protection of the circuit
+回路の保護
 -------------------------------------
 
-Current is the rate at which electrons flow past a point in a complete electrical circuit. At its most basic, current = flow. An ampere (AM-pir), or amp, is the international unit used for measuring current. It expresses the quantity of electrons (sometimes called "electrical charge") flowing past a point in a circuit over a given time.
+電流は、完全な電気回路のある点を過ぎる電子の流れの速さです。最も基本的には、電流 = 流れです。アンペアは、電流を測定するための国際的な単位です。これは、特定の時間内に回路のある点を過ぎる電子（「電気充電」とも呼ばれる）の数量を表します。
 
-The driving force (voltage) behind the flow of current is called voltage and is measured in volts (V).
+電流の流れの背後にある原動力は電圧と呼ばれ、ボルト（V）で測定されます。
 
-Resistance (R) is the property of the material that restricts the flow of current, and it is measured in ohms (Ω).
+抵抗（R）は、電流の流れを制限する材料の性質であり、オーム（Ω）で測定されます。
 
-According to Ohm's law (as long as the temperature remains constant), current, voltage, and resistance are proportional.
-A circuit's current is proportional to its voltage and inversely proportional to its resistance. 
+オームの法則によれば（温度が一定の場合）、電流、電圧、および抵抗は比例します。
+回路の電流はその電圧に比例し、その抵抗に反比例します。
 
-Therefore, current (I) = voltage (V) / resistance (R).
+したがって、電流（I）= 電圧（V）/ 抵抗（R）です。
 
-* `Ohm's law - Wikipedia <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
+* `オームの法則 - Wikipedia <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
 
-About Ohm's law we can do a simple experiment.
+オームの法則については、簡単な実験を行うことができます。
 
 .. image:: img/sp221014_183107.png
 
-By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
-If you change the resistor from 220ohm to 1000ohm (color ring: brown, black, black, brown and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
+5Vから3.3Vに接続するワイヤーを変更すると、LEDの光が暗くなります。
+抵抗を220ohmから1000ohm（色リング：茶、黒、黒、茶、茶）に変更すると、LEDが以前よりも暗くなることに気付くでしょう。抵抗が大きいほど、LEDは暗くなります。
 
 .. note::
-    For an introduction to resistors and how to calculate resistance values, see :ref:`cpn_resistor`.
+    抵抗についての紹介や抵抗値の計算方法については、 :ref:`cpn_resistor` を参照してください。
 
-Most packaged modules only require access to the proper voltage (usually 3.3V or 5V), such as ultrasonic module.
+ほとんどのパッケージ化されたモジュールは、超音波モジュールのように適切な電圧（通常3.3Vまたは5V）へのアクセスのみが必要です。
 
-However, in your self-built circuits, you need to be aware of the supply voltage and resistor usage for electrical devices.
+ただし、自作の回路では、電気デバイスの供給電圧と抵抗の使用に注意する必要があります。
 
-
-As an example, LEDs usually consume 20mA of current, and their voltage drop is about 1.8V. According to Ohm's law, if we use 5V power supply, we need to connect a minimum of 160ohm ((5-1.8)/20mA) resistor in order not to burn out the LED.
-
+例として、LEDは通常、20mAの電流を消費し、その電圧降下は約1.8Vです。オームの法則に従えば、5Vの電源を使用する場合、LEDを焼き切らないように、最低160ohmの抵抗（(5-1.8)/20mA）を接続する必要があります。
 
 
-Control circuit with Arduino
+
+Arduinoでの回路制御
 --------------------------------
 
-Now that we have a basic understanding of Arduino programming and electronic circuits, it's time to face the most critical question: How to control circuits with Arduino.
+Arduinoのプログラミングと電子回路の基本的な理解が得られたので、最も重要な質問に取り組む時が来ました：Arduinoで回路をどのように制御するか。
 
-Simply put, the way Arduino controls a circuit is by changing the level of the pins on the board. For example, when controlling an on-board LED, it is writing a high or low level signal to pin 13.
+簡単に言えば、Arduinoが回路を制御する方法は、ボード上のピンのレベルを変更することです。例えば、オンボードLEDを制御するとき、それはピン13に高いまたは低いレベルの信号を書き込むことです。
 
-
-Now let's try to code the Arduino board to control the blinking LED on the breadboard. Build the circuit so that the LED is connected to pin 9.
+さて、ブレッドボード上の点滅するLEDを制御するためのArduinoボードをコード化してみましょう。LEDがピン9に接続されているように回路を構築します。
 
 .. image:: img/wiring_led.png
     :width: 400
     :align: center
 
-
-Next, upload this sketch to the Arduino development board.
+次に、このスケッチをArduino開発ボードにアップロードします。
 
 .. code-block:: C
 
@@ -166,7 +158,8 @@ Next, upload this sketch to the Arduino development board.
         delay(delayTime);
     }
 
-This sketch is very similar to the one we used to control the blinking of the on-board LED, the difference is that the value of ``ledPin`` has been changed to 9.
-This is because we are trying to control the level of pin 9 this time.
+このスケッチは、オンボードLEDの点滅を制御するために使用したものと非常に似ていますが、 ``ledPin`` の値が9に変更されています。
+これは、今回はピン9のレベルを制御しようとしているためです。
 
-Now you can see the LED on the breadboard blinking.
+これで、ブレッドボード上のLEDが点滅しているのが見えるでしょう。
+

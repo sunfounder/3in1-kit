@@ -1,38 +1,35 @@
 .. _ar_reversing_aid:
 
-6.4 Reversing Aid
+6.4 駐車補助
 ===================
 
-With the development of science and technology, a lot of high-tech
-products have been installed in cars, among which the reversing assist
-system is one of them. Here we use ultrasonic module, LCD, LED and
-buzzer to make a simple ultrasonic reversing assist system.
+科学技術の発展に伴い、多くの高度な技術製品が車に取り付けられています。その中で、バックアップ補助システムは一つです。この章では、超音波モジュール、LCD、LED、ブザーを使用して、シンプルな超音波駐車補助システムを作成します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入すると非常に便利です。以下がリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -51,25 +48,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Wiring**
+**配線図**
 
 .. image:: img/6.4_reversing_aid_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\learning_project\6.4_reversingAid`` directly.
-    * Or copy this code into Arduino IDE.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * ファイル ``6.4_reversingAid.ino`` を ``3in1-kit\learning_project\6.4_reversingAid`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
+    * ここでは ``LiquidCrystal I2C`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
 
@@ -77,28 +74,27 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d6848669-fe79-42e9-afd7-0f083f96a6d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+コードが正常にアップロードされると、LCDに検出された現在の距離が表示されます。そして、距離に応じてブザーの音の頻度が変わります。
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    コードと配線が正しいのに、LCDに内容が表示されない場合は、裏面のポテンショメータを回して調整してください。
 
+**どのように動作するのか？**
 
-**How it works?**
+このコードは、物体との距離を測定し、LCDディスプレイとブザーを通じてフィードバックを提供するシンプルな距離測定デバイスを作成するのに役立ちます。
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+``loop()`` 関数はプログラムの主要なロジックを含み、継続的に実行されます。 ``loop()`` 関数を詳しく見てみましょう。
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+#. 距離を読み取り、パラメータを更新するループ
 
-#. Loop to read distance and update parameters
-
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    ``loop`` 内のコードは、超音波モジュールで測定された距離を最初に読み取り、距離に基づいて間隔のパラメータを更新します。
 
     .. code-block:: arduino
 
-        // Update the distance
+        // 距離を更新
         distance = readDistance();
 
-        // Update intervals based on distance
+        // 距離に基づいて間隔を更新
         if (distance <= 10) {
             intervals = 300;
         } else if (distance <= 20) {
@@ -109,9 +105,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. ビープ音の時間かどうかを確認する
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    コードは、現在の時間と前回のビープ音の時間との差を計算し、その差が間隔の時間以上の場合、ブザーをトリガーして、前回のビープ音の時間を更新します。
 
     .. code-block:: arduino
 
@@ -122,9 +118,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. LCDディスプレイを更新
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    コードは、LCDディスプレイをクリアし、次に "Dis:" と現在の距離（センチメートル）を1行目に表示します。
 
     .. code-block:: arduino
 

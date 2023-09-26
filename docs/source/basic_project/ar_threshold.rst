@@ -1,48 +1,47 @@
 .. _ar_threshold:
 
-5.2 Threshold
+5.2 閾値
 =======================
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+多くのプロジェクトで、以下のようなニーズに遭遇するでしょう。
+「xxxがあるレベルに達したら、その後…」
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+例えば、スマートホームでは、光の強度が50Lux以下の場合、ライトを点灯する。
+もう一つの例として、コンピュータのマザーボードでは、CPUの動作温度が65度以上になるとファンを起動する、など。
 
-In these requirements, the keyword "threshold" is reflected.
+これらの要件では、「閾値」というキーワードが反映されています。
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+閾値の値を調整することで、回路の動作を個々のニーズに合わせて調整することができます。
+例えば、私がもっと明るい生活環境を好む場合、スマートホームの自動照明の閾値を80Luxに上げることができます。
+また、私のスタジオの換気環境があまり良くなく、放熱要求が高い場合、自動ファン開始の閾値を50度に調整することができます。
 
+ここでは、土の湿度センサーと2つのLEDを使用して、鉢のモニターを作成します。土が乾燥していると赤いLEDが点灯し、土が十分に湿っていると緑のLEDが点灯します。土の乾燥と湿潤を判定する閾値は手動で調整する必要があります。
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+**必要な部品**
 
-**Required Components**
+このプロジェクトには、以下のコンポーネントが必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です、リンクはこちら:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -57,31 +56,31 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.2_threshold_bb.png
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\learning_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\learning_project\5.2.threshold`` のパスの下の ``5.2.threshold.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
+コードが正常にアップロードされた後、閾値が正しく設定されていれば、土が乾燥していると赤いLEDが点灯し、水をやる必要があることを知らせてくれます。水をやった後、緑のLEDが点灯します。
 
-**How it works**
+**動作原理**
 
 .. code-block:: Arduino
 
@@ -91,17 +90,15 @@ After the code is uploaded successfully, if your threshold is set correctly, you
         int sensorValue = analogRead(soilMoisture);
         Serial.println(sensorValue);
         if (sensorValue > threshold) {
-            digitalWrite(redPin, HIGH); // Turn the red LED
-            digitalWrite(greenPin, LOW); // green
+            digitalWrite(redPin, HIGH); // 赤いLEDを点灯
+            digitalWrite(greenPin, LOW); // 緑
         } else {
-            digitalWrite(greenPin, HIGH); // Turn on the green LED
-            digitalWrite(redPin, LOW); // red
+            digitalWrite(greenPin, HIGH); // 緑のLEDを点灯
+            digitalWrite(redPin, LOW); // 赤
         }
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+まず、 ``threshold`` の値を設定し、次に土の湿度モジュールの値を読み取ります。湿度レベルが上がると、その値は減少します。現在読み取った値が設定した ``threshold`` よりも大きい場合、赤いLEDを点灯させます。それ以外の場合は、緑のLEDを点灯させます。
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
-
-
+この ``threshold`` の値は、実際の状況に応じて調整する必要があります。まずコードをアップロードして、シリアルモニターを開いて値を確認します。湿潤と乾燥の状態での値を記録し、その中間の値を ``threshold`` の値として選びます。

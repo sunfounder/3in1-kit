@@ -1,49 +1,49 @@
 .. _ar_dht11:
 
 
-5.11.2 Temperature - Humidity
+5.11.3 温度 - 湿度
 =======================================
 
-Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
-The temperature and humidity of human environment will directly affect the thermoregulatory function and heat transfer effect of human body.
-It will further affect the thinking activity and mental state, thus affecting the efficiency of our study and work.
+湿度と温度は、物理量自体から実際の人々の生活まで、密接に関連しています。
+人間の生活環境の温度と湿度は、人体の体温調節機能と熱伝達効果に直接影響を与えます。
+これはさらに思考活動と精神状態に影響を与え、私たちの学習と仕事の効率に影響を与えます。
 
-Temperature is one of the seven basic physical quantities in the International System of Units, which is used to measure the degree of hot and cold of an object.
-Celsius is one of the more widely used temperature scales in the world, expressed by the symbol "℃".
+温度は、国際単位系における7つの基本物理量の一つで、物体の熱さや冷たさを測定するために使用されます。
+摂氏は、世界で広く使用されている温度尺度の一つで、"℃"という記号で表されます。
 
-Humidity is the concentration of water vapor present in the air.
-The relative humidity of air is commonly used in life and is expressed in %RH. Relative humidity is closely related to temperature.
-For a certain volume of sealed gas, the higher the temperature, the lower the relative humidity, and the lower the temperature, the higher the relative humidity.
+湿度は、空気中に存在する水蒸気の濃度を示します。
+相対湿度は日常生活でよく使用され、%RHで表されます。相対湿度は温度と密接に関連しています。
+一定の容積の密閉ガスに対して、温度が高ければ相対湿度は低く、温度が低ければ相対湿度は高くなります。
 
 .. image:: img/Dht11.png
 
-The dht11, a digital temperature and humidity sensor, is provided in this kit. It uses a capacitive humidity sensor and thermistor to measure the surrounding air and outputs a digital signal on the data pin.
+このキットには、デジタル温湿度センサであるdht11が付属しています。周囲の空気を測定するための静電容量式湿度センサとサーミスタを使用し、データピンにデジタル信号を出力します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キットを一式で購入するのは非常に便利です、リンクは以下の通りです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -54,21 +54,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_7.3_dht11.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.11_dht11_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\learning_project\5.11.temperature_humidity``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+    * ``3in1-kit\learning_project\5.11.temperature_humidity`` のパスの下で ``5.11.temperature_humidity.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``DHT sensor library`` を使用しています。 **Library Manager** からインストールできます。
 
         .. image:: ../img/lib_dht11.png
 
@@ -77,22 +77,22 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c5b4c902-f39d-45a6-9a17-1308056041a8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+コードが正常にアップロードされた後、シリアルモニターが連続して温度と湿度を表示するのを見ることができます。プログラムが安定して実行されると、これらの2つの値はますます正確になります。
 
-**How it works?**
+**どのように動作するのか？**
 
-#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
+#.  ``DHT.h`` ライブラリを含めることで、DHTセンサと対話するための関数を提供します。次に、DHTセンサのピンとタイプを設定します。
 
     .. code-block:: arduino
 
         #include "DHT.h"
 
-        #define DHTPIN 11  // Set the pin connected to the DHT11 data pin
+        #define DHTPIN 11  // DHT11データピンに接続されたピンを設定
         #define DHTTYPE DHT11 // DHT 11 
 
         DHT dht(DHTPIN, DHTTYPE);
 
-#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
+#. 115200のボーレートでシリアル通信を初期化し、DHTセンサを初期化します。
 
     .. code-block:: arduino
 
@@ -102,26 +102,26 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             dht.begin();
         }
 
-#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
+#. ``loop()`` 関数で、DHT11センサから温度と湿度の値を読み取り、それらをシリアルモニターに表示します。
 
     .. code-block:: arduino
 
         void loop() {
-            // Wait a few seconds between measurements.
+            // 測定の間に数秒待機します。
             delay(2000);
 
-            // Reading temperature or humidity takes about 250 milliseconds!
-            // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+            // 温度または湿度の読み取りには約250ミリ秒かかります！
+            // センサーの読み取りは最大2秒「古い」ものになることがあります（非常に遅いセンサーです）
             float humidity = dht.readHumidity();
-            // Read temperature as Celsius (the default)
+            // 温度を摂氏で読み取る（デフォルト）
             float temperture = dht.readTemperature();
 
-            // Check if any reads failed and exit early (to try again).
+            // 読み取りが失敗したかどうかを確認して、早期に終了します（再試行するため）。
             if (isnan(humidity) || isnan(temperture)) {
-                Serial.println("Failed to read from DHT sensor!");
+                Serial.println("DHTセンサーからの読み取りに失敗しました！");
                 return;
             }
-            // Print the humidity and temperature
+            // 湿度と温度を表示
             Serial.print("Humidity: "); 
             Serial.print(humidity);
             Serial.print(" %\t");
@@ -130,6 +130,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.println(" *C");
         }
 
-    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
-    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
-    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
+    * ``dht.readHumidity()`` 関数は、DHTセンサから湿度値を読み取るために呼び出されます。
+    * ``dht.readTemperature()`` 関数は、DHTセンサから温度値を読み取るために呼び出されます。
+    * ``isnan()`` 関数は、読み取りが有効であるかどうかを確認するために使用されます。湿度または温度の値がNaN（数値でない）の場合、センサーからの読み取りに失敗したことを示し、エラーメッセージが表示されます。
+

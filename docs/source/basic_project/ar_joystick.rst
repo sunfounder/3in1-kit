@@ -1,43 +1,42 @@
 .. _ar_joystick:
 
-4.3 Toggle the Joystick
+4.3 ジョイスティックの操作
 ================================
 
-The joystick should be very familiar to anyone who plays video games regularly.
-It is usually used to move characters or rotate the screen.
+ジョイスティックは、定期的にビデオゲームを楽しむ人々にとっては非常に馴染み深いものです。
+通常、キャラクターの移動や画面の回転に使用されます。
 
-Our movements can be read by the Joystick, which works on a very simple principle.
-It consists of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick in both vertical and horizontal directions, producing a value (x,y) in a planar right-angle coordinate system.
+我々の動きは、ジョイスティックによって読み取ることができ、これは非常に単純な原理で動作します。
+それは、互いに垂直な二つのポテンショメーターから成っています。
+これらのポテンショメーターはジョイスティックの垂直と水平の両方の方向でのアナログ値を測定し、平面直角座標系での値(x,y)を生成します。
 
+このキットには、デジタル入力を持つジョイスティックも含まれています。ジョイスティックが押されたときに作動します。
 
-This kit also includes a joystick with a digital input. It is activated when the joystick is pressed.
+**必要な部品**
 
-**Required Components**
+このプロジェクトでは、以下の部品が必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは確かに便利です。リンクは以下のとおりです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -50,35 +49,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_5.3_joystick.png
 
 .. note::
-    The SW pin is connected to a 10K pull-up resistor, 
-    the reason is to be able to get a stable high level on the SW pin (Z axis) when the joystick is not pressed; 
-    otherwise the SW is in a suspended state and the output value may vary between 0/1.
+    SWピンは10Kのプルアップ抵抗に接続されています。
+    これは、ジョイスティックが押されていないときにSWピン(Z軸)で安定した高レベルを得るためです。
+    それ以外の場合、SWはサスペンド状態となり、出力値は0/1の間で変動する可能性があります。
 
-**Wiring**
+**配線図**
 
 .. image:: img/4.3_toggle_the_joystick_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``4.3.toggle_the_joystick.ino`` file under the path of ``3in1-kit\learning_project\4.3.toggle_the_joystick``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * ``3in1-kit\learning_project\4.3.toggle_the_joystick`` のパスの下の ``4.3.toggle_the_joystick.ino`` ファイルを開きます。
+    * あるいは、このコードを **Arduino IDE** にコピーします。
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f678a03f-546c-42ed-bfae-b8c7daa5eec9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
+コードが正常にアップロードされた後、シリアルモニターを開くと、ジョイスティックのx,y,zの値が表示されます。
 
-* The x-axis and y-axis values are analog values that vary from 0 to 1023.
-* The Z-axis is a digital value with a status of 1 or 0 ( when pressed , it is 0 ).
+* x軸とy軸の値は0から1023までのアナログ値です。
+* Z軸は1または0の状態のデジタル値です(押された場合は0)。

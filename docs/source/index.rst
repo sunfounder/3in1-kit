@@ -1,33 +1,33 @@
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
+SunFounder 3 in 1 IoT/スマートカー/学習キット
 ==================================================
 
 .. image:: img/3in_kit_r4.png
     :width: 800
 
-When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
+オンラインで学習キットを購入したことはありますか？簡単なPDFや冊子しか付属しておらず、プロジェクトを構築する手順だけが記載されていましたか？
 
-Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
+または、独自のスマートカーを作成したいけど、オンラインで見つかるものは高価で複雑ですか？
 
-Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
+他の人が作った有用で興味深いIoTプロジェクトを見たことはありますか？でも、どこから始めるかわからないですか？
 
-All these problems can be solved with our 3 in 1 starter kit.
+これらの問題は、私たちの3 in 1スターターキットで解決できます。
 
-In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+3-in-1スターターキットには、初心者がArduinoを学ぶのを助ける完全なArduinoコースが含まれており、他の学習キットでは提供されていないスマートカーのプロジェクトやIoTのプロジェクトなど、さまざまな興味深いプロジェクトもあります。キットのコースをステップバイステップでフォローするだけで、コードをコピーしてペーストするのではなく、独自のコードを書いてArduinoプロジェクトを好きなように実装できます。
 
-Come on! Start programing Arduino with confidence from zero to hero!
+さあ、ゼロからヒーローになるまで、Arduinoプログラミングを自信を持って始めましょう！
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+質問や他の興味深いアイディアがあれば、お気軽に service@sunfounder.com までメールを送ってください。
 
-**About the display language**
+**表示言語について**
 
-This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
+このドキュメントは他の言語でも利用可能です。表示言語を切り替えるには、ページの左下隅にある **Read the Docs** アイコンをクリックしてください。
 
 .. image:: img/translation.png
     
 .. toctree::
     :maxdepth: 2
 
-    About this Kit <self>
+    このキットについて <self>
     components/component_list
     arduino_start/get_start
     download_code
@@ -37,9 +37,9 @@ This document is available in other languages as well. To switch the display lan
     faq/faq
     thank-learning
 
-Copyright Notice
+著作権通知
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+このマニュアルに含まれるテキスト、画像、コードなどのすべての内容はSunFounder Companyが所有しています。著者と関連する権利者の法的権利を侵害せずに、関連する規制や著作権法の下で、個人的な学習、調査、楽しみ、または他の非営利または非営利目的のためにのみ使用する必要があります。許可なしにこれらを営利目的で使用する個人または組織に対して、会社は法的措置を取る権利を留保しています。
 
 .. include:: test/test.rst

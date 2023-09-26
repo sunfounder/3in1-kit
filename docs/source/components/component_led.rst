@@ -6,28 +6,28 @@ LED
 .. image:: img/LED.png
     :width: 400
 
-Semiconductor light-emitting diode is a type of component which can turn electric energy into light energy via PN junctions. By wavelength, it can be categorized into laser diode, infrared light-emitting diode and visible light-emitting diode which is usually known as light-emitting diode (LED). 
-                    
-Diode has unidirectional conductivity, so the current flow will be as the arrow indicates in figure circuit symbol. You can only provide the anode with a positive power and the cathode with a negative. Thus the LED will light up. 
+半導体発光ダイオードは、PN接合を通じて電気エネルギーを光エネルギーに変換する部品の一つです。波長によって、レーザーダイオード、赤外線発光ダイオード、そして通常LEDとして知られる可視光発光ダイオードに分類できます。
+
+ダイオードは一方向の導電性を持っているため、図の回路記号に示される矢印の方向に電流が流れます。陽極には正の電力を、カソードには負を供給する必要があります。そうするとLEDは点灯します。
 
 .. image:: img/led_symbol.png
 
+LEDには2つのピンがあります。長い方が陽極、短い方がカソードです。逆に接続しないように注意してください。LEDには一定の順方向電圧降下が存在するため、直接回路に接続することはできません。供給電圧がこの降下を超えてLEDが焼ける原因となるからです。赤、黄、緑のLEDの順方向電圧は1.8 Vで、白色のものは2.6 Vです。ほとんどのLEDは最大20 mAの電流に耐えることができるので、直列に電流制限抵抗を接続する必要があります。
 
-An LED has two pins. The longer one is the anode, and shorter one, the cathode. Pay attention not to connect them inversely. There is fixed forward voltage drop in the LED, so it cannot be connected with the circuit directly because the supply voltage can outweigh this drop and cause the LED to be burnt. The forward voltage of the red, yellow, and green LED is 1.8 V and that of the white one is 2.6 V. Most LEDs can withstand a maximum current of 20 mA, so we need to connect a current limiting resistor in series.                   
-
-The formula of the resistance value is as follows:
+抵抗値の計算式は以下の通りです:
 
     R = (Vsupply – VD)/I
 
-**R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
+ここで、 **R** は電流制限抵抗の抵抗値、 **Vsupply** は供給電圧、 **VD** は電圧降下、 **I** はLEDの動作電流を示します。
 
-Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
+LEDの詳細な紹介はこちら: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_。
 
-**Example**
+**例**
 
-* :ref:`ar_blink` (Basic Project)
-* :ref:`ar_fading` (Basic Project)
-* :ref:`iot_blink` (IoT Project)
+* :ref:`ar_blink` (基本プロジェクト)
+* :ref:`ar_fading` (基本プロジェクト)
+* :ref:`iot_blink` (IoT プロジェクト)
 
-.. * :ref:`sh_breathing_led` (Scratch Project)
-.. * :ref:`sh_table_lamp` (Scratch Project)
+.. * :ref:`sh_breathing_led` (Scratch プロジェクト)
+.. * :ref:`sh_table_lamp` (Scratch プロジェクト)
+

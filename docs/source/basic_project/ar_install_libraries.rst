@@ -1,34 +1,35 @@
 .. _install_libraries_ar:
 
-5.11 Install External Libraries
+5.11 外部ライブラリのインストール
 =======================================
 
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+ライブラリは、Arduino IDEの機能を拡張する事前に書かれたコードや関数の集合です。ライブラリは様々な機能のための使用準備が整ったコードを提供し、複雑な機能のコーディングにかかる時間と労力を節約できます。
 
-There are two main ways to install libraries:
+ライブラリをインストールする主な方法は2つあります：
 
 
-Many libraries are available directly through the Arduino **Library Manager**. You can access the **Library Manager** by following these steps:
+多くのライブラリはArduinoの **Library Manager** を通じて直接利用できます。以下の手順で **Library Manager** にアクセスできます：
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. **Library Manager** で、名前で目的のライブラリを検索したり、異なるカテゴリをブラウズしたりできます。
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The ``DHT sensor library`` is used here, you can install it from the **Library Manager**." Simply install the recommended libraries as prompted.
+      ライブラリのインストールが必要なプロジェクトでは、インストールするライブラリに関するプロンプトが表示されます。例えば、「 ``DHT sensor library`` をこちらで使用しています。 **Library Manager** からインストールできます」といった指示に従ってください。推奨されるライブラリをプロンプトに従ってインストールするだけです。
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. インストールしたいライブラリを見つけたら、それをクリックし、次に **Install** ボタンをクリックします。
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. Arduino IDEは自動的にライブラリをダウンロードしてインストールします。
 
 
-**Related Components**
+**関連コンポーネント**
 
-Below are the related components, you can click in to learn how to use them.
+以下は関連するコンポーネントであり、それらの使用方法を学ぶためにクリックできます。
+
 
 .. toctree::
    :maxdepth: 2

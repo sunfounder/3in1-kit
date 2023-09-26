@@ -1,40 +1,37 @@
 .. _ar_high_tem_alarm:
 
-6.3 High Temperature Alarm
+6.3 高温アラーム
 ====================================
 
+次に、サーミスター、プッシュボタン、ポテンショメータ、LCDを使用して、高温アラームデバイスを作成します。
+LCD1602は、サーミスターで検出される温度と、ポテンショメータを使用して調整できる高温閾値を表示します。
+閾値は同時にEEPROMに保存されるため、現在の温度が閾値を超えると、ブザーが鳴ります。
 
-Next, we will make a high temperature alarm device using thermistor, push button, potentiometer and LCD. 
-The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, 
-which can be adjusted using a potentiometer. 
-The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, 
-the buzzer will sound.
+**必要な部品**
 
-**Required Components**
+このプロジェクトには、以下の部品が必要です。
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは確かに便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -55,26 +52,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/wiring_high_tem.png
    :align: center
 
-
-**Wiring**
+**配線図**
 
 .. image:: img/6.3_high_tem_alarm_bb.png
     :width: 800
     :align: center
 
-**Code**
-
+**コード**
 
 .. note::
 
-    * You can open the file ``6.3.high_tem_alarm.ino`` under the path of ``3in1-kit\learning_project\6.3.high_tem_alarm`` directly.
-    * Or copy this code into Arduino IDE.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * ファイル ``6.3.high_tem_alarm.ino`` は、 ``3in1-kit\learning_project\6.3.high_tem_alarm`` のパスの下で直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
+    * ここでは ``LiquidCrystal I2C`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
     
@@ -83,14 +78,15 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1341b79d-c87e-4cea-ad90-189c2ebf40ee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, which can be adjusted using a potentiometer. The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, the buzzer will sound.
+コードが正常にアップロードされた後、LCD1602はサーミスターで検出される温度と高温閾値を表示します。この閾値はポテンショメータを使用して調整することができます。閾値は同時にEEPROMに保存されるため、現在の温度が閾値を超えると、ブザーが鳴ります。
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    コードと配線が問題ないのに、LCDが内容を表示しない場合は、背面のポテンショメータを回して調整してください。
 
-**How it works?**
 
-#. Initialize the button, buzzer and I2C LCD1602, and read the EEPROM values. An interrupt is also used here to read the button status.
+**どのように動作するのか？**
+
+#. ボタン、ブザー、I2C LCD1602の初期化を行い、EEPROMの値を読み取ります。また、ボタンの状態を読み取るために、ここでは割り込みも使用されています。
 
     .. code-block:: arduino
 
@@ -104,15 +100,14 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             delay(1000);
             attachInterrupt(digitalPinToInterrupt(buttonPin), buttonState, FALLING);
         }
-    
-    * The interrupt is used here to read the button's state. When the button is pressed, ``buttonPin`` changes from low to high.
-    * The function buttonState is called when the interrupt triggers, and it toggles the value of the variable state.
-    * ``FALLING`` means the interrupt occurs when ``buttonPin`` goes from low to high.
 
-#. To set the high temperature threshold, the function ``upperTemSetting()`` is called when state is 1 (state switches between 0 and 1 with button press) in the main program, otherwise ``monitoringTemp()`` is called to display the current temperature and the set threshold.
+    * この割り込みはボタンの状態を読み取るために使用されます。ボタンが押されると、 ``buttonPin`` が低から高に変わります。
+    * 割り込みが発生すると、buttonState関数が呼び出され、変数stateの値が切り替えられます。
+    * ``FALLING`` は、 ``buttonPin`` が低から高になるときに割り込みが発生することを意味します。
+
+#. 高温のしきい値を設定するため、メインプログラム内でstateが1の場合（ボタンが押されると0と1の間で切り替わる）に ``upperTemSetting()`` 関数が呼び出され、そうでなければ ``monitoringTemp()`` が呼び出され、現在の温度と設定されたしきい値が表示されます。
 
     .. code-block:: arduino
-
 
         void loop()
         {
@@ -125,7 +120,7 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             }
         }
 
-#. About ``upperTemSetting()`` function.
+#. ``upperTemSetting()`` 関数について。
 
     .. code-block:: arduino
 
@@ -153,42 +148,42 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             }
         }
 
-    * A threshold can be set with this function. When you enter this function, the LCD1602 displays the current threshold value, which can be modified using the potentiometer. This threshold value will be stored in EEPROM and exited when the button is pressed again.
+    * この関数を使うとしきい値を設定できます。この関数に入ると、LCD1602に現在のしきい値が表示され、これはポテンショメータを使って変更することができます。このしきい値はEEPROMに保存され、ボタンが再び押されると終了します。
 
-#. About ``monitoringTemp()`` function.
+#. ``monitoringTemp()`` 関数について。
 
     .. code-block:: arduino
 
         void monitoringTemp()
         {
-        long a = analogRead(temPin);
-        float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
-        float tempF = 1.8 * tempC + 32.0;
-        lcd.setCursor(0, 0);
-        lcd.print("Temp: ");
-        lcd.print(tempC);
-        lcd.print(char(223));
-        lcd.print("C   ");
-        lcd.setCursor(0, 1);
-        lcd.print("Upper: ");
-        lcd.print(upperTem);
-        lcd.print(char(223));
-        lcd.print("C   ");
-        delay(300);
-        if (tempC >= upperTem)
-        {
-            digitalWrite(buzzerPin, HIGH);
-            delay(50);
-            digitalWrite(buzzerPin, LOW);
-            delay(10);
-        }
-        else
-        {
-            digitalWrite(buzzerPin, LOW);
-        }
+            long a = analogRead(temPin);
+            float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
+            float tempF = 1.8 * tempC + 32.0;
+            lcd.setCursor(0, 0);
+            lcd.print("Temp: ");
+            lcd.print(tempC);
+            lcd.print(char(223));
+            lcd.print("C   ");
+            lcd.setCursor(0, 1);
+            lcd.print("Upper: ");
+            lcd.print(upperTem);
+            lcd.print(char(223));
+            lcd.print("C   ");
+            delay(300);
+            if (tempC >= upperTem)
+            {
+                digitalWrite(buzzerPin, HIGH);
+                delay(50);
+                digitalWrite(buzzerPin, LOW);
+                delay(10);
+            }
+            else
+            {
+                digitalWrite(buzzerPin, LOW);
+            }
         }
 
-    * Using this function, you can display temperature and set an alarm.
-    * The thermistor value is read and then converted to Celsius temperature by the formula and displayed on the LCD1602.
-    * The set threshold is also displayed on the LCD.
-    * If the current temperature is greater than the threshold, the buzzer will sound an alarm.
+    * この関数を使用すると、温度を表示し、アラームを設定することができます。
+    * サーミスタの値が読み取られ、それからセ氏温度に変換され、LCD1602に表示されます。
+    * 設定されたしきい値もLCDに表示されます。
+    * 現在の温度がしきい値よりも高い場合、ブザーがアラームを鳴らします。

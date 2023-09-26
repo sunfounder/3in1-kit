@@ -1,41 +1,40 @@
 .. _cpn_tt_motor:
 
-TT Motor
+TTモーター
 ==============
-
 
 .. image:: img/tt_motor.jpg
     :width: 400
     :align: center
 
-This is a TT DC gearbox motor with a gear ratio of 1:48, it comes with 2 x 200mm wires with 0.1" male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+これはギア比1:48のTT DCギアボックスモーターで、ブレッドボードに適合する0.1"の男性コネクター付きの2 x 200mmのワイヤーが付属しています。ブレッドボードや端子ブロックに接続するのに最適です。
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+これらのモーターは3〜6VDCで駆動することができますが、もちろん、電圧が高いほど少し速く動きます。
 
-Note that these are very basic motors with no built-in encoder, speed control or position feedback. The voltage goes in and the spin comes out. There will be variation from motor to motor, so if you need precise motion, you'll need a separate feedback system.
+これらは非常に基本的なモーターであり、内蔵エンコーダ、速度制御、位置フィードバックはありません。電圧が入力され、回転が出力されます。モーターごとに変動があるため、正確な動きが必要な場合は、別のフィードバックシステムが必要です。
 
-**Technical Details**
+**技術詳細**
 
-* Rated Voltage: 3~6V
-* Continuous No-Load Current: 150mA +/- 10%
-* Min. Operating Speed (3V): 90+/- 10% RPM
-* Min. Operating Speed (6V): 200+/- 10% RPM
-* Stall Torque (3V): 0.4kg.cm
-* Stall Torque (6V): 0.8kg.cm
-* Gear Ratio: 1:48
-* Body Dimensions: 70 x 22 x 18mm
-* Wires Length: 200mm & 28 AWG
-* Weight: 30.6g
+* 定格電圧: 3〜6V
+* 無負荷連続電流: 150mA +/- 10%
+* 最低運転速度 (3V): 90+/- 10% RPM
+* 最低運転速度 (6V): 200+/- 10% RPM
+* ストールトルク (3V): 0.4kg.cm
+* ストールトルク (6V): 0.8kg.cm
+* ギア比: 1:48
+* 本体寸法: 70 x 22 x 18mm
+* ワイヤー長: 200mm & 28 AWG
+* 重量: 30.6g
 
-**Dimensional Drawing**
+**寸法図**
 
 .. image:: img/motor_size.jpg
 
-**Example**
+**例**
 
-* :ref:`ar_motor` (Basic Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
+* :ref:`ar_motor` (基本プロジェクト)
+* :ref:`car_move` (車のプロジェクト)
+* :ref:`car_speed` (車のプロジェクト)
+* :ref:`iot_car` (IoT プロジェクト)
 
-.. * :ref:`sh_test` (Scratch Project)
+.. * :ref:`sh_test` (Scratch プロジェクト)

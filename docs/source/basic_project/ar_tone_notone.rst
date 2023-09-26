@@ -1,40 +1,40 @@
 .. _ar_passive_buzzer:
 
-5.7 ``Tone()`` or ``noTone()``
-===============================
+5.7 ``Tone()`` または ``noTone()``
+====================================
 
-``Tone()`` is used to generate a square wave of the specified frequency (and 50% duty cycle) on a pin. A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
+``Tone()`` は指定された周波数の正方形の波（および50％のデューティサイクル）をピンで生成するために使用されます。継続時間を指定することもできますが、 ``noTone()`` が呼び出されるまで波は続きます。
 
-In this project, use this two functions to make the passive buzzer vibrate to make sound. 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. 
-The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used. 
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as “doh, re, mi, fa, sol, la, ti”.
+このプロジェクトでは、この二つの関数を使用して、受動ブザーを振動させて音を鳴らします。
+アクティブブザーと同様に、受動ブザーも電磁誘導の現象を利用して動作します。
+違いは、受動ブザーには振動源がないため、直流信号が使用されるとビープ音がしないことです。
+しかし、これにより受動ブザーは自分の振動周波数を調整でき、"ド、レ、ミ、ファ、ソ、ラ、シ"などの異なる音符を発することができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのは確かに便利です、リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -45,96 +45,92 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_6.1_passive.png
 
-Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9. 
+ブザーのカソードをGNDに、アノードをデジタルピン9に接続します。
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.7_tone_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.7.tone_notone.ino`` file under the path of ``3in1-kit\learning_project\5.7.tone_notone``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\learning_project\5.7.tone_notone`` のパスの下で ``5.7.tone_notone.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    
-
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9212e985-1f31-4bd9-bee6-f29357035aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
-
-**How it works?**
-
-There are two points needing your attention:
-
-1. ``tone()`` & ``noTone()``: This function is used to control the sound of the passive buzzer directly and its prototype is as follows: 
+コードをR4ボードにアップロードしたとき、7つの音符を含むメロディーが聞こえます。
 
 
-**Syntax**
+**どのように動作するのか？**
+
+以下、2つの点に注意が必要です：
+
+1. ``tone()`` & ``noTone()``: この関数は、受動ブザーの音を直接制御するために使用され、そのプロトタイプは以下のとおりです：
+
+
+**文法**
     void tone(int pin, unsigned int frequency)
 
     void tone(int pin, unsigned int frequency, unsigned long duration)
 
-**Parameters**
-    * ``pin``: The Arduino pin on which to generate the tone.
-    * ``frequency``: The frequency of the tone in hertz.
-    * ``duration``: The duration of the tone in milliseconds (optional)
+**パラメータ**
+    * ``pin``: トーンを生成するArduinoのピン。
+    * ``frequency``: ヘルツ単位のトーンの周波数。
+    * ``duration``: ミリ秒単位のトーンの持続時間（オプショナル）
 
 
-Generates a square wave of the specified frequency (and 50% duty cycle) on a pin (so as to make the passive buzzer vibrate to make sound). A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
-The pin can be connected to a piezo buzzer or other speaker to play tones.
+指定された周波数の正方形の波（および50％のデューティサイクル）をピンで生成します（これにより受動ブザーが振動して音を発する）。持続時間を指定でき、指定しない場合は ``noTone()`` が呼び出されるまで波は続きます。 
+ピンは、ピエゾブザーまたは他のスピーカーに接続して、音を再生することができます。
 
-Only one tone can be generated at a time. If a tone is already playing on a different pin, the call to ``tone()`` will have no effect. If the tone is playing on the same pin, the call will set its frequency.
+同時に1つのトーンのみを生成することができます。異なるピンですでにトーンが再生されている場合、 ``tone()`` の呼び出しは効果がありません。同じピンでトーンが再生されている場合、呼び出しはその周波数を設定します。
 
-Use of the ``tone()`` function will interfere with PWM output on pins 3 and 11.
+``tone()`` 関数の使用は、ピン3および11のPWM出力に干渉します。
 
-It is not possible to generate tones lower than 31Hz.
+31Hzより低いトーンを生成することはできません。
 
 
-**Syntax**
+**文法**
     void noTone(int pin)
 
-**Parameters**
-    ``pin``: The Arduino pin on which to generate the tone.
+**パラメータ**
+    ``pin``: トーンを生成するArduinoのピン。
 
-Stops the generation of a square wave triggered by ``tone()``. Has no effect if no tone is being generated.
+``tone()`` によってトリガされる正方形の波の生成を停止します。トーンが生成されていない場合、効果はありません。
 
-Having known the two functions, you may grasp the codes—the installation of the array ``melody[]`` and the array ``noteDurations[]`` is the preparation of the subsequently several times of calling of the function ``tone()`` and the changing of tone and duration in the loop for better effect of music play.
+これら2つの関数を知ったら、コードの理解が深まります―配列 ``melody[]`` と配列 ``noteDurations[]`` のインストールは、後続の複数回の ``tone()`` 関数の呼び出しや、音楽の再生の効果を高めるためのループ内でのトーンと持続時間の変更の準備です。
 
-2. ``pitches.h``: The code uses an extra file, ``pitches.h``. This file contains all the pitch values for typical notes. For example, NOTE_C4 is middle C. NOTE_FS4 is F sharp, and so forth. This note table was originally written by Brett Hagman, on whose work the ``tone()`` command was based. You may find it useful whenever you want to make musical notes.
+2. ``pitches.h``: このコードは追加のファイル、 ``pitches.h`` を使用しています。このファイルには、典型的なノートのためのすべてのピッチ値が含まれています。たとえば、NOTE_C4は中央のCです。NOTE_FS4はFシャープです、などです。このノートテーブルは、 ``tone()`` コマンドがベースになっているBrett Hagmanによって元々書かれました。音楽のノートを作りたいときに役立つでしょう。
 
 .. code-block:: arduino
 
     #include "pitches.h"
 
 .. note::
-    There is already a ``pitches.h`` file in this sample program. If we put it together with the main code in one folder, the successive steps of installing ``pitches.h`` can be omitted.
+    このサンプルプログラムには既に ``pitches.h`` ファイルがあります。メインコードと同じフォルダにまとめると、 ``pitches.h`` のインストールの続きのステップは省略できます。
 
 .. image:: img/image123.png
 
-After you open the code file, if you cannot open the
-``pitches.h`` code, you can just create one manually. The steps are as
-follows:
+コードファイルを開いた後、 ``pitches.h`` コードを開くことができない場合は、手動で1つ作成することができます。手順は以下の通りです：
 
-To make the ``pitches.h`` file, either click on the button just below the
-serial monitor icon and choose **New Tab**, or use **Ctrl+Shift+N**.
+``pitches.h`` ファイルを作成するには、シリアルモニターアイコンのすぐ下のボタンをクリックして **New Tab** を選択するか、 **Ctrl+Shift+N** を使用します。
 
 .. image:: img/image124.png
 
-Then paste in the following code and save it as ``pitches.h``:
+次に、以下のコードをペーストして、それを ``pitches.h`` として保存します：
 
 .. code-block:: arduino
 
     /*****************
-    Public Constants
+    公開定数
     *****************/
     #define NOTE_B0  31
     #define NOTE_C1  33

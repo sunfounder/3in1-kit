@@ -1,37 +1,37 @@
 .. _ar_servo:
 
-5.5 Use Internal Library
+5.5 内蔵ライブラリの使用
 =======================================
 
-In the Arduino IDE, you can use many built-in libraries by adding the corresponding ``.h`` file directly to your code.
+Arduino IDEでは、対応する ``.h`` ファイルを直接コードに追加することで、多くの組み込みライブラリを使用することができます。
 
-This project uses the ``Servo`` library to drive the Servo, so that it can rotate between 0° and 180°.
+このプロジェクトでは ``Servo`` ライブラリを使用してサーボを駆動し、0°から180°の間で回転させることができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのは確かに便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -40,24 +40,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_6.2_servo.png
 
-In this project, we use PWM pin 9 to drive the Servo, and get the orange
-wire of the servo connected to the PWM pin 9, the red one to 5V, and the
-brown one to GND.
+このプロジェクトでは、PWMピン9を使用してサーボを駆動し、サーボのオレンジ色のワイヤをPWMピン9に、赤色のワイヤを5Vに、茶色のワイヤをGNDに接続します。
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.5_swinging_servo_bb.png
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\learning_project\5.5.use_internal_library``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\learning_project\5.5.use_internal_library`` のパス下の ``5.5.use_internal_library.ino`` ファイルを開く。
+    * または、このコードを **Arduino IDE** にコピーする。
     
     
 
@@ -65,50 +63,50 @@ brown one to GND.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fa27db71-b191-4eda-b5c7-bbbe5f2652ca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once you finish uploading the codes to the R4 board, you can see the servo arm rotating in the range 0°~180°.
+コードをR4ボードにアップロードすると、サーボアームが0°〜180°の範囲で回転するのを確認できます。
 
-**How it works?**
+**どのように動作するのか？**
 
-By calling the library ``Servo.h``, you can drive the servo easily. 
+``Servo.h`` ライブラリを呼び出すことで、サーボを簡単に駆動することができます。
 
 .. code-block:: arduino
 
     #include <Servo.h> 
 
-Library Functions: 
+ライブラリ関数：
 
 .. code-block:: arduino
 
     Servo
 
-Create **Servo** object to control a servo.
+サーボを制御するための **Servo** オブジェクトを作成。
 
 .. code-block:: arduino
 
     uint8_t attach(int pin); 
 
-Call ``pinMode()`` to turn a pin into a servo driver and return 0 on failure.
+``pinMode()`` を呼び出して、ピンをサーボドライバーに変換し、失敗した場合は0を返す。
 
 .. code-block:: arduino
 
     void detach();
 
-Release a pin from servo driving.
+サーボ駆動からピンを解放。
 
 .. code-block:: arduino
 
     void write(int value); 
 
-Set the angle of the servo in degrees, 0 to 180.
+サーボの角度を度数で設定、0から180まで。
 
 .. code-block:: arduino
 
     int read();
 
-Return that value set with the last ``write()``.
+最後の ``write()`` で設定された値を返す。
 
 .. code-block:: arduino
 
     bool attached(); 
 
-Return 1 if the servo is currently attached.
+サーボが現在アタッチされている場合は1を返す。

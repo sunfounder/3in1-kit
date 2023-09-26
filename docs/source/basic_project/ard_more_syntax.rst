@@ -1,9 +1,8 @@
-5. More Syntax
+5. さらなる構文
 ========================
 
-In this chapter, you will find some examples that illustrate the basic logic of how most programs interact with reality. This will help you become familiar with Arduino programming.
-When you have a creative idea in mind, programming will no longer be challenging for you.
-
+この章では、プログラムが現実の世界とどのように交流するかの基本的なロジックを示す例をいくつか紹介します。これにより、Arduinoのプログラミングに慣れるのを助けます。
+あなたが創造的なアイディアを持っていれば、プログラミングはもはや難しくありません。
 
 .. toctree::
     :maxdepth: 2

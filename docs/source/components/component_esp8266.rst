@@ -1,81 +1,76 @@
 .. _cpn_esp8266:
 
-ESP8266 Module
+ESP8266モジュール
 =================
 
 .. image:: img/esp8266.jpg
     :align: center
 
-The ESP8266 is a low-cost Wi-Fi microchip, 
-with built-in TCP/IP networking software, 
-and microcontroller capability, produced by Espressif Systems in Shanghai, China.
+ESP8266は、低コストのWi-Fiマイクロチップであり、
+組み込みのTCP/IPネットワーキングソフトウェア、
+およびマイクロコントローラ機能を備えており、中国の上海にあるEspressif Systemsで製造されています。
 
-The chip first came to the attention of Western makers in August 2014 with the ESP-01 module, 
-made by a third-party manufacturer Ai-Thinker. 
-This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections using Hayes-style commands. 
-However, at first, there was almost no English-language documentation on the chip and the commands it accepted. 
-The very low price and the fact that there were very few external components on the module, 
-which suggested that it could eventually be very inexpensive in volume, 
-attracted many hackers to explore the module, 
-the chip, and the software on it, as well as to translate the Chinese documentation.
+このチップは、2014年8月にAi-Thinkerというサードパーティのメーカーが製造したESP-01モジュールで西洋のメーカーの注目を浴びました。
+この小さなモジュールを使用すると、マイクロコントローラはWi-Fiネットワークに接続し、Hayesスタイルのコマンドを使用してシンプルなTCP/IP接続を行うことができます。
+ただし、最初はこのチップとそれが受け付けるコマンドに関する英語の文書はほとんどありませんでした。
+非常に低い価格と、モジュール上の外部部品が非常に少なかったことから、大量になれば非常に安価になる可能性があることが、多くのハッカーを引きつけました。
+その結果、モジュール、チップ、およびそのソフトウェアを調査し、中国語の文書を翻訳する動きが始まりました。
 
-Pins of ESP8266 and their functions:
+ESP8266のピンとその機能:
 
 .. image:: img/ESP8266_pinout.png
 
 
-.. list-table:: ESP8266-01 Pins
+.. list-table:: ESP8266-01 ピン
    :widths: 25 25 100
    :header-rows: 1
 
-   * - Pin	
-     - Name	
-     - Description
+   * - ピン
+     - 名前
+     - 説明
    * - 1	
      - TXD	
-     - UART_TXD, sending; General Purpose Input/Outpu: GPIO1; Pull-down is not allowed when startup.
+     - UART_TXD、送信; 一般的な入出力: GPIO1; スタートアップ時のプルダウンは許可されていない。
    * - 2	
      - GND
      - GND
    * - 3	
      - CU_PD	
-     - Working at high level; Power off when low level is supplied.
+     - ハイレベルで動作; 低レベルが供給されると電源がオフ。
    * - 4		
      - GPIO2
-     - It should be high level when power on, hardware pull-down is not allowed; Pull-up by default;
+     - 電源投入時にはハイレベルである必要があり、ハードウェアプルダウンは許可されていない; デフォルトでプルアップ;
    * - 5	
      - RST	
-     - External Reset signal, reset when low level is supplied; work when high level is supplied (high level by default);
+     - 外部リセット信号、低レベルが供給されるとリセット; ハイレベルが供給されると動作（デフォルトではハイレベル）;
    * - 6	
      - GPIO0	
-     - WiFi Status indicator; Operation mode selection: Pull-up: Flash Boot, operation mode; Pull-down: UART Download, download mode
+     - WiFiステータスインジケータ; 操作モード選択: プルアップ: フラッシュブート、操作モード; プルダウン: UARTダウンロード、ダウンロードモード
    * - 7	
      - VCC	
-     - Power Supply(3.3V)
+     - 電源供給（3.3V）
    * - 8	
      - RXD	
-     - UART_RXD，Receiving; General Purpose Input/Output: GPIO3;
-
+     - UART_RXD、受信; 一般的な入出力: GPIO3;
 
 * `ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_
-* `ESP8266 AT Instruction Set <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
+* `ESP8266 AT指令セット <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
 
-ESP8266 Adapter
+ESP8266アダプタ
 ---------------
 
 .. image:: img/esp8266_adapter.png
     :width: 300
     :align: center
 
-The ESP8266 adapter is an expansion board that allows the ESP8266 module to be used on a breadboard.
+ESP8266アダプタは、ESP8266モジュールをブレッドボードで使用できるようにする拡張ボードです。
 
-It perfectly matches the pins of the ESP8266 itself, and also adds a 5V pin to receive the voltage from the Arduino board. The integrated AMS1117 chip is used to drive the ESP8266 module after dropping the voltage to 3.3V.
+それは完全にESP8266自体のピンと一致し、Arduinoボードからの電圧を受け取る5Vピンも追加します。統合されたAMS1117チップは、電圧を3.3Vに落としてからESP8266モジュールを駆動するために使用されます。
 
-The schematic diagram is as follows:
+回路図は以下の通りです:
 
 .. image:: img/sch_esp8266adapter.png
 
+**例**
 
-**Example**
-
-* :ref:`iot_projects` (IoT Project)
+* :ref:`iot_projects` (IoTプロジェクト)

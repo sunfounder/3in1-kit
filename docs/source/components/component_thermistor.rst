@@ -1,47 +1,47 @@
 .. _cpn_thermistor:
 
-Thermistor
+サーミスタ
 ===============
 
 .. image:: img/thermistor.png
     :width: 150
     :align: center
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors. The word is a combination of thermal and resistor. Thermistors are widely used as inrush current limiters, temperature sensors (negative temperature coefficient or NTC type typically), self-resetting overcurrent protectors, and self-regulating heating elements (positive temperature coefficient or PTC type typically).
+サーミスタは、標準の抵抗器よりも、温度に強く依存する抵抗値を持つタイプの抵抗器です。この言葉はthermal（熱的な）とresistor（抵抗器）の組み合わせから成り立っています。サーミスタは、起動電流制限器、温度センサー（通常はNTC型）、自己リセット型の過電流保護装置、自己調整型加熱要素（通常はPTC型）として広く使用されています。
 
-* `Thermistor - Wikipedia <https://en.wikipedia.org/wiki/Thermistor>`_
+* `サーミスタ - Wikipedia <https://en.wikipedia.org/wiki/Thermistor>`_
 
-Here is the electronic symbol of thermistor.
+以下はサーミスタの電子記号です。
 
 .. image:: img/thermistor_symbol.png
     :width: 300
     :align: center
 
-Thermistors are of two opposite fundamental types:
+サーミスタには、基本的に2つの対照的なタイプがあります：
 
-* With NTC thermistors, resistance decreases as temperature rises usually due to an increase in conduction electrons bumped up by thermal agitation from valency band. An NTC is commonly used as a temperature sensor, or in series with a circuit as an inrush current limiter.
-* With PTC thermistors, resistance increases as temperature rises usually due to increased thermal lattice agitations particularly those of impurities and imperfections. PTC thermistors are commonly installed in series with a circuit, and used to protect against overcurrent conditions, as resettable fuses.
+* NTCサーミスタでは、温度が上昇すると、価電子帯からの熱振動により、導電電子が増加するため、抵抗が減少します。NTCは、温度センサーとして、または回路の直列としての起動電流制限器として一般的に使用されます。
+* PTCサーミスタでは、温度が上昇すると、特に不純物や欠陥の熱格子振動が増加するため、抵抗が増加します。PTCサーミスタは、回路と直列に取り付けられ、過電流状態から保護するリセッタブルヒューズとして一般的に使用されます。
 
-In this kit we use an NTC one. Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius.
+このキットでは、NTC型を使用しています。各サーミスタには通常の抵抗があります。ここでは、25度セルシウスで測定される10kオームです。
 
-Here is the relation between the resistance and temperature:
+抵抗と温度の関係は以下のとおりです：
 
     RT = RN * expB(1/TK – 1/TN)   
 
-* **RT** is the resistance of the NTC thermistor when the temperature is TK. 
-* **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k.
-* **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of TK is 273.15 + degree Celsius.
-* **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is 273.15+25.
-* And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value 3950.      
-* **exp** is the abbreviation of exponential, and the base number e is a natural number and equals 2.7 approximately.  
+* **RT** は、温度がTKのときのNTCサーミスタの抵抗。
+* **RN** は、定格温度TN下でのNTCサーミスタの抵抗。ここでは、RNの数値は10kです。
+* **TK** は、ケルビン温度で、単位はK。ここでは、TKの数値は273.15 + 度数セルシウス。
+* **TN** は、定格ケルビン温度で、単位もK。ここでは、TNの数値は273.15+25です。
+* **B(beta)** は、NTCサーミスタの材料定数であり、熱感受性指数とも呼ばれ、数値は3950です。
+* **exp** は指数関数の略で、ベース数eは自然数で、約2.7に等しい。
 
-Convert this formula TK=1/(ln(RT/RN)/B+1/TN) to get Kelvin temperature that minus 273.15 equals degree Celsius.
+この式TK=1/(ln(RT/RN)/B+1/TN)を変換して、ケルビン温度から273.15を減算して度数セルシウスを得ます。
 
-This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+この関係式は、実験式です。温度と抵抗が有効範囲内のときのみ正確です。
 
-**Example**
+**例**
 
-* :ref:`ar_high_tem_alarm` (Basic Project)
-* :ref:`ar_temp` (Basic Project)
+* :ref:`ar_high_tem_alarm` (基本プロジェクト)
+* :ref:`ar_temp` (基本プロジェクト)
 
-.. * :ref:`sh_low_temperature` (Scratch Project)
+.. * :ref:`sh_low_temperature` (Scratchプロジェクト)

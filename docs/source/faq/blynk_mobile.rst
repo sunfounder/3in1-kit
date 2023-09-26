@@ -1,27 +1,26 @@
 .. _blynk_mobile:
 
-How to use Blynk on mobile device?
+モバイルデバイスでのBlynkの使用方法
 ======================================
 
 .. note::
 
-    As datastreams can only be created in Blynk on the web, you will need to reference different projects to create datastreams on the web, then follow the tutorial below to create widgets in Blynk on your mobile device.
+    データストリームはBlynkのウェブでのみ作成可能なため、ウェブでデータストリームを作成するための異なるプロジェクトを参照し、以下のチュートリアルに従ってモバイルデバイスのBlynkでウィジェットを作成する必要があります。
 
-
-#. Open Google Play or APP Store on your mobile device and search for "Blynk IoT" (not Blynk(legacy)) to download.
-#. After opening the APP, login in, this account should be the same as the account used on the web client.
-#. Then go to **Dashboard** (if you don't have one, create one) and you will see that the **Dashboard** for mobile and web are independent of each other.
+#. お使いのモバイルデバイスでGoogle PlayまたはAPP Storeを開き、"Blynk IoT"（Blynk(legacy)ではありません）を検索してダウンロードします。
+#. APPを開いた後、ログインします。このアカウントはウェブクライアントで使用されるものと同じでなければなりません。
+#. 次に、 **Dashboard** に移動します（持っていない場合は作成してください）。モバイルとウェブの **Dashboard** は互いに独立していることがわかります。
 
     .. image:: img/APP_1.jpg
 
-#. Click **Edit** Icon.
-#. Click on the blank area. 
-#. Choose the same widget as on the web page, such as select a **Joystick** widget.
+#. **Edit** アイコンをクリックします。
+#. 空白の領域をクリックします。
+#. ウェブページと同じウィジェットを選択します。たとえば、 **Joystick** ウィジェットを選択します。
 
     .. image:: img/APP_2.jpg
 
-#. Now you will see a **Joystick** widget appear in the blank area, click on it.
-#. **Joystick** Settings will appear, select the **Xvalue** and **Yvalue** datastreams you just set in the web page. Note that each widget corresponds to a different datastream in each project.
-#. Go back to the **Dashboard** page and you can operate the **Joystick** when you want.
+#. これで空白の領域に **Joystick** ウィジェットが表示されますので、クリックします。
+#. **Joystick** の設定が表示されるので、先ほどのウェブページで設定した **Xvalue** と **Yvalue** のデータストリームを選択します。各ウィジェットは各プロジェクトで異なるデータストリームに対応していることに注意してください。
+#. **Joystick** ページに戻り、必要に応じて **Dashboard** を操作できます。
 
     .. image:: img/APP_3.jpg

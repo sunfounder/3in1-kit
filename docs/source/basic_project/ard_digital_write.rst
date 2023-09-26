@@ -1,62 +1,59 @@
 .. _ar_digital_write:
 
-1. Digital Write
+1. デジタルライト
 ==============================
 
-**Digital Write** is to output or write a digital signal to a digital pin. The digital signal has only two states, 0 or 1, 0V or 5V, so it allows some components, such as the LED and buzzer, to be on or off.
+**デジタルライト** は、デジタル信号をデジタルピンに出力または書き込むことです。デジタル信号には2つの状態しかなく、0または1、0Vまたは5Vであるため、LEDやブザーのようないくつかのコンポーネントをオンまたはオフにすることができます。
 
-On the Arduino R4 board, there are 14 digital I/0 pins from 0 to 13, now use the ``pinMode()`` and ``digitalWrite()`` functions to write a high or low level to these digital pins.
+Arduino R4ボードには、0から13までの14のデジタルI/Oピンがあります。これらのデジタルピンに高または低レベルを書き込むために ``pinMode()`` と ``digitalWrite()`` 関数を使用します。
 
+* ``pinMode(pin, mode)``: 特定のピンを ``INPUT`` または ``OUTPUT`` として設定します。ここでは ``OUTPUT`` として設定する必要があります。
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``OUTPUT``. 
-
-   **Syntax**
+   **構文**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: ``INPUT``, ``OUTPUT``, or ``INPUT_PULLUP``.
+   **パラメータ**
+    * ``pin``: モードを設定するArduinoのピン番号。
+    * ``mode``: ``INPUT``, ``OUTPUT``, または ``INPUT_PULLUP``。
 
+* ``digitalWrite(pin, value)``: デジタルピンに高レベル（5V）または低レベル（0V）を書き込み、コンポーネントの動作状態を変更します。もしピンがpinMode()でOUTPUTとして設定されていれば、その電圧は対応する値に設定されます：HIGHの場合は5V（または3.3Vボードの場合は3.3V）、LOWの場合は0V（グラウンド）。
 
-* ``digitalWrite(pin, value)``: Write a high level (5V) or a low level (0V) to a digital pin to change the operating state of the component. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
-
-   **Syntax**
+   **構文**
       digitalWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number.
-    * ``value``: ``HIGH`` or ``LOW``.
+   **パラメータ**
+    * ``pin``: Arduinoのピン番号。
+    * ``value``: ``HIGH`` または ``LOW``。
 
-**Example of Digital Write:**
+**デジタルライトの例：**
 
 .. code-block:: arduino
 
    const int pin = 13;
 
    void setup() {
-      pinMode(pin, OUTPUT);    // sets the digital pin as output
+      pinMode(pin, OUTPUT);    // デジタルピンを出力として設定
    }
 
    void loop() {
-      digitalWrite(pin, HIGH); // sets the digital pin on
-      delay(1000);            // waits for a second
-      digitalWrite(pin, LOW);  // sets the digital pin off
-      delay(1000);            // waits for a second
+      digitalWrite(pin, HIGH); // デジタルピンをオンに設定
+      delay(1000);            // 1秒待つ
+      digitalWrite(pin, LOW);  // デジタルピンをオフに設定
+      delay(1000);            // 1秒待つ
    }
 
 .. image:: img/1_led.jpg
 
+**注意事項と警告**
 
-**Notes and Warnings**
+* ピン0~13はすべてデジタルピンです。
+* ピン0と1はコンピュータとの通信に使用されるので使用しないでください。これらのピンに何かを接続すると、通信が妨げられ、ボードのアップロードに失敗する原因となります。
+* デジタルピンが使い果たされた場合、アナログピン（A0-A5）もデジタルピンとして使用できます。
 
-* The pins 0~13 are all digital pins.
-* Do not use pins 0 and 1, as they are used to communicate with the computer. Connecting anything to these pins will interfere with communication, including causing the upload board to fail.
-* If the digital pins are used up, the analog pins (A0-A5) can also be used as digital pins.
+**関連するコンポーネント**
 
-**Related Components**
+以下は関連するコンポーネントであり、クリックして使用方法を学ぶことができます。
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

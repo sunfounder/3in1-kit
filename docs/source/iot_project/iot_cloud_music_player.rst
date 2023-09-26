@@ -1,37 +1,37 @@
 .. _iot_music:
 
-4. Cloud Music Player
+4. クラウドミュージックプレイヤー
 =====================================
 
-The goal of this project is to create a music player using Blynk.
-Music is played in the same way as in :ref:`ar_passive_buzzer`, by writing the song in the program and playing it with a passive buzzer.
-however, in this example, we can click the switch to play/pause and slide the slider to change the playback progress.
+このプロジェクトの目的は、Blynkを使用して音楽プレイヤーを作成することです。
+音楽は、 :ref:`ar_passive_buzzer` と同じ方法で再生され、曲をプログラムに書き込んでパッシブブザーで再生します。
+しかし、この例では、スイッチをクリックして再生/一時停止を切り替えたり、スライダーをスライドして再生の進行状況を変更することができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると確かに便利です。以下にリンクを示します：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -44,70 +44,69 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは安定した動作環境を提供するために高い電流を必要とするので、9Vのバッテリーが接続されていることを確認してください。
 
 .. image:: img/iot_4_bb.png
 
-**2. Edit Dashboard**
+**2. ダッシュボードの編集**
 
-#. Create a **Datastream** of type **Virtual Pin** on the **Datastream** page as the value modified by the Slider widget added later or code. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **30**.
+#. **Datastream** ページで **Virtual Pin** タイプの **Datastream** を作成します。これは、後で追加するスライダーウィジェットまたはコードによって変更される値として設定します。DATA TYPEを **Integer** に設定し、MINとMAXを **0** と **30** に設定します。
 
     .. image:: img/sp220610_104330.png
 
-#. Also create another **Datastream** of type **Virtual Pin** to display the music name, and set the DATA TYPE to ``String``.
+#. 音楽の名前を表示するための **Virtual Pin** タイプの別の **Datastream** も作成し、DATA TYPEを ``String`` に設定します。
 
     .. image:: img/sp220610_105932.png
 
-#. Go to the **Wed Dashboard** page, drag a **Switch** widget and set **Datastream** to V0 (V0 is already set in :ref:`iot_blink`); drag a **Label** widget and set it to V3; drag a **Slider** widget and set it to V2.
+#. **Wed Dashboard** ページに移動し、 **Switch** ウィジェットをドラッグし、 **Datastream** をV0に設定します（V0はすでに :ref:`iot_blink` で設定されています）； **Label** ウィジェットをドラッグしてV3に設定します； **Slider** ウィジェットをドラッグしてV2に設定します。
 
     .. image:: img/sp220610_110105.png
 
 .. note::
 
-    Your virtual pins may be different from mine, yours will prevail, but you need to modify the corresponding pin number in the code.
+    あなたの仮想ピンは私のものと異なる場合があります。あなたのものが優先されますが、コード内の対応するピン番号を変更する必要があります。
 
 
 
-**3. Run the Code**
 
-#. Open the ``4.cloud_music_player.ino`` file under the path of ``3in1-kit\iot_project\4.cloud_music_player``.
+**3. コードを実行する**
+
+#. ``3in1-kit\iot_project\4.cloud_music_player`` のパスの下の ``4.cloud_music_player.ino`` ファイルを開きます。
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/34a49c4b-9eb4-4d03-bd78-fe1daefc9f5c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. ``Template ID``、 ``Device Name``、および ``Auth Token`` を自分のものに置き換えます。また、使用しているWiFiの ``ssid`` および ``password`` を入力する必要があります。詳しいチュートリアルは、 :ref:`connect_blynk` を参照してください。
+#. 正しいボードとポートを選択したら、 **Upoad** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
-
+#. シリアルモニターを開き(baudrateを115200に設定)、接続が成功したというプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示された場合は、次の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R4 board.
+        * 9Vのバッテリーが接続されていることを確認します。
+        * ピンRSTを1秒間GNDに接続してESP8266モジュールをリセットし、その後、それを取り外します。
+        * R4ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        ときどき、上記の操作を3〜5回繰り返す必要があることがありますので、お待ちください。
 
-#. Now, you can use Blynk's Button Control widget to start/pause the music and the Slider to adjust the playback progress, and you'll also see the name of the music.
+#. これで、Blynkのボタン制御ウィジェットを使用して音楽の再生/一時停止を切り替えることができ、スライダーで再生の進行状況を調整することができます。また、音楽の名前も表示されます。
 
     .. image:: img/sp220610_110105.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Blynkをモバイルデバイスで使用する場合は、 :ref:`blynk_mobile` を参照してください。
 
+**どのように動作するのか？**
 
-**How it works?**
-
- The datastream **V0** is used to get the status of the Switch widget and assign it to the variable **musicPlayFlag**, which controls pausing and playing the music.
+データストリーム **V0** は、Switchウィジェットのステータスを取得し、それを変数 **musicPlayFlag** に割り当てるために使用されます。これは、音楽の一時停止と再生を制御します。
 
 .. code-block:: arduino
 
@@ -115,10 +114,10 @@ You can also buy them separately from the links below.
 
     BLYNK_WRITE(V0)
     {
-        musicPlayFlag = param.asInt(); // START/PAUSE MUSIC
+        musicPlayFlag = param.asInt(); // 音楽の開始/一時停止
     }
 
-The data stream **V2** is used to get the value of the slider widget and assign it to the variable **scrubBar** when the slider is moved.
+データストリーム **V2** は、スライダーウィジェットの値を取得し、スライダーが移動されたときにそれを変数 **scrubBar** に割り当てるために使用されます。
 
 .. code-block:: arduino
 
@@ -129,7 +128,7 @@ The data stream **V2** is used to get the value of the slider widget and assign 
         scrubBar=param.asInt();
     }
 
-When the device is connected to the **Blynk Cloud**, write the music name for the **V3** datastream and then display it with the **Label** widget.
+デバイスが **Blynk Cloud** に接続されているとき、 **V3** データストリームの音楽名を書き込み、それを **Label** ウィジェットで表示します。
 
 .. code-block:: arduino
 
@@ -138,8 +137,8 @@ When the device is connected to the **Blynk Cloud**, write the music name for th
         Blynk.virtualWrite(V3, songName);
     }
 
-**Blynk Timer** will execute every second. Music is played if **musicPlayFlag** is not 0, i.e. the **Switch** widget is ON.
-As soon as two notes are played, the progress bar variable ``scrubBar`` is incremented by 2, and the value is then written to the **Blynk Cloud**, which synchronizes the value of the **Slider** widget.
+**Blynk Timer** は毎秒実行されます。 **musicPlayFlag** が0でない場合、つまり、 **Switch** ウィジェットがONの場合、音楽が再生されます。
+2つのノートが再生されると、プログレスバー変数 ``scrubBar`` が2増加し、その値は次に **Blynk Cloud** に書き込まれ、 **Slider** ウィジェットの値と同期されます。
 
 .. code-block:: arduino
 

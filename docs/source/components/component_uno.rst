@@ -1,55 +1,54 @@
 .. _cpn_uno:
 
-
-
 Arduino Uno R4 Minima
 =================================
 
-**Overview**
+**概要**
 
-Enhanced and improved, the Arduino UNO R4 Minima is armed with a powerful 32-bit microcontroller courtesy of Renesas. Brace yourself for increased processing power, expanded memory, and a whole new level of on-board peripherals. The best part? Compatibility with existing shields and accessories remains intact, and there's no need to make any changes to the standard form factor or 5 V operating voltage.
+強化され、向上したArduino UNO R4 Minimaは、Renesasの優れた32ビットマイクロコントローラーを搭載しています。増強された処理能力、拡大したメモリ、そして新たなオンボード周辺機器のレベルを体験してください。最も良い点は？既存のシールドやアクセサリーとの互換性はそのまま保たれ、標準のフォームファクターや5 Vの動作電圧を変更する必要はありません。
 
-Joining the Arduino ecosystem, the UNO R4 is a trusty addition suitable for both beginners and seasoned electronics enthusiasts. Whether you're just starting out or looking to push the boundaries of your projects, this robust board delivers reliable performance every time.
+Arduinoのエコシステムに参加するUNO R4は、初心者から熟練した電子工学の愛好家まで適している信頼性の高い追加品です。プロジェクトの境界を押し広げたいのか、それともちょうど始めたばかりのかに関わらず、この頑丈なボードは毎回信頼性の高いパフォーマンスを提供します。
 
 .. image:: img/uno_r4.png
 
-Here's what the UNO R4 Minima brings to the table:
+UNO R4 Minimaが提供する特長：
 
-* Hardware compatibility with UNO form factor: The UNO R4 Minima maintains the same form factor, pinout, and 5 V operating voltage as its predecessor, the UNO R3. This ensures a seamless transition for existing shields and projects, leveraging the extensive and unique ecosystem already established for the Arduino UNO.
-* Expanded memory and faster clock: Prepare for more precise calculations and the ability to handle complex projects with ease. The UNO R4 Minima boasts increased memory and a faster clock speed, empowering you to tackle demanding tasks effortlessly.
-* Extra on-board peripherals: The UNO R4 Minima introduces a range of on-board peripherals, including a 12-bit DAC, CAN BUS, and OP AMP. These additional components provide you with expanded capabilities and flexibility in your designs.
-* Extended 24 V tolerance: The UNO R4 Minima now supports a wider input voltage range, allowing power supplies up to 24 V. This enables seamless integration with motors, LED strips, and other actuators, simplifying your projects by utilizing a single power source.
-* SWD connector: Debugging is a critical aspect of any project. Simply connect an external debugger to the UNO R4 Minima and effortlessly monitor the inner workings of your system. Stay in control and gain valuable insights.
-* HID support: The UNO R4 Minima comes with built-in HID (Human Interface Device) support, enabling it to simulate a mouse or keyboard when connected to a computer via a USB cable. This convenient feature makes it a breeze to send keystrokes and mouse movements to a computer, enhancing usability and functionality.
+* UNO形状とのハードウェア互換性：UNO R4 Minimaは、前身であるUNO R3と同じフォームファクター、ピン配置、および5 Vの動作電圧を保持しています。これにより、Arduino UNOの既存のシールドやプロジェクトのシームレスな移行が保証され、すでに確立されたArduino UNOの広範囲で独特なエコシステムを利用できます。
+* 拡張メモリと高速クロック：より正確な計算と複雑なプロジェクトの容易な取り扱いのための準備をしてください。UNO R4 Minimaは、メモリを増やし、クロック速度を速めることで、要求の高いタスクにも努力なく対応できます。
+* 追加のオンボード周辺機器：UNO R4 Minimaには、12ビットDAC、CAN BUS、OP AMPを含む一連のオンボード周辺機器が導入されています。これらの追加コンポーネントにより、デザインにおいて拡張された機能と柔軟性を手に入れることができます。
+* 24 Vの拡張許容範囲：UNO R4 Minimaは、最大24 Vまでの電源供給を許容するようになりました。これにより、モーターやLEDストリップ、その他のアクチュエータとのシームレスな統合が可能になり、単一の電源を利用することでプロジェクトの単純化が実現します。
+* SWDコネクタ：デバッグは、あらゆるプロジェクトの重要な側面です。外部のデバッガをUNO R4 Minimaに接続するだけで、システムの内部動作を努力なく監視できます。コントロールを保ち、貴重な洞察を得ることができます。
+* HIDサポート：UNO R4 Minimaは、組み込みのHID（Human Interface Device）サポートを備えており、USBケーブルを介してコンピュータに接続すると、マウスやキーボードをシミュレートすることができます。この便利な機能により、キーストロークやマウスの動きをコンピュータに送信するのが簡単になり、使用性と機能性が向上します。
 
-**Tech specs**
 
-* Board:
-    * Name: Arduino® UNO R4 Minima
+**技術仕様**
+
+* ボード:
+    * 名称: Arduino® UNO R4 Minima
     * SKU: ABX00080
-* Microcontroller: Renesas RA4M1 (Arm® Cortex®-M4)
-* USB: USB-C® Programming Port
-* Pins:
-    * Digital I/O Pins: 14
-    * Analog input pin: 6
+* マイクロコントローラ: Renesas RA4M1 (Arm® Cortex®-M4)
+* USB: USB-C® プログラミングポート
+* ピン:
+    * デジタルI/Oピン: 14
+    * アナログ入力ピン: 6
     * DAC: 1
-    * PWM pins: 6
-* Communication
-    *  UART: Yes, 1x
-    * I2C: Yes, 1x
-    * SPI: Yes, 1x
-    * CAN: Yes 1 CAN Bus
-* Power
-    * Circuit operating voltage: 5 V
-    * Input voltage (VIN): 6-24 V
-    * DC Current per I/O Pin: 8 mA
-* Clock speed Main core 48 MHz
-* Memory RA4M1 256 kB Flash, 32 kB RAM
-* Dimensions
-    * Width: 68.85 mm
-    * Length: 53.34 mm
+    * PWMピン: 6
+* 通信:
+    * UART: あり, 1x
+    * I2C: あり, 1x
+    * SPI: あり, 1x
+    * CAN: あり 1 CAN Bus
+* 電源:
+    * 回路動作電圧: 5 V
+    * 入力電圧 (VIN): 6-24 V
+    * DC電流/ I/Oピンあたり: 8 mA
+* クロック速度 メインコア 48 MHz
+* メモリ RA4M1 256 kB Flash, 32 kB RAM
+* サイズ:
+    * 幅: 68.85 mm
+    * 長さ: 53.34 mm
 
-**Pinout**
+**ピン配置**
 
 .. image:: img/uno_r4_pinsout.png
     :width: 800
@@ -59,7 +58,7 @@ Here's what the UNO R4 Minima brings to the table:
 * |link_r4_doc|
 
 
-.. SunFounder R4 Board
+.. SunFounder R4ボード
 .. ===========================
 
 .. .. image:: img/uno_r3.jpg
@@ -68,39 +67,40 @@ Here's what the UNO R4 Minima brings to the table:
 
 .. .. note::
 
-..     The SunFounder R4 board is a mainboard with almost the same functions as the `Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_, and the two boards can be used interchangeably.
+..     SunFounder R4ボードは、`Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_とほぼ同じ機能を持つメインボードであり、両方のボードは交換して使用できます。
 
-.. SunFounder R4 board is a microcontroller board based on the ATmega328P (`datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.
+.. SunFounder R4ボードは、ATmega328P（`データシート <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_）を基盤とするマイクロコントローラボードです。14個のデジタル入出力ピン（そのうち6個はPWM出力として使用できます）、6個のアナログ入力、16 MHzのセラミックレゾネータ（CSTCE16M0V53-R0）、USB接続、電源ジャック、ICSPヘッダ、リセットボタンを備えています。マイクロコントローラをサポートするために必要なものはすべて含まれています。USBケーブルでコンピュータに接続するか、AC-DCアダプタやバッテリで電源を供給して開始します。
 
-.. **Technical Parameters**
+.. **技術パラメータ**
 
 .. .. image:: img/uno.jpg
 ..     :align: center
 
-.. * MICROCONTROLLER: ATmega328P
-.. * OPERATING VOLTAGE: 5V
-.. * INPUT VOLTAGE (RECOMMENDED): 7-12V
-.. * INPUT VOLTAGE (LIMIT): 6-20V
-.. * DIGITAL I/O PINS: 14 (0-13, of which 6 provide PWM output(3, 5, 6, 9-11))
-.. * PWM DIGITAL I/O PINS: 6 (3, 5, 6, 9-11)
-.. * ANALOG INPUT PINS: 6 (A0-A5)
-.. * DC CURRENT PER I/O PIN: 20 mA
-.. * DC CURRENT FOR 3.3V PIN: 50 mA
-.. * FLASH MEMORY: 32 KB (ATmega328P) of which 0.5 KB used by bootloader
+.. * マイクロコントローラ: ATmega328P
+.. * 動作電圧: 5V
+.. * 入力電圧（推奨）: 7-12V
+.. * 入力電圧（制限）: 6-20V
+.. * デジタルI/Oピン: 14 (0-13, うち6つはPWM出力（3, 5, 6, 9-11）を提供)
+.. * PWMデジタルI/Oピン: 6 (3, 5, 6, 9-11)
+.. * アナログ入力ピン: 6 (A0-A5)
+.. * DC電流/I/Oピンあたり: 20 mA
+.. * 3.3VピンのDC電流: 50 mA
+.. * フラッシュメモリ: 32 KB（ATmega328P）、うち0.5 KBはブートローダに使用されます
 .. * SRAM: 2 KB (ATmega328P)
 .. * EEPROM: 1 KB (ATmega328P)
-.. * CLOCK SPEED: 16 MHz
+.. * クロック速度: 16 MHz
 .. * LED_BUILTIN: 13
-.. * LENGTH: 68.6 mm
-.. * WIDTH: 53.4 mm
-.. * WEIGHT: 25 g
-.. * I2C Port: A4(SDA), A5(SCL)
+.. * 長さ: 68.6 mm
+.. * 幅: 53.4 mm
+.. * 重さ: 25 g
+.. * I2Cポート: A4(SDA), A5(SCL)
 
 
-.. **What's More**
+.. **その他**
 
 .. * `Arduino IDE <https://www.arduino.cc/en/software>`_
-.. * `Arduino Programming Language Reference <https://www.arduino.cc/reference/en/>`_
+.. * `Arduinoプログラミング言語リファレンス <https://www.arduino.cc/reference/en/>`_
 .. * :ref:`install_arduino`
-.. * `ATmega328P Datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
+.. * `ATmega328P データシート <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
+
 

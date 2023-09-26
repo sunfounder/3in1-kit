@@ -1,32 +1,32 @@
 .. _cpn_button:
 
-Button
+ボタン
 ==========
 
 .. image:: img/button.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+ボタンは電子機器を制御するための一般的なコンポーネントです。主にスイッチとして使用され、回路を接続または切断するために使用されます。ボタンにはさまざまなサイズや形状がありますが、ここで使用するのは次の画像に示す6mmのミニボタンです。
+ピン1はピン2に、ピン3はピン4に接続されています。したがって、ピン1またはピン2のいずれかをピン3またはピン4に接続するだけです。
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+以下はボタンの内部構造です。下の右側の記号は、回路内でボタンを表すために通常使用されるものです。
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ピン1がピン2に、ピン3がピン4に接続されているため、ボタンが押されると、4つのピンが接続され、回路が閉じます。
 
 .. image:: img/button2.png
     :width: 600
     :align: center
 
-**Example**
+**例**
 
-* :ref:`ar_button` (Basic Project)
+* :ref:`ar_button` (基本プロジェクト)
 
-.. * :ref:`sh_doorbell` (Scratch Project)
-.. * :ref:`sh_eat_apple` (Scratch Project)
-.. * :ref:`sh_fishing` (Scratch Project)
+.. * :ref:`sh_doorbell` (Scratchプロジェクト)
+.. * :ref:`sh_eat_apple` (Scratchプロジェクト)
+.. * :ref:`sh_fishing` (Scratchプロジェクト)
 

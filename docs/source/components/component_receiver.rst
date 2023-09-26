@@ -1,48 +1,45 @@
 .. _cpn_receiver:
 
-IR Receiver
+IR受信機
 ===========================
 
-**IR Receiver**
+**IR受信機**
 
 .. image:: img/ir_receiver_hs0038b.jpg
     :align: center
 
-* OUT: Signal output
+* OUT: 信号出力
 * GND: GND
-* VCC: power supply, 3.3v~5V
+* VCC: 電源供給, 3.3v~5V
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+赤外線受信機は、赤外線の信号を受け取り、独立して赤外線を受信してTTLレベルと互換性のある信号を出力する部品です。サイズは一般的なプラスチック製トランジスタと同じで、あらゆる種類の赤外線リモコンや赤外線伝送に適しています。
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+赤外線、またはIR通信は、低コストで使いやすいワイヤレス通信技術として人気があります。赤外線は可視光よりもわずかに波長が長いため、人間の目には感知できない - ワイヤレス通信に理想的です。赤外線通信の一般的な変調方式は38KHz変調です。
 
+* 採用されている `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_ IR受信センサー、高感度
+* リモコンとして使用可能
+* 電源供給: 5V
+* インターフェース: デジタル
+* 変調周波数: 38Khz
+* ピン定義: (1) 出力 (2) Vcc (3) GND
+* サイズ: 23.5mm x 21.5mm
 
-* Adopted `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_ IR Receiver Sensor, high sensitivity
-* Can be used for remote control
-* Power Supply: 5V
-* Interface: Digital
-* Modulate Frequency: 38Khz
-* Pin Definitions: (1) Output (2) Vcc (3) GND
-* Size: 23.5mm x 21.5mm
-
-
-**Remote Control**
+**リモコン**
 
 .. image:: img/image186.jpeg
     :width: 400
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+これは、21の機能ボタンと最大8メートルの送信距離を持つミニ薄型の赤外線ワイヤレスリモコンで、子供の部屋の様々なデバイスを操作するのに適しています。
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* サイズ: 85x39x6mm
+* リモコン範囲: 8-10m
+* バッテリー: 3Vボタン型リチウムマンガン電池
+* 赤外線キャリア周波数: 38KHz
+* 表面貼り材料: 0.125mm PET
+* 有効寿命: 20,000回以上
 
+**例**
 
-**Example**
-
-* :ref:`ar_receiver` (Basic Project)
-* :ref:`car_remote` (Car Project)
-* :ref:`car_remote_plus` (Car Project)
+* :ref:`ar_receiver` (基本プロジェクト)
+* :ref:`car_remote` (車のプロジェクト)
+* :ref:`car_remote_plus` (車のプロジェクト)

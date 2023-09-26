@@ -1,43 +1,35 @@
 .. _ar_guess_number:
 
-6.6 Guess Number
-==================
+6.6 数字を当てるゲーム
+========================
 
-Guessing Numbers is a fun party game where you and your friends take
-turns inputting a number (0~99). The range will be smaller with the
-inputting of the number till a player answers the riddle correctly. Then
-the player is defeated and punished. For example, if the lucky number is
-51 which the players cannot see, and the player 1 inputs 50, the prompt
-of number range changes to 50~99; if the player 2 inputs 70, the range
-of number can be 50~70; if the player 3 inputs 51, he or she is the
-unlucky one. Here, we use IR Remote Controller to input numbers and use
-LCD to output outcomes.
+数字を当てるゲームは、あなたと友人が交互に数字（0〜99）を入力する楽しいパーティーゲームです。数字を入力することで範囲が狭くなり、正しい答えを出したプレイヤーが見つかると、そのプレイヤーは敗北し、罰を受けることとなります。例えば、プレイヤーが見ることのできないラッキーナンバーが51で、プレイヤー1が50を入力すると、数字の範囲のヒントが50〜99に変わります。プレイヤー2が70を入力すると、数字の範囲は50〜70になります。プレイヤー3が51を入力すると、彼または彼女が不運なプレイヤーとなります。このゲームでは、IRリモートコントローラーで数字を入力し、LCDで結果を表示します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式をまとめて購入するのが便利です。以下のリンクから購入できます：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから部品を個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -50,72 +42,60 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_guess_number.png
     :align: center
 
+**配線図**
 
-**Wiring**
-
-In this example, the wiring of LCD1602 and infrared receiving module is
-as follows.
+この例では、LCD1602と赤外線受信モジュールの配線は以下のとおりです。
 
 .. image:: img/6.6_guess_number_bb.png
     :align: center
 
 
-**Code**
 
+**コード**
 
 .. note::
 
-    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\learning_project\6.6.guess_number`` directly.
-    * Or copy this code into Arduino IDE.
-    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
-
+    * ファイル ``6.6.guess_number.ino`` を ``3in1-kit\learning_project\6.6.guess_number`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーします。
+    * ここでは ``LiquidCrystal I2C`` および ``IRremote libraries`` が使用されています。 **Library Manager** からインストールすることができます。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6bafb36d-6763-460c-98b7-aba48120e718/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
-After the code is successfully uploaded, the welcome characters will appear on the LCD1602. Now press the number according to the range prompt on the screen, the display will get smaller and smaller unless you guess that lucky number.
+コードのアップロードが成功すると、LCD1602に歓迎の文字が表示されます。画面の範囲のヒントに従って番号を押すと、表示が次第に小さくなって、幸運な番号を推測するまで続きます。
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back to increase the contrast.
+    コードと配線が正しい場合でも、LCDが内容を表示しない場合は、裏面のポテンショメータを回してコントラストを上げることができます。
 
+**どのように動作するのか？**
 
-**How it works?**
+数字当てゲームを生き生きと面白くするために、以下の機能を実現する必要があります：
 
-In order to make the number guessing game become vivid and funny, we
-need to achieve the following functions:
+1. ゲームを開始し、リセットするときに、幸運な番号が表示され、数字の範囲のヒントは0〜99にリセットされます。
 
-1. The lucky number will be displayed when we start and reset the game,
-   and the number range prompt is reset to 0 ~ 99.
+2. LCDは、入力されている番号と番号の範囲のヒントを表示します。
 
-2. LCD will display the number being input and the number range prompt.
+3. 2桁の数字を入力した後、結果の判定が自動的に表示されます。
 
-3. After inputting two digits, there appears result judgment
-   automatically.
+4. 1桁の数字を入力する場合、結果の判定を開始するためにCYCLEキー（コントローラの中央のキー）を押すことができます。
 
-4. If you input a single digit, you can press the CYCLE key (the key at
-   the center of the Controller) to start the result judgment.
+5. 答えが当てられない場合、新しい数字の範囲のヒントが表示されます（幸運な番号が51で、50を入力すると、数字の範囲のヒントは50〜99に変わります）。
 
-5. If the answer is not guessed, the new number range prompt will be
-   displayed (if the lucky number is 51 and you enter 50, the number
-   range prompt will change to 50~99).
+6. 幸運な番号が推測されると、ゲームは自動的にリセットされ、プレイヤーは新しいラウンドをプレイすることができます。
 
-6. The game is automatically reset after the lucky number is guessed, so
-   that the player can play a new round.
+7. ゲームは、POWERボタン（左上角のボタン）を直接押すことでリセットできます。
 
-7. The game can be reset by directly pressing the POWER button (the
-   button in the upper left corner).
-
-In conclusion, the work flow of the project is shown in the flow chart.
+結論として、プロジェクトのワークフローはフローチャートで示されています。
 
 .. image:: img/Part_three_4_Example_Explanation.png
     :align: center
+
 
 
 

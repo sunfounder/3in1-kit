@@ -1,71 +1,71 @@
-Assemble the Car
+車の組み立て
 =====================
 
-Please follow the steps below to complete the assembly of the car.
+以下の手順に従って、車の組み立てを完了してください。
 
-1. Remove the protective film on the acrylic.
+1. アクリルの保護フィルムを取り外します。
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R4 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. 画像に示されているようにボードをテーブルに置きます。R4ボードと同じ穴の側面をAと呼び、裏面をBと呼びます。これにより、組み立て中の間違いを避けることができます。
 
     .. image:: img/IMG_9147.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. 下の画像に示す位置に、 **M3x24mmスタンドオフ** を **M3x6mmネジ** で取り付けます。
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. B側に向かって、 **M3x30mmネジ** と **M3ナット** を使用してTTモーターを取り付けます。2つの詳細点：1 - 出力軸はコウモリの形をした側に向かっています；2 - モーターケーブルは内側に向かっています。
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. 別のTTモーターを取り付けます。出力軸の方向とケーブルの方向に注意が必要です。
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. 下の画像に示す位置に、 **M3x6mmネジ** を使用して **M3x10mmスタンドオフ** を取り付けます。
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. 車の後部に **M2.5x11mmスタンドオフ** を **M2.5x6mmネジ** で取り付けます。
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. 汎用の車輪を **M3x6mmネジ** で取り付けます。
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. 2つの車輪を取り付け、車の基本構造が完成します。
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#. L9110モジュールを **M2.5x6mmネジ** で取り付けます。
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. 2つのIR障害モジュールを **M3x10mmネジ** と **M3ナット** で組み立てます。
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. B側に戻って、ライントラックモジュールを四つの **M3x6mmネジ** と二つの **M3x24mmスタンドオフ** で取り付けます。
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        ライントラックモジュールに **M3x24mmスタンドオフ** を先に固定することをおすすめします。
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        特に注意して頂きたいのは、ラインセンサーのピンは少し柔らかく、穴の方に少し突き出しています。 **M3x24mmスタンドオフ** を取り付ける際、センサーピンを優しく押しのけるような感じでプレッシャーをかけてください。
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. 9Vバッテリーにベルクロを貼り付け、バッテリークリップを取り付けます。車にベルクロの他の部分を貼り付けて、バッテリーを固定します。
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R4 board with **M3x6mm screws**.
+#. A側に戻って、R4ボードを **M3x6mmネジ** で取り付けます。
 
     .. image:: img/IMG_9193.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. 車の前面にブレッドボードを取り付けます。その後、プロジェクトに必要に応じて、さまざまなコンポーネント（例：超音波モジュール）をブレッドボードに追加できます。
 
     .. image:: img/IMG_9195.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. 車を走らせるためには、配線とコードの記述も必要です。これについては、次のセクションで詳しく説明します。

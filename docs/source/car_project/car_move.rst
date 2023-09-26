@@ -1,15 +1,15 @@
 .. _car_move:
 
-1. Move
+1. 移動
 ===============
 
 .. image:: ../components/img/l9110_module.jpg
     :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110 module.
+プログラムを開始する前に、L9110モジュールの動作原理を確認しましょう。
 
-Here is the truth table of Motor B:
+以下はモーターBの真理表です：
 
 .. list-table:: 
     :widths: 25 25 50
@@ -17,21 +17,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B
-      - The state of Motor B
+      - モーターBの状態
     * - 1
       - 0
-      - Rotate clockwise
+      - 時計回りに回転
     * - 0
       - 1
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 1
-      - Stop
+      - 停止
 
-Here is the truth table of Motor A:
+以下はモーターAの真理表です：
 
 .. list-table:: 
     :widths: 25 25 50
@@ -39,81 +39,65 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - モーターAの状態
     * - 1
       - 0
-      - Rotate clockwise
+      - 時計回りに回転
     * - 0
       - 1
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 1
-      - Stop
-
+      - 停止
 
 * :ref:`cpn_l9110`
 
-**Forward**
+**前進**
 
-Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
+車を動かすために、L9110モジュールの入力をそれぞれ12VとGNDに直接接続してみましょう。
 
-
-1. Connect R4 board, L9110 module and 2 motors.
-
+1. R4ボード、L9110モジュール、そして2つのモーターを接続します。
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
-
+2. B-1BとA-1AをVCCに、B-1AとA-1BをGNDに接続すると、車が前進するのが見えるはずです。
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, 
-you need to readjust the wiring of the two motors.
+両方が前進しない場合や以下の状況が発生した場合は、2つのモーターの配線を再調整する必要があります。
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* 両方のモーターが同時に後退する場合（左のモーターが時計回りに、右のモーターが反時計回りに回転）、左と右のモーターの配線を同時に入れ替え、OA(A)とOB(A)、OA(B)とOB(B)を交換します。
+* 左のモーターが後退（時計回りの回転）の場合、左のモーターのOA(B)とOB(B)の配線を交換します。
+* 右のモーターが後退（反時計回りの回転）の場合、右のモーターのOA(A)とOB(A)の配線を交換します。
 
+**後退**
 
-**Backward**
-
-Connect B-1B  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
-
+B-1BとA-1AをGNDに、B-1AとA-1BをVCCに接続すると、車が後退するのが見えるはずです。
 
 .. image:: img/1.move_back.png 
     :width: 800
 
+**左折**
 
-
-**Turn Left**
-
-If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B  and A-1B to VCC.
-
+車を左に曲げたい場合、つまり両方のモーターを時計回りに回転させたい場合は、B-1AとA-1AをGNDに、B-1BとA-1BをVCCに接続します。
 
 .. image:: img/1.move_left.png 
     :width: 800
 
+**右折**
 
-**Turn Right**
-
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B  and A-1B to GND.
-
+逆に、車を右に曲げたい場合、つまり両方のモーターを反時計回りに回転させたい場合は、B-1AとA-1AをVCCに、B-1BとA-1BをGNDに接続します。
 
 .. image:: img/1.move_right.png 
     :width: 800
 
+**停止**
 
+モーターを停止するには、同じ側の入力を同時に12VまたはGNDに接続します。例：B-1AとB-1Bを同時に12Vまたは5Vに接続、同様にA-1AとA-1Bも接続します。
 
-**Stop**
-
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B  to 12V or 5V at the same time, and the same for A-1A and A-1B.
-
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+もちろんこれは理論的なことであり、後でコードで制御する際に必要になります。ここでは車への電源を切ることで停止できます。

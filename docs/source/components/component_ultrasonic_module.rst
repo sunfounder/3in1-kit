@@ -1,43 +1,37 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+超音波モジュール
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
-Ultrasonic ranging module provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
+超音波測距モジュールは、2cm - 400cmの非接触測定機能を提供し、測距の精度は3mmに達することができます。
+5m以内では信号が安定しており、5mを超えると徐々に信号が弱まり、7mの位置で消失します。
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
+このモジュールには、超音波の送信機、受信機、および制御回路が含まれています。基本的な原理は以下のとおりです：
 
-#. Use an IO flip-flop to process a high level signal of at least 10us.
+#. IOトリガで10us以上の高レベル信号を処理します。
 
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
+#. モジュールは自動的に8つの40kHzの波を送信し、パルス信号の返信があるかどうかを検出します。
 
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
+#. 信号が返ってきた場合、高レベルを通過し、高出力IOの持続時間は、超音波の送信から返信までの時間です。ここで、測定距離 = (高い時間 x 音速 (340 m / s) / 2)。
 
-
-
-The timing diagram is shown below. 
+以下は、タイミングダイアグラムです。
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+測距を開始するには、トリガ入力に短い10usのパルスを供給するだけで、その後、モジュールは40kHzでの超音波の8サイクルバーストを送信し、エコーを上げます。
+トリガ信号の送信とエコー信号の受信の時間間隔を通じて、範囲を計算することができます。
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+式: us / 58 = センチメートル または us / 148 = インチ; または: 範囲 = 高レベル時間 \* 速度 (340M/S) / 2; トリガ信号とエコー信号の信号衝突を防ぐために、60ms以上の測定周期を使用することをおすすめします。
 
-**Example**
+**例**
 
-* :ref:`ar_ultrasonic` (Basic Project)
-* :ref:`follow_your_hand` (Car Project)
-* :ref:`car_ultrasonic` (Car Project)
+* :ref:`ar_ultrasonic` (基本プロジェクト)
+* :ref:`follow_your_hand` (車プロジェクト)
+* :ref:`car_ultrasonic` (車プロジェクト)
 
-.. * :ref:`sh_parrot` (Scratch Project)
+.. * :ref:`sh_parrot` (Scratchプロジェクト)
+

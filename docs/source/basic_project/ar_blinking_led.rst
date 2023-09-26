@@ -1,35 +1,35 @@
 .. _ar_blink:
 
-1.1 Hello, LED! 
+1.1 こんにちは、LED！ 
 =======================================
 
-Just as printing “Hello, world!” is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+“Hello, world!”を表示することがプログラミング学習の第一歩のように、プログラムを使用してLEDを駆動することは、物理的なプログラミング学習の伝統的な導入です。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です、リンクはこちら： 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -42,45 +42,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.1_led.png
 
-The principle of this circuit is simple and the current direction is shown in the figure. When pin 9 outputs high level(5V), the LED will light up after the 220ohm current limiting resistor. When pin 9 outputs low level (0v), the LED will turn off.
+この回路の原理は単純で、現在の方向は図に示されています。ピン9が高レベル(5V)を出力すると、220オームの電流制限抵抗を通過した後にLEDが点灯します。ピン9が低レベル(0v)を出力すると、LEDは消灯します。
 
-**Wiring**
+**配線図**
 
 .. image:: img/1.1_hello_led_bb.png
     :width: 400
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``1.1.hello_led.ino`` under the path of ``3in1-kit\learning_project\1.1.hello_led``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
-
-
+   * ファイル ``1.1.hello_led.ino`` をパス ``3in1-kit\learning_project\1.1.hello_led`` で開くことができます。 
+   * または、このコードを **Arduino IDE** にコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0497f915-5bf8-41a2-8e0f-b013130a57f5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the LED blinking.
+コードが正常にアップロードされると、LEDが点滅するのが見えるでしょう。
 
-**How it works?**
+**どのように動作するのか？**
 
-Here, we connect the LED to the digital pin 9, so we need to declare an int variable called ledpin at the beginning of the program and assign a value of 9.
+ここでは、LEDをデジタルピン9に接続しているため、プログラムの始めにint変数ledpinを宣言し、9の値を割り当てる必要があります。
 
 .. code-block:: arduino
 
     const int ledPin = 9;
 
-
-Now, initialize the pin in the ``setup()`` function, where you need to initialize the pin to ``OUTPUT`` mode.
+次に、 ``setup()`` 関数内でピンを初期化します。ここでピンを ``OUTPUT`` モードに初期化する必要があります。
 
 .. code-block:: arduino
 
@@ -88,21 +83,19 @@ Now, initialize the pin in the ``setup()`` function, where you need to initializ
         pinMode(ledPin, OUTPUT);
     }
 
-In ``loop()``, ``digitalWrite()`` is used to provide 5V high level signal for ledpin, which will cause voltage difference between LED pins and light LED up.
+``loop()`` の中で、 ``digitalWrite()`` を使用してledpinに5Vの高レベル信号を供給し、LEDピン間に電圧差を生じさせてLEDを点灯させます。
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, HIGH);
 
-If the level signal is changed to LOW, the ledPin’s signal will be returned to 0 V to turn LED off.
+レベル信号をLOWに変更すると、ledPinの信号が0 Vに戻り、LEDが消灯します。
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, LOW);
 
-
-An interval between on and off is required to allow people to see the change, 
-so we use a ``delay(1000)`` code to let the controller do nothing for 1000 ms.
+オンとオフの間隔が必要です。変化を見るために人々に時間を与えるため、 ``delay(1000)`` コードを使用して、コントローラーが1000 ms何もしないようにします。
 
 .. code-block:: arduino
 

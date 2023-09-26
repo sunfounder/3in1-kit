@@ -1,40 +1,40 @@
 .. _ar_reed:
 
-3.2 Feel the Magnetism
+3.2 磁気を感じる
 ===============================
 
-The most common type of reed switch contains a pair of magnetizable, flexible, metal reeds whose end portions are separated by a small gap when the switch is open. 
+最も一般的なリードスイッチには、スイッチが開いているときに小さなギャップによって端部が分離されている、磁気化可能な柔軟な金属のリードのペアが含まれています。
 
-A magnetic field from an electromagnet or a permanent magnet will cause the reeds to attract each other, thus completing an electrical circuit.
-The spring force of the reeds causes them to separate, and open the circuit, when the magnetic field ceases.
+電磁石や永久磁石からの磁場は、リードが互いに引き付けるように作用し、電気回路を完成させます。
+リードのバネ力は、磁場が停止すると、それらを分離させて回路を開きます。
 
-A common example of a reed switch application is to detect the opening of a door or windows, for a security alarm.
+リードスイッチの一般的な例は、セキュリティアラームのためのドアや窓の開放を検出することです。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは確かに便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -47,32 +47,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_3.2_reed.png
 
-By default, pin 2 is low; and will go high when the magnet is near the reed switch.
+デフォルトでは、ピン2はローです。磁石がリードスイッチの近くにあると、ハイになります。
 
-The purpose of the 10K resistor is to keep the pin 2 at a steady low level when no magnet is near.
+10Kの抵抗の目的は、磁石が近くにないときにピン2を安定したローレベルに保つことです。
 
-**Wiring**
+**配線図**
 
 .. image:: img/3.2_feel_the_magnetism_bb.png
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``3.2.feel_the_magnetism.ino`` under the path of ``3in1-kit\learning_project\3.2.feel_the_magnetism``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
+   * ``3in1-kit\learning_project\3.2.feel_the_magnetism`` のパスの下にある ``3.2.feel_the_magnetism.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d28c942e-5144-44a1-85d8-d5e6894fc5df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, when a magnet is near the reed switch, the serial monitor will print 1.
-
+コードが正常にアップロードされた後、磁石がリードスイッチの近くにあると、シリアルモニターは1を印刷します。

@@ -1,23 +1,23 @@
 .. _connect_blynk:
 
-1.4 Connecting the R4 board to Blynk
+1.4 R4ボードをBlynkに接続する
 --------------------------------------------
 
-#. Reconnect the ESP8266 module and R4 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R4 board respectively.
+#. ESP8266モジュールとR4ボードを再接続します。ここではソフトウェアシリアルを使用しているため、TXとRXはそれぞれR4ボードの2番ピンと3番ピンに接続されます。
 
     .. note::
 
-        The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+        ESP8266モジュールは安定した動作環境を提供するために高電流が必要ですので、9Vの電池が接続されていることを確認してください。
 
     .. image:: img/iot_1.4_bb.png
 
-#. Open the ``1.connect.ino`` file under the path of ``3in1-kit\iot_project\1.connect``. Or copy this code into **Arduino IDE**.
+#. ``3in1-kit\iot_project\1.connect`` のパスの下にある ``1.connect.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1c0c1a8f-2551-484f-9f4f-d5d4117cc864/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the following three lines of code that you can copy from your account's **Device info** page. These three lines of code will allow your R4 board to find your blynk account.
+#. あなたのアカウントの **Device info** ページからコピーできる以下の3行のコードを置き換えます。これら3行のコードにより、R4ボードがあなたのblynkアカウントを見つけることができます。
 
     .. code-block:: arduino
 
@@ -27,27 +27,27 @@
     
     .. image:: img/sp20220614174721.png
 
-#. Fill in the ``ssid`` and ``password`` of the WiFi you are using.
+#. 使用中のWiFiの ``ssid`` および ``password`` を入力します。
 
     .. code-block:: arduino
 
         char ssid[] = "ssid";
         char pass[] = "password";
 
-#. Upload the code to the R4 board, then open the serial monitor and set the baud rate to 115200. when the R4 board communicates with Blynk successfully, the serial monitor will show the ``ready`` character.
+#. コードをR4ボードにアップロードし、シリアルモニタを開いてボーレートを115200に設定します。R4ボードがBlynkと正常に通信すると、シリアルモニタに ``ready`` 文字が表示されます。
 
     .. image:: img/sp220607_170223.png
 
     .. note::
     
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示される場合は、以下の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R4 board.
+        * 9Vの電池が接続されていることを確認します。
+        * ESP8266モジュールのRSTピンを1秒間GNDに接続してリセットし、その後、それを取り外します。
+        * R4ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        これらの操作を3-5回繰り返す必要がある場合があります。ご了承ください。
 
-#. The status of Blynk will change from **offline** to **online**.
+#. Blynkのステータスが **offline** から **online** に変わります。
 
     .. image:: img/sp220607_170326.png

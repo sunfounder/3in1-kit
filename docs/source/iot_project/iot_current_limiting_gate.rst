@@ -1,38 +1,38 @@
 .. _iot_gate:
 
-7. Current Limiting Gate
+7. 数量制限ゲート
 ==================================
 
-Some situations, such as parking lots, require quantity management.
+駐車場などの状況では、数量の管理が必要とされます。
 
-Here we create a smart gate: a servo is used as the gate, and an IR obstacle detector is placed in front of it; if an object (like a car) is detected, the gate will open and the number will be increased by 1.
-The count is displayed with a 7-segment display and is also uploaded to the Blynk Cloud for you to view remotely. Finally, Blynk has a Switch widget to enable or disable this smart gate system.
+ここでは、スマートゲートを作成します。サーボはゲートとして使用され、その前にIR障害物検知器が配置されます。オブジェクト（車など）が検出されると、ゲートが開き、数字が1増加します。
+カウントは7セグメントディスプレイで表示され、Blynk Cloudにもアップロードされ、遠隔地での閲覧が可能です。最後に、Blynkにはこのスマートゲートシステムを有効/無効にするSwitchウィジェットがあります。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのが確かに便利です、以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -53,70 +53,71 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは、安定した動作環境を提供するために高電流が必要ですので、9Vのバッテリーが接続されていることを確認してください。
 
 .. image:: img/iot_7_bb.png
     :width: 800
 
-**2. Edit Dashboard**
+**2. ダッシュボードを編集**
 
-#. To record the number, create a **Datastream** of type **Virtual Pin** on the **Datastream** page. Set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``10``.
+#. 数字を記録するには、 **Datastream** ページで **Virtual Pin** タイプの **Datastream** を作成します。DATA TYPEを ``Integer`` に設定し、MINとMAXを ``0`` と ``10`` に設定します。
 
     .. image:: img/sp220610_165328.png
- 
-#. Now go to the **Wed Dashboard** page, drag a **Switch** widget to set its data stream to **V0** and a **Label** widget to set its data stream to **V8**.
+
+#. 今度は **Wed Dashboard** ページに移動し、 **Switch** ウィジェットをドラッグしてデータストリームを **V0** に、 **Label** ウィジェットをドラッグしてデータストリームを **V8** に設定します。
 
     .. image:: img/sp220610_165548.png
 
-**3. Run the Code**
 
-#. Open the ``7.current_limiting_gate.ino`` file under the path of ``3in1-kit\iot_project\7.current_limiting_gate``, or copy this code into **Arduino IDE**.
+**3. コードの実行**
+
+#. ``3in1-kit\iot_project\7.current_limiting_gate`` のパスの下で ``7.current_limiting_gate.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/bd829175-652f-4c3e-85b0-048c3fda4555/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. ``Template ID``、 ``Device Name``、および ``Auth Token`` を自分のものに置き換えます。使用しているWiFiの ``ssid`` および ``password`` も入力する必要があります。詳しいチュートリアルは、 :ref:`connect_blynk` を参照してください。
+#. 適切なボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニター（ボーレートを115200に設定）を開き、成功した接続などのプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示された場合は、以下の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R4 board.
+        * 9Vのバッテリーが接続されていることを確認してください。
+        * RSTピンを1秒間GNDに接続してESP8266モジュールをリセットし、その後、それを取り外します。
+        * R4ボード上のリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        これらの操作を3〜5回繰り返す必要があることがあります。忍耐強く行ってください。
 
-#. Now click on the Button Control widget on Blynk to enable the smart door system. If the IR obstacle avoidance module detects an obstacle, the gate will open and the 7-segment display and the Count widget on Blynk will add 1.
+#. Blynk上のButton Controlウィジェットをクリックしてスマートドアシステムを有効にします。IR障害物回避モジュールが障害物を検出すると、ゲートが開き、7セグメントディスプレイとBlynk上のCountウィジェットに1が加算されます。
 
     .. image:: img/sp220610_165548.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. モバイルデバイスでBlynkを使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
     .. image:: img/mobile_gate.jpg
 
-**How it works?**
+**どのように動作するのか？**
 
-The function ``BLYNK_WRITE(V0)`` gets the status of the **Switch** widget and assigns it to the variable ``doorFlag``, which will be used to determine if the smart gate system is enabled or not.
+関数 ``BLYNK_WRITE(V0)`` は **Switch** ウィジェットのステータスを取得し、それを変数 ``doorFlag`` に割り当てます。これはスマートゲートシステムが有効かどうかを判断するために使用されます。
 
 .. code-block:: arduino
 
     BLYNK_WRITE(V0)
     {
-        doorFlag = param.asInt(); // Enable Gate
+        doorFlag = param.asInt(); // ゲートを有効にする
     }
 
-In the Blynk Timer, ``doorFlag`` is judged every second and if it is enabled, the main function of the gate is executed.
+Blynkタイマーでは、 ``doorFlag`` は毎秒判断され、有効な場合、ゲートの主要な関数が実行されます。
 
 .. code-block:: arduino
 
@@ -128,16 +129,16 @@ In the Blynk Timer, ``doorFlag`` is judged every second and if it is enabled, th
         }
     }
 
-The main function of the gate is ``channelEntrance()``.
-When an object approaches the gate (the sensor detects that there is an obstacle), the ``count`` is increased by 1.
-Write ``count`` to the datastream ``V8``  of Blynk Cloud and 7-segment display on the circuit, and open the door.
-If the object goes from present to absent, which means the object has entered the door, close the door.
+ゲートの主要な関数は ``channelEntrance()`` です。
+オブジェクトがゲートに近づくと（センサーが障害物があることを検出すると）、 ``count`` は1増加します。
+``count`` をBlynk Cloudのデータストリーム ``V8`` と回路上の7セグメントディスプレイに書き込み、ドアを開きます。
+オブジェクトが現在から欠如する場合、つまりオブジェクトがドアに入った場合、ドアを閉じます。
 
 .. code-block:: arduino
 
     void channelEntrance()
     {
-        int currentState = digitalRead(irPin); // 0:obstacle 1:no-obstacle
+        int currentState = digitalRead(irPin); // 0:障害物 1:障害物なし
         if (currentState == 0 && lastState == 1) {
             count=(count+1)%10;
             Blynk.virtualWrite(V8, count);
@@ -149,18 +150,19 @@ If the object goes from present to absent, which means the object has entered th
         lastState = currentState;
     }
 
-The function ``showNumber(int num)`` is used to make the 7-segment display show the value.
+関数 ``showNumber(int num)`` は、7セグメントディスプレイに値を表示するために使用されます。
 
 .. code-block:: arduino
 
     void showNumber(int num)
     {
-        digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
+        digitalWrite(STcp, LOW); //ST_CPをグラウンドにし、データを送信している間、ローに保持します
         shiftOut(DS, SHcp, MSBFIRST, datArray[num]);
-        digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
+        digitalWrite(STcp, HIGH); //データを保存するためにST_CPをプルアップします
     }
 
-The function ``operateGate(bool openGate)`` slowly opens the door when the reference is ``True``, and slowly closes the door when the reference is ``False``.
+関数 ``operateGate(bool openGate)`` は、参照が ``True`` の場合、ゆっくりとドアを開き、参照が ``False`` の場合、ゆっくりとドアを閉じます。
+
 
 .. code-block:: arduino
 

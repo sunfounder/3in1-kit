@@ -1,39 +1,39 @@
 .. _ar_beep:
 
-1.2 Beep
+1.2 ビープ音
 ==================
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+アクティブブザーは、LEDを点灯させるのと同じくらい使いやすい典型的なデジタル出力デバイスです！
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+アクティブブザーを使用する必要があります。裏返してみると、封印された背面（露出したPCBでない方）が私たちの求めているものです。
 
 .. image:: img/buzzer.png
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です、リンクはこちら： 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -44,29 +44,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.2_beep.png
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/1.2_beep_bb.png
     :width: 400
     :align: center
 
-**Code**
-
+**コード**
 
 .. note::
 
-   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\learning_project\1.2.beep``. 
-   * Or copy this code into **Arduino IDE**.
-   
+   * ファイル ``1.2.beep.ino`` をパス ``3in1-kit\learning_project\1.2.beep`` で開くことができます。 
+   * または、このコードを **Arduino IDE** にコピーしてください。
    
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95570ca2-11c6-404c-a23f-bf03094d8085/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+コードが正常にアップロードされた後、1秒ごとにビープ音が聞こえるでしょう。

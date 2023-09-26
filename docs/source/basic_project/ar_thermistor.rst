@@ -1,44 +1,44 @@
 .. _ar_temp:
 
-4.5 Thermometer
+4.5 温度計
 ===========================
 
-A thermometer is a device that measures temperature or a temperature gradient (the degree of hotness or coldness of an object). 
-A thermometer has two important elements: (1) a temperature sensor (e.g. the bulb of a mercury-in-glass thermometer or the pyrometric sensor in an infrared thermometer) in which some change occurs with a change in temperature; 
-and (2) some means of converting this change into a numerical value (e.g. the visible scale that is marked on a mercury-in-glass thermometer or the digital readout on an infrared model). 
-Thermometers are widely used in technology and industry to monitor processes, in meteorology, in medicine, and in scientific research.
+温度計は温度または温度勾配（物体の熱さまたは冷たさの度合い）を測定する装置です。
+温度計には2つの重要な要素があります：(1) 温度センサ（例えば、水銀ガラス温度計の球根や赤外線温度計の焼結センサ）で、これには温度の変化とともに何らかの変化が生じます;
+そして(2) この変化を数値として変換する手段（例えば、水銀ガラス温度計に表示されている目盛りや赤外線モデルのデジタル表示）。
+温度計は、工業や産業のプロセスを監視するため、気象学、医学、科学研究で広く使用されています。
 
-A thermistor is a type of temperature sensor whose resistance is strongly dependent on temperature, and it has two types: 
-Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC), 
-also known as NTC and PTC. The resistance of PTC thermistor increases with temperature, while the condition of NTC is opposite to the former.
+サーミスターは、その抵抗が温度に強く依存するタイプの温度センサであり、2つのタイプがあります：
+負温度係数(NTC)と正温度係数(PTC)、
+これはNTCとPTCとしても知られています。 PTCサーミスターの抵抗は温度とともに増加し、NTCの条件は前者とは逆です。
 
-In this experiment we use an **NTC thermistor** to make a thermometer.
+この実験では、 **NTCサーミスター** を使用して温度計を作成します。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは確かに便利です。リンクは以下のとおりです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -51,57 +51,52 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_5.5_thermistor.png
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+各サーミスターには通常の抵抗があります。ここでは、それは10kオームで、これは25度セルシウスで測定されます。
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+温度が上昇すると、サーミスターの抵抗は減少します。その後、A/Dアダプタによって電圧データがデジタル量に変換されます。
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+セルシウス度または華氏度の温度はプログラムによって出力されます。
 
-Here is the relation between the resistance and temperature: 
+抵抗と温度の関係は以下の通りです：
 
     **RT =RN expB(1/TK – 1/TN)** 
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** は、温度が **TK** のときのNTCサーミスターの抵抗です。
+    * **RN** は、定格温度TNでのNTCサーミスターの抵抗です。ここで、RNの数値は10kです。
+    * **TK** はケルビン温度で、単位はKです。ここでは、 **TK** の数値は ``273.15 + セルシウス度`` です。
+    * **TN** は定格ケルビン温度で、単位もKです。ここでは、TNの数値は ``273.15+25`` です。
+    * **B(ベータ)**、NTCサーミスターの材料定数は、数値が ``3950`` の熱感受性指数としても知られています。
+    * **exp** は指数関数の略で、基数 ``e`` は自然数で、約2.7と等しい。
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    この式 ``TK=1/(ln(RT/RN)/B+1/TN)`` を変換して、ケルビン温度から273.15を引くとセルシウス度となります。
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    この関係は経験的な式です。温度と抵抗が有効範囲内にある場合にのみ正確です。
 
-**Wiring**
+**配線図**
 
 .. note::
-    * The thermistor is black or green and marked 103.
+    * サーミスターは黒色または緑色で、103とマークされています。
 
 .. image:: img/4.5_thermistor_bb.png
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``4.5_thermometer.ino`` under the path of ``euler-kit/arduino/4.5_thermometer``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
+   * ファイル ``4.5_thermometer.ino`` を ``euler-kit/arduino/4.5_thermometer`` のパスの下で開いてください。
+   * または、このコードを **Arduino IDE** にコピーしてください。
 
-    Don't forget to select the Raspberry Pi Pico board and the correct port before clicking the Upload button.
-
+    アップロードボタンをクリックする前に、Raspberry Pi Picoボードと正しいポートを選択してください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1ceb0ea2-a330-4052-824d-bd6762c6f0e0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
-
+コードが正常にアップロードされると、シリアルモニターはセルシウス度と華氏度の温度を表示します。
 

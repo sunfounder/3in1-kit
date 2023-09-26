@@ -1,48 +1,48 @@
 .. _ar_motor:
 
-1.3 Turn the Wheel
+1.3 車輪を回す
 ============================
 
-A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, 
-and the large current may damage the main control board such as R4 board.
-Therefore, an motor driver module is used in this occasion, 
-which is a good helper for the R4 board to control the motor safely.
+モーターは典型的なデジタル出力デバイスであり、LEDと同じ方法で使用されます。
+ただし、モーターは大電流で駆動する必要があり、
+その大電流はR4ボードなどのメインコントロールボードを損傷させる可能性があります。
+したがって、このような場合にはモータードライバーモジュールが使用され、
+これはR4ボードがモーターを安全に制御するのに役立ちます。
 
-.. **Schematic**
+.. **回路図**
 
 .. .. image:: img/circuit_1.3_wheel.png
 
-.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1〜IN4はL298Nモジュールの入力であり、OUT1〜OUT4は出力です。
 
-.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. それらを使用する簡単な方法は次のとおりです: INxに高レベルを入力すると、OUTxは高レベルを出力します。INxに低レベルを入力すると、OUTxは低レベルを出力します。
+.. モーターの両端をOUT1とOUT2に接続し、IN1とIN2に対して逆のレベル信号を入力すると、モーターが回転します。OUT3とOUT4も同じ方法で使用できます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です、リンクはこちら： 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -53,21 +53,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
-
+**回路図**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-
-**Wiring**
+**配線図**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L9110S
-      - R4 Board
-      - Motor
+      - R4ボード
+      - モーター
     * - VCC
       - 5V
       - 
@@ -82,24 +80,25 @@ You can also buy them separately from the links below.
       - 
     * - OA
       - 
-      - one wire of the motor
+      - モーターのワイヤー
     * - OB
       - 
-      - one wire of the motor
+      - モーターのワイヤー
 
 .. image:: img/1.3_turn_the_wheel_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\learning_project\1.3.turn_the_wheel``. 
-   * Or copy this code into **Arduino IDE**.
+   * ファイル ``1.3.turn_the_wheel.ino`` をパス ``3in1-kit\learning_project\1.3.turn_the_wheel`` で開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
    
    
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5f8e4f33-883b-4c06-9516-f1754ea2121d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+

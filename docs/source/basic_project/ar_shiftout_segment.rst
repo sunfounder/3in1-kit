@@ -1,42 +1,41 @@
 .. _ar_segment:
 
+5.10 シフトアウト(セグメントディスプレイ)
+===========================================
 
-5.10 ShiftOut(Segment Display)
-===================================
+以前、私たちは ``shiftout()`` 関数を使用して8つのLEDを点灯させましたが、このセクションでは7セグメントディスプレイで0-9を表示させる方法を学びます。
 
-Previously, we used the ``shiftout()`` function to light up eight LEDs; here we use it to display 0-9 on the 7-aegment Display.
-
-The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 strip-shaped LEDs form an "8" shape, and there is a slightly smaller dotted LED as a decimal point. These LEDs are marked as a, b, c, d, e, f, g, and dp. They have their own anode pins and share cathodes. Their pin locations are shown in the figure below.
+7セグメントディスプレイは、実質的に8つのLEDで構成されており、そのうちの7つのストリップ形状のLEDが「8」の形を作り、小さめのドットのLEDが小数点として機能します。これらのLEDは、a、b、c、d、e、f、g、およびdpとしてマークされています。それぞれが独自のアノードピンを持ち、カソードを共有しています。ピンの位置関係は下図に示されています。
 
 .. image:: img/segment_cathode.png
     :width: 600
     :align: center
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式をまとめて購入するのがおすすめです。リンクは以下になります：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -51,18 +50,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_6.5_segment.png
 
-**Wiring**
+**配線図**
 
-.. list-table:: Wiring
+.. list-table:: 配線
     :widths: 15 25
     :header-rows: 1
 
     *   - 74HC595
-        - LED Segment Display
+        - LEDセグメントディスプレイ
     *   - Q0
         - a
     *   - Q1
@@ -84,12 +83,12 @@ You can also buy them separately from the links below.
     :width: 600
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.10.shiftout_segment.ino`` file under the path of ``3in1-kit\learning_project\5.10.shiftout_segment``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\learning_project\5.10.shiftout_segment`` のパスの下にある ``5.10.shiftout_segment.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
     
 
@@ -97,36 +96,36 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/23b9a3ea-c648-4f33-8622-e279d94ee507/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will be able to see the LED Segment Display display 0~9 in sequence.
+コードのアップロードが成功した後、LEDセグメントディスプレイで0~9が順番に表示されることが確認できます。
 
-**How it works?**
+**どのように動作するのか？**
 
-``shiftOut()`` will make 74HC595 output 8 digital signals.
-It outputs the last bit of the binary number to Q0, 
-and the output of the first bit to Q7. In other words, 
-writing the binary number "00000001" will make Q0 output high level and Q1~Q7 output low level.
+``shiftOut()`` は74HC595に8つのデジタル信号を出力させます。
+最後のビットのバイナリ数をQ0に、
+最初のビットの出力をQ7に出力します。つまり、
+バイナリ数「00000001」を書くと、Q0はハイレベルを出力し、Q1~Q7はローレベルを出力します。
 
-Suppose that the 7-segment Display display the number "2", 
-we need to write a high level for a, b, d, e and g, and write a low level for c, f and dp.
-That is, the binary number " 01011011" needs to be written. 
-For readability, we will use hexadecimal notation as "0x5b".
+7セグメントディスプレイで数字「2」を表示すると仮定します。
+a, b, d, e, gにハイレベルを書き、c, f, dpにローレベルを書く必要があります。
+つまり、バイナリ数「01011011」を書く必要があります。
+可読性のため、16進数の表記「0x5b」を使用します。
 
 .. image:: img/7_segment2.png
 
-* `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
+* `16進数 <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
-* `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
+* `BinaryHex 変換ツール <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-Similarly, we can also make the 7-Segment Display display other numbers in the same way. 
-The following table shows the codes corresponding to these numbers.
+同様に、同じ方法で7セグメントディスプレイに他の数字を表示させることもできます。
+以下のテーブルは、これらの数字に対応するコードを示しています。
 
-.. list-table:: Glyph Code
+.. list-table:: グリフコード
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Numbers	
-        - Binary Code
-        - Hex Code  
+    *   - 数字	
+        - バイナリコード
+        - 16進数コード  
     *   - 0	
         - 00111111	
         - 0x3f
@@ -158,4 +157,4 @@ The following table shows the codes corresponding to these numbers.
         - 01101111	
         - 0x6f
 
-Write these codes into ``shiftOut()`` to make the LED Segment Display display the corresponding numbers.
+これらのコードを ``shiftOut()`` に入力すると、LEDセグメントディスプレイに対応する数字が表示されます。

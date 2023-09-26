@@ -3,39 +3,39 @@
 5.9 ShiftOut(LED)
 =======================
 
-``shiftOut()`` will make 74HC595 output 8 digital signals. It outputs the last bit of the binary number to Q0, and the output of the first bit to Q7. In other words, writing the binary number “00000001” will make Q0 output high level and Q1~Q7 output low level.
+``shiftOut()`` は74HC595に8つのデジタル信号を出力させることができます。バイナリ番号の最後のビットをQ0に、最初のビットをQ7に出力します。言い換えれば、バイナリ番号「00000001」を書き込むと、Q0は高レベルを出力し、Q1〜Q7は低レベルを出力します。
 
-In this project, you will learn how to use 74HC595. 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
+このプロジェクトでは、74HC595の使用方法を学びます。74HC595は、三状態並列出力を持つ8ビットシフトレジスタとストレージレジスタで構成されています。これにより、シリアル入力を並列出力に変換し、MCUのIOポートを節約できます。
 
-Specifically, 74hc595 can replace 8 pins for digital signal output by writing an 8-bit binary number.
+具体的には、74hc595は8ビットのバイナリ数を書き込むことで、デジタル信号出力のための8つのピンを代替できます。
 
-* `Binary number - Wikipedia <https://en.wikipedia.org/wiki/Binary_number>`_
+* `バイナリ数 - Wikipedia <https://en.wikipedia.org/wiki/Binary_number>`_
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入するのが非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 名前
+        - このキットの内容
+        - リンク
+    *   - 3 in 1 スターターキット
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -50,68 +50,66 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_6.4_74hc595.png
 
-* When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp.
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register.
-* There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register.
-* The memory register outputs a Bus with a parallel 8-bit and in three states.
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* MR（ピン10）が高レベルで、OE（ピン13）が低レベルのとき、SHcpの立ち上がりエッジでデータが入力され、SHcpの立ち上がりエッジを経てメモリレジスタに移動します。
+* 二つのクロックが一緒に接続されている場合、シフトレジスタはメモリレジスタより常に一つのパルスが早いです。
+* メモリレジスタには、シリアルシフト入力ピン(Ds)、シリアル出力ピン(Q)、非同期リセットボタン(低レベル)があります。
+* メモリレジスタは、3つの状態での並列8ビットのバスを出力します。
+* OEが有効（低レベル）のとき、メモリレジスタのデータがバス(Q0 ~ Q7)に出力されます。
 
-**Wiring**
+**配線図**
 
 .. image:: img/5.9_74hc595_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.9.shiftout_led.ino`` file under the path of ``3in1-kit\learning_project\5.9.shiftout_led``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * ``3in1-kit\learning_project\5.9.shiftout_led`` のパスの下の ``5.9.shiftout_led.ino`` ファイルを開いてください。
+    * または、このコードを **Arduino IDE** にコピーしてください。
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4c208eb3-67f0-40f7-999a-0eeca8b6b466/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-When you finish uploading the codes to the R4 board, you can see the LEDs turning on one after another.
 
-**How it works?**
+コードをR4ボードにアップロードすると、LEDが順番に点灯するのが確認できます。
 
-Declare an array, 
-store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+**どのように動作するのか？**
+
+配列を宣言し、74HC595で制御される8つのLEDの動作状態を変更するために使用されるいくつかの8ビットバイナリ数を格納します。
 
 .. code-block:: arduino
 
     int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
 
-Set ``STcp`` to low level first and then high level. 
-It will generate a rising edge pulse of STcp.
+最初に ``STcp`` を低レベルに設定し、次に高レベルに設定します。
+これにより、STcpの立ち上がりエッジのパルスが生成されます。
 
 .. code-block:: arduino
 
     digitalWrite(STcp,LOW); 
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, 
-which means to shift a byte of data in ``datArray[num]`` to the shifting register with 
-the ``DS`` pin. **MSBFIRST** means to move from high bits.
+``shiftOut()`` は、一度に1ビットのデータをシフトアウトするために使用されます。
+つまり、 ``datArray[num]`` のデータの1バイトを ``DS`` ピンでシフトレジスタにシフトします。 **MSBFIRST** は高ビットから移動することを意味します。
 
 .. code-block:: arduino
 
     shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 
-After ``digitalWrite(STcp,HIGH)`` is run, the ``STcp`` will be at the rising edge. 
-At this time, the data in the shift register will be moved to the memory register. 
+``digitalWrite(STcp,HIGH)`` が実行されると、 ``STcp`` は立ち上がりエッジになります。
+この時、シフトレジスタのデータがメモリレジスタに移動します。
 
 .. code-block:: arduino
 
     digitalWrite(STcp,HIGH);
 
-A byte of data will be transferred into the memory register after 8 times. 
-Then the data of memory register are output to the bus (Q0-Q7). 
-For example, shiftout ``B00000001`` will light up the LED controlled by Q0 and turn off the LED controlled by Q1~Q7. 
+8回後、1バイトのデータがメモリレジスタに転送されます。
+その後、メモリレジスタのデータがバス(Q0-Q7)に出力されます。
+例えば、 ``B00000001`` をシフトアウトすると、Q0で制御されるLEDが点灯し、Q1〜Q7で制御されるLEDが消灯します。
+

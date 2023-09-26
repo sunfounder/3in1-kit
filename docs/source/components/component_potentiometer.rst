@@ -1,48 +1,45 @@
 .. _cpn_potentiometer:
 
-Potentiometer
-===============
+ポテンショメーター
+====================
 
 .. image:: img/potentiometer.png
     :align: center
     :width: 150
 
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. 
+ポテンショメーターは3つの端子を持つ抵抗成分でもあり、その抵抗値は一定の変動に応じて調整することができます。
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+ポテンショメーターにはさまざまな形、サイズ、値がありますが、以下の共通点があります。
 
-* They have three terminals (or connection points).
-* They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-* The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+* 3つの端子（または接続点）を持っています。
+* 抵抗を変化させるためのノブ、ネジ、またはスライダーがあります。これは中央の端子と外側の端子の一方との間の抵抗を変化させるために動かすことができます。
+* ノブ、ネジ、またはスライダーが動かされると、中央の端子と外側の端子の一方との間の抵抗は0Ωからポテンショメーターの最大抵抗まで変わります。
 
-Here is the circuit symbol of potentiometer. 
+以下は、ポテンショメーターの回路記号です。
 
 .. image:: img/potentiometer_symbol.png
     :align: center
     :width: 400
 
+回路におけるポテンショメーターの機能は以下の通りです：
 
-The functions of the potentiometer in the circuit are as follows: 
+#. 電圧分配器としての役割
 
-#. Serving as a voltage divider
+    ポテンショメーターは、連続的に調整可能な抵抗器です。ポテンショメーターのシャフトやスライドハンドルを調整すると、可動接点が抵抗体上をスライドします。このとき、ポテンショメーターに印加される電圧と、可動アームが回転した角度や移動した距離に応じて電圧が出力されます。
 
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor.  At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made. 
+#. レオスタットとしての役割
 
-#. Serving as a rheostat
+    ポテンショメーターをレオスタットとして使用する場合、中央のピンと他の2つのピンのいずれかを回路に接続します。こうすることで、移動接触の移動範囲内でスムーズに変化する抵抗値を取得できます。
 
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact. 
+#. 電流コントローラーとしての役割
 
-#. Serving as a current controller
+    ポテンショメーターが電流コントローラーとして動作する場合、スライド接触端子を出力端子の一方として接続する必要があります。
 
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+ポテンショメーターについての詳細はこちらを参照してください： `ポテンショメーター - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
 
-If you want to know more about potentiometer, refer to: `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
+**例**
 
-**Example**
+* :ref:`ar_potentiometer` (基本プロジェクト)
 
-* :ref:`ar_potentiometer` (Basic Project)
-
-.. * :ref:`sh_moving_mouse` (Scratch Project)
-.. * :ref:`sh_breakout_clone` (Scratch Project)
-
-
+.. * :ref:`sh_moving_mouse` (Scratchプロジェクト)
+.. * :ref:`sh_breakout_clone` (Scratchプロジェクト)

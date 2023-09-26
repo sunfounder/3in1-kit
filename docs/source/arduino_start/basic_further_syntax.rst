@@ -1,24 +1,22 @@
-Sketch Writing Rule
+スケッチの書き方のルール
 ================================
 
+友達に照明をつけてもらう場合、「照明をつけてください」とか「ライトをつけて、兄弟！」など、好きな口調で言うことができます。
 
-If you ask a friend to turn on the lights for you, you can say "Turn on the lights.", or "Lights on, bro.", you can use any tone of voice you want.
+しかし、Arduinoボードに何かをしてもらいたい場合、Arduinoプログラムの書き方のルールに従ってコマンドを入力する必要があります。
 
-However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands.
+この章では、Arduino言語の基本的なルールを紹介し、自然言語をコードに翻訳する方法を理解するのに役立ちます。
 
-This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code.
+もちろん、これは慣れるまで時間がかかるプロセスであり、初心者にとっては最もエラーが発生しやすい部分でもあるので、頻繁に間違えることがあっても大丈夫です。何度も試してみてください。
 
-Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times.
+セミコロン ``;``
+--------------------
 
+手紙を書く時、各文の最後にピリオドを書くように、Arduino言語では、コマンドの終了をボードに伝えるために ``;`` を使用する必要があります。
 
-Semicolon ``;``
----------------
+「オンボードLEDの点滅」の例を取り上げてみましょう。正常なスケッチは以下のようになります。
 
-Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command.
-
-Take the familiar "onboard LED blinking" example. A healthy sketch should look like this.
-
-Example:
+例:
 
 .. code-block:: C
 
@@ -35,9 +33,9 @@ Example:
         delay(500);
     }
 
-Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them.
+次に、以下の2つのスケッチを見て、実行する前にArduinoで正しく認識できるかを推測してみましょう。
 
-Sketch A:
+スケッチA:
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
@@ -55,7 +53,7 @@ Sketch A:
         delay(500)
     }
 
-Sketch B:
+スケッチB:
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11,12,13,14,15,16
@@ -78,30 +76,30 @@ Sketch B:
         ;
     }
 
-The result is that **Sketch A** reports an error and **Sketch B** runs.
+結果としては、 **スケッチA** はエラーを報告し、 **スケッチB** は実行されます。
 
-* The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it.
-* **Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example.
+* **スケッチA** のエラーは、 ``;`` が欠落していることで、見た目は正常に見えますが、Arduinoは読み取ることができません。
+* **スケッチB** は、人間にとっては反対に見えますが、実際には、インデント、改行、ステートメント内のスペースなど、Arduinoのプログラムには存在しないものですので、Arduinoのコンパイラにとっては、例と同じに見えます。
 
-However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble.
+しかし、 **スケッチB** のようにコードを書かないでください。コードを書き、表示するのは通常、人間ですので、自分自身を困らせないでください。
 
-
-Curlybraces ``{}``
+中括弧 ``{}``
 ------------------
 
-``{}`` is the main component of the Arduino programming language, and they must appear in pairs. 
-A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement.
+``{}`` はArduinoプログラミング言語の主要な構成要素で、ペアで表示される必要があります。
+良いプログラムの慣習として、左の中括弧を入力した直後に右の中括弧を入力し、中括弧の間にカーソルを移動してステートメントを挿入するのが良いでしょう。
 
 
 
-Commment ``//``
+
+コメント ``//``
 ---------------
 
-Commment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
+コメントはコンパイラが無視するスケッチの部分です。プログラムの動作方法を他者に伝えるために通常使用されます。
 
-If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
+コードの行に2つの連続したスラッシュを書くと、コンパイラはその行の終わりまでの内容を全て無視します。
 
-If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way.
+新しいスケッチを作成すると、2つのコメントが付属してきます。これら2つのコメントを削除しても、スケッチには何の影響もありません。
 
 .. code-block:: C
     :emphasize-lines: 2,7
@@ -116,25 +114,24 @@ If we create a new sketch, it comes with two comments, and if we remove these tw
 
     }
 
+プログラミングにおいてコメントは非常に便利で、以下にいくつかの一般的な使用例を示します。
 
-Comment is very useful in programming, and several common uses are listed below.
-
-* Usage A: Tell yourself or others what this section of code does.
+* 使用法A：このコードのセクションが何をするのかを自分自身や他者に伝える。
 
 .. code-block:: C
 
     void setup() {
-        pinMode(13,OUTPUT); //Set pin 13 to output mode, it controls the onboard LED
+        pinMode(13,OUTPUT); //ピン13を出力モードに設定、オンボードLEDを制御
     }
 
     void loop() {
-        digitalWrite(13,HIGH); // Activate the onboard LED by setting pin 13 high
-        delay(500); // Status quo for 500 ms
-        digitalWrite(13,LOW); // Turn off the onboard LED
-        delay(500);// Status quo for 500 ms
+        digitalWrite(13,HIGH); // ピン13をHIGHにしてオンボードLEDを点灯
+        delay(500); // 500msの状態維持
+        digitalWrite(13,LOW); // オンボードLEDを消灯
+        delay(500); // 500msの状態維持
     }
 
-* Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors.
+* 使用法B：一時的にいくつかの文を無効にし（削除せずに）、使用する必要があるときにコメントを外す。これはコードのデバッグやプログラムエラーの特定を試みる際に非常に便利です。
 
 .. code-block:: C
     :emphasize-lines: 3,4,5,6
@@ -155,14 +152,14 @@ Comment is very useful in programming, and several common uses are listed below.
     }    
 
 .. note:: 
-    Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
+    コードを迅速にコメントする、またはコメントを解除するのに、ショートカット ``Ctrl+/`` を使用してください。
 
-Commment ``/**/``
+コメント ``/**/``
 ------------------
 
-Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.
+``//`` によるコメントと同様です。このタイプのコメントは複数行にわたることができ、コンパイラが ``/*`` を読み取ると、 ``*/`` に遭遇するまでの続く内容をすべて無視します。
 
-Example 1:
+例1:
 
 .. code-block:: C
     :emphasize-lines: 1,8,9,10,11
@@ -175,8 +172,8 @@ Example 1:
 
     void loop() {
         /*
-        The following code will blink the onboard LED
-        You can modify the number in delay() to change the blinking frequency
+        以下のコードはオンボードLEDを点滅させます
+        delay()内の数字を変更することで点滅の頻度を変えることができます
         */
         digitalWrite(13,HIGH); 
         delay(500); 
@@ -185,18 +182,19 @@ Example 1:
     }
 
 
+
 ``#define``
 --------------
 
-This is a useful C++ tool.
+これは役立つC++のツールです。
 
 .. code-block:: C
 
     #define identifier token-string
 
-The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions.
+コンパイラは ``identifier`` を読み取ったときに自動的に ``token-string`` に置き換えます。これは通常、定数の定義に使用されます。
 
-As an example, here is a sketch that uses define, which improves the readability of the code.
+例として、defineを使用するスケッチを以下に示します。これによりコードの可読性が向上します。
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -215,7 +213,7 @@ As an example, here is a sketch that uses define, which improves the readability
         delay(DELAY_TIME);
     }
 
-To the compiler, it actually looks like this.
+コンパイラにとって、実際には次のように見えます。
 
 .. code-block:: C
 
@@ -230,12 +228,12 @@ To the compiler, it actually looks like this.
         delay(500);
     }
 
-We can see that the ``identifier`` is replaced and does not exist inside the program.
-Therefore, there are several caveats when using it.
+``identifier`` が置き換えられ、プログラム内には存在しないことがわかります。
+そのため、使用する際にいくつか注意点があります。
 
-1. A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program.
+1. ``token-string`` は手動でのみ変更でき、プログラム内の算術によって他の値に変換することはできません。
 
-2. Avoid using symbols such as ``;``. For example.
+2. ``;`` のような記号の使用を避けてください。例えば、以下のように。
 
 .. code-block:: C
     :emphasize-lines: 1
@@ -250,7 +248,7 @@ Therefore, there are several caveats when using it.
         digitalWrite(ONBOARD_LED,HIGH); 
     }
 
-The compiler will recognize it as the following, which is what will be reported as an error.
+コンパイラはそれを次のように認識します。これがエラーとして報告されるものです。
 
 .. code-block:: C
     :emphasize-lines: 2,6
@@ -264,4 +262,4 @@ The compiler will recognize it as the following, which is what will be reported 
     }
 
 .. note:: 
-    A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables.
+    ``#define`` の命名規則として、変数との混同を避けるために ``identifier`` を大文字にすることが推奨されています。

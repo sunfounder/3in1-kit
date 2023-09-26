@@ -1,37 +1,35 @@
 .. _ar_ir_obstacle:
 
-3.3 Detect the Obstacle
+3.3 障害物を検出する
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+このモジュールは、前方の障害物の存在を判断するために車やロボットに一般的に取り付けられています。また、携帯デバイスや水道の蛇口など、幅広い用途で使用されています。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは非常に便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -40,32 +38,27 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_3.3_obstacle.png
 
-The digital pin 2 is used to read the
-signal of IR Obstacle Avoidance Module. We get the VCC of IR
-Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
+デジタルピン2はIR障害物回避モジュールの信号を読むために使用されます。IRセンサーモジュールのVCCを5Vに、GNDをGNDに、OUTをデジタルピン2に接続します。
 
-**Wiring**
+**配線図**
 
 .. image:: img/3.3_detect_the_obstacle_bb.png
     :width: 800
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``3.3.detect_the_obstacle.ino`` under the path of ``3in1-kit\learning_project\3.3.detect_the_obstacle``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
-
+   * ``3in1-kit\learning_project\3.3.detect_the_obstacle`` のパスの下にある ``3.3.detect_the_obstacle.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/535a0304-684e-481d-b85d-403911b3a4e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the IR obstacle avoidance module detects something blocking in front of it, [0] will appear on the serial monitor, otherwise [1] will be displayed.
+IR障害物回避モジュールが前方に何かをブロックしていることを検出すると、シリアルモニターに[0]が表示され、それ以外の場合は[1]が表示されます。

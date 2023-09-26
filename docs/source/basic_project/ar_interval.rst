@@ -1,61 +1,43 @@
 .. _ar_interval:
 
-5.4 Interval
+5.4 インターバル
 ================
 
-Sometimes you need to do two things at once. For example you might want
-to blink an LED while reading a button press. In this case, you can't
-use ``delay()``, because Arduino pauses your program during the ``delay()``. If
-the button is pressed while Arduino is paused waiting for the ``delay()`` to
-pass, your program will miss the button press.
+時には、二つのことを同時に行いたい場合があります。例えば、LEDを点滅させながらボタンの押下を読み取りたい場合などです。この場合、 ``delay()`` は使用できません。なぜなら、Arduinoは ``delay()`` の間プログラムを一時停止させるからです。もしボタンがArduinoが ``delay()`` の待ち時間中に押された場合、プログラムはボタンの押下を検出できません。
 
-An analogy would be warming up a pizza in your microwave, and also
-waiting some important email. You put the pizza in the microwave and set
-it for 10 minutes. The analogy to using ``delay()`` would be to sit in front
-of the microwave watching the timer count down from 10 minutes until the
-timer reaches zero. If the important email arrives during this time you
-will miss it.
+この状況を例えるなら、電子レンジでピザを温めながら、重要なメールを待つシチュエーションです。ピザを電子レンジに入れ、10分設定します。 ``delay()`` の使用を例えると、電子レンジの前でタイマーが0になるのを見つめることになります。この間に重要なメールが届いた場合、それを見逃してしまいます。
 
-What you would do in real life would be to turn on the pizza, and then
-check your email, and then maybe do something else (that doesn't take
-too long!) and every so often you will come back to the microwave to see
-if the timer has reached zero, indicating that your pizza is done.
+実際には、ピザのタイマーをセットし、メールを確認し、他の短い作業を行い、時折電子レンジのタイマーをチェックすることでしょう。
 
-This sketch demonstrates how to tone an buzzer without using ``delay()``. 
-It turns the buzzer on and then makes note of the time. Then, each time
-through ``loop()``, it checks to see if the desired interval time has passed.
-If it has, it tone the buzzer and makes note of the new time.
-In this way the buzzer tones continuously while the sketch execution never
-lags on a single instruction.
+このスケッチでは、 ``delay()`` を使わずにブザーを鳴らす方法を示しています。ブザーをオンにして、現在の時間を記録します。そして、 ``loop()`` のたびに、指定されたインターバル時間が経過したかどうかをチェックします。経過していれば、ブザーを鳴らし、新しい時間を記録します。この方法で、ブザーは連続して鳴らされ、スケッチの実行は一つの命令で遅れることがありません。
 
-Based on this condition, we can add the code of the button to control the LED, 
-it will not be disturbed by the buzzer playing music.
+この条件に基づき、ブザーが音楽を奏でるのを邪魔されることなく、LEDを制御するボタンのコードを追加することができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。購入リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - \-
@@ -72,12 +54,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**Schematic**
+
+**回路図**
 
 .. image:: img/circuit_8.5_interval.png
 
-
-**Wiring**
+**配線図**
 
 .. image:: img/5.4_interval_bb.png
     :width: 600
@@ -85,45 +67,43 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\learning_project\5.4.interval``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * ``3in1-kit\learning_project\5.4.interval`` のパスの下の ``5.4.interval.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
 
-**How it works?**
+コードが正常にアップロードされると、ブザーが音楽を再生します。ボタンを押すたびに、LEDが点灯します。LEDとブザーの動作は互いに干渉しません。
 
+**どのように動作するのか？**
 
-Initial a variable named ``previousMillis`` to store previous operating time of microcontroller.
+マイコンの前回の動作時間を格納するための変数 ``previousMillis`` を初期化します。
 
 .. code-block:: arduino
 
     unsigned long previousMillis = 0;     
 
-Mark which note is played.
+どの音符が再生されているかをマークします。
 
 .. code-block:: arduino
 
     int thisNote=0; 
 
-The interval time of each note.
+各音符の間隔時間。
 
 .. code-block:: arduino
 
     long interval = 1000; 
 
-In ``loop()``, declare ``currentMillis`` to store the current time.
+``loop()`` 内で、現在の時間を格納するための ``currentMillis`` を宣言します。
 
 .. code-block:: arduino
 
     unsigned long currentMillis = millis();
 
-When the interval between the current operating time and last updating time is larger than 1000ms, certain functions are triggered. Meanwhile, update the previousMillis to the current time for the next triggering that is to happen 1 second latter.  
+現在の動作時間と最後の更新時間の間隔が1000msより大きい場合、特定の関数がトリガされます。その後、次のトリガが1秒後に発生するため、previousMillisを現在の時間に更新します。
 
 .. code-block:: arduino
 
@@ -132,7 +112,7 @@ When the interval between the current operating time and last updating time is l
         //...
     }
 
-Play the notes in the melody one by one.
+メロディの音符を順番に再生します。
 
 .. code-block:: arduino
 
@@ -140,7 +120,7 @@ Play the notes in the melody one by one.
     interval=1000/noteDurations[thisNote]; // interval at which to tone
     thisNote=(thisNote+1)%(sizeof(melody)/2); //iterate over the notes of the melody
 
-The button control the LED.
+ボタンはLEDを制御します。
 
 .. code-block:: arduino
 
