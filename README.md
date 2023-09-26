@@ -18,7 +18,7 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
-2023-09-22:
+2023-09-26:
 - Japanese Translation
 - Remove the **Example** heading from component_capacitor.rst
 - Delete **2. Upload the Following Code to R4** in the R3 introduction of burn_firmware.rst
