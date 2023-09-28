@@ -3,32 +3,29 @@
 1. Digital Write
 ==============================
 
-**Digital Write** is to output or write a digital signal to a digital pin. The digital signal has only two states, 0 or 1, 0V or 5V, so it allows some components, such as the LED and buzzer, to be on or off.
+**Digital Write** bedeutet, ein digitales Signal an einen digitalen Pin auszugeben. Das digitale Signal hat nur zwei Zustände, 0 oder 1, 0V oder 5V, so dass es einigen Komponenten, wie z.B. der LED und dem Summer, ermöglicht, ein- oder ausgeschaltet zu werden.
 
-On the Arduino R4 board, there are 14 digital I/0 pins from 0 to 13, now use the ``pinMode()`` and ``digitalWrite()`` functions to write a high or low level to these digital pins.
+Auf dem Arduino R4-Board gibt es 14 digitale I/O-Pins von 0 bis 13. Jetzt verwenden Sie die Funktionen ``pinMode()`` und ``digitalWrite()`` um ein hohes oder niedriges Signal an diese digitalen Pins zu schreiben.
 
-
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``OUTPUT``. 
+* ``pinMode(pin, mode)``: Konfigurieren Sie den bestimmten Pin als ``INPUT`` oder ``OUTPUT``. Hier muss er als ``OUTPUT`` eingestellt werden.
 
    **Syntax**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: ``INPUT``, ``OUTPUT``, or ``INPUT_PULLUP``.
+   **Parameter**
+    * ``pin``: Die Pin-Nummer von Arduino, für die der Modus eingestellt werden soll.
+    * ``mode``: ``INPUT``, ``OUTPUT`` oder ``INPUT_PULLUP``.
 
-
-* ``digitalWrite(pin, value)``: Write a high level (5V) or a low level (0V) to a digital pin to change the operating state of the component. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+* ``digitalWrite(pin, value)``: Schreiben Sie ein hohes Signal (5V) oder ein niedriges Signal (0V) an einen digitalen Pin, um den Betriebszustand der Komponente zu ändern. Wenn der Pin mit pinMode() als OUTPUT konfiguriert wurde, wird seine Spannung auf den entsprechenden Wert eingestellt: 5V (oder 3,3V bei 3,3V Boards) für HIGH, 0V (Masse) für LOW.
 
    **Syntax**
       digitalWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number.
-    * ``value``: ``HIGH`` or ``LOW``.
+   **Parameter**
+    * ``pin``: Die Pin-Nummer von Arduino.
+    * ``value``: ``HIGH`` oder ``LOW``.
 
-**Example of Digital Write:**
+**Beispiel für Digital Write:**
 
 .. code-block:: arduino
 
@@ -47,16 +44,16 @@ On the Arduino R4 board, there are 14 digital I/0 pins from 0 to 13, now use the
 
 .. image:: img/1_led.jpg
 
+**Hinweise und Warnungen**
 
-**Notes and Warnings**
+* Die Pins 0~13 sind alle digitale Pins.
+* Verwenden Sie nicht die Pins 0 und 1, da sie zur Kommunikation mit dem Computer verwendet werden. Eine Verbindung zu diesen Pins würde die Kommunikation stören, einschließlich eines fehlgeschlagenen Hochladens auf das Board.
+* Wenn die digitalen Pins verbraucht sind, können die analogen Pins (A0-A5) auch als digitale Pins verwendet werden.
 
-* The pins 0~13 are all digital pins.
-* Do not use pins 0 and 1, as they are used to communicate with the computer. Connecting anything to these pins will interfere with communication, including causing the upload board to fail.
-* If the digital pins are used up, the analog pins (A0-A5) can also be used as digital pins.
+**Zugehörige Komponenten**
 
-**Related Components**
+Unten finden Sie die zugehörigen Komponenten. Sie können darauf klicken, um zu erfahren, wie man sie verwendet.
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

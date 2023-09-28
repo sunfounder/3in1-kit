@@ -3,42 +3,42 @@
 4.5 Thermometer
 ===========================
 
-A thermometer is a device that measures temperature or a temperature gradient (the degree of hotness or coldness of an object). 
-A thermometer has two important elements: (1) a temperature sensor (e.g. the bulb of a mercury-in-glass thermometer or the pyrometric sensor in an infrared thermometer) in which some change occurs with a change in temperature; 
-and (2) some means of converting this change into a numerical value (e.g. the visible scale that is marked on a mercury-in-glass thermometer or the digital readout on an infrared model). 
-Thermometers are widely used in technology and industry to monitor processes, in meteorology, in medicine, and in scientific research.
+Ein Thermometer ist ein Gerät, das die Temperatur oder ein Temperaturgefälle misst (den Grad der Wärme oder Kälte eines Objekts). 
+Ein Thermometer verfügt über zwei wichtige Elemente: (1) einen Temperatursensor (z.B. die Birne eines Quecksilber-Thermometers oder den pyrometrischen Sensor eines Infrarot-Thermometers), bei dem sich bei Temperaturänderungen etwas verändert; 
+und (2) eine Methode zur Umwandlung dieser Änderung in einen numerischen Wert (z.B. die sichtbare Skala, die auf einem Quecksilber-Thermometer markiert ist, oder die digitale Anzeige bei einem Infrarot-Modell).
+Thermometer werden in Technologie und Industrie zur Überwachung von Prozessen, in der Meteorologie, in der Medizin und in der wissenschaftlichen Forschung häufig verwendet.
 
-A thermistor is a type of temperature sensor whose resistance is strongly dependent on temperature, and it has two types: 
-Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC), 
-also known as NTC and PTC. The resistance of PTC thermistor increases with temperature, while the condition of NTC is opposite to the former.
+Ein Thermistor ist eine Art Temperatursensor, dessen Widerstand stark temperaturabhängig ist, und er gibt es in zwei Typen:
+Negativer Temperaturkoeffizient (NTC) und Positiver Temperaturkoeffizient (PTC), 
+auch bekannt als NTC und PTC. Der Widerstand des PTC-Thermistors steigt mit der Temperatur, während der Zustand des NTC dem des PTC entgegengesetzt ist.
 
-In this experiment we use an **NTC thermistor** to make a thermometer.
+In diesem Experiment verwenden wir einen **NTC thermistor**, um ein Thermometer herzustellen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten:
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -51,35 +51,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_5.5_thermistor.png
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+Jeder Thermistor hat einen Normalwiderstand. Hier beträgt er 10k Ohm, gemessen bei 25 Grad Celsius.
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+Wenn die Temperatur steigt, sinkt der Widerstand des Thermistors. Dann werden die Spannungsdaten vom A/D-Wandler in digitale Werte umgewandelt.
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+Die Temperatur in Celsius oder Fahrenheit wird über die Programmierung ausgegeben.
 
-Here is the relation between the resistance and temperature: 
+Hier ist die Beziehung zwischen Widerstand und Temperatur:
 
     **RT =RN expB(1/TK – 1/TN)** 
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** ist der Widerstand des NTC-Thermistors bei der Temperatur **TK**.
+    * **RN** ist der Widerstand des NTC-Thermistors bei der Nenntemperatur TN. Hier beträgt der Wert von RN 10k.
+    * **TK** ist eine Kelvin-Temperatur, und die Einheit ist K. Hier beträgt der Wert von **TK** ``273,15 + Grad Celsius``.
+    * **TN** ist eine Nenntemperatur in Kelvin; die Einheit ist ebenfalls K. Hier beträgt der Wert von TN ``273,15+25``.
+    * Und **B(beta)**, die Materialkonstante des NTC-Thermistors, wird auch als Wärmeempfindlichkeitsindex bezeichnet und hat den Wert ``3950``.
+    * **exp** steht für exponentiell, und die Basiszahl ``e`` ist eine natürliche Zahl und beträgt ungefähr 2,7.
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    Diese Beziehung wird durch die Formel ``TK=1/(ln(RT/RN)/B+1/TN)`` dargestellt, um die Kelvin-Temperatur zu erhalten, die minus 273,15 Grad Celsius entspricht.
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    Dieses Verhältnis ist eine empirische Formel. Es ist nur dann genau, wenn Temperatur und Widerstand innerhalb des effektiven Bereichs liegen.
 
-**Wiring**
+**Verdrahtung**
 
 .. note::
-    * The thermistor is black or green and marked 103.
+    * Der Thermistor ist schwarz oder grün und mit 103 markiert.
 
 .. image:: img/4.5_thermistor_bb.png
     :width: 600
@@ -89,19 +89,13 @@ Here is the relation between the resistance and temperature:
 
 .. note::
 
-   * You can open the file ``4.5_thermometer.ino`` under the path of ``euler-kit/arduino/4.5_thermometer``. 
-   * Or copy this code into **Arduino IDE**.
+   * Öffnen Sie die Datei ``4.5_thermometer.ino`` im Pfad ``euler-kit/arduino/4.5_thermometer``.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   
-
-    Don't forget to select the Raspberry Pi Pico board and the correct port before clicking the Upload button.
-
+   Vergessen Sie nicht, das Raspberry Pi Pico Board und den korrekten Port auszuwählen, bevor Sie auf die Schaltfläche Hochladen klicken.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1ceb0ea2-a330-4052-824d-bd6762c6f0e0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-
-After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
-
-
+Nachdem der Code erfolgreich hochgeladen wurde, gibt der serielle Monitor die Temperaturen in Celsius und Fahrenheit aus.

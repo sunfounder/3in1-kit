@@ -1,9 +1,10 @@
-1. Get Started with Blynk
+1. Erste Schritte mit Blynk
 =============================
 
-Getting the R4 board to communicate with Blynk requires some configuration when you first use Blynk.
+Um die Kommunikation des R4-Boards mit Blynk zu ermöglichen, ist bei der ersten Verwendung von Blynk eine gewisse Konfiguration erforderlich.
 
-Follow the steps below, and note that you must do them in order and not skip any chapters.
+Befolgen Sie die unten aufgeführten Schritte und beachten Sie, dass Sie sie in der angegebenen Reihenfolge durchführen und kein Kapitel überspringen sollten.
+
 
 .. toctree::
     :maxdepth: 2

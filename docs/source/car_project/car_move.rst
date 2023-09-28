@@ -1,15 +1,15 @@
 .. _car_move:
 
-1. Move
+1. Bewegung
 ===============
 
 .. image:: ../components/img/l9110_module.jpg
     :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110 module.
+Bevor wir mit der Programmierung beginnen, betrachten wir das Funktionsprinzip des L9110-Moduls.
 
-Here is the truth table of Motor B:
+Hier ist die Wahrheitstabelle für Motor B:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -17,21 +17,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B
-      - The state of Motor B
+      - Zustand des Motors B
     * - 1
       - 0
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 0
       - 0
-      - Brake
+      - Bremse
     * - 1
       - 1
-      - Stop
+      - Stopp
 
-Here is the truth table of Motor A:
+Hier ist die Wahrheitstabelle für Motor A:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -39,81 +39,65 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - Zustand des Motors A
     * - 1
       - 0
-      - Rotate clockwise
+      - Drehung im Uhrzeigersinn
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Drehung gegen den Uhrzeigersinn
     * - 0
       - 0
-      - Brake
+      - Bremse
     * - 1
       - 1
-      - Stop
-
+      - Stopp
 
 * :ref:`cpn_l9110`
 
-**Forward**
+**Vorwärts**
 
-Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
+Verbinden Sie nun den Eingang des L9110-Moduls direkt mit 12V und GND, um das Auto zum Bewegen zu bringen.
 
-
-1. Connect R4 board, L9110 module and 2 motors.
-
+1. Verbinden Sie das R4-Board, das L9110-Modul und die beiden Motoren.
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
-
+2. Verbinden Sie B-1B und A-1A mit VCC und B-1A und A-1B mit GND, dann sehen Sie, wie sich das Auto vorwärts bewegt.
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, 
-you need to readjust the wiring of the two motors.
+Wenn nicht beide nach vorne drehen, aber die folgenden Situationen auftreten, müssen Sie die Verkabelung der beiden Motoren neu justieren.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Wenn beide Motoren gleichzeitig rückwärts drehen (linker Motor im Uhrzeigersinn, rechter Motor gegen den Uhrzeigersinn), tauschen Sie die Verkabelung der linken und rechten Motoren gleichzeitig. OA(A) und OB(A) tauschen, OA(B) und OB(B) tauschen.
+* Wenn der linke Motor rückwärts dreht (im Uhrzeigersinn), tauschen Sie die Verkabelung von OA(B) und OB(B) des linken Motors.
+* Wenn der rechte Motor rückwärts dreht (gegen den Uhrzeigersinn), tauschen Sie die Verkabelung von OA(A) und OB(A) des rechten Motors.
 
+**Rückwärts**
 
-**Backward**
-
-Connect B-1B  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
-
+Verbinden Sie B-1B und A-1A mit GND und B-1A und A-1B mit VCC, dann sehen Sie, wie sich das Auto rückwärts bewegt.
 
 .. image:: img/1.move_back.png 
     :width: 800
 
+**Nach Links abbiegen**
 
-
-**Turn Left**
-
-If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B  and A-1B to VCC.
-
+Wenn Sie das Auto nach links abbiegen lassen möchten, also beide Motoren im Uhrzeigersinn drehen lassen möchten. Sie müssen B-1A und A-1A mit GND und B-1B und A-1B mit VCC verbinden.
 
 .. image:: img/1.move_left.png 
     :width: 800
 
+**Nach Rechts abbiegen**
 
-**Turn Right**
-
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B  and A-1B to GND.
-
+Umgekehrt, wenn Sie das Auto nach rechts abbiegen lassen möchten, also beide Motoren gegen den Uhrzeigersinn drehen lassen möchten. Sie müssen B-1A und A-1A mit VCC und B-1B und A-1B mit GND verbinden.
 
 .. image:: img/1.move_right.png 
     :width: 800
 
+**Stopp**
 
+Um den Motor anzuhalten, verbinden Sie die Eingänge auf der gleichen Seite gleichzeitig mit 12V oder GND, z.B. B-1A und B-1B gleichzeitig mit 12V oder 5V verbinden und dasselbe für A-1A und A-1B.
 
-**Stop**
-
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B  to 12V or 5V at the same time, and the same for A-1A and A-1B.
-
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+Dies ist natürlich theoretisch und wird später bei der Steuerung mit Code benötigt. Hier kann das Entfernen der Stromversorgung vom Auto es anhalten.

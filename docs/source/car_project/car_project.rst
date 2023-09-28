@@ -1,13 +1,13 @@
 .. _car_projects:
 
-Car Projects
+Auto-Projekte
 =================
 
-I believe you have seen a lot of different smart robot car, their basic functions are similar, basic movement, obstacle avoidance, line following, following and control by remote control, etc..
+Ich bin sicher, Sie haben bereits viele verschiedene intelligente Roboter-Autos gesehen. Ihre Grundfunktionen sind ähnlich: grundlegende Bewegungen, Hindernisvermeidung, Linienverfolgung, Nachfahren und Steuerung per Fernbedienung usw.
 
-Here, we use the simplest structure to build a smart robot car, which can also achieve all the above functions. In addition you can control it with your cell phone, please refer to :ref:`iot_car` for the tutorial.
+Hier nutzen wir die einfachste Struktur, um ein intelligentes Roboter-Auto zu bauen, welches ebenso all diese Funktionen erfüllen kann. Zudem können Sie es mit Ihrem Handy steuern. Bitte entnehmen Sie die Anleitung dazu unter :ref:`iot_car`.
 
-**assembly instructions**
+**Montageanleitung**
 
 .. toctree::
     :maxdepth: 1
@@ -15,11 +15,12 @@ Here, we use the simplest structure to build a smart robot car, which can also a
     car_assemble
 
 
-**Projects**
+**Projekte**
 
-Here are some projects for the car, programmed in C with the Arduino IDE, if you are not particularly skilled with Arduino, you can refer to :ref:`get_start_arduino_ide`.
+Hier sind einige Projekte für das Auto, programmiert in C mit der Arduino IDE. Wenn Sie noch nicht so geübt im Umgang mit Arduino sind, können Sie sich an :ref:`get_start_arduino_ide` wenden.
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Die folgenden Projekte sind nach dem Grad der Programmierschwierigkeit geordnet. Es wird empfohlen, diese in der angegebenen Reihenfolge zu lesen.
+
 
 
 .. toctree::

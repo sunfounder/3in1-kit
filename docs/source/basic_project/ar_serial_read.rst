@@ -1,39 +1,39 @@
 .. _ar_serial_read:
 
-5.12 Serial Read
+5.12 Serielles Lesen
 ======================
 
-You may have noticed this when using the ``Serial.print()`` function.
-Since there is printing, is there reading? What is the text box on the Serial Monitor used for?
-Yes, you guessed it, there are ways to control programs and circuits by entering information through the text box on the Serial Monitor.
+Vielleicht haben Sie dies bemerkt, wenn Sie die Funktion ``Serial.print()`` verwendet haben. 
+Wo es Drucken gibt, gibt es auch Lesen? Wofür wird das Textfeld im Serial Monitor verwendet?
+Richtig geraten, es gibt Möglichkeiten, Programme und Schaltungen durch Eingabe von Informationen über das Textfeld im Serial Monitor zu steuern.
 
-In this project, we will use the I2C LCD1602 to display the text entered in the Serial Monitor in order to experience the usage of ``Serial.read()``.
+In diesem Projekt werden wir das I2C LCD1602 verwenden, um den im Serial Monitor eingegebenen Text anzuzeigen und die Verwendung von ``Serial.read()`` zu erleben.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -42,11 +42,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_7.1_lcd1602.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/5.11_lcd_bb.png
     :width: 800
@@ -56,20 +56,19 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.12.serial_read.ino`` file under the path of ``3in1-kit\learning_project\5.12.serial_read``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Öffnen Sie die Datei ``5.12.serial_read.ino`` im Pfad ``3in1-kit\learning_project\5.12.serial_read``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
+    * Die Bibliothek ``LiquidCrystal I2C`` wird hier verwendet. Sie können sie aus dem **Library Manager** installieren.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a6197c53-6969-402e-8930-84a9165397b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, you can enter text in the text box on the serial monitor, and the LCD will display the information.
 
+Nachdem der Code erfolgreich hochgeladen wurde, können Sie Text in das Textfeld des Serial Monitors eingeben, und das LCD wird die Informationen anzeigen.
 
-**How it works?**
+**Wie funktioniert das?**
 
     .. code-block:: arduino
 
@@ -89,10 +88,10 @@ After the code is uploaded successfully, you can enter text in the text box on t
             }
         }
 
-* ``Serial.available()`` can get the number of characters available in the incoming stream when you type something from the textbox. Since there are two terminators in the input, you actually have 3 characters when you type ``A``, and 4 characters when you type ``AB``.
-* ``Serial.read()`` will take the first character from the incoming stream. For example, if you typed ``AB`` , calling ``Serial.read()`` only once, will get the character ``A``; The second call, you will get ``B``; the third and fourth call, you will get two end symbols; calling this function when the input stream has no characters available will result in an error.
+* Mit ``Serial.available()`` können Sie die Anzahl der verfügbaren Zeichen im eingehenden Stream abrufen, wenn Sie etwas aus dem Textfeld eingeben. Da es zwei Terminator in der Eingabe gibt, haben Sie tatsächlich 3 Zeichen, wenn Sie ``A`` eingeben, und 4 Zeichen, wenn Sie ``AB`` eingeben.
+* ``Serial.read()`` nimmt das erste Zeichen aus dem eingehenden Stream. Wenn Sie beispielsweise ``AB`` eingegeben haben und ``Serial.read()`` nur einmal aufrufen, erhalten Sie das Zeichen ``A``; beim zweiten Aufruf erhalten Sie ``B``; beim dritten und vierten Aufruf erhalten Sie zwei Endsymbole. Wenn dieser Funktion aufgerufen wird und im Eingabestream keine Zeichen verfügbar sind, führt dies zu einem Fehler.
 
-To sum up, it is common to combine the above two, using a ``while`` loop to read all characters entered each time.
+Zusammenfassend wird häufig kombiniert, die beiden oben genannten, indem eine ``while`` Schleife verwendet wird, um alle jedes Mal eingegebenen Zeichen zu lesen.
 
     .. code-block:: arduino
 
@@ -100,5 +99,5 @@ To sum up, it is common to combine the above two, using a ``while`` loop to read
             Serial.print(Serial.read());
         }
 
-By the way, if you don't use ``Serial.read()`` to get characters from the incoming stream, the characters from the incoming stream will be stacked together.
-For example, if you type ``A`` followed by ``AB``, the incoming stream will accumulate 7 characters.
+Übrigens, wenn Sie ``Serial.read()`` nicht verwenden, um Zeichen aus dem eingehenden Stream zu holen, werden die Zeichen des eingehenden Streams zusammengefügt.
+Zum Beispiel, wenn Sie ``A`` gefolgt von ``AB`` eingeben, wird der eingehende Stream 7 Zeichen ansammeln.

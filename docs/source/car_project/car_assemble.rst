@@ -1,71 +1,71 @@
-Assemble the Car
+Auto zusammenbauen
 =====================
 
-Please follow the steps below to complete the assembly of the car.
+Bitte befolgen Sie die folgenden Schritte, um die Montage des Autos abzuschließen.
 
-1. Remove the protective film on the acrylic.
+1. Entfernen Sie die Schutzfolie vom Acryl.
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R4 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Legen Sie die Platte wie auf dem Bild gezeigt auf den Tisch, die Seite mit dem gleichen Loch wie die R4-Platte nennen wir A; die Rückseite ist B. Dies wird Ihnen helfen, Fehler während der Montage zu vermeiden.
 
     .. image:: img/IMG_9147.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. Montieren Sie den **M3x24mm Abstandshalter** mit **M3x6mm Schrauben** an der unten gezeigten Position.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Drehen Sie zur B-Seite und verwenden Sie **M3x30mm Schrauben** und **M3 Muttern**, um den TT-Motor anzubringen. Beachten Sie 2 Details: 1 - Die Ausgangswelle zeigt zur fledermausförmigen Seite; 2 - Das Motorkabel zeigt nach innen.
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. Montieren Sie einen weiteren TT-Motor. Beachten Sie dabei die Ausrichtung der Ausgangswelle und die Ausrichtung des Kabels.
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. Verwenden Sie **M3x6mm Schrauben**, um den **M3x10mm Abstandshalter** an der unten gezeigten Position zu montieren.
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. Befestigen Sie den **M2.5x11mm Abstandshalter** mit **M2.5x6mm Schrauben** an der Rückseite des Autos.
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. Verwenden Sie **M3x6mm Schrauben**, um das Universalrad zu montieren.
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. Montieren Sie die 2 Räder und die Grundstruktur des Autos ist fertiggestellt.
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#. Befestigen Sie das L9110-Modul mit **M2.5x6mm Schrauben**.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. Montieren Sie die zwei IR-Hindernismodule mit **M3x10mm Schrauben** und **M3 Muttern**.
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. Drehen Sie zu Seite B und befestigen Sie das Linienverfolgungsmodul mit vier **M3x6mm Schrauben** und zwei **M3x24mm Abstandshaltern**.
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        Es ist ratsam, zuerst die **M3x24mm Abstandshalter** am Linienverfolgungsmodul zu befestigen.
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        Ein wichtiger Hinweis: Die Pins des Liniensensors sind etwas weich und stehen etwas über die Löcher hinaus. Wenn Sie die **M3x24mm Abstandshalter** einschrauben, drücken Sie die Sensorkontakte vorsichtig beiseite.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Befestigen Sie den Klettverschluss am 9V-Akku und setzen Sie den Batterieclip auf. Kleben Sie den anderen Teil des Klettverschlusses auf das Auto, um die Batterie zu sichern.
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R4 board with **M3x6mm screws**.
+#. Drehen Sie zu Seite A und montieren Sie die R4-Platte mit **M3x6mm Schrauben**.
 
     .. image:: img/IMG_9193.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. Befestigen Sie das Steckbrett vorne am Auto. Danach können Sie je nach Projektanforderung verschiedene Komponenten (z. B. Ultraschallmodul) auf das Steckbrett setzen.
 
     .. image:: img/IMG_9195.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. Um das Auto zum Laufen zu bringen, müssen Sie es auch verkabeln und einen Code schreiben, der in den folgenden Abschnitten verfasst wird.

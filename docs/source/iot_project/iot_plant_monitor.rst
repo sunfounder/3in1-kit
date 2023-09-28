@@ -1,37 +1,37 @@
 .. _iot_plant:
 
-6. Plant Monitor
+6. Pflanzenüberwachung
 ==========================
 
-The purpose of this project is to create a smart watering system that detects the current temperature, humidity, intensity of light, and soil moisture and displays them on Blynk.
+Das Ziel dieses Projekts ist es, ein intelligentes Bewässerungssystem zu erstellen, das die aktuelle Temperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit erfasst und diese auf Blynk anzeigt.
 
-As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start working and the plants will be hydrated.
+Sobald Sie den Schalter in Blynk Cloud aktivieren, beginnt die Pumpe zu arbeiten und die Pflanzen werden bewässert.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -54,71 +54,71 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**1. Build the Cirduit**
+**1. Bauen Sie den Schaltkreis**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.
 
 .. image:: img/iot_6_bb.png
     :width: 800
 
-**2. Edit Dashboard**
+**2. Dashboard bearbeiten**
 
-#. The data streams created in the previous projects need to be saved, and they will be used in this project as well.
+#. Die in den vorherigen Projekten erstellten Datenströme müssen gespeichert werden, und sie werden auch in diesem Projekt verwendet.
 
-#. For recording soil moisture, create another **Datastream** of type **Virtual Pin** on the **Datastream** page. Set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``1024``.
+#. Um die Bodenfeuchtigkeit aufzuzeichnen, erstellen Sie einen weiteren **Datastream** vom Typ **Virtual Pin** auf der **Datastream**-Seite. Setzen Sie den DATENTYP auf ``Integer`` und MIN und MAX auf ``0`` und ``1024``.
 
     .. image:: img/sp220610_155221.png
 
-#. Now go to the **Wed Dashboard** page, drag 2 **Label** widgets and set their data streams to **V4** and **V5** respectively; drag 2 **Gauge** widgets and set their data streams to show **V6** and **V7** respectively; and finally drag a **Switch** widget and set its data stream to **V0**.
+#. Gehen Sie nun zur **Wed Dashboard**-Seite, ziehen Sie 2 **Label**-Widgets und setzen Sie ihre Datenströme jeweils auf **V4** und **V5**; ziehen Sie 2 **Gauge**-Widgets und setzen Sie ihre Datenströme so, dass sie **V6** und **V7** anzeigen; und ziehen Sie schließlich ein **Switch**-Widget und setzen Sie seinen Datenstrom auf **V0**.
 
     .. image:: img/sp220610_155350.png
 
 
-**3. Run the Code**
 
-Open the ``6.plant_monitoring.ino`` file under the path of ``3in1-kit\iot_project\6.plant_monitoring``, or copy this code into **Arduino IDE**.
+**3. Den Code ausführen**
+
+Öffnen Sie die Datei ``6.plant_monitoring.ino`` im Pfad ``3in1-kit\iot_project\6.plant_monitoring``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. note::
 
-            * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+            * Hier wird die ``DHT sensor library`` verwendet. Sie können diese über den **Library Manager** installieren.
 
                 .. image:: ../img/lib_dht11.png
-
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/f738bcb5-4ee2-475b-b683-759e6b2041b0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Ersetzen Sie die ``Template ID``, den ``Device Name`` und das ``Auth Token`` durch Ihre eigenen Angaben. Sie müssen auch die ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs eingeben. Für detaillierte Anleitungen verweisen Sie bitte auf :ref:`connect_blynk`.
+#. Wählen Sie das richtige Board und den Port aus und klicken Sie auf die Schaltfläche **Upoad**.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie den Seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Meldung, z. B. dass eine erfolgreiche Verbindung hergestellt wurde.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Wenn beim Verbinden die Meldung ``ESP is not responding`` erscheint, befolgen Sie bitte diese Schritte:
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R4 board.
+        * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+        * Setzen Sie das ESP8266-Modul zurück, indem Sie den RST-Pin für 1 Sekunde mit GND verbinden und dann trennen.
+        * Drücken Sie den Reset-Knopf auf dem R4-Board.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Manchmal müssen Sie den obigen Vorgang 3-5 Mal wiederholen. Bitte haben Sie Geduld.
 
-#. Back to the Blynk, you will see the current temperature, humidity, light intensity, and soil moisture. You can let the pump water the plants if necessary by clicking the Button Control widget.
+#. Zurück in Blynk werden die aktuelle Temperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit angezeigt. Mit dem Button Control Widget können Sie, falls nötig, die Pumpe aktivieren, um die Pflanzen zu bewässern.
 
     .. image:: img/sp220610_155350.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Wenn Sie Blynk auf mobilen Geräten nutzen möchten, verweisen Sie bitte auf :ref:`blynk_mobile`.
 
     .. image:: img/mobile_plant.jpg
 
-**How it works?**
+**Wie funktioniert das?**
 
-This ``BLYNK_WRITE`` causes Blynk's **Switch** widget to start the pump when it is ON and turn it off when it is OFF.
+Dieser ``BLYNK_WRITE`` bewirkt, dass das **Switch**-Widget von Blynk die Pumpe startet, wenn es eingeschaltet ist und ausschaltet, wenn es ausgeschaltet ist.
 
 .. code-block:: arduino
 
@@ -131,8 +131,7 @@ This ``BLYNK_WRITE`` causes Blynk's **Switch** widget to start the pump when it 
         }
     }
 
-
-These three functions are used to get the current environment temperature, humidity, light intensity and soil moisture.
+Diese drei Funktionen werden verwendet, um die aktuelle Umgebungstemperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit zu messen.
 
 .. code-block:: arduino
 
@@ -160,7 +159,8 @@ These three functions are used to get the current environment temperature, humid
         return true;
     }
 
-With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and soil moisture are obtained every second and sent to the data stream on the **Blynk Cloud**, from which the widgets display the data.
+Mit dem Blynk ``Timer`` werden jede Sekunde die Umgebungstemperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit ermittelt und an den Datenstrom auf dem **Blynk Cloud** gesendet, von wo aus die Widgets die Daten anzeigen.
+
 
 
 .. code-block:: arduino

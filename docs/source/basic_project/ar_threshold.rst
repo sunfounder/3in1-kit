@@ -1,48 +1,47 @@
 .. _ar_threshold:
 
-5.2 Threshold
+5.2 Schwellenwert
 =======================
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+In vielen Projekten werden Sie auf solch ein Bedürfnis stoßen.
+"Wenn xxx ein bestimmtes Niveau erreicht, dann..."
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+Zum Beispiel in einem Smart Home: Wenn die Lichtintensität weniger als 50Lux beträgt, schalte das Licht ein;
+Ein weiteres Beispiel ist auf dem Computer-Motherboard: Wenn die Betriebstemperatur des CPUs höher als 65 Grad Celsius ist, schalte den Lüfter ein, und so weiter.
 
-In these requirements, the keyword "threshold" is reflected.
+In diesen Anforderungen spiegelt sich das Schlüsselwort "Schwellenwert" wider.
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+Wir können den Wert des Schwellenwerts anpassen, um den Schaltkreis stärker an individuelle Bedürfnisse anzupassen.
+Zum Beispiel, wenn ich ein helleres Wohnambiente bevorzuge, kann ich den Schwellenwert der automatischen Beleuchtung des Smart Homes auf 80Lux erhöhen.
+Ein weiteres Beispiel ist, wenn die Belüftungsumgebung meines Studios nicht sehr gut ist und der Bedarf an Wärmeableitung höher ist, kann der Schwellenwert für das automatische Öffnen des Lüfters auf 50 Grad Celsius eingestellt werden.
 
+Hier verwenden wir einen Bodenfeuchtigkeitssensor und 2 LEDs, um einen Topfmonitor zu erstellen. Wenn der Boden zu trocken ist, leuchtet die rote LED; wenn der Boden feucht genug ist, leuchtet die grüne LED. Sie müssen die Schwellenwerte zur Bestimmung der Trockenheit und Feuchtigkeit des Bodens manuell anpassen.
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+**Benötigte Komponenten**
 
-**Required Components**
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -57,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/5.2_threshold_bb.png
     :width: 600
@@ -71,17 +70,17 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\learning_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.2.threshold.ino`` im Pfad ``3in1-kit\learning_project\5.2.threshold``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
+Nachdem der Code erfolgreich hochgeladen wurde, und wenn Ihr Schwellenwert korrekt eingestellt ist, wird die rote LED leuchten, wenn der Boden trocken ist, um Sie daran zu erinnern, dass Sie gießen müssen; nach dem Gießen wird die grüne LED leuchten.
 
-**How it works**
+**Wie funktioniert das?**
 
 .. code-block:: Arduino
 
@@ -100,8 +99,7 @@ After the code is uploaded successfully, if your threshold is set correctly, you
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+Zunächst setzen Sie einen ``Schwellenwert`` und lesen dann den Wert des Bodenfeuchtigkeitsmoduls; sein Wert nimmt ab, wenn der Feuchtigkeitsgrad steigt. Wenn der aktuell gelesene Wert größer als der eingestellte ``Schwellenwert`` ist, dann lassen Sie die rote LED leuchten, andernfalls schalten Sie die grüne LED ein.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
-
+Dieser ``Schwellenwert`` muss je nach tatsächlicher Situation angepasst werden. Sie können den Code zuerst hochladen, dann den seriellen Monitor öffnen, um den Wert zu überprüfen, den Wert in sowohl nassen als auch trockenen Zuständen aufzeichnen und dann einen Mittelwert als ``Schwellenwert`` wählen.
 

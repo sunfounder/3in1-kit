@@ -1,40 +1,40 @@
 .. _ar_reed:
 
-3.2 Feel the Magnetism
+3.2 Magnetismus spüren
 ===============================
 
-The most common type of reed switch contains a pair of magnetizable, flexible, metal reeds whose end portions are separated by a small gap when the switch is open. 
+Die gängigste Art von Reed-Schalter enthält ein Paar magnetisierbare, flexible Metallzungen, deren Endteile durch eine kleine Lücke getrennt sind, wenn der Schalter offen ist.
 
-A magnetic field from an electromagnet or a permanent magnet will cause the reeds to attract each other, thus completing an electrical circuit.
-The spring force of the reeds causes them to separate, and open the circuit, when the magnetic field ceases.
+Ein Magnetfeld von einem Elektromagneten oder einem Permanentmagneten bewirkt, dass sich die Zungen anziehen und so einen elektrischen Stromkreis schließen. 
+Die Federkraft der Zungen bewirkt, dass sie sich trennen und den Kreislauf öffnen, wenn das Magnetfeld nachlässt.
 
-A common example of a reed switch application is to detect the opening of a door or windows, for a security alarm.
+Ein häufiges Anwendungsbeispiel für einen Reed-Schalter ist die Erkennung des Öffnens einer Tür oder eines Fensters für eine Sicherheitsalarm.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENEINFÜHRUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -47,15 +47,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_3.2_reed.png
 
-By default, pin 2 is low; and will go high when the magnet is near the reed switch.
+Standardmäßig ist Pin 2 niedrig; und wird hoch gehen, wenn der Magnet in der Nähe des Reed-Schalters ist.
 
-The purpose of the 10K resistor is to keep the pin 2 at a steady low level when no magnet is near.
+Der Zweck des 10K-Widerstands ist es, den Pin 2 auf einem konstant niedrigen Niveau zu halten, wenn kein Magnet in der Nähe ist.
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/3.2_feel_the_magnetism_bb.png
     :width: 600
@@ -65,14 +65,13 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 
 .. note::
 
-   * You can open the file ``3.2.feel_the_magnetism.ino`` under the path of ``3in1-kit\learning_project\3.2.feel_the_magnetism``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``3.2.feel_the_magnetism.ino`` im Pfad ``3in1-kit\learning_project\3.2.feel_the_magnetism`` öffnen. 
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
    
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d28c942e-5144-44a1-85d8-d5e6894fc5df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, when a magnet is near the reed switch, the serial monitor will print 1.
 
+Nachdem der Code erfolgreich hochgeladen wurde, wird im seriellen Monitor eine 1 ausgedruckt, wenn ein Magnet in der Nähe des Reed-Schalters ist.

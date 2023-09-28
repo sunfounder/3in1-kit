@@ -1,45 +1,45 @@
 .. _ar_state_change:
 
-5.3 State Change Detection
-===========================
+5.3 Zustandsänderungserkennung
+=================================
 
-When the button controls other devices, it can not only work when it is pressed, but stop when it is released.
-It is also possible to switch the working state each time the button is pressed.
+Wenn der Knopf andere Geräte steuert, kann er nicht nur arbeiten, wenn er gedrückt wird, sondern auch stoppen, wenn er losgelassen wird.
+Es ist auch möglich, den Arbeitszustand jedes Mal umzuschalten, wenn der Knopf gedrückt wird.
 
-In order to achieve this effect, you need to know how to toggle the working state between off and on when the button is pressed,
-That is "state change detection".
+Um diesen Effekt zu erzielen, müssen Sie wissen, wie Sie den Arbeitszustand zwischen Aus und Ein umschalten können, wenn der Knopf gedrückt wird.
+Das nennt man "Zustandsänderungserkennung".
 
-In this project, we will use the button to control the motor.
+In diesem Projekt werden wir den Knopf verwenden, um den Motor zu steuern.
 
-.. **Schematic**
+.. **Schaltplan**
 
 .. .. image:: img/circuit_8.3_statechange.png
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -56,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.3_statechange.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/5.3_state_change_bb.png
     :width: 800
@@ -70,21 +70,21 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\learning_project\5.3.state_change_detection``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Öffnen Sie die Datei ``5.3.state_change_detection.ino`` im Pfad ``3in1-kit\learning_project\5.3.state_change_detection``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/67a62a3d-46d3-4f5f-889c-364cbdf9b66f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you press the button and the motor will turn; until you press the button again, the motor will stop.
+Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie den Knopf und der Motor wird sich drehen; bis Sie den Knopf erneut drücken, wird der Motor stoppen.
 
 
-**How it works?**
 
-#. Create variables and define pins for the motor and button.
+**Wie funktioniert das?**
+
+#. Erstellen Sie Variablen und definieren Sie Pins für den Motor und den Knopf.
 
     .. code-block:: arduino
 
@@ -93,57 +93,56 @@ After the code is uploaded successfully, you press the button and the motor will
         int buttonState = 0;         
         int lastButtonState = 0;    
 
-    * ``detectionState`` is a flag whose value changes each time the button is pressed, e.g., 0 this time, 1 the next, and so on alternately.
-    * ``buttonState`` and ``lastButtonState`` are used to record the state of the button this time and the last time, to compare whether the button was pressed or released.
+    * ``detectionState`` ist eine Flagge, deren Wert sich jedes Mal ändert, wenn der Knopf gedrückt wird, z.B. 0 dieses Mal, 1 das nächste Mal und so weiter abwechselnd.
+    * ``buttonState`` und ``lastButtonState`` werden verwendet, um den Zustand des Knopfes dieses Mal und das letzte Mal aufzuzeichnen, um zu vergleichen, ob der Knopf gedrückt oder losgelassen wurde.
 
-#. Initialize each pin and set the baud rate of the serial monitor.
+#. Initialisieren Sie jeden Pin und setzen Sie die Baudrate des seriellen Monitors.
 
     .. code-block:: arduino
 
         void setup() {
             pinMode(buttonPin, INPUT);
             Serial.begin(9600);
-            pinMode(motorPinA,OUTPUT);
-            pinMode(motorPinB,OUTPUT);
+            pinMode(A_1A,OUTPUT);
+            pinMode(A_1B,OUTPUT);
         }
 
-
-#. First read the state of the button, and if the button is pressed, the variable ``detectionState`` will switch its value from 0 to 1 or 1 to 0. When ``detectionState`` is 1, the motor will be turned. It has the effect that this time the button is pressed, the motor turns, the next time the button is pressed, the motor stops, and so on alternately.
+#. Zuerst lesen Sie den Zustand des Knopfes, und wenn der Knopf gedrückt ist, wird die Variable ``detectionState`` ihren Wert von 0 auf 1 oder von 1 auf 0 umschalten. Wenn ``detectionState`` 1 ist, wird der Motor eingeschaltet. Es hat die Wirkung, dass dieses Mal, wenn der Knopf gedrückt wird, der Motor sich dreht, das nächste Mal, wenn der Knopf gedrückt wird, der Motor stoppt und so weiter abwechselnd.
 
     .. code-block:: arduino
 
         void loop() {
         // Toggle the detectionState each time the button is pressed
-        buttonState = digitalRead(buttonPin);
-        if (buttonState != lastButtonState) {
-            if (buttonState == HIGH) {
-            detectionState=(detectionState+1)%2;
-            Serial.print("The detection state is: ");
-            Serial.println(detectionState);
-            } 
-            delay(50);
-        }
-        lastButtonState = buttonState;
-        
-        // According to the detectionState, start the motor
-        if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
-        }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
-        }
+            buttonState = digitalRead(buttonPin);
+            if (buttonState != lastButtonState) {
+                if (buttonState == HIGH) {
+                detectionState=(detectionState+1)%2;
+                Serial.print("The detection state is: ");
+                Serial.println(detectionState);
+                } 
+                delay(50);
+            }
+            lastButtonState = buttonState;
+            
+            // According to the detectionState, start the motor
+            if(detectionState==1){
+                digitalWrite(A_1A,HIGH);
+                digitalWrite(A_1B,LOW);
+            }else{
+                digitalWrite(A_1A,LOW);
+                digitalWrite(A_1B,LOW);
+            }
         }
 
-    The entire workflow is as follows.
+    Der gesamte Arbeitsablauf ist wie folgt.
 
-    * Read the button value.
+    * Lesen Sie den Knopfwert.
 
     .. code-block:: arduino
 
         buttonState = digitalRead(buttonPin);
 
-    * If ``buttonState`` and ``lastButtonState`` are not equal, it means that the button state has changed, continue with the next judgment, and store the button state at this time into the variable ``lastButtonState``. ``delay(50)`` is used to eliminate jitter.
+    * Wenn ``buttonState`` und ``lastButtonState`` nicht gleich sind, bedeutet dies, dass sich der Knopfzustand geändert hat. Fahren Sie mit der nächsten Beurteilung fort und speichern Sie den Knopfzustand zu diesem Zeitpunkt in die Variable ``lastButtonState``. ``delay(50)`` wird verwendet, um das Prellen zu eliminieren.
     
     .. code-block:: arduino
 
@@ -153,7 +152,7 @@ After the code is uploaded successfully, you press the button and the motor will
         }
         lastButtonState = buttonState;
 
-    * When the button is pressed, its value is HIGH. Here, when the button is pressed, the value of the variable ``detectionState`` is changed, e.g., from 0 to 1 after an operation.
+    * Wenn der Knopf gedrückt wird, ist sein Wert HIGH. Hier, wenn der Knopf gedrückt wird, wird der Wert der Variable ``detectionState`` geändert, z.B. von 0 auf 1 nach einer Operation.
 
     .. code-block:: arduino
 
@@ -163,15 +162,15 @@ After the code is uploaded successfully, you press the button and the motor will
             Serial.println(detectionState);
             }
 
-    * When the variable ``detectionState`` is 1, let the motor rotate, otherwise stop.
+    * Wenn die Variable ``detectionState`` 1 ist, lassen Sie den Motor drehen, sonst stoppen Sie ihn.
 
     .. code-block:: arduino
 
         if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,HIGH);
+            digitalWrite(A_1B,LOW);
         }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,LOW);
+            digitalWrite(A_1B,LOW);
         }
 

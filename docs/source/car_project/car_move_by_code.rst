@@ -1,37 +1,37 @@
 .. _car_move_code:
 
-2. Move by Code
-======================
+2. Steuerung durch Code
+=========================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L9110 module.
+Im vorherigen Projekt haben wir versucht, den Betrieb des Motors zu steuern, indem wir für den Eingang des L9110-Moduls verschiedene Pegelsignale verwendet haben.
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
+Wenn wir die Pegelsignale durch das Programm ändern, können wir die Bewegung des Autos flexibel steuern.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,18 +40,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
+**Verdrahtung**
 
-**Wiring**
-
-
-Connect the wires between the L9110 module and the R4 board according to the diagram below.
-
+Verbinden Sie die Kabel zwischen dem L9110-Modul und dem R4-Board gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L9110 Module
+    * - L9110 Modul
       - R4 Board
       - Motor
     * - A-1B
@@ -68,16 +65,16 @@ Connect the wires between the L9110 module and the R4 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - Schwarzes Kabel des rechten Motors
     * - OA(B)
       - 
-      - Red wire of right motor
+      - Rotes Kabel des rechten Motors
     * - OB(A)
       - 
-      - Black wire of left motor
+      - Schwarzes Kabel des linken Motors
     * - OA(A)
       - 
-      - Red wire of left motor
+      - Rotes Kabel des linken Motors
 
 .. image:: img/car_2.png
     :width: 800
@@ -86,21 +83,21 @@ Connect the wires between the L9110 module and the R4 board according to the dia
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``2.move.ino`` im Pfad ``3in1-kit\car_project\2.move``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Nach dem Hochladen des Codes wird das Auto jeweils für zwei Sekunden vorwärts, rückwärts, links und rechts fahren.
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
 
-**How it works?**
+**Wie funktioniert das?**
 
-This project is essentially the same as the previous one, involving making the car move forward, backward, left, and right, as well as stopping by providing different signal levels to the input pins of the L9110 module.
+Dieses Projekt entspricht im Wesentlichen dem vorherigen. Es beinhaltet das Vorwärts-, Rückwärts-, Links- und Rechtsfahren des Autos sowie das Anhalten, indem verschiedene Signalpegel an die Eingangspins des L9110-Moduls gesendet werden.
 
-#. Initialize the pins of L9110 module.
+#. Initialisieren Sie die Pins des L9110-Moduls.
 
     .. code-block:: arduino
 
@@ -116,7 +113,7 @@ This project is essentially the same as the previous one, involving making the c
             pinMode(B_1A, OUTPUT);
         }
 
-#. Set the input pins to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Legen Sie die Eingangspins auf unterschiedlich hohe oder niedrige Pegel, um die Drehung der linken und rechten Motoren zu steuern, und kapseln Sie sie in einzelne Funktionen.
 
     .. code-block:: arduino
 
@@ -134,7 +131,8 @@ This project is essentially the same as the previous one, involving making the c
             digitalWrite(B_1A, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+
+#. Rufen Sie diese Funktionen in ``loop()`` auf.
 
     .. code-block:: arduino
 
@@ -152,21 +150,21 @@ This project is essentially the same as the previous one, involving making the c
 
 * `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin``: die Arduino-Pin-Nummer.
+    * ``value``: HIGH oder LOW.
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+    Schreibt einen HIGH- oder LOW-Wert an einen digitalen Pin. Wenn der Pin mit ``pinMode()`` als ``OUTPUT`` konfiguriert wurde, wird seine Spannung auf den entsprechenden Wert gesetzt: 5V (oder 3,3V bei 3,3V-Boards) für HIGH, 0V (Masse) für LOW.
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin``: die Arduino-Pin-Nummer, für die der Modus festgelegt werden soll.
+    * ``mode``: INPUT, OUTPUT oder INPUT_PULLUP.
     
-    Configures the specified pin to behave either as an input or an output.
+    Konfiguriert den angegebenen Pin entweder als Eingang oder Ausgang.
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms``: die Anzahl der Millisekunden zum Pausieren. Erlaubte Datentypen: unsigned long.
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    Pausiert das Programm für die angegebene Zeit (in Millisekunden). (In einer Sekunde sind 1000 Millisekunden.)
+

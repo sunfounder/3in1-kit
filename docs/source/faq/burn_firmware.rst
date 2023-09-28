@@ -1,20 +1,19 @@
 .. _burn_firmware:
 
-How to re-burn the firmware for ESP8266 module?
-=====================================================
+Wie lädt man die Firmware für das ESP8266-Modul erneut hoch?
+==============================================================
 
+Firmware mit R4 erneut hochladen
+----------------------------------------
 
-Re-brun the Firmware with R4
----------------------------------------
+**1. Schaltkreis aufbauen**
 
-**1. Build the circuit**
-
-Connect ESP8266 and Arduino UNO R4 board.
+Verbinden Sie ESP8266 und das Arduino UNO R4 Board.
 
     .. image:: img/faq_at_burn_bb.jpg
         :width: 800
 
-**2. Upload the Following Code to R4**
+**2. Folgenden Code auf R4 hochladen**
 
 .. code-block:: Arduino
 
@@ -32,203 +31,204 @@ Connect ESP8266 and Arduino UNO R4 board.
         }
     }
 
-**3. Burning the firmware**
+**3. Firmware hochladen**
 
-* Follow the steps below to burn the firmware if you are using **Windows**.
+* Folgen Sie den untenstehenden Schritten zum Hochladen der Firmware, wenn Sie **Windows** verwenden.
 
-    #. Download firmware and burn-in tool.
+    #. Firmware und Brenntool herunterladen.
 
         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. After unzipping, you will see 4 files.
+    #. Nach dem Entpacken sehen Sie 4 Dateien.
 
         .. .. image:: img/bat_firmware.png
-    
-        * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
-        * ``esptool.exe``: This is a command-line utility for Windows.
-        * ``install_r3.bat``: This is the command package for Windows system, double click this file will run all the commands inside the file.
-        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
 
-    #. Double click ``install_r4.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
+        * ``BAT_AT_V1.7.1.0_1M.bin``: Die Firmware, die auf das ESP8266-Modul gebrannt wird.
+        * ``esptool.exe``: Ein Befehlszeilen-Utility für Windows.
+        * ``install_r3.bat``: Dies ist das Befehlspaket für das Windows-System.
+        * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, aber speziell für das UNO R4 Board.
+
+    #. Doppelklicken Sie auf ``install_r4.bat``, um das Brennen der Firmware zu starten. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
         .. image:: img/install_firmware.png
 
         .. note::
-            If the burn-in fails, please check the following points.
+            Wenn das Brennen fehlschlägt, überprüfen Sie bitte die folgenden Punkte.
 
-            * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
-            * Check if the wiring is correct.
-            * Whether the computer has recognized your board properly, and make sure the port is not occupied.
-            * Reopen the install.bat file.
+            * Setzen Sie das ESP8266-Modul zurück, indem Sie den RST am ESP8266-Adapter an GND anschließen und dann entfernen.
+            * Überprüfen Sie, ob die Verdrahtung korrekt ist.
+            * Stellen Sie sicher, dass Ihr Computer Ihr Board erkannt hat und der Port nicht belegt ist.
+            * Öffnen Sie die install.bat-Datei erneut.
 
-* To burn the firmware, follow these steps if you are using a **Mac OS** system.
+* Zum Brennen der Firmware befolgen Sie diese Schritte, wenn Sie das **Mac OS** System verwenden.
 
-    #. Use the following commands to install Esptool. Esptool is a Python-based, open-source, platform-independent utility to communicate with the ROM bootloader in Espressif chips.
+    #. Installieren Sie Esptool mit den folgenden Befehlen. Esptool ist ein Python-basiertes, Open-Source- und plattformunabhängiges Hilfsprogramm, um mit dem ROM-Bootloader in Espressif-Chips zu kommunizieren.
 
         .. code-block::
 
             python3 -m pip install --upgrade pip
             python3 -m pip install esptool
 
-    #. If esptool is properly installed, it will output a message such as [usage: esptool] if you run ``python3 -m esptool``.
+    #. Wenn esptool ordnungsgemäß installiert ist, gibt es eine Meldung wie [usage: esptool] aus, wenn Sie ``python3 -m esptool`` ausführen.
 
-    #. Download firmware.
+    #. Firmware herunterladen.
 
         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. After unzipping, you will see 4 files.
+    #. Nach dem Entpacken sehen Sie 4 Dateien.
 
         .. .. image:: img/bat_firmware.png
 
-        * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
-        * ``esptool.exe``: This is a command-line utility for Windows.
-        * ``install_r3.bat``: This is the command package for Windows system.
-        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``BAT_AT_V1.7.1.0_1M.bin``: Die Firmware, die auf das ESP8266-Modul gebrannt wird.
+        * ``esptool.exe``: Ein Befehlszeilen-Utility für Windows.
+        * ``install_r3.bat``: Dies ist das Befehlspaket für das Windows-System.
+        * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, aber speziell für das UNO R4 Board.
 
-
-    #. Open a terminal and use the ``cd`` command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.
+    #. Öffnen Sie ein Terminal und navigieren Sie mit dem ``cd``-Befehl in den Ordner mit der heruntergeladenen Firmware. Führen Sie dann den folgenden Befehl aus, um die vorhandene Firmware zu löschen und die neue Firmware zu brennen.
 
         .. code-block::
 
             python3 -m esptool --chip esp8266 --before no_reset_no_sync erase_flash
             python3 -m esptool --chip esp8266 --before no_reset_no_sync write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
 
-    #. If you see the following prompt, the firmware has been installed successfully.
+    #. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
         .. image:: img/install_firmware_macos.png
 
         .. note::
-            If the burn-in fails, please check the following points.
+            Wenn das Brennen fehlschlägt, überprüfen Sie bitte die folgenden Punkte.
 
-            * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
-            * Check if the wiring is correct.
-            * Whether the computer has recognized your board properly, and make sure the port is not occupied.
-            * Reopen the install.bat file.
+            * Setzen Sie das ESP8266-Modul zurück, indem Sie den RST am ESP8266-Adapter an GND anschließen und dann entfernen.
+            * Überprüfen Sie, ob die Verdrahtung korrekt ist.
+            * Stellen Sie sicher, dass Ihr Computer Ihr Board erkannt hat und der Port nicht belegt ist.
+            * Öffnen Sie die install.bat-Datei erneut.
 
 **4. Test**
 
-#. On the basis of the original wiring, connect IO1 to 3V3.
+#. Auf Grundlage der ursprünglichen Verkabelung verbinden Sie IO1 mit 3V3.
 
     .. image:: img/faq_at_burn_check_bb.jpg
         :width: 800
 
-#. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+#. Sie können Informationen über das ESP8266-Modul sehen, wenn Sie auf das Lupensymbol (Serial Monitor) in der oberen rechten Ecke klicken und die Baudrate auf **115200** einstellen.
 
     .. image:: img/sp20220524113020.png
 
     .. note::
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * Wenn ``ready`` nicht erscheint, können Sie versuchen, das ESP8266-Modul zurückzusetzen (verbinden Sie RST mit GND) und den Serial Monitor erneut zu öffnen.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
+#. Klicken Sie auf **NEWLINE DROPDOWN BOX**, wählen Sie im Dropdown-Menü ``both NL & CR``, geben Sie ``AT`` ein. Wenn OK zurückgegeben wird, bedeutet dies, dass ESP8266 erfolgreich eine Verbindung mit Ihrem Board hergestellt hat.
 
     .. image:: img/sp20220524113702.png
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+Nun können Sie weiterhin :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.
 
 
 
 
-Re-brun the Firmware with R3
+
+
+
+Firmware mit R3 erneut aufspielen
 ---------------------------------------
 
-**1. Build the circuit**
+**1. Schaltung aufbauen**
 
-Connect ESP8266 and SunFounder R3 board.
+Verbinden Sie ESP8266 mit dem SunFounder R3-Board.
 
     .. image:: img/connect_esp8266.png
         :width: 800
 
-**2. Burning the firmware**
+**2. Firmware brennen**
 
-* Follow the steps below to burn the firmware if you are using **Windows**.
+* Befolgen Sie die folgenden Schritte, um die Firmware unter **Windows** zu brennen.
 
-    #. Download firmware and burn-in tool.
+    #. Firmware und Brenn-Tool herunterladen.
 
         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. After unzipping, you will see 4 files.
+    #. Nach dem Entpacken sehen Sie 4 Dateien.
 
         .. .. image:: img/bat_firmware.png
     
-        * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
-        * ``esptool.exe``: This is a command-line utility for Windows.
-        * ``install_r3.bat``: This is the command package for Windows system, double click this file will run all the commands inside the file.
-        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``BAT_AT_V1.7.1.0_1M.bin``: Die Firmware, die auf das ESP8266-Modul gebrannt wird.
+        * ``esptool.exe``: Ein Befehlszeilen-Tool für Windows.
+        * ``install_r3.bat``: Ein Befehlspaket für das Windows-System. Ein Doppelklick auf diese Datei führt alle Befehle in der Datei aus.
+        * ``install_r4.bat``: Wie ``install_r3.bat``, aber speziell für das UNO R4-Board.
 
-    #. Double click ``install_r3.bat`` to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.
+    #. Doppelklicken Sie auf ``install_r3.bat``, um den Brennvorgang der Firmware zu starten. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
         .. image:: img/install_firmware.png
 
         .. note::
-            If the burn-in fails, please check the following points.
+            Wenn das Brennen fehlschlägt, überprüfen Sie bitte folgende Punkte:
 
-            * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
-            * Check if the wiring is correct.
-            * Whether the computer has recognized your board properly, and make sure the port is not occupied.
-            * Reopen the install.bat file.
+            * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann abziehen.
+            * Überprüfen Sie, ob die Verkabelung korrekt ist.
+            * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
+            * Öffnen Sie die install.bat-Datei erneut.
 
-* To burn the firmware, follow these steps if you are using a **Mac OS** system.
+* Um die Firmware unter **Mac OS** zu brennen, folgen Sie diesen Schritten:
 
-    #. Use the following commands to install Esptool. Esptool is a Python-based, open-source, platform-independent utility to communicate with the ROM bootloader in Espressif chips.
+    #. Installieren Sie Esptool mit den folgenden Befehlen. Esptool ist ein in Python geschriebenes, Open-Source, plattformunabhängiges Tool, um mit dem ROM-Bootloader in Espressif-Chips zu kommunizieren.
 
         .. code-block::
 
             python3 -m pip install --upgrade pip
             python3 -m pip install esptool
 
-    #. If esptool is properly installed, it will output a message such as [usage: esptool] if you run ``python3 -m esptool``.
+    #. Wenn esptool ordnungsgemäß installiert ist, gibt es eine Nachricht wie [usage: esptool] aus, wenn Sie ``python3 -m esptool`` ausführen.
 
-    #. Download firmware.
+    #. Firmware herunterladen.
 
         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. After unzipping, you will see 3 files.
+    #. Nach dem Entpacken sehen Sie 4 Dateien.
 
         .. image:: img/bat_firmware.png
 
-        * ``BAT_AT_V1.7.1.0_1M.bin``: The firmware to burn to the ESP8266 module.
-        * ``esptool.exe``: This is a command-line utility for Windows.
-        * ``install_r3.bat``: This is the command package for Windows system.
-        * ``install_r4.bat``: Same as ``install_r3.bat``, but dedicated to UNO R4 board.
+        * ``BAT_AT_V1.7.1.0_1M.bin``: Die Firmware, die auf das ESP8266-Modul gebrannt wird.
+        * ``esptool.exe``: Ein Befehlszeilen-Tool für Windows.
+        * ``install_r3.bat``: Ein Befehlspaket für das Windows-System.
+        * ``install_r4.bat``: Wie ``install_r3.bat``, aber speziell für das UNO R4-Board.
 
-
-    #. Open a terminal and use the ``cd`` command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.
+    #. Öffnen Sie ein Terminal und verwenden Sie den ``cd``-Befehl, um in den gerade heruntergeladenen Firmware-Ordner zu wechseln. Führen Sie dann den folgenden Befehl aus, um die vorhandene Firmware zu löschen und die neue Firmware neu zu brennen.
 
         .. code-block::
 
             python3 -m esptool --chip esp8266 --before default_reset erase_flash
             python3 -m esptool --chip esp8266 --before default_reset write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
 
-    #. If you see the following prompt, the firmware has been installed successfully.
+    #. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
         .. image:: img/install_firmware_macos.png
 
         .. note::
-            If the burn-in fails, please check the following points.
+            Wenn das Brennen fehlschlägt, überprüfen Sie bitte folgende Punkte:
 
-            * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
-            * Check if the wiring is correct.
-            * Whether the computer has recognized your board properly, and make sure the port is not occupied.
-            * Reopen the install.bat file.
+            * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann abziehen.
+            * Überprüfen Sie, ob die Verkabelung korrekt ist.
+            * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
+            * Öffnen Sie die install.bat-Datei erneut.
 
 **3. Test**
 
-#. On the basis of the original wiring, connect IO1 to 3V3.
+#. Auf Basis der ursprünglichen Verkabelung verbinden Sie IO1 mit 3V3.
 
     .. image:: img/connect_esp826612.png
         :width: 800
 
-#. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+#. Sie können Informationen über das ESP8266-Modul sehen, wenn Sie auf das Lupensymbol (Serial Monitor) in der oberen rechten Ecke klicken und die Baudrate auf **115200** einstellen.
 
     .. image:: img/sp20220524113020.png
 
     .. note::
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * Wenn ``ready`` nicht angezeigt wird, können Sie versuchen, das ESP8266-Modul zurückzusetzen (RST mit GND verbinden) und den Serial Monitor erneut zu öffnen.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+#. Klicken Sie auf **NEWLINE DROPDOWN BOX**, wählen Sie im Dropdown-Menü ``both NL & CR``, geben Sie ``AT`` ein. Wenn OK zurückgegeben wird, bedeutet dies, dass das ESP8266 erfolgreich eine Verbindung zum R3-Board hergestellt hat.
 
     .. image:: img/sp20220524113702.png
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+Nun können Sie weiterhin :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.

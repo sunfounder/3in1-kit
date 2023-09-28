@@ -1,24 +1,22 @@
-Sketch Writing Rule
+Skizzieren von Schreibregeln
 ================================
 
+Wenn Sie einen Freund bitten, das Licht für Sie anzuschalten, können Sie sagen: "Schalte das Licht ein." oder "Licht an, Kumpel.". Sie können jeden beliebigen Tonfall verwenden.
 
-If you ask a friend to turn on the lights for you, you can say "Turn on the lights.", or "Lights on, bro.", you can use any tone of voice you want.
+Wenn Sie jedoch möchten, dass das Arduino-Board etwas für Sie erledigt, müssen Sie die Arduino-Programmierschreibregeln befolgen, um die Befehle einzugeben.
 
-However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands.
+Dieses Kapitel enthält die Grundregeln der Arduino-Sprache und wird Ihnen helfen zu verstehen, wie man natürliche Sprache in Code übersetzt.
 
-This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code.
+Natürlich ist dies ein Prozess, mit dem man sich erst mit der Zeit vertraut macht und es ist auch der fehleranfälligste Teil des Prozesses für Anfänger. Also, wenn Sie oft Fehler machen, ist das in Ordnung, versuchen Sie es einfach noch ein paar Mal.
 
-Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times.
+Semikolon ``;``
+-------------------
 
+Genauso wie beim Schreiben eines Briefes, bei dem Sie am Ende jeden Satzes einen Punkt als Ende setzen, verlangt die Arduino-Sprache von Ihnen, ``;`` zu verwenden, um dem Board das Ende des Befehls mitzuteilen.
 
-Semicolon ``;``
----------------
+Nehmen wir das bekannte Beispiel "Blinken der Onboard-LED". Eine fehlerfreie Skizze sollte so aussehen:
 
-Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command.
-
-Take the familiar "onboard LED blinking" example. A healthy sketch should look like this.
-
-Example:
+Beispiel:
 
 .. code-block:: C
 
@@ -35,9 +33,9 @@ Example:
         delay(500);
     }
 
-Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them.
+Als Nächstes schauen wir uns die folgenden zwei Skizzen an und raten, ob sie von Arduino korrekt erkannt werden können, bevor wir sie ausführen.
 
-Sketch A:
+Skizze A:
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
@@ -55,7 +53,7 @@ Sketch A:
         delay(500)
     }
 
-Sketch B:
+Skizze B:
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11,12,13,14,15,16
@@ -67,41 +65,35 @@ Sketch B:
     
     void loop() {
         // put your main code here, to run repeatedly:
-        digitalWrite(13,
-    HIGH);  delay
-        (500
-        );
-        digitalWrite(13,
-        
-        LOW);
-                delay(500)
-        ;
+        digitalWrite(13,HIGH); 
+        delay(500);
+        digitalWrite(13,LOW);
+        delay(500);
     }
 
-The result is that **Sketch A** reports an error and **Sketch B** runs.
+Das Ergebnis ist, dass **Skizze A** einen Fehler meldet und **Skizze B** läuft.
 
-* The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it.
-* **Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example.
+* Die Fehler in **Skizze A** sind fehlende ``;`` und obwohl sie normal aussieht, kann Arduino sie nicht lesen.
+* **Skizze B** mag für Menschen unübersichtlich wirken, aber in Wirklichkeit gibt es Einrückungen, Zeilenumbrüche und Leerzeichen in Aussagen in Arduino-Programmen nicht. Daher sieht es für den Arduino-Compiler genaus so aus wie im Beispiel.
 
-However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble.
-
-
-Curlybraces ``{}``
-------------------
-
-``{}`` is the main component of the Arduino programming language, and they must appear in pairs. 
-A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement.
+Dennoch, bitte schreiben Sie Ihren Code nicht wie in **Skizze B**, denn in der Regel sind es Menschen, die den Code schreiben und betrachten, also machen Sie sich das Leben nicht unnötig schwer.
 
 
 
-Commment ``//``
----------------
+Geschweifte Klammern ``{}``
+------------------------------
 
-Commment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
+``{}`` ist eine Hauptkomponente der Arduino-Programmiersprache, und sie müssen immer paarweise auftreten.
+Eine bessere Programmierkonvention ist, direkt nach dem Tippen der linken geschweiften Klammer die rechte zu tippen und dann den Cursor zwischen die geschweiften Klammern zu setzen, um die Anweisung einzufügen.
 
-If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
+Kommentare ``//``
+--------------------
 
-If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way.
+Kommentare sind Teile des Sketches, die vom Compiler ignoriert werden. Sie werden in der Regel verwendet, um anderen zu erklären, wie das Programm funktioniert.
+
+Wenn wir in einer Codezeile zwei aufeinanderfolgende Schrägstriche schreiben, ignoriert der Compiler alles bis zum Ende dieser Zeile.
+
+Wenn wir einen neuen Sketch erstellen, enthält er bereits zwei Kommentare. Werden diese beiden Kommentare entfernt, wird der Sketch in keiner Weise beeinflusst.
 
 .. code-block:: C
     :emphasize-lines: 2,7
@@ -116,10 +108,9 @@ If we create a new sketch, it comes with two comments, and if we remove these tw
 
     }
 
+Kommentare sind in der Programmierung sehr nützlich, und einige gebräuchliche Verwendungen sind unten aufgeführt.
 
-Comment is very useful in programming, and several common uses are listed below.
-
-* Usage A: Tell yourself or others what this section of code does.
+* Verwendung A: Sich selbst oder anderen mitteilen, was dieser Abschnitt des Codes tut.
 
 .. code-block:: C
 
@@ -134,7 +125,7 @@ Comment is very useful in programming, and several common uses are listed below.
         delay(500);// Status quo for 500 ms
     }
 
-* Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors.
+* Verwendung B: Temporäres Deaktivieren einiger Anweisungen (ohne sie zu löschen) und ihre Reaktivierung, wenn sie benötigt werden, ohne sie neu schreiben zu müssen. Dies ist beim Debuggen von Code und beim Suchen von Programmfehlern sehr hilfreich.
 
 .. code-block:: C
     :emphasize-lines: 3,4,5,6
@@ -155,14 +146,14 @@ Comment is very useful in programming, and several common uses are listed below.
     }    
 
 .. note:: 
-    Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
+    Verwenden Sie die Tastenkombination ``Ctrl+/``, um Ihren Code schnell zu kommentieren oder die Kommentierung aufzuheben.
 
-Commment ``/**/``
-------------------
+Kommentare ``/**/``
+-------------------
 
-Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.
+Genauso wie ``//`` für Kommentare. Diese Art von Kommentar kann über mehrere Zeilen gehen. Sobald der Compiler ``/*`` liest, ignoriert er alles Folgende, bis er auf ``*/`` stößt.
 
-Example 1:
+Beispiel 1:
 
 .. code-block:: C
     :emphasize-lines: 1,8,9,10,11
@@ -188,15 +179,15 @@ Example 1:
 ``#define``
 --------------
 
-This is a useful C++ tool.
+Dies ist ein nützliches Werkzeug in C++.
 
 .. code-block:: C
 
-    #define identifier token-string
+    #define Bezeichner Token-String
 
-The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions.
+Der Compiler ersetzt automatisch ``Bezeichner`` durch ``Token-String``, wenn er diesen liest. Dies wird normalerweise zur Definition von Konstanten verwendet.
 
-As an example, here is a sketch that uses define, which improves the readability of the code.
+Als Beispiel hier ein Sketch, der define verwendet, um die Lesbarkeit des Codes zu verbessern.
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -215,7 +206,7 @@ As an example, here is a sketch that uses define, which improves the readability
         delay(DELAY_TIME);
     }
 
-To the compiler, it actually looks like this.
+Für den Compiler sieht es tatsächlich so aus:
 
 .. code-block:: C
 
@@ -230,12 +221,12 @@ To the compiler, it actually looks like this.
         delay(500);
     }
 
-We can see that the ``identifier`` is replaced and does not exist inside the program.
-Therefore, there are several caveats when using it.
+Man kann erkennen, dass der ``Bezeichner`` ersetzt wurde und im Programm nicht vorhanden ist.
+Daher gibt es einige Vorsichtsmaßnahmen bei der Verwendung.
 
-1. A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program.
+1. Ein ``Token-String`` kann nur manuell geändert werden und kann im Programm nicht durch arithmetische Operationen in andere Werte umgewandelt werden.
 
-2. Avoid using symbols such as ``;``. For example.
+2. Vermeiden Sie die Verwendung von Symbolen wie ``;``. Zum Beispiel:
 
 .. code-block:: C
     :emphasize-lines: 1
@@ -250,7 +241,7 @@ Therefore, there are several caveats when using it.
         digitalWrite(ONBOARD_LED,HIGH); 
     }
 
-The compiler will recognize it as the following, which is what will be reported as an error.
+Der Compiler wird es wie folgt erkennen, was als Fehler gemeldet wird:
 
 .. code-block:: C
     :emphasize-lines: 2,6
@@ -264,4 +255,4 @@ The compiler will recognize it as the following, which is what will be reported 
     }
 
 .. note:: 
-    A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables.
+    Eine Namenskonvention für ``#define`` ist, den ``Bezeichner`` groß zu schreiben, um Verwechslungen mit Variablen zu vermeiden.

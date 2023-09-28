@@ -1,49 +1,46 @@
-1.2 Configuring the Blynk
+1.2 Konfiguration von Blynk
 -----------------------------------
 
-
-#. Go to the `BLYNK <https://blynk.io/>`_ and click **START FREE**. 
+#. Gehen Sie zu `BLYNK <https://blynk.io/>`_ und klicken Sie auf **START FREE**.
 
     .. image:: img/sp220607_142551.png
 
-#. Fill in your email address to register an account.
+#. Geben Sie Ihre E-Mail-Adresse ein, um ein Konto zu registrieren.
 
     .. image:: img/sp220607_142807.png
 
-#. Go to your email address to complete your account registration.
+#. Überprüfen Sie Ihre E-Mail-Adresse, um die Kontoregistrierung abzuschließen.
 
     .. image:: img/sp220607_142936.png
 
-#. Afterwards, **Blynk Tour** will appear and you can read it to learn the basic information about the Blynk.
+#. Anschließend wird die **Blynk Tour** angezeigt. Sie können sie lesen, um grundlegende Informationen über Blynk zu erhalten.
 
     .. image:: img/sp220607_143244.png
 
-#. Next we need to create a template and device with this **Quick Start**, click **Let's go**.
-
+#. Als Nächstes müssen wir mit diesem **Quick Start** eine Vorlage und ein Gerät erstellen. Klicken Sie auf **Let's go**.
 
     .. image:: img/sp220607_143608.png
 
-#. Select the hardware and connection type.
+#. Wählen Sie die Hardware und den Verbindungstyp.
 
     .. image:: img/sp20220614173218.png
 
-#. Here you are told which IDE you need to prepare, we recommend the **Arduino IDE**.
+#. Hier wird Ihnen mitgeteilt, welche IDE Sie vorbereiten müssen. Wir empfehlen die **Arduino IDE**.
 
     .. image:: img/sp20220614173454.png
 
-#. Here is the library you need to add, but the recommended library here is a bit problematic, we need to add other libraries manually (we will mention it later). Click **Next** here, and a new template and device will be created.
+#. Hier ist die Bibliothek, die Sie hinzufügen müssen. Aber die hier empfohlene Bibliothek ist ein wenig problematisch. Wir müssen andere Bibliotheken manuell hinzufügen (wir werden das später erwähnen). Klicken Sie hier auf **Next** und eine neue Vorlage und ein Gerät werden erstellt.
 
     .. image:: img/sp20220614173629.png
 
-#. The next steps are to upload the relevant code and connect your board to Blynk, but since there is a problem with the library provided earlier, you need to add other libraries again. So click **Cancel** here to stop **Quick Start**.
+#. Die nächsten Schritte bestehen darin, den relevanten Code hochzuladen und Ihr Board mit Blynk zu verbinden. Da jedoch ein Problem mit der zuvor bereitgestellten Bibliothek besteht, müssen Sie andere Bibliotheken erneut hinzufügen. Klicken Sie daher hier auf **Cancel**, um **Quick Start** zu beenden.
 
     .. image:: img/sp20220614174006.png
 
-#. Click the **Search** button and you will see the new device you just created.
+#. Klicken Sie auf den **Suchen**-Button und Sie werden das neue Gerät sehen, das Sie gerade erstellt haben.
 
     .. image:: img/sp20220614174410.png
 
-#. Go to this **Quickstart Device** and you will see ``TEMPLATE_ID``, ``DEVICE_NAME`` and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
-
+#. Gehen Sie zu diesem **Quickstart Device** und auf der **Device info**-Seite sehen Sie ``TEMPLATE_ID``, ``DEVICE_NAME`` und ``AUTH_TOKEN``. Sie werden diese später kopieren müssen.
 
     .. image:: img/sp20220614174721.png

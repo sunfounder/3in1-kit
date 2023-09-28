@@ -1,16 +1,13 @@
-Components List and Introduction
+Komponentenliste und Einführung
 ====================================
 
+Nach dem Öffnen des Pakets überprüfen Sie bitte, ob die Anzahl der Komponenten mit der Produktbeschreibung übereinstimmt und ob alle Komponenten in gutem Zustand sind.
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+* :download:`3 in 1 Kit Komponentenliste <https://github.com/sunfounder/sf-pdf/raw/master/components_list/k0407V10-a0000838-3in1-kit.pdf>`
 
-.. image:: img/components_list.jpg
-    :width: 800
-    :align: center
+Im Folgenden wird jede Komponente vorgestellt, einschließlich des Funktionsprinzips der Komponente und der zugehörigen Projekte.
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
-
-**Control Board**
+**Steuerplatine**
 
 .. toctree::
     :maxdepth: 1
@@ -18,10 +15,7 @@ Below is the introduction to each component, which contains the operating princi
     component_uno
     component_esp8266
 
-
-
-
-**Basic**
+**Grundlagen**
 
 .. toctree::
     :maxdepth: 1
@@ -38,9 +32,7 @@ Below is the introduction to each component, which contains the operating princi
 
     component_74hc595
 
-
-
-**Display**
+**Anzeige**
 
 .. toctree::
     :maxdepth: 1
@@ -50,15 +42,14 @@ Below is the introduction to each component, which contains the operating princi
     component_7_segment
     component_i2c_lcd
 
-
-**Sound**
+**Ton**
 
 .. toctree::
     :maxdepth: 1
 
     component_buzzer
 
-**Driver**
+**Treiber**
 
 .. toctree::
     :maxdepth: 1
@@ -67,7 +58,6 @@ Below is the introduction to each component, which contains the operating princi
     component_servo
     component_pump
     component_l9110s
-
 
 **Controller**
 
@@ -79,7 +69,6 @@ Below is the introduction to each component, which contains the operating princi
     component_potentiometer
     component_joystick_module
     component_receiver
-
 
 **Sensor**
 

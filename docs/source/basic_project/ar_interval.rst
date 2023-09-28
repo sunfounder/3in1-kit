@@ -1,61 +1,55 @@
 .. _ar_interval:
 
-5.4 Interval
-================
+5.4 Intervall
+===============
 
-Sometimes you need to do two things at once. For example you might want
-to blink an LED while reading a button press. In this case, you can't
-use ``delay()``, because Arduino pauses your program during the ``delay()``. If
-the button is pressed while Arduino is paused waiting for the ``delay()`` to
-pass, your program will miss the button press.
+Manchmal müssen Sie zwei Dinge gleichzeitig tun. Zum Beispiel möchten Sie vielleicht
+eine LED blinken lassen, während Sie einen Tastendruck lesen. In diesem Fall können Sie
+nicht ``delay()`` verwenden, weil Arduino Ihr Programm während des ``delay()`` pausiert. Wenn
+der Knopf gedrückt wird, während Arduino pausiert und auf das Ende von ``delay()`` wartet, wird Ihr Programm den Tastendruck verpassen.
 
-An analogy would be warming up a pizza in your microwave, and also
-waiting some important email. You put the pizza in the microwave and set
-it for 10 minutes. The analogy to using ``delay()`` would be to sit in front
-of the microwave watching the timer count down from 10 minutes until the
-timer reaches zero. If the important email arrives during this time you
-will miss it.
+Ein passendes Beispiel wäre, eine Pizza in Ihrer Mikrowelle aufzuwärmen und gleichzeitig
+auf eine wichtige E-Mail zu warten. Sie legen die Pizza in die Mikrowelle und stellen
+sie auf 10 Minuten ein. Das Äquivalent zur Verwendung von ``delay()`` wäre, vor der Mikrowelle zu sitzen und dem Timer zuzusehen, wie er von 10 Minuten auf Null herunterzählt. Wenn die wichtige E-Mail in dieser Zeit ankommt, werden Sie sie verpassen.
 
-What you would do in real life would be to turn on the pizza, and then
-check your email, and then maybe do something else (that doesn't take
-too long!) and every so often you will come back to the microwave to see
-if the timer has reached zero, indicating that your pizza is done.
+Was Sie im wirklichen Leben tun würden, wäre, die Pizza einzuschalten und dann
+Ihre E-Mails zu überprüfen und vielleicht etwas anderes zu tun (was nicht allzu lange dauert!) und ab und zu würden Sie zur Mikrowelle zurückkehren, um zu sehen, 
+ob der Timer Null erreicht hat und somit Ihre Pizza fertig ist.
 
-This sketch demonstrates how to tone an buzzer without using ``delay()``. 
-It turns the buzzer on and then makes note of the time. Then, each time
-through ``loop()``, it checks to see if the desired interval time has passed.
-If it has, it tone the buzzer and makes note of the new time.
-In this way the buzzer tones continuously while the sketch execution never
-lags on a single instruction.
+Diese Skizze zeigt, wie man einen Buzzer ohne die Verwendung von ``delay()`` tönen kann. 
+Sie schaltet den Buzzer ein und notiert dann die Zeit. Danach überprüft sie bei jedem Durchlauf von ``loop()``, ob das gewünschte Intervall abgelaufen ist.
+Ist dies der Fall, wird der Buzzer getönt und die neue Zeit notiert.
+Auf diese Weise tönt der Buzzer kontinuierlich, während die Sketch-Ausführung nie
+bei einer einzigen Anweisung ins Stocken gerät.
 
-Based on this condition, we can add the code of the button to control the LED, 
-it will not be disturbed by the buzzer playing music.
+Basierend auf dieser Bedingung können wir den Code des Knopfes hinzufügen, um die LED zu steuern,
+sie wird nicht durch den Buzzer, der Musik spielt, gestört.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -72,12 +66,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.5_interval.png
 
 
-**Wiring**
+
+**Verdrahtung**
 
 .. image:: img/5.4_interval_bb.png
     :width: 600
@@ -85,45 +80,44 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\learning_project\5.4.interval``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Öffnen Sie die Datei ``5.4.interval.ino`` im Verzeichnis ``3in1-kit\learning_project\5.4.interval``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
+Nach erfolgreichem Hochladen des Codes wird der Summer Musik spielen; immer wenn Sie den Knopf drücken, leuchtet die LED auf. Die Arbeit von LED und Summer beeinflusst sich nicht gegenseitig.
 
-**How it works?**
+**Wie funktioniert das?**
 
 
-Initial a variable named ``previousMillis`` to store previous operating time of microcontroller.
+Initialisieren Sie eine Variable namens ``previousMillis``, um die vorherige Betriebszeit des Mikrocontrollers zu speichern.
 
 .. code-block:: arduino
 
     unsigned long previousMillis = 0;     
 
-Mark which note is played.
+Markieren Sie, welche Note gespielt wird.
 
 .. code-block:: arduino
 
     int thisNote=0; 
 
-The interval time of each note.
+Die Intervallzeit jeder Note.
 
 .. code-block:: arduino
 
     long interval = 1000; 
 
-In ``loop()``, declare ``currentMillis`` to store the current time.
+In ``loop()`` deklarieren Sie ``currentMillis``, um die aktuelle Zeit zu speichern.
 
 .. code-block:: arduino
 
     unsigned long currentMillis = millis();
 
-When the interval between the current operating time and last updating time is larger than 1000ms, certain functions are triggered. Meanwhile, update the previousMillis to the current time for the next triggering that is to happen 1 second latter.  
+Wenn das Intervall zwischen der aktuellen Betriebszeit und der letzten Aktualisierungszeit größer als 1000ms ist, werden bestimmte Funktionen ausgelöst. Gleichzeitig wird previousMillis auf die aktuelle Zeit aktualisiert, um das nächste Auslösen, das 1 Sekunde später stattfinden soll, vorzubereiten.
 
 .. code-block:: arduino
 
@@ -132,7 +126,7 @@ When the interval between the current operating time and last updating time is l
         //...
     }
 
-Play the notes in the melody one by one.
+Spielen Sie die Noten in der Melodie nacheinander ab.
 
 .. code-block:: arduino
 
@@ -140,7 +134,7 @@ Play the notes in the melody one by one.
     interval=1000/noteDurations[thisNote]; // interval at which to tone
     thisNote=(thisNote+1)%(sizeof(melody)/2); //iterate over the notes of the melody
 
-The button control the LED.
+Der Knopf steuert die LED.
 
 .. code-block:: arduino
 

@@ -1,33 +1,33 @@
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
-==================================================
+SunFounder 3 in 1 IoT/Smart Car/Lernkit
+==============================================
 
 .. image:: img/3in_kit_r4.png
     :width: 800
 
-When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
+Haben Sie jemals ein Lernset online gekauft und es kam nur mit einer simplen PDF oder einem kleinen Heftchen, welches lediglich die Schritte zum Aufbau des Projekts anzeigt?
 
-Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
+Oder möchten Sie vielleicht Ihr eigenes Smart Car bauen, finden aber, dass die online verfügbaren Angebote teuer und kompliziert sind?
 
-Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
+Oder haben Sie nützliche und interessante IoT-Projekte von anderen gesehen, wissen aber nicht, wo Sie anfangen sollen?
 
-All these problems can be solved with our 3 in 1 starter kit.
+All diese Probleme können mit unserem 3-in-1 Starterkit gelöst werden.
 
-In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+Im 3-in-1 Starterkit finden Sie einen kompletten Arduino-Kurs, der Anfängern hilft, Arduino zu lernen. Zudem gibt es eine Vielzahl von interessanten Projekten, die andere Lernkits nicht bieten, wie z.B. Smart Car-Projekte und IoT-Projekte. Wenn Sie dem Kurs Schritt für Schritt folgen, werden Sie nicht nur Code kopieren und einfügen, sondern Ihren eigenen Code schreiben und Ihr Arduino-Projekt nach Ihren Wünschen umsetzen.
 
-Come on! Start programing Arduino with confidence from zero to hero!
+Legen Sie los! Beginnen Sie mit dem Programmieren von Arduino mit Vertrauen, von Null bis zum Profi!
 
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
+Wenn Sie Fragen haben oder andere interessante Ideen, senden Sie bitte eine E-Mail an service@sunfounder.com.
 
-**About the display language**
+**Über die Anzeigesprache**
 
-This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
+Dieses Dokument ist auch in anderen Sprachen verfügbar. Um die Anzeigesprache zu wechseln, klicken Sie bitte auf das **Read the Docs** -Symbol in der unteren linken Ecke der Seite.
 
 .. image:: img/translation.png
     
 .. toctree::
     :maxdepth: 2
 
-    About this Kit <self>
+    Über dieses Kit <self>
     components/component_list
     arduino_start/get_start
     download_code
@@ -37,9 +37,9 @@ This document is available in other languages as well. To switch the display lan
     faq/faq
     thank-learning
 
-Copyright Notice
+Urheberrechtshinweis
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Alle Inhalte, einschließlich, aber nicht beschränkt auf Texte, Bilder und Code in dieser Anleitung, gehören der SunFounder Company. Sie sollten es nur für persönliches Studium, Untersuchung, Vergnügen oder andere nicht kommerzielle oder gemeinnützige Zwecke verwenden, gemäß den einschlägigen Vorschriften und Urheberrechtsgesetzen, ohne die rechtlichen Rechte des Autors und der betreffenden Rechteinhaber zu verletzen. Für jede Einzelperson oder Organisation, die diese ohne Erlaubnis zu kommerziellem Gewinn verwendet, behält sich die Firma das Recht vor, rechtliche Schritte einzuleiten.
 
 .. include:: test/test.rst

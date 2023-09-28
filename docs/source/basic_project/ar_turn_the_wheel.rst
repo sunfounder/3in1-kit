@@ -1,51 +1,51 @@
 .. _ar_motor:
 
-1.3 Turn the Wheel
+1.3 Das Rad drehen
 ============================
 
-A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, 
-and the large current may damage the main control board such as R4 board.
-Therefore, an motor driver module is used in this occasion, 
-which is a good helper for the R4 board to control the motor safely.
+Ein Motor ist ein typisches digitales Ausgabegerät und wird genauso verwendet wie eine LED.
+Der Motor muss jedoch mit einem hohen Strom betrieben werden, 
+und der hohe Strom kann das Hauptsteuerungsboard wie das R4-Board beschädigen.
+Deshalb wird bei dieser Gelegenheit ein Motor-Treibermodul verwendet,
+welches eine große Hilfe für das R4-Board ist, um den Motor sicher zu steuern.
 
-.. **Schematic**
+.. **Schaltbild**
 
 .. .. image:: img/circuit_1.3_wheel.png
 
-.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 sind die Eingänge des L298N-Moduls und OUT1~OUT4 die Ausgänge.
 
-.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. Eine einfache Verwendungsmethode ist: Bei einem hohen Pegel für INx gibt OUTx ebenfalls einen hohen Pegel aus; Bei einem niedrigen Pegel für INx gibt OUTx einen niedrigen Pegel aus.
+.. Verbindet man die beiden Enden des Motors mit OUT1 und OUT2 und gibt gegenläufige Pegelsignale für IN1 und IN2 ein, wird der Motor drehen. OUT3 und OUT4 können auf die gleiche Weise verwendet werden.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
-        - |link_Uno_R3_buy|
+        - \-
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_tt_motor`
@@ -53,20 +53,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
-
+**Schaltplan**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
 
-**Wiring**
+**Verdrahtung**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L9110S
-      - R4 Board
+      - R4-Board
       - Motor
     * - VCC
       - 5V
@@ -82,10 +81,10 @@ You can also buy them separately from the links below.
       - 
     * - OA
       - 
-      - one wire of the motor
+      - ein Draht des Motors
     * - OB
       - 
-      - one wire of the motor
+      - ein Draht des Motors
 
 .. image:: img/1.3_turn_the_wheel_bb.png
     :width: 800
@@ -95,10 +94,8 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\learning_project\1.3.turn_the_wheel``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
+   * Sie können die Datei ``1.3.turn_the_wheel.ino`` unter dem Pfad ``3in1-kit\learning_project\1.3.turn_the_wheel`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. raw:: html
     

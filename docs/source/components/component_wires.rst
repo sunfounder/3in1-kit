@@ -1,31 +1,25 @@
 .. _cpn_wires:
 
-Jumper Wires
+Jumper-Kabel
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Kabel, die zwei Anschlüsse verbinden, werden als Jumper-Kabel bezeichnet. Es gibt
+verschiedene Arten von Jumper-Kabeln. Hier konzentrieren wir uns auf diejenigen, die in
+Steckbrettern (Breadboards) verwendet werden. Unter anderem werden sie dazu verwendet, elektrische Signale
+von beliebigen Stellen auf dem Steckbrett zu den Ein-/Ausgangspins eines
+Mikrocontrollers zu übertragen.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Jumper-Kabel werden durch Einstecken ihrer "Endanschlüsse" in die vorgesehenen Steckplätze
+des Steckbretts verbunden. Unter der Oberfläche des Steckbretts befinden sich einige parallele Platten, die die Steckplätze in Gruppen von Reihen oder Spalten verbinden, je nach Bereich. Die "Endanschlüsse" werden in die 
+Steckbrettschlitze eingeführt, ohne zu löten, in die speziellen Schlitze, die im spezifischen Prototyp verbunden werden müssen.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Es gibt drei Arten von Jumper-Kabeln: Female-to-Female (Weiblich zu Weiblich), Male-to-Male (Männlich zu Männlich)
+und Male-to-Female (Männlich zu Weiblich). Der Grund, warum wir es Male-to-Female nennen, liegt daran, dass es 
+an einem Ende eine herausragende Spitze und an dem anderen ein versenktes weibliches Ende hat. 
+Male-to-Male bedeutet, dass beide Seiten männlich sind, und Female-to-Female bedeutet, dass beide Enden weiblich sind.
 
 .. image:: img/image414.png
 
-
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+In einem Projekt können mehrere Typen verwendet werden. Die Farbe der
+Jumper-Kabel kann unterschiedlich sein, dies bedeutet jedoch nicht, dass ihre Funktion entsprechend unterschiedlich ist.
+Sie sind lediglich so gestaltet, dass man die Verbindung zwischen den einzelnen Schaltungen besser erkennen kann.

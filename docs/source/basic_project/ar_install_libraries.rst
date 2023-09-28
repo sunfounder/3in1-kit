@@ -1,34 +1,32 @@
 .. _install_libraries_ar:
 
-5.11 Install External Libraries
+5.11 Externe Bibliotheken installieren
 =======================================
 
+Eine Bibliothek ist eine Sammlung von vorgeschriebenem Code oder Funktionen, die die Fähigkeiten der Arduino IDE erweitern. Bibliotheken bieten gebrauchsfertigen Code für verschiedene Funktionen und ermöglichen es Ihnen, Zeit und Mühe beim Programmieren komplexer Features zu sparen.
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+Es gibt zwei Hauptwege, um Bibliotheken zu installieren:
 
-There are two main ways to install libraries:
+Viele Bibliotheken sind direkt über den Arduino **Library Manager** verfügbar. Sie können den **Library Manager** mit folgenden Schritten aufrufen:
 
-
-Many libraries are available directly through the Arduino **Library Manager**. You can access the **Library Manager** by following these steps:
-
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. Im **Library Manager** können Sie die gewünschte Bibliothek nach Namen suchen oder in verschiedenen Kategorien stöbern.
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The ``DHT sensor library`` is used here, you can install it from the **Library Manager**." Simply install the recommended libraries as prompted.
+      Bei Projekten, bei denen eine Bibliotheksinstallation erforderlich ist, gibt es Aufforderungen, welche Bibliotheken zu installieren sind. Befolgen Sie die bereitgestellten Anweisungen, wie "Die ``DHT sensor library`` wird hier verwendet. Sie können sie aus dem **Library Manager** installieren." Installieren Sie einfach die empfohlenen Bibliotheken wie vorgeschlagen.
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. Sobald Sie die Bibliothek gefunden haben, die Sie installieren möchten, klicken Sie darauf und dann auf die Schaltfläche **Install**.
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. Die Arduino IDE wird die Bibliothek automatisch für Sie herunterladen und installieren.
 
+**Benötigte Komponenten**
 
-**Related Components**
+Unten sind die verwandten Komponenten aufgeführt, auf die Sie klicken können, um zu erfahren, wie sie verwendet werden.
 
-Below are the related components, you can click in to learn how to use them.
 
 .. toctree::
    :maxdepth: 2

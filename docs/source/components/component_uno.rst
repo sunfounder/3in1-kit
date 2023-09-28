@@ -1,55 +1,54 @@
 .. _cpn_uno:
 
-
-
 Arduino Uno R4 Minima
 =================================
 
-**Overview**
+**Überblick**
 
-Enhanced and improved, the Arduino UNO R4 Minima is armed with a powerful 32-bit microcontroller courtesy of Renesas. Brace yourself for increased processing power, expanded memory, and a whole new level of on-board peripherals. The best part? Compatibility with existing shields and accessories remains intact, and there's no need to make any changes to the standard form factor or 5 V operating voltage.
+Erweitert und verbessert, ist das Arduino UNO R4 Minima mit einem leistungsstarken 32-Bit-Mikrocontroller von Renesas ausgestattet. Machen Sie sich bereit für mehr Rechenleistung, erweiterten Speicher und eine ganz neue Ebene von integrierten Peripheriegeräten. Das Beste daran? Die Kompatibilität mit bestehenden Shields und Zubehörteilen bleibt erhalten, und es sind keine Änderungen am Standard-Formfaktor oder der 5-V-Betriebsspannung erforderlich.
 
-Joining the Arduino ecosystem, the UNO R4 is a trusty addition suitable for both beginners and seasoned electronics enthusiasts. Whether you're just starting out or looking to push the boundaries of your projects, this robust board delivers reliable performance every time.
+Als Teil des Arduino-Ökosystems ist das UNO R4 eine verlässliche Ergänzung sowohl für Anfänger als auch für erfahrene Elektronikbegeisterte. Egal, ob Sie gerade erst anfangen oder die Grenzen Ihrer Projekte erweitern möchten, dieses robuste Board liefert jedes Mal zuverlässige Leistung.
 
 .. image:: img/uno_r4.png
 
-Here's what the UNO R4 Minima brings to the table:
+Hier die Vorzüge des UNO R4 Minima:
 
-* Hardware compatibility with UNO form factor: The UNO R4 Minima maintains the same form factor, pinout, and 5 V operating voltage as its predecessor, the UNO R3. This ensures a seamless transition for existing shields and projects, leveraging the extensive and unique ecosystem already established for the Arduino UNO.
-* Expanded memory and faster clock: Prepare for more precise calculations and the ability to handle complex projects with ease. The UNO R4 Minima boasts increased memory and a faster clock speed, empowering you to tackle demanding tasks effortlessly.
-* Extra on-board peripherals: The UNO R4 Minima introduces a range of on-board peripherals, including a 12-bit DAC, CAN BUS, and OP AMP. These additional components provide you with expanded capabilities and flexibility in your designs.
-* Extended 24 V tolerance: The UNO R4 Minima now supports a wider input voltage range, allowing power supplies up to 24 V. This enables seamless integration with motors, LED strips, and other actuators, simplifying your projects by utilizing a single power source.
-* SWD connector: Debugging is a critical aspect of any project. Simply connect an external debugger to the UNO R4 Minima and effortlessly monitor the inner workings of your system. Stay in control and gain valuable insights.
-* HID support: The UNO R4 Minima comes with built-in HID (Human Interface Device) support, enabling it to simulate a mouse or keyboard when connected to a computer via a USB cable. This convenient feature makes it a breeze to send keystrokes and mouse movements to a computer, enhancing usability and functionality.
+* Hardwarekompatibilität mit UNO-Formfaktor: Das UNO R4 Minima behält den gleichen Formfaktor, Pinbelegung und 5 V Betriebsspannung wie sein Vorgänger, das UNO R3, bei. Dies gewährleistet einen reibungslosen Übergang für bestehende Shields und Projekte und nutzt das umfangreiche und einzigartige bereits etablierte Ökosystem des Arduino UNO.
+* Erweiterter Speicher und schnellerer Takt: Bereiten Sie sich auf präzisere Berechnungen und die problemlose Handhabung komplexer Projekte vor. Das UNO R4 Minima bietet erweiterten Speicher und eine schnellere Taktung, was Sie in die Lage versetzt, anspruchsvolle Aufgaben mühelos zu bewältigen.
+* Zusätzliche integrierte Peripheriegeräte: Das UNO R4 Minima bietet eine Reihe von integrierten Peripheriegeräten, darunter ein 12-Bit-DAC, CAN BUS und OP AMP. Diese zusätzlichen Komponenten bieten Ihnen erweiterte Fähigkeiten und Flexibilität in Ihren Designs.
+* Erweiterte 24 V Toleranz: Das UNO R4 Minima unterstützt jetzt einen breiteren Eingangsspannungsbereich und ermöglicht Stromversorgungen von bis zu 24 V. Dies ermöglicht eine nahtlose Integration mit Motoren, LED-Streifen und anderen Aktuatoren, wodurch Ihre Projekte durch die Nutzung einer einzigen Stromquelle vereinfacht werden.
+* SWD-Anschluss: Das Debuggen ist ein kritischer Aspekt jedes Projekts. Verbinden Sie einfach einen externen Debugger mit dem UNO R4 Minima und überwachen Sie mühelos das Innenleben Ihres Systems. Behalten Sie die Kontrolle und gewinnen Sie wertvolle Einblicke.
+* HID-Unterstützung: Das UNO R4 Minima verfügt über integrierte HID (Human Interface Device) Unterstützung und kann eine Maus oder Tastatur simulieren, wenn es über ein USB-Kabel mit einem Computer verbunden ist. Diese praktische Funktion ermöglicht es, Tastenanschläge und Mausbewegungen an einen Computer zu senden, wodurch die Benutzerfreundlichkeit und Funktionalität erhöht wird.
 
-**Tech specs**
+**Technische Daten**
 
 * Board:
     * Name: Arduino® UNO R4 Minima
     * SKU: ABX00080
-* Microcontroller: Renesas RA4M1 (Arm® Cortex®-M4)
-* USB: USB-C® Programming Port
+* Mikrocontroller: Renesas RA4M1 (Arm® Cortex®-M4)
+* USB: USB-C® Programmieranschluss
 * Pins:
-    * Digital I/O Pins: 14
-    * Analog input pin: 6
+    * Digitale I/O-Pins: 14
+    * Analogeingangspin: 6
     * DAC: 1
-    * PWM pins: 6
-* Communication
-    *  UART: Yes, 1x
-    * I2C: Yes, 1x
-    * SPI: Yes, 1x
-    * CAN: Yes 1 CAN Bus
-* Power
-    * Circuit operating voltage: 5 V
-    * Input voltage (VIN): 6-24 V
-    * DC Current per I/O Pin: 8 mA
-* Clock speed Main core 48 MHz
-* Memory RA4M1 256 kB Flash, 32 kB RAM
-* Dimensions
-    * Width: 68.85 mm
-    * Length: 53.34 mm
+    * PWM-Pins: 6
+* Kommunikation:
+    * UART: Ja, 1x
+    * I2C: Ja, 1x
+    * SPI: Ja, 1x
+    * CAN: Ja, 1 CAN Bus
+* Energie:
+    * Betriebsspannung des Kreises: 5 V
+    * Eingangsspannung (VIN): 6-24 V
+    * Gleichstrom pro I/O-Pin: 8 mA
+* Taktgeschwindigkeit Hauptkern: 48 MHz
+* Speicher RA4M1: 256 kB Flash, 32 kB RAM
+* Abmessungen:
+    * Breite: 68,85 mm
+    * Länge: 53,34 mm
 
-**Pinout**
+**Pinbelegung**
+
 
 .. image:: img/uno_r4_pinsout.png
     :width: 800
@@ -68,39 +67,39 @@ Here's what the UNO R4 Minima brings to the table:
 
 .. .. note::
 
-..     The SunFounder R4 board is a mainboard with almost the same functions as the `Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_, and the two boards can be used interchangeably.
+..     Das SunFounder R4 Board ist eine Hauptplatine mit fast den gleichen Funktionen wie das `Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_ und die beiden Platinen können austauschbar verwendet werden.
 
-.. SunFounder R4 board is a microcontroller board based on the ATmega328P (`datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.
+.. Das SunFounder R4 Board ist ein Mikrocontroller-Board basierend auf dem ATmega328P (`Datenblatt <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_). Es hat 14 digitale Ein-/Ausgangspins (von denen 6 als PWM-Ausgänge verwendet werden können), 6 analoge Eingänge, einen 16 MHz Keramikresonator (CSTCE16M0V53-R0), eine USB-Verbindung, eine Strombuchse, einen ICSP-Header und einen Reset-Knopf. Es enthält alles, was zur Unterstützung des Mikrocontrollers benötigt wird; schließen Sie es einfach über ein USB-Kabel an einen Computer an oder versorgen Sie es mit einem AC-DC-Adapter oder einem Akku, um loszulegen.
 
-.. **Technical Parameters**
+.. **Technische Parameter**
 
 .. .. image:: img/uno.jpg
 ..     :align: center
 
-.. * MICROCONTROLLER: ATmega328P
-.. * OPERATING VOLTAGE: 5V
-.. * INPUT VOLTAGE (RECOMMENDED): 7-12V
-.. * INPUT VOLTAGE (LIMIT): 6-20V
-.. * DIGITAL I/O PINS: 14 (0-13, of which 6 provide PWM output(3, 5, 6, 9-11))
-.. * PWM DIGITAL I/O PINS: 6 (3, 5, 6, 9-11)
-.. * ANALOG INPUT PINS: 6 (A0-A5)
-.. * DC CURRENT PER I/O PIN: 20 mA
-.. * DC CURRENT FOR 3.3V PIN: 50 mA
-.. * FLASH MEMORY: 32 KB (ATmega328P) of which 0.5 KB used by bootloader
+.. * MIKROCONTROLLER: ATmega328P
+.. * BETRIEBSSPANNUNG: 5V
+.. * EINGANGSSPANNUNG (EMPFOHLEN): 7-12V
+.. * EINGANGSSPANNUNG (GRENZWERTE): 6-20V
+.. * DIGITALE I/O PINS: 14 (0-13, von denen 6 PWM-Ausgabe bieten(3, 5, 6, 9-11))
+.. * PWM DIGITALE I/O PINS: 6 (3, 5, 6, 9-11)
+.. * ANALOGE EINGANGSPINS: 6 (A0-A5)
+.. * GLEICHSTROM PRO I/O PIN: 20 mA
+.. * GLEICHSTROM FÜR 3,3V PIN: 50 mA
+.. * FLASH-SPEICHER: 32 KB (ATmega328P), von denen 0,5 KB vom Bootloader verwendet werden
 .. * SRAM: 2 KB (ATmega328P)
 .. * EEPROM: 1 KB (ATmega328P)
-.. * CLOCK SPEED: 16 MHz
+.. * TAKTFREQUENZ: 16 MHz
 .. * LED_BUILTIN: 13
-.. * LENGTH: 68.6 mm
-.. * WIDTH: 53.4 mm
-.. * WEIGHT: 25 g
-.. * I2C Port: A4(SDA), A5(SCL)
+.. * LÄNGE: 68,6 mm
+.. * BREITE: 53,4 mm
+.. * GEWICHT: 25 g
+.. * I2C-Port: A4(SDA), A5(SCL)
 
-
-.. **What's More**
+.. **Weitere Informationen**
 
 .. * `Arduino IDE <https://www.arduino.cc/en/software>`_
-.. * `Arduino Programming Language Reference <https://www.arduino.cc/reference/en/>`_
+.. * `Arduino Programmiersprachenreferenz <https://www.arduino.cc/reference/en/>`_
 .. * :ref:`install_arduino`
-.. * `ATmega328P Datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
+.. * `ATmega328P Datenblatt <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
+
 

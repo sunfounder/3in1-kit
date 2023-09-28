@@ -1,44 +1,44 @@
 .. _ar_pump:
 
-1.4 Pumping
+1.4 Pumpen
 ===================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+Die Wasserpumpe ist ebenfalls ein Motor, der durch eine spezielle Struktur die mechanische Energie des Motors oder eine andere externe Energie nutzt, um Flüssigkeit zu transportieren.
 
-.. **Schematic**
+.. **Schaltbild**
 
 .. .. image:: img/circuit_1.3_wheel.png
 
-.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 sind die Eingänge des L298N-Moduls und OUT1~OUT4 die Ausgänge.
 
-.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. Eine einfache Verwendungsmethode ist: Bei einem hohen Pegel für INx gibt OUTx ebenfalls einen hohen Pegel aus; Bei einem niedrigen Pegel für INx gibt OUTx einen niedrigen Pegel aus.
+.. Verbindet man die beiden Enden des Motors mit OUT1 und OUT2 und gibt gegenläufige Pegelsignale für IN1 und IN2 ein, wird der Motor drehen. OUT3 und OUT4 können auf die gleiche Weise verwendet werden.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - \-
@@ -49,18 +49,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-**Wiring**
+**Verdrahtung**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L9110S
-      - R4 Board
+      - R4-Board
       - Motor
     * - VCC
       - 5V
@@ -76,10 +76,10 @@ You can also buy them separately from the links below.
       - 
     * - OA
       - 
-      - one wire of the motor
+      - ein Draht des Motors
     * - OB
       - 
-      - one wire of the motor
+      - ein Draht des Motors
 .. image:: img/1.4_pumping_bb.png
     :width: 800
     :align: center
@@ -88,8 +88,8 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\learning_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``1.4.pumping.ino`` unter dem Pfad ``3in1-kit\learning_project\1.4.pumping`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
    
 
@@ -97,5 +97,5 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f829508f-2475-4de6-bc2f-ab0a68d707b1/preview?F=undefined?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+Fügen Sie den Schlauch zur Pumpe hinzu und platzieren Sie ihn im Becken. Nachdem der Code erfolgreich hochgeladen wurde, werden Sie sehen, dass das Wasser im Becken nach einer Weile abgelassen wird.
+Während dieses Experiments halten Sie bitte die Schaltung vom Wasser fern, um einen Kurzschluss zu vermeiden!
