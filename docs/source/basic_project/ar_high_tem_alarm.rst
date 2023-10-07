@@ -161,31 +161,31 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
 
         void monitoringTemp()
         {
-        long a = analogRead(temPin);
-        float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
-        float tempF = 1.8 * tempC + 32.0;
-        lcd.setCursor(0, 0);
-        lcd.print("Temp: ");
-        lcd.print(tempC);
-        lcd.print(char(223));
-        lcd.print("C   ");
-        lcd.setCursor(0, 1);
-        lcd.print("Upper: ");
-        lcd.print(upperTem);
-        lcd.print(char(223));
-        lcd.print("C   ");
-        delay(300);
-        if (tempC >= upperTem)
-        {
-            digitalWrite(buzzerPin, HIGH);
-            delay(50);
-            digitalWrite(buzzerPin, LOW);
-            delay(10);
-        }
-        else
-        {
-            digitalWrite(buzzerPin, LOW);
-        }
+            long a = analogRead(temPin);
+            float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
+            float tempF = 1.8 * tempC + 32.0;
+            lcd.setCursor(0, 0);
+            lcd.print("Temp: ");
+            lcd.print(tempC);
+            lcd.print(char(223));
+            lcd.print("C   ");
+            lcd.setCursor(0, 1);
+            lcd.print("Upper: ");
+            lcd.print(upperTem);
+            lcd.print(char(223));
+            lcd.print("C   ");
+            delay(300);
+            if (tempC >= upperTem)
+            {
+                digitalWrite(buzzerPin, HIGH);
+                delay(50);
+                digitalWrite(buzzerPin, LOW);
+                delay(10);
+            }
+            else
+            {
+                digitalWrite(buzzerPin, LOW);
+            }
         }
 
     * Using this function, you can display temperature and set an alarm.

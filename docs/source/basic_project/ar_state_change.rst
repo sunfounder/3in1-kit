@@ -103,8 +103,8 @@ After the code is uploaded successfully, you press the button and the motor will
         void setup() {
             pinMode(buttonPin, INPUT);
             Serial.begin(9600);
-            pinMode(motorPinA,OUTPUT);
-            pinMode(motorPinB,OUTPUT);
+            pinMode(A_1A,OUTPUT);
+            pinMode(A_1B,OUTPUT);
         }
 
 
@@ -113,26 +113,26 @@ After the code is uploaded successfully, you press the button and the motor will
     .. code-block:: arduino
 
         void loop() {
-        // Toggle the detectionState each time the button is pressed
-        buttonState = digitalRead(buttonPin);
-        if (buttonState != lastButtonState) {
-            if (buttonState == HIGH) {
-            detectionState=(detectionState+1)%2;
-            Serial.print("The detection state is: ");
-            Serial.println(detectionState);
-            } 
-            delay(50);
-        }
-        lastButtonState = buttonState;
-        
-        // According to the detectionState, start the motor
-        if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
-        }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
-        }
+            // Toggle the detectionState each time the button is pressed
+            buttonState = digitalRead(buttonPin);
+            if (buttonState != lastButtonState) {
+                if (buttonState == HIGH) {
+                detectionState=(detectionState+1)%2;
+                Serial.print("The detection state is: ");
+                Serial.println(detectionState);
+                } 
+                delay(50);
+            }
+            lastButtonState = buttonState;
+            
+            // According to the detectionState, start the motor
+            if(detectionState==1){
+                digitalWrite(A_1A,HIGH);
+                digitalWrite(A_1B,LOW);
+            }else{
+                digitalWrite(A_1A,LOW);
+                digitalWrite(A_1B,LOW);
+            }
         }
 
     The entire workflow is as follows.
@@ -168,10 +168,10 @@ After the code is uploaded successfully, you press the button and the motor will
     .. code-block:: arduino
 
         if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,HIGH);
+            digitalWrite(A_1B,LOW);
         }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,LOW);
+            digitalWrite(A_1B,LOW);
         }
 

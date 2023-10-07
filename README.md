@@ -18,6 +18,11 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-07:
+- Delete the R4 purchase link in ar_turn_the_wheel.rst.
+- Modify the format of the third item of how it works in ar_state_change.rst, change motorPinA to A_1A, and motorPinB to A_1B
+- Modify the format of the fourth item of how it works in ar_high_rem_alarm.rst
+
 2023-09-26:
 - Remove the **Example** heading from component_capacitor.rst
 - R4 introduction to burn_firmware.rst moved to the front

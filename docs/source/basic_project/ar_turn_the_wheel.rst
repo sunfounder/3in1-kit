@@ -45,7 +45,7 @@ You can also buy them separately from the links below.
         - PURCHASE LINK
 
     *   - :ref:`cpn_uno`
-        - |link_Uno_R3_buy|
+        - \-
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_tt_motor`
