@@ -1,60 +1,59 @@
 .. _ard_serial_monitor:
 
-3.0 Serial Monitor
+3.0 シリアルモニタ
 =============================
 
-In the Arduino IDE, there is a serial monitor that allows you to send messages from your computer to the Arduino board (via USB) and also to receive messages from the Arduino.
+Arduino IDEには、コンピュータからArduinoボードへのメッセージを送信（USB経由）およびArduinoからのメッセージを受信するためのシリアルモニタがあります。
 
-So in this project we will learn how to receive data from the Arduino board.
+このプロジェクトでは、Arduinoボードからデータを受信する方法を学びます。
 
 .. note::
 
-    On Uno, Nano, Mini, and Mega, pins 0 and 1 are used for communication with the computer. Connecting anything to these pins can interfere with that communication, including causing failed uploads to the board.
+    Uno、Nano、Mini、Megaでは、ピン0および1がコンピュータとの通信に使用されます。これらのピンに何かを接続すると、ボードへのアップロードが失敗する原因となる通信の妨害が発生する場合があります。
 
+**シリアルモニタの使用方法**
 
-**Using the Serial Monitor**
-
-1. Open the Arduino IDE, and paste the following code in it.
+1. Arduino IDEを開き、以下のコードを貼り付けます。
 
     .. code-block:: arduino
 
-        // the setup routine runs once when you press reset:
+        // setupルーチンはリセットを押すと一度実行されます:
         void setup() {
-            // initialize serial communication at 9600 bits per second:
+            // 9600ビット毎秒でシリアル通信を初期化:
             Serial.begin(9600);
         }
 
-        // the loop routine runs over and over again forever:
+        // loopルーチンは永遠に繰り返し実行されます:
         void loop() {
             int number = 100;
             Serial.println(number);
             Serial.println("Hello world");
-            delay(100);         // delay in between reads for stability
+            delay(100);         // 安定した読み取りのための遅延
         }
 
-   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Sets the data rate in bits per second (baud) for serial data transmission, here set to 9600.
-   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_.
+   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: シリアルデータ伝送のビット毎秒のデータレートを設定します。この場合は9600に設定されています。
+   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_: データをシリアルポートにASCIIテキストとして人間が読める形式で出力し、キャリッジリターン文字（ASCII 13または '\r'）および改行文字（ASCII 10または '\n'）に続きます。このコマンドは `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_ と同じ形式を取ります。
 
-2. Select the correct board and port to upload the code.
-3. In the toolbar, click the magnifying glass icon to turn on Serial Monitor.
+2. コードをアップロードするための正しいボードとポートを選択します。
+3. ツールバーで、シリアルモニタを起動するための虫眼鏡アイコンをクリックします。
 
 .. image:: img/serial1.png
     :align: center
 
-4. Here is the Serial Monitor.
+4. これがシリアルモニタです。
 
 .. image:: img/serial2.png
     :align: center
 
-* **1**: Option to select between automatically scroll and not scroll.
-* **2**: Option to show timestamp prior to data displayed on Serial Monitor.
-* **3**: Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
+* **1**: 自動スクロールと非スクロールの選択オプション。
+* **2**: シリアルモニタに表示されるデータの前にタイムスタンプを表示するオプション。
+* **3**: 終了選択、Arduinoに送信されるデータに追加される終了文字を選択します。選択肢には次のものがあります：
 
-        * **No line Ending** just sends what you type; 
-        * **Newline** is ``\n`` and will sends an ASCII new line code after what you type;
-        * **Carriage Return** is ``\r``, which will send an ASCII carriage return character after what you type; 
-        * **Both NL & CR** is ``\r\n`` which will send both a carriage return and a new line character after what you type.
-* **4**: Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
-* **5**: Clear all text on the output console.
-* **6**: A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
+        * **No line Ending** は入力したものだけを送信します；
+        * **Newline** は ``\n`` で、入力後にASCIIの新しい行コードを送信します；
+        * **Carriage Return** は ``\r`` で、入力後にASCIIキャリッジリターン文字を送信します；
+        * **Both NL & CR** は ``\r\n`` で、入力後にキャリッジリターンと新しい行の両方の文字を送信します。
+* **4**: ArduinoボードとPCの間の通信速度を選択します。この値は ``Serial.begin()`` で設定した値と同じでなければなりません。
+* **5**: 出力コンソール上の全テキストをクリアします。
+* **6**: Arduinoボードへの文字送信のためのテキストボックスです。チュートリアルについては、 :ref:`ar_serial_read` を参照してください。
 

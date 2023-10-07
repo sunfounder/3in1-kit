@@ -1,9 +1,9 @@
-1. Get Started with Blynk
+1. Blynkでのスタート
 =============================
 
-Getting the R3 board to communicate with Blynk requires some configuration when you first use Blynk.
+R3ボードをBlynkと通信させるには、Blynkを初めて使用する際にいくつかの設定が必要です。
 
-Follow the steps below, and note that you must do them in order and not skip any chapters.
+以下の手順に従ってください。そして、章を飛ばさず順番通りに行う必要があります。
 
 .. toctree::
     :maxdepth: 2

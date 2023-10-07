@@ -1,45 +1,44 @@
 .. _cpn_l298n:
 
-L298N Module
+L298N モジュール
 ==================================
 
-This L298N Motor Driver Module is a high power motor driver module for driving DC and Stepper Motors. This module consists of an L298 motor driver IC and a 78M05 5V regulator. L298N Module can control up to 4 DC motors, or 2 DC motors with directional and speed control.
+このL298Nモータードライバーモジュールは、DCモーターおよびステッピングモーターを駆動するための高出力モータードライバーモジュールです。このモジュールは、L298モータードライバICと78M05 5Vレギュレータから構成されています。L298Nモジュールは、最大4つのDCモーター、または方向および速度制御を備えた2つのDCモーターを制御できます。
 
 .. image:: img/l298n_pin.jpg
     :width: 400
     :align: center
 
-* **IN1 & IN2**: Motor A input pins. Used to control the spinning direction of Motor A
-* **IN3 & IN4**: Motor B input pins. Used to control the spinning direction of Motor B
-* **ENA**: Enables PWM signal for Motor A. Here it has been connected to 5V with a jumper cap.
-* **ENB**: Enables PWM signal for Motor B. Here it has been connected to 5V with a jumper cap.
-* **OUT1 & OUT2**: Output pins of Motor A
-* **OUT3 & OUT4**: Output pins of Motor B
-* **12V**: 12V input from DC power Source
-* **5V**: Supplies power for the switching logic circuitry inside L298N IC
-* **GND**: Ground pin
+* **IN1 & IN2**: モーターAの入力ピン。モーターAの回転方向を制御するために使用されます
+* **IN3 & IN4**: モーターBの入力ピン。モーターBの回転方向を制御するために使用されます
+* **ENA**: モーターAのPWM信号を有効にします。ここではジャンパキャップを使って5Vに接続されています。
+* **ENB**: モーターBのPWM信号を有効にします。ここではジャンパキャップを使って5Vに接続されています。
+* **OUT1 & OUT2**: モーターAの出力ピン
+* **OUT3 & OUT4**: モーターBの出力ピン
+* **12V**: DC電源からの12V入力
+* **5V**: L298N IC内部のスイッチングロジック回路の電源供給
+* **GND**: グラウンドピン
 
-**Features**
+**特徴**
 
-* Driver Model: L298N 2A
-* Driver Chip: Double H Bridge L298N
-* Motor Supply Voltage (Maximum): 46V
-* Motor Supply Current (Maximum): 2A
-* Logic Voltage: 5V
-* Driver Voltage: 5-35V
-* Driver Current:2A
-* Logical Current:0-36mA
-* Maximum Power (W): 25W
-* Current Sense for each motor
-* Heatsink for better performance
-* Power-On LED indicator
+* ドライバモデル: L298N 2A
+* ドライバチップ: ダブルHブリッジL298N
+* モーター供給電圧（最大）: 46V
+* モーター供給電流（最大）: 2A
+* ロジック電圧: 5V
+* ドライバ電圧: 5-35V
+* ドライバ電流:2A
+* 論理電流:0-36mA
+* 最大出力（W）: 25W
+* 各モーターの電流センス
+* より良い性能のためのヒートシンク
+* 電源LEDインジケーター
 
-**Operating Principle**
+**動作原理**
 
-The driver module can drive two motors. The enabled terminals ENA and ENB are effective at high level. 
+ドライバモジュールは2つのモーターを駆動することができます。ENAおよびENBの有効端子は高レベルで効果的です。
 
-The working relationship between ENA and IN1,IN2 is as follows: 
-
+ENAおよびIN1、IN2間の動作関係は次のとおりです：
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -48,29 +47,29 @@ The working relationship between ENA and IN1,IN2 is as follows:
     * - ENA
       - IN1
       - IN2
-      - The state of Motor A
+      - モーターAの状態
     * - 0
       - X
       - X
-      - Stop
+      - 停止
     * - 1
       - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - 時計回りに回転
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 1
       - 1
       - 1
-      - Brake
+      - ブレーキ
 
-The working relationship between ENB and IN3,IN4 is as follows.
+ENBおよびIN3、IN4間の動作関係は次のとおりです。
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -79,51 +78,47 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of Motor B
+      - モーターBの状態
     * - 0
       - X
       - X
-      - Stop
+      - 停止
     * - 1
       - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - 時計回りに回転
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 1
       - 1
       - 1
-      - Brake
+      - ブレーキ
 
+**5V有効キャップについて**
 
-**About 5V Enable Cap**
-
-The L298N Motor Driver module consists of an L298 Motor Driver IC, 78M05 Voltage Regulator, resistors, capacitor, Power LED, 5V jumper in an integrated circuit.
+L298Nモータードライバーモジュールは、L298モータードライバIC、78M05電圧レギュレータ、抵抗、コンデンサ、電源LED、5Vジャンパーを統合した回路から構成されています。
 
 .. image:: img/l298n_introduce.jpg
     :width: 500
     :align: center
 
-78M05 Voltage regulator will be enabled only when the jumper is placed. When the power supply is less than or equal to 12V, then the internal circuitry will be powered by the voltage regulator and the 5V pin can be used as an output pin to power the microcontroller. 
+78M05電圧レギュレータはジャンパが設置されている場合のみ有効になります。電源が12V以下の場合、内部回路は電圧レギュレータで供給され、5Vピンはマイクロコントローラの電源として出力ピンとして使用できます。
 
-The jumper should not be placed when the power supply is greater than 12V and separate 5V should be given through 5V terminal to power the internal circuitry.
+電源が12Vを超える場合、ジャンパは設置しないでください。別の5Vを5V端子を通して供給して、内部回路の電源を供給する必要があります。
 
+* `L298N データシート <https://www.yerical.com/product/L298N?product/XXXXX?source=adg&gclid=CjwKCAjwkYGVBhArEiwA4sZLuKEC19ydceKs396z1JENqjcbJDEvedRkcsza1aH_swhuNPWzL-CYfRoCMTMQAvD_BwE#g-pd-res>`_
 
-* `L298N datasheet <https://www.yerical.com/product/L298N?product/XXXXX?source=adg&gclid=CjwKCAjwkYGVBhArEiwA4sZLuKEC19ydceKs396z1JENqjcbJDEvedRkcsza1aH_swhuNPWzL-CYfRoCMTMQAvD_BwE#g-pd-res>`_
+**例**
 
-
-**Example**
-
-* :ref:`ar_motor` (Basic Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
-* :ref:`sh_test` (Scratch Project)
-
+* :ref:`ar_motor` (基本プロジェクト)
+* :ref:`car_move` (カープロジェクト)
+* :ref:`car_speed` (カープロジェクト)
+* :ref:`iot_car` (IoTプロジェクト)
+* :ref:`sh_test` (Scratchプロジェクト)
 

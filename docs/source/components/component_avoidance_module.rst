@@ -1,40 +1,31 @@
 .. _cpn_avoid:
 
-Obstacle Avoidance Module
+障害物回避モジュール
 ===========================================
-
 
 .. image:: img/IR_Obstacle.png
    :width: 400
    :align: center
 
-* **VCC**: Power supply, 3.3 ~ 5V DC.
-* **GND**: Ground
-* **OUT**: Signal pin, usually high level, and low level when an obstacle is detected.
+* **VCC**: 電源供給、3.3 ~ 5V DC。
+* **GND**: 接地
+* **OUT**: シグナルピン、通常は高レベルで、障害物が検出されると低レベルになります。
 
+IR障害物回避モジュールは、環境光への適応性が強く、赤外線の送受信チューブのペアを持っています。
 
-The IR obstacle avoidance module has strong adaptability to environmental light, it has a pair of infrared transmitting and receiving tubes.
+送信チューブは赤外線周波数を放射し、検出方向に障害物がある場合、赤外線放射は受信チューブによって受信され、コンパレータ回路処理後、インジケータが点灯し、低レベル信号が出力されます。
 
-The transmitting tube emits infrared frequency, when the detection direction encounters an obstacle, the infrared radiation is received by the receiving tube, 
-after the comparator circuit processing, the indicator will light up and output low level signal.
-
-The detection distance can be adjusted by potentiometer, the effective distance range 2-30cm.
+検出距離はポテンショメータで調整可能であり、有効距離範囲は2-30cmです。
 
 .. image:: img/IR_module.png
     :width: 600
     :align: center
 
-**Example**
+**例**
 
-* :ref:`ar_ir_obstacle` (Basic Project)
-* :ref:`car_ir_obstacle` (Car Project)
-* :ref:`self_driving` (Car Project)
-* :ref:`iot_gate` (IoT Project)
-* :ref:`sh_shooting` (Scratch Project)
-* :ref:`sh_tap_tile` (Scratch Project)
-
-
-
-
-
-
+* :ref:`ar_ir_obstacle` (基本プロジェクト)
+* :ref:`car_ir_obstacle` (カープロジェクト)
+* :ref:`self_driving` (カープロジェクト)
+* :ref:`iot_gate` (IoTプロジェクト)
+* :ref:`sh_shooting` (Scratchプロジェクト)
+* :ref:`sh_tap_tile` (Scratchプロジェクト)

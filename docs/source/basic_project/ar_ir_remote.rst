@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.11.2 IR Receiver
+5.11.2 IRレシーバー
 =========================
 
-In this project, you will learn to use IR Receiver. 
+このプロジェクトでは、IRレシーバーの使用方法を学びます。
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+赤外線受信機は、赤外線信号を受信し、独立して赤外線を受信してTTLレベルと互換性のある信号を出力する部品です。
+通常のプラスチックパッケージのトランジスタとサイズが似ており、各種の赤外線リモコンや赤外線伝送に適しています。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると非常に便利です、リンクは以下です：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,65 +43,60 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**配線図**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+この例では、IRレシーバーの左のピンをピン11に、中央のピンをGNDに、右のピンを5Vに接続します。
 
 .. image:: img/ir_remote_control_bb.jpg
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\basic_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
-  
-        .. image:: ../img/lib_irremote.png
+    * ``3in1-kit\basic_project\5.11.ir_receiver`` のパスの下にある ``5.11.ir_receiver.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``IRremote`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
+        .. image:: ../img/lib_irremote.png
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After uploading the codes to the R3 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+コードをR3ボードにアップロードすると、IRリモートコントローラの押されたボタンの現在の値がシリアルモニタに表示されます。
 
-**How it works?**
+**どのように動作するのか？**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+このコードは、 ``IRremote`` ライブラリを使用して赤外線（IR）リモコンとともに動作するように設計されています。詳細は以下のとおりです：
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. ライブラリのインクルード： ``IRremote`` ライブラリを含めます。これは、IRリモコンと連携するための関数を提供します。
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
+#. IRセンサーの信号ピンが接続されているArduinoのピンを定義し、最後にデコードされたIR値を保存する変数を宣言します。
 
     .. code-block:: arduino
 
-        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";  // Variable to store the last decoded value
+        const int IR_RECEIVE_PIN = 11;  // IRセンサーのピン番号を定義する。
+        String lastDecodedValue = "";   // 最後にデコードされた値を格納する変数
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. ボーレート9600でシリアル通信を初期化します。指定されたピン(``IR_RECEIVE_PIN``)でIRレシーバを初期化し、LEDフィードバックを有効にします(該当する場合)。
 
     .. code-block:: arduino
 
         void setup() {
-            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+            Serial.begin(9600);                                     // ボーレート9600でシリアル通信を開始する。
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IRレシーバーの起動
         }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. ループは、入力されたIRリモコンの信号を継続的に処理します。
 
     .. code-block:: arduino
 
@@ -110,15 +105,15 @@ This code is designed to work with an infrared (IR) remote control using the ``I
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                    lastDecodedValue = decodedValue;    // 最後にデコードされた値を更新する
                 }
-                IrReceiver.resume();  // Enable receiving of the next value
+                IrReceiver.resume();    // 次の値の受信を有効にする
             }
         }
-    
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
-    * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
-    * Resumes IR signal reception for the next signal.
+
+    * IR信号が受信され、正常にデコードされたかどうかを確認します。
+    * IRコマンドをデコードし、カスタムの ``decodeKeyValue()`` 関数を使用して ``decodedValue`` に保存します。
+    * デコードされた値がエラーでなく、最後にデコードされた値と異なるかどうかを確認します。
+    * デコードされたIR値をシリアルモニタに印刷します。
+    * 新しいデコードされた値で ``lastDecodedValue`` を更新します。
+    * 次の信号のIR信号受信を再開します。

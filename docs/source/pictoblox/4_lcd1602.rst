@@ -3,46 +3,46 @@
 2.4 LCD1602
 =================
 
-LCD1602 can be used to display 2x16 characters, now we let it display the corresponding characters with the character sprites on the stage.
+LCD1602は2x16文字を表示することができます。今回、ステージ上のキャラクタースプライトと対応する文字を表示させます。
 
-When you click the Hello on the stage one by one, they will have different animation effects and the characters will be displayed on the LCD1602 at the same time.
+ステージ上で「Hello」と一つずつクリックすると、異なるアニメーション効果が現れ、同時にLCD1602に文字が表示されます。
 
 .. image:: img/5_hello.png
 
 
-You Will Learn
+学べること
 ---------------------
 
-- Using the LCD1602
-- Select multiple different sprites
-- Change sprite size, rotation angle, color and show or hide.
+- LCD1602の使用方法
+- 複数の異なるスプライトの選択
+- スプライトのサイズ、回転角度、色の変更、表示・非表示の設定
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入すると非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,78 +51,78 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-Build the Circuit
+回路の作成
 ---------------------
 
 .. image:: img/circuit/lcd1602_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select sprite**
+**1. スプライトを選択**
 
-Delete the default sprite, click **Choose a Sprite**, then click **letters** and select the sprite you want.
+デフォルトのスプライトを削除し、 **Choose a Sprite** をクリックしてから **letters** をクリックし、希望するスプライトを選択します。
 
 .. image:: img/5_sprite.png
 
-For example, I chose Hello, as shown below.
+例として「Hello」を選択しました。以下に示します。
 
 .. image:: img/5_sprite1.png
 
-Now to set different effects for these sprites and display them on the LCD1602 while clicking.
+これらのスプライトに異なる効果を設定し、クリックすると同時にLCD1602に表示します。
 
-**2. H is zoom in and zoom out**
+**2. Hは拡大と縮小**
 
-Click on the **H** sprite, and now write a script for it.
+**H** スプライトをクリックし、スクリプトを記述します。
 
-When the sprite **H** is clicked, make its size to 50%, then restore it; while displaying H on the first row and column of the LCD1602.
+スプライト **H** がクリックされると、そのサイズを50％にし、元に戻す。同時にLCD1602の第1行第1列にHを表示する。
 
-* [set size to]: From **Looks** palette, used to set the size of the sprite, from 0% to 100%.
-* [set cursor at columan row]: From **Display Modules** palette, used to set the cursor at a specific row of the LCD1602 to start displaying characters.
-* [write display]: From the **Display Modules** palette, used to display characters or strings on the LCD1602.
+* スプライトのサイズを設定します： **Looks** パレットからスプライトのサイズを0%から100%の間で設定します。
+* カーソルをコルマン行に設定]： Set cursor at columan row]: **Display Modules** パレットから、LCD1602の特定の行にカーソルを設定し、文字の表示を開始します。
+* 表示を書き込む]： **Display Modules** パレットから、LCD1602に文字や文字列を表示するために使用します。
 
 .. image:: img/5_h.png
 
-The distribution of rows and columns on the LCD1602 is shown in the figure.
+LCD1602の行と列の分布は、図に示されています。
 
 .. image:: img/5_row.png
 
-**3. E is flipping left and right**
+**3. Eは左右にフリップ**
 
-Click on the **E** sprite, and now write a script for it.
+**E** スプライトをクリックし、スクリプトを記述します。
 
-When the sprite **E** is clicked, have it turn 180 degrees clockwise, then 180 degrees counterclockwise so you can see it flip left and right; and show H in the first row and column 2 of the LCD1602.
+スプライト **E** がクリックされたら、180度時計回りに回転し、180度反時計回りに回転して左右にフリップさせる。LCD1602の第1行第2列にHを表示する。
 
-* [turn degrees]: From the **Motions** palette, used to turn the sprite clockwise or counterclockwise, the range is 0-360 degrees.
+* 回転度]： **Motions** パレットから、スプライトを時計回りまたは反時計回りに回転させるために使用します。
 
 .. image:: img/5_lcd.png
 
-**4. L is slowly shrinking and zooming in**
+**4. Lは徐々に縮小して拡大**
 
-Click on the **first L** sprite and now write a script for it.
+**first L** スプライトをクリックし、スクリプトを記述します。
 
-When the sprite **L** is clicked, use the [repeat] block to increase its size by 50% (5 times, 10 each time), then shrink it back to its original size in the same way, while displaying L in the first row and column 3 of the LCD1602.
+スプライト **L** がクリックされると、[repeat]ブロックを使用してサイズを50％増加させ（5回、各10回）、同じ方法で元のサイズに縮小します。LCD1602の第1行第3列にLを表示する。
 
-* [change size by]: From the Motions palette, used to change the size of the sprite.
+* サイズ変更 モーションパレットから、スプライトのサイズを変更するために使用します。
 
 .. image:: img/5_l.png
 
-**5. The second L is changing color**
+**5. 2番目のLは色を変える**
 
-Click on the **second L** sprite and now write a script for it.
+**second L** スプライトをクリックして、スクリプトを記述します。
 
-When the sprite **L** is clicked, use the [repeat] block to repeat 10 times at a rate of 20 increments to switch between colors and return to the original color. Also display L in the first row and column 4 of the LCD1602.
+スプライト **L** がクリックされたら、[repeat]ブロックを使用して、20の増分で10回色を変更し、元の色に戻します。LCD1602の第1行第4列にLを表示する。
 
-* [`change color effect by <https://en.scratch-wiki.info/wiki/Graphic_Effect#Changing_of_colors_using_the_Color_Effect_block>`_]: Used to change the color Effect, one costume can take on 200 different color-schemes using the color effect, 0 and 200 are the same color.
+* [`change color effect by <https://en.scratch-wiki.info/wiki/Graphic_Effect#Changing_of_colors_using_the_Color_Effect_block>`_]:  によるカラーエフェクトの変更： 色効果を変更するために使用します。1つのコスチュームは色効果を使用して200の異なる色調を取ることができます。
 
 .. image:: img/5_2l.png
 
-**6. O is hide and show**
+**6. Oは非表示と表示**
 
-Click on the **O** sprite and now write a script for it.
+**O** スプライトをクリックし、スクリプトを記述します。
 
-When the **O** sprite is clicked, it repeats the hide and show process 3 times, while displaying O in the first row and column 5 of the LCD1602.
+**O** スプライトがクリックされると、非表示と表示のプロセスを3回繰り返し、LCD1602の第1行第5列にOを表示する。
 
-* [Hide] & [Show]: make the sprite hide and show.
+* [Hide]と[Show]：スプライトを隠したり見せたりします。
 
 .. image:: img/5_o.png

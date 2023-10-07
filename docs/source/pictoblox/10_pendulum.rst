@@ -1,44 +1,44 @@
 .. _sh_pendulum:
 
-2.10 Pendulum
+2.10 振り子
 =====================
 
-In this project, we will make an arrow pendulum while the servo will follow the rotation.
+このプロジェクトでは、矢印の振り子を作りながら、サーボが回転に従います。
 
 .. image:: img/12_pun.png
 
-You Will Learn
+学べること
 ---------------------
 
-- How the servo works and the angle range
-- Draw a sprite and put the center point on the tail.
+- サーボの動作と角度の範囲
+- スプライトを描き、中心点を尾に配置する。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは確かに便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,77 +47,74 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo` 
         - |link_servo_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-A servo is a geared motor that can only rotate 180 degrees. It is
-controlled by sending electrical pulses from your circuit board. These pulses
-tell the servo what position it should move to.
+サーボは、180度しか回転できない歯車式のモーターです。回路板からの電気パルスで制御されます。これらのパルスは、サーボにどの位置に移動するべきかを指示します。
 
-The servo has three wires: the brown wire is GND, the red one is VCC (connect to 3.3V), and the orange one is the signal wire. The angle range is 0-180.
+サーボには3本のワイヤーがあります。茶色のワイヤーはGND、赤はVCC（3.3Vに接続）、オレンジは信号ワイヤーです。角度の範囲は0-180度です。
 
-Now build the circuit according to the diagram below.
+以下の図に従って回路を組み立ててください。
 
 .. image:: img/circuit/servo_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Paint a sprite**
+**1. スプライトの描画**
 
-Delete the default sprite, select the Sprite button and click **Paint**, a blank sprite **Sprite1** will appear.
+デフォルトのスプライトを削除し、スプライトボタンを選択して **Paint** をクリックすると、空のスプライト **Sprite1** が表示されます。
 
 .. image:: img/12_paint1.png
 
-On the open **Costumes** page, use the **Line tool** to draw an arrow.
+開かれた **Costumes** ページで、 **Line tool** を使用して矢印を描きます。
 
 .. note::
 
-    * Be sure to start drawing the arrow from the center of the canvas outward so that the arrow is turning in a circle with the center point as the origin.
-    * Hold Shift to make the line angle straight or 45 degrees.
+    * キャンバスの中心から外向きに矢印を描き始めることで、矢印が中心点を原点として円を描くように回転します。
+    * Shiftキーを押しながら、ラインの角度を直線または45度にします。
 
 .. image:: img/12_paint2.png
 
-After drawing, the **arrow** sprite will be displayed on the stage, name it **arrow**. Then click on the number after **Direction**, a circular dial will appear, now drag this arrow and see if the **arrow** sprite on the stage turns with the tail as the origin.
+描画後、 **arrow** スプライトがステージに表示されます。それを **arrow** と名付けます。その後、 **Direction** の後の数字をクリックすると、円形のダイヤルが表示されます。この矢印をドラッグして、ステージ上の **arrow** スプライトが尾を原点として回転するかどうかを確認します。
 
 .. image:: img/12_paint3.png
 
-To make the **arrow** sprite swing from the left to the right, the angle range is -90 to -180, 180 to 90.
+**arrow** スプライトを左から右に振るためには、角度の範囲は-90から-180、180から90です。
 
 .. image:: img/12_paint4.png
 
 .. image:: img/12_paint5.png
 
-**2. Creating a variable**.
+**2. 変数の作成**
 
-Create a variable called **servo**, which stores the angle value and sets the initial value to 270.
+**servo** という名前の変数を作成します。これは角度の値を格納し、初期値を270に設定します。
 
 .. image:: img/12_servo.png
 
-**3. Swing from the left to the right**
+**3. 左から右に振る**
 
-Now let the **arrow** sprite swing from the left -90 degree position to the right 90 degree position.
+**arrow** スプライトが左の-90度の位置から右の90度の位置まで振られるようにします。
 
-With [repeat] block, add -10 to the variable each time, and you'll get to 90 degrees in 18 passes. Then use [point in block] to make the arrow sprite turn to these angles.
+[repeat]ブロックを使って、毎回変数に-10を加えると、18回で90度になります。それから[point in block]を使って、矢印スプライトがこれらの角度に向かうようにします。
 
-Since the sprite rotation angle is -180 ~ 180, angles outside this range are converted by the following conditions.
+スプライトの回転角度は-180 ~ 180であるため、この範囲外の角度は以下の条件で変換されます。
 
-* If angle > 180, then angle -360.
+* 角度 > 180の場合、角度 -360。
 
 .. image:: img/12_servo1.png
 
-**4. Turning the Servo**
+**4. サーボを回転させる**
 
-When you click on the green flag, you will see the arrow quickly turn to the right and then back to the left, so use a [wait seconds] block here to make the rotation slower. Also use the [set servo on to angle] block to make the servo connected to the Arduino board turn to a specific angle.
+緑の旗をクリックすると、矢印がすぐに右に回転してから左に戻るのがわかります。そのため、ここで[wait seconds]ブロックを使用して、回転を遅くします。また、[set servo on to angle]ブロックを使用して、Arduinoボードに接続されたサーボを特定の角度に回転させます。
 
 .. image:: img/12_servo2.png
 
-**5. Swinging from right to left**
+**5. 右から左への振り**
 
-By the same method, make the servo and **arrow** sprite slowly rotate from the right to the left.
+同じ方法で、サーボと **arrow** スプライトを右から左にゆっくりと回転させます。
 
-* If angle > 180, then angle -360.
+* 角度 > 180の場合、角度 -360。
 
 .. image:: img/12_servo3.png
-
 

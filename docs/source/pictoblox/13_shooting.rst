@@ -1,49 +1,49 @@
 .. _sh_shooting:
 
-2.13 GAME - Shooting
+2.13 ゲーム - シューティング
 ====================================
 
-Have you seen those shooting games on TV? The closer a contestant shoots a bullet on the target to the bullseye, the higher his score.
+テレビでシューティングゲームを見たことはありますか？ターゲットの中心に近づくほど、得点が高くなります。
 
-Today we are also doing a shooting game in Scratch. In the game, let the Crosshair shoot as far as possible to the bullseye to get a higher score.
+今日もScratchでシューティングゲームを作ります。このゲームでは、クロスヘアでできるだけ中心に近づけてシュートして、高得点を狙います。
 
-Click on the green flag to start. Use the Obstacle Avoidance module to shoot an bullet.
+緑のフラグをクリックして開始します。障害物回避モジュールを使用して弾を発射します。
 
 .. image:: img/14_shooting.png
 
-You Will Learn
+学べること
 ---------------------
 
-- How the Obstacle Avoidance module works and the angle range
-- Paint different sprites
-- Touch colors
+- 障害物回避モジュールの仕組みと角度の範囲
+- 様々なスプライトの描画
+- タッチカラー
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です、リンクはこちら: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,79 +52,78 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+障害物回避モジュールは、距離が調整可能な赤外線近接センサーで、通常はハイ出力で、障害物が検出されるとローになります。
 
-Now build the circuit according to the diagram below.
+下の図に従って回路を組み立ててください。
 
 .. image:: img/circuit/avoid_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Paint the Crosshair sprite**
+**1. クロスヘアスプライトの描画**
 
-Delete the default sprite, select the **Sprite** button and click **Paint**, a blank sprite **Sprite1** will appear and name it **Crosshair**.
+デフォルトのスプライトを削除し、 **Sprite** ボタンを選択し、 **Paint** をクリックすると、空白のスプライト **Sprite1** が現れますので、名前を **Crosshair** とします。
 
 .. image:: img/14_shooting0.png
 
-
-Go to the **Crosshair** sprite's **Costumes** page. Click on the **Circle** tool, remove the fill color, and set the color and width of the outline.
+**Crosshair** スプライトの **Costumes** ページに移動します。 **Circle** ツールをクリックし、塗りつぶし色を削除し、アウトラインの色と幅を設定します。
 
 .. image:: img/14_shooting02.png
 
-Now draw a circle with the **Circle** tool. After drawing, you can click to the **Select** tool and move the circle so that the original point is aligned with the center of the canvas.
+**Circle** ツールで円を描きます。描画が終わったら、 **Select** ツールをクリックして、原点がキャンバスの中心に合わせるように円を移動します。
 
 .. image:: img/14_shooting03.png
 
-Using the **Line** tool, draw a cross inside the circle.
+**Line** ツールを使用して、円の中に十字を描きます。
 
 .. image:: img/14_shooting033.png
 
-**Paint the Target sprite**
+**ターゲットスプライトの描画**
 
-Create a new sprite called **Target** sprite.
+新しいスプライトとして **Target** スプライトを作成します。
 
 .. image:: img/14_shooting01.png
 
-Go to the Costumes page of the **Target** sprite, click on the **Circle** tool, select a fill color and remove the Outline and paint a large circle.
+**Target** スプライトのコスチュームページに移動し、 **Circle** ツールをクリックして、塗りつぶし色を選択し、アウトラインを削除して大きな円を描画します。
 
 .. image:: img/14_shooting05.png
 
-Use the same method to draw additional circles, each with a different color, and you can use the **Forward** or **Backbard** tool to change the position of the overlapping circles. Note that you also need to select the tool to move the circles, so that the origin of all the circles and the center of the canvas are aligned.
+同じ方法で、異なる色の円を追加で描画します。 **Forward** や **Backbard** ツールを使用して、重なる円の位置を変更できます。すべての円の原点とキャンバスの中心が合うように、ツールで円を移動することも忘れないでください。
 
 .. image:: img/14_shooting04.png
 
-**3. Add a backdrop**
+**3. 背景の追加**
 
-Add a suitable background which preferably does not have too many colors and does not match the colors in the **Target** sprite. Here I have chosen **Wall1** backdrop.
+色が多すぎず、 **Target** スプライトの色と一致しない背景を追加します。ここでは **Wall1** の背景を選択しました。
 
 .. image:: img/14_shooting06.png
 
-**4. Script the Crosshair sprite**
+**4. クロスヘアスプライトのスクリプト**
 
-Set the random position and size of the **Crosshair** sprite, and let it move randomly.
+**Crosshair** スプライトの位置とサイズをランダムに設定し、ランダムに動かします。
 
 .. image:: img/14_shooting4.png
 
-When a hand is placed in front of the obstacle avoidance module, it will output a low level as a transmit signal.
+障害物回避モジュールの前に手を置くと、低レベルを送信信号として出力します。
 
 .. image:: img/14_shooting5.png
 
-When the **shooting** message is received, the sprite stops moving and slowly shrinks, thus simulating the effect of a bullet being shot.
+**shooting** メッセージを受け取ると、スプライトは動きを停止し、ゆっくりと縮小します。これは、弾が発射される効果をシミュレートしています。
 
 .. image:: img/14_shooting6.png
 
-Use the [Touch color ()] block to determine the position of the shot.
+[Touch color ()] ブロックを使用して、ショットの位置を判断します。
 
 .. image:: img/14_shooting7.png
 
-When the shot is inside the yellow circle, 10 is reported.
+ショットが黄色い円の中にある場合、10が報告されます。
 
 .. image:: img/14_shooting8.png
 
-Use the same method to determine the position of the bullet shot, if it is not set on the **Target** sprite, it means it is out of the circle.
+同じ方法を使用して、弾のショット位置を判断します。それが **Target** スプライトに設定されていない場合、円の外にあることを意味します。
 
 .. image:: img/14_shooting9.png

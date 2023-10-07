@@ -1,34 +1,31 @@
 .. _install_libraries_ar:
 
-5.11 Install External Libraries
+5.11 外部ライブラリのインストール
 =======================================
 
+ライブラリは、Arduino IDEの機能を拡張するための既存のコードや関数の集合体です。ライブラリは、様々な機能のための使用可能なコードを提供し、複雑な機能のコーディングで時間や労力を節約することができます。
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+ライブラリをインストールする主な方法は2つあります。
 
-There are two main ways to install libraries:
+Arduinoの **Library Manager** を通じて、多くのライブラリが直接利用可能です。次の手順で **Library Manager** にアクセスできます：
 
-
-Many libraries are available directly through the Arduino **Library Manager**. You can access the **Library Manager** by following these steps:
-
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. **Library Manager** で、名前で所望のライブラリを検索したり、異なるカテゴリを参照することができます。
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The ``DHT sensor library`` is used here, you can install it from the **Library Manager**." Simply install the recommended libraries as prompted.
+      ライブラリのインストールが必要なプロジェクトでは、どのライブラリをインストールするかを示すプロンプトが表示されます。指示に従って、"ここで ``DHT sensor library`` が使用されています。 **Library Manager** からインストールできます"のように、推奨されるライブラリをインストールしてください。
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. インストールしたいライブラリを見つけたら、それをクリックして **Install** ボタンをクリックします。
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. Arduino IDEは自動的にライブラリをダウンロードしてインストールします。
 
+**関連コンポーネント**
 
-**Related Components**
-
-Below are the related components, you can click in to learn how to use them.
+以下は関連するコンポーネントです。クリックして使用方法を学ぶことができます。
 
 .. toctree::
    :maxdepth: 2

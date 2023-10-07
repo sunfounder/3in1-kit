@@ -1,17 +1,17 @@
 .. _iot_plant:
 
-6. Plant Monitor
+6. 植物モニター
 ==========================
 
-The purpose of this project is to create a smart watering system that detects the current temperature, humidity, intensity of light, and soil moisture and displays them on Blynk.
+本プロジェクトの目的は、現在の温度、湿度、光の強度、土壌の湿度を検出し、それらをBlynkに表示するスマートな水やりシステムを作成することです。
 
-As soon as you turn on the Switch toggle in Blynk Cloud, the pump will start working and the plants will be hydrated.
+Blynk Cloudのスイッチトグルをオンにすると、ポンプが動作し始め、植物に水が供給されます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。リンクは以下のとおりです:
 
 .. list-table::
     :widths: 20 20 20
@@ -24,14 +24,14 @@ It's definitely convenient to buy a whole kit, here's the link:
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -58,31 +58,32 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは、安定した動作環境を提供するために高電流が必要ですので、9Vのバッテリーが接続されていることを確認してください。
 
-.. image:: img/wiring_soil_pump.jpg
+.. image:: img/wiring_6_plant_monitor_bb.png
     :width: 800
 
-**2. Edit Dashboard**
+**2. ダッシュボードを編集**
 
-#. The data streams created in the previous projects need to be saved, and they will be used in this project as well.
+#. 以前のプロジェクトで作成したデータストリームは保存しておく必要があり、このプロジェクトでも使用されます。
 
-#. For recording soil moisture, create another **Datastream** of type **Virtual Pin** on the **Datastream** page. Set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``1024``.
+#. 土壌の湿度を記録するために、 **Datastream** ページで **Virtual Pin** タイプの別の **Datastream** を作成します。DATA TYPEを ``Integer`` に設定し、MINとMAXを ``0`` および ``1024`` に設定します。
 
     .. image:: img/sp220610_155221.png
 
-#. Now go to the **Wed Dashboard** page, drag 2 **Label** widgets and set their data streams to **V4** and **V5** respectively; drag 2 **Gauge** widgets and set their data streams to show **V6** and **V7** respectively; and finally drag a **Switch** widget and set its data stream to **V0**.
+#. さらに、 **Web Dashboard** ページに移動し、2つの **Label** ウィジェットをドラッグして、それぞれのデータストリームを **V4** および **V5** に設定します。次に、2つの **Gauge** ウィジェットをドラッグして、それぞれのデータストリームを **V6** および **V7** に設定します。最後に、 **Switch** ウィジェットをドラッグして、そのデータストリームを **V0** に設定します。
+
 
     .. image:: img/sp220610_155350.png
 
 
-**3. Run the Code**
+**3. コードの実行**
 
-Open the ``6.plant_monitoring.ino`` file under the path of ``3in1-kit\iot_project\6.plant_monitoring``, or copy this code into **Arduino IDE**.
+``3in1-kit\iot_project\6.plant_monitoring`` のパスの下で ``6.plant_monitoring.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
     .. note::
 
-        * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+        * ここでは ``DHT sensor library`` が使用されています。 **Library Manager** からインストールできます。
 
             .. image:: ../img/lib_dht11.png
 
@@ -90,34 +91,34 @@ Open the ``6.plant_monitoring.ino`` file under the path of ``3in1-kit\iot_projec
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/f738bcb5-4ee2-475b-b683-759e6b2041b0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. ``Template ID`` 、 ``Device Name`` 、 ``Auth Token`` を自分のものに置き換えます。また、使用しているWiFiの ``ssid`` と ``password`` を入力する必要があります。詳細なチュートリアルは :ref:`connect_blynk` を参照してください。
+#. 正しいボードとポートを選択した後、 **Upoad** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニター(ボーレートを115200に設定)を開き、接続成功などのプロンプトが表示されるのを待ちます。
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        接続時に ``ESP is not responding`` というメッセージが表示される場合、次の手順に従ってください。
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * 9Vのバッテリーが接続されていることを確認します。
+        * ピンRSTを1秒間GNDに接続してESP8266モジュールをリセットし、その後プラグを抜きます。
+        * R3ボードのリセットボタンを押します。
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        ときどき、上記の操作を3～5回繰り返す必要がありますので、お待ちください。
 
-#. Back to the Blynk, you will see the current temperature, humidity, light intensity, and soil moisture. You can let the pump water the plants if necessary by clicking the Button Control widget.
+#. Blynkに戻ると、現在の温度、湿度、光の強度、土壌の湿度が表示されます。必要に応じて、ボタン制御ウィジェットをクリックして植物に水をやることができます。
 
     .. image:: img/sp220610_155350.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Blynkをモバイルデバイスで使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
     .. image:: img/mobile_plant.jpg
 
-**How it works?**
+**どのように動作するのか？**
 
-This ``BLYNK_WRITE`` causes Blynk's **Switch** widget to start the pump when it is ON and turn it off when it is OFF.
+この ``BLYNK_WRITE`` は、Blynkの **Switch** ウィジェットがONのときにポンプを起動し、OFFのときにポンプをオフにします。
 
 .. code-block:: arduino
 
@@ -131,7 +132,7 @@ This ``BLYNK_WRITE`` causes Blynk's **Switch** widget to start the pump when it 
     }
 
 
-These three functions are used to get the current environment temperature, humidity, light intensity and soil moisture.
+以下の三つの関数は、現在の環境温度、湿度、光の強度、土壌の湿度を取得するために使用されます。
 
 .. code-block:: arduino
 
@@ -159,7 +160,7 @@ These three functions are used to get the current environment temperature, humid
         return true;
     }
 
-With the Blynk ``Timer``, the ambient temperature, humidity, light intensity and soil moisture are obtained every second and sent to the data stream on the **Blynk Cloud**, from which the widgets display the data.
+Blynkの ``Timer`` を使用して、周囲の温度、湿度、光の強度、土壌の湿度が毎秒取得され、 **Blynk Cloud** 上のデータストリームに送信され、ウィジェットがデータを表示します。
 
 
 .. code-block:: arduino

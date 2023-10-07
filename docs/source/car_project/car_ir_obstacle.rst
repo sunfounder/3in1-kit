@@ -1,37 +1,37 @@
 .. _car_ir_obstacle:
 
-5. Play with Obstacle Avoidance Module
+5. 障害物回避モジュールで遊ぶ
 ===============================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+車の前部には2つの赤外線障害物回避モジュールが取り付けられており、近くの障害物を検出するのに使用できます。
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+このプロジェクトでは、車は自由に前進することが許されており、障害物に遭遇した場合、それを避けて他の方向に移動を続けることができます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入することは非常に便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 名前	
+        - このキットのアイテム数
+        - リンク
+    *   - 3 in 1 スターターキット
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれの部品を別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,17 +42,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**配線**
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+障害物回避モジュールは、出力が通常高く、障害物が検出されると低くなる距離調整可能な赤外線近接センサーです。
 
-Now build the circuit according to the diagram below.
+以下の図に従って回路を組み立てます。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R3 Board
+    * - 左IRモジュール
+      - R3ボード
     * - OUT
       - 8
     * - GND
@@ -63,8 +63,8 @@ Now build the circuit according to the diagram below.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R3 Board
+    * - 右IRモジュール
+      - R3ボード
     * - OUT
       - 7
     * - GND
@@ -75,40 +75,40 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-**Adjust the Module**
+**モジュールの調整**
 
-Before starting the project, you need to adjust the detection distance of the module.
+プロジェクトを開始する前に、モジュールの検出距離を調整する必要があります。
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+上記の図に従って配線し、R3ボードに電源を供給します（USBケーブルを直接差し込むか、9Vのバッテリーケーブルをスナップしてください）。コードをアップロードせずに。
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+車のIR障害物回避の前にノートや他の平らな物体を約5cm置きます。
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+次に、モジュール上のポテンショメーターを回して、モジュールの信号インジケーターがちょうど点灯するまで調整し、最大検出距離を5cmに調整します。
 
-Follow the same method to adjust another infrared module.
+同じ方法で別の赤外線モジュールを調整します。
 
 .. image:: img/ir_obs_cali.jpg
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.obstacle_avoidance_module.ino`` file under the path of ``3in1-kit\car_project\5.obstacle_avoidance_module``.
-    * Or copy this code into **Arduino IDE**.
-    
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * ``3in1-kit\car_project\5.obstacle_avoidance_module`` のパスの下にある ``5.obstacle_avoidance_module.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+
+    * または、`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/289ca80d-009f-4f60-b36d-1da6c5e10233/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will move forward once the code has been successfully uploaded. When the left infrared module detects an obstacle, it will go backwards to the left; when the right infrared module detects an obstacle, it will go backwards to the right; if both sides detect an obstacle, it will go backwards squarely.
+コードが正常にアップロードされると、車は前進します。左の赤外線モジュールが障害物を検出すると、左に後退します。右の赤外線モジュールが障害物を検出すると、右に後退します。両方の側面で障害物が検出された場合、後退します。
 
-**How it works?**
+**動作原理は？**
 
-This project is based on the value of the left and right infrared obstacle avoidance modules to make the car make the appropriate action.
+このプロジェクトは、左と右の赤外線障害物回避モジュールの値に基づいて車が適切なアクションを実行するものです。
 
-#. Add the pin definition for the 2 obstacle avoidance modules, here they are set to ``INPUT``.
+1. 2つの障害物回避モジュールのピン定義を追加します。ここでは ``INPUT`` に設定されています。
 
     .. code-block:: arduino
 
@@ -119,13 +119,12 @@ This project is based on the value of the left and right infrared obstacle avoid
         void setup() {
         ...
 
-        //IR obstacle
+        //IR障害物回避
             pinMode(leftIR, INPUT);
             pinMode(rightIR, INPUT);
         }
 
-
-#. Read the values of the left and right infrared modules and let the car to make the corresponding action.
+2. 左および右の赤外線モジュールの値を読み取り、車に対応するアクションを実行させます。
 
     .. code-block:: arduino
 
@@ -146,15 +145,14 @@ This project is based on the value of the left and right infrared obstacle avoid
             }
         }
 
-    * If the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-    * If the right IR module is 0 (obstacle detected), let the car go back up to the right.
-    * If 2 IR modules detect the obstacle at the same time, the car will go backward.
-    * Otherwise the car will keep going forward.
+    * 左のIRモジュールが0（障害物検出）で、右のIRモジュールが1の場合、車を左に後退させます。
+    * 右のIRモジュールが0（障害物検出）の場合、車を右に後退させます。
+    * 2つのIRモジュールが同時に障害物を検出すると、車は後退します。
+    * それ以外の場合、車は前進し続けます。
 
+3. ``backLeft()`` 関数について。
 
-#. About the ``backLeft()`` function.
-
-    When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left. 
+    右のモーターが反時計回りに回転し、左のモーターが回転しない場合、車は左に後退します。
 
     .. code-block:: arduino
 
@@ -165,9 +163,9 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, 0);
         }
 
-#. About the ``backLeft()`` function.
+4. ``backLeft()`` 関数について。
 
-    When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+    左のモーターが時計回りに回転し、右のモーターが回転しない場合、車は右に後退します。
 
     .. code-block:: arduino
 
@@ -178,6 +176,6 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, speed);
         }
 
-* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logical AND results in true only if both operands are true.
+* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: ロジカルANDは、両方のオペランドが真の場合にのみ真となります。
 
-* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: Logical NOT results in a true if the operand is false and vice versa.
+* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: ロジカルNOTは、オペランドが偽の場合は真、逆の場合は偽となります。

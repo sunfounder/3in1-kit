@@ -1,13 +1,13 @@
 .. _car_projects:
 
-Car Projects
+カープロジェクト
 =================
 
-I believe you have seen a lot of different smart robot car, their basic functions are similar, basic movement, obstacle avoidance, line following, following and control by remote control, etc..
+私は、さまざまなスマートロボットカーをたくさん見てきたことがあると思います。その基本的な機能は似ており、基本的な動作、障害物回避、ライン追跡、追従、リモートコントロールによる制御などがあります。
 
-Here, we use the simplest structure to build a smart robot car, which can also achieve all the above functions. In addition you can control it with your cell phone, please refer to :ref:`iot_car` for the tutorial.
+ここでは、最もシンプルな構造でスマートロボットカーを組み立てますが、上記のすべての機能も実現できます。さらに、携帯電話で制御することもできます。チュートリアルについては、:ref:`iot_car` を参照してください。
 
-**assembly instructions**
+**組み立て手順**
 
 .. toctree::
     :maxdepth: 1
@@ -15,13 +15,13 @@ Here, we use the simplest structure to build a smart robot car, which can also a
     car_assemble
 
 
-**Projects**
+**プロジェクト**
 
-Here are some projects for the car, programmed in C with the Arduino IDE, if you are not particularly skilled with Arduino, you can refer to :ref:`get_start_arduino_ide`.
+以下は、Arduino IDEでC言語でプログラムされたカーのためのプロジェクトです。Arduinoに特に熟練していない場合、 :ref:`get_start_arduino_ide` を参照してください。
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+以下のプロジェクトは、プログラミングの難易度の順に記述されており、順番にこれらの書籍を読むことをおすすめします。
 
-If you want to program a car with Scratch, please refer to: :ref:`play_with_scratch`.
+Scratchで車をプログラムしたい場合は、 :ref:`play_with_scratch` を参照してください。
 
 .. toctree::
     :maxdepth: 2
@@ -37,11 +37,3 @@ If you want to program a car with Scratch, please refer to: :ref:`play_with_scra
     car_remote_control
     car_remote_control_plus
     car_speed_calibration
-
-
-
-
-
-
-
-

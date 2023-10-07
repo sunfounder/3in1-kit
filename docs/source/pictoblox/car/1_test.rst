@@ -1,38 +1,38 @@
 .. _sh_test:
 
-3.1 Test the Car
-======================
+3.1 車をテストする
+====================
 
-Hear, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
+このセクションでは、車を前進させるためのスクリプトの書き方を学びますが、まずは :ref:`car_projects` を参照して車の組み立て方や基本的な理解を得る必要があります。
 
-But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
+プロジェクトを開始する前に、:ref:`upload_mode` で PictoBlox を使用する手順を知っておく必要があります。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キットでまとめて購入すると便利です。以下にリンクを掲載しています。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、部品を個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,14 +41,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The L9110 motor driver module is a high power motor driver module for driving DC and stepper motors. The L9110 module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
+L9110モータードライバーモジュールは、DCおよびステッピングモーターを駆動するための高電力モータードライバーモジュールです。L9110モジュールは、最大4つのDCモーター、または2つのDCモーターの方向および速度制御を制御できます。
 
-
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
-
+以下の図に従って、L9110モジュールとR3ボードの間にワイヤーを接続します。
 
 .. list-table:: 
     :widths: 25 25 50
@@ -71,67 +69,69 @@ Connect the wires between the L9110 module and the R3 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - 右モーターの黒ワイヤ
     * - OA(B)
       - 
-      - Red wire of right motor
+      - 右モーターの赤ワイヤ
     * - OB(A)
       - 
-      - Black wire of left motor
+      - 左モーターの黒ワイヤ
     * - OA(A)
       - 
-      - Red wire of left motor
+      - 左モーターの赤ワイヤ
 
 .. image:: img/car_2.png
     :width: 800
 
-Programming
--------------------
 
-**1. Let the car go forward**
+プログラミング
+------------------------
 
-Based on the above wiring, we know that pins 5 and 6 are used to control the right motor rotation and pins 9 and 10 are used for the left motor rotation. Now let's write a script to make the car go forward.
+**1. 車を前進させる**
 
-After selecting Board as Arduino Uno, switch to :ref:`upload_mode` and write the script according to the following diagram.
+上記の配線に基づいて、ピン5と6は右モーターの回転を制御するために使用され、ピン9と10は左モーターの回転を制御するために使用されます。では、車を前進させるスクリプトを書いてみましょう。
+
+ボードをArduino Unoに選択した後、:ref:`upload_mode` に切り替え、次の図に従ってスクリプトを書きます。
 
 .. image:: img/1_test1.png
 
-Click the **Upload Code** button to upload the code to the R3 board. When it's done, you will see the two motors of the car moving forward (if you put the car on the ground, it will move forward in a straight line, but maybe the car will go in a curve because the speed of the two motors is a bit different). 
+**Upload Code** ボタンをクリックして、コードをR3ボードにアップロードします。完了したら、車の両方のモーターが前進します（車を地面に置いている場合、まっすぐ前進しますが、両方のモーターの速度が少し異なるため、車は曲がるかもしれません）。
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+もし両方のモーターが前進しない場合、次の状況が発生した場合、両方のモーターの配線を再調整する必要があります。
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* 両方のモーターが同時に後方に回転する場合（左モーターは時計回りに回転し、右モーターは反時計回りに回転する）、左モーターと右モーターの配線を同時に交換します。OA(A)とOB(A)を交換し、OA(B)とOB(B)を交換します。
+* 左モーターが後方に回転する場合（時計回りに回転）、左モーターのOA(B)とOB(B)の配線を交換します。
+* 右モーターが後方に回転する場合（反時計回りに回転）、右モーターのOA(A)とOB(A)の配線を交換します。
 
 
-**2. Creating block**
 
-In order to make the script more clean and easy to use, here we put all the blocks that control the forward movement into a block, and when using it, just call this block directly.
+**2. ブロックを作成**
 
-Click **Make a Block** in the **My Blocks** palette.
+スクリプトをよりクリーンで使いやすくするため、前進の動作を制御するすべてのブロックを1つのブロックにまとめ、使用するときはこのブロックを直接呼び出します。
+
+**My Blocks** パレットの **Make a Block** をクリックします。
 
 .. image:: img/1_test31.png
 
-Enter the name of the block - **forward** and check **Add an input**, set the input name to **speed**.
+ブロックの名前を **forward** に設定し、 **Add an input** にチェックを入れ、入力名を **speed** に設定します。
 
 .. image:: img/1_test32.png
 
-Drag and drop the blocks that control the cars forward into **forward**, note that you need to add the parameter - **speed** to pin6 and pin9.
+車を前進させるためのブロックを **forward** にドラッグ&ドロップします。pin6とpin9にパラメーター **speed** を追加する必要があります。
 
 .. image:: img/1_test33.png
 
-Call the created block in the [Forward] block - **forward**. In Upload mode, the [When Arduino Uno starts up] block must be added at the beginning.
+作成したブロックを [Forward] ブロックの **forward** で呼び出します。Uploadモードでは、最初に [When Arduino Uno starts up] ブロックを追加する必要があります。
 
-* The motor rotation speed range is 100 ~ 255.
+* モーターの回転速度の範囲は100～255です。
 
 .. image:: img/1_test3.png
     
-**3. Adjusting the speed of motors**
+**3. モーターの速度を調整**
 
-Since there may be a slight difference in the speed of the 2 motors, resulting in the car not being able to move along a straight line, we can give the left and right motors different speeds to keep the car moving along a straight line as much as possible.
+2つのモーターの速度にわずかな違いがあるため、車がまっすぐ進むことができない場合、車ができるだけまっすぐ進むように、左と右のモーターに異なる速度を設定します。
 
-Since my car will move slowly to the right front, so here reduce the speed of the left motor.
+私の車は右前方にゆっくりと進むので、左のモーターの速度を少し下げます。
 
 .. image:: img/1_test2.png
 

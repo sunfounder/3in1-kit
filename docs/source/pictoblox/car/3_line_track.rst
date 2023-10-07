@@ -1,38 +1,38 @@
 .. _sh_line:
 
-3.3 Follow the line
+3.3 黒い線を追う
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+この車にはライン追跡モジュールが搭載されており、車が黒い線を追跡するようにすることができます。
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+プロジェクトを開始する前に、黒い線テープを使ってカーブマップを作成する必要があります。推奨されるラインの幅は0.8-1.5cmで、曲がり角は90度未満であってはなりません。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると非常に便利です。リンクは以下の通りです。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,12 +43,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+これはデジタルライン追跡モジュールで、黒い線を検出すると1を出力し、白い線を検出すると0の値を出力します。さらに、モジュール上のポテンショメータを通じて感知距離を調整することができます。
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
 
@@ -64,43 +64,43 @@ Build the circuit according to the following diagram.
 .. image:: img/car_4.png
     :width: 800
 
-Adjust the Module
+モジュールの調整
 -----------------------
 
-Before starting the project, you need to adjust the sensitivity of the module.
+プロジェクトを開始する前に、モジュールの感度を調整する必要があります。
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+上記の図に従って配線し、R3ボードを電源に接続してください（USBケーブルまたは9Vの電池ボタンケーブルで直接接続）。コードをアップロードすることなく電源を入れます。
 
-Stick a black electrical tape on the table and put the cart on it.
+テーブルに黒い電気テープを貼り、カートをその上に置きます。
 
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+モジュールのシグナルLEDを観察して、白いテーブル上で点灯し、黒いテープ上で消灯することを確認してください。
 
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+そうでない場合は、モジュール上のポテンショメータを調整して、上記の効果が得られるようにします。
 
 .. image:: img/line_track_cali.JPG
 
 
-Programming
-------------
+プログラミング
+---------------
 
-Now create 2 blocks that allow the car to move either to the left front or to the right front.
+左前または右前に車を動かす2つのブロックを作成します。
 
-**1. Move to the left front**
+**1. 左前方に移動**
 
-When the right motor is turned clockwise and the left motor is left unmoved, the car is moved slightly to the left front.
-
-.. image:: img/3_forward_left.png
-
-**2. Moving to the right front**
-
-Similarly, when the left motor is turned counterclockwise and the left motor does not move, the car moves slightly to the right.
+右のモーターが時計回りに回転し、左のモーターが動かないと、車は左前方にわずかに移動します。
 
 .. image:: img/3_forward_left.png
 
-**3. Line Tracking**
+**2. 右前方への移動**
 
-Read the value of Line Tracking module, if it is 1, it means black line has been detected, let the car move forward to the left, otherwise move forward to the right.
+同様に、左モータが反時計回りに回転し、左モータが動かないと、車は右方向にわずかに移動します。
+
+.. image:: img/3_forward_left.png
+
+**3. ライン追跡**
+
+ライン追跡モジュールの値を読み取り、1の場合は黒い線が検出されたことを意味するので、車を左に進めます。そうでなければ、右方向に進みます。
 
 .. image:: img/3_follow.png
 
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+R3ボードにコードをアップロードした後、ライン追跡モジュールを車の下の黒い線と一致させると、車が線を追跡するのを見ることができます。

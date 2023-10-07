@@ -1,45 +1,45 @@
 .. _sh_balloon:
 
-2.14 GAME - Inflating the Balloon
+2.14 ゲーム - 風船を膨らます
 =========================================
 
-Here, we will play a game of ballooning.
+ここでは、風船を膨らませるゲームをします。
 
-After clicking the green flag, the balloon will become bigger and bigger. If the balloon is too big, it will be blown up; if the balloon is too small, it will fall down; you need to judge when to press the button to make it fly upwards.
+緑のフラグをクリックすると、風船がどんどん大きくなります。風船が大きすぎると爆発します。逆に、小さすぎると落ちてしまいます。いつボタンを押して上に飛ばすかの判断が求められます。
 
 .. image:: img/13_balloon0.png
 
-You Will Learn
+学べること
 ---------------------
 
-- Paint costume for the sprite
+- スプライトのコスチュームをペイントする
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトに必要なコンポーネントは以下の通りです。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入すると便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,73 +54,71 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ボタンは4ピンのデバイスです。ピン1はピン2に、ピン3はピン4に接続されています。ボタンが押されると、4つのピンが接続され、回路が閉じます。
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* ボタンの左側のピンの1つを、プルダウン抵抗および0.1uF（104）キャパシタ（ボタンの動作時にジッタを除去し、安定したレベルを出力するため）に接続されているピン12に接続します。
+* 抵抗とキャパシタの他端をGNDに、ボタンの右側のピンの1つを5Vに接続します。
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Add a sprite and a backdrop**
+**1. スプライトと背景の追加**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, then select the **Balloon1** sprite.
+デフォルトのスプライトを削除し、スプライトエリアの右下の **Choose a Sprite** ボタンをクリックして、 **Balloon1** スプライトを選択します。
 
 .. image:: img/13_balloon1.png
 
-Add a **Boardwalk** backdrop via the **Choose a backdrop** button, or other backbackdrops you like.
+**Choose a backdrop** ボタンを使って **Boardwalk** の背景を追加します。または、好きな背景を選んでください。
 
 .. image:: img/13_balloon2.png
 
-**2. Paint a costume for the Balloon1 sprite**
+**2. Balloon1スプライトのコスチュームを描画**
 
-Now let's draw an exploding effect costume for the balloon sprite.
+風船スプライトの爆発エフェクトのコスチュームを描画しましょう。
 
-Go to the **Costumes** page for the **Balloon1** sprite, click the **Choose a Costume** button in the bottom left corner, and select **Paint** to bring up a blank **Costume**.
+**Balloon1** スプライトの **Costumes** ページに移動し、左下の **Choose a Costume** ボタンをクリックし、 **Paint** を選択して、空の **Costumes** 画面を開きます。
 
 .. image:: img/13_balloon7.png
 
-Select a color and then use the **Brush** tool to draw a pattern.
+色を選んで **Brush** ツールを使って模様を描きます。
 
 .. image:: img/13_balloon3.png
 
-Select a color again, click the Fill tool, and move the mouse inside the pattern to fill it with a color.
+再度色を選択し、塗りつぶしツールをクリックし、マウスを模様の内部に移動して色を塗りつぶします。
 
 .. image:: img/13_balloon4.png
 
-Finally, write the text BOOM, so that an explosion effect costume is complete.
+最後に、BOOMというテキストを書いて、爆発エフェクトのコスチュームが完成します。
 
 .. image:: img/13_balloon5.png
 
-**3. Scripting the Balloon sprite**
+**3. Balloonスプライトのスクリプティング**
 
-Set the initial position and size of the **Balloon1** sprite.
+**Balloon1** スプライトの初期位置とサイズを設定します。
 
 .. image:: img/13_balloon6.png
 
-Then let the **Balloon** sprite slowly get bigger.
+次に、**Balloon** スプライトをゆっくりと大きくします。
 
 .. image:: img/13_balloon8.png
 
-When the button is pressed (value is 1), the size of the **Balloon1** sprite stops getting bigger.
+ボタンが押されたとき（値が1の場合）、 **Balloon1** スプライトのサイズの増大が停止します。
 
-* When the size is less than 90, it will fall (y coordinate decreases).
-* When the size is bigger than 90 and smaller than 120, it will fly to the sky (y coordinate increases).
+* サイズが90未満の場合、落ちる（y座標が減少）。
+* サイズが90より大きく、120より小さい場合、空に飛ぶ（y座標が増加）。
 
 .. image:: img/13_balloon9.png
 
-If the button has not been pressed, the balloon slowly gets bigger and when the size is bigger than 120, it will explode (switch to the explode effect costume).
+ボタンが押されていない場合、風船はゆっくりと大きくなり、サイズが120より大きくなると、爆発します（爆発エフェクトのコスチュームに切り替えます）。
 
 .. image:: img/13_balloon10.png
-
-
 

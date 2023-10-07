@@ -1,37 +1,37 @@
 .. _ar_lcd1602:
 
-5.11.1 Liquid Crystal Display
+5.11.1 液晶ディスプレイ
 ===============================
 
-An I2C LCD1602 is composed of an LCD1602 and an I2C module, LCD1602 can be used to display characters, numbers, etc., but need to take up a lot of pins of the main control, after configuring an I2C module, only 2 I/0 pins are needed to drive this LCD1602.
+I2C LCD1602は、LCD1602とI2Cモジュールで構成されています。LCD1602は文字、数字などを表示するために使用できますが、多くのピンをメインコントロールに使用する必要があります。I2Cモジュールを設定すると、このLCD1602を駆動するのに2つのI/0ピンのみが必要になります。
 
-Now look at how to make this I2C CDL1602 work.
+このI2C CDL1602がどのように動作するかを見てみましょう。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは非常に便利です。リンクは以下のとおりです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,110 +40,105 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-
-**Schematic**
-
+**回路図**
 
 .. image:: img/circuit_7.1_lcd1602.png
 
-**Wiring**
+**配線図**
 
 .. image:: img/lcd_bb.jpg
     :width: 800
     :align: center
 
 .. note::
-    The SDA and SCL of the R3 board are the pins A4 and A5.
+    R3ボードのSDAとSCLは、ピンA4とA5です。
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * ``3in1-kit\basic_project\5.11.liquid_crystal_display`` のパスの下にある ``5.11.liquid_crystal_display.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
+    * ここでは ``LiquidCrystal I2C`` ライブラリが使用されています。 **Library Manager** からインストールできます。
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
-    
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will see "SunFounder", "Hello World" on the I2C LCD1602.
+コードが正常にアップロードされると、I2C LCD1602に"SunFounder"、"Hello World"が表示されます。
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    コードと配線が正しいのにLCDが内容を表示しない場合、背面のポテンショメータを回してみてください。
 
-**How it works?**
+**どのように動作するのか？**
 
-By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD. 
+``LiquidCrystal_I2C.h`` ライブラリを呼び出すことで、LCDを簡単に駆動することができます。
 
 .. code-block:: arduino
 
     #include "LiquidCrystal_I2C.h"
 
-Library Functions: 
+ライブラリの機能：
 
 .. code-block:: arduino
 
     LiquidCrystal_I2C(uint8_t lcd_Addr,uint8_t lcd_cols,uint8_t lcd_rows)
 
-Creates a new instance of the ``LiquidCrystal_I2C`` class that represents a
-particular LCD attached to your Arduino board.
+Arduinoボードに接続された特定のLCDを表す ``LiquidCrystal_I2C`` クラスの新しいインスタンスを作成します。
 
-* ``lcd_AddR``: The address of the LCD defaults to 0x27.
-* ``lcd_cols``: The LCD1602 has 16 columns.
-* ``lcd_rows``: The LCD1602 has 2 rows.
-
+* ``lcd_AddR``: LCDのアドレスはデフォルトで0x27。
+* ``lcd_cols``: LCD1602には16の列があります。
+* ``lcd_rows``: LCD1602には2行あります。
 
 .. code-block:: arduino
 
     void init()
 
-Initialize the lcd.
+lcdを初期化します。
 
 .. code-block:: arduino
 
     void backlight()
 
-Turn the (optional) backlight on.
+(オプションの)バックライトをオンにします。
 
 .. code-block:: arduino
 
     void nobacklight()
 
-Turn the (optional) backlight off.
+(オプションの)バックライトをオフにします。
 
 .. code-block:: arduino
 
     void display()
 
-Turn the LCD display on.
+LCDディスプレイをオンにします。
 
 .. code-block:: arduino
 
     void nodisplay()
 
-Turn the LCD display off quickly.
+LCDディスプレイをすぐにオフにします。
 
 .. code-block:: arduino
 
     void clear()
 
-Clear display, set cursor position to zero.
+表示をクリアし、カーソルの位置をゼロに設定します。
 
 .. code-block:: arduino
 
     void setCursor(uint8_t col,uint8_t row)
 
-Set the cursor position to col,row.
+カーソルの位置をcol,rowに設定します。
 
 .. code-block:: arduino
 
     void print(data,BASE)
 
-Prints text to the LCD.
+テキストをLCDに表示します。
 
-* ``data``: The data to print (char, byte, int, long, or string).
-* ``BASE (optional)``: The base in which to print numbers: BIN for binary (base 2), DEC for decimal (base 10), OCT for octal (base 8), HEX for hexadecimal (base 16).
+* ``data``: 表示するデータ（char、byte、int、long、または文字列）。
+* ``BASE (オプション)``: 数字を印刷する基数：BIN(2進数)、DEC(10進数)、OCT(8進数)、HEX(16進数)。

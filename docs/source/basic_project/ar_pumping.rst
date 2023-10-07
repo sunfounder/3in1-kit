@@ -1,35 +1,35 @@
 .. _ar_pump:
 
-1.4 Pumping
+1.4 ポンピング
 ===================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+水ポンプもモーターの一つで、モーターや他の外部エネルギーの機械エネルギーを特別な構造を通じて液体を輸送するものです。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトには以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入すると非常に便利です、リンクは以下です:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,11 +40,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-**Wiring**
+**配線図**
 
 
 .. image:: img/1.4_pumping_l9110_bb.png
@@ -52,18 +52,18 @@ You can also buy them separately from the links below.
     :align: center
 
 
-**Code**
+**コード**
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\basic_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * ファイル ``1.4.pumping.ino`` を ``3in1-kit\basic_project\1.4.pumping`` のパスから開くことができます。
+   * また、このコードを **Arduino IDE** にコピーしてください。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * あるいは、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を使ってコードをアップロードしてください。
 
 .. raw:: html
     
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/f829508f-2475-4de6-bc2f-ab0a68d707b1/preview?F=undefined?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/aadf3a3f-3384-49ae-9a52-44d6eaa6a211/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+ポンプにチューブを追加して、それをベースンに置きます。コードが正常にアップロードされた後、しばらくするとベースンの水が排水されるのを確認できます。
+この実験を行う際は、短絡を避けるため回路を水から離してください！

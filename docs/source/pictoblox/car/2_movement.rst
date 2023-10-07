@@ -1,13 +1,13 @@
 .. _sh_move:
 
-3.2 Movement
+3.2 移動
 ==================
 
-This project is based on :ref:`sh_test` to make the car move in all directions.
+このプロジェクトは、:ref:`sh_test` に基づいて、車をすべての方向に移動させるものです。
 
-Before we start programming, let's review the working principle of L9110 module.
+プログラムを開始する前に、L9110モジュールの動作原理を確認しましょう。
 
-Here is the truth table of Motor B:
+以下はモーターBの真理値表です：
 
 .. list-table:: 
     :widths: 25 25 50
@@ -15,21 +15,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B
-      - The state of Motor B
+      - モーターBの状態
     * - 1
       - 0
-      - Rotate clockwise
+      - 時計回りに回転
     * - 0
       - 1
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 1
-      - Stop
+      - 停止
 
-Here is the truth table of Motor A:
+以下はモーターAの真理値表です：
 
 .. list-table:: 
     :widths: 25 25 50
@@ -37,60 +37,60 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - モーターAの状態
     * - 1
       - 0
-      - Rotate clockwise
+      - 時計回りに回転
     * - 0
       - 1
-      - Rotate counterclockwise
+      - 反時計回りに回転
     * - 0
       - 0
-      - Brake
+      - ブレーキ
     * - 1
       - 1
-      - Stop
+      - 停止
 
 
 
-Programming
+
+プログラミング
 -------------------
 
-Now create blocks to make the car, forward, backward, left and right rotation and stop respectively.
+次に、車が前進、後退、左右回転、及び停止するためのブロックを作成します。
 
+**1. 前進**
 
-**1. Move Forward**
-
-The right motor turns clockwise and the left motor turns counterclockwise to move the car forward.
+右モータは時計回り、左モータは反時計回りに回転して車を前進させます。
 
 .. image:: img/2_forward.png
 
-**2. Move Backward**
+**2. 後退**
 
-Backward is just the opposite, the right motor needs to turn counterclockwise, the left motor clockwise.
+後退はその逆で、右モータは反時計回り、左モータは時計回りに回転が必要です。
 
 .. image:: img/2_backward.png
 
-**3. Turn Left**
+**3. 左に曲がる**
 
-The left and right motors turn clockwise at the same time to make the car turn left.
+左右のモータを同時に時計回りに回転させて車を左に曲がらせます。
 
 .. image:: img/2_turn_left.png
 
-**4. Turn Right**
+**4. 右に曲がる**
 
-Similarly, turn the left and right motors counterclockwise to turn the car to the right.
+同様に、左右のモータを反時計回りに回転させて車を右に曲がらせます。
 
 .. image:: img/2_turn_right.png
 
-**5. Stop**
+**5. 停止**
 
-Stop the car by setting all motors to 0.
+全モータの設定を0にして車を停止させます。
 
 .. image:: img/2_stop.png
 
-**6. Make the car move**
+**6. 車を動かす**
 
-Make the car move forward, backward, left and right for 1 second, then stop. Since all blocks are placed in the [Forever] block, you will see that the car repeats the above actions.
+車を前進、後退、左右に1秒間動かしてから停止します。すべてのブロックが[Forever]ブロック内に配置されているので、車が上記の動作を繰り返すのを見ることができます。
 
 .. image:: img/2_move.png

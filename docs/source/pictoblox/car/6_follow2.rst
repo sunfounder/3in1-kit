@@ -1,38 +1,38 @@
 .. _sh_follow2:
 
-3.6 Follow Your Hand 2
+3.6 あなたの手を追跡する2
 ==============================
 
-In the :ref:`sh_follow1` project only the ultrasonic module is used, it can only follow your hand forward.
+:ref:`sh_follow1` のプロジェクトでは、超音波モジュールのみが使用されており、前方の手だけを追跡することができます。
 
-In this project, we use 2 IR obstacle avoidance modules at the same time, so that the car can follow your hand left or right.
+このプロジェクトでは、2つのIR障害物回避モジュールを同時に使用することで、車があなたの手を左または右に追跡できるようになります。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトに必要な部品は以下のとおりです。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式のキットを購入することは非常に便利です。以下がリンクです： 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,17 +45,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-Connect the ultrasonic module and the two IR obstacle avoidance modules at the same time.
+超音波モジュールと2つのIR障害物回避モジュールを同時に接続します。
 
-The wiring between the ultrasonic and the R3 board is as follows.
+超音波モジュールとR3ボード間の配線は以下の通りです。
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - 超音波モジュール
+      - R3ボード
     * - Vcc
       - 5V
     * - Trig
@@ -65,12 +65,12 @@ The wiring between the ultrasonic and the R3 board is as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+2つのIR障害物回避モジュールとR3ボード間の配線は以下の通りです。
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - 左IRモジュール
+      - R3ボード
     * - OUT
       - 8
     * - GND
@@ -80,8 +80,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - 右IRモジュール
+      - R3ボード
     * - OUT
       - 7
     * - GND
@@ -92,33 +92,33 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-Programming
+プログラミング
 ---------------
 
-The effect to be achieved by this project is as follows
+このプロジェクトで達成したい効果は以下の通りです
 
-* Ultrasonic detects your hand about 5-10cm in front and let the car follow.
-* The infrared module on the left detects your hand and turns to the left.
-* The right IR module detects your hand and turns to the right.
+* 超音波は、前方で5-10cmの距離で手を検出し、車を追跡させます。
+* 左の赤外線モジュールが手を検出すると、左に曲がります。
+* 右のIRモジュールが手を検出すると、右に曲がります。
 
-**1. Create a block**
+**1. ブロックを作成する**
 
-Create blocks that allow the car to move forward, turn left, turn right and stop.
+前進、左折、右折、停止するためのブロックを作成します。
 
 .. image:: img/6_follow2_1.png
 
-**2. Follow to move forward**
+**2. 前進するための追跡**
 
-Read the ultrasonic value and if your hand is detected at a distance of 5-10cm, then let the car follow.
+超音波の値を読み取り、手が5-10cmの距離で検出された場合、車を追跡させます。
 
 .. image:: img/6_follow2_2.png
 
-**3. Follow to turn left and right**
+**3. 左と右に追跡する**
 
-Read the values of the left and right IR modules.
+左と右のIRモジュールの値を読み取ります。
 
-* If the left IR module detects your hand, turn left.
-* If the right IR module detects your hand, turn right.
-* If neither IR module and ultrasonic module detect your hand, make the car stop.
+* 左のIRモジュールが手を検出した場合、左に曲がります。
+* 右のIRモジュールが手を検出した場合、右に曲がります。
+* 両方のIRモジュールと超音波モジュールが手を検出しない場合、車を停止させます。
 
 .. image:: img/6_follow2_3.png

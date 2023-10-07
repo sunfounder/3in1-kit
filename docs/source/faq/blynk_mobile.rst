@@ -1,27 +1,26 @@
 .. _blynk_mobile:
 
-How to use Blynk on mobile device?
-======================================
+モバイルデバイスでBlynkを使用する方法は？
+===========================================
 
 .. note::
 
-    As datastreams can only be created in Blynk on the web, you will need to reference different projects to create datastreams on the web, then follow the tutorial below to create widgets in Blynk on your mobile device.
+    データストリームはウェブ上のBlynkでのみ作成できるため、ウェブ上でデータストリームを作成するために異なるプロジェクトを参照し、次に以下のチュートリアルに従ってモバイルデバイスのBlynkでウィジェットを作成する必要があります。
 
-
-#. Open Google Play or APP Store on your mobile device and search for "Blynk IoT" (not Blynk(legacy)) to download.
-#. After opening the APP, login in, this account should be the same as the account used on the web client.
-#. Then go to **Dashboard** (if you don't have one, create one) and you will see that the **Dashboard** for mobile and web are independent of each other.
+#. お使いのモバイルデバイスでGoogle PlayまたはAPP Storeを開き、"Blynk IoT"（Blynk(legacy)ではない）を検索してダウンロードします。
+#. APPを開いた後、ログインします。このアカウントは、ウェブクライアントで使用されるアカウントと同じものでなければなりません。
+#. 次に、 **Dashboard** に移動します（まだ持っていない場合は作成します）。モバイル用とウェブ用の **Dashboard** は互いに独立していることがわかります。
 
     .. image:: img/APP_1.jpg
 
-#. Click **Edit** Icon.
-#. Click on the blank area. 
-#. Choose the same widget as on the web page, such as select a **Joystick** widget.
+#. **編集** アイコンをクリックします。
+#. 空白のエリアをクリックします。
+#. ウェブページ上と同じウィジェットを選択します。例えば、 **Joystick** ウィジェットを選択します。
 
     .. image:: img/APP_2.jpg
 
-#. Now you will see a **Joystick** widget appear in the blank area, click on it.
-#. **Joystick** Settings will appear, select the **Xvalue** and **Yvalue** datastreams you just set in the web page. Note that each widget corresponds to a different datastream in each project.
-#. Go back to the **Dashboard** page and you can operate the **Joystick** when you want.
+#. 今、空白のエリアに **Joystick** ウィジェットが表示されますので、それをクリックします。
+#. **Joystick** の設定が表示されるので、ウェブページで設定した **Xvalue** および **Yvalue** データストリームを選択します。各プロジェクトの各ウィジェットが異なるデータストリームに対応していることに注意してください。
+#. **Dashboard** ページに戻り、必要に応じて **Joystick** を操作できます。
 
     .. image:: img/APP_3.jpg

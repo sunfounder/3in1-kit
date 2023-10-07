@@ -1,40 +1,40 @@
 .. _sh_fishing:
 
-2.19 GAME - Fishing
+2.19 ゲーム - 釣り
 ===========================
 
-Here, we play a fishing game with a button.
+このゲームでは、ボタンを使って釣りを楽しむことができます。
 
-When the script is running, the fish swim left and right on the stage, you need to press the button when the fish is almost close to the hook (it is recommended to press it for a longer time) to catch the fish, and the number of fish caught will be recorded automatically.
+スクリプトを実行すると、魚がステージの左右を泳ぐので、魚が釣り針に近づいたとき（長押し推奨）にボタンを押して魚を釣ります。釣れた魚の数は自動的に記録されます。
 
 .. image:: img/18_fish.png
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全ての部品を含むキットを購入すると非常に便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから、個別にも購入できます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,95 +49,83 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ボタンは4ピンのデバイスで、ピン1はピン2に、ピン3はピン4に接続されています。ボタンを押すと、4つのピンが接続されて回路が閉じます。
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立てます。
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* ボタンの左側のピンの一つを、プルダウン抵抗と0.1uF (104) のキャパシタ（ボタンが動作する際のジッタを除去し、安定したレベルを出力するため）に接続されているピン12に接続します。
+* 抵抗とキャパシタのもう一方の端をGNDに、ボタンの右側のピンの一つを5Vに接続します。
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-We need to select an **Underwater** backdrop first, then add a **Fish** sprite and let it swim back and forth on the stage. Then draw a **Fishhook** sprite and control it by a button to start fishing. When the **Fish** sprite touches the **Fishhook** sprite in the hooked state (turns red), it will be hooked.
+まず、 **Underwater** の背景を選択し、 **Fish** スプライトを追加してステージ上で左右に泳がせます。次に、 **Fishhook** スプライトを描き、ボタンで制御して釣りを開始します。 **Fish** スプライトがフック状態（赤くなる）で **Fishhook** スプライトに触れると、フックされます。
 
-**1. Adding a backdrop**
+**1. 背景の追加**
 
-Use the **Choose a Backdrop** button to add an **Underwater** backdrop.
+**Choose a Backdrop** ボタンを使って、 **Underwater** の背景を追加します。
 
 .. image:: img/18_under.png
 
-**2. Fishhook sprite**
 
-The **Fishhook** sprite usually stays underwater in the yellow state; when the button is pressed, it is in the fishing state (red) and moves above the stage.
+**2. 釣り針スプライト**
 
-There is no **Fishhook** sprite in Pictoblox, we can modify the **Glow-J** sprite to look like a fishhook.
+**Fishhook** スプライトは通常、黄色の状態で水中に留まっています。ボタンが押されると、釣り状態（赤）になり、ステージの上に移動します。
 
-* Add the **Glow-J** sprite via **Choose a Sprite**.
+Pictobloxには **Fishhook** スプライトがありませんので、 **Glow-J** スプライトを修正して釣り針のように見せることができます。
+
+* **Choose a Sprite** で **Glow-J** スプライトを追加します。
 
 .. image:: img/18_hook.png
 
-* Now go to the **Costumes** page of the **Glow-J** sprite, select Cyan's fill in the screen and remove it. Then change the J color to red and also reduce its width. The most important point to note is that you need to have the top of it just at the center point.
+* 次に、 **Glow-J** スプライトの **Costumes** ページに移動し、画面のCyanの塗りつぶしを選択して削除します。その後、Jの色を赤に変更し、その幅も縮小します。最も重要な点は、その上部を中心点ちょうどに配置することです。
 
 .. image:: img/18_hook1.png
 
-* Use the **Line tool** to draw a line as long as possible from the center point up (line out of the stage). Now that the sprite is drawn, set the sprite name to **Fishhook** and move it to the right position.
+* **Line tool** を使用して、中心点から上方向に可能な限り長く線を引きます（ステージ外の線）。スプライトが描かれたら、スプライトの名前を **Fishhook** に変更し、適切な位置に移動します。
 
 .. image:: img/18_hook2.png
 
-* When the green flag is clicked, set the sprite's color effect to 30 (yellow), and set its initial position.
+* 緑のフラグがクリックされたとき、スプライトの色効果を30（黄色）に設定し、その初期位置を設定します。
 
 .. image:: img/18_hook3.png
 
-
-* If the button is pressed, set the color effect to 0 (red, start fishing state), wait for 0.1 and then move the **Fishhook** sprite to the top of the stage. Release the button and let the **Fishhook** return to its initial position.
+* ボタンが押された場合、色効果を0（赤、釣り開始状態）に設定し、0.1秒待った後、 **Fishhook** スプライトをステージの上部に移動します。ボタンを離すと、 **Fishhook** は初期位置に戻ります。
 
 .. image:: img/18_hook4.png
 
-**3. Fish sprite**
+**3. 魚スプライト**
 
-The effect to be achieved by the **Fish** sprite is to move left and right on the stage, and when it encounters a **Fishhook** sprite in the fishing state, it shrinks and moves to a specific position and then disappears, and then clones a new **fish** sprite again.
+**Fish** スプライトが達成すべき効果は、ステージの左右に移動し、釣りの状態である **Fishhook** スプライトに遭遇したとき、それを縮小して特定の位置に移動させてから消失させ、新しい **fish** スプライトを再度クローンすることです。
 
-* Now add the **fish** sprite and adjust its size and position.
+* 今度は **fish** スプライトを追加し、そのサイズと位置を調整します。
 
 .. image:: img/18_fish1.png
 
-* Create a variable **score** to store the number of fish caught, hide this sprite and clone it.
+* 釣れた魚の数を保存する変数 **score** を作成し、このスプライトを隠し、それをクローンします。
 
 .. image:: img/18_fish2.png
 
-
-* Show the clone of the **fish** sprite, switch its costume and finally set the initial position.
-
+* **fish** スプライトのクローンを表示し、そのコスチュームを切り替え、最後に初期位置を設定します。
 
 .. image:: img/18_fish3.png
 
-
-* Make the **fish** sprite's clone move left and right and bounce back when it touches the edge.
-
+* **fish** スプライトのクローンを左右に移動させ、エッジに触れると反射させます。
 
 .. image:: img/18_fish4.png
 
-
-* The **fish** sprite (of the clone) will not react when it passes the **Fishhook** sprite; when it touches the **Fishhook** sprite in the fishing state (turns red), it will be caught, at which point the score (variable score) +1, and it will also show a score animation (shrinks 40%, quickly moves to the position of the scoreboard and disappears). At the same time, a new fish is created (a new fish sprite clone) and the game continues.
+* **Fishhook** スプライトを通過しても、 sss**fish** スプライト（クローンのもの）は反応しません。釣りの状態（赤くなる）で **Fishhook** スプライトに触れると、それが捕まり、その時点でスコア（変数score）+1、そしてスコアアニメーションも表示されます（サイズを40％縮小し、スコアボードの位置に素早く移動して消失）。同時に、新しい魚が作成され（新しい魚スプライトのクローン）、ゲームが続行されます。
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the red color of the **Fishhook** sprite on the stage. If you choose a color arbitrarily, this [Touch color] block will not work.
-
-
+    [Touch color] ブロックの色エリアをクリックして、ステージの **Fishhook** スプライトの赤色を取得するためのアイドロッパーツールを選択する必要があります。適当に色を選択すると、この [Touch color] ブロックは機能しません。
 
 .. image:: img/18_fish5.png
-
-
-
-
-
 

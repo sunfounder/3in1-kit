@@ -1,34 +1,31 @@
 .. _cpn_capacitor:
 
-
-Capacitor
+コンデンサ
 =============
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+コンデンサは、与えられた電位差のもとでの電荷の蓄積量を指し、Cとして示され、国際単位はファラド(F)です。
+一般的に、電荷は電場内で力の下で移動します。導体の間に媒体が存在すると、電荷の移動は妨げられ、導体上に電荷が蓄積されます。
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+この蓄積された電荷の量は容量と呼ばれます。コンデンサは電子機器の中で最も広く使用される電子部品の一つであり、直流隔離、結合、バイパス、フィルタリング、チューニングループ、エネルギー変換、制御回路などの用途で幅広く利用されています。コンデンサは、電解コンデンサや固体コンデンサなどに分類されます。
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+材料特性に基づいて、コンデンサはアルミ電解コンデンサ、フィルムコンデンサ、タンタルコンデンサ、セラミックコンデンサ、スーパーコンデンサなどに分けられます。
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+このキットでは、セラミックコンデンサと電解コンデンサが使用されています。
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `セラミックコンデンサ - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `電解コンデンサ - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+セラミックコンデンサには103や104のラベルがあり、これは容量値を表しており、103=10x10^3pF、104=10x10^4pFとなります。
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
-
-**Unit Conversion**
+**単位変換**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
+**例**
 
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
-
+* :ref:`sh_doorbell` (Scratchプロジェクト)
+* :ref:`sh_eat_apple` (Scratchプロジェクト)
+* :ref:`sh_fishing` (Scratchプロジェクト)

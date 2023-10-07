@@ -1,38 +1,38 @@
 .. _sh_avoid1:
 
-3.5 Obstacle avoidance
+3.5 障害物回避
 ==================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+車の前部には2つの赤外線障害物回避モジュールが取り付けられており、近くの障害物を検出するのに使用できます。
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+このプロジェクトでは、車は自由に前進し、障害物に遭遇するとそれを避けて他の方向に移動することができます。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入することは非常に便利です。以下がリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,12 +43,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+障害物回避モジュールは、距離調整可能な赤外線近接センサーで、通常は出力が高く、障害物を検出すると低くなります。
 
-Now build the circuit according to the diagram below.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
 
@@ -75,68 +75,68 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-Adjust the Module
+モジュールの調整
 -----------------------
 
-Before starting the project, you need to adjust the detection distance of the module.
+プロジェクトを開始する前に、モジュールの検出距離を調整する必要があります。
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+上記の図に従って配線し、R3ボードに電源を供給します（USBケーブルを直接挿入するか、9Vのバッテリーケーブルを取り付ける）。コードをアップロードせずに電源を入れます。
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+赤外線障害物回避の前に約5cmのノートや他の平らな物を置きます。
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+その後、モジュール上のポテンショメータを回して、モジュール上の信号インジケータがちょうど点灯するように、最大検出距離5cmに調整します。
 
-Follow the same method to adjust another infrared module.
+もう一つの赤外線モジュールも同じ方法で調整します。
 
 .. image:: img/ir_obs_cali.jpg
 
-Programming
+プログラミング
 ---------------
 
-The effect we want to achieve.
+達成したい効果：
 
-* When the left IR module detects an obstacle, the car goes backward to the left
-* When the right IR module detects an obstacle, the car goes backward to the right.
-* If both IR modules detect the obstacle, the car will go back directly.
-* Otherwise the car will go forward.
+* 左のIRモジュールが障害物を検出すると、車は左に後退します。
+* 右のIRモジュールが障害物を検出すると、車は右に後退します。
+* 両方のIRモジュールが障害物を検出すると、車は直接後退します。
+* それ以外の場合、車は前進します。
 
-Now create the corresponding blocks.
+対応するブロックを作成してください。
 
-**1. The car goes backward to the left**
+**1. 車が左に後退する**
 
-When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left.
+右のモータが反時計回りに回転し、左のモータが回転しない場合、車は左に後退します。
 
 .. image:: img/5_avoid1.png
 
-**2. The car goes backward to the right**
+**2. 車が右に後退する**
 
-When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+左のモータが時計回りに回転し、右のモータが回転しない場合、車は右に後退します。
 
 .. image:: img/5_avoid2.png
 
-**3. The car moves forward, backward and stops**
+**3. 車は前進、後退し、停止します**
 
 .. image:: img/5_avoid3.png
 
-**4. Read the values of the 2 IR modules**
+**4. 2つのIRモジュールの値を読み取る**
 
-Click **Make a variable** in the **Variables** palette.
+**Variables** パレットで **Make a variable** をクリックします。
 
 .. image:: img/5_avoid4.png
 
-Enter the variable name and click **OK** to create a new variable.
+変数名を入力し、 **OK** をクリックして新しい変数を作成します。
 
 .. image:: img/5_avoid5.png
 
-Read the values of the left and right IR obstacle avoidance modules and store them in the 2 new variables.
+左および右のIR障害物回避モジュールの値を読み取り、2つの新しい変数に保存します。
 
 .. image:: img/5_avoid6.png
 
-**5. obstacle avoidance**
+**5. 障害物を避ける**
 
-* When the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-* When the right IR module is 0 (obstacle detected), let the car go back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will go backward.
-* Otherwise the car will keep going forward.
+* 左のIRモジュールが0（障害物検出）で、右のIRモジュールが1の場合、車は左にバックアップします。
+* 右のIRモジュールが0（障害物検出）の場合、車は右にバックアップします。
+* 2つのIRモジュールが同時に障害物を検出すると、車は後退します。
+* それ以外の場合、車は前進を続けます。
 
 .. image:: img/5_avoid7.png

@@ -1,36 +1,36 @@
 .. _sh_follow1:
 
-3.4 Follow Your Hand
+3.4 手を追う
 ===========================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+この車をペットと考えてみてください。手を振ると、車はあなたの方へ走ってきます。
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると非常に便利です。リンクは以下の通りです。
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することも可能です。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,18 +41,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+超音波センサーモジュールは、超音波を使用して物体までの距離を測定する道具です。
+2つのプローブがあります。1つは超音波を送るためのもので、もう1つは波を受信して送受信の時間を距離に変換し、デバイスと障害物との距離を検出するためのものです。
 
-Now build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - 超音波モジュール
+      - R3ボード
     * - Vcc
       - 5V
     * - Trig
@@ -65,13 +65,13 @@ Now build the circuit according to the following diagram.
 .. image:: img/car_6.png
     :width: 800
 
-Programming
-------------
+プログラミング
+----------------
 
-Create blocks to make the car go forward and stop.
+車が前進し停止するブロックを作成します。
 
 .. image:: img/4_hand1.png
 
-Put your hand in front of the car, then read the value of the ultrasonic module, if the detected distance of your hand is 5-10cm, then let the car go forward, otherwise stop.
+車の前に手をかざして、超音波モジュールの値を読み取ります。手の検出距離が5-10cmの場合、車を前進させ、それ以外の場合は停止させます。
 
 .. image:: img/4_hand2.png

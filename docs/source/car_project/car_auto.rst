@@ -1,37 +1,37 @@
 .. _self_driving:
 
-8. Self-Driving Car
+8. 自動運転車
 =========================
 
-This project is a combination of the two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`. 
-2 infrared obstacle avoidance modules do short distance or edge detection, 
-and ultrasonic modules do long distance detection to confirm that the car does not hit an obstacle during the free driving process.
+このプロジェクトは、 :ref:`car_ultrasonic` と :ref:`car_ir_obstacle` の2つのプロジェクトの組み合わせです。
+2つの赤外線障害物回避モジュールは短距離またはエッジ検出を行い、
+超音波モジュールは車が自由に走行する過程で障害物に衝突しないことを確認するための長距離検出を行います。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入すると非常に便利です、リンクは以下です：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 名前
+        - このキットに含まれるアイテム
+        - リンク
+    *   - 3 in 1 スターターキット
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクからそれぞれ購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,17 +44,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**配線**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+超音波モジュールと2つのIR障害物回避モジュールを同時に接続します。
 
-Wire the ultrasonic to the R3 board as follows.
+R3ボードに超音波を次のように接続します。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - 超音波モジュール
+      - R3ボード
     * - Vcc
       - 5V
     * - Trig
@@ -64,13 +64,13 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+R3ボードへの2つのIR障害物回避モジュールの配線は次のとおりです。
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R3 Board
+    * - 左IRモジュール
+      - R3ボード
     * - OUT
       - 8
     * - GND
@@ -81,8 +81,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R3 Board
+    * - 右IRモジュール
+      - R3ボード
     * - OUT
       - 7
     * - GND
@@ -93,35 +93,33 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-**Code**
+**コード**
 
 .. note::
 
-    * Open the ``8.self_driving_car.ino`` file under the path of ``3in1-kit\car_project\8.self_driving_car``.
-    * Or copy this code into **Arduino IDE**.
+    * ``3in1-kit\car_project\8.self_driving_car`` のパスの下にある ``8.self_driving_car.ino`` ファイルを開きます。
+    * または、このコードを **Arduino IDE** にコピーします。
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * または、`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0a74a7b1-ead6-4bea-ab5a-4da71f27f82f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will drive freely once the code has been uploaded successfully. When the IR obstruction module on both sides detects an obstacle, it will move in the opposite direction for emergency evasion; if there is an obstacle within 2~10cm directly in front of the car, it will back up to the left, adjust its direction, and then move forward.
+コードが正常にアップロードされると、車は自由に走行します。両側のIR障害物モジュールが障害物を検出すると、緊急回避のために逆方向に移動します。車の正面2~10cmに障害物がある場合、左にバックアップし、方向を調整して前進します。
 
+**どのように動作するのか？**
 
-**How it works?**
+このプロジェクトのワークフローは以下の通りです。
 
-The workflow of this project is as follows.
-
-* Priority read the value of left and right IR obstacle avoidance module.
-* If the left IR module is 0 (obstacle detected), the right IR module is 1, let the car back up to the left.
-* If the right IR module is 0 (obstacle detected), let the car back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will back up.
-* Otherwise read the distance detected by the ultrasonic module.
-* If the distance is greater than 50cm, let the car go forward.
-* If the distance is between 2-10cm, let the car backward before turning.
-* If the distance is between 10-50cm, let the car go forward at low speed.
-
+* 左右のIR障害物回避モジュールの値を優先して読み取ります。
+* 左のIRモジュールが0（障害物を検出）、右のIRモジュールが1の場合、車を左にバックアップします。
+* 右のIRモジュールが0（障害物検出）の場合、車を右にバックアップします。
+* 2つのIRモジュールが同時に障害物を検出すると、車はバックアップします。
+* それ以外の場合は、超音波モジュールによって検出された距離を読み取ります。
+* 距離が50cm以上の場合、車を前進させます。
+* 距離が2-10cmの場合、転回する前に車を後進させます。
+* 距離が10-50cmの場合、車を低速で前進させます。
 
 .. code-block:: arduino
 
@@ -141,7 +139,7 @@ The workflow of this project is as follows.
             Serial.println(distance);
             if (distance > 50) { // Safe
                 moveForward(200);
-            } else if (distance < 10 && distance > 2) { // Attention
+            } else if (distance < 10 && distance > 2) {  // Attention
                 moveBackward(200);
                 delay(1000);
                 backLeft(150);

@@ -1,15 +1,13 @@
-Components List and Introduction
+コンポーネントリストと紹介
 ====================================
 
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+パッケージを開封した後、コンポーネントの数量が商品説明と一致しているか、およびすべてのコンポーネントが良好な状態であるかどうかを確認してください。
 
 .. image:: img/components_list.jpg
     :width: 800
-    :align: center
 
-
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+以下は、各コンポーネントの紹介です。これには、コンポーネントの動作原理と対応するプロジェクトが含まれています。
 
 **Control Board**
 

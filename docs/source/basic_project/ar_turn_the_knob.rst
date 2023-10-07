@@ -1,36 +1,35 @@
 .. _ar_potentiometer:
 
-4.1 Turn the Knob
+4.1 ノブを回す
 ===================
 
-Potentiometer is a resistor component with 3 terminals and its resistance value can be
-adjusted according to some regular variation.
+ポテンショメータは3端子の抵抗成分であり、その抵抗値は一定の変化に応じて調整することができます。
 
-**Required Components**
+**必要な部品**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下の部品が必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのは非常に便利です。購入リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前	
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,43 +41,29 @@ You can also buy them separately from the links below.
         - |link_potentiometer_buy|
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/circuit_5.1_potentiometer.png
 
-In this example, we use the analog pin (A0) to read the value
-of the potentiometer. By rotating the axis of the potentiometer, you can
-change the distribution of resistance among these three pins, changing
-the voltage on the middle pin. When the resistance between the middle
-and a outside pin connected to 5V is close to zero (and the resistance
-between the middle and the other outside pin is close to 10kΩ), the
-voltage at the middle pin is close to 5V. The reverse operation (the
-resistance between the middle and a outside pin connected to 5V is close
-to 10kΩ) will make the voltage at the middle pin be close to 0V.
+この例では、アナログピン（A0）を使用してポテンショメータの値を読み取ります。ポテンショメータの軸を回転させることで、これら3つのピンの間での抵抗の分配を変更し、中央のピンの電圧を変更することができます。中央と5Vに接続された外側のピンとの間の抵抗がゼロに近い（そして中央と他の外側のピンとの間の抵抗が10kΩに近い）場合、中央のピンの電圧は5Vに近くなります。逆の操作（中央と5Vに接続された外側のピンとの間の抵抗が10kΩに近い場合）は、中央のピンの電圧が0Vに近くなるようにします。
 
-
-**Wiring**
+**配線図**
 
 .. image:: img/turn_thek_knob_bb.jpg
     :width: 600
     :align: center
 
-**Code**
-
+**コード**
 
 .. note::
 
-   * You can open the file ``4.1.turn_the_knob.ino`` under the path of ``3in1-kit\basic_project\4.1.turn_the_knob``. 
-   * Or copy this code into **Arduino IDE**.
+   * ``3in1-kit\basic_project\4.1.turn_the_knob`` のパスの下にある ``4.1.turn_the_knob.ino`` ファイルを開くことができます。
+   * または、このコードを **Arduino IDE** にコピーします。
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * または、 `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ を通じてコードをアップロードします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d931f2c9-74bc-4a53-8531-39a21a07dbaf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-    
-After uploading the codes to the board, you can open the serial
-monitor to see the reading value of the pin. When rotating the axis of
-the potentiometer, the serial monitor will print the value
-「0」~「1023」. 
+ボードにコードをアップロードした後、シリアルモニターを開いてピンの読み取り値を確認することができます。ポテンショメータの軸を回転させると、シリアルモニターは「0」~「1023」の値を表示します。

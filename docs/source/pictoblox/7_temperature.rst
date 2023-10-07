@@ -1,44 +1,44 @@
 .. _sh_low_temperature:
 
-2.7 Low Temperature Alarm
+2.7 低温警報
 =========================
 
-In this project, we will make a low temperature alarm system, when the temperature is below the threshold, the **Snowflake** sprite will appear on the stage.
+このプロジェクトでは、低温警報システムを作成します。温度がしきい値を下回ると、ステージに **Snowflake** スプライトが表示されます。
 
 .. image:: img/9_tem.png
 
-You Will Learn
+学べること
 ---------------------
 
-- Thermistor working principle
-- Multivariable and Subtractive Operations
+- サーミスタの動作原理
+- 多変量および減算操作
 
-Required Components
+必要な部品
 ---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入することは確かに便利です。こちらのリンクを参照してください：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名前
+        - このキットのアイテム
+        - リンク
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネントの紹介
+        - 購入リンク
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,50 +51,50 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor` 
         - |link_thermistor_buy|
 
-Build the Circuit
+回路の作成
 -----------------------
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors, and there are two types of resistors, PTC (resistance increases as temperature increases) and PTC (resistance decreases as temperature increases).
+サーミスタは、標準的な抵抗よりも、温度に強く依存する抵抗のタイプで、PTC（温度が上がると抵抗が上がる）とNTC（温度が上がると抵抗が下がる）の2種類の抵抗があります。
 
-Build the circuit according to the following diagram.
+以下の図に従って回路を組み立ててください。
 
-One end of the thermistor is connected to GND, the other end is connected to A0, and a 10K resistor is connected in series to 5V.
+サーミスタの一端はGNDに接続され、もう一端はA0に接続され、10Kの抵抗が5Vに直列に接続されています。
 
-The NTC thermistor is used here, so when the temperature rises, the resistance of the thermistor decreases, the voltage division of A0 decreases, and the value obtained from A0 decreases, and vice versa increases.
+ここではNTCサーミスタが使用されているため、温度が上昇するとサーミスタの抵抗が減少し、A0の電圧分割が減少し、A0から取得される値が減少し、逆に増加します。
 
 .. image:: img/circuit/thermistor_circuit.png
 
-Programming
+プログラミング
 ------------------
 
-**1. Select a sprite**
+**1. スプライトを選択する**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **Snowflake** in the search box, and then click to add it.
+デフォルトのスプライトを削除し、スプライトエリアの右下の **Choose a Sprite** ボタンをクリックして、検索ボックスに **Snowflake** と入力し、クリックして追加します。
 
 .. image:: img/9_snow.png
 
-**2. Create 2 variables**
+**2. 変数を2つ作成する**
 
-Create two variables, **before** and **current**, to store the value of A0 in different cases.
+A0の値を異なるケースで保存するための2つの変数、 **before** と **current** を作成します。
 
 .. image:: img/9_va.png
 
-**3. Read the value of A0**
+**3. A0の値を読む**
 
-When the green flag is clicked, the value of A0 is read and stored in the variable **before**.
+緑の旗がクリックされたとき、A0の値が読み取られ、変数 **before** に保存されます。
 
 .. image:: img/9_before.png
 
-**4. Read the value of A0 again**
+**4. A0の値を再び読む**
 
-In [forever], read the value of A0 again and store it in the variable **current**.
+[forever]の中で、A0の値を再び読み取り、変数 **current** に保存します。
 
 .. image:: img/9_current.png
 
-**5. Determining temperature changes**
+**5. 温度変化を判断する**
 
-Using the [if else] block, determine if the current value of A0 is 50 greater than before, which represents a decrease in temperature. At this point let **Snowflake** sprite show, otherwise hide.
+[if else]ブロックを使用して、A0の現在の値がbeforeよりも50大きいかどうかを判断します。これは温度の低下を表します。この時点で **Snowflake** スプライトを表示させ、それ以外の場合は非表示にします。
 
-* [-] & [>]: subtraction and comparison operators from **Operators** platette.
+* [-] & [>]: **Operators** パレットからの減算および比較演算子。
 
 .. image:: img/9_show.png

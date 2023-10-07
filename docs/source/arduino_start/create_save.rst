@@ -1,39 +1,37 @@
-How to create, open or Save the Sketch?
+スケッチの作成、開く、保存方法は？
 =======================================
 
-
-#. When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a "sketch".
+#. Arduino IDEを初めて開くか、新しいスケッチを作成すると、このようなページが表示されます。Arduino IDEが新しいファイルを作成してくれます。これを"スケッチ"と言います。
 
     .. image:: img/sp221014_173458.png
 
-    These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch.
+    これらのスケッチファイルは一時的な名前が付けられており、ファイルの作成日から名前を判断することができます。 ``sketch_oct14a.ino`` は10月14日の最初のスケッチを意味し、 ``.ino`` はこのスケッチのファイル形式です。
 
-#. Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code.
-
+#. 新しいスケッチを作成してみましょう。以下のコードをArduino IDEにコピーして、元のコードを置き換えます。
 
         .. image:: img/create1.png
 
     .. code-block:: C
 
         void setup() {
-            // put your setup code here, to run once:
+            // 初回のセットアップコードをここに記述:
             pinMode(13,OUTPUT); 
         }
 
         void loop() {
-            // put your main code here, to run repeatedly:
+            // 主要なコードをこちらに記述し、繰り返し実行:
             digitalWrite(13,HIGH);
             delay(500);
             digitalWrite(13,LOW);
             delay(500);
         }
 
-#. Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\Users\{your_user}\Documents\Arduino`` by default, you can rename it or find a new path to save it.
+#. ``Ctrl+S`` を押すか、 **ファイル（File）** -> **保存（Save）** をクリックします。デフォルトでスケッチは ``C:\Users\{your_user}\Documents\Arduino`` に保存されます。名前を変更したり、新しいパスを指定して保存することもできます。
 
     .. image:: img/create2.png
 
-#. After successful saving, you will see that the name in the Arduino IDE has been updated.
+#. 保存が成功すると、Arduino IDEの名前が更新されることがわかります。
 
     .. image:: img/create3.png
 
-Please continue with the next section to learn how to upload this created sketch to your Arduino board.
+次のセクションで、この作成したスケッチをArduinoボードにアップロードする方法を学習してください。

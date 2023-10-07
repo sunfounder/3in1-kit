@@ -1,39 +1,34 @@
-Video Courses
+ビデオ講座
 ===================
 
 
-* For :ref:`basic_projects` Sections
+* :ref:`basic_projects` セクション用
 
-    If you find the content in the online documentation difficult to comprehend, you can enhance your learning experience by following a progressive video course. These videos will make Arduino more engaging and visually appealing for you.
-
+    オンラインドキュメントの内容が理解しにくいと感じた場合、進行形式のビデオ講座に従うことで学びの体験を向上させることができます。これらのビデオにより、Arduinoの学びがさらに魅力的で視覚的になります。
 
     .. image:: img/video_learn.png
         :width: 800
 
+    ビデオ講座へのアクセスはこちら: |link_video_scott|。
+
+    これらのビデオでは、Arduinoの概念や原則を楽しくインタラクティブに提示する魅力的な実験やプロジェクトを発見します。ビデオを視聴し、実践的な活動に参加することで、Arduinoとともに興奮と楽しさを感じる学びの経験を持つことができます。
 
 
-    You can access the video course at: |link_video_scott|.
+* :ref:`car_projects` セクション用
 
-    In these videos, you'll discover fascinating experiments and projects that present Arduino concepts and principles in a fun and interactive manner. By watching the videos and participating in hands-on activities, you'll have an exciting and enjoyable learning experience with Arduino.
-
-
-* For the :ref:`car_projects` Sections
-
-    I recommend watching the following YouTube playlists to gain more guidance and hands-on experience: |link_video_roboja|.
+    より多くのガイダンスや実践的な経験を得るために、次のYouTubeプレイリストを視聴することをおすすめします: |link_video_roboja|。
 
     .. image:: img/video_car.png
         :width: 800
 
-    In these video, you will learn the fundamentals of robotics and Arduino through captivating video lessons. Step-by-step, you'll assemble a robot car while understanding the workings of motors, obstacle avoidance modules, line tracking modules, and infrared receivers. Explore how the car achieves various functions and unleash your creativity in the world of robotics and technology.
+    これらのビデオで、魅力的なビデオレッスンを通じてロボティクスとArduinoの基礎を学びます。ステップバイステップで、モーターや障害物回避モジュール、ライントラッキングモジュール、赤外線受信機の仕組みを理解しながら、ロボットカーを組み立てます。車がさまざまな機能を実現する方法を探索し、ロボティクスとテクノロジーの世界でクリエイティブさを発揮してください。
 
 
+* WiFi機能について
 
+    オンラインチュートリアルの :ref:`iot_projects` セクションでは、IoTプラットフォームBlynkとの通信方法を学びます。
 
-* About the WiFi Function
+    |link_video_roboja_iot| では、Webサーバーの作成とセンサーデータのアップロードの方法を指導されます。このチュートリアルでは、WiFiを使用してArduinoプロジェクトとWebサーバーとの接続を確立する方法を学びます。
 
-    In the :ref:`iot_projects` section of our online tutorial, you will learn how to communicate with the IoT platform Blynk.
-
-    In |link_video_roboja_iot|, you will be guided on writing a web server and uploading sensor data to it. This tutorial will teach you how to establish a connection between your Arduino project and a web server using WiFi.
-    
     .. image:: img/video_iot.png
         :width: 800

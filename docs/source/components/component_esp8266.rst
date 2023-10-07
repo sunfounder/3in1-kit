@@ -1,81 +1,81 @@
 .. _cpn_esp8266:
 
-ESP8266 Module
-=================
+ESP8266 モジュール
+====================
 
 .. image:: img/esp8266.jpg
     :align: center
 
-The ESP8266 is a low-cost Wi-Fi microchip, 
-with built-in TCP/IP networking software, 
-and microcontroller capability, produced by Espressif Systems in Shanghai, China.
+ESP8266は、低価格のWi-Fiマイクロチップで、
+組み込みのTCP/IPネットワーキングソフトウェアと
+マイクロコントローラー機能を持ち、中国上海のEspressif Systemsによって製造されています。
 
-The chip first came to the attention of Western makers in August 2014 with the ESP-01 module, 
-made by a third-party manufacturer Ai-Thinker. 
-This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections using Hayes-style commands. 
-However, at first, there was almost no English-language documentation on the chip and the commands it accepted. 
-The very low price and the fact that there were very few external components on the module, 
-which suggested that it could eventually be very inexpensive in volume, 
-attracted many hackers to explore the module, 
-the chip, and the software on it, as well as to translate the Chinese documentation.
+このチップは、2014年8月にAi-Thinkerというサードパーティ製造業者が製造したESP-01モジュールとともに、西洋のメーカーの注目を集めました。
+この小型のモジュールは、マイクロコントローラーがWi-Fiネットワークに接続し、Hayes方式のコマンドを使用して簡単なTCP/IP接続を行うことを可能にします。
+しかし、最初はこのチップとその受け入れるコマンドに関する英語のドキュメントはほとんどありませんでした。
+非常に低い価格と、モジュール上の外部コンポーネントが非常に少ないこと、
+そして量産されれば非常に安価になる可能性を示唆するこれらの事実が、
+多くのハッカーを引きつけてモジュール、チップ、その上のソフトウェアを探索し、
+中国語のドキュメントを翻訳することになりました。
 
-Pins of ESP8266 and their functions:
+ESP8266のピンとその機能:
 
 .. image:: img/ESP8266_pinout.png
 
 
-.. list-table:: ESP8266-01 Pins
+.. list-table:: ESP8266-01 ピン
    :widths: 25 25 100
    :header-rows: 1
 
-   * - Pin	
-     - Name	
-     - Description
+   * - ピン	
+     - 名称	
+     - 説明
    * - 1	
      - TXD	
-     - UART_TXD, sending; General Purpose Input/Outpu: GPIO1; Pull-down is not allowed when startup.
+     - UART_TXD、送信; 汎用入出力: GPIO1; 起動時のプルダウンは許可されていません。
    * - 2	
      - GND
      - GND
    * - 3	
      - CU_PD	
-     - Working at high level; Power off when low level is supplied.
+     - 高レベルで動作; 低レベルが供給されると電源オフ。
    * - 4		
      - GPIO2
-     - It should be high level when power on, hardware pull-down is not allowed; Pull-up by default;
+     - 電源投入時は高レベルでなければならず、ハードウェア的なプルダウンは許可されていません; デフォルトでプルアップ。
    * - 5	
      - RST	
-     - External Reset signal, reset when low level is supplied; work when high level is supplied (high level by default);
+     - 外部リセット信号、低レベルが供給されるとリセット; 高レベル供給時に動作 (デフォルトは高レベル)。
    * - 6	
      - GPIO0	
-     - WiFi Status indicator; Operation mode selection: Pull-up: Flash Boot, operation mode; Pull-down: UART Download, download mode
+     - Wi-Fiステータスインジケータ; 動作モード選択: プルアップ: フラッシュブート, 動作モード; プルダウン: UARTダウンロード, ダウンロードモード。
    * - 7	
      - VCC	
-     - Power Supply(3.3V)
+     - 電源供給(3.3V)
    * - 8	
      - RXD	
-     - UART_RXD，Receiving; General Purpose Input/Output: GPIO3;
+     - UART_RXD、受信; 汎用入出力: GPIO3;
 
 
 * `ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_
-* `ESP8266 AT Instruction Set <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
+* `ESP8266 AT命令セット <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
 
-ESP8266 Adapter
----------------
+ESP8266 アダプタ
+-------------------
 
 .. image:: img/esp8266_adapter.png
     :width: 300
     :align: center
 
-The ESP8266 adapter is an expansion board that allows the ESP8266 module to be used on a breadboard.
+ESP8266アダプタは、ESP8266モジュールをブレッドボード上で使用できるようにする拡張ボードです。
 
-It perfectly matches the pins of the ESP8266 itself, and also adds a 5V pin to receive the voltage from the Arduino board. The integrated AMS1117 chip is used to drive the ESP8266 module after dropping the voltage to 3.3V.
+これはESP8266のピン配置と完璧に一致しており、Arduinoボードからの電圧を受け取るための5Vピンも追加されています。統合されたAMS1117チップは、電圧を3.3Vに落とした後でESP8266モジュールを駆動するために使用されます。
 
-The schematic diagram is as follows:
+回路図は以下の通りです:
 
 .. image:: img/sch_esp8266adapter.png
 
 
-**Example**
+**例**
 
-* :ref:`iot_projects` (IoT Project)
+* :ref:`iot_projects` (IoT プロジェクト)
+

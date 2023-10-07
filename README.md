@@ -19,31 +19,7 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 <a id="update"></a>
 ## Update:
 
-2023-09-20:
-- Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
-- Addressed various minor corrections.
-
-2023-09-20:
-- Fixed some issues.
-
-2023-09-19:
-- Modified the used libraries and some code.
-- Updated the project description and images related to the L9110 module.
-- Fixed some known issues.
-
-2023-09-11:
-- Add the links of components
-- Add a language translation file
-
-
-2023-09-07:
-- Added .yaml file
-- Modified Requirement.txt and conf.py files
-- Updated the tutorial for installing libraries on Arduino
-- Code modification and analysis for a project involving libraries.
- 
-
-2022-06-30:
+2023-10-07:
  - New Release
 
 <a id="trouble"></a>
