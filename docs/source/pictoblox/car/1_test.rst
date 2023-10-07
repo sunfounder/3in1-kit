@@ -3,7 +3,7 @@
 3.1 Test the Car
 ======================
 
-Hear, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
+Here, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
 
 But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
 

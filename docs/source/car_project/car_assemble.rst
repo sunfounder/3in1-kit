@@ -15,7 +15,7 @@ Please follow the steps below to complete the assembly of the car.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and M3 nuts to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
 
     .. image:: img/IMG_9153.JPG
 
@@ -43,7 +43,7 @@ Please follow the steps below to complete the assembly of the car.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with M3x10mm screws and M3 nuts.
+#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
 
     .. image:: img/IMG_9185.JPG
 

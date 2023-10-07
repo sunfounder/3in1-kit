@@ -1,4 +1,4 @@
-6.1 Light Controlled Flowing LEDs
+6.1 Light-sensitive Array
 =====================================
 
 A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits, and light- and darkness-activated switching circuits.
