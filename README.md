@@ -18,6 +18,10 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-07:
+- Modified several images.
+
+
 2023-09-22:
 - Modify the second line of how it works in ar_calibration.rst to add the code to set the LED to OUTPUT.
 - Replace all how it works in ar_reversing_aid.rst.

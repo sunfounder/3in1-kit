@@ -107,26 +107,26 @@
     .. code-block:: arduino
 
         void loop() {
-        // ボタンが押されるたびにdetectionStateを切り替えます
-        buttonState = digitalRead(buttonPin);
-        if (buttonState != lastButtonState) {
-            if (buttonState == HIGH) {
-            detectionState=(detectionState+1)%2;
-            Serial.print("検出状態は：");
-            Serial.println(detectionState);
-            } 
-            delay(50);
-        }
-        lastButtonState = buttonState;
+            // Toggle the detectionState each time the button is pressed
+            buttonState = digitalRead(buttonPin);
+            if (buttonState != lastButtonState) {
+                if (buttonState == HIGH) {
+                detectionState=(detectionState+1)%2;
+                Serial.print("The detection state is: ");
+                Serial.println(detectionState);
+                } 
+                delay(50);
+            }
+            lastButtonState = buttonState;
 
-        // detectionStateに従って、モーターを起動します
-        if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
-        }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
-        }
+            // According to the detectionState, start the motor
+            if(detectionState==1){
+                digitalWrite(B_1A,HIGH);
+                digitalWrite(B_1B,LOW);
+            }else{
+                digitalWrite(B_1A,LOW);
+                digitalWrite(B_1B,LOW);
+            }
         }
 
     全体のワークフローは以下の通りです。
@@ -150,10 +150,10 @@
     * ボタンが押されると、その値はHIGHになります。ここで、ボタンが押されると、変数 ``detectionState`` の値が変更されます。例えば、1つの操作後に0から1になります。
 
     .. code-block:: arduino
-
+        
         if (buttonState == HIGH) {
             detectionState=(detectionState+1)%2;
-            Serial.print("検出状態は：");
+            Serial.print("The detection state is: ");
             Serial.println(detectionState);
             }
 

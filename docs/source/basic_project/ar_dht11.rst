@@ -85,7 +85,7 @@
 
         #include "DHT.h"
 
-        #define DHTPIN 11  // DHT11データピンに接続されたピンを設定
+        #define DHTPIN 11   // Set the pin connected to the DHT11 data pin
         #define DHTTYPE DHT11 // DHT 11 
 
         DHT dht(DHTPIN, DHTTYPE);
@@ -96,7 +96,7 @@
 
         void setup() {
             Serial.begin(115200);
-            Serial.println("DHT11テスト!");
+            Serial.println("DHT11 test!");
             dht.begin();
         }
 
@@ -105,28 +105,29 @@
     .. code-block:: arduino
 
         void loop() {
-            // 測定の間に数秒待つ。
+            // Wait a few seconds between measurements.
             delay(2000);
 
-            // 温度または湿度の読み取りには約250ミリ秒かかります！
-            // センサーの読み取りは最大2秒「古い」かもしれません（非常に遅いセンサーです）
+            // Reading temperature or humidity takes about 250 milliseconds!
+            // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
             float humidity = dht.readHumidity();
-            // 摂氏として温度を読む（デフォルト）
+            // Read temperature as Celsius (the default)
             float temperture = dht.readTemperature();
 
-            // いずれかの読み取りが失敗したかどうかを確認し、早期に終了（再試行する）。
+            // Check if any reads failed and exit early (to try again).
             if (isnan(humidity) || isnan(temperture)) {
                 Serial.println("Failed to read from DHT sensor!");
                 return;
             }
-            // 湿度と温度を出力
-            Serial.print("Humidity: "); 
+            // Print the humidity and temperature
+            Serial.print("Humidity: ");
             Serial.print(humidity);
             Serial.print(" %\t");
-            Serial.print("Temperature: "); 
+            Serial.print("Temperature: ");
             Serial.print(temperture);
             Serial.println(" *C");
         }
+
 
     * ``dht.readHumidity()`` 関数は、DHTセンサから湿度の値を読むために呼び出されます。
     * ``dht.readTemperature()`` 関数は、DHTセンサから温度の値を読むために呼び出されます。

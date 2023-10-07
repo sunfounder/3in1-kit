@@ -131,19 +131,20 @@ DHT11とフォトレジスタを使用して、部屋の温度、湿度、およ
 
     bool readDHT() {
 
-        // 温度または湿度の読み取りには約250ミリ秒かかります！
-        // センサーの読み取りは、最大2秒「古い」ものである場合があります（それは非常に遅いセンサーです）
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
         humidity = dht.readHumidity();
-        // 温度を摂氏で読み取ります（デフォルト）
+        // Read temperature as Celsius (the default)
         temperature = dht.readTemperature();
 
-        // いずれかの読み取りが失敗した場合にチェックし、早期に終了します（再試行のため）。
+        // Check if any reads failed and exit early (to try again).
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("DHTセンサーからの読み取りに失敗しました！");
+            Serial.println("Failed to read from DHT sensor!");
             return false;
         }
         return true;
     }
+
 
 Blynkの ``Timer`` を使用して、毎秒、室内の温度、湿度、および光の強度が取得され、Blynk Cloudのデータストリームに送信されます。このデータはウィジェットによって表示されます。
 

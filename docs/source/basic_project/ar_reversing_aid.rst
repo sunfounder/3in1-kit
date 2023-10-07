@@ -114,10 +114,11 @@
 
         unsigned long currentMillis = millis();
         if (currentMillis - previousMillis >= intervals) {
-            Serial.println("ビーピング!");
+            Serial.println("Beeping!");
             beep();
             previousMillis = currentMillis;
         }
+
 
 #. LCDディスプレイを更新
 

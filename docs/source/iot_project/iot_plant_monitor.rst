@@ -145,15 +145,15 @@ Blynk Cloudのスイッチトグルをオンにすると、ポンプが動作し
 
     bool readDHT() {
 
-        // 温度や湿度を読むのに約250ミリ秒かかります！
-        // センサーの読み取りは最大で2秒遅れることもあります（非常に遅いセンサーです）
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
         humidity = dht.readHumidity();
-        // 温度をセルシウスで読み取る（デフォルト）
+        // Read temperature as Celsius (the default)
         temperature = dht.readTemperature();
 
-        // いずれかの読み取りが失敗した場合、早期に終了します（再試行するため）。
+        // Check if any reads failed and exit early (to try again).
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("DHTセンサーからの読み取りに失敗しました！");
+            Serial.println("Failed to read from DHT sensor!");
             return false;
         }
         return true;
