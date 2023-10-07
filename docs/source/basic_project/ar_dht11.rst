@@ -118,7 +118,7 @@
 
             // 読み取りが失敗したかどうかを確認して、早期に終了します（再試行するため）。
             if (isnan(humidity) || isnan(temperture)) {
-                Serial.println("DHTセンサーからの読み取りに失敗しました！");
+                Serial.println("Failed to read from DHT sensor!");
                 return;
             }
             // 湿度と温度を表示

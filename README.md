@@ -18,6 +18,12 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-07:
+- Delete the R4 purchase link in ar_turn_the_wheel.rst.
+- Modify the format of the third item of how it works in ar_state_change.rst
+- MotorPinA in ar_state_change.rst is changed to A_1A, and motorPinB is changed to A_1B.
+- Change the Japanese symbol after (" to English
+
 2023-09-26:
 - Japanese Translation
 - Remove the **Example** heading from component_capacitor.rst

@@ -102,8 +102,8 @@
         void setup() {
             pinMode(buttonPin, INPUT);
             Serial.begin(9600);
-            pinMode(motorPinA,OUTPUT);
-            pinMode(motorPinB,OUTPUT);
+            pinMode(A_1A,OUTPUT);
+            pinMode(A_1B,OUTPUT);
         }
 
 #. まず、ボタンの状態を読み取ります。ボタンが押された場合、変数 ``detectionState`` の値は0から1、または1から0に切り替わります。 ``detectionState`` が1の場合、モーターが回転します。ボタンが押されるたびに、モーターが交互に動作し、停止する効果があります。
@@ -112,25 +112,25 @@
 
         void loop() {
         // ボタンが押されるたびにdetectionStateを切り替える
-        buttonState = digitalRead(buttonPin);
-        if (buttonState != lastButtonState) {
-            if (buttonState == HIGH) {
-            detectionState=(detectionState+1)%2;
-            Serial.print("The detection state is: ");
-            Serial.println(detectionState);
-            } 
-            delay(50);
-        }
-        lastButtonState = buttonState;
-        
-        // detectionStateに従って、モーターを起動する
-        if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
-        }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
-        }
+            buttonState = digitalRead(buttonPin);
+            if (buttonState != lastButtonState) {
+                if (buttonState == HIGH) {
+                detectionState=(detectionState+1)%2;
+                Serial.print("The detection state is: ");
+                Serial.println(detectionState);
+                } 
+                delay(50);
+            }
+            lastButtonState = buttonState;
+            
+            // detectionStateに従って、モーターを起動する
+            if(detectionState==1){
+                digitalWrite(A_1A,HIGH);
+                digitalWrite(A_1B,LOW);
+            }else{
+                digitalWrite(A_1A,LOW);
+                digitalWrite(A_1B,LOW);
+            }
         }
 
     すべてのワークフローは以下の通りです。
@@ -167,10 +167,10 @@
     .. code-block:: arduino
 
         if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,HIGH);
+            digitalWrite(A_1B,LOW);
         }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
+            digitalWrite(A_1A,LOW);
+            digitalWrite(A_1B,LOW);
         }
 

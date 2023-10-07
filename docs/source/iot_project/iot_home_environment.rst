@@ -136,7 +136,7 @@ DHT11とフォトレジスタを使用することで、部屋の温度、湿度
 
         // いずれかの読み取りに失敗した場合は確認し、早期に終了します（再試行のため）。
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("DHTセンサーからの読み取りに失敗しました！");
+            Serial.println("Failed to read from DHT sensor!");
             return false;
         }
         return true;
