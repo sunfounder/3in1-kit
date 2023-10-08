@@ -144,15 +144,15 @@ Diese drei Funktionen werden verwendet, um die aktuelle Umgebungstemperatur, Luf
 
     bool readDHT() {
 
-        // Das Lesen von Temperatur oder Luftfeuchtigkeit dauert etwa 250 Millisekunden!
-        // Sensorsignale können auch bis zu 2 Sekunden "alt" sein (es ist ein sehr langsamer Sensor)
+        // Reading temperature or humidity takes about 250 milliseconds!
+        // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
         humidity = dht.readHumidity();
-        // Temperatur als Celsius lesen (Standard)
+        // Read temperature as Celsius (the default)
         temperature = dht.readTemperature();
 
-        // Überprüfen, ob irgendwelche Messungen fehlgeschlagen sind und frühzeitig beenden (um es erneut zu versuchen).
+        // Check if any reads failed and exit early (to try again).
         if (isnan(humidity) || isnan(temperature)) {
-            Serial.println("Lesen vom DHT-Sensor fehlgeschlagen!");
+            Serial.println("Failed to read from DHT sensor!");
             return false;
         }
         return true;

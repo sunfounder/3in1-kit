@@ -107,25 +107,25 @@ Nachdem der Code erfolgreich hochgeladen wurde, werden Sie sehen, dass der Serie
     .. code-block:: arduino
 
         void loop() {
-            // Warten Sie einige Sekunden zwischen den Messungen.
+            // Wait a few seconds between measurements.
             delay(2000);
 
-            // Das Lesen von Temperatur oder Luftfeuchtigkeit dauert etwa 250 Millisekunden!
-            // Sensormessungen können auch bis zu 2 Sekunden "alt" sein (es ist ein sehr langsamer Sensor)
+            // Reading temperature or humidity takes about 250 milliseconds!
+            // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
             float humidity = dht.readHumidity();
-            // Temperatur in Celsius lesen (Standard)
+            // Read temperature as Celsius (the default)
             float temperture = dht.readTemperature();
 
-            // Überprüfen Sie, ob Messungen fehlgeschlagen sind, und brechen Sie frühzeitig ab (um es erneut zu versuchen).
+            // Check if any reads failed and exit early (to try again).
             if (isnan(humidity) || isnan(temperture)) {
-                Serial.println("Lesen vom DHT-Sensor fehlgeschlagen!");
+                Serial.println("Failed to read from DHT sensor!");
                 return;
             }
-            // Luftfeuchtigkeit und Temperatur ausgeben
-            Serial.print("Humidity: "); 
+            // Print the humidity and temperature
+            Serial.print("Humidity: ");
             Serial.print(humidity);
             Serial.print(" %\t");
-            Serial.print("Temperature: "); 
+            Serial.print("Temperature: ");
             Serial.print(temperture);
             Serial.println(" *C");
         }

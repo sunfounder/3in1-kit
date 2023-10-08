@@ -65,10 +65,15 @@ Skizze B:
 
     void loop() {
         // Geben Sie hier Ihren Hauptcode ein, der wiederholt ausgeführt wird:
-        digitalWrite(13,HIGH);  
-        delay(500);
-        digitalWrite(13,LOW);
-        delay(500);
+        digitalWrite(13,
+    HIGH);  delay
+        (500
+        );
+        digitalWrite(13,
+        
+        LOW);
+                delay(500)
+        ;
     }
 
 Das Ergebnis ist, dass **Skizze A** einen Fehler meldet und **Skizze B** läuft.

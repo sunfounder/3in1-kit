@@ -3,7 +3,7 @@
 Knopf
 ==========
 
-.. image:: img/button.png
+.. image:: img/button_1212.png
     :width: 400
     :align: center
 
@@ -17,7 +17,7 @@ Das Folgende zeigt den inneren Aufbau eines Knopfes. Das Symbol auf der rechten 
 
 Da Pin 1 mit Pin 2 und Pin 3 mit Pin 4 verbunden ist, werden beim Drücken des Knopfes die 4 Pins verbunden, wodurch der Schaltkreis geschlossen wird.
 
-.. image:: img/button2.png
+.. image:: img/button_1212_size.png
     :width: 600
     :align: center
 

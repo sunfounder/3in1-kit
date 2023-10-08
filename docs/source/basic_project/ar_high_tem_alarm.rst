@@ -132,9 +132,9 @@ Nachdem der Code erfolgreich hochgeladen wurde, zeigt das LCD1602 die vom Thermi
 
             lcd.clear();
             lcd.setCursor(0, 0);
-            lcd.print("Einstellen...");
+            lcd.print("Adjusting...");
             lcd.setCursor(0, 1);
-            lcd.print("Obergrenze Temp: ");
+            lcd.print("Upper Tem: ");
 
             while (1) {
                 lcd.setCursor(11, 1);

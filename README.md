@@ -18,34 +18,13 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+
+2023-10-8:
+- Corrected an erroneous wiring diagram
+- fixed some errors
+
 2023-09-22:
-- German translation
-- Modify the format of the first line of how it works in ar_calibration.rst. The second line needs to add more code to set the LED to OUTPUT.
-- Change **Fritzing Circuit** to wiring
-- Change **Schematic Diagram** to **Schematic**
-- Replace all how it works in ar_reversing_aid.rst.
-
-2023-09-19:
-- Replace part of the project code link
-- button introduction picture replacement
-- ar_serial_monitor file, println() link replacement
-- iot_current_limiting_gate file, remove the link to the component introduction under the circuit diagram
-- 7_avoid2 file, change the serial number at the bottom.
-
-2023-09-11:
-- Add the links of components
-- Add a language translation file
-
-
-2023-09-07:
-- Added .yaml file
-- Modified Requirement.txt and conf.py files
-- Updated the tutorial for installing libraries on Arduino
-- Code modification and analysis for a project involving libraries.
- 
-
-2022-06-30:
- - New Release
+- The first release of the German version.
 
 <a id="trouble"></a>
 ## Trouble Shootings:

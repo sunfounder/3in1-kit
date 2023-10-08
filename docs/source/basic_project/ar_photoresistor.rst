@@ -55,10 +55,6 @@ Der 10K Widerstand spielt hierbei eine schützende Rolle, sodass 5V und GND nich
 Platziert man den Fotowiderstand in einer dunklen Umgebung, wird der Wert von Pin A0 sinken.
 In einer ausreichend dunklen Umgebung wird der Widerstand des Fotowiderstands unendlich groß und seine Spannung nahe 5V liegen (der 10K Widerstand ist vernachlässigbar), der Wert von Pin A0 wird nahe 0 liegen.
 
-Die Berechnungsformel lautet wie folgt:
-
-    (Vp/5V) x 1023 = Ap
-
 **Verkabelung**
 
 .. image:: img/feel_the_light_bb.jpg

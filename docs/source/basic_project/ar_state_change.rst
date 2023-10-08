@@ -108,27 +108,28 @@ Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie den Knopf und der M
     .. code-block:: arduino
 
         void loop() {
-        // Wechsle den detectionState bei jedem Knopfdruck
-        buttonState = digitalRead(buttonPin);
-        if (buttonState != lastButtonState) {
-            if (buttonState == HIGH) {
-            detectionState=(detectionState+1)%2;
-            Serial.print("Der Erkennungszustand ist: ");
-            Serial.println(detectionState);
-            } 
-            delay(50);
+            // Toggle the detectionState each time the button is pressed
+            buttonState = digitalRead(buttonPin);
+            if (buttonState != lastButtonState) {
+                if (buttonState == HIGH) {
+                detectionState=(detectionState+1)%2;
+                Serial.print("The detection state is: ");
+                Serial.println(detectionState);
+                } 
+                delay(50);
+            }
+            lastButtonState = buttonState;
+
+            // According to the detectionState, start the motor
+            if(detectionState==1){
+                digitalWrite(B_1A,HIGH);
+                digitalWrite(B_1B,LOW);
+            }else{
+                digitalWrite(B_1A,LOW);
+                digitalWrite(B_1B,LOW);
+            }
         }
-        lastButtonState = buttonState;
-        
-        // Starte den Motor entsprechend dem detectionState
-        if(detectionState==1){
-            digitalWrite(motorPinA,HIGH);
-            digitalWrite(motorPinB,LOW);
-        }else{
-            digitalWrite(motorPinA,LOW);
-            digitalWrite(motorPinB,LOW);
-        }
-        }
+
 
     Der gesamte Arbeitsablauf ist wie folgt.
 
@@ -154,9 +155,9 @@ Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie den Knopf und der M
 
         if (buttonState == HIGH) {
             detectionState=(detectionState+1)%2;
-            Serial.print("Der Erkennungszustand ist: ");
+            Serial.print("The detection state is: ");
             Serial.println(detectionState);
-            }
+        }
 
     * Wenn die Variable ``detectionState`` 1 ist, lässt den Motor drehen, ansonsten stoppen.
 

@@ -126,7 +126,7 @@ Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR
             ...
             //IR-Fernbedienung
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Starten Sie den IR-Empfänger
-            Serial.println("FERNBEDIENUNG STARTET");
+            Serial.println("REMOTE CONTROL START");
 
             //LED
             pinMode(ledPin, OUTPUT);

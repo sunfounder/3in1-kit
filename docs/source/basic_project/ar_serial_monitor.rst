@@ -28,7 +28,7 @@ In diesem Projekt werden wir also lernen, wie man Daten vom Arduino-Board empfä
         void loop() {
             int number = 100;
             Serial.println(number);
-            Serial.println("Hallo Welt");
+            Serial.println("Hello world");
             delay(100);         // Verzögerung zwischen den Abfragen für Stabilität
         }
 

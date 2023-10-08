@@ -113,7 +113,7 @@ Die Funktion ``loop()`` enthält die Hauptlogik des Programms und läuft kontinu
 
         unsigned long currentMillis = millis();
         if (currentMillis - previousMillis >= intervals) {
-            Serial.println("Piepen!");
+            Serial.println("Beeping!");
             beep();
             previousMillis = currentMillis;
         }

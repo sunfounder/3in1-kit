@@ -133,11 +133,11 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
             }
             if (flag == 0) {
                 int currentTime = millis();
-                Serial.print("Richtig! Ihre Reaktionszeit beträgt: ");
+                Serial.print("Correct! Your reaction time is: ");
                 Serial.print(currentTime - timer);
                 Serial.println(" ms");
             } else if (flag == 1) {
-                Serial.println("Falscher Klick!");
+                Serial.println("Wrong Click!");
             }
             flag = -1;
         }
@@ -154,11 +154,11 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
             }
             if (flag == 1) {
                 int currentTime = millis();
-                Serial.print("Richtig! Ihre Reaktionszeit beträgt: ");
+                Serial.print("Correct! Your reaction time is: ");
                 Serial.print(currentTime - timer);
                 Serial.println(" ms");
             } else if (flag == 0) {
-                Serial.println("Falscher Klick!");
+                Serial.println("Wrong Click!");
             }
             flag = -1;
         }
