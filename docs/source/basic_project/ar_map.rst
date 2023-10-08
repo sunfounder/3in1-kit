@@ -1,42 +1,42 @@
 .. _ar_map:
 
-5.6 Map
+5.6 Karte (Map)
 ===================
 
-If you observe carefully, you will notice that many values have different ranges in programming.
-For example, the range of values for analog inputs is (0~1023).
-The value range for the analog output is (0~255).
-The output angle of the servo is (0~180).
+Wenn Sie genau hinsehen, werden Sie feststellen, dass viele Werte in der Programmierung unterschiedliche Bereiche haben.
+Zum Beispiel liegt der Wertebereich für analoge Eingänge bei (0~1023).
+Der Wertebereich für den analogen Ausgang liegt bei (0~255).
+Der Ausgabewinkel des Servos liegt bei (0~180).
 
-This means that if we want to use the potentiometer to control the brightness of the LED or the angle of the servo, we need to go through a mapping operation.
+Das bedeutet, wenn wir das Potentiometer verwenden möchten, um die Helligkeit der LED oder den Winkel des Servos zu steuern, müssen wir eine Zuordnungsoperation durchführen.
 
-Now let's see how to achieve it.
+Lassen Sie uns nun sehen, wie das erreicht werden kann.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENEINFÜHRUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,11 +49,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_8.3_amp.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/map_bb.jpg
     :width: 800
@@ -63,33 +63,33 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\basic_project\5.6.map``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.6.map.ino`` im Pfad ``3in1-kit\basic_project\5.6.map``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f00e4c4c-fb13-4445-9d89-eb2857b5fe87/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After the code is uploaded successfully, you can rotate the potentiometer back and forth, and the output shaft of the servo will rotate back and forth.
 
-**How it works?**
+Nachdem der Code erfolgreich hochgeladen wurde, können Sie das Potentiometer hin und her drehen, und die Ausgangswelle des Servos wird hin und her drehen.
 
-``map(value, fromLow, fromHigh, toLow, toHigh)``: Map a number from one range to another.
-That is, a fromLow value is mapped to toLow, and a fromHigh value is mapped to toHigh.
+**Wie funktioniert das?**
+
+``map(value, fromLow, fromHigh, toLow, toHigh)``: Ordne eine Zahl von einem Bereich einem anderen zu.
+Das heißt, ein fromLow-Wert wird zu toLow zugeordnet und ein fromHigh-Wert zu toHigh.
 
     **Syntax**
         map(value, fromLow, fromHigh, toLow, toHigh)
 
-    **Parameters**
-        * ``value``: the number to map.
-        * ``fromLow``: the lower bound of the value's current range.
-        * ``fromHigh``: the upper bound of the value's curr+ent range.
-        * ``toLow``: the lower bound of the value's target range.
-        * ``toHigh``: the upper bound of the value's target range.
+    **Parameter**
+        * ``value``: die zuzuordnende Zahl.
+        * ``fromLow``: die untere Grenze des aktuellen Wertebereichs.
+        * ``fromHigh``: die obere Grenze des aktuellen Wertebereichs.
+        * ``toLow``: die untere Grenze des Zielwertebereichs.
+        * ``toHigh``: die obere Grenze des Zielwertebereichs.
 
-If the potentiometer controls the LED, you can also use the map to complete the task.
+Wenn das Potentiometer die LED steuert, können Sie auch die Zuordnung verwenden, um die Aufgabe zu erfüllen.
 
 .. code-block:: arduino
 
@@ -97,19 +97,18 @@ If the potentiometer controls the LED, you can also use the map to complete the 
     int y = map(x,0,1023,0,255);
     analogWrite(led,y);
 
+**Anmerkungen und Warnungen**
 
-**Notes and Warnings**
-
-* The "lower bound" of both ranges may be larger or smaller than the "upper bound", which means that the ``map()`` function can be used to reverse a range of numbers.
+* Die "untere Grenze" beider Bereiche kann größer oder kleiner als die "obere Grenze" sein, was bedeutet, dass die ``map()`` Funktion verwendet werden kann, um einen Zahlenbereich umzukehren.
 
   .. code-block:: arduino
 
     y = map(x,0,180,180,0);
 
-* Mapping also works well for negative numbers.
+* Die Zuordnung funktioniert auch gut für negative Zahlen.
 
   .. code-block:: arduino
 
     y = map(x,0,1023,-90,90);
 
-* The mapping uses integers, and the decimal places of floats are discarded.
+* Die Zuordnung verwendet Ganzzahlen und die Dezimalstellen von Fließkommazahlen werden verworfen.

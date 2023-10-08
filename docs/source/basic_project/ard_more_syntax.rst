@@ -1,8 +1,8 @@
-5. More Syntax
+5. Weitere Syntax
 ========================
 
-In this chapter, you will find some examples that illustrate the basic logic of how most programs interact with reality. This will help you become familiar with Arduino programming.
-When you have a creative idea in mind, programming will no longer be challenging for you.
+In diesem Kapitel finden Sie einige Beispiele, die die grundlegende Logik veranschaulichen, wie die meisten Programme mit der Realität interagieren. Dies wird Ihnen helfen, sich mit der Arduino-Programmierung vertraut zu machen.
+Wenn Sie eine kreative Idee im Kopf haben, wird die Programmierung für Sie kein Hindernis mehr sein.
 
 
 .. toctree::

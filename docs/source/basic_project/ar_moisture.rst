@@ -1,41 +1,41 @@
 .. _ar_moisture:
 
-4.4 Measure Soil Moisture
-==========================
+4.4 Bodenfeuchtigkeit messen
+====================================
 
-In the planting industry, the crops themselves cannot directly obtain the inorganic elements in the soil,
-Water in the soil acts as a solvent for dissolving these inorganic elements.
+In der Pflanzenzucht können die Pflanzen die anorganischen Elemente im Boden nicht direkt aufnehmen.
+Das Wasser im Boden dient als Lösungsmittel, um diese anorganischen Elemente zu lösen.
 
-Crops absorb soil moisture through the root system, obtain nutrients, and promote growth.
+Die Pflanzen nehmen die Bodenfeuchtigkeit über das Wurzelsystem auf, erhalten Nährstoffe und fördern das Wachstum.
 
-In the process of crop growth and development, the requirements for soil temperature are also different.
-Therefore, a soil moisture sensor is required.
+Im Prozess des Pflanzenwachstums und der Entwicklung unterscheiden sich auch die Anforderungen an die Bodentemperatur.
+Daher wird ein Bodenfeuchtigkeitssensor benötigt.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,11 +44,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_5.4_soil.png
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/measure_the_moisture_bb.jpg
     :width: 800
@@ -58,15 +58,15 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``4.4.measure_soil_moisture.ino`` file under the path of ``3in1-kit\basic_project\4.4.measure_soil_moisture``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``4.4.measure_soil_moisture.ino`` im Pfad ``3in1-kit\basic_project\4.4.measure_soil_moisture``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b6f7e756-0f14-4117-9bb2-ee5083b6445f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+Nach erfolgreichem Hochladen des Codes wird der serielle Monitor den Wert der Bodenfeuchtigkeit ausgeben.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+Wenn Sie das Modul in den Boden stecken und ihn bewässern, wird der Wert des Bodenfeuchtigkeitssensors kleiner.

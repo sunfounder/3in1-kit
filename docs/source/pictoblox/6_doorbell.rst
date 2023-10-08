@@ -1,50 +1,49 @@
 .. _sh_doorbell:
 
-2.6 Doorbell
+2.6 Türklingel
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+Hier werden wir den Knopf und die Klingel auf der Bühne verwenden, um eine Türklingel zu erstellen.
 
-
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+Nachdem Sie auf die grüne Flagge geklickt haben, können Sie den Knopf drücken und die Klingel auf der Bühne wird einen Ton von sich geben.
 
 .. image:: img/7_doorbell.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+------------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- Wie der Knopf funktioniert
+- Digitalen Pin und Bereiche lesen
+- Eine bedingte Schleife erstellen
+- Einen Hintergrund hinzufügen
+- Ton abspielen
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,50 +58,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_capacitor`
         - |link_capacitor_buy|
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Der Knopf ist ein 4-Pin-Gerät, da der Pin 1 mit Pin 2 und Pin 3 mit Pin 4 verbunden ist. Wenn der Knopf gedrückt wird, werden die 4 Pins verbunden und der Schaltkreis geschlossen.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Bauen Sie den Schaltkreis entsprechend dem folgenden Diagramm auf.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Verbinden Sie einen der Pins auf der linken Seite des Knopfes mit Pin 12, der mit einem Pull-down-Widerstand und einem 0,1uF (104) Kondensator verbunden ist (um Schwankungen zu eliminieren und ein stabiles Signal auszugeben, wenn der Knopf in Betrieb ist).
+* Verbinden Sie das andere Ende des Widerstands und des Kondensators mit GND und einen der Pins auf der rechten Seite des Knopfes mit 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Add a Backdrop**
+**1. Einen Hintergrund hinzufügen**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+Klicken Sie auf den **Choose a Backdrop**-Button in der unteren rechten Ecke.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+Wählen Sie **Bedroom 1** aus.
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. Das Sprite auswählen**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Löschen Sie das Standard-Sprite, klicken Sie auf den **Choose a Sprite**-Button in der unteren rechten Ecke des Sprite-Bereichs, geben Sie **bell** in das Suchfeld ein und fügen Sie es dann hinzu.
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+Wählen Sie dann das **bell**-Sprite auf der Bühne und verschieben Sie es an die richtige Position.
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. Drücken Sie den Knopf und die Glocke gibt einen Ton von sich**
 
+Verwenden Sie [wenn dann], um eine bedingte Anweisung zu erstellen, dass wenn der Wert des gelesenen Pin12 gleich 1 ist (der Schlüssel gedrückt wird), der Ton **xylo1** abgespielt wird.
 
-Use [if then] to make a conditional statement that when the value of the pin12 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **Arduino Uno** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: from the Sound palette, used to play specific sounds.
+* [read status of digital pin]: Dieser Block stammt aus der **Arduino Uno**-Palette und wird verwendet, um den Wert eines digitalen Pins zu lesen, das Ergebnis ist 0 oder 1.
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: Dieser Block ist ein Steuerblock und stammt aus der **Steuerung**-Palette. Wenn seine boolsche Bedingung wahr ist, werden die darin enthaltenen Blöcke ausgeführt und dann wird das beteiligte Skript fortgesetzt. Wenn die Bedingung falsch ist, werden die Skripte im Block ignoriert. Die Bedingung wird nur einmal überprüft; wenn die Bedingung während der Ausführung des Skripts im Block falsch wird, wird sie weiterhin ausgeführt, bis sie abgeschlossen ist.
+* [play sound until done]: aus der Sound-Palette, verwendet um bestimmte Töne abzuspielen.
 
 .. image:: img/7_bell.png

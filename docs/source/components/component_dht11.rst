@@ -1,34 +1,32 @@
 .. _cpn_dht11:
 
-DHT11 Humiture Sensor
-=============================
+DHT11 Feuchtigkeits- und Temperatursensor
+============================================
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
-The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+Der digitale Temperatur- und Feuchtigkeitssensor DHT11 ist ein kombinierter Sensor, der einen kalibrierten digitalen Ausgang für Temperatur und Feuchtigkeit bietet. 
+Die Technologie einer speziellen digitalen Modulsammlung sowie die Technologie zur Temperatur- und Feuchtigkeitserfassung werden verwendet, um sicherzustellen, dass das Produkt eine hohe Zuverlässigkeit und hervorragende Langzeitstabilität aufweist.
 
-The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller. 
+Der Sensor beinhaltet einen resistiven Feuchtigkeitssensor und ein NTC-Temperaturmessgerät und ist mit einem leistungsstarken 8-Bit-Mikrocontroller verbunden. 
 
-
-Only three pins are available for use: VCC, GND, and DATA. 
-The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
-Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+Es stehen nur drei Pins zur Verfügung: VCC, GND und DATA. 
+Der Kommunikationsprozess beginnt damit, dass die DATA-Leitung Startsignale an den DHT11 sendet. Der DHT11 empfängt diese Signale und sendet ein Antwortsignal zurück. 
+Anschließend empfängt der Host das Antwortsignal und beginnt mit dem Empfang von 40-Bit Feuchtigkeitsdaten (8-Bit Feuchtigkeitswert ganzzahlig + 8-Bit Feuchtigkeitswert dezimal + 8-Bit Temperaturwert ganzzahlig + 8-Bit Temperaturwert dezimal + 8-Bit Prüfsumme).
 
 .. image:: img/dht11.png
 
-**Features**
+**Merkmale**
 
-    #. Humidity measurement range: 20 - 90%RH
-    #. Temperature measurement range: 0 - 60℃
-    #. Output digital signals indicating temperature and humidity
-    #. Working voltage:DC 5V; PCB size: 2.0 x 2.0 cm
-    #. Humidity measurement accuracy: ±5%RH
-    #. Temperature measurement accuracy: ±2℃
+    #. Messbereich für Feuchtigkeit: 20 - 90%RH
+    #. Temperaturmessbereich: 0 - 60℃
+    #. Ausgabe digitaler Signale für Temperatur und Feuchtigkeit
+    #. Betriebsspannung: DC 5V; PCB-Größe: 2,0 x 2,0 cm
+    #. Messgenauigkeit für Feuchtigkeit: ±5%RH
+    #. Messgenauigkeit für Temperatur: ±2℃
 
+* `DHT11 Datenblatt <http://wiki.sunfounder.cc/images/c/c7/DHT11_datasheet.pdf>`_
 
-* `DHT11 Datasheet <http://wiki.sunfounder.cc/images/c/c7/DHT11_datasheet.pdf>`_
+**Beispiel**
 
-**Example**
-
-* :ref:`ar_dht11` (Basic Project)
-* :ref:`iot_home` (IoT Project)
-* :ref:`iot_plant` (IoT Project)
+* :ref:`ar_dht11` (Grundlegendes Projekt)
+* :ref:`iot_home` (IoT-Projekt)
+* :ref:`iot_plant` (IoT-Projekt)

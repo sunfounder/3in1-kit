@@ -1,13 +1,13 @@
 .. _sh_move:
 
-3.2 Movement
+3.2 Bewegung
 ==================
 
-This project is based on :ref:`sh_test` to make the car move in all directions.
+Dieses Projekt basiert auf :ref:`sh_test`, um das Auto in alle Richtungen bewegen zu lassen.
 
-Before we start programming, let's review the working principle of L9110 module.
+Bevor wir mit der Programmierung beginnen, lassen Sie uns das Arbeitsprinzip des L9110-Moduls überprüfen.
 
-Here is the truth table of Motor B:
+Hier ist die Wahrheitstabelle für den Motor B:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -15,21 +15,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B
-      - The state of Motor B
+      - Zustand des Motor B
     * - 1
       - 0
-      - Rotate clockwise
+      - Dreht im Uhrzeigersinn
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Dreht gegen den Uhrzeigersinn
     * - 0
       - 0
-      - Brake
+      - Bremse
     * - 1
       - 1
-      - Stop
+      - Stopp
 
-Here is the truth table of Motor A:
+Hier ist die Wahrheitstabelle für den Motor A:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -37,60 +37,57 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - Zustand des Motor A
     * - 1
       - 0
-      - Rotate clockwise
+      - Dreht im Uhrzeigersinn
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Dreht gegen den Uhrzeigersinn
     * - 0
       - 0
-      - Brake
+      - Bremse
     * - 1
       - 1
-      - Stop
+      - Stopp
 
-
-
-Programming
+Programmierung
 -------------------
 
-Now create blocks to make the car, forward, backward, left and right rotation and stop respectively.
+Nun erstellen Sie Blöcke, um das Auto vorwärts, rückwärts, links und rechts zu bewegen und es jeweils anzuhalten.
 
+**1. Vorwärts bewegen**
 
-**1. Move Forward**
-
-The right motor turns clockwise and the left motor turns counterclockwise to move the car forward.
+Der rechte Motor dreht im Uhrzeigersinn und der linke Motor gegen den Uhrzeigersinn, um das Auto vorwärts zu bewegen.
 
 .. image:: img/2_forward.png
 
-**2. Move Backward**
+**2. Rückwärts bewegen**
 
-Backward is just the opposite, the right motor needs to turn counterclockwise, the left motor clockwise.
+Rückwärts ist genau das Gegenteil, der rechte Motor muss gegen den Uhrzeigersinn drehen, der linke Motor im Uhrzeigersinn.
 
 .. image:: img/2_backward.png
 
-**3. Turn Left**
+**3. Links drehen**
 
-The left and right motors turn clockwise at the same time to make the car turn left.
+Die linken und rechten Motoren drehen gleichzeitig im Uhrzeigersinn, um das Auto nach links zu drehen.
 
 .. image:: img/2_turn_left.png
 
-**4. Turn Right**
+**4. Rechts drehen**
 
-Similarly, turn the left and right motors counterclockwise to turn the car to the right.
+Drehen Sie die linken und rechten Motoren in entgegengesetzter Richtung, um das Auto nach rechts zu drehen.
 
 .. image:: img/2_turn_right.png
 
-**5. Stop**
+**5. Stopp**
 
-Stop the car by setting all motors to 0.
+Stoppen Sie das Auto, indem Sie alle Motoren auf 0 setzen.
 
 .. image:: img/2_stop.png
 
-**6. Make the car move**
+**6. Das Auto bewegen**
 
-Make the car move forward, backward, left and right for 1 second, then stop. Since all blocks are placed in the [Forever] block, you will see that the car repeats the above actions.
+Lassen Sie das Auto vorwärts, rückwärts, links und rechts für 1 Sekunde bewegen, dann stoppen. Da alle Blöcke im [Forever]-Block platziert sind, werden Sie sehen, dass das Auto die obigen Aktionen wiederholt.
 
 .. image:: img/2_move.png

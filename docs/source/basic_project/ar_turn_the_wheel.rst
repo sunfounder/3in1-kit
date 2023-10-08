@@ -1,37 +1,37 @@
 .. _ar_motor:
 
-1.3 Motor
+1.3 Das Rad drehen
 ============================
 
-A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, and the large current may damage the main control board such as R3 board.
-Therefore, an L9110 module is used in this occasion, which is a good helper for the R3 board to control the motor safely.
+Ein Motor ist ein typisches digitales Ausgabegerät und wird genauso verwendet wie eine LED.
+Allerdings benötigt der Motor einen großen Strom, und der hohe Strom kann das Hauptsteuerungsboard wie z.B. das R3-Board beschädigen.
+Deshalb wird in diesem Fall ein L298N-Modul verwendet, welches ein guter Helfer für das R3-Board ist, um den Motor sicher zu steuern.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,27 +42,28 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
 
-**Wiring**
+**Verdrahtung**
 
 
 .. image:: img/1.3_motor_l9110_bb.png
     :width: 800
     :align: center
 
+
 **Code**
 
 .. note::
 
-   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\basic_project\1.3.turn_the_wheel``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``1.3.turn_the_wheel.ino`` unter dem Pfad ``3in1-kit\basic_project\1.3.turn_the_wheel`` öffnen. 
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     

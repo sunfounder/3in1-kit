@@ -1,48 +1,48 @@
 .. _sh_moving_mouse:
 
-2.5 Moving Mouse
+2.5 Bewegende Maus
 ===================
 
-Today we are going to make a mouse toy controlled by a potentiometer.
+Heute werden wir ein Mäusespielzeug erstellen, das mit einem Potentiometer gesteuert wird.
 
-When the green flag is clicked, the mouse on the stage moves forward, and when you rotate the potentiometer, the mouse will change the direction of movement.
+Wenn man auf die grüne Flagge klickt, bewegt sich die Maus auf der Bühne vorwärts. Dreht man am Potentiometer, ändert die Maus die Bewegungsrichtung.
 
 .. image:: img/6_mouse.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+------------------------
 
-- Potentiometer principle
-- Read analog pin and ranges
-- Mapping one range to another
-- Moving and changing the direction of sprite
+- Prinzip des Potentiometers
+- Analogen Pin und dessen Bereich lesen
+- Einen Bereich auf einen anderen abbilden
+- Bewegen und Ändern der Richtung des Sprites
 
-Required Components
----------------------
+Benötigte Komponenten
+------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -53,61 +53,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
-The potentiometer is a resistive element with 3 terminals, the 2 side pins are connected to 5V and GND, and the middle pin is connected to A0. After conversion by the ADC converter of the Arduino board, the value range is 0-1023.
+Das Potentiometer ist ein resistives Element mit 3 Anschlüssen. Die 2 seitlichen Pins werden an 5V und GND angeschlossen, und der mittlere Pin wird an A0 angeschlossen. Nach der Umwandlung durch den ADC-Konverter des Arduino-Boards liegt der Wertebereich zwischen 0-1023.
 
 .. image:: img/circuit/potentiometer_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Choose a sprite**
+**1. Wählen Sie einen Sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **mouse** in the search box, and then click to add it.
+Löschen Sie den Standard-Sprite, klicken Sie unten rechts im Sprite-Bereich auf die Schaltfläche **Choose a Sprite**, geben Sie **mouse** in das Suchfeld ein und klicken Sie dann, um ihn hinzuzufügen.
 
 .. image:: img/6_sprite.png
 
-**2. Creating a variable**.
+**2. Eine Variable erstellen**
 
-Create a variable called **value** to store the value of the potentiometer read.
+Erstellen Sie eine Variable namens **value**, um den gelesenen Wert des Potentiometers zu speichern.
 
-Once created, you will see **value** appear inside the **Variables** palette and in the checked state, which means this variable will appear on the stage.
+Nach dem Erstellen sehen Sie **value** im **Variables**-Bereich und im markierten Zustand, was bedeutet, dass diese Variable auf der Bühne angezeigt wird.
 
 .. image:: img/6_value.png
 
-**3. Read the value of A0**
+**3. Den Wert von A0 lesen**
 
-Store the value of A0 read into the variable **value**.
+Speichern Sie den gelesenen Wert von A0 in der Variable **value**.
 
-* [set my variable to 0]: Set the value of the variable.
-* [read analog pin A0]: Read the value of A0~A5 in the range of 0-1023.
+* [set my variable to 0]: Den Wert der Variable festlegen.
+* [read analog pin A0]: Den Wert von A0~A5 im Bereich von 0-1023 lesen.
 
 .. image:: img/6_read_a0.png
 
-To be able to read all the way through, you need to use the [forever] block. Click on this script to run it, rotate the potentiometer in both directions, and you will see that the value range is 0-1023.
+Um durchgehend lesen zu können, müssen Sie den [forever]-Block verwenden. Klicken Sie auf dieses Skript, um es auszuführen, drehen Sie das Potentiometer in beide Richtungen, und Sie werden sehen, dass der Wertebereich 0-1023 beträgt.
 
 .. image:: img/6_1023.png
 
-**4. Move the sprite**
+**4. Den Sprite bewegen**
 
-Use the [move steps] block to move the sprite, run the script and you will see the sprite move from the middle to the right.
+Verwenden Sie den [move steps]-Block, um den Sprite zu bewegen. Führen Sie das Skript aus, und Sie werden sehen, dass sich der Sprite von der Mitte nach rechts bewegt.
 
 .. image:: img/6_move.png
 
-**5. Changing the sprite's direction**
+**5. Die Richtung des Sprites ändern**
 
-Now change the direction of the sprite's movement by the value of A0. Since the value of A0 ranges from 0-1023, but the sprite's rotation direction is -180~180, a [map] block needs to be used.
+Ändern Sie nun die Bewegungsrichtung des Sprites entsprechend dem Wert von A0. Da der Wert von A0 von 0-1023 reicht, aber die Drehrichtung des Sprites von -180~180 ist, muss ein [map]-Block verwendet werden.
 
-Also add [when green flag clicked] at the beginning to start the script.
+Fügen Sie auch [when green flag clicked] am Anfang hinzu, um das Skript zu starten.
 
-* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Set the steering angle of the sprite, from **Motion** palette.
-* [map from to]: Map a range to another range.
+* [`point in direction <https://en.scratch-wiki.info/wiki/Point_in_Direction_()_(block)>`_]: Den Lenkwinkel des Sprites festlegen, aus der **Bewegung**-Palette.
+* [map from to]: Einen Bereich auf einen anderen abbilden.
 
 .. image:: img/6_direction.png
-
-
-
-
-

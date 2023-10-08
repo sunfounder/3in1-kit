@@ -1,24 +1,23 @@
 .. _play_with_scratch:
 
-Play with Scratch
+Mit Scratch spielen
 ========================
 
-Besides programming on the Arduino IDE, we can also use graphical programming.
+Neben der Programmierung in der Arduino IDE können wir auch grafische Programmierung nutzen.
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for Arduino boards (Uno, Mega2560 and Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+Wir empfehlen hier die Programmierung mit Scratch. Allerdings ist das offizielle Scratch derzeit nur mit Raspberry Pi kompatibel. Deshalb haben wir uns mit dem Unternehmen STEMPedia zusammengeschlossen, das eine auf Scratch 3 basierende grafische Programmiersoftware für Arduino-Platinen (Uno, Mega2560 und Nano) entwickelt hat: `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+Es behält die Grundfunktionen von Scratch 3 bei, fügt aber auch Steuerplatinen hinzu, wie Arduino Uno, Mega, Nano, ESP32, Microbit und STEAMPedia-Eigenbau-Hauptplatinen. Damit können externe Sensoren und Roboter verwendet werden, um die Sprites auf der Bühne zu steuern, mit starken Hardware-Interaktionsfähigkeiten.
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+Darüber hinaus verfügt es über KI und maschinelles Lernen. Selbst wenn Sie nur wenig Programmiererfahrung haben, können Sie diese populären und hochmodernen Technologien erlernen und nutzen.
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Sie müssen lediglich die Scratch-Programmierblöcke per Drag & Drop verschieben und coole Spiele, Animationen, interaktive Projekte erstellen und sogar Roboter nach Ihren Wünschen steuern!
 
+Jetzt beginnen wir die Entdeckungsreise!
 
-Now let's start the journey of discovery!
-
-**1. Get Started**
+**1. Einführung**
 
 .. toctree::
     :maxdepth: 2
@@ -27,20 +26,18 @@ Now let's start the journey of discovery!
     pictoblox_start/2_introduce
     pictoblox_start/3_quick_guide
 
-    
 
-**2. Projects**
+**2. Projekte**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Die folgenden Projekte sind nach ihrer Programmierschwierigkeit geordnet. Es wird empfohlen, diese Bücher in der gegebenen Reihenfolge durchzugehen.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+In jedem Projekt gibt es sehr detaillierte Schritte, die Ihnen beibringen, wie Sie den Schaltkreis aufbauen und wie Sie ihn Schritt für Schritt programmieren können, um das gewünschte Ergebnis zu erzielen.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Natürlich können Sie das Skript auch direkt ausführen. Stellen Sie jedoch sicher, dass Sie das relevante Material von `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben.
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+Nach dem Download entpacken Sie es. Beachten Sie :ref:`stage_mode`, um einzelne Skripte direkt auszuführen.
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
-
+Das :ref:`sh_humiture` verwendet jedoch den :ref:`upload_mode`.
 
 .. toctree::
     :maxdepth: 1
@@ -70,16 +67,15 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
 
 .. _sh_car:
 
-**3. Play Car with Scratch**
+**3. Auto mit Scratch steuern**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Die folgenden Projekte sind nach ihrer Programmierschwierigkeit geordnet. Es wird empfohlen, diese Bücher in der gegebenen Reihenfolge durchzugehen.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+In jedem Projekt gibt es sehr detaillierte Schritte, die Ihnen beibringen, wie Sie den Schaltkreis aufbauen und wie Sie ihn Schritt für Schritt programmieren können, um das gewünschte Ergebnis zu erzielen.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Natürlich können Sie das Skript auch direkt ausführen. Stellen Sie jedoch sicher, dass Sie das relevante Material von `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben.
 
-Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
-
+Nach dem Download entpacken Sie es. Beachten Sie :ref:`upload_mode`, um einzelne Skripte direkt auszuführen.
 
 .. toctree::
     :maxdepth: 1

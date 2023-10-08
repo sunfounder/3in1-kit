@@ -1,10 +1,9 @@
-
 .. _sh_install:
 
-1.1 Install PictoBlox
+1.1 PictoBlox installieren
 ===========================
 
-Click this link: https://thestempedia.com/product/pictoblox/download-pictoblox/，choose the appropriate Operating System (Windows, macOS, Linux) and follow the steps to install.
+Klicken Sie auf diesen Link: https://thestempedia.com/product/pictoblox/download-pictoblox/, wählen Sie das passende Betriebssystem (Windows, macOS, Linux) und folgen Sie den Anweisungen zur Installation.
 
 .. image:: img/download.png
 

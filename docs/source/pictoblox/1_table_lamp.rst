@@ -1,49 +1,49 @@
 .. _sh_table_lamp:
 
-2.1 Table Lamp
-================
+2.1 Tischlampe
+=================
 
-Here, we connect an LED on the breadboard and have the sprite control the blinking of this LED.
+Hier verbinden wir eine LED auf dem Steckbrett und lassen die Spielfigur (Sprite) das Blinken dieser LED steuern.
 
-When the Button sprite on the stage is clicked, the LED will blink 5 times and then stop.
+Wenn der Button-Sprite auf der Bühne angeklickt wird, blinkt die LED 5-mal und stoppt dann.
 
 .. image:: img/2_button.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+-----------------------
 
-- Breadboard, LEDs and Resistors
-- Building a circuit on a breadboard
-- Delete and select sprites
-- Switching costumes
-- Set a limited number of repeat loops
+- Steckbrett, LEDs und Widerstände
+- Aufbau einer Schaltung auf dem Steckbrett
+- Sprites löschen und auswählen
+- Kostüme wechseln
+- Eine begrenzte Anzahl von Wiederholungsschleifen festlegen
 
-Required Components
----------------------
+Benötigte Komponenten
+----------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENEINFÜHRUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,48 +56,44 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Build the Circuit
------------------------
+Schaltung aufbauen
+----------------------
 
-Follow the diagram below to build the circuit on the breadboard.
+Folgen Sie dem untenstehenden Diagramm, um die Schaltung auf dem Steckbrett aufzubauen.
 
-Since the anode of the LED (the longer pin) is connected to pin 9 through a 220Ω resistor, and the cathode of the LED is connected to GND, you can light up the LED by giving pin 9 a high level.
+Da die Anode der LED (der längere Pin) über einen 220Ω-Widerstand mit Pin 9 verbunden ist und die Kathode der LED mit GND verbunden ist, können Sie die LED zum Leuchten bringen, indem Sie Pin 9 auf ein hohes Niveau setzen.
 
 .. image:: img/circuit/led_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-The whole programming is divided into 3 parts, the first part is to select the desired sprite, the second part is to switch the costume for the sprite to make it look clickable, and the third part is to make the LED blink.
+Die gesamte Programmierung ist in 3 Teile unterteilt: Im ersten Teil wird der gewünschte Sprite ausgewählt, im zweiten Teil wird das Kostüm des Sprites gewechselt, um ihn anklickbar erscheinen zu lassen, und im dritten Teil wird die LED zum Blinken gebracht.
 
-**1. Select Button3 sprite**
+**1. Button3-Sprite auswählen**
 
-Delete the existing Tobi sprite by using the Delete button in the upper right corner, and select a sprite again.
+Löschen Sie den vorhandenen Tobi-Sprite mit der Löschen-Taste in der oberen rechten Ecke und wählen Sie erneut einen Sprite aus.
 
 .. image:: img/2_tobi.png
 
-Here, we select the **Button3** sprite.
+Hier wählen wir den **Button3**-Sprite aus.
 
 .. image:: img/2_button3.png
 
-Click on Costumes in the top right corner and you will see that the Button3 sprite has 2 costumes, we set **button3-a** to be released and **button3-b** to be pressed.
+Klicken Sie in der oberen rechten Ecke auf Kostüme und Sie werden sehen, dass der Button3-Sprite 2 Kostüme hat. Wir setzen **button3-a** auf "freigegeben" und **button3-b** auf "gedrückt".
 
 .. image:: img/2_button3_2.png
 
-**2. Switching costumes**.
+**2. Kostümwechsel**.
 
-When the sprite is clicked (**Events** palette), it switches to costume for **button3-b** (**looks** palette).
+Wenn der Sprite angeklickt wird (**Events**-Palette), wechselt er zum Kostüm für **button3-b** (**looks**-Palette).
 
 .. image:: img/2_switch.png
 
-**3. Make the LED blink 5 times**
+**3. LED 5-mal blinken lassen**
 
-Use the [Repeat] block to make the LED blink 5 times (High-> LOW cycle), remember to change pin 13 to pin 9, and finally switch the costume back to **button3-a**.
+Verwenden Sie den [Repeat]-Block, um die LED 5-mal blinken zu lassen (High-> LOW-Zyklus). Vergessen Sie nicht, Pin 13 auf Pin 9 zu ändern und schließlich das Kostüm zurück auf **button3-a** zu wechseln.
 
-* [Repeat 10]: limited number of repeat loops, you can set the number of repeats yourself, from the **Control** palette.
+* [Repeat 10]: Begrenzte Anzahl von Wiederholungsschleifen. Sie können die Anzahl der Wiederholungen selbst festlegen, aus der **Control**-Palette.
 
 .. image:: img/2_led_on_off.png
-
-
-
-

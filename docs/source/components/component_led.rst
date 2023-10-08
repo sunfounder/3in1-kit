@@ -6,27 +6,27 @@ LED
 .. image:: img/LED.png
     :width: 400
 
-Semiconductor light-emitting diode is a type of component which can turn electric energy into light energy via PN junctions. By wavelength, it can be categorized into laser diode, infrared light-emitting diode and visible light-emitting diode which is usually known as light-emitting diode (LED). 
-                    
-Diode has unidirectional conductivity, so the current flow will be as the arrow indicates in figure circuit symbol. You can only provide the anode with a positive power and the cathode with a negative. Thus the LED will light up. 
+Halbleiter-Leuchtdioden sind eine Art von Bauteil, das elektrische Energie durch PN-Übergänge in Lichtenergie umwandeln kann. Nach Wellenlänge unterteilt, gibt es Laserdioden, Infrarot-Leuchtdioden und sichtbare Leuchtdioden, die im Allgemeinen als Leuchtdioden (LED) bezeichnet werden.
+
+Dioden haben eine unidirektionale Leitfähigkeit, daher fließt der Strom im Schaltungssymbol so, wie der Pfeil es anzeigt. Man sollte nur der Anode eine positive und der Kathode eine negative Spannung zuführen. Dadurch leuchtet die LED.
 
 .. image:: img/led_symbol.png
 
+Eine LED hat zwei Pins. Der längere ist die Anode und der kürzere die Kathode. Achten Sie darauf, sie nicht verkehrt herum anzuschließen. In der LED gibt es eine feste Vorwärtsspannung, weshalb sie nicht direkt mit der Schaltung verbunden werden kann, da die Versorgungsspannung diesen Abfall übersteigen und die LED dadurch beschädigen kann. Die Vorwärtsspannung der roten, gelben und grünen LED beträgt 1,8 V und die der weißen LED 2,6 V. Die meisten LEDs können einen maximalen Strom von 20 mA verkraften, daher muss ein Strombegrenzungswiderstand in Reihe geschaltet werden.
 
-An LED has two pins. The longer one is the anode, and shorter one, the cathode. Pay attention not to connect them inversely. There is fixed forward voltage drop in the LED, so it cannot be connected with the circuit directly because the supply voltage can outweigh this drop and cause the LED to be burnt. The forward voltage of the red, yellow, and green LED is 1.8 V and that of the white one is 2.6 V. Most LEDs can withstand a maximum current of 20 mA, so we need to connect a current limiting resistor in series.                   
-
-The formula of the resistance value is as follows:
+Die Formel für den Widerstandswert lautet:
 
     R = (Vsupply – VD)/I
 
-**R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
+**R** steht für den Widerstandswert des Strombegrenzungswiderstands, **Vsupply** für die Versorgungsspannung, **VD** für den Spannungsabfall und **I** für den Betriebsstrom der LED.
 
-Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
+Hier finden Sie eine detaillierte Einführung in die LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_blink` (Basic Project)
-* :ref:`ar_fading` (Basic Project)
-* :ref:`iot_blink` (IoT Project)
-* :ref:`sh_breathing_led` (Scratch Project)
-* :ref:`sh_table_lamp` (Scratch Project)
+* :ref:`ar_blink` (Grundlegendes Projekt)
+* :ref:`ar_fading` (Grundlegendes Projekt)
+* :ref:`iot_blink` (IoT-Projekt)
+* :ref:`sh_breathing_led` (Scratch-Projekt)
+* :ref:`sh_table_lamp` (Scratch-Projekt)
+

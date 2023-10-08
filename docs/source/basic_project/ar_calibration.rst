@@ -1,43 +1,42 @@
 .. _ar_calibration:
 
-5.14 Calibration
+5.14 Kalibrierung
 ==========================
 
-When you use analog input components, such as photoresistors, soil moisture sensors, etc., you may find that their reading range is not 0 to 1023, but rather a range like 0 to 800 or 600 to 1000, because it is impossible to reach the limits of these devices with normal use.
+Wenn Sie analoge Eingangskomponenten wie Fotowiderstände, Bodenfeuchtigkeitssensoren usw. verwenden, stellen Sie möglicherweise fest, dass ihr Messbereich nicht 0 bis 1023 beträgt, sondern eher Bereiche wie 0 bis 800 oder 600 bis 1000, da es bei normalem Gebrauch unmöglich ist, die Grenzen dieser Geräte zu erreichen.
 
-In this case, a technique for calibrating the sensor inputs can be used. During startup, have the control board measure the sensor readings for five seconds and record the highest and lowest readings. This five-second reading defines the minimum and maximum expected values of the readings taken during the cycle.
+In solchen Fällen kann eine Technik zur Kalibrierung der Sensoreingänge angewendet werden. Beim Start sollte das Steuerbrett die Sensorwerte für fünf Sekunden messen und die höchsten und niedrigsten Werte aufzeichnen. Dieser fünfsekündige Messwert definiert die erwarteten Mindest- und Höchstwerte der Messwerte während des Zyklus.
 
-
-In this project, we use a photoresistor and a passive buzzer to implement a `theremin <https://en.wikipedia.org/wiki/Theremin>`_ -like game using the calibration technique described above.
+In diesem Projekt verwenden wir einen Fotowiderstand und einen passiven Summer, um ein Spiel ähnlich dem `Theremin <https://en.wikipedia.org/wiki/Theremin>`_ unter Verwendung der oben beschriebenen Kalibrierungstechnik zu implementieren.
 
 .. note::
-    The `theremin <https://en.wikipedia.org/wiki/Theremin>`_ is an electronic musical instrument that requires no physical contact. It generates different tones by sensing the position of the player's hands.
+    Das `Theremin <https://en.wikipedia.org/wiki/Theremin>`_ ist ein elektronisches Musikinstrument, das keinen physischen Kontakt erfordert. Es erzeugt unterschiedliche Töne, indem es die Position der Hände des Spielers erfasst.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die folgenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,11 +53,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Schaltbild**
 
 .. image:: img/circuit_8.8_calibration.png
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/calibration_bb.jpg
     :width: 600
@@ -68,55 +67,53 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\basic_project\5.14.calibration``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.14.calibration.ino`` im Pfad ``3in1-kit\basic_project\5.14.calibration``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9cbcaae0-3c9d-4e33-9957-548f92a9aab7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Nach erfolgreichem Hochladen des Codes leuchtet die LED auf und wir haben 5 Sekunden Zeit, um den Erfassungsbereich des Fotowiderstands zu kalibrieren. Dies liegt daran, dass wir uns jedes Mal in einer anderen Lichtumgebung befinden könnten, wenn wir ihn verwenden (z.B. unterscheidet sich die Lichtintensität zwischen Mittag und Dämmerung).
 
-After the code is uploaded successfully, the LED will light up, and we will have 5 seconds to calibrate the detection range of the photoresistor. This is because we may be in a different light environment each time we use it (e.g. the light intensity is different between midday and dusk).
+In dieser Zeit sollten wir unsere Hände über dem Fotowiderstand auf und ab bewegen, und der Bewegungsbereich der Hand wird auf den Spielbereich dieses Instruments kalibriert.
 
-At this time, we need to swing our hands up and down on top of the photoresistor, and the movement range of the hand will be calibrated to the playing range of this instrument.
-
-After 5 seconds, the LED will go out and we can wave our hands on the photoresistor to play.
-
+Nach 5 Sekunden erlischt die LED und wir können mit unseren Händen über dem Fotowiderstand schwingen, um zu spielen.
 
 
-**How it works?**
 
-**How it works?**
 
-#. Set the initial values and pins of all components.
+**Wie funktioniert das?**
+
+#. Legen Sie die Anfangswerte und Pins aller Komponenten fest.
 
     .. code-block:: arduino
 
         const int buzzerPin = 9;
         const int ledPin = 8;
-        const int photocellPin = A0;  //photoresistor attach to A2
-    
+        const int photocellPin = A0;  // Fotowiderstand ist an A2 angeschlossen
+
         int lightLow = 1023;
         int lightHigh = 0;
-    
-        int sensorValue = 0;        // value read from the sensor
-        int pitch = 0;           // sensor value converted into LED 'bars'
-    
+
+        int sensorValue = 0;        // vom Sensor gelesener Wert
+        int pitch = 0;           // Sensorwert in LED-'Balken' umgewandelt
+
         unsigned long previousMillis = 0;
         const long interval = 5000;
 
-#. Set up a calibration process in ``setup()``.
+#. Richten Sie einen Kalibrierungsprozess in ``setup()`` ein.
 
     .. code-block:: arduino
 
         void setup()
         {
-            pinMode(buzzerPin, OUTPUT); // make buzzer output
-            pinMode(ledPin, OUTPUT); // make the LED pin output
+            pinMode(buzzerPin, OUTPUT); // machen Sie alle LED-Pins zu Outputs
+            pinMode(ledPin, OUTPUT);    // Den LED-Pin-Ausgang erstellen
 
-            /* calibrate the photoresistor max & min values */
+            /* kalibriere die Maximal- und Minimalwerte des Fotowiderstands */
             previousMillis = millis();
             digitalWrite(ledPin, HIGH);
             while (millis() - previousMillis <= interval) {
@@ -131,9 +128,9 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             digitalWrite(ledPin, LOW);
         }
 
-    The work flow is as follows.
+    Der Arbeitsablauf ist wie folgt:
 
-    * using ``millis()`` for timing with an interval of 5000ms.
+    * Verwendung von ``millis()`` für die Zeitmessung mit einem Intervall von 5000 ms.
 
     .. code-block:: arduino
 
@@ -143,7 +140,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
         ...
         }
 
-    * During these five seconds, wave a hand around the photoresistor, the maximum and minimum values ​​of the detected light are recorded and assigned to ``lightHigh`` and ``lightLow`` respectively.
+    * Während dieser fünf Sekunden, bewegen Sie Ihre Hand um den Fotowiderstand. Die maximalen und minimalen Werte des erkannten Lichts werden erfasst und den Variablen ``lightHigh`` und ``lightLow`` entsprechend zugewiesen.
 
     .. code-block:: arduino
         
@@ -155,17 +152,18 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             lightLow = sensorValue;
         }
 
-#. Now you can start playing this Thermin. Read the value of the photoresistor to ``sensorValue`` and map it from the small range to the large range to be used as the frequency of the buzzer. 
+#. Jetzt können Sie dieses Theremin spielen. Lesen Sie den Wert des Fotowiderstands in ``sensorValue`` und übertragen Sie ihn von einem kleinen Bereich in einen großen Bereich, um ihn als Frequenz des Buzzers zu verwenden.
 
     .. code-block:: arduino
 
         void loop()
         {
-        /* play*/
-        sensorValue = analogRead(photocellPin); //read the value of A0
-        pitch = map(sensorValue, lightLow, lightHigh, 50, 6000);  // map to the buzzer frequency
+        /* spielen */
+        sensorValue = analogRead(photocellPin); // Wert von A0 lesen
+        pitch = map(sensorValue, lightLow, lightHigh, 50, 6000);  // auf die Buzzer-Frequenz abbilden
         if (pitch > 50) {
             tone(buzzerPin, pitch, 20);
         }
         delay(10);
         }
+

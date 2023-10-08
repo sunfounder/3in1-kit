@@ -1,51 +1,48 @@
 .. _cpn_track:
 
-Line Tracking Module
+Linienverfolgungsmodul
 ================================
 
 .. image:: img/line_track.png
     :width: 400
     :align: center
 
-* S: Usually low level, high level when the black line is detected.
-* V+: Power supply, 3.3v~5V
-* G: Ground
+* S: Normalerweise niedriges Level, hohes Level bei Erkennung einer schwarzen Linie.
+* V+：Stromversorgung, 3.3v~5V
+* G: Masse
 
-This is a 1-channel Line Tracking module which, as the name suggests, tracks black lines on a white background or white lines against a black background.
+Dies ist ein 1-Kanal-Linienverfolgungsmodul, das, wie der Name schon sagt, schwarze Linien auf einem weißen Hintergrund oder weiße Linien auf einem schwarzen Hintergrund verfolgt.
 
 .. image:: img/tcrt5000.jpg
     :width: 200
     :align: center
 
-The module uses a TCRT500 infrared sensor, which consists of an infrared LED (blue) and a photosensitive triplet (black).
+Das Modul verwendet einen TCRT5000 Infrarotsensor, der aus einer Infrarot-LED (blau) und einem lichtempfindlichen Triplet (schwarz) besteht.
 
-* The blue infrared LED, when powered on, emits infrared light that is invisible to the human eye.
-* The black phototransistor, which is used to receive infrared light, has an internal resistor whose resistance varies with the infrared light received; the more infrared light received, the lower its resistance decreases and vice versa.
+* Die blaue Infrarot-LED sendet bei eingeschaltetem Zustand Infrarotlicht aus, das für das menschliche Auge unsichtbar ist.
+* Der schwarze Fototransistor, der zum Empfang von Infrarotlicht verwendet wird, hat einen internen Widerstand, dessen Widerstand mit dem empfangenen Infrarotlicht variiert; je mehr Infrarotlicht empfangen wird, desto stärker nimmt sein Widerstand ab und umgekehrt.
 
-There is a LM393 comparator on the module, which is used to compare the voltage of the phototransistor with the set voltage (adjusted by potentiometer), if it is greater than the set voltage, the output is 1; otherwise the output is 0.
+Auf dem Modul befindet sich ein LM393-Komparator, der dazu dient, die Spannung des Fototransistors mit der eingestellten Spannung (durch Potentiometer angepasst) zu vergleichen. Ist sie größer als die eingestellte Spannung, beträgt der Ausgang 1; sonst beträgt der Ausgang 0.
 
-Therefore, when the infrared emitter tube shines on a black surface, because the black will absorb light, the photosensitive transistor receives less infrared light, its resistance will increase (voltage increase), after LM393 comparator, the output high level.
+Daher, wenn die Infrarot-Senderröhre auf eine schwarze Oberfläche leuchtet, da Schwarz Licht absorbiert, empfängt der lichtempfindliche Transistor weniger Infrarotlicht, sein Widerstand wird erhöhen (Spannungsanstieg). Nach dem LM393-Komparator wird ein hohes Niveau ausgegeben.
 
-Similarly, when it shines on a white surface, the reflected light will become more and the resistance of the photosensitive transistor will decrease (voltage decreases); therefore, the comparator outputs a low level and the indicator LED lights up.
-
-
+Ebenso, wenn er auf eine weiße Oberfläche leuchtet, wird das reflektierte Licht stärker und der Widerstand des lichtempfindlichen Transistors sinkt (Spannungsabfall); daher gibt der Komparator ein niedriges Niveau aus und die Anzeige-LED leuchtet.
 
 * `TCRT5000 <https://www.vishay.com/docs/83760/tcrt5000.pdf>`_
 
-**Features**
+**Eigenschaften**
 
-* Using infrared emission sensor TCRT5000
-* Detection distance: 1-8mm, focal length of 2.5mm
-* Comparator output signal clean, good waveform, driving capacity greater than 15mA
-* Using potentiometer for sensitivity adjustment
-* Operating voltage: 3.3V-5V
-* Digital output: 0 (white) and 1 (black)
-* Uses wide voltage LM393 comparator.
-* Size: 42mmx10mm
+* Verwendung des Infrarot-Emissionssensors TCRT5000
+* Erfassungsentfernung: 1-8mm, Brennweite von 2.5mm
+* Komparator-Ausgangssignal ist sauber, mit gutem Wellenform, Antriebskapazität größer als 15mA
+* Empfindlichkeitseinstellung durch Potentiometer
+* Betriebsspannung: 3.3V-5V
+* Digitalausgang: 0 (weiß) und 1 (schwarz)
+* Verwendet den weitspannungs LM393 Komparator.
+* Größe: 42mmx10mm
 
+**Beispiel**
 
-**Example**
-
-* :ref:`ar_line_track` (Basic Project)
-* :ref:`follow_the_line` (Car Project)
-* :ref:`sh_protect_heart` (Scratch Project)
+* :ref:`ar_line_track` (Grundlegendes Projekt)
+* :ref:`follow_the_line` (Auto-Projekt)
+* :ref:`sh_protect_heart` (Scratch-Projekt)

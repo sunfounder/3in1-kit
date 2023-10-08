@@ -1,47 +1,47 @@
 .. _sh_colorful_ball:
 
-2.3 Colorful Balls
+2.3 Bunte Kugeln
 =====================
 
-In this project, we will make the RGB LEDs display different colors.
+In diesem Projekt werden wir die RGB-LEDs verschiedene Farben anzeigen lassen.
 
-Clicking on different colored balls on the stage area will cause the RGB LED to light up in different colors.
+Wenn Sie auf verschiedene farbige Kugeln im Bühnenbereich klicken, leuchtet die RGB-LED in unterschiedlichen Farben auf.
 
 .. image:: img/4_color.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+--------------------------
 
-- The principle of RGB LED
-- Copy sprites and select different costumes
-- Three primary colors superimposed
+- Das Prinzip der RGB-LED
+- Sprites kopieren und verschiedene Kostüme auswählen
+- Überlagerung der drei Grundfarben
 
-Required Components
----------------------
+Benötigte Komponenten
+--------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,74 +54,69 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_rgb`
         - |link_rgb_led_buy|
 
-Build the Circuit
+Schaltung aufbauen
 ---------------------
 
-An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors.
+Eine RGB-LED verpackt drei LEDs in Rot, Grün und Blau in eine transparente oder halbtransparente Plastikhülle. Durch Ändern der Eingangsspannung der drei Pins und Überlagern von ihnen können, statistisch gesehen, 16.777.216 verschiedene Farben erzeugt werden.
 
 .. image:: img/4_rgb.png
     :width: 300
 
 .. image:: img/circuit/rgb_circuit.png
 
-Programming
+Programmierung
 ------------------
 
-**1. Select sprite**
+**1. Sprite auswählen**
 
-
-Delete the default sprite, then choose the **Ball** sprite.
+Löschen Sie das Standard-Sprite und wählen Sie das **Ball**-Sprite aus.
 
 .. image:: img/4_ball.png
 
-And duplicate it 5 times.
+Und duplizieren Sie es 5 Mal.
 
 .. image:: img/4_duplicate_ball.png
 
-Choose different costumes for these 5 **Ball** sprites and move them to the corresponding positions.
+Wählen Sie verschiedene Kostüme für diese 5 **Ball**-Sprites aus und verschieben Sie sie an die entsprechenden Positionen.
 
 .. note::
 
-    **Ball3** sprite costume color needs to be manually changed to red.
+    Die Kostümfarbe des **Ball3**-Sprites muss manuell auf Rot geändert werden.
 
 .. image:: img/4_rgb1.png
     :width: 800
 
-**2. Make RGB LEDs light up in the appropriate color**
+**2. RGB-LEDs in der entsprechenden Farbe leuchten lassen**
 
-Before understanding the code, we need to understand the `RGB color model <https://en.wikipedia.org/wiki/RGB_color_model>`_.
+Bevor wir den Code verstehen, müssen wir das `RGB-Farbmodell <https://en.wikipedia.org/wiki/RGB_color_model>`_ verstehen.
 
-The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. 
+Das RGB-Farbmodell ist ein additives Farbmodell, bei dem Rot, Grün und Blau in verschiedenen Kombinationen hinzugefügt werden, um eine Vielzahl von Farben wiederzugeben.
 
-Additive color mixing: adding red to green yields yellow; adding green to blue yields cyan; adding blue to red yields magenta; adding all three primary colors together yields white.
+Additive Farbmischung: Rot zu Grün ergibt Gelb; Grün zu Blau ergibt Cyan; Blau zu Rot ergibt Magenta; alle drei Grundfarben zusammen ergeben Weiß.
 
 .. image:: img/4_rgb_addition.png
   :width: 400
 
-So the code to make the RGB LED light yellow is as follows.
+Der Code, um die RGB-LED gelb leuchten zu lassen, lautet also wie folgt.
 
 .. image:: img/4_yellow.png
 
+Wenn auf das Ball-Sprite (gelber Ball) geklickt wird, setzen wir Pin 11 hoch (rote LED an), Pin 10 hoch (grüne LED an) und Pin 9 niedrig (blaue LED aus), damit die RGB-LED gelb leuchtet.
 
-When the Ball sprite (yellow ball) is clicked, we set pin 11 high (red LED on), pin 10 high (green LED on) and pin 9 low (blue LED off) so that the RGB LED will light yellow.
+Sie können auf die gleiche Weise Codes für andere Sprites schreiben, damit die RGB-LEDs in den entsprechenden Farben leuchten.
 
-You can write codes to other sprites in the same way to make the RGB LEDs light up in the corresponding colors.
-
-**3. Ball2 sprite (light blue)**
+**3. Ball2-Sprite (hellblau)**
 
 .. image:: img/4_blue.png
 
-**4. Ball3 sprite (red)**
+**4. Ball3-Sprite (rot)**
 
 .. image:: img/4_red.png
 
-**5. Ball4 sprite (green)**
+**5. Ball4-Sprite (grün)**
 
 .. image:: img/4_green.png
 
-**6. Ball5 sprite (purple)**
+**6. Ball5-Sprite (lila)**
 
 .. image:: img/4_purple.png
-
-
-

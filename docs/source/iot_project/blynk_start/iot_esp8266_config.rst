@@ -1,17 +1,17 @@
 .. _config_esp8266:
 
-1.1 Configuring the ESP8266
+1.1 Konfiguration des ESP8266
 ===============================
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below.
+Das ESP8266-Modul, das im Kit enthalten ist, ist bereits mit der AT-Firmware vorgebrannt. Sie müssen jedoch seine Konfiguration ändern, indem Sie den untenstehenden Schritten folgen.
 
 
-1. Build the circuit.
+1. Bauen Sie den Schaltkreis.
 
     .. image:: img/iot_1_at_set_bb.jpg
         :width: 800
 
-2. Open the ``1.set_software_serial.ino`` file under the path of ``3in1-kit\iot_project\1.set_software_serial``. Or copy this code into **Arduino IDE**.
+2. Öffnen Sie die Datei ``1.set_software_serial.ino`` im Pfad ``3in1-kit\iot_project\1.set_software_serial``. Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. code-block:: Arduino
 
@@ -19,7 +19,7 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
         SoftwareSerial espSerial(2, 3); //Rx,Tx
 
         void setup() {
-            // put your setup code here, to run once:
+            // Setzen Sie hier Ihren Setup-Code ein, der einmal ausgeführt wird:
             Serial.begin(115200);
             espSerial.begin(115200);
         }
@@ -33,31 +33,29 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
             }
         }
 
-
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn't matter, just go to the next step.)
+3. Klicken Sie auf das Lupen-Symbol (Serial Monitor) in der oberen rechten Ecke und setzen Sie die Baudrate auf **115200**. (Es kann sein, dass Sie einige Informationen wie ich erhalten, oder auch nicht. Das spielt keine Rolle, gehen Sie einfach zum nächsten Schritt weiter.)
 
     .. image:: img/sp20220524113020.png
 
     .. warning::
         
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * Wenn ``ready`` nicht erscheint, können Sie versuchen, das ESP8266-Modul zurückzusetzen (RST mit GND verbinden) und den Serial Monitor erneut zu öffnen.
 
-        * In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
+        * Zudem, wenn das Ergebnis ``OK`` lautet, müssen Sie möglicherweise die Firmware erneut brennen. Bitte schauen Sie unter :ref:`burn_firmware` nach Details. Wenn Sie das Problem immer noch nicht lösen können, machen Sie bitte einen Screenshot vom Serial Monitor und senden Sie ihn an sevice@sunfounder.com. Wir werden Ihnen so schnell wie möglich helfen.
 
-4. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+4. Klicken Sie auf **NEWLINE DROPDOWN BOX**, wählen Sie im Dropdown-Menü ``both NL & CR`` aus und geben Sie ``AT`` ein. Wenn OK zurückgegeben wird, bedeutet dies, dass der ESP8266 erfolgreich eine Verbindung zum R3-Board hergestellt hat.
 
     .. image:: img/sp20220524113702.png
 
-5. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
+5. Geben Sie ``AT+CWMODE=3`` ein und der verwaltete Modus wird auf **Station und AP** Koexistenz geändert.
 
     .. image:: img/sp20220524114032.png
 
-6. In order to use the software serial later, you must input ``AT+UART=9600,8,1,0,0`` to modify the ESP8266's baud rate to 9600.
+6. Um später die Software-Seriennummer verwenden zu können, müssen Sie ``AT+UART=9600,8,1,0,0`` eingeben, um die Baudrate des ESP8266 auf 9600 zu ändern.
 
     .. image:: img/PIC4_sp220615_150321.png
 
-.. 7. Now change the serial monitor baud rate to 9600, try to enter ``AT``, if it returns OK, it means the setting is successful.
-
+.. 7. Ändern Sie nun die Baudrate des Serial Monitors auf 9600 und versuchen Sie, ``AT`` einzugeben. Wenn OK zurückgegeben wird, bedeutet dies, dass die Einstellung erfolgreich war.
 
 ..     .. image:: img/PIC5_sp220615_150431.png
 

@@ -1,38 +1,35 @@
 .. _ar_reversing_aid:
 
-6.4 Reversing Aid
+6.4 Einparkhilfe
 ===================
 
-With the development of science and technology, a lot of high-tech
-products have been installed in cars, among which the reversing assist
-system is one of them. Here we use ultrasonic module, LCD, LED and
-buzzer to make a simple ultrasonic reversing assist system.
+Mit der Entwicklung von Wissenschaft und Technik wurden viele High-Tech-Produkte in Autos eingebaut, unter denen das Einparkhilfesystem eines der bekanntesten ist. In diesem Projekt nutzen wir ein Ultraschallmodul, LCD, LED und Buzzer, um ein einfaches Ultraschall-Einparkhilfesystem zu erstellen.
 
-**Required Components**
+**Benötigte Bauteile**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein komplettes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,13 +48,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/backcar.png
     :width: 800
@@ -67,9 +64,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\basic_project\6.4_reversingAid`` directly.
-    * Or copy this code into Arduino IDE .
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Sie können die Datei ``6.4_reversingAid.ino`` direkt im Pfad ``3in1-kit\basic_project\6.4_reversingAid`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE 1/2.
+    * Hier wird die Bibliothek ``LiquidCrystal I2C`` verwendet. Sie können sie aus dem **Library Manager** installieren.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
 
@@ -77,28 +74,27 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d6848669-fe79-42e9-afd7-0f083f96a6d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+Nachdem der Code erfolgreich hochgeladen wurde, wird die aktuell erkannte Entfernung auf dem LCD angezeigt. Der Buzzer wird dann die Klangfrequenz je nach Entfernung ändern.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    Wenn der Code und die Verdrahtung korrekt sind, aber das LCD dennoch keinen Inhalt anzeigt, können Sie das Potentiometer auf der Rückseite drehen.
 
+**Wie funktioniert das?**
 
-**How it works?**
+Dieser Code hilft uns, ein einfaches Entfernungsmessgerät zu erstellen, das die Entfernung zwischen Objekten messen kann und Feedback über ein LCD-Display und einen Summer liefert.
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+Die Funktion ``loop()`` enthält die Hauptlogik des Programms und läuft kontinuierlich. Schauen wir uns die Funktion ``loop()`` genauer an.
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+#. Schleife zum Auslesen der Entfernung und Aktualisieren von Parametern
 
-#. Loop to read distance and update parameters
-
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    In der ``loop`` liest der Code zuerst die vom Ultraschallmodul gemessene Entfernung aus und aktualisiert den Intervall-Parameter basierend auf dieser Entfernung.
 
     .. code-block:: arduino
 
-        // Update the distance
+        // Entfernung aktualisieren
         distance = readDistance();
 
-        // Update intervals based on distance
+        // Intervalle basierend auf der Entfernung aktualisieren
         if (distance <= 10) {
             intervals = 300;
         } else if (distance <= 20) {
@@ -109,9 +105,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. Überprüfen, ob es Zeit für einen Signalton ist
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    Der Code berechnet die Differenz zwischen der aktuellen Zeit und der letzten Signalton-Zeit. Wenn die Differenz größer oder gleich der Intervallzeit ist, löst er den Summer aus und aktualisiert die letzte Signalton-Zeit.
 
     .. code-block:: arduino
 
@@ -122,9 +118,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. LCD-Anzeige aktualisieren
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    Der Code löscht das LCD-Display und zeigt dann "Dis:" und die aktuelle Entfernung in Zentimetern in der ersten Zeile an.
 
     .. code-block:: arduino
 

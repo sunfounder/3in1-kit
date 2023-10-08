@@ -1,37 +1,37 @@
 .. _car_ir_obstacle:
 
-5. Play with Obstacle Avoidance Module
+5. Mit dem Hindernisvermeidungs-Modul spielen
 ===============================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+Zwei Infrarot-Hindernisvermeidungsmodule sind vorne am Auto montiert. Sie dienen dazu, nahegelegene Hindernisse zu erkennen.
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+In diesem Projekt darf das Auto frei nach vorne fahren. Bei einem Hindernis kann es dieses umgehen und in anderen Richtungen weiterfahren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist sicherlich praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM SET
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 3 in 1 Starter-Set
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,17 +42,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Verdrahtung**
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Das Hindernisvermeidungs-Modul ist ein einstellbarer Infrarot-Näherungssensor. Sein Ausgang ist normalerweise hoch und wird niedrig, wenn ein Hindernis erkannt wird.
 
-Now build the circuit according to the diagram below.
+Bauen Sie die Schaltung gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R3 Board
+    * - Linkes IR-Modul
+      - R3-Platine
     * - OUT
       - 8
     * - GND
@@ -63,8 +63,8 @@ Now build the circuit according to the diagram below.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R3 Board
+    * - Rechtes IR-Modul
+      - R3-Platine
     * - OUT
       - 7
     * - GND
@@ -75,17 +75,17 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-**Adjust the Module**
+**Modul justieren**
 
-Before starting the project, you need to adjust the detection distance of the module.
+Bevor Sie mit dem Projekt beginnen, müssen Sie den Erkennungsabstand des Moduls einstellen.
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Nach der oben gezeigten Verdrahtung, schalten Sie die R3-Platine ein (entweder durch direktes Anschließen des USB-Kabels oder durch Anschließen des 9V-Batteriekabels), ohne den Code hochzuladen.
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+Platzieren Sie ein Notizbuch oder ein anderes flaches Objekt etwa 5 cm vor der IR-Hindernisvermeidung.
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+Verwenden Sie dann einen Schraubendreher, um das Potentiometer auf dem Modul zu drehen, bis die Signalanzeige auf dem Modul gerade aufleuchtet, um den maximalen Erkennungsabstand von 5 cm einzustellen.
 
-Follow the same method to adjust another infrared module.
+Verfahren Sie auf die gleiche Weise, um ein weiteres Infrarot-Modul einzustellen.
 
 .. image:: img/ir_obs_cali.jpg
 
@@ -93,22 +93,22 @@ Follow the same method to adjust another infrared module.
 
 .. note::
 
-    * Open the ``5.obstacle_avoidance_module.ino`` file under the path of ``3in1-kit\car_project\5.obstacle_avoidance_module``.
-    * Or copy this code into **Arduino IDE**.
-    
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Öffnen Sie die Datei ``5.obstacle_avoidance_module.ino`` im Pfad ``3in1-kit\car_project\5.obstacle_avoidance_module``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
+
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/289ca80d-009f-4f60-b36d-1da6c5e10233/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will move forward once the code has been successfully uploaded. When the left infrared module detects an obstacle, it will go backwards to the left; when the right infrared module detects an obstacle, it will go backwards to the right; if both sides detect an obstacle, it will go backwards squarely.
+Das Auto fährt vorwärts, sobald der Code erfolgreich hochgeladen wurde. Wenn das linke Infrarot-Modul ein Hindernis erkennt, fährt es rückwärts nach links; erkennt das rechte Infrarot-Modul ein Hindernis, fährt es rückwärts nach rechts; erkennen beide Seiten ein Hindernis, fährt es geradlinig rückwärts.
 
-**How it works?**
+**Wie funktioniert das?**
 
-This project is based on the value of the left and right infrared obstacle avoidance modules to make the car make the appropriate action.
+Dieses Projekt basiert auf den Werten der linken und rechten Infrarot-Hindernisvermeidungsmodule, um dem Auto die entsprechende Aktion ausführen zu lassen.
 
-#. Add the pin definition for the 2 obstacle avoidance modules, here they are set to ``INPUT``.
+#. Fügen Sie die Pin-Definition für die 2 Hindernisvermeidungsmodule hinzu, hier sind sie auf ``INPUT`` gesetzt.
 
     .. code-block:: arduino
 
@@ -125,7 +125,7 @@ This project is based on the value of the left and right infrared obstacle avoid
         }
 
 
-#. Read the values of the left and right infrared modules and let the car to make the corresponding action.
+#. Lesen Sie die Werte der linken und rechten Infrarotmodule und lassen Sie das Auto die entsprechende Aktion ausführen.
 
     .. code-block:: arduino
 
@@ -146,15 +146,15 @@ This project is based on the value of the left and right infrared obstacle avoid
             }
         }
 
-    * If the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-    * If the right IR module is 0 (obstacle detected), let the car go back up to the right.
-    * If 2 IR modules detect the obstacle at the same time, the car will go backward.
-    * Otherwise the car will keep going forward.
+    * Wenn das linke IR-Modul 0 ist (Hindernis erkannt) und das rechte IR-Modul 1 ist, fährt das Auto rückwärts nach links.
+    * Wenn das rechte IR-Modul 0 ist (Hindernis erkannt), fährt das Auto rückwärts nach rechts.
+    * Wenn beide IR-Module gleichzeitig ein Hindernis erkennen, fährt das Auto rückwärts.
+    * Andernfalls fährt das Auto weiter vorwärts.
 
 
-#. About the ``backLeft()`` function.
+#. Über die Funktion ``backLeft()``.
 
-    When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left. 
+    Wenn der rechte Motor gegen den Uhrzeigersinn dreht und der linke Motor nicht dreht, fährt das Auto rückwärts nach links.
 
     .. code-block:: arduino
 
@@ -165,9 +165,9 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, 0);
         }
 
-#. About the ``backLeft()`` function.
+#. Über die Funktion ``backRight()``.
 
-    When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+    Wenn der linke Motor im Uhrzeigersinn dreht und der rechte Motor nicht dreht, fährt das Auto rückwärts nach rechts.
 
     .. code-block:: arduino
 
@@ -178,6 +178,7 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, speed);
         }
 
-* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logical AND results in true only if both operands are true.
+* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logisches UND ergibt nur dann true, wenn beide Operanden wahr sind.
 
-* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: Logical NOT results in a true if the operand is false and vice versa.
+* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: Logisches NICHT ergibt true, wenn der Operand falsch ist und umgekehrt.
+

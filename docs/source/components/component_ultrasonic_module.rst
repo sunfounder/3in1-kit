@@ -1,42 +1,41 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+Ultraschall-Modul
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
-Ultrasonic ranging module provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
+Das Ultraschall-Entfernungsmessmodul bietet eine berührungslose Messfunktion von 2 cm bis 400 cm, wobei die Messgenauigkeit bis zu 3 mm betragen kann.
+Es gewährleistet, dass das Signal innerhalb von 5 m stabil ist, und das Signal wird nach 5 m allmählich abgeschwächt, bis es an der 7 m Position verschwindet.
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
+Das Modul beinhaltet Ultraschallsender, Empfänger und Steuerschaltung. Die grundlegenden Prinzipien sind wie folgt:
 
-#. Use an IO flip-flop to process a high level signal of at least 10us.
+#. Verarbeitung eines High-Level-Signals von mindestens 10us mit einem IO-Flipflop.
 
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
+#. Das Modul sendet automatisch acht 40kHz aus und überprüft, ob ein Pulssignal zurückkommt.
 
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
+#. Kehrt das Signal zurück und führt durch das hohe Level, beträgt die Dauer des hohen IO-Ausgangs die Zeit von der Aussendung der Ultraschallwelle bis zu ihrer Rückkehr. Hierbei gilt: Testentfernung = (Hohe Zeit x Schallgeschwindigkeit (340 m/s)) / 2.
 
-
-
-The timing diagram is shown below. 
+Das Zeitdiagramm ist unten dargestellt.
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+Sie müssen lediglich einen kurzen 10us-Impuls für den Trigger-Eingang bereitstellen, um die Entfernungsmessung zu starten, und dann sendet das Modul 
+eine 8-Zyklen-Ultraschallburst mit 40 kHz aus und erhebt sein 
+Echo. Sie können die Entfernung über das Zeitintervall zwischen 
+dem Senden des Trigger-Signals und dem Empfangen des Echo-Signals berechnen.
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+Formel: us / 58 = Zentimeter oder us / 148 = Inch; oder: Entfernung = hohe
+Signalzeit \* Geschwindigkeit (340M/s) / 2; es wird empfohlen, 
+einen Messzyklus von über 60ms zu verwenden, um Signalüberschneidungen zwischen
+Trigger-Signal und dem Echo-Signal zu verhindern.
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_ultrasonic` (Basic Project)
-* :ref:`follow_your_hand` (Car Project)
-* :ref:`car_ultrasonic` (Car Project)
-* :ref:`sh_parrot` (Scratch Project)
+* :ref:`ar_ultrasonic` (Grundlegendes Projekt)
+* :ref:`follow_your_hand` (Auto-Projekt)
+* :ref:`car_ultrasonic` (Auto-Projekt)
+* :ref:`sh_parrot` (Scratch-Projekt)
+

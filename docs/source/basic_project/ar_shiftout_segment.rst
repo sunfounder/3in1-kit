@@ -1,43 +1,42 @@
 .. _ar_segment:
 
 
-5.10 ShiftOut(Segment Display)
-===================================
+5.10 ShiftOut(Segmentanzeige)
+=================================
 
-Previously, we used the ``shiftout()`` function to light up eight LEDs; here we use it to display 0-9 on the 7-aegment Display.
+In einem früheren Beispiel haben wir die Funktion ``shiftout()`` verwendet, um acht LEDs zu beleuchten. Hier verwenden wir sie, um die Zahlen 0-9 auf der 7-Segment-Anzeige darzustellen.
 
-The 7-segment Display is essentially a device packaged by 8 LEDs, of which 7 strip-shaped LEDs form an "8" shape, and there is a slightly smaller dotted LED as a decimal point. These LEDs are marked as a, b, c, d, e, f, g, and dp. They have their own anode pins and share cathodes. Their pin locations are shown in the figure below.
+Die 7-Segment-Anzeige ist im Grunde ein Gerät, das aus 8 LEDs besteht. 7 davon sind streifenförmige LEDs, die eine "8" formen, und es gibt eine etwas kleinere LED als Dezimalpunkt. Diese LEDs sind als a, b, c, d, e, f, g und dp markiert. Sie verfügen über eigene Anoden-Pins und teilen sich Kathoden. Ihre Pin-Positionen sind in der untenstehenden Abbildung dargestellt.
 
 .. image:: img/segment_cathode.png
     :width: 600
     :align: center
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Bauteile.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist durchaus praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die folgenden Links erwerben.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
-
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
     *   - :ref:`cpn_breadboard`
@@ -51,18 +50,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_6.5_segment.png
 
-**Wiring**
+**Verdrahtung**
 
-.. list-table:: Wiring
+.. list-table:: Verdrahtung
     :widths: 15 25
     :header-rows: 1
 
     *   - 74HC595
-        - LED Segment Display
+        - LED Segmentanzeige
     *   - Q0
         - a
     *   - Q1
@@ -84,52 +83,50 @@ You can also buy them separately from the links below.
     :width: 600
     :align: center
 
-**Code**
 
+**Code**
 
 .. note::
 
-    * Open the ``5.10.shiftout_segment.ino`` file under the path of ``3in1-kit\basic_project\5.10.shiftout_segment``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.10.shiftout_segment.ino`` im Pfad ``3in1-kit\basic_project\5.10.shiftout_segment``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/23b9a3ea-c648-4f33-8622-e279d94ee507/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will be able to see the LED Segment Display display 0~9 in sequence.
+Nachdem der Code erfolgreich hochgeladen wurde, können Sie beobachten, wie die LED Segmentanzeige die Zahlen 0~9 nacheinander anzeigt.
 
-**How it works?**
+**Wie funktioniert das?**
 
+``shiftOut()`` lässt den 74HC595 8 digitale Signale ausgeben.
+Es gibt das letzte Bit der Binärzahl an Q0 aus 
+und das erste Bit an Q7. Das bedeutet, 
+dass das Schreiben der Binärzahl "00000001" dazu führt, dass Q0 ein hohes Signal und Q1~Q7 ein niedriges Signal ausgibt.
 
-``shiftOut()`` will make 74HC595 output 8 digital signals.
-It outputs the last bit of the binary number to Q0, 
-and the output of the first bit to Q7. In other words, 
-writing the binary number "00000001" will make Q0 output high level and Q1~Q7 output low level.
-
-Suppose that the 7-segment Display display the number "2", 
-we need to write a high level for a, b, d, e and g, and write a low level for c, f and dp.
-That is, the binary number " 01011011" needs to be written. 
-For readability, we will use hexadecimal notation as "0x5b".
+Angenommen, die 7-Segment-Anzeige zeigt die Zahl "2" an,
+wir müssen ein hohes Signal für a, b, d, e und g schreiben und ein niedriges Signal für c, f und dp.
+Das bedeutet, die Binärzahl "01011011" muss geschrieben werden.
+Zur besseren Lesbarkeit verwenden wir die hexadezimale Notation als "0x5b".
 
 .. image:: img/7_segment2.png
 
+* `Hexadezimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
 
-* `Hexadecimal <https://en.wikipedia.org/wiki/Hexadecimal>`_
+* `BinaryHex Konverter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
 
-* `BinaryHex Converter <https://www.binaryhexconverter.com/binary-to-hex-converter>`_
+Ebenso können wir die 7-Segment-Anzeige auf die gleiche Weise andere Zahlen anzeigen lassen.
+Die folgende Tabelle zeigt die Codes, die diesen Zahlen entsprechen.
 
-Similarly, we can also make the 7-Segment Display display other numbers in the same way. 
-The following table shows the codes corresponding to these numbers.
-
-.. list-table:: Glyph Code
+.. list-table:: Zeichen Code
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Numbers	
-        - Binary Code
+    *   - Zahlen	
+        - Binär Code
         - Hex Code  
     *   - 0	
         - 00111111	
@@ -162,4 +159,4 @@ The following table shows the codes corresponding to these numbers.
         - 01101111	
         - 0x6f
 
-Write these codes into ``shiftOut()`` to make the LED Segment Display display the corresponding numbers.
+Geben Sie diese Codes in ``shiftOut()`` ein, um die LED Segmentanzeige die entsprechenden Zahlen anzeigen zu lassen.

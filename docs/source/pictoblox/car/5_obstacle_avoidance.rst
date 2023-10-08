@@ -1,38 +1,38 @@
 .. _sh_avoid1:
 
-3.5 Obstacle avoidance
+3.5 Hindernisvermeidung
 ==================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+Am Auto sind zwei Infrarot-Hindernisvermeidungsmodule montiert, mit denen nahegelegene Hindernisse erkannt werden können.
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+In diesem Projekt darf das Auto frei vorwärts fahren und kann beim Erkennen eines Hindernisses ausweichen und in andere Richtungen weiterfahren.
 
-Required Components
+Benötigte Komponenten
 ---------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IM SET
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - 3-in-1 Starter Set
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können die Teile auch einzeln über die folgenden Links erwerben:
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,16 +43,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+Schaltkreis aufbauen
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Das Hindernisvermeidungsmodul ist ein infrarotgesteuerter Näherungssensor mit einstellbarer Distanz, dessen Ausgang normalerweise hoch ist und bei Erkennung eines Hindernisses niedrig wird.
 
-Now build the circuit according to the diagram below.
+Bauen Sie nun den Schaltkreis entsprechend dem untenstehenden Diagramm auf.
 
 .. list-table:: 
 
-    * - Left IR Module
+    * - Linkes IR-Modul
       - R3 Board
     * - OUT
       - 8
@@ -63,7 +63,7 @@ Now build the circuit according to the diagram below.
 
 .. list-table:: 
 
-    * - Right IR Module
+    * - Rechtes IR-Modul
       - R3 Board
     * - OUT
       - 7
@@ -75,68 +75,68 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-Adjust the Module
+Das Modul einstellen
 -----------------------
 
-Before starting the project, you need to adjust the detection distance of the module.
+Vor Projektbeginn müssen Sie die Erfassungsdistanz des Moduls anpassen.
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Verdrahten Sie entsprechend dem obigen Diagramm, schalten Sie das R3-Board ein (entweder durch direktes Einstecken des USB-Kabels oder durch Anschließen des 9V-Batteriekabels) und laden Sie den Code noch nicht hoch.
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+Platzieren Sie ein Notizbuch oder ein anderes flaches Objekt etwa 5 cm vor der IR-Hindernisvermeidung.
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+Dann verwenden Sie einen Schraubendreher, um das Potentiometer am Modul zu drehen, bis die Signalleuchte am Modul gerade leuchtet, um die maximale Erfassungsdistanz von 5 cm einzustellen.
 
-Follow the same method to adjust another infrared module.
+Verfahren Sie auf die gleiche Weise, um ein weiteres Infrarot-Modul anzupassen.
 
 .. image:: img/ir_obs_cali.jpg
 
-Programming
+Programmierung
 ---------------
 
-The effect we want to achieve.
+Das gewünschte Ergebnis:
 
-* When the left IR module detects an obstacle, the car goes backward to the left
-* When the right IR module detects an obstacle, the car goes backward to the right.
-* If both IR modules detect the obstacle, the car will go back directly.
-* Otherwise the car will go forward.
+* Wenn das linke IR-Modul ein Hindernis erkennt, fährt das Auto rückwärts nach links.
+* Wenn das rechte IR-Modul ein Hindernis erkennt, fährt das Auto rückwärts nach rechts.
+* Wenn beide IR-Module gleichzeitig ein Hindernis erkennen, fährt das Auto direkt rückwärts.
+* Andernfalls fährt das Auto vorwärts.
 
-Now create the corresponding blocks.
+Erstellen Sie jetzt die entsprechenden Blöcke.
 
-**1. The car goes backward to the left**
+**1. Das Auto fährt rückwärts nach links**
 
-When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left.
+Wenn der rechte Motor gegen den Uhrzeigersinn dreht und der linke Motor sich nicht dreht, wird das Auto rückwärts nach links fahren.
 
 .. image:: img/5_avoid1.png
 
-**2. The car goes backward to the right**
+**2. Das Auto fährt rückwärts nach rechts**
 
-When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+Wenn der linke Motor im Uhrzeigersinn dreht und der rechte Motor sich nicht dreht, wird das Auto rückwärts nach rechts fahren.
 
 .. image:: img/5_avoid2.png
 
-**3. The car moves forward, backward and stops**
+**3. Das Auto fährt vorwärts, rückwärts und hält an**
 
 .. image:: img/5_avoid3.png
 
-**4. Read the values of the 2 IR modules**
+**4. Werte der 2 IR-Module auslesen**
 
-Click **Make a variable** in the **Variables** palette.
+Klicken Sie in der Palette **Variables** auf **Make a variable**.
 
 .. image:: img/5_avoid4.png
 
-Enter the variable name and click **OK** to create a new variable.
+Geben Sie den Variablennamen ein und klicken Sie auf **OK**, um eine neue Variable zu erstellen.
 
 .. image:: img/5_avoid5.png
 
-Read the values of the left and right IR obstacle avoidance modules and store them in the 2 new variables.
+Lesen Sie die Werte der linken und rechten IR-Hindernisvermeidungsmodule und speichern Sie sie in den 2 neuen Variablen.
 
 .. image:: img/5_avoid6.png
 
-**5. obstacle avoidance**
+**5. Hindernisvermeidung**
 
-* When the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-* When the right IR module is 0 (obstacle detected), let the car go back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will go backward.
-* Otherwise the car will keep going forward.
+* Wenn das linke IR-Modul 0 ist (Hindernis erkannt) und das rechte IR-Modul 1 ist, soll das Auto nach links zurückfahren.
+* Wenn das rechte IR-Modul 0 ist (Hindernis erkannt), soll das Auto nach rechts zurückfahren.
+* Wenn 2 IR-Module gleichzeitig ein Hindernis erkennen, fährt das Auto rückwärts.
+* Ansonsten fährt das Auto weiter vorwärts.
 
 .. image:: img/5_avoid7.png

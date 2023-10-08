@@ -1,39 +1,39 @@
 .. _ar_beep:
 
-1.2 Beep
+1.2 Piepton
 ==================
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+Der aktive Summer ist ein typisches digitales Ausgabegerät, das genauso einfach zu verwenden ist wie das Anzünden einer LED!
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+Zwei Arten von Summern sind im Kit enthalten. 
+Wir müssen den aktiven Summer verwenden. Drehen Sie sie um, die versiegelte Rückseite (nicht die freiliegende PCB) ist die, die wir wollen.
 
 .. image:: img/buzzer.png
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,13 +44,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_1.2_beep.png
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/wiring_active_buzzer.png
     :width: 400
@@ -61,13 +60,13 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\basic_project\1.2.beep``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``1.2.beep.ino`` unter dem Pfad ``3in1-kit\basic_project\1.2.beep`` öffnen. 
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95570ca2-11c6-404c-a23f-bf03094d8085/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Nach erfolgreichem Hochladen des Codes hören Sie alle Sekunde einen Piepton.

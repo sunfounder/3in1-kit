@@ -1,39 +1,37 @@
-How to create, open or Save the Sketch?
-=======================================
+Wie erstellt, öffnet oder speichert man die Skizze?
+=========================================================
 
-
-#. When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a "sketch".
+#. Wenn Sie die Arduino IDE zum ersten Mal öffnen oder eine neue Skizze erstellen, sehen Sie eine Seite wie diese, auf der die Arduino IDE eine neue Datei für Sie erstellt, die als "Skizze" bezeichnet wird.
 
     .. image:: img/sp221014_173458.png
 
-    These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch.
+    Diese Skizzendateien haben einen regelmäßigen temporären Namen, aus dem Sie das Erstellungsdatum der Datei ableiten können. ``sketch_oct14a.ino`` bedeutet die erste Skizze vom 14. Oktober, ``.ino`` ist das Dateiformat dieser Skizze.
 
-#. Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code.
-
+#. Jetzt versuchen wir, eine neue Skizze zu erstellen. Kopieren Sie den folgenden Code in die Arduino IDE, um den ursprünglichen Code zu ersetzen.
 
         .. image:: img/create1.png
 
     .. code-block:: C
 
         void setup() {
-            // put your setup code here, to run once:
+            // Geben Sie hier Ihren Setup-Code ein, der einmal ausgeführt wird:
             pinMode(13,OUTPUT); 
         }
 
         void loop() {
-            // put your main code here, to run repeatedly:
+            // Geben Sie hier Ihren Hauptcode ein, der wiederholt ausgeführt wird:
             digitalWrite(13,HIGH);
             delay(500);
             digitalWrite(13,LOW);
             delay(500);
         }
 
-#. Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\Users\{your_user}\Documents\Arduino`` by default, you can rename it or find a new path to save it.
+#. Drücken Sie ``Ctrl+S`` oder klicken Sie auf **Datei (File)** -> **Speichern (Save)**. Die Skizze wird standardmäßig unter ``C:\Users\{Ihr_Benutzername}\Dokumente\Arduino`` gespeichert. Sie können sie umbenennen oder einen neuen Pfad zum Speichern auswählen.
 
     .. image:: img/create2.png
 
-#. After successful saving, you will see that the name in the Arduino IDE has been updated.
+#. Nachdem Sie erfolgreich gespeichert haben, werden Sie feststellen, dass der Name in der Arduino IDE aktualisiert wurde.
 
     .. image:: img/create3.png
 
-Please continue with the next section to learn how to upload this created sketch to your Arduino board.
+Bitte fahren Sie mit dem nächsten Abschnitt fort, um zu lernen, wie Sie diese erstellte Skizze auf Ihr Arduino-Board hochladen.

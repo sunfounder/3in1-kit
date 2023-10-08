@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.11.2 IR Receiver
+5.11.2 IR-Empfänger
 =========================
 
-In this project, you will learn to use IR Receiver. 
+In diesem Projekt lernen Sie, wie Sie einen IR-Empfänger verwenden.
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Ein Infrarot-Empfänger ist eine Komponente, die Infrarotsignale empfängt. Er kann Infrarotstrahlen eigenständig empfangen und Signale ausgeben, die mit dem TTL-Level kompatibel sind. 
+Er ähnelt von der Größe her einem normal verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarotübertragungen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,25 +43,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**Verkabelung**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+In diesem Beispiel verbinden wir den linken Pin des IR-Empfängers mit Pin 11,
+den mittleren Pin mit GND und den rechten Pin mit 5V.
 
 .. image:: img/ir_remote_control_bb.jpg
-
 
 **Code**
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\basic_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Öffnen Sie die Datei ``5.11.ir_receiver.ino`` unter dem Pfad ``3in1-kit\basic_project\5.11.ir_receiver``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
+    * Hier wird die Bibliothek ``IRremote`` verwendet. Sie können sie über den **Library Manager** installieren.
   
         .. image:: ../img/lib_irremote.png
 
@@ -69,39 +68,37 @@ the middle pin to GND, and the right pin to 5V.
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
-After uploading the codes to the R3 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+Nachdem Sie die Codes auf das R3-Board hochgeladen haben, können Sie den
+aktuellen Wert der gedrückten Taste der IR-Fernbedienung auf dem
+Seriellen Monitor anzeigen lassen.
 
-**How it works?**
+**Wie funktioniert das?**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Dieser Code ist für die Verwendung mit einer Infrarot (IR) Fernbedienung und der ``IRremote`` Bibliothek entwickelt. Hier ist die Erklärung:
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. Einbindung von Bibliotheken: Dies beinhaltet die ``IRremote`` Bibliothek, welche Funktionen zur Arbeit mit IR-Fernbedienungen bereitstellt.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
+#. Definiert den Arduino-Pin, an den der Signal-Pin des IR-Sensors angeschlossen ist, und deklariert eine Variable zur Speicherung des zuletzt decodierten IR-Wertes.
 
     .. code-block:: arduino
 
-        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";  // Variable to store the last decoded value
+        const int IR_RECEIVE_PIN = 11;  // Pinnummer für den IR-Sensor definieren
+        String lastDecodedValue = "";  // Variable zum Speichern des zuletzt decodierten Wertes
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Initialisiert den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
 
     .. code-block:: arduino
 
         void setup() {
-            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
-        }
+            Serial.begin(9600);                                     // Serielle Kommunikation mit 9600 Baudrate starten
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IR-Empfänger starten
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. Die Schleife läuft kontinuierlich, um eingehende IR-Fernbedienungssignale zu verarbeiten.
 
     .. code-block:: arduino
 
@@ -110,15 +107,15 @@ This code is designed to work with an infrared (IR) remote control using the ``I
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                    lastDecodedValue = decodedValue;  // Aktualisiert den zuletzt decodierten Wert
                 }
-                IrReceiver.resume();  // Enable receiving of the next value
+                IrReceiver.resume();  // Empfang des nächsten Wertes ermöglichen
             }
         }
     
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
-    * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
-    * Resumes IR signal reception for the next signal.
+    * Überprüft, ob ein IR-Signal empfangen und erfolgreich decodiert wurde.
+    * Decodiert den IR-Befehl und speichert ihn in ``decodedValue`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
+    * Überprüft, ob der decodierte Wert kein Fehler ist und sich vom zuletzt decodierten Wert unterscheidet.
+    * Gibt den decodierten IR-Wert auf dem seriellen Monitor aus.
+    * Aktualisiert ``lastDecodedValue`` mit dem neuen decodierten Wert.
+    * Setzt den IR-Signalempfang für das nächste Signal fort.

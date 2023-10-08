@@ -1,61 +1,58 @@
 .. _ar_interval:
 
-5.4 Interval
+5.4 Intervall
 ================
 
-Sometimes you need to do two things at once. For example you might want
-to blink an LED while reading a button press. In this case, you can't
-use ``delay()``, because Arduino pauses your program during the ``delay()``. If
-the button is pressed while Arduino is paused waiting for the ``delay()`` to
-pass, your program will miss the button press.
+Manchmal müssen Sie zwei Dinge gleichzeitig tun. Zum Beispiel möchten Sie
+vielleicht eine LED blinken lassen, während Sie einen Tastendruck lesen. In diesem Fall können Sie 
+nicht ``delay()`` verwenden, weil Arduino Ihr Programm während des ``delay()`` anhält. Wenn
+die Taste gedrückt wird, während Arduino auf das Ende des ``delay()`` wartet, wird Ihr Programm den Tastendruck übersehen.
 
-An analogy would be warming up a pizza in your microwave, and also
-waiting some important email. You put the pizza in the microwave and set
-it for 10 minutes. The analogy to using ``delay()`` would be to sit in front
-of the microwave watching the timer count down from 10 minutes until the
-timer reaches zero. If the important email arrives during this time you
-will miss it.
+Ein Vergleich wäre, eine Pizza in Ihrer Mikrowelle aufzuwärmen und gleichzeitig 
+auf eine wichtige E-Mail zu warten. Sie legen die Pizza in die Mikrowelle und stellen 
+sie auf 10 Minuten. Das Analogon zur Verwendung von ``delay()`` wäre, vor der Mikrowelle zu sitzen und den Timer von 10 Minuten herunterzählen zu sehen, bis 
+der Timer null erreicht. Wenn die wichtige E-Mail in dieser Zeit ankommt, 
+werden Sie sie verpassen.
 
-What you would do in real life would be to turn on the pizza, and then
-check your email, and then maybe do something else (that doesn't take
-too long!) and every so often you will come back to the microwave to see
-if the timer has reached zero, indicating that your pizza is done.
+Was Sie im wirklichen Leben tun würden, wäre die Pizza einzuschalten, dann 
+Ihre E-Mails zu überprüfen und dann vielleicht etwas anderes zu tun (das nicht 
+zu lange dauert!) und von Zeit zu Zeit würden Sie zur Mikrowelle zurückkommen, um 
+zu sehen, ob der Timer null erreicht hat, was bedeutet, dass Ihre Pizza fertig ist.
 
-This sketch demonstrates how to tone an buzzer without using ``delay()``. 
-It turns the buzzer on and then makes note of the time. Then, each time
-through ``loop()``, it checks to see if the desired interval time has passed.
-If it has, it tone the buzzer and makes note of the new time.
-In this way the buzzer tones continuously while the sketch execution never
-lags on a single instruction.
+Dieses Sketch zeigt, wie man einen Summer ohne Verwendung von ``delay()`` tönt. 
+Es schaltet den Summer ein und notiert dann die Zeit. Dann überprüft es bei jedem Durchlauf durch ``loop()``, ob das gewünschte Intervall vergangen ist.
+Wenn dies der Fall ist, tönt es den Summer und notiert die neue Zeit.
+Auf diese Weise tönt der Summer kontinuierlich, während die Sketch-Ausführung nie 
+an einer einzigen Anweisung hängen bleibt.
 
-Based on this condition, we can add the code of the button to control the LED, 
-it will not be disturbed by the buzzer playing music.
+Aufgrund dieses Zustands können wir den Code der Taste hinzufügen, um die LED zu steuern, 
+sie wird nicht durch den Summer, der Musik spielt, gestört.
 
-**Required Components**
+**Erforderliche Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -73,12 +70,13 @@ You can also buy them separately from the links below.
         - |link_passive_buzzer_buy|
 
 
-**Schematic**
+
+**Schaltplan**
 
 .. image:: img/circuit_8.5_interval.png
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/interval_bb.jpg
     :width: 600
@@ -88,64 +86,63 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\basic_project\5.4.interval``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``5.4.interval.ino`` unter dem Pfad ``3in1-kit\basic_project\5.4.interval``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
+Nachdem der Code erfolgreich hochgeladen wurde, wird der Summer Musik abspielen; jedes Mal, wenn Sie den Knopf drücken, leuchtet die LED auf. Die Funktion von LED und Summer stört sich nicht gegenseitig.
 
-**How it works?**
+**Wie funktioniert es?**
 
-
-Initial a variable named ``previousMillis`` to store previous operating time of microcontroller.
+Initialisieren Sie eine Variable namens ``previousMillis``, um die vorherige Betriebszeit des Mikrocontrollers zu speichern.
 
 .. code-block:: arduino
 
     unsigned long previousMillis = 0;     
 
-Mark which note is played.
+Markieren Sie, welche Note gespielt wird.
 
 .. code-block:: arduino
 
     int thisNote=0; 
 
-The interval time of each note.
+Das Intervall jeder Note.
 
 .. code-block:: arduino
 
     long interval = 1000; 
 
-In ``loop()``, declare ``currentMillis`` to store the current time.
+In ``loop()``, deklarieren Sie ``currentMillis``, um die aktuelle Zeit zu speichern.
 
 .. code-block:: arduino
 
     unsigned long currentMillis = millis();
 
-When the interval between the current operating time and last updating time is larger than 1000ms, certain functions are triggered. Meanwhile, update the previousMillis to the current time for the next triggering that is to happen 1 second latter.  
+Wenn das Intervall zwischen der aktuellen Betriebszeit und der letzten Aktualisierungszeit größer als 1000ms ist, werden bestimmte Funktionen ausgelöst. Aktualisieren Sie gleichzeitig die previousMillis auf die aktuelle Zeit für das nächste Auslösen, das 1 Sekunde später erfolgen soll.  
 
 .. code-block:: arduino
 
     if (currentMillis - previousMillis >= interval) {
-        previousMillis = currentMillis;// save the last time of the last tone
+        previousMillis = currentMillis;// speichern Sie die letzte Zeit des letzten Tons
         //...
     }
 
-Play the notes in the melody one by one.
+Spielen Sie die Noten der Melodie nacheinander ab.
 
 .. code-block:: arduino
 
     tone(buzzerPin,melody[thisNote],100);
-    interval=1000/noteDurations[thisNote]; // interval at which to tone
-    thisNote=(thisNote+1)%(sizeof(melody)/2); //iterate over the notes of the melody
+    interval=1000/noteDurations[thisNote]; // Intervall zum Tönen
+    thisNote=(thisNote+1)%(sizeof(melody)/2); // Iterieren über die Noten der Melodie
 
-The button control the LED.
+Der Knopf steuert die LED.
 
 .. code-block:: arduino
 
-  // play button & led 
+  // Knopf & LED steuern 
   digitalWrite(ledPin,digitalRead(buttonPin));

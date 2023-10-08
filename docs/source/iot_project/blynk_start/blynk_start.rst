@@ -1,9 +1,10 @@
-1. Get Started with Blynk
+1. Erste Schritte mit Blynk
 =============================
 
-Getting the R3 board to communicate with Blynk requires some configuration when you first use Blynk.
+Um das R3-Board mit Blynk kommunizieren zu lassen, sind einige Konfigurationen erforderlich, wenn Sie Blynk zum ersten Mal verwenden.
 
-Follow the steps below, and note that you must do them in order and not skip any chapters.
+Befolgen Sie die unten aufgeführten Schritte und beachten Sie, dass Sie sie in der angegebenen Reihenfolge durchführen und keine Kapitel überspringen dürfen.
+
 
 .. toctree::
     :maxdepth: 2

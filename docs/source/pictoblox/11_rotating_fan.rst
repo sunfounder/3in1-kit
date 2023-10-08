@@ -1,47 +1,47 @@
 .. _sh_rotating_fan:
 
-2.11 Rotating Fan
-========================
+2.11 Drehender Ventilator
+============================
 
-In this project, we will make a spinning star sprite and fan.
+In diesem Projekt erstellen wir einen sich drehenden Sternsprite und Ventilator.
 
-Clicking on the left and right arrow sprites on the stage will control the clockwise and counterclockwise rotation of the motor and star sprite, click on the star sprite to stop the rotation.
+Durch Klicken auf die linken und rechten Pfeilsprites auf der Bühne wird die Uhrzeigersinn- und die Gegen-Uhrzeigersinn-Drehung des Motors und des Sternsprites gesteuert. Klicken Sie auf den Sternsprite, um die Drehung zu stoppen.
 
 .. image:: img/13_fan.png
 
-You Will Learn
----------------------
+Was Sie lernen werden
+-------------------------
 
-- Motor working principle
-- Broadcast function
-- Stop other script in sprite block
+- Arbeitsprinzip des Motors
+- Broadcast-Funktion
+- Block zum Stoppen anderer Skripte im Sprite
 
-Required Components
----------------------
+Benötigte Komponenten
+-------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die folgenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,52 +52,52 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110` 
         - \-
 
-Build the Circuit
+Schaltung aufbauen
 -----------------------
 
 .. image:: img/circuit/motor_circuit.png
 
-Programming
+Programmierung
 ------------------
-The effect we want to achieve is to use 2 arrow sprites to control the clockwise and counterclockwise rotation of the motor and the star sprite respectively, clicking on the star sprite will stop the motor from rotating.
+Das gewünschte Ergebnis ist, mit 2 Pfeilsprites die Uhrzeigersinn- und die Gegen-Uhrzeigersinn-Drehung des Motors und des Sternsprites zu steuern. Ein Klick auf den Sternsprite stoppt die Drehung des Motors.
 
-**1. Add sprites**
+**1. Sprites hinzufügen**
 
-Delete the default sprite, then select the **Star** sprite and the **Arrow1** sprite, and copy **Arrow1** once.
+Löschen Sie den Standardsprite, wählen Sie dann den **Star**-Sprite und den **Arrow1**-Sprite und kopieren Sie **Arrow1** einmal.
 
 .. image:: img/13_star.png
 
-In the **Costumes** option, change the **Arrow1** sprite to a different direction costume.
+Unter der Option **Costumes** ändern Sie den **Arrow1**-Sprite zu einem anderen Richtungskostüm.
 
 .. image:: img/13_star1.png
 
-Adjust the size and position of the sprite appropriately.
+Passen Sie die Größe und Position des Sprites entsprechend an.
 
 .. image:: img/13_star2.png
 
-**2. Left arrow sprite**
+**2. Linker Pfeil-Sprite**
 
-When this sprite is clicked, it broadcasts a message - turn, then sets digital pin 9 to low and pin 10 to high, and sets the variable **flag** to 1. If you click the left arrow sprite, you will find that the motor turns counterclockwise, if your turn is clockwise, then you swap the positions of pin 9 and pin 10.
+Wenn man auf diesen Sprite klickt, sendet er eine Nachricht - drehen, setzt dann den digitalen Pin 9 auf niedrig und Pin 10 auf hoch und setzt die Variable **flag** auf 1. Wenn Sie auf den linken Pfeil klicken, dreht sich der Motor gegen den Uhrzeigersinn. Wenn Ihre Drehung im Uhrzeigersinn ist, tauschen Sie die Positionen von Pin 9 und Pin 10.
 
-There are 2 points to note here.
+Zwei Dinge sind hier zu beachten:
 
-* `[broadcast <https://en.scratch-wiki.info/wiki/Broadcast>`_]: from the **Events** palette, used to broadcast a message to the other sprites, when the other sprites receive this message, it will perform a specific event. For example, here is **turn**, when the **star** sprite receives this message, it executes the rotation script.
-* variable flag: The direction of rotation of the star sprite is determined by the value of flag. So when you create the **flag** variable, you need to make it apply to all sprites.
+* `[broadcast <https://de.scratch-wiki.info/wiki/Broadcast>`_]: aus der **Events**-Palette, wird verwendet, um eine Nachricht an die anderen Sprites zu senden. Wenn die anderen Sprites diese Nachricht erhalten, führen sie ein bestimmtes Ereignis aus. Hier ist es **turn**. Wenn der **star**-Sprite diese Nachricht erhält, führt er das Dreh-Skript aus.
+* Variable flag: Die Drehrichtung des Sternsprites wird durch den Wert von flag bestimmt. Wenn Sie die Variable **flag** erstellen, müssen Sie sicherstellen, dass sie für alle Sprites gilt.
 
 .. image:: img/13_left.png
 
-**3. right-arrow sprite**
+**3. Rechter Pfeil-Sprite**
 
-When this sprite is clicked, broadcast a message turn, then set digital pin 9 high and pin 10 low to make the motor turn clockwise and set the **flag** variable to 0.
+Wenn Sie auf diesen Sprite klicken, senden Sie eine Nachricht zum Drehen, setzen Sie dann den digitalen Pin 9 hoch und Pin 10 niedrig, damit sich der Motor im Uhrzeigersinn dreht und setzen Sie die Variable **flag** auf 0.
 
 .. image:: img/13_right.png
 
-**4. star sprite**
+**4. Stern-Sprite**
 
-There are 2 events included here.
+Hier sind 2 Ereignisse enthalten:
 
-* When the **star** sprite receives the broadcasted message turn, it determines the value of flag; if flag is 1, it turns 10 degrees to the left, otherwise it reverses. Since it is in [FOREVER], it will keep turning.
-* When this sprite is clicked, set both pins of the motor to high to make it stop rotating and stop the other scripts in this sprite.
+* Wenn der **star**-Sprite die gesendete Nachricht zum Drehen empfängt, bestimmt er den Wert von flag; ist flag 1, dreht er sich 10 Grad nach links, sonst umgekehrt. Da es sich im [FOREVER]-Block befindet, wird es weiter drehen.
+* Wenn Sie auf diesen Sprite klicken, setzen Sie beide Pins des Motors auf hoch, um ihn zu stoppen und stoppen die anderen Skripte in diesem Sprite.
 
 .. image:: img/13_broadcast.png
 

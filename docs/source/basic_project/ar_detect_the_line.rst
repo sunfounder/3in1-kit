@@ -1,40 +1,40 @@
 .. _ar_line_track:
 
-3.4 Detect the Line
+3.4 Linie erkennen
 ===================================
 
-The line tracking module is used to detect whether there are black areas on the ground, such as black lines pasted with electrical tape.
+Das Linienverfolgungsmodul wird verwendet, um festzustellen, ob es schwarze Bereiche auf dem Boden gibt, wie zum Beispiel schwarze Linien, die mit Isolierband geklebt wurden.
 
-One of its LEDs emits appropriate infrared light to the ground, and the black surface has a relatively strong ability to absorb light and a weaker reflection ability. White surfaces are the opposite.
-If it detects reflected light, it means the ground is currently white. If not detected, it means black.
+Eine seiner LEDs sendet infrarotes Licht zum Boden, und die schwarze Oberfläche hat eine relativ starke Fähigkeit, Licht zu absorbieren und eine schwächere Reflexionsfähigkeit. Weiße Oberflächen verhalten sich genau umgekehrt.
+Wenn reflektiertes Licht erkannt wird, bedeutet dies, dass der Boden aktuell weiß ist. Wird keines erkannt, ist er schwarz.
 
-That's how it works.
+So funktioniert es.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Set zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Sie können diese auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,15 +43,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/circuit_3.4_line.png
 
-The digital pin 2 is used to read the
-signal of line track module. We get the VCC of the module connected to 5V, 
-GND to GND, OUT to digital pin 2.
+Der digitale Pin 2 wird verwendet, um das Signal des Linienverfolgungsmoduls zu lesen. Das VCC des Moduls ist mit 5V verbunden, GND mit GND und OUT mit dem digitalen Pin 2.
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/detect_the_line_bb.jpg
     :width: 500
@@ -61,14 +59,13 @@ GND to GND, OUT to digital pin 2.
 
 .. note::
 
-   * You can open the file ``3.4.detect_the_line.ino`` under the path of ``3in1-kit\basic_project\3.4.detect_the_line``. 
-   * Or copy this code into **Arduino IDE**.
+   * Sie können die Datei ``3.4.detect_the_line.ino`` unter dem Pfad ``3in1-kit\basic_project\3.4.detect_the_line`` öffnen.
+   * Oder kopieren Sie diesen Code in die **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+   * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9795add6-c838-4a66-b484-0c39f252a7b4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the line tracking module detects there is black line, there appears [1] on the Serial Monitor; otherwise, [0] is displayed.
+Wenn das Linienverfolgungsmodul eine schwarze Linie erkennt, wird [1] auf dem seriellen Monitor angezeigt. Andernfalls wird [0] dargestellt.

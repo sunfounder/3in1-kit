@@ -2,16 +2,16 @@ Components List and Introduction
 ====================================
 
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Nach dem Öffnen des Pakets überprüfen Sie bitte, ob die Anzahl der Komponenten mit der Produktbeschreibung übereinstimmt und ob alle Komponenten in gutem Zustand sind.
 
 .. image:: img/components_list.jpg
     :width: 800
     :align: center
 
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+Im Folgenden wird jede Komponente vorgestellt, einschließlich des Funktionsprinzips der Komponente und der zugehörigen Projekte.
 
-**Control Board**
+**Steuerplatine**
 
 .. toctree::
     :maxdepth: 1
@@ -22,7 +22,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Basic**
+**Grundlagen**
 
 .. toctree::
     :maxdepth: 1
@@ -40,8 +40,7 @@ Below is the introduction to each component, which contains the operating princi
     component_74hc595
 
 
-
-**Display**
+**Anzeige**
 
 .. toctree::
     :maxdepth: 1
@@ -52,14 +51,14 @@ Below is the introduction to each component, which contains the operating princi
     component_i2c_lcd
 
 
-**Sound**
+**Ton**
 
 .. toctree::
     :maxdepth: 1
 
     component_buzzer
 
-**Driver**
+**Treiber**
 
 .. toctree::
     :maxdepth: 1

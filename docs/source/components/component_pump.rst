@@ -1,35 +1,33 @@
 .. _cpn_pump:
 
-Centrifugal Pump
+Kreiselpumpe
 ================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+Die Kreiselpumpe wandelt Rotationskinetik in hydrodynamische Energie um, um Flüssigkeiten zu transportieren. Die Rotationsenergie stammt aus dem Elektromotor. Die Flüssigkeit tritt entlang oder in der Nähe der rotierenden Welle in das Pumpenlaufrad ein, wird vom Laufrad beschleunigt, fließt radial nach außen in die Diffusor- oder Spiralgehäusekammer und strömt von dort aus weiter.
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
+Typische Anwendungen von Kreiselpumpen sind das Pumpen von Wasser, Abwasser, in der Landwirtschaft, für Erdöl und Petrochemie.
 
+* `Kreiselpumpe - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
 
-* `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
+**Merkmale**
+    * **Spannungsbereich**: DC 3 ~ 4,5V
+    * **Betriebsstrom**: 120 ~ 180mA
+    * **Leistung**: 0,36 ~ 0,91W
+    * **Max. Förderhöhe**: 0,35 ~ 0,55M
+    * **Max. Durchflussrate**: 80 ~ 100 L/H
+    * **Dauerbetriebszeit**: 100 Stunden
+    * **Wasserschutzklasse**: IP68
+    * **Antriebsart**: DC, magnetischer Antrieb
+    * **Material**: Technischer Kunststoff
+    * **Außendurchmesser des Auslasses**: 7,8 mm
+    * **Innendurchmesser des Auslasses**: 6,5 mm
+    * Es handelt sich um eine Tauchpumpe, die auch so verwendet werden sollte. Bei oberirdischem Betrieb kann sie sich so stark erhitzen, dass Überhitzungsgefahr besteht.
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**Beispiel**
 
-**Example**
-
-* :ref:`ar_pump` (Basic Project)
-* :ref:`iot_plant` (IoT Project)
-
+* :ref:`ar_pump` (Grundlegendes Projekt)
+* :ref:`iot_plant` (IoT-Projekt)

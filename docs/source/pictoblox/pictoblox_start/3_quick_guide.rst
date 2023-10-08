@@ -1,11 +1,11 @@
 .. _sh_guide:
 
-1.3 Quick Guide on PictoBlox
+1.3 Schnellanleitung zu PictoBlox
 ====================================
 
-Now let's learn how to use PictoBlox in two modes.
+Lernen wir nun, wie man PictoBlox in zwei Modi verwendet.
 
-Also, there is an On-board LED connected to Pin 13 on the R3 board, we will learn to make this LED blink in 2 different modes.
+Es gibt auch eine On-Board-LED, die an Pin 13 auf dem R3-Board angeschlossen ist. Wir werden lernen, wie man diese LED in 2 verschiedenen Modi blinken lässt.
 
 .. image:: img/1_led.jpg
     :width: 500
@@ -13,177 +13,176 @@ Also, there is an On-board LED connected to Pin 13 on the R3 board, we will lear
 
 .. _stage_mode:
 
-Stage Mode
+Bühnenmodus
 ---------------
 
-**1. Connect to Arduino Board**
+**1. Verbindung mit dem Arduino-Board**
 
-Connect your Arduino board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+Schließen Sie Ihr Arduino-Board mit einem USB-Kabel an den Computer an. In der Regel wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
 
-Open PictoBlox, the Python programming interface will open by default. And we need to switch to the Blocks interface.
+Öffnen Sie PictoBlox. Die Python-Programmierschnittstelle wird standardmäßig geöffnet. Wir müssen zur Blocks-Schnittstelle wechseln.
 
 .. image:: img/0_choose_blocks.png
 
-Then you will see the top right corner for mode switching. The default is Stage mode, where Tobi is standing on the stage.
+Dann sehen Sie in der oberen rechten Ecke die Option zum Wechseln des Modus. Standardmäßig ist der Bühnenmodus aktiviert, auf dem Tobi auf der Bühne steht.
 
 .. image:: img/1_stage_upload.png
 
-Click **Board** in the upper right navigation bar to select the board.
+Klicken Sie in der oberen rechten Navigationsleiste auf **Board**, um das Board auszuwählen.
 
 .. image:: img/1_board.png
 
-For example, choose **Arduino Uno**.
+Wählen Sie zum Beispiel **Arduino Uno**.
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+Ein Verbindungsfenster wird geöffnet, in dem Sie den zu verbindenden Port auswählen können. Kehren Sie zur Startseite zurück, wenn die Verbindung hergestellt ist. Wenn Sie die Verbindung während des Gebrauchs unterbrechen, können Sie auch auf **Connect** klicken, um erneut eine Verbindung herzustellen.
 
 .. image:: img/1_connect.png
 
-At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
+Gleichzeitig erscheinen im **Block Palette** palettenbezogene Elemente, wie Arduino Uno, Aktuatoren usw.
 
 .. image:: img/1_arduino_uno.png
 
-**2. Upload Firmware**
+**2. Firmware hochladen**
 
-Since we're going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+Da wir im Bühnenmodus arbeiten möchten, müssen wir die Firmware auf das Board hochladen. Dies gewährleistet die Echtzeitkommunikation zwischen dem Board und dem Computer. Das Hochladen der Firmware ist ein einmaliger Vorgang. Klicken Sie dazu auf die Schaltfläche Firmware hochladen.
 
-After waiting for a while, the upload success message will appear.
+Nach einer kurzen Wartezeit wird die Erfolgsmeldung zum Hochladen angezeigt.
 
 .. note::
 
-    If you are using this Arduino board in PictoBlox for the first time, or if this Arduino was previously uploaded with the Arduino IDE. Then you need to tap **Upload Firmware** before you can use it.
-
+    Wenn Sie dieses Arduino-Board zum ersten Mal in PictoBlox verwenden oder wenn dieses Arduino zuvor mit der Arduino IDE hochgeladen wurde, müssen Sie auf **Upload Firmware** tippen, bevor Sie es verwenden können.
 
 .. image:: img/1_firmware.png
 
+**3. Programmierung**
 
-**3. Programming**
+* Skript direkt öffnen und ausführen
 
-* Open and run the script directly
+Natürlich können Sie die Skripte direkt öffnen und ausführen, aber laden Sie sie bitte zuerst von `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ herunter.
 
-Of course, you can open the scripts directly to run them, but please download them from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ first.
-
-You can click on **File** in the top right corner and then choose **Open**.
+Sie können auf **File** in der oberen rechten Ecke klicken und dann **Open** auswählen.
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+Wählen Sie **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``3in1-kit\scratch_project\code``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Navigieren Sie dann zu ``3in1-kit\scratch_project\code`` und öffnen Sie **1. Stage Mode.sb3**. Stellen Sie sicher, dass Sie den benötigten Code von `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben.
 
 .. image:: img/0_stage.png
 
-Click directly on the script to run it, some projects are click on the green flag or click on the sprite.
+Klicken Sie direkt auf das Skript, um es auszuführen. Bei manchen Projekten klicken Sie auf die grüne Flagge oder auf das Sprite.
 
 .. image:: img/1_more.png
 
-* Program step by step
+* Schritt-für-Schritt-Programmierung
 
-You can also write the script step by step by following these steps.
+Sie können das Skript auch Schritt für Schritt schreiben, indem Sie diesen Anweisungen folgen.
 
-Click on the **Arduino Uno** palette.
+Klicken Sie auf die **Arduino Uno**-Palette.
 
 .. image:: img/1_arduino_uno.png
 
-The LED on the Arduino board is controlled by the digital pin 13 (only 2 states, HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+Die LED auf dem Arduino-Board wird vom digitalen Pin 13 gesteuert (nur 2 Zustände, HIGH oder LOW). Ziehen Sie den Block [set digital pin out as] in den Skriptbereich.
 
-Since the default state of the LED is lit, now set pin 13 to LOW and click on this block and you will see the LED go off.
+Da der Standardzustand der LED leuchtet, setzen Sie jetzt Pin 13 auf LOW und klicken Sie auf diesen Block. Sie werden sehen, dass die LED erlischt.
 
-* [set digital pin out as]: Set the digital pins (2~13) to (HIGH/LOW) level.
+* [set digital pin out as]: Setzt die digitalen Pins (2~13) auf (HIGH/LOW) Level.
 
 .. image:: img/1_digital.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+Um den Effekt der kontinuierlich blinkenden LED zu sehen, müssen Sie die Blöcke [Wait 1 seconds] und [forever] aus der **Control**-Palette verwenden. Wenn Sie auf diese Blöcke nach dem Schreiben klicken, zeigt ein gelber Halo, dass sie ausgeführt werden.
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless manually paused.
+* [Wait 1 seconds]: aus der **Control**-Palette, dient zum Festlegen des Zeitintervalls zwischen 2 Blöcken.
+* [forever]: aus der **Control**-Palette, ermöglicht es dem Skript, kontinuierlich zu laufen, es sei denn, es wird manuell pausiert.
 
 .. image:: img/1_more.png
 
+
 .. _upload_mode:
 
-Upload Mode
----------------
+Hochlade-Modus
+-----------------
 
-**1. Connect to Arduino Board**
+**1. Verbindung zum Arduino-Board herstellen**
 
-Connect your Arduino board to the computer with a USB cable, usually the computer will automatically recognize your board and finally assign a COM port.
+Verbinden Sie Ihr Arduino-Board über ein USB-Kabel mit dem Computer. In der Regel wird der Computer Ihr Board automatisch erkennen und schließlich einen COM-Port zuweisen.
 
-Open PictoBlox and click **Board** in the top right navigation bar to select the board.
+Öffnen Sie PictoBlox und klicken Sie in der oberen rechten Navigationsleiste auf **Board**, um das Board auszuwählen.
 
 .. image:: img/1_board.png
 
-For example, choose **Arduino Uno**.
+Wählen Sie beispielsweise **Arduino Uno**.
 
 .. image:: img/1_choose_uno.png
 
-A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
+Ein Verbindungsfenster wird geöffnet, in dem Sie den Port zum Verbinden auswählen können. Nach Abschluss der Verbindung kehren Sie zur Startseite zurück. Wenn die Verbindung während der Nutzung unterbrochen wird, können Sie auch auf **Connect** klicken, um sie wiederherzustellen.
 
 .. image:: img/1_connect.png
 
-At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
+Gleichzeitig werden im **Block Palette** Paletten in Bezug auf Arduino Uno, wie z.B. Arduino Uno, Aktuatoren usw., angezeigt.
 
 .. image:: img/1_upload_uno.png
 
-After selecting Upload mode, the stage will switch to the original Arduino code area.
+Nach der Auswahl des Hochlade-Modus wird die Bühne zum ursprünglichen Arduino-Codebereich wechseln.
 
 .. image:: img/1_upload.png
 
-**2. Programming**
+**2. Programmierung**
 
-* Open and run the script directly
+* Skript direkt öffnen und ausführen
 
-You can click on **File** in the top right corner.
+Sie können in der oberen rechten Ecke auf **File** klicken.
 
 .. image:: img/0_open.png
 
-Choose **Open from Computer**.
+Wählen Sie **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``3in1-kit\scratch_project\code``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Navigieren Sie dann zum Pfad ``3in1-kit\scratch_project\code`` und öffnen Sie **1. Upload Mode.sb3**. Stellen Sie sicher, dass Sie den erforderlichen Code von `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_ heruntergeladen haben.
 
 .. image:: img/0_upload.png
 
-Finally, click the **Upload Code** button.
+Klicken Sie abschließend auf die Schaltfläche **Upload Code**.
 
 .. image:: img/1_upload_code.png
 
 
-* Program step by step
+* Programmierung Schritt für Schritt
 
-You can also write the script step by step by following these steps.
+Sie können das Skript auch Schritt für Schritt schreiben, indem Sie diesen Anweisungen folgen.
 
-Click on the **Arduino Uno** palette.
+Klicken Sie auf die **Arduino Uno**-Palette.
 
 .. image:: img/1_upload_uno.png
 
-Drag [when Arduino Uno starts up] to the script area, which is required for every script.
+Ziehen Sie [when Arduino Uno starts up] in den Skriptbereich. Dies ist für jedes Skript erforderlich.
 
 .. image:: img/1_uno_starts.png
 
-The LED on the Arduino board is controlled by the digital pin13 (only 2 states HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
+Die LED auf dem Arduino-Board wird durch den digitalen Pin13 gesteuert (nur 2 Zustände HIGH oder LOW). Ziehen Sie also den Block [set digital pin out as] in den Skriptbereich.
 
-Since the default state of the LED is lit, now set pin 13 to LOW and click on this block and you will see the LED go off.
+Da der Standardzustand der LED beleuchtet ist, stellen Sie Pin 13 jetzt auf LOW und klicken Sie auf diesen Block. Sie werden sehen, dass die LED erlischt.
 
-* [set digital pin out as]: Set the digital pin (2~13) to (HIGH/LOW) level.
+* [set digital pin out as]: Setzt den digitalen Pin (2~13) auf den (HIGH/LOW) Zustand.
 
 .. image:: img/1_upload_digital.png
 
-At this point you will see the Arduino code appear on the right side, if you want to edit this code, then you can turn Edit mode on.
+An diesem Punkt wird der Arduino-Code auf der rechten Seite angezeigt. Wenn Sie diesen Code bearbeiten möchten, können Sie den Bearbeitungsmodus aktivieren.
 
 .. image:: img/1_upload1.png
 
-In order to see the effect of continuous blinking LED, you need to use the [Wait 1 seconds] and [forever] blocks in the **Control** palette. Click on these blocks after writing, there is a yellow halo means it is running.
+Um den Effekt einer kontinuierlich blinkenden LED zu sehen, müssen Sie die [Wait 1 seconds] und [forever] Blöcke aus der **Control**-Palette verwenden. Klicken Sie nach dem Schreiben auf diese Blöcke. Ein gelber Halo bedeutet, dass sie ausgeführt werden.
 
-* [Wait 1 seconds]: from the **Control** palette, used to set the time interval between 2 blocks.
-* [forever]: from the **Control** palette, allows the script to keep running unless the power is off.
+* [Wait 1 seconds]: aus der **Control**-Palette, um das Zeitintervall zwischen 2 Blöcken festzulegen.
+* [forever]: aus der **Control**-Palette, lässt das Skript laufen, es sei denn, die Stromversorgung wird unterbrochen.
 
 .. image:: img/1_upload_more.png
 
-Finally, click the **Upload Code** button.
+Klicken Sie abschließend auf die Schaltfläche **Upload Code**.
 
 .. image:: img/1_upload_code.png

@@ -1,31 +1,29 @@
 .. _cpn_button:
 
-Button
+Knopf
 ==========
 
 .. image:: img/button_1212.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Knöpfe sind eine gängige Komponente zur Steuerung von elektronischen Geräten. Sie werden üblicherweise als Schalter verwendet, um Schaltkreise zu verbinden oder zu unterbrechen. Obwohl es Knöpfe in verschiedenen Größen und Formen gibt, handelt es sich bei dem hier verwendeten um einen 6mm Mini-Knopf, wie auf den folgenden Bildern gezeigt. Pin 1 ist mit Pin 2 und Pin 3 mit Pin 4 verbunden. Sie müssen also nur entweder Pin 1 oder Pin 2 mit Pin 3 oder Pin 4 verbinden.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+Das Folgende zeigt den inneren Aufbau eines Knopfes. Das Symbol auf der rechten Seite unten wird normalerweise verwendet, um einen Knopf in Schaltkreisen darzustellen.
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Da Pin 1 mit Pin 2 und Pin 3 mit Pin 4 verbunden ist, werden beim Drücken des Knopfes die 4 Pins verbunden, wodurch der Schaltkreis geschlossen wird.
 
 .. image:: img/button_1212_size.png
     :width: 600
     :align: center
 
-**Example**
+**Beispiel**
 
-* :ref:`ar_button` (Basic Project)
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
-
+* :ref:`ar_button` (Grundlegendes Projekt)
+* :ref:`sh_doorbell` (Scratch-Projekt)
+* :ref:`sh_eat_apple` (Scratch-Projekt)
+* :ref:`sh_fishing` (Scratch-Projekt)

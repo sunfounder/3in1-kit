@@ -1,42 +1,39 @@
-
 .. _car_speed:
 
-3. Speed Up
+3. Beschleunigung
 ===================
 
-In addition to the digital signal (HIGH/LOW), the input of L9110 module can also receive PWM signal to control the speed of the output.
+Neben dem digitalen Signal (HOCH/NIEDRIG) kann der Eingang des L9110-Moduls auch ein PWM-Signal empfangen, um die Geschwindigkeit des Ausgangs zu steuern.
 
-In other words, we can use ``AnalogWrite()`` to control the moving speed of the car.
+Mit anderen Worten, wir können ``AnalogWrite()`` verwenden, um die Bewegungsgeschwindigkeit des Autos zu steuern.
 
-In this project, we let the car gradually change its forward speed, first accelerating and then decelerating.
+In diesem Projekt lassen wir das Auto seine Vorwärtsgeschwindigkeit allmählich ändern, zuerst beschleunigen und dann abbremsen.
 
+**Verdrahtung**
 
-**Wiring**
-
-This project is the same wiring as :ref:`car_move_code`.
+Dieses Projekt hat die gleiche Verdrahtung wie :ref:`car_move_code`.
 
 **Code**
 
 .. note::
 
-    * Open the ``3.speed_up.ino`` file under the path of ``3in1-kit\car_project\3.speed_up``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``3.speed_up.ino`` im Pfad ``3in1-kit\car_project\3.speed_up``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oder laden Sie den Code über den `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_ hoch.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c15276c1-2359-4de6-ac82-a14a72e041c6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the program runs, the car will gradually accelerate and then gradually decelerate.
+Nachdem das Programm läuft, wird das Auto allmählich beschleunigen und dann allmählich abbremsen.
 
-**How it works?**
+**Wie funktioniert das?**
 
-The purpose of this project is to write different PWM values to the input pins of the L9110 module to control the forward speed of the car.
+Das Ziel dieses Projekts ist es, verschiedene PWM-Werte an die Eingangspins des L9110-Moduls zu schreiben, um die Vorwärtsgeschwindigkeit des Autos zu steuern.
 
-
-#. Use the ``for()`` statement to give ``speed`` in steps of 5, writing values from 0 to 255 so you can see the change in the car's forward speed.
+#. Verwenden Sie die ``for()`` Anweisung, um ``speed`` in Schritten von 5 zu geben, wobei Werte von 0 bis 255 geschrieben werden, sodass Sie die Änderung der Vorwärtsgeschwindigkeit des Autos sehen können.
 
     .. code-block:: arduino
 
@@ -51,9 +48,9 @@ The purpose of this project is to write different PWM values to the input pins o
             }
         }
 
-#. About the ``moveForward()`` function.
+#. Über die Funktion ``moveForward()``.
 
-    As opposed to :ref:`car_move_code` which directly gives high/low levels to the input pins of the L9110 module, here we pass a parameter ``speed`` to where we need to give high levels.
+    Im Gegensatz zu :ref:`car_move_code`, welcher direkt hohe/niedrige Pegel an die Eingangspins des L9110-Moduls gibt, übergeben wir hier einen Parameter ``speed`` an die Stellen, an denen wir hohe Pegel geben müssen.
 
     .. code-block:: arduino
 
@@ -67,14 +64,14 @@ The purpose of this project is to write different PWM values to the input pins o
 
 * `for <https://www.arduino.cc/reference/en/language/structure/control-structure/for/>`_
 
-The ``for`` statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop. 
+Die ``for``-Anweisung wird verwendet, um einen Block von Anweisungen, der von geschweiften Klammern eingeschlossen ist, zu wiederholen. Ein Inkrementzähler wird normalerweise verwendet, um die Schleife zu inkrementieren und zu beenden.
 
     .. code-block:: arduino
 
-        for (initialization; condition; increment) {
-        // statement(s);
+        for (Initialisierung; Bedingung; Inkrement) {
+        // Anweisung(en);
         }
 
-    * ``initialization``: happens first and exactly once.
-    * ``condition``: each time through the loop, condition is tested; if it's true, the statement block, and the increment is executed, then the condition is tested again. When the condition becomes false, the loop ends.
-    * ``increment``: executed each time through the loop when condition is true.
+    * ``Initialisierung``: erfolgt zuerst und genau einmal.
+    * ``Bedingung``: Bei jedem Durchlauf der Schleife wird die Bedingung geprüft; wenn sie wahr ist, wird der Anweisungsblock und das Inkrement ausgeführt, dann wird die Bedingung erneut geprüft. Wenn die Bedingung falsch wird, endet die Schleife.
+    * ``Inkrement``: wird bei jedem Schleifendurchlauf ausgeführt, wenn die Bedingung wahr ist.

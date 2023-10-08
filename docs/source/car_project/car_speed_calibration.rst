@@ -1,51 +1,46 @@
 .. _speed_calibration:
 
-11. Speed Calibration
-===========================
+11. Geschwindigkeitskalibrierung
+==============================================
 
-In getting the car to move forward, you may find that the car does not travel in a straight line.
-This is because the two motors may not have the same speed at the factory. 
-But we can write offset to the two motors to make their rotational speeds converge.
+Beim Vorwärtsbewegen des Autos stellen Sie möglicherweise fest, dass das Auto nicht geradeaus fährt. 
+Das liegt daran, dass die beiden Motoren möglicherweise ab Werk nicht die gleiche Geschwindigkeit haben. 
+Wir können jedoch einen Ausgleich für die beiden Motoren schreiben, damit sich ihre Drehgeschwindigkeiten angleichen.
 
-In this project, 
-we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, the point of this is that after each calibration, 
-all projects can get the offset value directly from the EEPROM, 
-so that the car can go in a straight line smoothly.
+In diesem Projekt 
+werden wir lernen, den Ausgleich in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ zu speichern. Der Sinn dahinter ist, dass nach jeder Kalibrierung 
+alle Projekte den Ausgleichswert direkt aus dem EEPROM abrufen können, 
+damit das Auto reibungslos geradeaus fährt.
 
+**Verdrahtung**
 
-**Wiring**
+Dieses Projekt hat die gleiche Verdrahtung wie :ref:`car_move_code`.
 
-This project is the same wiring as :ref:`car_move_code`.
+**Wie spielt man?**
 
-
-
-**How to play?**
-
-1. Open the ``11.speed_calibration.ino`` file under the path of ``3in1-kit\car_project\11.speed_calibration``. Or copy this code into **Arduino IDE**.
+1. Öffnen Sie die Datei ``11.speed_calibration.ino`` im Pfad ``3in1-kit\car_project\11.speed_calibration``. Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/66dc7ee5-31a5-418e-9aa2-43e7820cf5e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+2. Nachdem der Code erfolgreich hochgeladen wurde, verbinden Sie das Auto mit einer 9V-Batterie, stellen Sie es auf den Boden und lassen Sie es vorwärts fahren, um zu sehen, zu welcher Seite es verschoben ist.
 
-2. After the code is uploaded successfully, connect the car with 9V battery, put it on the ground and let it move forward to see which side it is offset to.
-
-* If the car moves to the left front, it means the right motor speed is too fast and needs to be reduced.
-
-    .. code-block:: arduino
-
-        EEPROM.write(1, 100) // 1 means the right motor, 100 means 100% speed, can be set to 90, 95, etc., depending on the actual situation.
-
-* If the car moves to the right, it means the left motor speed is too fast and needs to be reduced.
+* Wenn das Auto nach links vorne fährt, bedeutet das, dass die Geschwindigkeit des rechten Motors zu hoch ist und reduziert werden muss.
 
     .. code-block:: arduino
 
-        EEPROM.write(0, 100) // 0 means the right motor, 100 means the speed is 100%, can be set to 90, 95, etc., depending on the actual situation. 3.
+        EEPROM.write(1, 100) // 1 bedeutet der rechte Motor, 100 bedeutet 100% Geschwindigkeit, kann je nach tatsächlicher Situation auf 90, 95 usw. gesetzt werden.
 
-3. After modifying the code, upload the code to R3 board to see the effect. Repeat the above steps until the car is almost straight.
+* Wenn das Auto nach rechts fährt, bedeutet das, dass die Geschwindigkeit des linken Motors zu schnell ist und reduziert werden muss.
 
-4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
+    .. code-block:: arduino
 
+        EEPROM.write(0, 100) // 0 bedeutet der linke Motor, 100 bedeutet die Geschwindigkeit beträgt 100%, kann je nach tatsächlicher Situation auf 90, 95 usw. gesetzt werden.
+
+3. Nach der Code-Änderung laden Sie den Code auf das R3-Board hoch, um die Wirkung zu sehen. Wiederholen Sie die obigen Schritte, bis das Auto fast gerade fährt.
+
+4. Dieser Ausgleich wird in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ aufgezeichnet. Sie müssen diesen Ausgleich nur abrufen, wenn Sie ihn in anderen Projekten verwenden, nehmen Sie :ref:`car_ir_obstacle` als Beispiel.
 
 .. code-block:: arduino
     :emphasize-lines: 1,3,4,27,28,50,51
