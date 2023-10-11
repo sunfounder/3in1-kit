@@ -1,6 +1,18 @@
 SunFounder 3 in 1 IoT/Smart Car/Learning Kit
 ==================================================
 
+Thanks for choosing our 3 in 1 starter kit.
+
+.. note::
+    This document is available in the following languages.
+
+        * |link_german_tutorials|
+        * |link_jp_tutorials|
+        * |link_en_tutorials|
+    
+    Please click on the respective links to access the document in your preferred language.
+
+
 .. image:: img/3in_kit.png
     :width: 800
 
