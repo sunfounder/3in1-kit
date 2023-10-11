@@ -62,6 +62,16 @@ html_css_files = [
 
 #### RTD+
 
+html_js_files = [
+    'https://ezblock.cc/readDocFile/custom.js',
+    './lang.js', # new
+]
+html_css_files = [
+    'https://ezblock.cc/readDocFile/custom.css',
+]
+
+
+
 # html_js_files = [
 #     'https://ezblock.cc/readDocFile/custom.js',
 #     'https://ezblock.cc/readDocFile/readTheDoc/src/js/ace.js',
