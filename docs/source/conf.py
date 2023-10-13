@@ -327,7 +327,7 @@ rst_epilog += """
 
 .. |link_jp_tutorials| raw:: html
 
-    <a href="https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/" target="_blank">日本語オンライン教材</a>
+    <a href="https://docs.sunfounder.com/projects/3in1-kit-r4/ja/latest/" target="_blank">日本語オンライン教材</a>
 
 .. |link_en_tutorials| raw:: html
 
