@@ -1,5 +1,16 @@
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
+SunFounder 3 in 1 Starter Kit
 ==================================================
+
+Thanks for choosing our 3 in 1 Starter Kit.
+
+.. note::
+    This document is available in the following languages.
+
+        * |link_german_tutorials|
+        * |link_jp_tutorials|
+        * |link_en_tutorials|
+    
+    Please click on the respective links to access the document in your preferred language.
 
 .. image:: img/3in_kit_r4.png
     :width: 800
@@ -17,12 +28,6 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 Come on! Start programing Arduino with confidence from zero to hero!
 
 If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
-
-**About the display language**
-
-This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
-
-.. image:: img/translation.png
     
 .. toctree::
     :maxdepth: 2
