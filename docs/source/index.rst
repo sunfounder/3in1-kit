@@ -4,13 +4,13 @@ SunFounder 3-in-1 Starterkit
 Vielen Dank für die Auswahl unseres 3-in-1 Starterkits.
 
 .. note::
-    This document is available in the following languages.
+    Dieses Dokument ist in den folgenden Sprachen verfügbar.
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
     
-    Please click on the respective links to access the document in your preferred language.
+    Bitte klicken Sie auf die jeweiligen Links, um das Dokument in Ihrer bevorzugten Sprache aufzurufen.
 
 .. image:: img/3in_kit_r4.png
     :width: 800
