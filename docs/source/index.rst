@@ -1,5 +1,16 @@
-SunFounder 3 in 1 IoT/スマートカー/学習キット
+SunFounder 3-in-1スターターキットには
 ==================================================
+
+当ててくれてありがとう。私たちの3-in-1スターターキットを選んでいただきました。
+
+.. note::
+    このドキュメントは以下の言語で利用可能です。
+
+        * |link_german_tutorials|
+        * |link_jp_tutorials|
+        * |link_en_tutorials|
+
+    ご希望の言語でドキュメントにアクセスするために、それぞれのリンクをクリックしてください。
 
 .. image:: img/3in_kit_r4.png
     :width: 800
@@ -18,11 +29,6 @@ SunFounder 3 in 1 IoT/スマートカー/学習キット
 
 質問や他の興味深いアイディアがあれば、お気軽に service@sunfounder.com までメールを送ってください。
 
-**表示言語について**
-
-このドキュメントは他の言語でも利用可能です。表示言語を切り替えるには、ページの左下隅にある **Read the Docs** アイコンをクリックしてください。
-
-.. image:: img/translation.png
     
 .. toctree::
     :maxdepth: 2
