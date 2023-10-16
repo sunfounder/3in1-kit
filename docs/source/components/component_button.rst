@@ -18,7 +18,7 @@
 
 ピン1がピン2に、ピン3がピン4に接続されているため、ボタンが押されると、4つのピンが接続され、回路が閉じます。
 
-.. image:: img/button2.png
+.. image:: img/button_1212_size.png
     :width: 600
     :align: center
 
