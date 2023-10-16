@@ -55,10 +55,6 @@ At this time, the 10K resistor plays a protective role, so that 5V and GND are n
 If you place the photoresistor in a dark situation, the value of pin A0 will decrease. 
 In a dark enough situation, the resistance of the photoresistor will be infinite, and its voltage will be close to 5V (the 10K resistor is negligible), and the value of pin A0 will be close to 0.
 
-The calculation formula is shown below.
-
-    (Vp/5V) x 1023 = Ap
-
 **Wiring**
 
 .. image:: img/4.2_feel_the_light_bb.png
