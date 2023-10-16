@@ -52,10 +52,6 @@ Wenn das Licht verstärkt wird, verringert sich der Widerstand des Fotowiderstan
 
 Wenn Sie den Fotowiderstand in einer dunklen Situation platzieren, wird der Wert von Pin A0 sinken. Ist es dunkel genug, wird der Widerstand des Fotowiderstands unendlich sein, und seine Spannung wird nahe 5V liegen (der 10K-Widerstand ist vernachlässigbar), und der Wert von Pin A0 wird nahe 0 liegen.
 
-Die Berechnungsformel lautet:
-
-    (Vp/5V) x 1023 = Ap
-
 **Verdrahtung**
 
 .. image:: img/4.2_feel_the_light_bb.png
