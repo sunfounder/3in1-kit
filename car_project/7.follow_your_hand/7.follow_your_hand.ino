@@ -21,6 +21,10 @@ void setup() {
   //IR obstacle
   pinMode(leftIR,INPUT);
   pinMode(rightIR,INPUT);
+
+  //ultrasonic
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
 }
 
 void loop() {
