@@ -3,7 +3,6 @@
 #include <IRremote.h>
 
 const int IR_RECEIVE_PIN = 5;  // Define the pin number for the IR Sensor
-String lastDecodedValue = "";  // Variable to store the last decoded value
 
 const long interval = 1000;
 
@@ -20,7 +19,6 @@ int lower = 0;/*Lower Limit Tips*/
 void setup() {
   lcd.init();
   lcd.backlight();
-  Serial.begin(9600);
   Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
   IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
   initNewValue();
@@ -30,9 +28,8 @@ void loop() {
   if (IrReceiver.decode()) {
     bool result = 0;
     String num = decodeKeyValue(IrReceiver.decodedIRData.command);
-    if (num != "ERROR" && num != lastDecodedValue) {
+    if (num != "ERROR") {
       Serial.println(num);
-      lastDecodedValue = num;  // Update the last decoded value
     }
 
     if (num == "POWER") {
