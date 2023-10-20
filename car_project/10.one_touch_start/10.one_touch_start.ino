@@ -1,11 +1,10 @@
 #include <IRremote.h>
 
 const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-String lastDecodedValue = "";   // Variable to store the last decoded value
 
-const int A_1B = 5;  
+const int A_1B = 5;
 const int A_1A = 6;
-const int B_1B = 9;  
+const int B_1B = 9;
 const int B_1A = 10;
 
 const int echoPin = 4;
@@ -15,7 +14,6 @@ const int rightIR = 7;
 const int leftIR = 8;
 
 const int lineTrackPin = 2;
-const int ledPin = 13;
 
 int speed = 150;
 String flag = "NONE";
@@ -44,8 +42,6 @@ void setup() {
   IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
   Serial.println("REMOTE CONTROL START");
 
-  //LED
-  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
@@ -53,11 +49,8 @@ void loop() {
   if (IrReceiver.decode()) {
     //    Serial.println(results.value,HEX);
     String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-    if (key != "ERROR" && key != lastDecodedValue) {
+    if (key != "ERROR") {
       Serial.println(key);
-      lastDecodedValue = key;  // Update the last decoded value
-      Serial.println(key);
-      blinkLED();
 
       if (key == "+") {
         speed += 50;
@@ -197,16 +190,6 @@ void stopMove() {
   analogWrite(B_1A, 0);
 }
 
-void blinkLED() {
-  for (int i = 0; i < 3; i++) {
-    digitalWrite(ledPin, HIGH);
-    delay(50);
-    digitalWrite(ledPin, LOW);
-    delay(50);
-  }
-}
-
-
 void AutoDrive(int speed) {
   int left = digitalRead(leftIR);  // 0: Obstructed   1: Empty
   int right = digitalRead(rightIR);
@@ -286,4 +269,56 @@ void ultrasonicExample(int speed) {
   } else {
     stopMove();
   }
+}
+
+String decodeKeyValue(long result)
+{
+  switch(result){
+    case 0x16:
+      return "0";
+    case 0xC:
+      return "1"; 
+    case 0x18:
+      return "2"; 
+    case 0x5E:
+      return "3"; 
+    case 0x8:
+      return "4"; 
+    case 0x1C:
+      return "5"; 
+    case 0x5A:
+      return "6"; 
+    case 0x42:
+      return "7"; 
+    case 0x52:
+      return "8"; 
+    case 0x4A:
+      return "9"; 
+    case 0x9:
+      return "+"; 
+    case 0x15:
+      return "-"; 
+    case 0x7:
+      return "EQ"; 
+    case 0xD:
+      return "U/SD";
+    case 0x19:
+      return "CYCLE";         
+    case 0x44:
+      return "PLAY/PAUSE";   
+    case 0x43:
+      return "FORWARD";   
+    case 0x40:
+      return "BACKWARD";   
+    case 0x45:
+      return "POWER";   
+    case 0x47:
+      return "MUTE";   
+    case 0x46:
+      return "MODE";       
+    case 0x0:
+      return "ERROR";   
+    default :
+      return "ERROR";
+    }
 }

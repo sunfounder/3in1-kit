@@ -19,6 +19,10 @@ In the 3-in-1 ultimate kit, you will find a complete Arduino course to help begi
 <a id="update"></a>
 ## Update:
 
+2023-10-20:
+- Modify the code related to the IR receiver in projects.
+
+
 2023-09-08:
 - Modified the performance of 5.11.liquid_crystal_display.
 - Replaced the libraries for dht11 and IR receiver, and adjusted the corresponding code accordingly.
