@@ -106,14 +106,14 @@ This code is designed to work with an infrared (IR) remote control using the ``I
     .. code-block:: arduino
 
         void loop() {
-        if (IrReceiver.decode()) {
-            String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
-            if (decodedValue != "ERROR") {
-                Serial.println(decodedValue);
-                delay(100);
+            if (IrReceiver.decode()) {
+                String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
+                if (decodedValue != "ERROR") {
+                    Serial.println(decodedValue);
+                    delay(100);
+                }
+                IrReceiver.resume();  // Enable receiving of the next value
             }
-            IrReceiver.resume();  // Enable receiving of the next value
-        }
         }
     
     * Checks if an IR signal is received and successfully decoded.

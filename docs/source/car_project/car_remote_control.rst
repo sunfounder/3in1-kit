@@ -113,7 +113,8 @@ The effect of this project is to make the car move by reading the key value of t
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
 
-#. Initialize the IR receiver.
+#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+
 
     .. code-block:: arduino
 
