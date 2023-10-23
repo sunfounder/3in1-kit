@@ -113,12 +113,10 @@ The effect of this project is to make the car move by reading the key value of t
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
 
-#. Initialize the IR receiver and the LED.
+#. Initialize the IR receiver.
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -128,13 +126,10 @@ The effect of this project is to make the car move by reading the key value of t
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
             Serial.println("REMOTE CONTROL START");
 
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
 
-#. When you press the keys on the remote control, the LED will blink and the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
+#. When you press the keys on the remote control, the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
 
 
     .. code-block:: arduino
