@@ -10,6 +10,8 @@ Quick Links:
  * [License](#license)
  * [Contact us](#contact_us)
 
+ 
+
 <a id="about_this_kit"></a>
 ## About this kit:
 
@@ -18,34 +20,13 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-23:
+- Modify the project codes that involve the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
+- Change the power source for the motor module of the car project to 5V.
+
 2023-09-28:
-- German translation
-- Remove the R4 purchase link from ar_turn_the_wheel.rst.
-- Modify the format of the third entry of how it works in ar_state_change.rst.
-- Modify the format of the fourth item of how it works in ar_high_rem_alarm.rst.
-- For ar_state_change.rst in Basic Projects, change motorPinA to A_1A and motorPinB to A_1B.
+- The first release of the German version.
 
-2023-09-26:
-- Remove the **Example** heading from component_capacitor.rst
-- R4 introduction to burn_firmware.rst moved to the front
-- Modify the title of ar_ir_remote.rst to 5.11.2.
-- Modify the title of ar_dht11.rst to 5.11.3.
-
-2023-09-22:
-- Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
-- Made corrections to 1.2_beep_bb.png and 5.15_eeprom_bb.png as there were pin errors.
-- Addressed various minor corrections.
-
-2023-09-20:
-- Modify the description and code of projects involving libraries.
-- Update the wiring diagram for L9110-related projects.
-- Correct other known errors.
-
-2023-09-14:
-- Add the links of components
-- Modified conf.py files
-- Add a language translation file
-- Adding readthedocs, LICENSE, README, show files
 
 <a id="trouble"></a>
 ## Trouble Shootings:

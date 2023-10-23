@@ -87,7 +87,6 @@ Dieser Code ist so konzipiert, dass er mit einer Infrarot-(IR-)Fernbedienung zus
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";  // Variable to store the last decoded value
 
 #. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Startet den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
 
@@ -105,9 +104,9 @@ Dieser Code ist so konzipiert, dass er mit einer Infrarot-(IR-)Fernbedienung zus
         void loop() {
             if (IrReceiver.decode()) {
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                if (decodedValue != "ERROR") {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                    delay(100);
                 }
                 IrReceiver.resume();  // Enable receiving of the next value
             }
@@ -115,7 +114,6 @@ Dieser Code ist so konzipiert, dass er mit einer Infrarot-(IR-)Fernbedienung zus
     
     * Überprüft, ob ein IR-Signal empfangen und erfolgreich dekodiert wurde.
     * Dekodiert den IR-Befehl und speichert ihn in ``decodedValue`` mit Hilfe einer benutzerdefinierten Funktion ``decodeKeyValue()``.
-    * Überprüft, ob der dekodierte Wert kein Fehler ist und sich vom letzten dekodierten Wert unterscheidet.
+    * Überprüft, ob der dekodierte Wert kein Fehler ist.
     * Gibt den dekodierten IR-Wert auf dem seriellen Monitor aus.
-    * Aktualisiert den ``lastDecodedValue`` mit dem neuen dekodierten Wert.
     * Setzt den IR-Signalempfang für das nächste Signal fort.

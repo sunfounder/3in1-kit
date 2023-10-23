@@ -110,14 +110,11 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
 
 #. Initialisieren Sie den IR-Empfänger und die LED.
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -126,13 +123,9 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
             //IR remote
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
             Serial.println("REMOTE CONTROL START");
-
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. Wenn Sie die Tasten auf der Fernbedienung drücken, blinkt die LED und der Infrarotempfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Tastenwert.
+#. Wenn Sie die Tasten auf der Fernbedienung drücken, der Infrarotempfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Tastenwert.
 
     .. code-block:: arduino
 
@@ -141,10 +134,8 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
-                    blinkLED();
 
                     if (key == "+") {
                         speed += 50;
@@ -162,24 +153,8 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
 
     * Überprüft, ob ein IR-Signal empfangen und erfolgreich entschlüsselt wurde.
     * Entschlüsselt den IR-Befehl und speichert ihn in ``key`` mit Hilfe einer benutzerdefinierten ``decodeKeyValue()``-Funktion.
-    * Überprüft, ob der entschlüsselte Wert kein Fehler ist und sich vom zuletzt entschlüsselten Wert unterscheidet.
+    * Überprüft, ob der entschlüsselte Wert kein Fehler ist.
     * Gibt den entschlüsselten IR-Wert auf dem seriellen Monitor aus.
-    * Aktualisiert den ``lastDecodedValue`` mit dem neuen entschlüsselten Wert.
     * Setzt den IR-Signalempfang für das nächste Signal fort.
 
-#. Über die Funktion ``blinkLED()``.
-
-    Wenn diese Funktion aufgerufen wird, sollte die LED dreimal von Ein-Aus wechseln, sodass Sie die LED 3 Mal blinken sehen.
-
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
 
