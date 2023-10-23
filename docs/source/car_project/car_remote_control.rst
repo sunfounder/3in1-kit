@@ -111,7 +111,7 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
 
-#. Initialisieren Sie den IR-Empfänger und die LED.
+#. Initialisieren Sie den IR-Empfänger.
 
     .. code-block:: arduino
 
