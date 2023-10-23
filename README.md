@@ -18,6 +18,9 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-23:
+- Modify the project codes that involves the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
+
 2023-10-07:
 - Delete the R4 purchase link in ar_turn_the_wheel.rst.
 - Modify the format of the third item of how it works in ar_state_change.rst, change motorPinA to A_1A, and motorPinB to A_1B

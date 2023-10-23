@@ -112,7 +112,6 @@ The effect of this project is to make the car move by reading the key value of t
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
 
 #. Initialize the IR receiver and the LED.
 
@@ -145,10 +144,8 @@ The effect of this project is to make the car move by reading the key value of t
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
-                    Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
-                    blinkLED();
+                if (key != "ERROR") {
+                Serial.println(key);
 
                     if (key == "+") {
                         speed += 50;
@@ -166,23 +163,6 @@ The effect of this project is to make the car move by reading the key value of t
 
     * Checks if an IR signal is received and successfully decoded.
     * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Checks if the decoded value is not an error.
     * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
     * Resumes IR signal reception for the next signal.
-
-#. About the ``blinkLED()`` function.
-    
-    When this function is called, have the LED repeat the toggle from on-off three times so that you see the LED blink 3 times.
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
-
