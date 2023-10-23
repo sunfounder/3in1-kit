@@ -111,14 +111,12 @@
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // IRセンサのピン番号を定義
-        String lastDecodedValue = "";   // 最後にデコードされた値を保存する変数
 
-#. IRレシーバとLEDを初期化します。
+#. ボーレート9600でシリアル通信を初期化します。指定されたピン（ ``IR_RECEIVE_PIN`` ）でIR受信機を初期化し、LEDフィードバックを有効にします（該当する場合）。
+
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -128,11 +126,9 @@
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IRレシーバを開始
             Serial.println("REMOTE CONTROL START");
 
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. リモコンのキーを押すと、LEDが点滅し、赤外線レシーバはどのキーが押されたかを知り、それに応じて車が対応するキー値に従って動きます。
+#. リモコンのキーを押すと、赤外線レシーバはどのキーが押されたかを知り、それに応じて車が対応するキー値に従って動きます。
 
     .. code-block:: arduino
 
@@ -141,10 +137,8 @@
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
-                    Serial.println(key);
-                    lastDecodedValue = key;  // 最後にデコードされた値を更新
-                    blinkLED();
+                if (key != "ERROR") {
+                Serial.println(key);
 
                     if (key == "+") {
                         speed += 50;
@@ -155,30 +149,13 @@
                         delay(1000);
                     ...
                     }
-                    IrReceiver.resume();  // 次の値の受信を有効にする
+                    IrReceiver.resume();  // Enable receiving of the next value
 
             }
         }
 
     * IR信号が受信され、正常にデコードされたかどうかを確認します。
     * カスタムの ``decodeKeyValue()`` 関数を使用してIRコマンドをデコードし、 ``key`` に保存します。
-    * デコードされた値がエラーでなく、最後にデコードされた値と異なることを確認します。
+    * デコードされた値がエラーでないか確認します。
     * デコードされたIR値をシリアルモニタに出力します。
-    * 新しいデコード値で ``lastDecodedValue`` を更新します。
     * 次の信号のIR信号受信を再開します。
-
-#. ``blinkLED()`` 関数について。
-
-    この関数が呼び出されると、LEDが3回点滅するように、オン・オフを3回繰り返します。
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
-
