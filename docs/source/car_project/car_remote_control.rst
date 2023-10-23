@@ -111,7 +111,8 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
 
-#. Initialisieren Sie den IR-Empfänger.
+#. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Startet den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
+
 
     .. code-block:: arduino
 
@@ -121,7 +122,7 @@ Das Ziel dieses Projekts ist es, das Auto durch das Lesen des Tastenwertes der I
 
             ...
             //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the receiver
             Serial.println("REMOTE CONTROL START");
         }
 
