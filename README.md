@@ -18,8 +18,15 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+
+2023-10-24:
+- Modify the project codes that involve the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
+
+
+
 2023-10-07:
 - Modified several images.
+- Change the power source for the motor module of the car project to 5V.
 
 
 2023-09-22:
@@ -37,22 +44,8 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 - Add two more course links to the example in component_thermistor.rst
 
 2023-09-18:
-- Translate Japanese
+- The first release of Japanese version.
 
-2023-09-11:
-- Add the links of components
-- Add a language translation file
-
-
-2023-09-07:
-- Added .yaml file
-- Modified Requirement.txt and conf.py files
-- Updated the tutorial for installing libraries on Arduino
-- Code modification and analysis for a project involving libraries.
- 
-
-2022-06-30:
- - New Release
 
 <a id="trouble"></a>
 ## Trouble Shootings:

@@ -68,7 +68,7 @@
     * - カソード
       - GND
 
-.. image:: img/car_remote.jpg
+.. image:: img/car_remote.png
     :width: 800
 
 **コード**
@@ -101,7 +101,7 @@
 
 **どのように動作するのか？**
 
-このプロジェクトの効果は、IRリモートコントロールのキー値を読み取り、車を動かすことです。さらに、IR信号が正常に受信されたことを示すためにLEDが追加されます。
+このプロジェクトの効果は、IRリモートコントロールのキー値を読み取り、車を動かすことです。さらに、ピン13のLEDが点滅して、赤外線信号の受信が成功したことを示します。
 
 #. ``IRremote`` ライブラリをインポートします。 **Library Manager** からインストールできます。
 
@@ -110,14 +110,11 @@
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // IRセンサのピン番号を定義する
-        String lastDecodedValue = "";   // 最後にデコードされた値を保存する変数
 
-#. IRレシーバとLEDを初期化します。
+#. ボーレート9600でシリアル通信を初期化します。指定されたピン(``IR_RECEIVE_PIN``)でIRレシーバを初期化し、LEDフィードバックを有効にします(該当する場合)。
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -127,11 +124,9 @@
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // IRレシーバを開始する
             Serial.println("REMOTE CONTROL START");
 
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. リモートコントロールのキーを押すと、LEDが点滅し、赤外線受信機はどのキーが押されたかを知り、車は対応するキー値に従って動きます。
+#. リモートコントロールのキーを押すと、赤外線受信機はどのキーが押されたかを知り、車は対応するキー値に従って動きます。
 
     .. code-block:: arduino
 
@@ -140,10 +135,8 @@
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // 最後のデコード値を更新
-                    blinkLED();
 
                     if (key == "+") {
                         speed += 50;
@@ -160,24 +153,6 @@
 
     * IR信号が受信され、正常にデコードされたかどうかを確認する。
     * IRコマンドをデコードし、カスタム ``decodeKeyValue()`` 関数を使用して ``key`` に保存する。
-    * デコードされた値がエラーでなく、最後にデコードされた値と異なるかどうかを確認する。
+    * デコードされた値がエラーでないかを確認します。
     * デコードされたIR値をシリアルモニタに表示する。
-    * 新しいデコード値で ``lastDecodedValue`` を更新する。
     * 次の信号のIR信号受信を再開する。
-
-#. ``blinkLED()`` 関数について。
-
-    この関数が呼び出されると、LEDが3回点滅するように、LEDをオンオフのトグルを3回繰り返します。
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
-
-

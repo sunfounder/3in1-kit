@@ -7,7 +7,7 @@
 
 **配線図**
 
-.. image:: img/car_all.jpg
+.. image:: img/car_all.png
     :width: 800
 
 **コード**
