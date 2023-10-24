@@ -102,7 +102,7 @@
 
 **動作の原理は？**
 
-このプロジェクトの効果は、IRリモートコントロールのキー値を読み取って車を移動させることです。さらに、IR信号が正常に受信されたことを示すLEDが追加されています。
+このプロジェクトの効果は、IRリモートコントロールのキー値を読み取って車を移動させることです。さらに、ピン13のLEDが点滅して、赤外線信号の受信が成功したことを示します。
 
 #. ``IRremote`` ライブラリをインポートします。 **Library Manager** からインストールできます。
 
@@ -111,14 +111,11 @@
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
 
-#. IR受信機とLEDを初期化します。
+#. ボーレート9600でシリアル通信を初期化します。指定されたピン(``IR_RECEIVE_PIN``)でIRレシーバを初期化し、LEDフィードバックを有効にします(該当する場合)。
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -127,13 +124,9 @@
             //IRリモート
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
             Serial.println("REMOTE CONTROL START");
-
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. リモートコントロールのキーを押すと、LEDが点滅し、赤外線受信機がどのキーが押されたかを知り、それに応じて車が移動します。
+#. リモートコントロールのキーを押すと、赤外線受信機がどのキーが押されたかを知り、それに応じて車が移動します。
 
     .. code-block:: arduino
 
@@ -142,10 +135,8 @@
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // 最後に解読された値を更新する
-                    blinkLED();
 
                     if (key == "+") {
                         speed += 50;
@@ -163,22 +154,7 @@
 
     * IR信号が受信され、正常にデコードされたかどうかを確認します。
     * IRコマンドをデコードし、 ``key`` に格納するカスタム ``decodeKeyValue()`` 関数を使用します。
-    * デコードされた値がエラーでなく、前回のデコードされた値と異なるかどうかを確認します。
+    * デコードされた値がエラーでないかを確認します。
     * シリアルモニターにデコードされたIR値を出力します。
-    * ``lastDecodedValue`` を新しいデコード値で更新します。
     * 次の信号のIR信号受信を再開します。
 
-#. ``blinkLED()`` 関数について。
-
-    この関数が呼び出されると、LEDがオンオフを3回繰り返すことで、LEDが3回点滅するのが見えるようにします。
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }

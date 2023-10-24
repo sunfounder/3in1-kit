@@ -80,12 +80,11 @@
 
         #include <IRremote.h>
 
-#. IRセンサーの信号ピンが接続されているArduinoのピンを定義し、最後にデコードされたIR値を保存する変数を宣言します。
+#. IRセンサーの信号ピンが接続されているArduinoのピンを定義し。
 
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // IRセンサーのピン番号を定義する。
-        String lastDecodedValue = "";   // 最後にデコードされた値を格納する変数
 
 #. ボーレート9600でシリアル通信を初期化します。指定されたピン(``IR_RECEIVE_PIN``)でIRレシーバを初期化し、LEDフィードバックを有効にします(該当する場合)。
 
@@ -103,17 +102,17 @@
         void loop() {
             if (IrReceiver.decode()) {
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                if (decodedValue != "ERROR") {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;    // 最後にデコードされた値を更新する
+                    delay(100);
                 }
-                IrReceiver.resume();    // 次の値の受信を有効にする
+                IrReceiver.resume();  // Enable receiving of the next value
             }
         }
 
+
     * IR信号が受信され、正常にデコードされたかどうかを確認します。
     * IRコマンドをデコードし、カスタムの ``decodeKeyValue()`` 関数を使用して ``decodedValue`` に保存します。
-    * デコードされた値がエラーでなく、最後にデコードされた値と異なるかどうかを確認します。
+    * デコードされた値がエラーでないかを確認します。
     * デコードされたIR値をシリアルモニタに印刷します。
-    * 新しいデコードされた値で ``lastDecodedValue`` を更新します。
     * 次の信号のIR信号受信を再開します。
