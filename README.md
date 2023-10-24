@@ -18,6 +18,10 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+- 2023-10-24:
+- Modify the project codes that involve the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
+- Change the power source for the motor module of the car project to 5V.
+
 2023-09-22:
 - Modify the second line of how it works in ar_calibration.rst to add the code to set the LED to OUTPUT.
 - Replace all how it works in ar_reversing_aid.rst.
