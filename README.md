@@ -18,9 +18,13 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-10-24:
+- Modify the project codes that involve the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
+
 
 2023-10-07:
 - Modified several images.
+- Change the power source for the motor module of the car project to 5V.
 
 2023-09-20:
 - Modified the code and code analysis in ar_calibration.rst and ar_reversing_aid.rst.
@@ -45,9 +49,6 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 - Updated the tutorial for installing libraries on Arduino
 - Code modification and analysis for a project involving libraries.
  
-
-2022-06-30:
- - New Release
 
 <a id="trouble"></a>
 ## Trouble Shootings:

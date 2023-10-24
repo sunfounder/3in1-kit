@@ -102,7 +102,7 @@ After the code is uploaded successfully, press the button on the remote control,
 
 **How it works?**
 
-The effect of this project is to make the car move by reading the key value of the IR remote control. In addition, an LED is added to indicate that the IR signal has been successfully received.
+The effect of this project is to make the car move by reading the key value of the IR remote control. Additionally, the LED on pin 13 will blink to indicate the successful reception of the IR signal.
 
 #. Import the ``IRremote`` library, you can install it from the **Library Manager**.
 
@@ -112,30 +112,24 @@ The effect of this project is to make the car move by reading the key value of t
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
 
-#. Initialize the IR receiver and the LED.
+#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
 
             ...
             //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the receiver
             Serial.println("REMOTE CONTROL START");
 
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
 
-#. When you press the keys on the remote control, the LED will blink and the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
+#. When you press the keys on the remote control, the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
 
 
     .. code-block:: arduino
@@ -145,10 +139,8 @@ The effect of this project is to make the car move by reading the key value of t
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
-                    blinkLED();
 
                     if (key == "+") {
                         speed += 50;
@@ -166,23 +158,7 @@ The effect of this project is to make the car move by reading the key value of t
 
     * Checks if an IR signal is received and successfully decoded.
     * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Checks if the decoded value is not an error.
     * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
     * Resumes IR signal reception for the next signal.
-
-#. About the ``blinkLED()`` function.
-    
-    When this function is called, have the LED repeat the toggle from on-off three times so that you see the LED blink 3 times.
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
 

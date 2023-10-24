@@ -85,12 +85,11 @@ This code is designed to work with an infrared (IR) remote control using the ``I
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
+#. Defines the Arduino pin to which the IR sensor's signal pin is connected.
 
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";  // Variable to store the last decoded value
 
 #. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
 
@@ -108,9 +107,9 @@ This code is designed to work with an infrared (IR) remote control using the ``I
         void loop() {
             if (IrReceiver.decode()) {
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                if (decodedValue != "ERROR") {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                    delay(100);
                 }
                 IrReceiver.resume();  // Enable receiving of the next value
             }
@@ -118,7 +117,6 @@ This code is designed to work with an infrared (IR) remote control using the ``I
     
     * Checks if an IR signal is received and successfully decoded.
     * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Checks if the decoded value is not an error.
     * Prints the decoded IR value to the serial monitor.
-    * Updates the ``lastDecodedValue`` with the new decoded value.
     * Resumes IR signal reception for the next signal.
