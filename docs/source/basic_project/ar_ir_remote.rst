@@ -83,12 +83,11 @@ Dieser Code ist für die Verwendung mit einer Infrarot (IR) Fernbedienung und de
 
         #include <IRremote.h>
 
-#. Definiert den Arduino-Pin, an den der Signal-Pin des IR-Sensors angeschlossen ist, und deklariert eine Variable zur Speicherung des zuletzt decodierten IR-Wertes.
+#. Definiert den Arduino-Pin, an den der Signal-Pin des IR-Sensors angeschlossen ist.
 
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // Pinnummer für den IR-Sensor definieren
-        String lastDecodedValue = "";  // Variable zum Speichern des zuletzt decodierten Wertes
 
 #. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Initialisiert den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
 
@@ -105,17 +104,16 @@ Dieser Code ist für die Verwendung mit einer Infrarot (IR) Fernbedienung und de
         void loop() {
             if (IrReceiver.decode()) {
                 String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                if (decodedValue != "ERROR") {
                     Serial.println(decodedValue);
-                    lastDecodedValue = decodedValue;  // Aktualisiert den zuletzt decodierten Wert
+                    delay(100);
                 }
-                IrReceiver.resume();  // Empfang des nächsten Wertes ermöglichen
+                IrReceiver.resume();  // Enable receiving of the next value
             }
         }
     
     * Überprüft, ob ein IR-Signal empfangen und erfolgreich decodiert wurde.
     * Decodiert den IR-Befehl und speichert ihn in ``decodedValue`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
-    * Überprüft, ob der decodierte Wert kein Fehler ist und sich vom zuletzt decodierten Wert unterscheidet.
+    * Überprüft, ob der decodierte Wert kein Fehler ist.
     * Gibt den decodierten IR-Wert auf dem seriellen Monitor aus.
-    * Aktualisiert ``lastDecodedValue`` mit dem neuen decodierten Wert.
     * Setzt den IR-Signalempfang für das nächste Signal fort.

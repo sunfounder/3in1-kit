@@ -68,7 +68,7 @@ Bauen Sie den Schaltkreis nun gemäß dem untenstehenden Diagramm.
     * - Kathode
       - GND
 
-.. image:: img/car_remote.jpg
+.. image:: img/car_remote.png
     :width: 800
 
 **Code**
@@ -102,7 +102,7 @@ Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie eine Taste auf der 
 
 **Wie funktioniert das?**
 
-Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR-Fernbedienung zu bewegen. Zusätzlich wird eine LED hinzugefügt, um anzuzeigen, dass das IR-Signal erfolgreich empfangen wurde.
+Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR-Fernbedienung zu bewegen. Zusätzlich wird die LED an Pin 13 blinken, um den erfolgreichen Empfang des IR-Signals anzuzeigen.
 
 #. Importieren Sie die ``IRremote``-Bibliothek. Sie können sie über den **Library Manager** installieren.
 
@@ -111,14 +111,12 @@ Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Definiere die Pin-Nummer für den IR-Sensor
-        String lastDecodedValue = "";   // Variable zur Speicherung des zuletzt dekodierten Werts
 
-#. Initialisieren Sie den IR-Empfänger und die LED.
+#. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Initialisiert den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
+
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
@@ -127,24 +125,19 @@ Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR
             //IR-Fernbedienung
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Starten Sie den IR-Empfänger
             Serial.println("REMOTE CONTROL START");
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. Wenn Sie die Tasten auf der Fernbedienung drücken, blinkt die LED, und der Infrarot-Empfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Schlüsselwert.
+#. Wenn Sie die Tasten auf der Fernbedienung drücken, der Infrarot-Empfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Schlüsselwert.
 
     .. code-block:: arduino
 
         void loop() {
 
             if (IrReceiver.decode()) {
-                // Serial.println(results.value,HEX);
+                //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Aktualisieren Sie den zuletzt dekodierten Wert
-                    blinkLED();
 
                     if (key == "+") {
                         speed += 50;
@@ -162,24 +155,7 @@ Das Ziel dieses Projekts ist es, das Auto durch Lesen des Schlüsselwerts der IR
 
     * Überprüft, ob ein IR-Signal empfangen und erfolgreich dekodiert wurde.
     * Dekodiert den IR-Befehl und speichert ihn in ``key`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
-    * Überprüft, ob der dekodierte Wert kein Fehler ist und sich vom zuletzt dekodierten Wert unterscheidet.
+    * Überprüft, ob der dekodierte Wert kein Fehler ist.
     * Gibt den dekodierten IR-Wert auf dem seriellen Monitor aus.
-    * Aktualisiert den ``lastDecodedValue`` mit dem neuen dekodierten Wert.
     * Setzt den IR-Signalempfang für das nächste Signal fort.
-
-#. Über die Funktion ``blinkLED()``.
-    
-    Wenn diese Funktion aufgerufen wird, sollte die LED dreimal von Ein auf Aus wechseln, sodass Sie die LED 3-mal blinken sehen.
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
-
 

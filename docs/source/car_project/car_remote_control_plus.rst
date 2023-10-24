@@ -7,7 +7,7 @@ In diesem Projekt haben wir die vorherigen Projekte - Linienverfolgung, Verfolgu
 
 **Verkabelung**
 
-.. image:: img/car_all.jpg
+.. image:: img/car_all.png
     :width: 800
 
 **Code**
