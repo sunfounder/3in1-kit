@@ -100,7 +100,7 @@ Nachdem der Code erfolgreich hochgeladen wurde, drücken Sie die Taste auf der F
 
 **Wie funktioniert es?**
 
-Das Ziel dieses Projekts ist es, das Auto durch Auslesen des Tastenwerts der IR-Fernbedienung zu bewegen. Zusätzlich wird eine LED hinzugefügt, um anzuzeigen, dass das IR-Signal erfolgreich empfangen wurde.
+Das Ziel dieses Projekts ist es, das Auto durch Auslesen des Tastenwerts der IR-Fernbedienung zu bewegen. Zusätzlich wird die LED an Pin 13 blinken, um den erfolgreichen Empfang des IR-Signals anzuzeigen.
 
 #. Importieren Sie die Bibliothek ``IRremote``. Sie können diese aus dem **Library Manager** installieren.
 
@@ -109,28 +109,23 @@ Das Ziel dieses Projekts ist es, das Auto durch Auslesen des Tastenwerts der IR-
         #include <IRremote.h>
 
         const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
-        String lastDecodedValue = "";   // Variable to store the last decoded value
 
-#. Initialisieren Sie den IR-Empfänger und die LED.
+#. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Initialisiert den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
+
 
     .. code-block:: arduino
 
-        ...
-        const int ledPin = 13;
         ...
 
         void setup() {
 
             ...
             //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the receiver
             Serial.println("REMOTE CONTROL START");
-
-            //LED
-            pinMode(ledPin, OUTPUT);
         }
 
-#. Wenn Sie die Tasten auf der Fernbedienung drücken, blinkt die LED und der Infrarotempfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Tastenwert.
+#. Wenn Sie die Tasten auf der Fernbedienung drücken, der Infrarotempfänger erkennt, welche Taste gedrückt wurde. Anschließend bewegt sich das Auto entsprechend dem zugehörigen Tastenwert.
 
     .. code-block:: arduino
 
@@ -139,10 +134,9 @@ Das Ziel dieses Projekts ist es, das Auto durch Auslesen des Tastenwerts der IR-
             if (IrReceiver.decode()) {
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
-                if (key != "ERROR" && key != lastDecodedValue) {
+                if (key != "ERROR") {
                     Serial.println(key);
-                    lastDecodedValue = key;  // Update the last decoded value
-                    blinkLED();
+
 
                     if (key == "+") {
                         speed += 50;
@@ -160,23 +154,7 @@ Das Ziel dieses Projekts ist es, das Auto durch Auslesen des Tastenwerts der IR-
 
     * Überprüft, ob ein IR-Signal empfangen und erfolgreich decodiert wurde.
     * Decodiert den IR-Befehl und speichert ihn in ``key`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
-    * Überprüft, ob der decodierte Wert kein Fehler ist und sich von dem zuletzt decodierten Wert unterscheidet.
+    * Überprüft, ob der decodierte Wert kein Fehler ist.
     * Gibt den decodierten IR-Wert auf dem seriellen Monitor aus.
-    * Aktualisiert ``lastDecodedValue`` mit dem neuen decodierten Wert.
     * Setzt den IR-Signalempfang für das nächste Signal fort.
-
-#. Über die Funktion ``blinkLED()``.
-
-    Wenn diese Funktion aufgerufen wird, sollte die LED dreimal blinken.
-
-    .. code-block:: arduino
-
-        void blinkLED() {
-                for (int i = 0; i < 3; i++) {
-                digitalWrite(ledPin, HIGH);
-                delay(50);
-                digitalWrite(ledPin, LOW);
-                delay(50);
-            }
-        }
 
