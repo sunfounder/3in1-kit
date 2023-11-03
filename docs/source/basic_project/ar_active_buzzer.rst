@@ -52,7 +52,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 **Verdrahtung**
 
 .. image:: img/1.2_beep_bb.png
-    :width: 400
+    :width: 600
     :align: center
 
 **Code**

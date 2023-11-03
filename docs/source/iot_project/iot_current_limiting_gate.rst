@@ -61,6 +61,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. image:: img/iot_7_bb.png
     :width: 800
+    :align: center
 
 **2. Dashboard bearbeiten**
 

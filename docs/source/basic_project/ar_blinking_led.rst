@@ -46,7 +46,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. image:: img/circuit_1.1_led.png
 
-Das Prinzip dieser Schaltung ist einfach, und die Stromrichtung ist in der Abbildung dargestellt. Wenn Pin 9 ein hohes Signal (5V) ausgibt, leuchtet die LED nach dem 220 Ohm-Strombegrenzungswiderstand auf. Wenn Pin 9 ein niedriges Signal (0V) ausgibt, erlischt die LED.
+Das Prinzip dieser Schaltung ist einfach, und die Stromrichtung ist in der Abbildung dargestellt. Wenn Pin 9 ein hohes Signal (5V) ausgibt, leuchtet die LED nach dem 1k Ohm-Strombegrenzungswiderstand auf. Wenn Pin 9 ein niedriges Signal (0V) ausgibt, erlischt die LED.
 
 **Verdrahtung**
 

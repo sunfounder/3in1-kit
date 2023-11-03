@@ -8,7 +8,8 @@ Das ESP8266-Modul, das mit dem Kit geliefert wird, ist bereits mit der AT-Firmwa
 1. Bauen Sie den Schaltkreis.
 
     .. image:: img/iot_1.1_at_set_bb.png
-        :width: 800
+        :width: 600
+        :align: center
 
 2. Öffnen Sie die Datei ``1.set_software_serial.ino`` unter dem Pfad ``3in1-kit\iot_project\1.set_software_serial``. Oder kopieren Sie diesen Code in die **Arduino IDE**.
 

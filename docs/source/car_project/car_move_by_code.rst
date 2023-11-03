@@ -57,7 +57,7 @@ Verbinden Sie die Kabel zwischen dem L9110-Modul und dem R4-Board gemäß dem un
     * - A-1A
       - 6
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       - 
     * - B-1A

@@ -51,6 +51,8 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
     Das ESP8266-Modul erfordert einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.
 
 .. image:: img/iot_4_bb.png
+    :width: 600
+    :align: center
 
 **2. Dashboard bearbeiten**
 

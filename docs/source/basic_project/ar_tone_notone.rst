@@ -56,7 +56,7 @@ Verbinden Sie die Kathode des Summers mit GND und die Anode mit dem digitalen Pi
 **Verdrahtung**
 
 .. image:: img/5.7_tone_bb.png
-    :width: 800
+    :width: 600
     :align: center
 
 **Code**

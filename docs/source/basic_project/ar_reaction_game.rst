@@ -58,6 +58,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 **Verdrahtung**
 
 .. image:: img/6.5_reaction_game_bb.png
+    :width: 600
     :align: center
 
 **Code**

@@ -50,7 +50,7 @@ Sie können sie auch einzeln über die folgenden Links kaufen.
 **Verdrahtung**
 
 .. image:: img/1.1_hello_led_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **Code**

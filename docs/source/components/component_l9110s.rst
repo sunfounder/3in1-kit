@@ -17,7 +17,7 @@ Mit Blick auf Benutzerfreundlichkeit konzipiert, bietet das Modul intuitive Ein-
     :width: 600
     :align: center
     
-* **B-1A & B-1B**: Eingangspins zur Steuerung der Drehrichtung von Motor B.
+* **B-1A & B-1B(B-2A)**: Eingangspins zur Steuerung der Drehrichtung von Motor B.
 * **A-1A & A-1B**: Eingangspins zur Steuerung der Drehrichtung von Motor A.
 * **0A & OB(A)**: Ausgangspins von Motor A.
 * **0A & OB(B)**: Ausgangspins von Motor B.
@@ -43,14 +43,14 @@ Mit Blick auf Benutzerfreundlichkeit konzipiert, bietet das Modul intuitive Ein-
 
 Hier ist die Wahrheitstabelle für Motor B:
 
-Diese Wahrheitstabelle zeigt die verschiedenen Zustände von Motor B basierend auf den Werten der Eingangspins B-1A und B-1B. Sie gibt die Drehrichtung (im Uhrzeigersinn oder gegen den Uhrzeigersinn), Bremsen oder Anhalten von Motor B an.
+Diese Wahrheitstabelle zeigt die verschiedenen Zustände von Motor B basierend auf den Werten der Eingangspins B-1A und B-1B(B-2A). Sie gibt die Drehrichtung (im Uhrzeigersinn oder gegen den Uhrzeigersinn), Bremsen oder Anhalten von Motor B an.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - Zustand von Motor B
     * - 1
       - 0

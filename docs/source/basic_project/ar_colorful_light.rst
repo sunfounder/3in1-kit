@@ -68,7 +68,7 @@ Eine RGB-LED hat 4 Pins: Der längste Pin ist der gemeinsame Kathodenpin, der no
 der linke Pin neben dem längsten Pin ist Rot und die 2 Pins rechts sind Grün und Blau.
 
 .. image:: img/2.2_colorful_light_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **Code**

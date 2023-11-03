@@ -16,7 +16,7 @@ Sie können diese Pins als positive und negative Seiten der Stromquelle verwende
 
 Mit Elektrizität können Sie Werke mit Licht, Ton und Bewegung schaffen. 
 Sie können eine LED zum Leuchten bringen, indem Sie den langen Pin an den positiven Pol und den kurzen Pin an den negativen Pol anschließen.
-Wenn Sie dies tun, wird die LED sehr schnell kaputt gehen, daher müssen Sie einen 220*-Widerstand in den Schaltkreis einfügen, um ihn zu schützen.
+Wenn Sie dies tun, wird die LED sehr schnell kaputt gehen, daher müssen Sie einen 1k*-Widerstand in den Schaltkreis einfügen, um ihn zu schützen.
 
 Der von ihnen gebildete Schaltkreis ist unten dargestellt.
 
@@ -57,10 +57,10 @@ Hier sind einige Dinge, die Sie über Steckbretter wissen sollten.
 .. image:: img/sp221014_182229.png
 
 1. In diesem Schaltkreis verwenden wir den 5V-Pin des Boards, um die LED mit Strom zu versorgen. Verwenden Sie ein Stecker-zu-Stecker (M2M) Jumper-Kabel, um es mit der roten Stromschiene zu verbinden.
-#. Um die LED zu schützen, muss der Strom durch einen 220 Ohm-Widerstand fließen. Verbinden Sie ein Ende (beliebiges Ende) des Widerstands mit der roten Stromschiene und das andere Ende mit der freien Reihe des Steckbretts.
+#. Um die LED zu schützen, muss der Strom durch einen 1k Ohm-Widerstand fließen. Verbinden Sie ein Ende (beliebiges Ende) des Widerstands mit der roten Stromschiene und das andere Ende mit der freien Reihe des Steckbretts.
 
     .. note::
-        Der Farbring des 220 Ohm-Widerstands ist rot, rot, schwarz, schwarz und braun.
+        Der Farbring des 1k Ohm-Widerstands ist braun, schwarz, schwarz, braun und braun.
 
 #. Wenn Sie die LED aufnehmen, sehen Sie, dass einer ihrer Anschlüsse länger ist als der andere. Verbinden Sie den längeren Anschluss mit der gleichen Reihe wie der Widerstand und den kürzeren Anschluss mit der anderen Reihe.
 
@@ -114,7 +114,7 @@ Daher Strom (I) = Spannung (V) / Widerstand (R).
 .. image:: img/sp221014_183107.png
 
 Wenn Sie den Draht wechseln, der 5V mit 3,3V verbindet, wird die LED schwächer leuchten.
-Wenn Sie den Widerstand von 220 Ohm auf 1000 Ohm ändern (Farbring: braun, schwarz, schwarz, braun und braun), werden Sie bemerken, dass die LED schwächer leuchtet als zuvor. Je größer der Widerstand, desto schwächer die LED.
+Wenn Sie den Widerstand von 1k Ohm auf 2k Ohm ändern (Farbring: braun, schwarz, schwarz, braun und braun), werden Sie bemerken, dass die LED schwächer leuchtet als zuvor. Je größer der Widerstand, desto schwächer die LED.
 
 .. note::
     Für eine Einführung in Widerstände und wie man Widerstandswerte berechnet, siehe :ref:`cpn_resistor`.
