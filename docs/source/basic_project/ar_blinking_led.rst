@@ -46,7 +46,7 @@ You can also buy them separately from the links below.
 
 .. image:: img/circuit_1.1_led.png
 
-The principle of this circuit is simple and the current direction is shown in the figure. When pin 9 outputs high level(5V), the LED will light up after the 220ohm current limiting resistor. When pin 9 outputs low level (0v), the LED will turn off.
+The principle of this circuit is simple and the current direction is shown in the figure. When pin 9 outputs high level(5V), the LED will light up after the 1kohm current limiting resistor. When pin 9 outputs low level (0v), the LED will turn off.
 
 **Wiring**
 

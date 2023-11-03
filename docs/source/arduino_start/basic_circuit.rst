@@ -18,7 +18,7 @@ You can use these pins as the positive and negative sides of the power supply by
 
 With electricity, you can create works with light, sound, and motion.
 You can light up an LED by connecting the long pin to the positive terminal and the short pin to the negative terminal.
-The LED will break down very quickly if you do this, so you need to add a 220* resistor inside the circuit to protect it.
+The LED will break down very quickly if you do this, so you need to add a 1k* resistor inside the circuit to protect it.
 
 The circuit they form is shown below.
 
@@ -63,10 +63,10 @@ Here are some things you should know about breadboards.
 
 
 1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
-#. To protect the LED, the current must pass through a 220 ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
+#. To protect the LED, the current must pass through a 1k ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
 
     .. note::
-        The color ring of the 220 ohm resistor is red, red, black, black and brown.
+        The color ring of the 1k ohm resistor is brown, black, black, brown and brown.
 
 #. If you pick up the LED, you will see that one of its leads is longer than the other. Connect the longer lead to the same row as the resistor, and the shorter lead to the other row.
 
@@ -119,7 +119,7 @@ About Ohm's law we can do a simple experiment.
 .. image:: img/sp221014_183107.png
 
 By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
-If you change the resistor from 220ohm to 1000ohm (color ring: brown, black, black, brown and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
+If you change the resistor from 1kohm to 2kohm, you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
 
 .. note::
     For an introduction to resistors and how to calculate resistance values, see :ref:`cpn_resistor`.

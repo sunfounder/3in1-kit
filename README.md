@@ -18,6 +18,10 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-11-03:
+- Change the current limiting resistor for the LED to 1K and update the relevant diagrams.
+- Add transistor driving to the buzzer project and update the relevant diagrams.
+
 2023-10-23:
 - Modify the project codes that involves the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.
 
