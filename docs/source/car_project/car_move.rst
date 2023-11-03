@@ -16,7 +16,7 @@ Here is the truth table of Motor B:
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - The state of Motor B
     * - 1
       - 0
@@ -67,7 +67,7 @@ Now let's connect the input of L9110 module directly to 12V and GND respectively
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
+2. Connect B-1B(B-2A) and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
 
 
 .. image:: img/1.move_4.png 
@@ -83,7 +83,7 @@ you need to readjust the wiring of the two motors.
 
 **Backward**
 
-Connect B-1B  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
+Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
 
 
 .. image:: img/1.move_back.png 
@@ -94,7 +94,7 @@ Connect B-1B  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able 
 **Turn Left**
 
 If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B  and A-1B to VCC.
+You need to connect B-1A  and A-1A to GND, and B-1B(B-2A)  and A-1B to VCC.
 
 
 .. image:: img/1.move_left.png 
@@ -104,7 +104,7 @@ You need to connect B-1A  and A-1A to GND, and B-1B  and A-1B to VCC.
 **Turn Right**
 
 Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B  and A-1B to GND.
+You need to connect B-1A  and A-1A to VCC and B-1B(B-2A) and A-1B to GND.
 
 
 .. image:: img/1.move_right.png 
@@ -114,6 +114,6 @@ You need to connect B-1A  and A-1A to VCC and B-1B  and A-1B to GND.
 
 **Stop**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B  to 12V or 5V at the same time, and the same for A-1A and A-1B.
+To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B(B-2A) to 12V or 5V at the same time, and the same for A-1A and A-1B.
 
 This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.

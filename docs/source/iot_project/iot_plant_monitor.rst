@@ -62,6 +62,7 @@ You can also buy them separately from the links below.
 
 .. image:: img/iot_6_bb.png
     :width: 800
+    :align: center
 
 **2. Edit Dashboard**
 

@@ -50,7 +50,7 @@ You can also buy them separately from the links below.
 **Wiring**
 
 .. image:: img/1.1_hello_led_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **Code**

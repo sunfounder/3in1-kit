@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
 **Wiring**
 
 .. image:: img/1.2_beep_bb.png
-    :width: 400
+    :width: 600
     :align: center
 
 **Code**

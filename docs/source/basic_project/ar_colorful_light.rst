@@ -73,7 +73,7 @@ the left pin next to the longest pin is Red, and the 2 pins on the right are Gre
 
 
 .. image:: img/2.2_colorful_light_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **Code**

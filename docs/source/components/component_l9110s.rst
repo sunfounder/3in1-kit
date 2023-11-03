@@ -23,7 +23,7 @@ and security of motor operations.
     :width: 600
     :align: center
     
-* **B-1A & B-1B**: Input pins for controlling the spinning direction of Motor B.
+* **B-1A & B-1B(B-2A)**: Input pins for controlling the spinning direction of Motor B.
 * **A-1A & A-1B**: Input pins for controlling the spinning direction of Motor A.
 * **0A & OB(A)**: Output pins of Motor A.
 * **0A & OB(B)**: Output pins of Motor B.
@@ -49,14 +49,14 @@ and security of motor operations.
 
 Here is the truth table of Motor B:
 
-This truth table shows the different states of Motor B based on the values of input pins B-1A and B-1B. It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor B.
+This truth table shows the different states of Motor B based on the values of input pins B-1A and B-1B(B-2A). It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor B.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - The state of Motor B
     * - 1
       - 0

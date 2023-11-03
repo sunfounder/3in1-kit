@@ -74,7 +74,7 @@ You can also buy them separately from the links below.
     * - GND
       - GND
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       -
     * - B-1A

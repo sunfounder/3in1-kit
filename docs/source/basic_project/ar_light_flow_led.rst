@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
 **Wiring**
 
 .. image:: img/6.1_light_flow_led_bb.png
-    :width: 800
+    :width: 600
     :align: center
 
 **Code**

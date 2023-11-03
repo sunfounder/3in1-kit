@@ -60,7 +60,7 @@ Connect the wires between the L9110 module and the R4 board according to the dia
     * - A-1A
       - 6
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       - 
     * - B-1A

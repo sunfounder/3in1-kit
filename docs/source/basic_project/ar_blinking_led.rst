@@ -51,7 +51,7 @@ The principle of this circuit is simple and the current direction is shown in th
 **Wiring**
 
 .. image:: img/1.1_hello_led_bb.png
-    :width: 400
+    :width: 600
     :align: center
 
 **Code**
@@ -61,10 +61,6 @@ The principle of this circuit is simple and the current direction is shown in th
    * You can open the file ``1.1.hello_led.ino`` under the path of ``3in1-kit\learning_project\1.1.hello_led``. 
    * Or copy this code into **Arduino IDE**.
    
-   
-
-
-
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0497f915-5bf8-41a2-8e0f-b013130a57f5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

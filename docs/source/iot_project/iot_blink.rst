@@ -51,6 +51,8 @@ You can also buy them separately from the links below.
     The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
 
 .. image:: img/iot_2_bb.png
+    :width: 600
+    :align: center
 
 **2. Edit Dashboard**
 
