@@ -61,6 +61,7 @@
 
 .. image:: img/iot_7_bb.png
     :width: 800
+    :align: center
 
 **2. ダッシュボードを編集**
 

@@ -69,7 +69,7 @@ RGB LEDには4つのピンがあります：最も長いピンは共通のカソ
 最も長いピンの隣の左のピンは赤色で、右側の2つのピンは緑色と青色です。
 
 .. image:: img/2.2_colorful_light_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **コード**

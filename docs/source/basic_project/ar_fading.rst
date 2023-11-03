@@ -50,7 +50,7 @@
 **配線図**
 
 .. image:: img/1.1_hello_led_bb.png
-    :width: 500
+    :width: 600
     :align: center
 
 **コード**

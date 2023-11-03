@@ -62,6 +62,7 @@ Blynk Cloudでスイッチをオンにすると、ポンプが動作を開始し
 
 .. image:: img/iot_6_bb.png
     :width: 800
+    :align: center
 
 **2. ダッシュボードを編集**
 

@@ -54,6 +54,8 @@
 **配線図**
 
 .. image:: img/5.7_tone_bb.png
+    :width: 600
+    :align: center
 
 **コード**
 

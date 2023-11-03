@@ -8,7 +8,8 @@
 1. 回路を組む。
 
     .. image:: img/iot_1.1_at_set_bb.png
-        :width: 800
+        :width: 600
+        :align: center
 
 2. ``3in1-kit\iot_project\1.set_software_serial`` のパスの下の ``1.set_software_serial.ino`` ファイルを開く。または、このコードを **Arduino IDE** にコピーします。
 
