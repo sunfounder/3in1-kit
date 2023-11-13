@@ -1,5 +1,5 @@
-Components List and Introduction
-====================================
+Learn about the Components in Your Kit
+=========================================
 
 
 After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
