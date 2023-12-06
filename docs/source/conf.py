@@ -253,7 +253,7 @@ rst_epilog = """
 
 .. |link_pir_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/hcsr501-human-sensor" target="_blank">BUY</a>
+    <a href="https://www.sunfounder.com/products/hcsr501-infrared-sensor?_pos=1&_sid=2bd5fd3cc&_ss=r" target="_blank">BUY</a>
 
 .. |link_gpio_board_buy| raw:: html
 
@@ -309,7 +309,7 @@ rst_epilog = """
 
 .. |link_soil_moisture_buy| raw:: html
 
-    <a href="https://www.sunfounder.com/products/original-nmb-nmb-mat-4015-double-ball-bearing-12v-0-11a-1606kl-04w-b59-3-wire-cooling-fan-40x40x15mm" target="_blank">BUY</a>       
+    <a href="https://www.sunfounder.com/products/capacitive-soil-moisture-sensor-module?_pos=1&_sid=73e23dc8a&_ss=r" target="_blank">BUY</a>       
 
 .. |link_l298n_buy| raw:: html
 
