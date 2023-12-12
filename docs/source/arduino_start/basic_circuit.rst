@@ -59,7 +59,7 @@ Here are some things you should know about breadboards.
 
 **Let us follow the direction of the current to build the circuit!**
 
-.. image:: img/sp221014_182229.png
+.. image:: img/sp221014_182229_2.png
 
 
 1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.

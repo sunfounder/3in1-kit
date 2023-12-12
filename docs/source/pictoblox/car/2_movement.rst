@@ -14,7 +14,7 @@ Here is the truth table of Motor B:
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - The state of Motor B
     * - 1
       - 0
