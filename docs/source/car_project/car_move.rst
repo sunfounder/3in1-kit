@@ -60,6 +60,9 @@ Here is the truth table of Motor A:
 
 Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
 
+.. raw:: html
+    
+  <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 1. Connect R3 board, L9110 module and 2 motors.
 

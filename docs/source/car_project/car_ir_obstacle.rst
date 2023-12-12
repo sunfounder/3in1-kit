@@ -46,6 +46,10 @@ You can also buy them separately from the links below.
 
 The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/vadNtXwITFc?si=gY4Ww31zmcs8AObP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Now build the circuit according to the diagram below.
 
 .. list-table:: 
@@ -75,8 +79,16 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
+
 **Adjust the Module**
 
+.. raw:: html
+
+    <video width="600" loop autoplay muted>
+        <source src="_static/video/calibrate_ir.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+    
 Before starting the project, you need to adjust the detection distance of the module.
 
 Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
@@ -88,6 +100,8 @@ Then use a screwdriver to rotate the potentiometer on the module until the signa
 Follow the same method to adjust another infrared module.
 
 .. image:: img/ir_obs_cali.jpg
+
+
 
 **Code**
 

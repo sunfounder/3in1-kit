@@ -52,6 +52,10 @@ You can also buy them separately from the links below.
 
 This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/mlCQgAq4elo?si=ZFmHeA6bVsDCPG0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Build the circuit according to the following diagram.
 
 .. list-table:: 
@@ -68,6 +72,7 @@ Build the circuit according to the following diagram.
 
 .. image:: img/car_4.png
     :width: 800
+
 
 **Adjust the Module**
 

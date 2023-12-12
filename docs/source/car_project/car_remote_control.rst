@@ -44,6 +44,10 @@ You can also buy them separately from the links below.
 
 **Wiring**
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/M8buGWCkYcI?si=spLK2KP363rkN6sl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Now build the circuit according to the diagram below.
 
 .. list-table:: 
@@ -57,16 +61,6 @@ Now build the circuit according to the diagram below.
       - GND
     * - VCC
       - 5V
-
-.. list-table:: 
-    :header-rows: 1
-
-    * - LED
-      - R3 Board
-    * - Anode(The longer pin)
-      - 13
-    * - Cathode
-      - GND
 
 .. image:: img/car_9.png
     :width: 800

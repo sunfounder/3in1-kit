@@ -47,6 +47,10 @@ You can also buy them separately from the links below.
 An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
 It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Now build the circuit according to the following diagram.
 
 .. list-table:: 
@@ -65,6 +69,7 @@ Now build the circuit according to the following diagram.
 
 .. image:: img/car_6.png
     :width: 800
+
 
 **Code**
 

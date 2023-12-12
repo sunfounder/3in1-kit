@@ -1,6 +1,14 @@
 Assemble the Car
 =====================
 
+**Video**
+
+.. raw:: html
+    
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**Steps**
+
 Please follow the steps below to complete the assembly of the car.
 
 1. Remove the protective film on the acrylic.

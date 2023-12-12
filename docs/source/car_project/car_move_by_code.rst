@@ -43,9 +43,11 @@ You can also buy them separately from the links below.
 
 **Wiring**
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Connect the wires between the L9110 module and the R3 board according to the diagram below.
-
 
 .. list-table:: 
     :widths: 25 25 50
@@ -81,6 +83,7 @@ Connect the wires between the L9110 module and the R3 board according to the dia
 
 .. image:: img/car_2.png
     :width: 800
+
 
 **Code**
 
