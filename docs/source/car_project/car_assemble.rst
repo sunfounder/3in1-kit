@@ -1,6 +1,14 @@
 車の組み立て
 =====================
 
+**ビデオ**
+
+.. raw:: html
+    
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**ステップ**
+
 以下の手順に従って、車の組み立てを完了してください。
 
 1. アクリルの保護フィルムを取り除く。

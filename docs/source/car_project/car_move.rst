@@ -16,7 +16,7 @@
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - モーターBの状態
     * - 1
       - 0
@@ -59,12 +59,17 @@
 
 L9110モジュールの入力を12VおよびGNDに直接接続して、車を動かしてみましょう。
 
+.. raw:: html
+    
+  <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 1. R3ボード、L9110モジュール、および2つのモーターを接続します。
 
 .. image:: img/car_1.png
     :width: 800
 
-2. B-1BとA-1AをVCCに、B-1AとA-1BをGNDに接続すると、車が前進するのを見ることができます。
+2. B-1B(B-2A)とA-1AをVCCに、B-1AとA-1BをGNDに接続すると、車が前進するのを見ることができます。
 
 .. image:: img/1.move_4.png 
     :align: center
@@ -77,27 +82,27 @@ L9110モジュールの入力を12VおよびGNDに直接接続して、車を動
 
 **後退**
 
-B-1BおよびA-1AをGNDに、B-1AおよびA-1BをVCCに接続すると、車が後退するのを見ることができます。
+B-1B(B-2A)およびA-1AをGNDに、B-1AおよびA-1BをVCCに接続すると、車が後退するのを見ることができます。
 
 .. image:: img/1.move_back.png 
     :width: 800
 
 **左折**
 
-車を左に曲げたい場合、つまり、両方のモーターを時計回りに回転させたい場合は、B-1AおよびA-1AをGNDに、B-1BおよびA-1BをVCCに接続する必要があります。
+車を左に曲げたい場合、つまり、両方のモーターを時計回りに回転させたい場合は、B-1AおよびA-1AをGNDに、B-1B(B-2A)およびA-1BをVCCに接続する必要があります。
 
 .. image:: img/1.move_left.png 
     :width: 800
 
 **右折**
 
-逆に、車を右に曲げたい場合、つまり、両方のモーターを反時計回りに回転させたい場合は、B-1AおよびA-1AをVCCに、B-1BおよびA-1BをGNDに接続する必要があります。
+逆に、車を右に曲げたい場合、つまり、両方のモーターを反時計回りに回転させたい場合は、B-1AおよびA-1AをVCCに、B-1B(B-2A)およびA-1BをGNDに接続する必要があります。
 
 .. image:: img/1.move_right.png 
     :width: 800
 
 **停止**
 
-モーターを停止するには、同じ側の入力を同時に12VまたはGNDに接続します。たとえば、B-1AおよびB-1Bを同時に12Vまたは5Vに接続し、A-1AとA-1Bも同様にします。
+モーターを停止するには、同じ側の入力を同時に12VまたはGNDに接続します。たとえば、B-1AおよびB-1B(B-2A)を同時に12Vまたは5Vに接続し、A-1AとA-1Bも同様にします。
 
 これはもちろん理論的であり、コードで制御するときに後で必要となります。ここでは、車の電源を取り外して停止させることができます。

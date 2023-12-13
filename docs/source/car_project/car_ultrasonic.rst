@@ -47,6 +47,10 @@
 超音波センサモジュールは、超音波音波を使用して物体までの距離を測定する計器です。
 2つのプローブがあります。一つは超音波を送信するためのもので、もう一つは超音波を受信して送受信の時間を距離に変換するためのものです。これにより、デバイスと障害物との距離を検出します。
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 以下の図に従って回路を組み立ててください。
 
 .. list-table:: 

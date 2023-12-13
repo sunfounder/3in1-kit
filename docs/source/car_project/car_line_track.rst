@@ -50,6 +50,11 @@
 
 これはデジタルライン追跡モジュールで、黒いラインが検出されると1を出力し、白いラインが検出されると0の値を出力します。さらに、モジュールのポテンショメーターを通じて、感知距離を調整することができます。
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/mlCQgAq4elo?si=ZFmHeA6bVsDCPG0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 以下の図に従って回路を組み立ててください。
 
 .. list-table:: 

@@ -44,6 +44,11 @@
 
 **配線**
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/M8buGWCkYcI?si=spLK2KP363rkN6sl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 以下の図に従って回路を組み立ててください。
 
 .. list-table:: 

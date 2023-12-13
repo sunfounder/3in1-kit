@@ -42,6 +42,11 @@
 
 **配線**
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 以下の図に従って、L9110モジュールとR3ボードの間にワイヤを接続します。
 
 .. list-table:: 
@@ -57,7 +62,7 @@
     * - A-1A
       - 6
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       - 
     * - B-1A

@@ -46,6 +46,11 @@
 
 障害物回避モジュールは、出力が通常高く、障害物が検出されると低くなる距離調整可能な赤外線近接センサーです。
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/vadNtXwITFc?si=gY4Ww31zmcs8AObP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 以下の図に従って回路を組み立てます。
 
 .. list-table:: 
@@ -76,6 +81,13 @@
     :width: 800
 
 **モジュールの調整**
+
+.. raw:: html
+
+    <video width="600" loop autoplay muted>
+        <source src="_static/video/calibrate_ir.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
 
 プロジェクトを開始する前に、モジュールの検出距離を調整する必要があります。
 
