@@ -48,6 +48,10 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 Dies ist ein digitales Linienverfolgungsmodul. Bei Erkennung einer schwarzen Linie gibt es den Wert 1 aus; bei Erkennung einer weißen Linie den Wert 0. Zusätzlich können Sie über das Potentiometer auf dem Modul seinen Erfassungsabstand einstellen.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/mlCQgAq4elo?si=ZFmHeA6bVsDCPG0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Bauen Sie den Schaltkreis gemäß dem folgenden Diagramm auf.
 
 .. list-table:: 

@@ -44,6 +44,10 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 **Verdrahtung**
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/M8buGWCkYcI?si=spLK2KP363rkN6sl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Bauen Sie jetzt den Schaltkreis gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 

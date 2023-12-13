@@ -54,7 +54,7 @@ Hier sind einige Dinge, die Sie über Steckplatinen wissen sollten.
 
 **Lassen Sie uns die Richtung des Stroms verfolgen, um den Schaltkreis aufzubauen!**
 
-.. image:: img/sp221014_182229.png
+.. image:: img/sp221014_182229_2.png
 
 1. In diesem Schaltkreis verwenden wir den 5V-Pin des Boards, um die LED mit Strom zu versorgen. Verwenden Sie ein männlich-zu-männlich (M2M) Verbindungskabel, um es mit der roten Stromschiene zu verbinden.
 #. Um die LED zu schützen, muss der Strom durch einen 220-Ohm-Widerstand fließen. Verbinden Sie ein Ende (beliebiges Ende) des Widerstands mit der roten Stromschiene und das andere Ende mit der freien Reihe der Steckplatine.

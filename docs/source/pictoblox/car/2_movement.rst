@@ -14,7 +14,7 @@ Hier ist die Wahrheitstabelle für den Motor B:
     :header-rows: 1
 
     * - B-1A
-      - B-1B
+      - B-1B(B-2A)
       - Zustand des Motor B
     * - 1
       - 0

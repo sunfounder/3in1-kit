@@ -46,6 +46,11 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 Das Hindernisvermeidungs-Modul ist ein einstellbarer Infrarot-Näherungssensor. Sein Ausgang ist normalerweise hoch und wird niedrig, wenn ein Hindernis erkannt wird.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/vadNtXwITFc?si=gY4Ww31zmcs8AObP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 Bauen Sie die Schaltung gemäß dem untenstehenden Diagramm.
 
 .. list-table:: 
@@ -76,6 +81,13 @@ Bauen Sie die Schaltung gemäß dem untenstehenden Diagramm.
     :width: 800
 
 **Modul justieren**
+
+.. raw:: html
+
+    <video width="600" loop autoplay muted>
+        <source src="_static/video/calibrate_ir.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
 
 Bevor Sie mit dem Projekt beginnen, müssen Sie den Erkennungsabstand des Moduls einstellen.
 

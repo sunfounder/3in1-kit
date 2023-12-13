@@ -18,6 +18,8 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-12-13:
+- Add wiring videos for all car projects projects
 
 2023-10-24:
 - Modify the project codes that involve the infrared receiver, and remove the LED from the circuit to prevent interference with the reception.

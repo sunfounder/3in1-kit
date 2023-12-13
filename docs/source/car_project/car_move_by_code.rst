@@ -57,7 +57,7 @@ Verbinden Sie die Drähte zwischen dem L9110-Modul und dem R3-Board gemäß dem 
     * - A-1A
       - 6
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       - 
     * - B-1A
@@ -93,6 +93,10 @@ Verbinden Sie die Drähte zwischen dem L9110-Modul und dem R3-Board gemäß dem 
 Nach dem Hochladen des Codes auf das R3-Board richten Sie das Linienverfolgungsmodul unter dem Auto auf die schwarze Linie aus und Sie werden sehen, wie das Auto der Linie folgt.
 
 **Wie funktioniert das?**
+
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Dieses Projekt ist im Wesentlichen dasselbe wie das vorherige und beinhaltet, dass das Auto vorwärts, rückwärts, links und rechts fährt, sowie durch Bereitstellung verschiedener Signalpegel an den Eingabepins des L9110-Moduls anhält.
 

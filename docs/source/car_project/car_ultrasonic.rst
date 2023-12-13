@@ -47,6 +47,10 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 Ein Ultraschallsensormodul ist ein Instrument, das die Entfernung zu einem Objekt mit Ultraschallwellen misst.
 Es hat zwei Sonden. Eine sendet Ultraschallwellen und die andere empfängt die Wellen und wandelt die Sende- und Empfangszeit in eine Entfernung um, wodurch die Entfernung zwischen dem Gerät und einem Hindernis erfasst wird.
 
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Bauen Sie die Schaltung entsprechend dem folgenden Diagramm auf.
 
 .. list-table:: 

@@ -1,5 +1,12 @@
 Auto zusammenbauen
 =====================
+**Video**
+
+.. raw:: html
+    
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**Schritte**
 
 Bitte befolgen Sie die untenstehenden Schritte, um den Zusammenbau des Autos abzuschließen.
 

@@ -61,7 +61,7 @@ Verbinden Sie die Drähte zwischen dem L9110-Modul und dem R3-Board gemäß dem 
     * - A-1A
       - 6
       - 
-    * - B-1B
+    * - B-1B(B-2A)
       - 9
       - 
     * - B-1A
