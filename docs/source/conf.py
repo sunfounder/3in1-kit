@@ -110,7 +110,7 @@ rst_epilog = """
 
 .. |link_fr_tutorials| raw:: html
 
-    <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/fr/latest/" target="_blank">Documentation en ligne en français</a>
+    <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/fr/latest/" target="_blank">Tutoriels en ligne en français</a>
 
 
     
