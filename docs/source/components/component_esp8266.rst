@@ -1,81 +1,81 @@
 .. _cpn_esp8266:
 
-ESP8266 Module
+Module ESP8266
 =================
 
 .. image:: img/esp8266.jpg
     :align: center
 
-The ESP8266 is a low-cost Wi-Fi microchip, 
-with built-in TCP/IP networking software, 
-and microcontroller capability, produced by Espressif Systems in Shanghai, China.
+L'ESP8266 est une puce Wi-Fi à bas coût, 
+dotée d'un logiciel de réseau TCP/IP intégré, 
+et d'une capacité de microcontrôleur, produite par Espressif Systems à Shanghai, Chine.
 
-The chip first came to the attention of Western makers in August 2014 with the ESP-01 module, 
-made by a third-party manufacturer Ai-Thinker. 
-This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections using Hayes-style commands. 
-However, at first, there was almost no English-language documentation on the chip and the commands it accepted. 
-The very low price and the fact that there were very few external components on the module, 
-which suggested that it could eventually be very inexpensive in volume, 
-attracted many hackers to explore the module, 
-the chip, and the software on it, as well as to translate the Chinese documentation.
+La puce a attiré l'attention des créateurs occidentaux pour la première fois en août 2014 avec le module ESP-01, 
+fabriqué par un fabricant tiers Ai-Thinker. 
+Ce petit module permet aux microcontrôleurs de se connecter à un réseau Wi-Fi et d'établir des connexions TCP/IP simples en utilisant des commandes de style Hayes. 
+Cependant, au début, il y avait presque aucune documentation en anglais sur la puce et les commandes qu'elle acceptait. 
+Le prix très bas et le fait qu'il y avait très peu de composants externes sur le module, 
+ce qui suggérait qu'il pourrait éventuellement être très bon marché en volume, 
+ont attiré de nombreux hackers à explorer le module, 
+la puce, et le logiciel qui y est installé, ainsi qu'à traduire la documentation chinoise.
 
-Pins of ESP8266 and their functions:
+Broches de l'ESP8266 et leurs fonctions :
 
 .. image:: img/ESP8266_pinout.png
 
 
-.. list-table:: ESP8266-01 Pins
+.. list-table:: Broches ESP8266-01
    :widths: 25 25 100
    :header-rows: 1
 
-   * - Pin	
-     - Name	
+   * - Broche	
+     - Nom	
      - Description
    * - 1	
      - TXD	
-     - UART_TXD, sending; General Purpose Input/Outpu: GPIO1; Pull-down is not allowed when startup.
+     - UART_TXD, émission ; Entrée/Sortie Générale : GPIO1 ; Il est interdit de tirer vers le bas lors du démarrage.
    * - 2	
      - GND
      - GND
    * - 3	
      - CU_PD	
-     - Working at high level; Power off when low level is supplied.
+     - Fonctionne à un niveau élevé ; S'éteint lorsque un niveau bas est fourni.
    * - 4		
      - GPIO2
-     - It should be high level when power on, hardware pull-down is not allowed; Pull-up by default;
+     - Doit être à un niveau élevé lors de la mise sous tension, le tirage vers le bas matériel est interdit ; Tiré vers le haut par défaut;
    * - 5	
      - RST	
-     - External Reset signal, reset when low level is supplied; work when high level is supplied (high level by default);
+     - Signal de réinitialisation externe, réinitialisation lorsque un niveau bas est fourni ; fonctionne lorsqu'un niveau élevé est fourni (niveau élevé par défaut) ;
    * - 6	
      - GPIO0	
-     - WiFi Status indicator; Operation mode selection: Pull-up: Flash Boot, operation mode; Pull-down: UART Download, download mode
+     - Indicateur d'état WiFi ; Sélection du mode de fonctionnement : Tiré vers le haut : Démarrage Flash, mode de fonctionnement ; Tiré vers le bas : Téléchargement UART, mode de téléchargement
    * - 7	
      - VCC	
-     - Power Supply(3.3V)
+     - Alimentation électrique (3.3V)
    * - 8	
      - RXD	
-     - UART_RXD，Receiving; General Purpose Input/Output: GPIO3;
+     - UART_RXD, réception ; Entrée/Sortie Générale : GPIO3;
 
 
 * `ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_
-* `ESP8266 AT Instruction Set <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
+* `Ensemble d'instructions AT ESP8266 <https://github.com/sunfounder/3in1-kit/blob/main/iot_project/esp8266_at_instruction_set_en.pdf>`_
 
-ESP8266 Adapter
----------------
+Adaptateur ESP8266
+---------------------
 
 .. image:: img/esp8266_adapter.png
     :width: 300
     :align: center
 
-The ESP8266 adapter is an expansion board that allows the ESP8266 module to be used on a breadboard.
+L'adaptateur ESP8266 est une carte d'extension qui permet d'utiliser le module ESP8266 sur une breadboard.
 
-It perfectly matches the pins of the ESP8266 itself, and also adds a 5V pin to receive the voltage from the Arduino board. The integrated AMS1117 chip is used to drive the ESP8266 module after dropping the voltage to 3.3V.
+Il correspond parfaitement aux broches de l'ESP8266 lui-même, et ajoute également une broche 5V pour recevoir la tension de la carte Arduino. Le chip AMS1117 intégré est utilisé pour alimenter le module ESP8266 après avoir réduit la tension à 3.3V.
 
-The schematic diagram is as follows:
+Le schéma est le suivant :
 
 .. image:: img/sch_esp8266adapter.png
 
 
-**Example**
+**Exemple**
 
-* :ref:`iot_projects` (IoT Project)
+* :ref:`iot_projects` (Projet IoT)

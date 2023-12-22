@@ -1,27 +1,27 @@
 .. _ar_analog_read:
 
-4. Analog Read
+4. Lecture Analogique
 ======================
 
-The Arduino can read the connected analog sensors through the analog pins.
+L'Arduino peut lire les capteurs analogiques connectés via les broches analogiques.
 
-The R3 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+La carte R3 contient un convertisseur analogique-numérique multicanal de 10 bits. Cela signifie qu'elle mappe la tension d'entrée entre 0 et la tension de fonctionnement (5V ou 3.3V) en une valeur entière entre 0 et 1023.
 
-You need the ``analogRead(pin)`` function to read the value of the analog pin.
+Vous avez besoin de la fonction ``analogRead(pin)`` pour lire la valeur de la broche analogique.
 
-* ``analogRead(pin)``: Read the value from the specified analog pin.
+* ``analogRead(pin)`` : Lit la valeur de la broche analogique spécifiée.
 
-   **Syntax**
+   **Syntaxe**
       analogRead(pin)
 
-   **Parameters**
-        * ``pin``: the name of the analog input pin to read from (A0 to A5).
+   **Paramètres**
+        * ``pin`` : le nom de la broche d'entrée analogique à lire (de A0 à A5).
 
-   **Returns**
-      0-1023. Data type: int.
+   **Retours**
+      0-1023. Type de données : int.
 
 
-**Example of Analog Read**
+**Exemple de Lecture Analogique**
 
 .. code-block:: arduino
 
@@ -39,14 +39,14 @@ You need the ``analogRead(pin)`` function to read the value of the analog pin.
    }
 
 
-**Notes and Warnings**
+**Notes et Avertissements**
 
-* The analog pins are A0-A5.
-* You don't need to call ``pinMode()`` before calling the analog pin, but if the pin was previously set to ``OUTPUT``, the function ``analogRead()`` will not work properly, in which case you need to call ``pinMode()`` to set it back to ``INTPUT``.
+* Les broches analogiques sont A0-A5.
+* Vous n'avez pas besoin d'appeler ``pinMode()`` avant d'appeler la broche analogique, mais si la broche était précédemment réglée sur ``OUTPUT``, la fonction ``analogRead()`` ne fonctionnera pas correctement. Dans ce cas, vous devez appeler ``pinMode()`` pour la remettre en ``INTPUT``.
 
-**Related Components**
+**Composants Associés**
 
-Below are the related components, you can click in to learn how to use them.
+Ci-dessous les composants associés, vous pouvez cliquer pour apprendre à les utiliser.
 
 .. toctree::
     :maxdepth: 2

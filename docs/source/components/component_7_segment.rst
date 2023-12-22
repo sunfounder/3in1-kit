@@ -1,31 +1,32 @@
 .. _cpn_7_segment:
 
-7-segment Display
+Affichage 7 segments
 ======================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+Un affichage à 7 segments est un composant en forme de 8 qui intègre 7 LED. Chaque LED est appelée un segment - lorsqu'elle est alimentée, un segment forme une partie d'un chiffre à afficher.
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+Il existe deux types de connexion de broches : Cathode Commune (CC) et Anode Commune (CA). Comme leur nom l'indique, un affichage CC connecte toutes les cathodes des 7 LED, tandis qu'un affichage CA connecte toutes les anodes des 7 segments.
 
-In this kit, we use the Common Cathode 7-segment display, here is the electronic symbol.
+Dans ce kit, nous utilisons l'affichage à 7 segments à Cathode Commune, voici le symbole électronique correspondant.
 
 .. image:: img/segment_cathode.png
     :width: 800
 
-Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package. These LED pins are labeled from "a" through to "g" representing each individual LED. The other LED pins are connected together forming a common pin. So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+Chacune des LED de l'affichage est dotée d'un segment positionnel avec l'une de ses broches de connexion sortant du boîtier en plastique rectangulaire. Ces broches de LED sont étiquetées de "a" à "g", représentant chaque LED individuelle. Les autres broches de LED sont connectées ensemble, formant une broche commune. Ainsi, en polarisant directement les broches appropriées des segments de LED dans un ordre particulier, certains segments s'illuminent tandis que d'autres restent sombres, affichant ainsi le caractère correspondant sur l'affichage.
 
-**Display Codes** 
+**Codes d'affichage**
 
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1, For example, 00111111 means that DP and G are set to 0, while others are set to 1. Therefore, the number 0 is displayed on the 7-segment display, while HEX Code corresponds to hexadecimal number.
+Pour vous aider à comprendre comment les affichages à 7 segments (Cathode Commune) affichent les nombres, nous avons dressé le tableau suivant. Les nombres sont les chiffres de 0 à F affichés sur l'affichage à 7 segments ; (DP) GFEDCBA se réfère à l'ensemble de LED correspondant réglé sur 0 ou 1, par exemple, 00111111 signifie que DP et G sont réglés sur 0, tandis que les autres sont réglés sur 1. Par conséquent, le nombre 0 est affiché sur l'affichage à 7 segments, tandis que le Code HEX correspond au nombre hexadécimal.
 
 .. image:: img/segment_code.png
 
-**Example**
+**Exemple**
 
-* :ref:`ar_74hc_7seg` (Basic Project)
-* :ref:`iot_gate` (IoT Project)
+* :ref:`ar_74hc_7seg` (Projet de base)
+* :ref:`iot_gate` (Projet IoT)
+
 

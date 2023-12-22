@@ -1,38 +1,38 @@
 .. _sh_avoid1:
 
-3.5 Obstacle avoidance
+3.5 Évitement d'obstacles
 ==================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+Deux modules d'évitement d'obstacles infrarouges sont montés à l'avant de la voiture, pouvant détecter certains obstacles proches.
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+Dans ce projet, la voiture peut avancer librement, et lorsqu'elle rencontre un obstacle, elle est capable de l'éviter et de continuer à se déplacer dans d'autres directions.
 
-Required Components
+Composants requis
 ---------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,17 +43,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+Construire le Circuit
 -----------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Le module d'évitement d'obstacles est un capteur de proximité infrarouge à distance ajustable dont la sortie est normalement haute et basse lorsqu'un obstacle est détecté.
 
-Now build the circuit according to the diagram below.
+Construisez le circuit selon le schéma ci-dessous.
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - Module IR Gauche
+      - Carte R3
     * - OUT
       - 8
     * - GND
@@ -63,8 +63,8 @@ Now build the circuit according to the diagram below.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - Module IR Droit
+      - Carte R3
     * - OUT
       - 7
     * - GND
@@ -75,68 +75,68 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-Adjust the Module
+Ajuster le Module
 -----------------------
 
-Before starting the project, you need to adjust the detection distance of the module.
+Avant de commencer le projet, vous devez ajuster la distance de détection du module.
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Câblez selon le schéma ci-dessus, alimentez la carte R3 (soit en branchant directement le câble USB, soit en clipsant le câble de la pile 9V), sans télécharger le code.
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+Placez un cahier ou tout autre objet plat à environ 5 cm devant le module d'évitement d'obstacles IR.
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+Ensuite, utilisez un tournevis pour tourner le potentiomètre sur le module jusqu'à ce que l'indicateur de signal sur le module s'allume juste, afin d'ajuster sa distance de détection maximale de 5 cm.
 
-Follow the same method to adjust another infrared module.
+Suivez la même méthode pour ajuster un autre module infrarouge.
 
 .. image:: img/ir_obs_cali.jpg
 
-Programming
+Programmation
 ---------------
 
-The effect we want to achieve.
+L'effet que nous voulons atteindre.
 
-* When the left IR module detects an obstacle, the car goes backward to the left
-* When the right IR module detects an obstacle, the car goes backward to the right.
-* If both IR modules detect the obstacle, the car will go back directly.
-* Otherwise the car will go forward.
+* Lorsque le module IR gauche détecte un obstacle, la voiture recule vers la gauche
+* Lorsque le module IR droit détecte un obstacle, la voiture recule vers la droite.
+* Si les deux modules IR détectent l'obstacle, la voiture reculera directement.
+* Sinon, la voiture avancera.
 
-Now create the corresponding blocks.
+Créez maintenant les blocs correspondants.
 
-**1. The car goes backward to the left**
+**1. La voiture recule vers la gauche**
 
-When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left.
+Lorsque le moteur droit tourne dans le sens inverse des aiguilles d'une montre et que le moteur gauche ne tourne pas, la voiture reculera vers la gauche.
 
 .. image:: img/5_avoid1.png
 
-**2. The car goes backward to the right**
+**2. La voiture recule vers la droite**
 
-When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+Lorsque le moteur gauche tourne dans le sens des aiguilles d'une montre et que le moteur droit ne tourne pas, la voiture reculera vers la droite.
 
 .. image:: img/5_avoid2.png
 
-**3. The car moves forward, backward and stops**
+**3. La voiture avance, recule et s'arrête**
 
 .. image:: img/5_avoid3.png
 
-**4. Read the values of the 2 IR modules**
+**4. Lire les valeurs des 2 modules IR**
 
-Click **Make a variable** in the **Variables** palette.
+Cliquez sur **Make a variable** dans la palette **Variables**.
 
 .. image:: img/5_avoid4.png
 
-Enter the variable name and click **OK** to create a new variable.
+Entrez le nom de la variable et cliquez sur **OK** pour créer une nouvelle variable.
 
 .. image:: img/5_avoid5.png
 
-Read the values of the left and right IR obstacle avoidance modules and store them in the 2 new variables.
+Lisez les valeurs des modules d'évitement d'obstacles IR gauche et droit et stockez-les dans les 2 nouvelles variables.
 
 .. image:: img/5_avoid6.png
 
-**5. obstacle avoidance**
+**5. Évitement d'obstacles**
 
-* When the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-* When the right IR module is 0 (obstacle detected), let the car go back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will go backward.
-* Otherwise the car will keep going forward.
+* Lorsque le module IR gauche est à 0 (obstacle détecté) et que le module IR droit est à 1, faites reculer la voiture vers la gauche.
+* Lorsque le module IR droit est à 0 (obstacle détecté), faites reculer la voiture vers la droite.
+* Si les 2 modules IR détectent l'obstacle en même temps, la voiture reculera.
+* Sinon, la voiture continuera d'avancer.
 
 .. image:: img/5_avoid7.png

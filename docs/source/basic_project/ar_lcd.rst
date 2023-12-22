@@ -1,37 +1,37 @@
 .. _ar_lcd1602:
 
-5.11.1 Liquid Crystal Display
-===============================
+5.11.1 Affichage à Cristaux Liquides
+====================================
 
-An I2C LCD1602 is composed of an LCD1602 and an I2C module, LCD1602 can be used to display characters, numbers, etc., but need to take up a lot of pins of the main control, after configuring an I2C module, only 2 I/0 pins are needed to drive this LCD1602.
+Un LCD1602 I2C est composé d'un LCD1602 et d'un module I2C. Le LCD1602 peut être utilisé pour afficher des caractères, des nombres, etc., mais nécessite l'utilisation de nombreux pins du contrôleur principal. Après configuration d'un module I2C, seulement 2 pins I/O sont nécessaires pour piloter ce LCD1602.
 
-Now look at how to make this I2C CDL1602 work.
+Voyons maintenant comment faire fonctionner ce LCD1602 I2C.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,27 +41,26 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
-
+**Schéma**
 
 .. image:: img/circuit_7.1_lcd1602.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/lcd_bb.jpg
     :width: 800
     :align: center
 
 .. note::
-    The SDA and SCL of the R3 board are the pins A4 and A5.
+    Les pins SDA et SCL de la carte R3 sont les pins A4 et A5.
 
 **Code**
 
 .. note::
 
-    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Ouvrez le fichier ``5.11.liquid_crystal_display.ino`` situé dans le dossier ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
+    * Ou copiez ce code dans **Arduino IDE**.
+    * La bibliothèque ``LiquidCrystal I2C`` est utilisée ici, vous pouvez l'installer depuis le **Library Manager**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
     
@@ -70,80 +69,81 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will see "SunFounder", "Hello World" on the I2C LCD1602.
+Après le téléversement réussi du code, vous verrez "SunFounder", "Hello World" sur le LCD1602 I2C.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    Si le code et le câblage sont corrects, mais que l'écran LCD n'affiche toujours pas de contenu, vous pouvez tourner le potentiomètre situé à l'arrière.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD. 
+En appelant la bibliothèque ``LiquidCrystal_I2C.h``, vous pouvez facilement piloter l'écran LCD.
 
 .. code-block:: arduino
 
     #include "LiquidCrystal_I2C.h"
 
-Library Functions: 
+Fonctions de la bibliothèque : 
 
 .. code-block:: arduino
 
     LiquidCrystal_I2C(uint8_t lcd_Addr,uint8_t lcd_cols,uint8_t lcd_rows)
 
-Creates a new instance of the ``LiquidCrystal_I2C`` class that represents a
-particular LCD attached to your Arduino board.
+Crée une nouvelle instance de la classe ``LiquidCrystal_I2C`` qui représente un
+écran LCD particulier connecté à votre carte Arduino.
 
-* ``lcd_AddR``: The address of the LCD defaults to 0x27.
-* ``lcd_cols``: The LCD1602 has 16 columns.
-* ``lcd_rows``: The LCD1602 has 2 rows.
+* ``lcd_AddR`` : L'adresse de l'écran LCD est par défaut 0x27.
+* ``lcd_cols`` : Le LCD1602 a 16 colonnes.
+* ``lcd_rows`` : Le LCD1602 a 2 lignes.
 
 
 .. code-block:: arduino
 
     void init()
 
-Initialize the lcd.
+Initialise l'écran LCD.
 
 .. code-block:: arduino
 
     void backlight()
 
-Turn the (optional) backlight on.
+Allume le rétroéclairage (optionnel).
 
 .. code-block:: arduino
 
     void nobacklight()
 
-Turn the (optional) backlight off.
+Éteint le rétroéclairage (optionnel).
 
 .. code-block:: arduino
 
     void display()
 
-Turn the LCD display on.
+Allume l'affichage de l'écran LCD.
 
 .. code-block:: arduino
 
     void nodisplay()
 
-Turn the LCD display off quickly.
+Éteint rapidement l'affichage de l'écran LCD.
 
 .. code-block:: arduino
 
     void clear()
 
-Clear display, set cursor position to zero.
+Efface l'écran et positionne le curseur à zéro.
 
 .. code-block:: arduino
 
     void setCursor(uint8_t col,uint8_t row)
 
-Set the cursor position to col,row.
+Positionne le curseur à la colonne col et à la ligne row.
 
 .. code-block:: arduino
 
     void print(data,BASE)
 
-Prints text to the LCD.
+Affiche du texte sur l'écran LCD.
 
-* ``data``: The data to print (char, byte, int, long, or string).
-* ``BASE (optional)``: The base in which to print numbers: BIN for binary (base 2), DEC for decimal (base 10), OCT for octal (base 8), HEX for hexadecimal (base 16).
+* ``data`` : Les données à afficher (char, byte, int, long ou string).
+* ``BASE (optionnel)`` : La base dans laquelle afficher les nombres : BIN pour binaire (base 2), DEC pour décimal (base 10), OCT pour octal (base 8), HEX pour hexadécimal (base 16).
+

@@ -1,15 +1,15 @@
 .. _car_move:
 
-1. Move
-===============
+1. Mouvement
+============
 
 .. image:: ../components/img/l9110_module.jpg
     :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110 module.
+Avant de commencer la programmation, revoyons le principe de fonctionnement du module L9110.
 
-Here is the truth table of Motor B:
+Voici la table de vérité du moteur B :
 
 .. list-table:: 
     :widths: 25 25 50
@@ -17,21 +17,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B(B-2A)
-      - The state of Motor B
+      - État du moteur B
     * - 1
       - 0
-      - Rotate clockwise
+      - Rotation dans le sens des aiguilles d'une montre
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Rotation dans le sens inverse des aiguilles d'une montre
     * - 0
       - 0
-      - Brake
+      - Freinage
     * - 1
       - 1
-      - Stop
+      - Arrêt
 
-Here is the truth table of Motor A:
+Voici la table de vérité du moteur A :
 
 .. list-table:: 
     :widths: 25 25 50
@@ -39,54 +39,54 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - État du moteur B
     * - 1
       - 0
-      - Rotate clockwise
+      - Rotation dans le sens des aiguilles d'une montre
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Rotation dans le sens inverse des aiguilles d'une montre
     * - 0
       - 0
-      - Brake
+      - Freinage
     * - 1
       - 1
-      - Stop
+      - Arrêt
 
 
 * :ref:`cpn_l9110`
 
-**Forward**
+**Avancer**
 
-Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
+Connectons maintenant l'entrée du module L9110 directement à 12V et GND respectivement pour faire avancer la voiture.
 
 .. raw:: html
     
-  <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-1. Connect R3 board, L9110 module and 2 motors.
+1. Connectez la carte R3, le module L9110 et 2 moteurs.
 
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B(B-2A) and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
+2. Connectez B-1B(B-2A) et A-1A à VCC, et B-1A et A-1B à GND, alors vous pourrez voir la voiture avancer.
 
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, 
-you need to readjust the wiring of the two motors.
+Si les deux ne tournent pas vers l'avant, mais que les situations suivantes se produisent, 
+vous devrez réajuster le câblage des deux moteurs.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Si les deux moteurs tournent en arrière en même temps (le moteur gauche tourne dans le sens des aiguilles d'une montre, le moteur droit tourne dans le sens inverse), échangez le câblage des moteurs gauche et droit en même temps, OA(A) et OB(A) échangent, OA(B) et OB(B) échangent.
+* Si le moteur gauche tourne en arrière (rotation dans le sens des aiguilles d'une montre), échangez le câblage de OA(B) et OB(B) du moteur gauche.
+* Si le moteur droit tourne en arrière (rotation dans le sens inverse des aiguilles d'une montre), échangez le câblage de OA(A) et OB(A) du moteur droit.
 
 
-**Backward**
+**Arrière**
 
-Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
+Connectez B-1B(B-2A) et A-1A à GND, et B-1A et A-1B à VCC, alors vous pourrez voir la voiture reculer.
 
 
 .. image:: img/1.move_back.png 
@@ -94,20 +94,20 @@ Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be
 
 
 
-**Turn Left**
+**Tourner à Gauche**
 
-If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B(B-2A)  and A-1B to VCC.
+Si vous voulez faire tourner la voiture à gauche, c'est-à-dire faire tourner les deux moteurs dans le sens des aiguilles d'une montre. 
+Vous devez connecter B-1A et A-1A à GND, et B-1B(B-2A) et A-1B à VCC.
 
 
 .. image:: img/1.move_left.png 
     :width: 800
 
 
-**Turn Right**
+**Tourner à Droite**
 
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
+Inversement, si vous voulez tourner la voiture à droite, c'est-à-dire faire tourner les deux moteurs dans le sens inverse des aiguilles d'une montre. 
+Vous devez connecter B-1A et A-1A à VCC et B-1B(B-2A) et A-1B à GND.
 
 
 .. image:: img/1.move_right.png 
@@ -115,8 +115,8 @@ You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
 
 
 
-**Stop**
+**Arrêt**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B(B-2A)  to 12V or 5V at the same time, and the same for A-1A and A-1B.
+Pour arrêter le moteur, connectez les entrées du même côté à 12V ou GND en même temps, par exemple connectez B-1A et B-1B(B-2A) à 12V ou 5V en même temps, et de même pour A-1A et A-1B.
 
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+Ceci est bien sûr théorique et nécessaire plus tard lors de la commande avec du code. Ici, retirez l'alimentation de la voiture pour l'arrêter.

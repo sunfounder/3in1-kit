@@ -1,13 +1,13 @@
 .. _car_projects:
 
-Car Projects
-=================
+Projets de Voiture
+==================
 
-I believe you have seen a lot of different smart robot car, their basic functions are similar, basic movement, obstacle avoidance, line following, following and control by remote control, etc..
+Je crois que vous avez vu beaucoup de différentes voitures robots intelligentes, leurs fonctions de base sont similaires : mouvement de base, évitement d'obstacles, suivi de ligne, suivi et contrôle par télécommande, etc.
 
-Here, we use the simplest structure to build a smart robot car, which can also achieve all the above functions. In addition you can control it with your cell phone, please refer to :ref:`iot_car` for the tutorial.
+Ici, nous utilisons la structure la plus simple pour construire une voiture robot intelligente, qui peut également réaliser toutes les fonctions ci-dessus. De plus, vous pouvez la contrôler avec votre téléphone portable, veuillez vous référer à :ref:`iot_car` pour le tutoriel.
 
-**assembly instructions**
+**Instructions de montage**
 
 .. toctree::
     :maxdepth: 1
@@ -15,13 +15,13 @@ Here, we use the simplest structure to build a smart robot car, which can also a
     car_assemble
 
 
-**Projects**
+**Projets**
 
-Here are some projects for the car, programmed in C with the Arduino IDE, if you are not particularly skilled with Arduino, you can refer to :ref:`get_start_arduino_ide`.
+Voici quelques projets pour la voiture, programmés en C avec l'IDE Arduino. Si vous n'êtes pas particulièrement compétent avec Arduino, vous pouvez vous référer à :ref:`get_start_arduino_ide`.
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Les projets suivants sont rédigés par ordre de difficulté de programmation, il est recommandé de lire ces livres dans l'ordre.
 
-If you want to program a car with Scratch, please refer to: :ref:`play_with_scratch`.
+Si vous souhaitez programmer une voiture avec Scratch, veuillez vous référer à : :ref:`play_with_scratch`.
 
 .. toctree::
     :maxdepth: 2

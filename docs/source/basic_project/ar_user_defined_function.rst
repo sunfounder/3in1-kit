@@ -1,55 +1,54 @@
 .. _ar_ultrasonic:
 
-5.8 User-defined Function
+5.8 Fonction Définie par l'Utilisateur
 ======================================
 
-In c, we can divide a large program into the basic building blocks known as function. 
-The function contains the set of programming statements enclosed by {}. 
-A function can be called multiple times to provide reusability and modularity to the C program. 
-In other words, we can say that the collection of functions creates a program. 
-The function is also known as procedureor subroutinein other programming languages.
+En C, nous pouvons diviser un grand programme en blocs de construction de base connus sous le nom de fonction.
+La fonction contient l'ensemble des instructions de programmation entourées par {}.
+Une fonction peut être appelée plusieurs fois pour fournir une réutilisabilité et une modularité au programme C.
+En d'autres termes, nous pouvons dire que la collection de fonctions crée un programme.
+La fonction est également connue sous le nom de procédure ou sous-routine dans d'autres langages de programmation.
 
-There are the following advantages of functions.
+Voici les avantages des fonctions :
 
-* By using functions, we can avoid rewriting same logic/code again and again in a program.
-* We can call C functions any number of times in a program and from any place in a program.
-* We can track a large C program easily when it is divided into multiple functions.
-* Reusability is the main achievement of C functions.
-* However, Function calling is always a overhead in a C program.
+* En utilisant des fonctions, nous pouvons éviter de réécrire la même logique/code encore et encore dans un programme.
+* Nous pouvons appeler des fonctions C autant de fois que nous le souhaitons dans un programme et de n'importe quel endroit dans un programme.
+* Nous pouvons facilement suivre un grand programme C lorsqu'il est divisé en plusieurs fonctions.
+* La réutilisabilité est la principale réalisation des fonctions C.
+* Cependant, l'appel de fonction est toujours un surcoût dans un programme C.
 
+Il existe deux types de fonctions en programmation C :
 
-There are two types of functions in C programming:
+* **Fonctions de Bibliothèque** : les fonctions qui sont déclarées dans les fichiers d'en-tête C.
+* **Fonctions Définies par l'Utilisateur** : les fonctions créées par le programmeur C, afin qu'il/elle puisse les utiliser plusieurs fois. Cela réduit la complexité d'un grand programme et optimise le code.
 
-* **Library Functions**: the functions which are declared in the C header files.
-* **User-defined functions**: the functions which are created by the C programmer, so that he/she can use it many times. It reduces the complexity of a big program and optimizes the code.
+Dans ce projet, définissez une fonction pour lire la valeur du module ultrasonique.
 
-In this project, define a function to read the value of the ultrasonic module.
+**Composants Requis**
 
-**Required Components**
+Dans ce projet, nous avons besoin des composants suivants.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -58,12 +57,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_6.3_ultrasonic.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/ultrasonic_bb.jpg
     :width: 600
@@ -73,28 +71,27 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.8.user_function.ino`` file under the path of ``3in1-kit\basic_project\5.8.user_function``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``5.8.user_function.ino`` sous le chemin de ``3in1-kit\basic_project\5.8.user_function``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+    * Ou téléchargez le code via le `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/11717782-3ee6-4eca-bbb9-094385d9eb4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After the code is successfully uploaded, the serial monitor will print out the distance between the ultrasonic sensor and the obstacle ahead.
+Après le téléchargement réussi du code, le moniteur série affichera la distance entre le capteur ultrasonique et l'obstacle devant.
 
-**How it works?**
+**Comment ça marche ?**
 
-About the application of ultrasonic sensor, we can directly check the subfunction.
+Concernant l'application du capteur ultrasonique, nous pouvons directement vérifier la sous-fonction.
 
 .. code-block:: arduino
 
     float readSensorData(){// ...}
 
-The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal every 2us
+La broche ``trigPin`` du module ultrasonique transmet un signal carré de 10us toutes les 2us
 
 .. code-block:: arduino
 
@@ -105,20 +102,20 @@ The ``trigPin`` of the ultrasonic module transmits a 10us square wave signal eve
     digitalWrite(trigPin, LOW); 
 
 
-The ``echoPin`` receives a high level signal if there is an obstacle within the range and use the ``pulseIn()`` function to record the time from sending to receiving.
+La broche ``echoPin`` reçoit un signal de haut niveau s'il y a un obstacle dans la portée et utilise la fonction ``pulseIn()`` pour enregistrer le temps entre l'envoi et la réception.
 
 .. code-block:: arduino
 
     microsecond=pulseIn(echoPin, HIGH);
 
-The speed of sound is 340 m/s or 29 microseconds per centimeter.
+La vitesse du son est de 340 m/s ou 29 microsecondes par centimètre.
 
-This gives the distance travelled by the square wave, outbound and return, so
-we divide by 2 to get the distance of the obstacle.
+Cela donne la distance parcourue par l'onde carrée, aller et retour, donc
+nous divisons par 2 pour obtenir la distance de l'obstacle.
 
 .. code-block:: arduino
 
     float distance = microsecond / 29.00 / 2;  
 
 
-Note that the ultrasonic sensor will pause the program when it is working, which may cause some lagging when writing complex projects.
+Notez que le capteur ultrasonique mettra le programme en pause lorsqu'il fonctionne, ce qui peut provoquer des ralentissements lors de l'écriture de projets complexes.

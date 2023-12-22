@@ -1,37 +1,37 @@
 .. _car_move_code:
 
-2. Move by Code
-======================
+2. Mouvement par Code
+=====================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L9110 module.
+Dans le projet précédent, nous avons essayé de contrôler le fonctionnement du moteur en utilisant différents signaux de niveau pour l'entrée du module L9110.
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
+Si nous modifions les signaux de niveau par le programme, alors nous pouvons contrôler le mouvement de la voiture de manière flexible.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,13 +41,13 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Câblage**
 
 .. raw:: html
 
     <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
+Connectez les fils entre le module L9110 et la carte R3 selon le schéma ci-dessous.
 
 .. list-table:: 
     :widths: 25 25 50
@@ -89,21 +89,21 @@ Connect the wires between the L9110 module and the R3 board according to the dia
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``2.move.ino`` dans le chemin ``3in1-kit\car_project\2.move``.
+    * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
+Après le téléchargement du code, la voiture se déplacera respectivement vers l'avant, l'arrière, la gauche et la droite pendant deux secondes.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-This project is essentially the same as the previous one, involving making the car move forward, backward, left, and right, as well as stopping by providing different signal levels to the input pins of the L9110 module.
+Ce projet est essentiellement le même que le précédent, impliquant de faire avancer, reculer, tourner à gauche et à droite la voiture, ainsi que de l'arrêter en fournissant différents niveaux de signal aux broches d'entrée du module L9110.
 
-#. Initialize the pins of L9110 module.
+#. Initialisez les broches du module L9110.
 
     .. code-block:: arduino
 
@@ -119,7 +119,7 @@ This project is essentially the same as the previous one, involving making the c
             pinMode(B_1A, OUTPUT);
         }
 
-#. Set the input pins to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Réglez les broches d'entrée à différents niveaux hauts ou bas pour contrôler la rotation des moteurs gauche et droit, puis encapsulez-les dans des fonctions individuelles.
 
     .. code-block:: arduino
 
@@ -137,7 +137,7 @@ This project is essentially the same as the previous one, involving making the c
             digitalWrite(B_1A, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+#. Appelez ces fonctions dans ``loop()``.
 
     .. code-block:: arduino
 
@@ -155,21 +155,20 @@ This project is essentially the same as the previous one, involving making the c
 
 * `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin`` : le numéro de la broche Arduino.
+    * ``value`` : HIGH ou LOW.
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+    Écrit une valeur HIGH ou LOW sur une broche numérique. Si la broche a été configurée comme une ``OUTPUT`` avec ``pinMode()``, sa tension sera réglée sur la valeur correspondante : 5V (ou 3,3V sur les cartes 3,3V) pour HIGH, 0V (masse) pour LOW.
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin`` : le numéro de la broche Arduino à configurer.
+    * ``mode`` : INPUT, OUTPUT ou INPUT_PULLUP.
     
-    Configures the specified pin to behave either as an input or an output.
+    Configure la broche spécifiée pour se comporter soit comme une entrée, soit comme une sortie.
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms`` : le nombre de millisecondes de pause. Types de données autorisés : unsigned long.
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    Interrompt le programme pendant la durée (en millisecondes) spécifiée en paramètre. (Il y a 1000 millisecondes dans une seconde.)

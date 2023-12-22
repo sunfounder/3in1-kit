@@ -1,38 +1,38 @@
 .. _ar_receiver:
 
-5.11.2 IR Receiver
-=========================
+5.11.2 Récepteur IR
+===================
 
-In this project, you will learn to use IR Receiver. 
+Dans ce projet, vous apprendrez à utiliser un récepteur infrarouge (IR).
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Un récepteur infrarouge est un composant qui reçoit des signaux infrarouges et peut recevoir indépendamment des rayons infrarouges et sortir des signaux compatibles avec le niveau TTL. 
+Il est similaire en taille à un transistor classique emballé dans du plastique et convient à toutes sortes de télécommandes infrarouges et de transmissions infrarouges.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,14 +43,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**Câblage**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+Dans cet exemple, nous connectons la broche gauche du récepteur IR à la broche 11, 
+la broche centrale à GND, et la broche droite à 5V.
 
 .. image:: img/ir_remote_control_bb.jpg
 
@@ -59,9 +59,9 @@ the middle pin to GND, and the right pin to 5V.
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\basic_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Ouvrez le fichier ``5.11.ir_receiver.ino`` situé dans le dossier ``3in1-kit\basic_project\5.11.ir_receiver``.
+    * Ou copiez ce code dans **Arduino IDE**.
+    * La bibliothèque ``IRremote`` est utilisée ici, vous pouvez l'installer depuis le **Library Manager**.
   
         .. image:: ../img/lib_irremote.png
 
@@ -71,27 +71,27 @@ the middle pin to GND, and the right pin to 5V.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After uploading the codes to the R3 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+Après avoir téléversé les codes sur la carte R3, vous pouvez constater que la
+valeur actuelle du bouton pressé de la télécommande IR s'affiche sur
+le moniteur série.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Ce code est conçu pour fonctionner avec une télécommande infrarouge (IR) en utilisant la bibliothèque ``IRremote``. Voici le détail :
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. Inclusion des bibliothèques : Cela inclut la bibliothèque ``IRremote``, qui fournit des fonctions pour travailler avec les télécommandes IR.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected.
+#. Définit le pin Arduino auquel est connecté le pin de signal du capteur IR.
 
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Initialise la communication série à une vitesse de 9600 bauds. Initialise le récepteur IR sur le pin spécifié (``IR_RECEIVE_PIN``) et active le retour LED (si applicable).
 
     .. code-block:: arduino
 
@@ -100,7 +100,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
         }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. La boucle s'exécute continuellement pour traiter les signaux entrants de la télécommande IR.
 
     .. code-block:: arduino
 
@@ -115,8 +115,8 @@ This code is designed to work with an infrared (IR) remote control using the ``I
             }
         }
     
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error.
-    * Prints the decoded IR value to the serial monitor.
-    * Resumes IR signal reception for the next signal.
+    * Vérifie si un signal IR est reçu et décodé avec succès.
+    * Décode la commande IR et la stocke dans ``decodedValue`` à l'aide d'une fonction personnalisée ``decodeKeyValue()``.
+    * Vérifie si la valeur décodée n'est pas une erreur.
+    * Affiche la valeur IR décodée sur le moniteur série.
+    * Reprend la réception du signal IR pour le prochain signal.

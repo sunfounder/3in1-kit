@@ -1,55 +1,49 @@
-How to upload Sketch to the Board?
+Comment télécharger un sketch sur la carte ?
 =============================================
 
-In this section, you will learn how to upload the sketch created previously to the Arduino board, as well as learn about some considerations.
+Dans cette section, vous apprendrez comment télécharger le sketch créé précédemment sur la carte Arduino, ainsi que quelques considérations.
 
-**1. Choose Board and port**
+**1. Choisir la Carte et le port**
 
-Arduino development boards usually come with a USB cable. You can use it to connect the board to your computer.
+Les cartes de développement Arduino sont généralement fournies avec un câble USB. Vous pouvez l'utiliser pour connecter la carte à votre ordinateur.
 
-Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.
+Sélectionnez la **Carte** et le **Port** corrects dans l'IDE Arduino. Normalement, les cartes Arduino sont automatiquement reconnues par l'ordinateur et se voient attribuer un port, que vous pouvez donc sélectionner ici.
 
     .. image:: img/board_port.png
 
-
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino AVR Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
+Si votre carte est déjà branchée mais n'est pas reconnue, vérifiez si le logo **INSTALLED** apparaît dans la section **Arduino AVR Boards** du **Boards Manager**, si ce n'est pas le cas, faites défiler un peu vers le bas et cliquez sur **INSTALL**.
 
     .. image:: img/upload1.png
 
-Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click **Tools** -> **Board** or **Port** to select them.
+La réouverture de l'IDE Arduino et le rebranchement de la carte Arduino résoudront la plupart des problèmes. Vous pouvez également cliquer sur **Tools** -> **Board** ou **Port** pour les sélectionner.
 
+**2. Vérifier le Sketch**
 
-**2. Verify the Sketch**
-
-After clicking the Verify button, the sketch will be compiled to see if there are any errors.
+Après avoir cliqué sur le bouton Vérifier, le sketch sera compilé pour voir s'il y a des erreurs.
 
     .. image:: img/sp221014_174532.png
 
-You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred. 
+Vous pouvez l'utiliser pour trouver des erreurs si vous supprimez des caractères ou tapez quelques lettres par erreur. Depuis la barre de messages, vous pouvez voir où et quel type d'erreurs se sont produites.
 
     .. image:: img/sp221014_175307.png
 
-If there are no errors, you will see a message like the one below.
+S'il n'y a pas d'erreurs, vous verrez un message comme celui ci-dessous.
 
     .. image:: img/sp221014_175512.png
 
+**3. Télécharger le sketch**
 
-**3. Upload sketch**
-
-After completing the above steps, click the **Upload** button to upload this sketch to the board.
+Après avoir complété les étapes ci-dessus, cliquez sur le bouton **Upload** pour charger ce sketch sur la carte.
 
     .. image:: img/sp221014_175614.png
 
-If successful, you will be able to see the following prompt.
+Si le téléchargement est réussi, vous pourrez voir l'invite suivante.
 
 .. image:: img/sp221014_175654.png
 
-At the same time, the on-board LED blink.
+En même temps, la LED intégrée à la carte clignotera.
 
 .. image:: img/1_led.jpg
 
-The Arduino board will automatically run the sketch after power is applied after the sketch is uploaded. The running program can be overwritten by uploading a new sketch.
-
-
-
+La carte Arduino exécutera automatiquement le sketch après l'application de l'alimentation une fois le sketch téléchargé. Le programme en cours peut être écrasé en téléchargeant un nouveau sketch.
 

@@ -1,38 +1,38 @@
 .. _sh_test:
 
-3.1 Test the Car
+3.1 Tester la Voiture
 ======================
 
-Here, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
+Ici, vous apprendrez à écrire des scripts pour faire avancer la voiture, mais vous devez vous référer à :ref:`car_projects` pour assembler la voiture et pour obtenir une compréhension de base de celle-ci.
 
-But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
+Mais avant de commencer le projet, vous devez connaître les étapes pour utiliser PictoBlox en :ref:`upload_mode`.
 
-Required Components
+Composants Requis
 ---------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,22 +41,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
-Build the Circuit
+Construire le Circuit
 -----------------------
 
-The L9110 motor driver module is a high power motor driver module for driving DC and stepper motors. The L9110 module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
+Le module de pilote de moteur L9110 est un module de pilote de moteur haute puissance pour entraîner des moteurs DC et pas à pas. Le module L9110 peut contrôler jusqu'à 4 moteurs DC, ou 2 moteurs DC avec contrôle de direction et de vitesse.
 
 
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
+Connectez les fils entre le module L9110 et la carte R3 selon le schéma ci-dessous.
 
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L9110 Module
-      - R3 Board
-      - Motor
+    * - Module L9110
+      - Carte R3
+      - Moteur
     * - A-1B
       - 5
       - 
@@ -71,69 +71,70 @@ Connect the wires between the L9110 module and the R3 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - Fil noir du moteur droit
     * - OA(B)
       - 
-      - Red wire of right motor
+      - Fil rouge du moteur droit
     * - OB(A)
       - 
-      - Black wire of left motor
+      - Fil noir du moteur gauche
     * - OA(A)
       - 
-      - Red wire of left motor
+      - Fil rouge du moteur gauche
 
 .. image:: img/car_2.png
     :width: 800
 
-Programming
+Programmation
 -------------------
 
-**1. Let the car go forward**
+**1. Faire avancer la voiture**
 
-Based on the above wiring, we know that pins 5 and 6 are used to control the right motor rotation and pins 9 and 10 are used for the left motor rotation. Now let's write a script to make the car go forward.
+Sur la base du câblage ci-dessus, nous savons que les broches 5 et 6 sont utilisées pour contrôler la rotation du moteur droit et les broches 9 et 10 pour celle du moteur gauche. Écrivons maintenant un script pour faire avancer la voiture.
 
-After selecting Board as Arduino Uno, switch to :ref:`upload_mode` and write the script according to the following diagram.
+Après avoir sélectionné la carte Arduino Uno, passez en :ref:`upload_mode` et écrivez le script selon le schéma suivant.
 
 .. image:: img/1_test1.png
 
-Click the **Upload Code** button to upload the code to the R3 board. When it's done, you will see the two motors of the car moving forward (if you put the car on the ground, it will move forward in a straight line, but maybe the car will go in a curve because the speed of the two motors is a bit different). 
+Cliquez sur le bouton **Upload Code** pour uploader le code sur la carte R3. Une fois terminé, vous verrez les deux moteurs de la voiture avancer (si vous posez la voiture sur le sol, elle avancera en ligne droite, mais peut-être la voiture ira en courbe car la vitesse des deux moteurs est un peu différente).
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+Si les deux ne tournent pas en avant, mais que les situations suivantes se produisent, vous devez réajuster le câblage des deux moteurs.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Si les deux moteurs tournent en arrière en même temps (le moteur gauche tourne dans le sens des aiguilles d'une montre, le moteur droit tourne dans le sens inverse), inversez le câblage des moteurs gauche et droit en même temps, OA(A) et OB(A) échangent, OA(B) et OB(B) échangent.
+* Si le moteur gauche tourne en arrière (rotation dans le sens des aiguilles d'une montre), échangez le câblage de OA(B) et OB(B) du moteur gauche.
+* Si le moteur droit tourne en arrière (rotation dans le sens inverse des aiguilles d'une montre), inversez le câblage de OA(A) et OB(A) du moteur droit.
 
 
-**2. Creating block**
+**2. Création d'un bloc**
 
-In order to make the script more clean and easy to use, here we put all the blocks that control the forward movement into a block, and when using it, just call this block directly.
+Pour rendre le script plus propre et facile à utiliser, plaçons ici tous les blocs qui contrôlent le mouvement en avant dans un bloc, et lors de son utilisation, appelez directement ce bloc.
 
-Click **Make a Block** in the **My Blocks** palette.
+Cliquez sur **Make a Block** dans la palette **My Blocks**.
 
 .. image:: img/1_test31.png
 
-Enter the name of the block - **forward** and check **Add an input**, set the input name to **speed**.
+Entrez le nom du bloc - **forward** et cochez **Add an input**, définissez le nom de l'entrée sur **speed**.
 
 .. image:: img/1_test32.png
 
-Drag and drop the blocks that control the cars forward into **forward**, note that you need to add the parameter - **speed** to pin6 and pin9.
+Glissez-déposez les blocs qui contrôlent l'avancement des voitures dans **forward**, notez que vous devez ajouter le paramètre - **speed** aux broches 6 et 9.
 
 .. image:: img/1_test33.png
 
-Call the created block in the [Forward] block - **forward**. In Upload mode, the [When Arduino Uno starts up] block must be added at the beginning.
+Appelez le bloc créé dans le bloc [Forward] - **forward**. En mode Téléversement, le bloc [When Arduino Uno starts up] doit être ajouté au début.
 
-* The motor rotation speed range is 100 ~ 255.
+* La plage de vitesse de rotation du moteur est de 100 à 255.
 
 .. image:: img/1_test3.png
     
-**3. Adjusting the speed of motors**
+**3. Ajuster la vitesse des moteurs**
 
-Since there may be a slight difference in the speed of the 2 motors, resulting in the car not being able to move along a straight line, we can give the left and right motors different speeds to keep the car moving along a straight line as much as possible.
+Comme il peut y avoir une légère différence dans la vitesse des 2 moteurs, entraînant la voiture à ne pas avancer en ligne droite, nous pouvons donner aux moteurs gauche et droit des vitesses différentes pour garder la voiture avançant le plus possible en ligne droite.
 
-Since my car will move slowly to the right front, so here reduce the speed of the left motor.
+Comme ma voiture avance lentement vers la droite, réduisez ici la vitesse du moteur gauche.
 
 .. image:: img/1_test2.png
+
 
 
 

@@ -1,40 +1,40 @@
 .. _ar_reed:
 
-3.2 Feel the Magnetism
+3.2 Ressentir le Magnétisme
 ===============================
 
-The most common type of reed switch contains a pair of magnetizable, flexible, metal reeds whose end portions are separated by a small gap when the switch is open. 
+Le type le plus courant d'interrupteur à lames souples contient une paire de lames métalliques flexibles magnétisables, dont les extrémités sont séparées par un petit espace lorsque l'interrupteur est ouvert.
 
-A magnetic field from an electromagnet or a permanent magnet will cause the reeds to attract each other, thus completing an electrical circuit.
-The spring force of the reeds causes them to separate, and open the circuit, when the magnetic field ceases.
+Un champ magnétique provenant d'un électroaimant ou d'un aimant permanent fera s'attirer les lames, complétant ainsi un circuit électrique.
+La force de rappel des lames les amène à se séparer et à ouvrir le circuit, lorsque le champ magnétique cesse.
 
-A common example of a reed switch application is to detect the opening of a door or windows, for a security alarm.
+Un exemple courant d'application d'un interrupteur à lames souples est de détecter l'ouverture d'une porte ou d'une fenêtre, pour une alarme de sécurité.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,15 +47,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_3.2_reed.png
 
-By default, pin 2 is low; and will go high when the magnet is near the reed switch.
+Par défaut, la broche 2 est basse ; et deviendra haute lorsque l'aimant est près de l'interrupteur à lames.
 
-The purpose of the 10K resistor is to keep the pin 2 at a steady low level when no magnet is near.
+Le but de la résistance de 10K est de maintenir la broche 2 à un niveau bas stable lorsqu'aucun aimant n'est à proximité.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/feel_the_magnetism_bb.jpg
     :width: 600
@@ -65,14 +65,15 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 
 .. note::
 
-   * You can open the file ``3.2.feel_the_magnetism.ino`` under the path of ``3in1-kit\basic_project\3.2.feel_the_magnetism``. 
-   * Or copy this code into **Arduino IDE**.
+   * Vous pouvez ouvrir le fichier ``3.2.feel_the_magnetism.ino`` dans le chemin ``3in1-kit\basic_project\3.2.feel_the_magnetism``. 
+   * Ou copiez ce code dans **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Ou téléchargez le code via l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d28c942e-5144-44a1-85d8-d5e6894fc5df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, when a magnet is near the reed switch, the serial monitor will print 1.
+Après le téléchargement réussi du code, lorsque un aimant est près de l'interrupteur à lames, le moniteur série affichera 1.
+
 

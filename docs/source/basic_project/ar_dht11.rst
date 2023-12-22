@@ -1,49 +1,49 @@
 .. _ar_dht11:
 
 
-5.11.3 Temperature - Humidity
-=======================================
+5.11.3 Température - Humidité
+=============================
 
-Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
-The temperature and humidity of human environment will directly affect the thermoregulatory function and heat transfer effect of human body.
-It will further affect the thinking activity and mental state, thus affecting the efficiency of our study and work.
+L'humidité et la température sont étroitement liées, de la quantité physique elle-même à la vie quotidienne des gens.
+La température et l'humidité de l'environnement humain affectent directement la fonction de thermorégulation et l'effet de transfert de chaleur du corps humain.
+Cela peut également influencer l'activité de pensée et l'état mental, affectant ainsi l'efficacité de nos études et de notre travail.
 
-Temperature is one of the seven basic physical quantities in the International System of Units, which is used to measure the degree of hot and cold of an object.
-Celsius is one of the more widely used temperature scales in the world, expressed by the symbol "℃".
+La température est l'une des sept quantités physiques de base dans le Système international d'unités, utilisée pour mesurer le degré de chaud et de froid d'un objet.
+Le degré Celsius est l'une des échelles de température les plus utilisées dans le monde, exprimée par le symbole "℃".
 
-Humidity is the concentration of water vapor present in the air.
-The relative humidity of air is commonly used in life and is expressed in %RH. Relative humidity is closely related to temperature.
-For a certain volume of sealed gas, the higher the temperature, the lower the relative humidity, and the lower the temperature, the higher the relative humidity.
+L'humidité est la concentration de vapeur d'eau présente dans l'air.
+L'humidité relative de l'air est couramment utilisée dans la vie quotidienne et est exprimée en %HR. L'humidité relative est étroitement liée à la température.
+Pour un certain volume de gaz scellé, plus la température est élevée, plus l'humidité relative est basse, et inversement.
 
 .. image:: img/Dht11.png
 
-The dht11, a digital temperature and humidity sensor, is provided in this kit. It uses a capacitive humidity sensor and thermistor to measure the surrounding air and outputs a digital signal on the data pin.
+Le dht11, un capteur numérique de température et d'humidité, est fourni dans ce kit. Il utilise un capteur d'humidité capacitif et un thermistor pour mesurer l'air ambiant et produit un signal numérique sur la broche de données.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -55,11 +55,11 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_7.3_dht11.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/dht11_bb.jpg
 
@@ -67,9 +67,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\basic_project\5.11.temperature_humidity``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+    * Ouvrez le fichier ``5.11.temperature_humidity.ino`` situé dans le dossier ``3in1-kit\basic_project\5.11.temperature_humidity``.
+    * Ou copiez ce code dans **Arduino IDE**.
+    * La bibliothèque ``DHT sensor library`` est utilisée ici, vous pouvez l'installer depuis le **Library Manager**.
 
         .. image:: ../img/lib_dht11.png
 
@@ -77,11 +77,11 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c5b4c902-f39d-45a6-9a17-1308056041a8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Après le téléversement réussi du code, vous verrez que le moniteur série affiche en continu la température et l'humidité. Au fur et à mesure que le programme fonctionne de manière stable, ces deux valeurs deviendront de plus en plus précises.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
+#.  Inclut la bibliothèque ``DHT.h``, qui offre des fonctions pour interagir avec les capteurs DHT. Ensuite, définit le pin et le type pour le capteur DHT.
 
     .. code-block:: arduino
 
@@ -92,7 +92,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
 
         DHT dht(DHTPIN, DHTTYPE);
 
-#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
+#. Initialise la communication série à une vitesse de 115200 bauds et initialise le capteur DHT.
 
     .. code-block:: arduino
 
@@ -102,7 +102,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             dht.begin();
         }
 
-#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
+#. Dans la fonction ``loop()``, lire les valeurs de température et d'humidité du capteur DHT11, et les afficher sur le moniteur série.
 
     .. code-block:: arduino
 
@@ -130,6 +130,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.println(" *C");
         }
 
-    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
-    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
-    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
+    * La fonction ``dht.readHumidity()`` est appelée pour lire la valeur d'humidité du capteur DHT.
+    * La fonction ``dht.readTemperature()`` est appelée pour lire la valeur de température du capteur DHT.
+    * La fonction ``isnan()`` est utilisée pour vérifier si les lectures sont valides. Si la valeur d'humidité ou de température est NaN (non un nombre), cela indique une lecture échouée du capteur, et un message d'erreur est imprimé.
+

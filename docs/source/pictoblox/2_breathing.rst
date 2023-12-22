@@ -1,47 +1,47 @@
 .. _sh_breathing_led:
 
-2.2 Breathing LED
+2.2 LED Respiration
 ========================
 
-Now use another method to control the brightness of the LED. Unlike the previous project, here the brightness of the LED is made to slowly diminish until it disappears.
+Nous utilisons maintenant une autre méthode pour contrôler la luminosité de la LED. Contrairement au projet précédent, ici la luminosité de la LED diminue lentement jusqu'à disparaître.
 
-When the sprite on the stage is clicked, the brightness of the LED slowly increases and then goes out instantly.
+Lorsque le sprite sur la scène est cliqué, la luminosité de la LED augmente lentement puis s'éteint instantanément.
 
 .. image:: img/3_ap.png
 
-You Will Learn
----------------------
+Vous Apprendrez
+--------------------------
 
-- Set the output value of the PWM pin
-- Create variables
-- Change the brightness of the sprite
+- Régler la valeur de sortie de la broche PWM
+- Créer des variables
+- Changer la luminosité du sprite
 
-Required Components
----------------------
+Composants requis
+--------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,58 +54,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Build the Circuit
------------------------
+Construisez le Circuit
+------------------------
 
-This project uses the same circuit as the previous project :ref:`sh_table_lamp`, but instead of using HIGH/LOW to make the LEDs light up or turn off, this project uses the `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ signal to slowly light up or dim down the LED.
+Ce projet utilise le même circuit que le projet précédent :ref:`sh_table_lamp`, mais au lieu d'utiliser HAUT/BAS pour allumer ou éteindre les LED, ce projet utilise le signal `PWM - Wikipedia <https://en.wikipedia.org/wiki/Pulse-width_modulation>`_ pour allumer ou atténuer lentement la LED.
 
-The PWM signal range is 0-255, on the Arduno Uno board, 3, 5, 6, 9, 10, 11 can output PWM signal; on the Mega2560, 2 - 13, 44 - 46 can output PWM signal.
+La plage du signal PWM est de 0 à 255, sur la carte Arduno Uno, les broches 3, 5, 6, 9, 10, 11 peuvent émettre un signal PWM ; sur le Mega2560, les broches 2 à 13, 44 à 46 peuvent émettre un signal PWM.
 
 .. image:: img/circuit/led_circuit.png
 
-Programming
+Programmation
 ------------------
 
-**1. Select a sprite**
+**1. Sélectionner un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **button3** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choose a Sprite** dans le coin inférieur droit de la zone de sprite, entrez **button3** dans la boîte de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/3_sprite.png
 
-**2. Creating a variable**.
+**2. Création d'une variable**.
 
-Create a variable called **pwm** to store the value of the pwm change.
+Créez une variable appelée **pwm** pour stocker la valeur du changement de pwm.
 
-Click on the **Variables** palette and select **Make a Variable**.
+Cliquez sur la palette **Variables** et sélectionnez **Make a Variable**.
 
 .. image:: img/3_ap_va.png
 
-Enter the name of the variable, it can be any name, but it is recommended to describe its function. The data type is number and For all sprites.
+Entrez le nom de la variable, cela peut être n'importe quel nom, mais il est recommandé de décrire sa fonction. Le type de données est un nombre et pour tous les sprites.
 
 .. image:: img/3_ap_pwm.png
 
-Once created, you will see **pwm** inside the **Variables** palette and in the checked state, which means this variable will appear on the stage. You can try unchecking it to see if pwm is still present on the stage.
+Une fois créée, vous verrez **pwm** dans la palette **Variables** et dans l'état coché, ce qui signifie que cette variable apparaîtra sur la scène. Vous pouvez essayer de la décocher pour voir si pwm est toujours présent sur la scène.
 
 .. image:: img/3_ap_0.png
 
-**3. Set the initial state**
+**3. Définir l'état initial**
 
-When the **button3** sprite is clicked, switch the costume to **button-b** (clicked state), and set the initial value of the variable **pwm** to 0.
+Lorsque le sprite **button3** est cliqué, changez le costume en **button-b** (état cliqué), et définissez la valeur initiale de la variable **pwm** à 0.
 
-* [set pwm to 0]: from **Variables** palette, used to set the value of the variable.
+* [set pwm to 0] : de la palette **Variables**, utilisé pour définir la valeur de la variable.
 
 .. image:: img/3_ap_brightness.png
 
-**4. Make the LED brighter and brighter**
+**4. Rendre la LED de plus en plus lumineuse**
 
-Since the range of pwm is 255, so by [repeat] block, the variable **pwm** is accumulated to 255 by 5, and then put into [set PWM pin] block, so you can see the LED slowly light up.
+Comme la plage de pwm est de 255, alors par le bloc [repeat], la variable **pwm** est accumulée à 255 par 5, puis mise dans le bloc [set PWM pin], donc vous pouvez voir la LED s'allumer lentement.
 
-* [change pwm by 5]: from **Variables** palette, let the variable change a specific number each time. It can be a positive or negative number, positive is increasing each time, negative is decreasing each time, for example, here the variable pwm is increased by 5 each time.
-* [set PWM pin]: from the **Arduino Uno** palette, used to set the output value of the pwm pin.
+* [change pwm by 5] : de la palette **Variables**, laissez la variable changer un nombre spécifique à chaque fois. Cela peut être un nombre positif ou négatif, positif signifie qu'il augmente chaque fois, négatif signifie qu'il diminue chaque fois, par exemple, ici la variable pwm est augmentée de 5 chaque fois.
+* [set PWM pin] : de la palette **Arduino Uno**, utilisé pour régler la valeur de sortie de la broche pwm.
 
 .. image:: img/3_ap_1.png
 
-
-Finally, switch the costume of button3 back to **button-a** and make the PWM pin value 0, so that the LED will light up slowly and then turn off again.
+Enfin, changez le costume de button3 en **button-a** et mettez la valeur de la broche PWM à 0, afin que la LED s'allume lentement puis s'éteigne à nouveau.
 
 .. image:: img/3_ap_2.png

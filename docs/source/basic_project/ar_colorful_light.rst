@@ -1,47 +1,47 @@
 .. _ar_rgb:
 
-2.2 Colorful Light
+2.2 Lumière Colorée
 ==============================================
 
-As we know, light can be superimposed. For example, mix blue light and green light give cyan light, red light and green light give yellow light.
-This is called "The additive method of color mixing".
+Comme nous le savons, la lumière peut être superposée. Par exemple, mélanger de la lumière bleue et verte donne une lumière cyan, du rouge et du vert donne une lumière jaune.
+Cela s'appelle "La méthode additive de mélange des couleurs".
 
-* `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
+* `Couleur additive - Wikipédia <https://en.wikipedia.org/wiki/Additive_color>`_
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different specific gravity. For example, orange can be produced by more red and less green.
+En se basant sur cette méthode, nous pouvons utiliser les trois couleurs primaires pour mélanger la lumière visible de n'importe quelle couleur selon des proportions spécifiques. Par exemple, l'orange peut être produit avec plus de rouge et moins de vert.
 
-In this chapter, we will use RGB LED to explore the mystery of additive color mixing!
+Dans ce chapitre, nous utiliserons une LED RVB pour explorer le mystère du mélange des couleurs additives !
 
-RGB LED is equivalent to encapsulating Red LED, Green LED, Blue LED under one lamp cap, and the three LEDs share one cathode pin.
-Since the electric signal is provided for each anode pin, the light of the corresponding color can be displayed. 
-By changing the electrical signal intensity of each anode, it can be made to produce various colors.
+La LED RVB équivaut à encapsuler une LED rouge, verte et bleue sous un même capuchon de lampe, et les trois LED partagent une broche de cathode commune.
+Puisque le signal électrique est fourni à chaque broche d'anode, la lumière de la couleur correspondante peut être affichée.
+En changeant l'intensité du signal électrique de chaque anode, elle peut produire diverses couleurs.
 
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -55,22 +55,22 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_2.2_rgb.png
 
 
-The PWM pins 11, 10 and 9 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. 
-This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Les broches PWM 11, 10 et 9 contrôlent respectivement les broches Rouge, Verte et Bleue de la LED RVB, et connectent la broche de cathode commune à GND. 
+Cela permet à la LED RVB d'afficher une couleur spécifique en superposant la lumière sur ces broches avec différentes valeurs PWM.
 
 
 
-**Wiring**
+**Câblage**
 
 .. image:: img/rgb_led_sch.png
 
-An RGB LED has 4 pins: the longest pin is the common cathode pin, which is usually connected to GND, 
-the left pin next to the longest pin is Red, and the 2 pins on the right are Green and Blue.
+Une LED RVB a 4 broches : la broche la plus longue est la broche de cathode commune, généralement connectée à GND, 
+la broche à gauche de la plus longue est Rouge, et les 2 broches à droite sont Vert et Bleu.
 
 
 .. image:: img/colorful_light_bb.jpg
@@ -79,14 +79,14 @@ the left pin next to the longest pin is Red, and the 2 pins on the right are Gre
 
 **Code**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+Ici, nous pouvons choisir notre couleur préférée dans un logiciel de dessin (comme Paint) et l'afficher avec la LED RVB.
 
 .. note::
 
-   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
-   * Or copy this code into **Arduino IDE**.
+   * Vous pouvez ouvrir le fichier ``2.2.colorful_light.ino`` dans le chemin ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
+   * Ou copiez ce code dans **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Ou téléchargez le code via l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 
 .. raw:: html
@@ -95,12 +95,12 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+Écrivez la valeur RVB dans ``color_set()``, et vous pourrez voir la lumière RVB afficher les couleurs que vous souhaitez.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-In this example, the function used to assign values to the three pins of RGB is packaged in an independent subfunction ``color()``.
+Dans cet exemple, la fonction utilisée pour attribuer des valeurs aux trois broches de RVB est emballée dans une sous-fonction indépendante ``color()``.
 
 .. code-block:: arduino
 
@@ -111,7 +111,7 @@ In this example, the function used to assign values to the three pins of RGB is 
         analogWrite(bluePin, blue);
     }
 
-In ``loop()``, RGB value works as an input argument to call the function ``color()`` to realize that the RGB can emit different colors.
+Dans ``loop()``, la valeur RVB sert d'argument d'entrée pour appeler la fonction ``color()`` pour réaliser que le RVB peut émettre différentes couleurs.
 
 .. code-block:: arduino
 

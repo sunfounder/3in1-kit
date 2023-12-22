@@ -1,42 +1,41 @@
-
 .. _iot_window:
 
-3. Push Data to Blynk
-=============================
+3. Envoyer des Données à Blynk
+=================================
 
-This chapter will show you how to send data to Blynk.
+Ce chapitre vous montrera comment envoyer des données à Blynk.
 
-We create a door and window detection device here. The circuit with the reed switch is placed next to the door and window, and the magnet is mounted on the edge of the door and window.
-When the door or window is closed, the Reed Switch will be turned on by the magnetic force and the corresponding pin value on the R3 board will change.
-Blynk.cloud will receive this value so that you can see if your house's doors and windows are closed even when you're away from home. 
+Nous créons ici un dispositif de détection de portes et fenêtres. Le circuit avec l'interrupteur à lames (reed switch) est placé à côté de la porte et de la fenêtre, et l'aimant est monté sur le bord de la porte et de la fenêtre.
+Lorsque la porte ou la fenêtre est fermée, l'interrupteur à lames sera activé par la force magnétique et la valeur de pin correspondante sur la carte R3 changera.
+Blynk.cloud recevra cette valeur afin que vous puissiez voir si les portes et fenêtres de votre maison sont fermées, même lorsque vous n'êtes pas à la maison.
 
-Now we will use an LED widget in Blynk to indicate if your windows and doors are closed (i.e. if the Reed Switch is on or off).
+Nous utiliserons maintenant un widget LED dans Blynk pour indiquer si vos fenêtres et portes sont fermées (c'est-à-dire si l'interrupteur à lames est activé ou désactivé).
 
-**Required Components**
+**Composants Requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,32 +50,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**1. Build the Cirduit**
+**1. Construire le Circuit**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Le module ESP8266 nécessite un courant élevé pour fournir un environnement de fonctionnement stable, donc assurez-vous que la batterie 9V est branchée.
 
 
 .. image:: img/wiring_reed.jpg
 
-**2. Edit Dashboard**
+**2. Éditer le Tableau de Bord**
 
-#. Create a **Datastream** of type **Virtual Pin** in the **Datastream** page to get the value of Reed Switch. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **1**.
+#. Créez un **Datastream** de type **Virtual Pin** sur la page **Datastream** pour obtenir la valeur de l'Interrupteur à Lames. Réglez le TYPE DE DONNÉES sur **Integer** et MIN et MAX sur **0** et **1**.
 
     .. image:: img/sp220609_162548.png
 
-#. Drag and drop an **LED widget** on the **Wed Dashboard** page, at a value of 1, it will light up (with color), otherwise it will be white.
+#. Faites glisser et déposez un **LED widget** sur la page **Wed Dashboard**, à une valeur de 1, il s'allumera (avec couleur), sinon il sera blanc.
 
     .. image:: img/sp220609_163350.png
 
-#. In the settings page of the **LED widget**, select **Datastream** as **Reed(V1)**, and save it.
+#. Dans la page de paramètres du **LED widget**, sélectionnez **Datastream** comme **Reed(V1)**, et enregistrez-le.
 
     .. image:: img/sp220609_163502.png
 
-**3. Run the Code**
+**3. Exécutez le Code**
 
-#. Open the ``3.push_data_to_blynk.ino`` file under the path of ``3in1-kit\iot_project\3.push_data_to_blynk``, or copy this code into **Arduino IDE**.
+#. Ouvrez le fichier ``3.push_data_to_blynk.ino`` situé dans le dossier ``3in1-kit\iot_project\3.push_data_to_blynk``, ou copiez ce code dans **Arduino IDE**.
 
 
     .. raw:: html
@@ -84,33 +83,33 @@ You can also buy them separately from the links below.
         <iframe src=https://create.arduino.cc/editor/sunfounder01/e81b0024-c11e-4507-8d43-aeb3b6656c2c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Remplacez le ``Template ID``, ``Device Name`` et ``Auth Token`` par les vôtres. Vous devez également entrer le ``ssid`` et le ``password`` du WiFi que vous utilisez. Pour des tutoriels détaillés, veuillez vous référer à :ref:`connect_blynk`.
+#. Après avoir sélectionné la bonne carte et le bon port, cliquez sur le bouton **Upoad**.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Ouvrez le moniteur série (réglez le débit en bauds sur 115200) et attendez qu'un message tel qu'une connexion réussie apparaisse.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Si le message ``ESP is not responding`` apparaît lorsque vous vous connectez, veuillez suivre ces étapes.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Assurez-vous que la batterie 9V est branchée.
+        * Réinitialisez le module ESP8266 en connectant la broche RST à GND pendant 1 seconde, puis débranchez-la.
+        * Appuyez sur le bouton de réinitialisation de la carte R3.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Parfois, il peut être nécessaire de répéter l'opération ci-dessus 3 à 5 fois, veuillez être patient.
 
-#. Now, Blynk will show the status of your doors and windows. If your doors and windows are closed, the LED widget will be green, otherwise, it will be gray.
+#. Maintenant, Blynk affichera l'état de vos portes et fenêtres. Si vos portes et fenêtres sont fermées, le widget LED sera vert, sinon, il sera gris.
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
-
-
-
-**How it works?**
+#. Si vous souhaitez utiliser Blynk sur des appareils mobiles, veuillez vous référer à :ref:`blynk_mobile`.
 
 
-For this example, you should focus on the following lines. "Write data every second to Blynk Cloud's V1 Datastream" is defined by these lines.
+
+**Comment ça fonctionne ?**
+
+
+Pour cet exemple, vous devriez vous concentrer sur les lignes suivantes. "Écrire des données toutes les secondes dans le Datastream V1 de Blynk Cloud" est défini par ces lignes.
 
 .. code-block:: arduino
 
@@ -131,26 +130,26 @@ For this example, you should focus on the following lines. "Write data every sec
         timer.run(); // Initiates BlynkTimer
     }
 
-Blynk library provides a built-in timer, first we create a timer object.
+La bibliothèque Blynk fournit un timer intégré, d'abord nous créons un objet timer.
 
 .. code-block:: arduino
 
     BlynkTimer timer;
 
-Set the timer interval in ``setup()``, here we set to execute the ``myTimerEvent()`` function every 1000ms
+Réglez l'intervalle du timer dans ``setup()``, ici nous réglons pour exécuter la fonction ``myTimerEvent()`` toutes les 1000ms
 
 .. code-block:: arduino
 
     timer.setInterval(1000L, myTimerEvent);
 
 
-Run BlynkTimer in ``loop()``.
+Exécutez BlynkTimer dans ``loop()``.
 
 .. code-block:: arduino
 
     timer.run();
 
-Edit the custom function ``myTimerEvent()``, the code ``Blynk.virtualWrite(V1, pinValue)`` is used to write the data pinValue for V1.
+Éditez la fonction personnalisée ``myTimerEvent()``, le code ``Blynk.virtualWrite(V1, pinValue)`` est utilisé pour écrire la donnée pinValue pour V1.
 
 .. code-block:: arduino
 

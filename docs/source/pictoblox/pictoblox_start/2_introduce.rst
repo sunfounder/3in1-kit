@@ -1,6 +1,6 @@
 .. _.. _sh_introduce:
 
-1.2 Interface Introduction
+1.2 Présentation de l'interface
 ================================
 
 .. image:: img/pictoblox_interface.jpg
@@ -8,35 +8,35 @@
 
 **Sprites**
 
-A sprite is an object, or a character, that performs different actions in a project. It understands and obeys the commands given to it. Each sprite has specific costumes and sounds that you can also customize.
+Un sprite est un objet ou un personnage qui exécute différentes actions dans un projet. Il comprend et obéit aux commandes qui lui sont données. Chaque sprite possède des costumes et des sons spécifiques que vous pouvez également personnaliser.
 
 **Stage**
 
-The stage is the area where the sprite performs actions in backdrops according to your program. 
+La scène est l'espace où le sprite effectue des actions sur des décors selon votre programme.
 
 **Backdrops**
 
-Backdrops are used to decorate the stage. You can choose a backdrop from PictoBlox, draw one yourself or upload an image from your computer.
+Les décors sont utilisés pour décorer la scène. Vous pouvez choisir un décor dans PictoBlox, le dessiner vous-même ou télécharger une image depuis votre ordinateur.
 
 **Script Area**
 
-A script is a program or a code in PictoBlox/Scratch lingo.  It is a set of "blocks" arranged in a specific order to perform a task or a series of tasks. You can write multiple scripts, all of which can run simultaneously. You can only write scripts in the script area in the center of the screen.
+Un script est un programme ou un code dans le langage PictoBlox/Scratch. C'est un ensemble de "blocs" disposés dans un ordre spécifique pour effectuer une tâche ou une série de tâches. Vous pouvez écrire plusieurs scripts, qui peuvent tous s'exécuter simultanément. Vous ne pouvez écrire des scripts que dans la zone de script au centre de l'écran.
 
 **Blocks**
 
-Blocks are like pieces of a puzzle that are used to write programs by simply stacking them together in the script area. Using blocks to write code can make programming easier and reduce the probability of errors.
+Les blocs sont comme des pièces d'un puzzle utilisées pour écrire des programmes en les empilant simplement dans la zone de script. Utiliser des blocs pour écrire du code peut faciliter la programmation et réduire la probabilité d'erreurs.
 
 **Block Palette**
 
-The block palettes are located in the left area and are named by their functions, such as motion, sound and control. Each palette has different blocks, for example, the blocks in the Motion palette will control the movement of the sprites, and the blocks in the Control palette will control the work of the script based on specific conditions.
+Les palettes de blocs sont situées dans la zone de gauche et sont nommées selon leurs fonctions, telles que mouvement, son et contrôle. Chaque palette a des blocs différents, par exemple, les blocs dans la palette Mouvement contrôleront le mouvement des sprites, et les blocs dans la palette Contrôle régiront le fonctionnement du script en fonction de conditions spécifiques.
 
-There are other kinds of block palettes that can be loaded from the **Add Extension** button located at the bottom left.
+Il existe d'autres types de palettes de blocs qui peuvent être chargées à partir du bouton **Add Extension** situé en bas à gauche.
 
 **Modes**
 
-Unlike Scratch, PictoBlox has two modes:
+Contrairement à Scratch, PictoBlox dispose de deux modes :
 
-* :ref:`stage_mode`: In this mode, you can write scripts for the sprite and boards to interact with sprites in real-time. If you disconnect the board with Pictoblox, you cannot interact anymore.
-* :ref:`upload_mode`: This mode allows you to write scripts and upload it to the board so that you can use even when it is not connected to your computer, for example, you need to upload a script for making moving robots.
+* :ref:`stage_mode`: Dans ce mode, vous pouvez écrire des scripts pour que le sprite et les cartes interagissent avec les sprites en temps réel. Si vous déconnectez la carte de Pictoblox, vous ne pouvez plus interagir.
+* :ref:`upload_mode`: Ce mode vous permet d'écrire des scripts et de les télécharger sur la carte pour que vous puissiez les utiliser même lorsqu'elle n'est pas connectée à votre ordinateur, par exemple, vous devez télécharger un script pour fabriquer des robots mobiles.
 
-For more information, please refer to: https://thestempedia.com/tutorials/getting-started-pictoblox
+Pour plus d'informations, veuillez consulter : https://thestempedia.com/tutorials/getting-started-pictoblox

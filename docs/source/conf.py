@@ -108,6 +108,12 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/" target="_blank">English Online-tutorials</a>
 
+.. |link_fr_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/" target="_blank">Documentation en ligne en français</a>
+
+
+    
 
 
 .. |link_download_arduino| raw:: html

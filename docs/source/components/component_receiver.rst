@@ -1,48 +1,46 @@
 .. _cpn_receiver:
 
-IR Receiver
+Récepteur IR
 ===========================
 
-**IR Receiver**
+**Récepteur IR**
 
 .. image:: img/ir_receiver_hs0038b.jpg
     :align: center
 
-* OUT: Signal output
-* GND: GND
-* VCC: power supply, 3.3v~5V
+* OUT: Sortie du signal
+* GND: Masse
+* VCC: alimentation électrique, 3.3v~5V
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Un récepteur infrarouge est un composant qui reçoit des signaux infrarouges et peut recevoir de manière indépendante des rayons infrarouges et sortir des signaux compatibles avec le niveau TTL. Il est de taille similaire à un transistor classique emballé dans du plastique et convient à toutes sortes de télécommandes infrarouges et de transmissions infrarouges.
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+La communication infrarouge, ou IR, est une technologie de communication sans fil populaire, peu coûteuse et facile à utiliser. La lumière infrarouge a une longueur d'onde légèrement plus longue que la lumière visible, elle est donc imperceptible à l'œil humain - idéale pour la communication sans fil. Un schéma de modulation courant pour la communication infrarouge est la modulation à 38KHz.
 
+* Capteur de Réception IR `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_, haute sensibilité
+* Peut être utilisé pour la télécommande
+* Alimentation Électrique : 5V
+* Interface : Numérique
+* Fréquence de Modulation : 38Khz
+* Définitions des Broches : (1) Sortie (2) Vcc (3) Masse
+* Taille : 23.5mm x 21.5mm
 
-* Adopted `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_ IR Receiver Sensor, high sensitivity
-* Can be used for remote control
-* Power Supply: 5V
-* Interface: Digital
-* Modulate Frequency: 38Khz
-* Pin Definitions: (1) Output (2) Vcc (3) GND
-* Size: 23.5mm x 21.5mm
-
-
-**Remote Control**
+**Télécommande**
 
 .. image:: img/image186.jpeg
     :width: 400
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+Il s'agit d'une télécommande sans fil infrarouge mince avec 21 boutons de fonction et une distance de transmission allant jusqu'à 8 mètres, adaptée pour commander une large gamme d'appareils dans une chambre d'enfant.
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* Taille : 85x39x6mm
+* Portée de la télécommande : 8-10m
+* Batterie : Batterie au lithium-manganèse de type bouton 3V
+* Fréquence porteuse infrarouge : 38KHz
+* Matériau de collage de surface : PET de 0.125mm
+* Vie effective : plus de 20 000 fois
 
+**Exemple**
 
-**Example**
+* :ref:`ar_receiver` (Projet de base)
+* :ref:`car_remote` (Projet Voiture)
+* :ref:`car_remote_plus` (Projet Voiture)
 
-* :ref:`ar_receiver` (Basic Project)
-* :ref:`car_remote` (Car Project)
-* :ref:`car_remote_plus` (Car Project)

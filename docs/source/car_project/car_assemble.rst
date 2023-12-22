@@ -1,79 +1,79 @@
-Assemble the Car
+Assembler la Voiture
 =====================
 
-**Video**
+**Vidéo**
 
 .. raw:: html
     
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Steps**
+**Étapes**
 
-Please follow the steps below to complete the assembly of the car.
+Veuillez suivre les étapes ci-dessous pour terminer l'assemblage de la voiture.
 
-1. Remove the protective film on the acrylic.
+1. Retirez le film protecteur sur l'acrylique.
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Placez la planche sur la table comme indiqué sur la photo, le côté avec le même trou que la carte R3, nous l'appelons A ; l'arrière est B. Cela vous aidera à éviter les erreurs pendant l'assemblage.
 
     .. image:: img/IMG_9145.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. Montez le **support M3x24mm** avec des **vis M3x6mm** à la position indiquée ci-dessous.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Retournez sur le côté B, utilisez des **vis M3x30mm** et des **écrous M3** pour fixer le moteur TT. 2 détails ici : 1 - l'arbre de sortie est orienté vers le côté en forme de chauve-souris ; 2 - le câble du moteur est orienté vers l'intérieur.
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. Montez un autre moteur TT, la même attention doit être portée à la direction de l'arbre de sortie et à la direction du câble.
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. Utilisez des **vis M3x6mm** pour monter le **support M3x10mm** à la position indiquée ci-dessous.
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. Fixez le **support M2.5x11mm** à l'arrière de la voiture avec des **vis M2.5x6mm**.
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. Utilisez des **vis M3x6mm** pour monter la roue universelle.
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. Mettez les 2 roues et la structure de base de la voiture est terminée.
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#. Fixez le module L9110 avec des **vis M2.5x6mm**.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. Assemblez les deux modules de détection d'obstacles IR avec des **vis M3x10mm** et des **écrous M3**.
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. Retournez sur le côté B et attachez le module de suivi de ligne avec quatre **vis M3x6mm** et deux **supports M3x24mm**.
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        Il est conseillé de fixer d'abord les **supports M3x24mm** sur le module de suivi de ligne.
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        Une note importante à garder à l'esprit : les broches du capteur de ligne sont légèrement souples et dépassent un peu vers les trous. Lors du vissage des **supports M3x24mm**, appliquez une légère pression pour écarter légèrement les broches du capteur.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Collez le velcro sur la batterie 9V et mettez le clip de batterie. Collez l'autre section du Velcro sur la voiture pour fixer la batterie.
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R3 board with **M3x6mm screws**.
+#. Retournez sur le côté A et montez la carte R3 avec des **vis M3x6mm**.
 
     .. image:: img/IMG_9196.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. Attachez la plaque de pain à l'avant de la voiture. Par la suite, vous pourrez ajouter différents composants (par exemple, module ultrasonique) à la plaque de pain selon les besoins de votre projet.
 
     .. image:: img/IMG_9197.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. Pour faire fonctionner la voiture, il faudra également la câbler et écrire du code, ce qui sera fait dans les sections suivantes.

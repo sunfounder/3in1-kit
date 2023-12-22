@@ -1,31 +1,32 @@
 .. _cpn_button:
 
-Button
+Bouton
 ==========
 
 .. image:: img/button_1212.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Les boutons sont un composant commun utilisé pour contrôler les dispositifs électroniques. Ils sont généralement utilisés comme interrupteurs pour connecter ou interrompre des circuits. Bien que les boutons existent dans une variété de tailles et de formes, celui utilisé ici est un mini-bouton de 6mm comme montré dans les images suivantes.
+La broche 1 est connectée à la broche 2 et la broche 3 à la broche 4. Ainsi, il suffit de connecter soit la broche 1 à la broche 3, soit la broche 2 à la broche 4.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+La structure interne d'un bouton est la suivante. Le symbole ci-dessous à droite est généralement utilisé pour représenter un bouton dans les circuits.
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Puisque la broche 1 est connectée à la broche 2, et la broche 3 à la broche 4, lorsque le bouton est pressé, les 4 broches sont connectées, fermant ainsi le circuit.
 
 .. image:: img/button_1212_size.png
     :width: 600
     :align: center
 
-**Example**
+**Exemple**
 
-* :ref:`ar_button` (Basic Project)
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
+* :ref:`ar_button` (Projet de base)
+* :ref:`sh_doorbell` (Projet Scratch)
+* :ref:`sh_eat_apple` (Projet Scratch)
+* :ref:`sh_fishing` (Projet Scratch)
+
 

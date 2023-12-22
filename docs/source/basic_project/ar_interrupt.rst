@@ -1,47 +1,47 @@
 .. _ar_interrupt:
 
-5.13 Interrupt
-=======================
+5.13 Interruption
+=================
 
-If you use some ``delay()`` in a project that uses sensors, you may find that when you trigger these sensors, the program may have no effect.
-This is because the delay statement will cause the program to suspend, and the program will not be able to obtain the signal sent by the sensor to the main control board.
+Si vous utilisez des ``delay()`` dans un projet utilisant des capteurs, vous pourriez constater que lors du déclenchement de ces capteurs, le programme peut ne pas réagir.
+Cela est dû au fait que l'instruction delay provoque la suspension du programme, et celui-ci ne pourra pas obtenir le signal envoyé par le capteur à la carte de contrôle principale.
 
-In this case, interrupt can be used. Interrupt allows the program not to miss a pulse.
+Dans ce cas, on peut utiliser l'interruption. L'interruption permet au programme de ne pas manquer une impulsion.
 
-In this chapter, we use the active buzzer and buttons to experience the process of using interrupt.
+Dans ce chapitre, nous utilisons un buzzer actif et des boutons pour expérimenter le processus d'utilisation de l'interruption.
 
-In the ``loop()`` function, ``delay(1000)`` is used to count seconds.
-Put the button to control the buzzer into the ISR, so that it will not be disturbed by the delay and complete the task smoothly.
+Dans la fonction ``loop()``, ``delay(1000)`` est utilisé pour compter les secondes.
+Placez le bouton pour contrôler le buzzer dans l'ISR, afin qu'il ne soit pas perturbé par le delay et qu'il puisse accomplir la tâche en douceur.
 
 .. note::
-    ISRs are special kinds of functions that have some unique limitations most other functions do not have. An ISR cannot have any parameters, and they shouldn't return anything.
-    Generally, an ISR should be as short and fast as possible. If your sketch uses multiple ISRs, only one can run at a time, other interrupts will be executed after the current one finishes in an order that depends on the priority they have.
+    Les ISR sont des types spéciaux de fonctions qui ont certaines limitations uniques que la plupart des autres fonctions n'ont pas. Une ISR ne peut pas avoir de paramètres, et elles ne devraient rien retourner.
+    Généralement, une ISR doit être aussi courte et rapide que possible. Si votre croquis utilise plusieurs ISR, une seule peut s'exécuter à la fois, les autres interruptions seront exécutées après la fin de la courante, dans un ordre qui dépend de la priorité qu'elles ont.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_8.6_interval.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/interrupt_bb.jpg
     :width: 600
@@ -70,34 +70,34 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.13.interrupt.ino`` file under the path of ``3in1-kit\basic_project\5.13.interrupt``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``5.13.interrupt.ino`` situé dans le dossier ``3in1-kit\basic_project\5.13.interrupt``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléversez le code via l'`Éditeur Web Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6111757d-dd63-4c4c-95b5-9d96fb0843f0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, turn on the Serial Monitor and you will see an auto-incrementing number printed out every second. If you press the button, the buzzer will sound.
-The button-controlled buzzer function and the timing function do not conflict with each other.
+Après le téléversement réussi du code, activez le moniteur série et vous verrez un nombre s'incrémentant automatiquement s'afficher chaque seconde. Si vous appuyez sur le bouton, le buzzer émettra un son.
+La fonction du buzzer contrôlée par le bouton et la fonction de temporisation ne sont pas en conflit l'une avec l'autre.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-* ``attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)``: Add an interrupt.
+* ``attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)`` : Ajouter une interruption.
 
-    **Syntax**
+    **Syntaxe**
         attachInterrupt(digitalPinToInterrupt(pin), ISR, mode) 
 
-    **Parameters**
-        * ``pin``: the Arduino pin number. You should use ``digitalPinToInterrupt(pin)`` to convert the actual digital pin to a specific interrupt number. For example, if you connect to pin 3, use its ``digitalPinToInterrupt(3)`` as the first parameter.
-        * ``ISR``: the ISR to call when the interrupt occurs; this function must take no parameters and return nothing. This function is sometimes referred to as an interrupt service routine.
-        * ``mode``: defines when the interrupt should be triggered. Four constants are predefined as valid values:
+    **Paramètres**
+        * ``pin`` : le numéro de pin Arduino. Vous devriez utiliser ``digitalPinToInterrupt(pin)`` pour convertir le pin numérique réel en un numéro d'interruption spécifique. Par exemple, si vous vous connectez au pin 3, utilisez son ``digitalPinToInterrupt(3)`` comme premier paramètre.
+        * ``ISR`` : l'ISR à appeler lorsque l'interruption se produit ; cette fonction ne doit prendre aucun paramètre et ne rien retourner. Cette fonction est parfois appelée routine de service d'interruption.
+        * ``mode`` : définit quand l'interruption doit être déclenchée. Quatre constantes sont prédéfinies comme valeurs valides :
 
-          * ``LOW`` to trigger the interrupt whenever the pin is low,
-          * ``CHANGE`` to trigger the interrupt whenever the pin changes value.
-          * ``RISING`` to trigger when the pin goes from low to high.
-          * ``FALLING`` for when the pin goes from high to low.
+          * ``LOW`` pour déclencher l'interruption lorsque le pin est bas,
+          * ``CHANGE`` pour déclencher l'interruption chaque fois que la valeur du pin change.
+          * ``RISING`` pour déclencher lorsque le pin passe de bas à haut.
+          * ``FALLING`` pour quand le pin passe de haut à bas.
 
 .. note:: 
-    Different main control boards can use interrupt pins differently. On R3 board, only pin 2 and pin 3 can use interrupt.
+    Différentes cartes de contrôle principales peuvent utiliser les pins d'interruption différemment. Sur la carte R3, seuls les pins 2 et 3 peuvent utiliser l'interruption.

@@ -1,10 +1,10 @@
-Video Courses
+Cours Vidéo
 ===================
 
 
-* For :ref:`basic_projects` Sections
+* Pour les Sections :ref:`basic_projects`
 
-    If you find the content in the online documentation difficult to comprehend, you can enhance your learning experience by following a progressive video course. These videos will make Arduino more engaging and visually appealing for you.
+    Si vous trouvez le contenu de la documentation en ligne difficile à comprendre, vous pouvez améliorer votre expérience d'apprentissage en suivant un cours vidéo progressif. Ces vidéos rendront Arduino plus engageant et visuellement attrayant pour vous.
 
 
     .. image:: img/video_learn.png
@@ -12,28 +12,28 @@ Video Courses
 
 
 
-    You can access the video course at: |link_video_scott|.
+    Vous pouvez accéder au cours vidéo à : |link_video_scott|.
 
-    In these videos, you'll discover fascinating experiments and projects that present Arduino concepts and principles in a fun and interactive manner. By watching the videos and participating in hands-on activities, you'll have an exciting and enjoyable learning experience with Arduino.
+    Dans ces vidéos, vous découvrirez des expériences fascinantes et des projets présentant les concepts et principes d'Arduino de manière amusante et interactive. En regardant les vidéos et en participant à des activités pratiques, vous vivrez une expérience d'apprentissage passionnante et agréable avec Arduino.
 
 
-* For the :ref:`car_projects` Sections
+* Pour les Sections :ref:`car_projects`
 
-    I recommend watching the following YouTube playlists to gain more guidance and hands-on experience: |link_video_roboja|.
+    Je recommande de regarder les playlists YouTube suivantes pour obtenir plus de conseils et d'expérience pratique : |link_video_roboja|.
 
     .. image:: img/video_car.png
         :width: 800
 
-    In these video, you will learn the fundamentals of robotics and Arduino through captivating video lessons. Step-by-step, you'll assemble a robot car while understanding the workings of motors, obstacle avoidance modules, line tracking modules, and infrared receivers. Explore how the car achieves various functions and unleash your creativity in the world of robotics and technology.
+    Dans ces vidéos, vous apprendrez les fondamentaux de la robotique et d'Arduino à travers des leçons vidéo captivantes. Étape par étape, vous assemblerez une voiture robot tout en comprenant le fonctionnement des moteurs, des modules d'évitement d'obstacles, des modules de suivi de ligne et des récepteurs infrarouges. Explorez comment la voiture réalise diverses fonctions et libérez votre créativité dans le monde de la robotique et de la technologie.
 
 
 
 
-* About the WiFi Function
+* À propos de la Fonction WiFi
 
-    In the :ref:`iot_projects` section of our online tutorial, you will learn how to communicate with the IoT platform Blynk.
+    Dans la section :ref:`iot_projects` de notre tutoriel en ligne, vous apprendrez à communiquer avec la plateforme IoT Blynk.
 
-    In |link_video_roboja_iot|, you will be guided on writing a web server and uploading sensor data to it. This tutorial will teach you how to establish a connection between your Arduino project and a web server using WiFi.
+    Dans |link_video_roboja_iot|, vous serez guidé sur l'écriture d'un serveur web et le téléversement de données de capteurs vers celui-ci. Ce tutoriel vous apprendra à établir une connexion entre votre projet Arduino et un serveur web en utilisant le WiFi.
     
     .. image:: img/video_iot.png
         :width: 800

@@ -1,35 +1,35 @@
 .. _iot_blink:
 
-2. Get Data from Blynk
-=================================
+2. Obtenir des Données depuis Blynk
+=======================================
 
-You will learn how to control the circuit with Blynk in this chapter. Let's light up the LEDs over the Internet!
+Dans ce chapitre, vous apprendrez à contrôler le circuit avec Blynk. Allumons les LED via Internet !
 
-**Required Components**
+**Composants Requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,100 +44,99 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**1. Build the Cirduit**
+**1. Construire le Circuit**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Le module ESP8266 nécessite un courant élevé pour fournir un environnement de fonctionnement stable, donc assurez-vous que la batterie 9V est branchée.
 
 .. image:: img/wiring_led.jpg
 
-**2. Edit Dashboard**
+**2. Éditer le Tableau de Bord**
 
-#. Go to the **Quickstart Device** you created earlier, click on the menu icon in the upper right corner and select **edit dashboard**.
+#. Allez sur le **Quickstart Device** que vous avez créé précédemment, cliquez sur l'icône du menu en haut à droite et sélectionnez **edit dashboard**.
 
     .. image:: img/sp220609_112825.png
 
-#. Datastreams allow the widgets on Blynk and the code on the R3 board to recognize each other. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
+#. Les Datastreams permettent aux widgets sur Blynk et au code sur la carte R3 de se reconnaître mutuellement. Pour expérimenter le processus de configuration complet, supprimez tous les Datastreams de la page Datastreams.
 
     .. image:: img/sp220609_114723.png
 
-#. Please read the warning carefully and confirm it is correct before deleting the Datastreams.
+#. Veuillez lire attentivement l'avertissement et confirmer qu'il est correct avant de supprimer les Datastreams.
 
     .. image:: img/sp220609_114929.png
 
-#. Create a Datastream of type **Virtual Pin**, which will be used to control the LED using Blynk's switch.
+#. Créez un Datastream de type **Virtual Pin**, qui sera utilisé pour contrôler la LED en utilisant l'interrupteur Blynk.
 
     .. image:: img/sp220609_115124.png
 
-#. Configure the **Virtual Pin**. As the button and LED only need to be ON and OFF, set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``1``. 
+
+#. Configurez le **Virtual Pin**. Comme le bouton et la LED n'ont besoin que d'être ON et OFF, réglez DATA TYPE sur ``Integer`` et MIN et MAX sur ``0`` et ``1``. 
 
     .. image:: img/sp220609_115520.png
 
-#. Go to the **Web Dashboard** page and delete the existing widgets.
+#. Allez sur la page **Web Dashboard** et supprimez les widgets existants.
 
     .. image:: img/sp220609_133707.png
 
-#. Drag and drop a **switch** widget from the **Widget Box** on the left.
+#. Faites glisser et déposez un widget **switch** depuis la **Widget Box** à gauche.
 
     .. image:: img/sp220609_114508.png
 
-#. Now to set it up.
+#. Maintenant pour le configurer.
 
     .. image:: img/sp20220615180127.png
 
-#. Select **Datastream** as the one you set earlier.
+#. Sélectionnez **Datastream** comme celui que vous avez configuré précédemment.
 
     .. image:: img/sp220609_133741.png
 
-#. After selecting Datastream, you will see a few custom settings, then press Save.
+#. Après avoir sélectionné Datastream, vous verrez quelques paramètres personnalisés, puis appuyez sur Enregistrer.
 
     .. image:: img/sp220609_133950.png
 
-#. Finally, click **Save And Apply**.
+#. Enfin, cliquez sur **Save And Apply**.
 
     .. image:: img/sp220609_141733.png
 
-**3. Run the Code**
+**3. Exécutez le Code**
 
-#. Open the ``2.get_data_from_blynk.ino`` file under the path of ``3in1-kit\iot_project\2.get_data_from_blynk``, or copy this code into **Arduino IDE**.
+#. Ouvrez le fichier ``2.get_data_from_blynk.ino`` situé dans le dossier ``3in1-kit\iot_project\2.get_data_from_blynk``, ou copiez ce code dans **Arduino IDE**.
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/06b187a8-dabf-4866-b38c-742e0446cc3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
+#. Remplacez le ``Template ID``, ``Device Name`` et ``Auth Token`` par les vôtres. Vous devez également entrer le ``ssid`` et le ``mot de passe`` du WiFi que vous utilisez. Pour des tutoriels détaillés, veuillez vous référer à :ref:`connect_blynk`.
 
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Après avoir sélectionné la bonne carte et le bon port, cliquez sur le bouton **Upoad**.
 
     .. image:: img/2_upload.png
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Ouvrez le moniteur série (réglez le débit en bauds sur 115200) et attendez qu'un message tel qu'une connexion réussie apparaisse.
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Si le message ``ESP is not responding`` apparaît lorsque vous vous connectez, veuillez suivre ces étapes.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Assurez-vous que la batterie 9V est branchée.
+        * Réinitialisez le module ESP8266 en connectant la broche RST à GND pendant 1 seconde, puis débranchez-la.
+        * Appuyez sur le bouton de réinitialisation de la carte R3.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Parfois, il peut être nécessaire de répéter l'opération ci-dessus 3 à 5 fois, veuillez être patient.
 
-#. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R3 board.
+#. De retour sur Blynk, vous pouvez voir que le statut a changé en ligne et vous pouvez maintenant utiliser l'interrupteur widget sur Blynk pour contrôler la LED connectée à la carte R3.
 
     .. image:: img/2_blynk_button.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Si vous souhaitez utiliser Blynk sur des appareils mobiles, veuillez vous référer à :ref:`blynk_mobile`.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-
-The difference between the code in this project and the code in the previous chapter :ref:`connect_blynk` is the following lines.
-
+La différence entre le code de ce projet et le code du chapitre précédent :ref:`connect_blynk` est les lignes suivantes.
 
 .. code-block:: arduino
 
@@ -158,25 +157,26 @@ The difference between the code in this project and the code in the previous cha
     }
 
 
-Regarding the ``pinMode`` and ``digitalWrite`` of the ledPin, I'm sure you're already familiar with them, so I won't go over them again. What you need to focus on is the ``BLYNK_WRITE(V0)`` function.
+En ce qui concerne les fonctions ``pinMode`` et ``digitalWrite`` du ledPin, je suis sûr que vous les connaissez déjà, donc je ne vais pas les réexpliquer. Ce sur quoi vous devez vous concentrer, c'est la fonction ``BLYNK_WRITE(V0)``.
 
-What it will do is that when the value of Blynk's ``V0`` changes, Blynk.Cloud will tell your device "I am writing to **Virtual Pin** V0", and your device will be able to perform something once it gets this information.
+Ce qu'elle va faire, c'est que lorsque la valeur de ``V0`` sur Blynk change, Blynk.Cloud dira à votre appareil "Je suis en train d'écrire sur le **Virtual Pin** V0", et votre appareil pourra réaliser quelque chose une fois qu'il aura reçu cette information.
 
-We created the V0 Datastream in the previous step and applied it to the Switch Widget.
-This means that every time we operate the Switch Widget, ``BLYNK_WRITE(V0)`` will be triggered.
+Nous avons créé le Datastream V0 à l'étape précédente et l'avons appliqué au Widget Interrupteur.
+Cela signifie que chaque fois que nous utilisons le Widget Interrupteur, ``BLYNK_WRITE(V0)`` sera déclenché.
 
-We write two instructions in this function.
+Nous écrivons deux instructions dans cette fonction.
 
 .. code-block:: arduino
 
     int pinValue = param.asInt();
 
-Get the value of V0 and assign it to the variable ``pinValue``.
+Obtenez la valeur de V0 et attribuez-la à la variable ``pinValue``.
 
 .. code-block:: arduino
 
     digitalWrite(ledPin,pinValue);
 
-Write the value of V0 obtained to the ledPin, so that the Switch widget on Blynk can control the LED.
+Écrivez la valeur de V0 obtenue sur le ledPin, afin que le widget Interrupteur sur Blynk puisse contrôler la LED.
+
 
 

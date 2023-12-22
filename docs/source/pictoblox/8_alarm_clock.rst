@@ -1,44 +1,44 @@
 .. _sh_light_alarm:
 
-2.8 Light Alarm Clock
-======================
+2.8 Réveil Lumineux
+====================
 
-In life, there are various kinds of time alarm clocks. Now let's make a light-controlled alarm clock. When morning comes, the brightness of light increases and this light-controlled alarm clock will remind you that it's time to get up.
+Dans la vie, il existe divers types de réveils. Créons maintenant un réveil commandé par la lumière. Quand le matin arrive, la luminosité augmente et ce réveil lumineux vous rappellera qu'il est temps de se lever.
 
 .. image:: img/10_clock.png
 
-You Will Learn
+Vous Apprendrez
 ---------------------
 
-- Photoresistor working principle
-- Stopping sound playback and stopping scripts from running
+- Principe de fonctionnement d'une photorésistance
+- Arrêter la lecture de son et stopper l'exécution des scripts
 
-Required Components
+Composants requis
 ---------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -48,52 +48,51 @@ You can also buy them separately from the links below.
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
         - |link_resistor_buy|
-    *   - :ref:`cpn_photoresistor` 
+    *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Build the Circuit
+Construisez le Circuit
 -----------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Une photorésistance ou cellule photoélectrique est une résistance variable contrôlée par la lumière. La résistance d'une photorésistance diminue avec l'augmentation de l'intensité lumineuse incidente.
 
-Build the circuit according to the following diagram.
+Construisez le circuit selon le schéma suivant.
 
-Connect one end of the photoresistor to 5V, the other end to A0, and connect a 10K resistor in series with GND at this end.
+Connectez une extrémité de la photorésistance à 5V, l'autre à A0, et connectez une résistance de 10K en série avec GND à cette extrémité.
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by A0 becomes larger.
+Ainsi, lorsque l'intensité lumineuse augmente, la résistance de la photorésistance diminue, la division de tension de la résistance de 10K augmente, et la valeur obtenue par A0 devient plus grande.
 
 .. image:: img/circuit/photoresistor_circuit.png
 
-Programming
+Programmation
 ------------------
 
-**1. Select a sprite**
+**1. Sélectionnez un sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choose a Sprite** dans le coin inférieur droit de la zone des sprites, entrez **bell** dans la barre de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/10_sprite.png
 
-**2. Read the value of A0**
+**2. Lisez la valeur de A0**
 
-Create two variables **before** and **current**. When green flag is clicked, read the value of A0 and store it in variable **before** as a reference value. In [forever], read the value of A0 again, store it in the variable **current**.
+Créez deux variables **before** et **current**. Lorsque le drapeau vert est cliqué, lisez la valeur de A0 et stockez-la dans la variable **before** comme valeur de référence. Dans [forever], lisez à nouveau la valeur de A0 et stockez-la dans la variable **current**.
 
 .. image:: img/10_reada0.png
 
-**3. Make a sound**
+**3. Produire un son**
 
-When the value of current A0 is greater than the previous 50, which represents the current light intensity is greater than the threshold, then let the sprite make a sound.
+Lorsque la valeur actuelle de A0 est supérieure de 50 à la précédente, ce qui représente une intensité lumineuse supérieure au seuil, alors faites sonner le sprite.
 
 .. image:: img/10_sound.png
 
-**4. Turning the sprite**
+**4. Faire tourner le sprite**
 
-Use [turn block] to make the **bell** sprite turn left and right to achieve the alarm effect.
+Utilisez [turn block] pour faire tourner le sprite **bell** à gauche et à droite pour obtenir l'effet de réveil.
 
 .. image:: img/10_turn.png
 
-**5. stop all**
+**5. Arrêter tout**
 
-Stops the alarm when it has been ringing for a while.
+Arrêtez l'alarme après qu'elle ait sonné pendant un moment.
 
 .. image:: img/10_stop.png
-

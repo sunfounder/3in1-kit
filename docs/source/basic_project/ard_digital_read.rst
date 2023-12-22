@@ -1,39 +1,39 @@
 .. _ar_digital_read:
 
-3. Digital Read
-===================
+3. Lecture Numérique
+=======================
 
-Sensors capture real-world information, which is then communicated to the main board via pins (some digital, some analog) so that the computer can know the reality of the situation.
+Les capteurs capturent les informations du monde réel, qui sont ensuite communiquées à la carte principale via des broches (certaines numériques, d'autres analogiques) afin que l'ordinateur puisse connaître la réalité de la situation.
 
-Therefore, the Arduino board can know the working status of digital sensors by reading the value of digital pins like buttons, IR obstacle avoidance module.
+Ainsi, la carte Arduino peut connaître l'état de fonctionnement des capteurs numériques en lisant la valeur des broches numériques comme les boutons, le module d'évitement d'obstacle IR.
 
 
-Here are the required functions.
+Voici les fonctions requises.
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``INPUT``. 
+* ``pinMode(pin, mode)`` : Configure la broche spécifique comme ``INPUT`` (entrée) ou ``OUTPUT`` (sortie), ici elle doit être réglée sur ``INPUT``.
 
-   **Syntax**
+   **Syntaxe**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+   **Paramètres**
+    * ``pin`` : le numéro de broche Arduino à configurer.
+    * ``mode`` : INPUT, OUTPUT, ou INPUT_PULLUP.
 
 
 
-* ``digitalRead(pin)``: Read the value (level state) from the specified digital pin.
+* ``digitalRead(pin)`` : Lit la valeur (état de niveau) de la broche numérique spécifiée.
 
-   **Syntax**
+   **Syntaxe**
       digitalRead(pin)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number you want to read
+   **Paramètres**
+    * ``pin`` : le numéro de broche Arduino que vous souhaitez lire
 
-   **Returns**
-      HIGH or LOW
+   **Retours**
+      HIGH ou LOW
 
 
-**Example of Digital Read**
+**Exemple de Lecture Numérique**
 
 .. code-block:: arduino
 
@@ -52,31 +52,31 @@ Here are the required functions.
    }
 
 
-**Notes and Warnings**
+**Notes et Avertissements**
 
 1. Pull Up & Pull Down.
 
-    ``digitalRead()`` may produce random, indeterminate values if the pin is not getting a level signal. So directing the input pins to a known state can make the project more reliable.
-    When using an input component such as a button, it is usually necessary to connect a pull-up or pull-down resistor in parallel to the digital input pin.
+    ``digitalRead()`` peut produire des valeurs aléatoires et indéterminées si la broche ne reçoit pas un signal de niveau. Ainsi, diriger les broches d'entrée vers un état connu peut rendre le projet plus fiable.
+    Lors de l'utilisation d'un composant d'entrée tel qu'un bouton, il est généralement nécessaire de connecter une résistance de pull-up ou pull-down en parallèle à la broche d'entrée numérique.
 
-    Apart from connecting a pull-up resistor, you can also set the pin mode to ``INPUT_PULLUP`` in the code, for example ``pinMode(pin,INPUT_PULLUP)``. In this case, the pin will access the Atmega's built-in pull-up resistor via software, and it will have the same effect as connecting a pull-up resistor.
+    Outre la connexion d'une résistance de pull-up, vous pouvez également régler le mode de la broche sur ``INPUT_PULLUP`` dans le code, par exemple ``pinMode(pin,INPUT_PULLUP)``. Dans ce cas, la broche accédera à la résistance de pull-up intégrée de l'Atmega via le logiciel, et cela aura le même effet que la connexion d'une résistance de pull-up.
 
-2. About Pin13.
+2. À propos de la Pin13.
 
-    All digital pins (1-13) on the R3 board can be used as ``digitalRead()``.
-    But digital pin 13 is more difficult to use as a digital input than other digital pins.
-    Because it connects an LED and resistor, it is soldered on most boards.
-    If you enable its internal 20k pull-up resistor, it will hang around 1.7V instead of the expected 5V because the onboard LED and series resistor pull the voltage level low, which means it always returns LOW. If you must use pin 13 as a digital input, set its ``pinMode()`` to INPUT and use an external pull-down resistor.
+    Toutes les broches numériques (1-13) sur la carte R3 peuvent être utilisées comme ``digitalRead()``.
+    Cependant, la broche numérique 13 est plus difficile à utiliser comme entrée numérique que les autres broches numériques.
+    Car elle connecte une LED et une résistance, elle est soudée sur la plupart des cartes.
+    Si vous activez sa résistance de pull-up interne de 20k, elle se maintiendra autour de 1,7V au lieu des 5V attendus car la LED embarquée et la résistance en série tirent le niveau de tension vers le bas, ce qui signifie qu'elle retourne toujours LOW. Si vous devez utiliser la pin 13 comme une entrée numérique, réglez son ``pinMode()`` sur INPUT et utilisez une résistance de pull-down externe.
 
-3. Analog pins.
+3. Broches analogiques.
 
-    If the digital pins are not enough, the analog pins (A0-A5) can also be used as digital pins.
-    It needs to be set to INPUT with ``pinMode(pin,mode)``.
+    Si les broches numériques ne sont pas suffisantes, les broches analogiques (A0-A5) peuvent également être utilisées comme broches numériques.
+    Il faut les régler sur INPUT avec ``pinMode(pin,mode)``.
 
 
-**Related Components**
+**Composants Associés**
 
-Below are the related components, you can click in to learn how to use them.
+Ci-dessous les composants associés, vous pouvez cliquer pour apprendre à les utiliser.
 
 .. toctree::
     :maxdepth: 2
@@ -86,5 +86,6 @@ Below are the related components, you can click in to learn how to use them.
     ar_reed
     ar_detect_the_obstacle
     ar_detect_the_line
+
 
 

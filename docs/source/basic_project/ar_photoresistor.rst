@@ -1,35 +1,35 @@
 .. _ar_photoresistor:
 
-4.2 Feel the Light
+4.2 Ressentir la Lumière
 ===========================
 
-The photoresistor is a typical device for analog inputs and it is used in a very similar way to a potentiometer. Its resistance value depends on the intensity of the light, the stronger the irradiated light, the smaller its resistance value; conversely, it increases.
+Le photo-résistor est un dispositif typique pour les entrées analogiques et il est utilisé de manière très similaire à un potentiomètre. Sa valeur de résistance dépend de l'intensité de la lumière, plus la lumière irradiée est forte, plus sa valeur de résistance est petite ; inversement, elle augmente.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,21 +42,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_5.2_light.png
 
-In this circuit, the 10K resistor and the photoresistor are connected in series, and the current passing through them is the same. The 10K resistor acts as a protection, and the pin A0 reads the value after the voltage conversion of the photoresistor.
+Dans ce circuit, la résistance de 10K et le photo-résistor sont connectés en série, et le courant les traversant est le même. La résistance de 10K agit comme une protection, et la broche A0 lit la valeur après la conversion de tension du photo-résistor.
 
-When the light is enhanced, the resistance of the photoresistor decreases, then its voltage decreases, so the value from pin A0 will increase; 
-if the light is strong enough, the resistance of the photoresistor will be close to 0, and the value of pin A0 will be close to 1023. 
-At this time, the 10K resistor plays a protective role, so that 5V and GND are not connected together, resulting in a short circuit.
+Lorsque la lumière est renforcée, la résistance du photo-résistor diminue, alors sa tension diminue, donc la valeur de la broche A0 augmentera ; 
+si la lumière est suffisamment forte, la résistance du photo-résistor sera proche de 0, et la valeur de la broche A0 sera proche de 1023. 
+À ce moment, la résistance de 10K joue un rôle protecteur, afin que 5V et GND ne soient pas connectés ensemble, entraînant un court-circuit.
 
-If you place the photoresistor in a dark situation, the value of pin A0 will decrease. 
-In a dark enough situation, the resistance of the photoresistor will be infinite, and its voltage will be close to 5V (the 10K resistor is negligible), and the value of pin A0 will be close to 0.
+Si vous placez le photo-résistor dans une situation sombre, la valeur de la broche A0 diminuera. 
+Dans une situation suffisamment sombre, la résistance du photo-résistor sera infinie, et sa tension sera proche de 5V (la résistance de 10K est négligeable), et la valeur de la broche A0 sera proche de 0.
 
 
-**Wiring**
+**Câblage**
 
 .. image:: img/feel_the_light_bb.jpg
     :width: 600
@@ -67,14 +67,14 @@ In a dark enough situation, the resistance of the photoresistor will be infinite
 
 .. note::
 
-    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\basic_project\4.2.feel_the_light``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``4.2.feel_the_light.ino`` sous le chemin ``3in1-kit\basic_project\4.2.feel_the_light``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléchargez le code via l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e1bc4c8b-788e-4bfe-a0a1-532d4fdc7753/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the serial monitor prints out the photoresistor values. 
-The stronger the current ambient brightness, the larger the value displayed on the serial monitor.
+Après le téléchargement réussi du code, le moniteur série affiche les valeurs du photo-résistor. 
+Plus la luminosité ambiante actuelle est forte, plus la valeur affichée sur le moniteur série est grande.

@@ -1,17 +1,17 @@
-Learn about the Components in Your Kit
+Découvrez les Composants de votre Kit
 =========================================
 
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Après avoir ouvert l'emballage, veuillez vérifier si le nombre de composants correspond à la description du produit et si tous les composants sont en bon état.
 
 .. image:: img/components_list.jpg
     :width: 800
     :align: center
 
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+Voici une introduction à chaque composant, incluant le principe de fonctionnement du composant et les projets correspondants.
 
-**Control Board**
+**Carte de Contrôle**
 
 .. toctree::
     :maxdepth: 1
@@ -22,7 +22,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Basic**
+**Basique**
 
 .. toctree::
     :maxdepth: 1
@@ -32,7 +32,7 @@ Below is the introduction to each component, which contains the operating princi
     component_capacitor
     component_wires
 
-**Chip**
+**Puce**
 
 .. toctree::
     :maxdepth: 1
@@ -41,7 +41,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Display**
+**Affichage**
 
 .. toctree::
     :maxdepth: 1
@@ -52,14 +52,14 @@ Below is the introduction to each component, which contains the operating princi
     component_i2c_lcd
 
 
-**Sound**
+**Son**
 
 .. toctree::
     :maxdepth: 1
 
     component_buzzer
 
-**Driver**
+**Pilote**
 
 .. toctree::
     :maxdepth: 1
@@ -70,7 +70,7 @@ Below is the introduction to each component, which contains the operating princi
     component_l9110_module
 
 
-**Controller**
+**Contrôleur**
 
 .. toctree::
     :maxdepth: 1
@@ -83,7 +83,7 @@ Below is the introduction to each component, which contains the operating princi
 
 
 
-**Sensor**
+**Capteur**
 
 .. toctree::
     :maxdepth: 1

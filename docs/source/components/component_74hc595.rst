@@ -5,32 +5,29 @@
 
 .. image:: img/74HC595.png
 
-The 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
-When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register. The memory register outputs a Bus with a parallel 8-bit and in three states. When OE is enabled (low level), the data in memory register is output to the bus.
+Le 74HC595 est composé d'un registre à décalage de 8 bits et d'un registre de stockage avec des sorties parallèles à trois états. Il convertit l'entrée série en sortie parallèle, permettant ainsi d'économiser les ports IO d'un MCU.
+Lorsque MR (broche 10) est à un niveau haut et OE (broche 13) à un niveau bas, les données sont entrées sur le front montant de SHcp et passent au registre de mémoire sur le front montant de SHcp. Si les deux horloges sont connectées ensemble, le registre à décalage est toujours un pulse en avance sur le registre de mémoire. Il y a une broche d'entrée de décalage série (Ds), une broche de sortie série (Q) et un bouton de réinitialisation asynchrone (niveau bas) dans le registre de mémoire. Le registre de mémoire sort un bus avec un 8-bit parallèle et en trois états. Lorsque OE est activé (niveau bas), les données dans le registre de mémoire sont sorties vers le bus.
 
-* `74HC595 Datasheet <https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801>`_
+* `Fiche technique du 74HC595 <https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801>`_
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-Pins of 74HC595 and their functions:
+Broches du 74HC595 et leurs fonctions :
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7'**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7** : broches de sortie de données parallèles 8 bits, capables de contrôler directement 8 LEDs ou 8 broches d'affichage à 7 segments.
+* **Q7'** : Broche de sortie série, connectée à DS d'un autre 74HC595 pour connecter plusieurs 74HC595 en série
+* **MR** : Broche de réinitialisation, active à un niveau bas ; 
+* **SHcp** : Entrée de séquence temporelle du registre à décalage. Sur le front montant, les données dans le registre à décalage se déplacent successivement d'un bit, c'est-à-dire que les données en Q1 passent à Q2, et ainsi de suite. Alors que sur le front descendant, les données dans le registre à décalage restent inchangées.
+* **STcp** : Entrée de séquence temporelle du registre de stockage. Sur le front montant, les données dans le registre à décalage passent dans le registre de mémoire.
+* **CE** : Broche d'activation de sortie, active à un niveau bas. 
+* **DS** : Broche d'entrée de données série
+* **VCC** : Tension d'alimentation positive.
+* **GND** : Masse.
 
-**Example**
+**Exemple**
 
-* :ref:`ar_shiftout` (Basic Project)
-* :ref:`ar_segment` (Basic Project)
-* :ref:`iot_gate` (IoT Project)
-
-
-
+* :ref:`ar_shiftout` (Projet de base)
+* :ref:`ar_segment` (Projet de base)
+* :ref:`iot_gate` (Projet IoT)
 

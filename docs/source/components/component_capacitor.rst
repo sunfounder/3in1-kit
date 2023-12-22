@@ -1,34 +1,34 @@
 .. _cpn_capacitor:
 
-
-Capacitor
+Condensateur
 =============
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+Le condensateur, se rapporte à la quantité de charge stockée sous une différence de potentiel donnée, notée C, et son unité internationale est le farad (F). 
+Généralement, les charges électriques se déplacent sous l'effet d'une force dans un champ électrique. Lorsqu'il y a un milieu entre les conducteurs, le mouvement des charges électriques est entravé et les charges s'accumulent sur les conducteurs, entraînant une accumulation de charges électriques.
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+La quantité de charges électriques stockées est appelée capacité. Les condensateurs étant l'un des composants électroniques les plus utilisés dans les équipements électroniques, ils sont largement employés dans l'isolation en courant continu, le couplage, le contournement, le filtrage, les boucles de réglage, la conversion d'énergie et les circuits de contrôle. Les condensateurs sont divisés en condensateurs électrolytiques, condensateurs solides, etc.
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+Selon les caractéristiques des matériaux, les condensateurs peuvent être divisés en : condensateurs électrolytiques en aluminium, condensateurs à film, condensateurs au tantale, condensateurs céramiques, supercondensateurs, etc.
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+Dans ce kit, des condensateurs céramiques et électrolytiques sont utilisés.
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `Condensateur Céramique - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+* `Condensateur Électrolytique - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+Il y a des étiquettes 103 ou 104 sur les condensateurs céramiques, qui représentent la valeur de capacité, 103 = 10x10^3pF, 104 = 10x10^4pF
 
-**Unit Conversion**
+**Conversion d'Unité**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
+**Exemple**
 
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
+* :ref:`sh_doorbell` (Projet Scratch)
+* :ref:`sh_eat_apple` (Projet Scratch)
+* :ref:`sh_fishing` (Projet Scratch)
+
 

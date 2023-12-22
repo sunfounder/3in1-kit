@@ -1,42 +1,41 @@
-
 .. _car_speed:
 
-3. Speed Up
-===================
+3. Accélération
+===============
 
-In addition to the digital signal (HIGH/LOW), the input of L9110 module can also receive PWM signal to control the speed of the output.
+En plus du signal numérique (HIGH/LOW), l'entrée du module L9110 peut également recevoir un signal PWM pour contrôler la vitesse de sortie.
 
-In other words, we can use ``AnalogWrite()`` to control the moving speed of the car.
+En d'autres termes, nous pouvons utiliser ``AnalogWrite()`` pour contrôler la vitesse de déplacement de la voiture.
 
-In this project, we let the car gradually change its forward speed, first accelerating and then decelerating.
+Dans ce projet, nous faisons varier progressivement la vitesse de la voiture vers l'avant, en accélérant d'abord puis en décélérant.
 
 
-**Wiring**
+**Câblage**
 
-This project is the same wiring as :ref:`car_move_code`.
+Ce projet utilise le même câblage que :ref:`car_move_code`.
 
 **Code**
 
 .. note::
 
-    * Open the ``3.speed_up.ino`` file under the path of ``3in1-kit\car_project\3.speed_up``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``3.speed_up.ino`` dans le chemin ``3in1-kit\car_project\3.speed_up``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléchargez le code via le `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c15276c1-2359-4de6-ac82-a14a72e041c6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the program runs, the car will gradually accelerate and then gradually decelerate.
+Après l'exécution du programme, la voiture accélérera progressivement puis décélérera graduellement.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-The purpose of this project is to write different PWM values to the input pins of the L9110 module to control the forward speed of the car.
+Le but de ce projet est d'écrire différentes valeurs PWM aux broches d'entrée du module L9110 pour contrôler la vitesse avant de la voiture.
 
 
-#. Use the ``for()`` statement to give ``speed`` in steps of 5, writing values from 0 to 255 so you can see the change in the car's forward speed.
+#. Utilisez la déclaration ``for()`` pour donner ``speed`` par paliers de 5, en écrivant des valeurs de 0 à 255 afin de voir le changement de vitesse de la voiture.
 
     .. code-block:: arduino
 
@@ -51,9 +50,9 @@ The purpose of this project is to write different PWM values to the input pins o
             }
         }
 
-#. About the ``moveForward()`` function.
+#. À propos de la fonction ``moveForward()``.
 
-    As opposed to :ref:`car_move_code` which directly gives high/low levels to the input pins of the L9110 module, here we pass a parameter ``speed`` to where we need to give high levels.
+    Contrairement à :ref:`car_move_code` qui donne directement des niveaux hauts/bas aux broches d'entrée du module L9110, ici nous passons un paramètre ``speed`` là où nous devons donner des niveaux hauts.
 
     .. code-block:: arduino
 
@@ -67,7 +66,7 @@ The purpose of this project is to write different PWM values to the input pins o
 
 * `for <https://www.arduino.cc/reference/en/language/structure/control-structure/for/>`_
 
-The ``for`` statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop. 
+La déclaration ``for`` est utilisée pour répéter un bloc d'instructions entre accolades. Un compteur d'incrémentation est généralement utilisé pour incrémenter et terminer la boucle.
 
     .. code-block:: arduino
 
@@ -75,6 +74,6 @@ The ``for`` statement is used to repeat a block of statements enclosed in curly 
         // statement(s);
         }
 
-    * ``initialization``: happens first and exactly once.
-    * ``condition``: each time through the loop, condition is tested; if it's true, the statement block, and the increment is executed, then the condition is tested again. When the condition becomes false, the loop ends.
-    * ``increment``: executed each time through the loop when condition is true.
+    * ``initialization`` : se produit d'abord et une seule fois.
+    * ``condition`` : à chaque passage dans la boucle, la condition est testée ; si elle est vraie, le bloc d'instructions et l'incrémentation sont exécutés, puis la condition est à nouveau testée. Lorsque la condition devient fausse, la boucle se termine.
+    * ``increment`` : exécuté à chaque passage dans la boucle lorsque la condition est vraie.

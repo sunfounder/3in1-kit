@@ -1,30 +1,22 @@
-
 .. _cpn_breadboard:
 
-Breadboard
+Plaque d'essai
 ==============
 
 .. image:: img/breadboard.png
     :width: 600
 
-A breadboard is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread.[1] In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term "breadboard" is commonly used to refer to these.
+Une plaque d'essai est une base de construction pour le prototypage électronique. À l'origine, le terme désignait littéralement une planche à pain, un morceau de bois poli utilisé pour trancher le pain.[1] Dans les années 1970, la plaque d'essai sans soudure (aussi connue sous le nom de plugboard ou de tableau de connexion à bornes) est devenue courante et aujourd'hui, le terme "plaque d'essai" est couramment utilisé pour désigner ces dispositifs.
 
-It is used to build and test circuits quickly before finishing any circuit design. 
-And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. 
-The breadboard allows you to plug in and remove components easily. 
+Elle est utilisée pour construire et tester rapidement des circuits avant de finaliser une conception de circuit.
+Elle possède de nombreux trous dans lesquels les composants mentionnés ci-dessus peuvent être insérés, comme des circuits intégrés, des résistances ainsi que des fils cavaliers.
+La plaque d'essai vous permet de brancher et de retirer facilement les composants.
 
-The picture shows the internal structure of a breadboard. 
-Although these holes on the breadboard appear to be independent of each other, they are actually connected to each other through metal strips internally.
+L'image montre la structure interne d'une plaque d'essai.
+Bien que ces trous sur la plaque d'essai semblent être indépendants les uns des autres, ils sont en réalité connectés entre eux par des bandes métalliques à l'intérieur.
 
 .. image:: img/breadboard_internal.png
     :width: 600
 
-If you want to know more about breadboard, refer to: `How to Use a Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
-
-
-
-
-
-
-
+Si vous voulez en savoir plus sur la plaque d'essai, consultez : `Comment utiliser une plaque d'essai - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
 

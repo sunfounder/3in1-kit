@@ -1,11 +1,11 @@
 .. _car_remote_plus:
 
-10. One Touch Start
+10. Démarrage en Un Clic
 =============================
 
-In this project, we have integrated the previous projects - line following, following, obstacle avoidance, self-driving, etc. together. They can be switched by buttons on the remote control, so you can start the car and experience all functions at once.
+Dans ce projet, nous avons intégré les projets précédents - suivi de ligne, suivi, évitement d'obstacles, conduite autonome, etc. Ils peuvent être changés par les boutons de la télécommande, vous permettant ainsi de démarrer la voiture et d'expérimenter toutes les fonctions en une seule fois.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/car_10.png
     :width: 800
@@ -14,9 +14,9 @@ In this project, we have integrated the previous projects - line following, foll
 
 .. note::
 
-    * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Ouvrez le fichier ``10.one_touch_start.ino`` situé dans le dossier ``3in1-kit\car_project\10.one_touch_start``.
+    * Ou copiez ce code dans **Arduino IDE**.
+    * La bibliothèque ``IRremote`` est utilisée ici, vous pouvez l'installer depuis le **Library Manager**.
   
         .. image:: ../img/lib_irremote.png
     
@@ -26,23 +26,24 @@ In this project, we have integrated the previous projects - line following, foll
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d873724f-120e-4679-b4ec-8d72ad583c8c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, the LED will flash rapidly 3 times for every signal received from the remote control by the IR receiver. You can press the following keys to operate the cart.
+Après le téléchargement réussi du code, la LED clignotera rapidement 3 fois pour chaque signal reçu de la télécommande par le récepteur IR. Vous pouvez appuyer sur les touches suivantes pour faire fonctionner le chariot.
 
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Move to the left front
-* **2**: Forward
-* **3**: Move to the right.
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward.
-* **9**: Backward to the right
-* **CYCLE**: Follow the line
-* **U/SD**: Self-driving
-* **▷▷|**: Obstacle avoidance with ultrasonic module
-* **|◁◁**: Obstacle avoidance with IR Obstacle module
-* **EQ**: Follow your hand
-* **0**: Stop
+* **+** : Accélérer
+* **-** : Ralentir
+* **1** : Avancer vers la gauche
+* **2** : Avancer
+* **3** : Avancer vers la droite.
+* **4** : Tourner à gauche
+* **6** : Tourner à droite
+* **7** : Reculer vers la gauche
+* **8** : Reculer.
+* **9** : Reculer vers la droite
+* **CYCLE** : Suivre la ligne
+* **U/SD** : Conduite autonome
+* **▷▷|** : Évitement d'obstacles avec module ultrasonique
+* **|◁◁** : Évitement d'obstacles avec module IR Obstacle
+* **EQ** : Suivre votre main
+* **0** : Arrêter
+
 
 

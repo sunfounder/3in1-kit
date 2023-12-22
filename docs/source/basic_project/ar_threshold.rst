@@ -1,48 +1,47 @@
 .. _ar_threshold:
 
-5.2 Threshold
+5.2 Seuil
 =======================
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+Dans de nombreux projets, vous rencontrerez ce besoin.
+"Lorsque xxx atteint un certain niveau, alors..."
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+Par exemple, dans une maison intelligente, lorsque l'intensité lumineuse est inférieure à 50Lux, allumez la lumière ;
+Un autre exemple est sur la carte mère d'un ordinateur, si la température de fonctionnement du CPU est supérieure à 65 degrés Celsius, allumez le ventilateur, et ainsi de suite.
 
-In these requirements, the keyword "threshold" is reflected.
+Dans ces exigences, le mot-clé "seuil" est reflété.
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+Nous pouvons ajuster la valeur du seuil pour que le circuit fonctionne plus en adéquation avec les besoins individuels.
+Par exemple, si j'aime un environnement de vie plus lumineux, je peux augmenter le seuil des lumières automatiques de la maison intelligente à 80Lux.
+Un autre exemple est que l'environnement de ventilation de mon studio n'est pas très bon, et la demande de dissipation thermique est plus élevée, donc la valeur seuil de l'ouverture automatique du ventilateur peut être ajustée à 50 degrés Celsius.
 
+Ici, nous utilisons un capteur d'humidité du sol et 2 LED pour fabriquer un moniteur de pot. Si le sol est trop sec, la LED rouge s'allumera ; si le sol est suffisamment humide, la LED verte s'allumera. Vous devez ajuster manuellement les seuils pour déterminer la sécheresse et l'humidité du sol.
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+**Composants requis**
 
-**Required Components**
+Pour ce projet, nous avons besoin des composants suivants.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/threshold_bb.png
     :width: 600
@@ -71,17 +70,17 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\basic_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``5.2.threshold.ino`` sous le chemin ``3in1-kit\basic_project\5.2.threshold``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
+Après le téléchargement réussi du code, si votre seuil est correctement défini, vous verrez la LED rouge s'allumer lorsque le sol est sec pour vous rappeler que vous devez arroser ; après l'arrosage, la LED verte s'allumera.
 
-**How it works**
+**Fonctionnement**
 
 .. code-block:: Arduino
 
@@ -100,8 +99,9 @@ After the code is uploaded successfully, if your threshold is set correctly, you
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+Définissez d'abord une valeur de ``threshold`` puis lisez la valeur du module d'humidité du sol, sa valeur diminue à mesure que le niveau d'humidité augmente. Si la valeur actuellement lue est supérieure au ``threshold`` défini, alors laissez la LED rouge s'allumer, sinon allumez la LED verte.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
+Cette valeur de ``threshold`` doit être ajustée en fonction de la situation réelle, vous pouvez d'abord télécharger le code, puis ouvrir le moniteur série pour vérifier la valeur, enregistrer la valeur dans des conditions humides et sèches, puis choisir une valeur médiane comme valeur de ``threshold``.
+
 
 

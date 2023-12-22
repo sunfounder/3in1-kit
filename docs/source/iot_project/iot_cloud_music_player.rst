@@ -1,37 +1,37 @@
 .. _iot_music:
 
-4. Cloud Music Player
+4. Lecteur de Musique Cloud
 =====================================
 
-The goal of this project is to create a music player using Blynk.
-Music is played in the same way as in :ref:`ar_passive_buzzer`, by writing the song in the program and playing it with a passive buzzer.
-however, in this example, we can click the switch to play/pause and slide the slider to change the playback progress.
+L'objectif de ce projet est de créer un lecteur de musique en utilisant Blynk.
+La musique est jouée de la même manière que dans :ref:`ar_passive_buzzer`, en écrivant la chanson dans le programme et en la jouant avec un buzzer passif.
+Cependant, dans cet exemple, nous pouvons cliquer sur l'interrupteur pour jouer/mettre en pause et faire glisser le curseur pour changer le progrès de la lecture.
 
-**Required Components**
+**Composants Requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,70 +44,68 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**1. Build the Cirduit**
+**1. Construire le Circuit**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Le module ESP8266 nécessite un courant élevé pour fournir un environnement de fonctionnement stable, donc assurez-vous que la batterie 9V est branchée.
 
 .. image:: img/wiring_buzzer.jpg
 
-**2. Edit Dashboard**
+**2. Éditer le Tableau de Bord**
 
-#. Create a **Datastream** of type **Virtual Pin** on the **Datastream** page as the value modified by the Slider widget added later or code. Set the DATA TYPE to **Integer** and MIN and MAX to **0** and **30**.
+#. Créez un **Datastream** de type **Virtual Pin** sur la page **Datastream** comme la valeur modifiée par le widget Curseur ajouté plus tard ou le code. Réglez le TYPE DE DONNÉES sur **Integer** et MIN et MAX sur **0** et **30**.
 
     .. image:: img/sp220610_104330.png
 
-#. Also create another **Datastream** of type **Virtual Pin** to display the music name, and set the DATA TYPE to ``String``.
+#. Créez également un autre **Datastream** de type **Virtual Pin** pour afficher le nom de la musique, et réglez le TYPE DE DONNÉES sur ``String``.
 
     .. image:: img/sp220610_105932.png
 
-#. Go to the **Wed Dashboard** page, drag a **Switch** widget and set **Datastream** to V0 (V0 is already set in :ref:`iot_blink`); drag a **Label** widget and set it to V3; drag a **Slider** widget and set it to V2.
+#. Allez sur la page **Wed Dashboard**, faites glisser un widget **Switch** et réglez **Datastream** sur V0 (V0 est déjà réglé dans :ref:`iot_blink`); faites glisser un widget **Label** et réglez-le sur V3; faites glisser un widget **Slider** et réglez-le sur V2.
 
     .. image:: img/sp220610_110105.png
 
 .. note::
 
-    Your virtual pins may be different from mine, yours will prevail, but you need to modify the corresponding pin number in the code.
+    Vos pins virtuels peuvent être différents des miens, les vôtres prévaudront, mais vous devrez modifier le numéro de pin correspondant dans le code.
 
+**3. Exécutez le Code**
 
-
-**3. Run the Code**
-
-#. Open the ``4.cloud_music_player.ino`` file under the path of ``3in1-kit\iot_project\4.cloud_music_player``.
+#. Ouvrez le fichier ``4.cloud_music_player.ino`` situé dans le dossier ``3in1-kit\iot_project\4.cloud_music_player``.
 
     .. raw:: html
 
         <iframe src=https://create.arduino.cc/editor/sunfounder01/34a49c4b-9eb4-4d03-bd78-fe1daefc9f5c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Replace the ``Template ID``, ``Device Name``, and ``Auth Token`` with your own. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. For detailed tutorials, please refer to :ref:`connect_blynk`.
-#. After selecting the correct board and port, click the **Upoad** button.
+#. Remplacez le ``Template ID``, ``Device Name`` et ``Auth Token`` par les vôtres. Vous devez également entrer le ``ssid`` et le ``password`` du WiFi que vous utilisez. Pour des tutoriels détaillés, veuillez vous référer à :ref:`connect_blynk`.
+#. Après avoir sélectionné la bonne carte et le bon port, cliquez sur le bouton **Upoad**.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Ouvrez le moniteur série (réglez le débit en bauds sur 115200) et attendez qu'un message tel qu'une connexion réussie apparaisse.
 
 
     .. image:: img/2_ready.png
 
     .. note::
 
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Si le message ``ESP is not responding`` apparaît lorsque vous vous connectez, veuillez suivre ces étapes.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Assurez-vous que la batterie 9V est branchée.
+        * Réinitialisez le module ESP8266 en connectant la broche RST à GND pendant 1 seconde, puis débranchez-la.
+        * Appuyez sur le bouton de réinitialisation de la carte R3.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        Parfois, il peut être nécessaire de répéter l'opération ci-dessus 3 à 5 fois, veuillez être patient.
 
-#. Now, you can use Blynk's Button Control widget to start/pause the music and the Slider to adjust the playback progress, and you'll also see the name of the music.
+#. Maintenant, vous pouvez utiliser le widget Bouton de Contrôle de Blynk pour démarrer/mettre en pause la musique et le Curseur pour ajuster le progrès de la lecture, et vous verrez également le nom de la musique.
 
     .. image:: img/sp220610_110105.png
 
-#. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
+#. Si vous souhaitez utiliser Blynk sur des appareils mobiles, veuillez vous référer à :ref:`blynk_mobile`.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
- The datastream **V0** is used to get the status of the Switch widget and assign it to the variable **musicPlayFlag**, which controls pausing and playing the music.
+ Le datastream **V0** est utilisé pour obtenir l'état du widget Interrupteur et l'assigner à la variable **musicPlayFlag**, qui contrôle la pause et la lecture de la musique.
 
 .. code-block:: arduino
 
@@ -118,7 +116,7 @@ You can also buy them separately from the links below.
         musicPlayFlag = param.asInt(); // START/PAUSE MUSIC
     }
 
-The data stream **V2** is used to get the value of the slider widget and assign it to the variable **scrubBar** when the slider is moved.
+Le datastream **V2** est utilisé pour obtenir la valeur du widget Curseur et l'assigner à la variable **scrubBar** lorsque le curseur est déplacé.
 
 .. code-block:: arduino
 
@@ -129,7 +127,7 @@ The data stream **V2** is used to get the value of the slider widget and assign 
         scrubBar=param.asInt();
     }
 
-When the device is connected to the **Blynk Cloud**, write the music name for the **V3** datastream and then display it with the **Label** widget.
+Lorsque le dispositif est connecté au **Blynk Cloud**, écrivez le nom de la musique pour le datastream **V3** puis affichez-le avec le widget **Label**.
 
 .. code-block:: arduino
 
@@ -138,8 +136,8 @@ When the device is connected to the **Blynk Cloud**, write the music name for th
         Blynk.virtualWrite(V3, songName);
     }
 
-**Blynk Timer** will execute every second. Music is played if **musicPlayFlag** is not 0, i.e. the **Switch** widget is ON.
-As soon as two notes are played, the progress bar variable ``scrubBar`` is incremented by 2, and the value is then written to the **Blynk Cloud**, which synchronizes the value of the **Slider** widget.
+**Blynk Timer** s'exécutera toutes les secondes. La musique est jouée si **musicPlayFlag** n'est pas 0, c'est-à-dire que le widget **Switch** est ON.
+Dès que deux notes sont jouées, la variable de la barre de progression ``scrubBar`` est incrémentée de 2, et la valeur est ensuite écrite dans le **Blynk Cloud**, ce qui synchronise la valeur du widget **Slider**.
 
 .. code-block:: arduino
 

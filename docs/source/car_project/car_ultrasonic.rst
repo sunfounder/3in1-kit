@@ -1,37 +1,37 @@
 .. _car_ultrasonic:
 
-6. Play with Ultrasonic Module
+6. Jouer avec le module ultrasonique
 =====================================
 
-In :ref:`car_ir_obstacle` project, the 2 infrared obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+Dans le projet :ref:`car_ir_obstacle`, les 2 modules infrarouges d'évitement d'obstacles sont utilisés pour éviter les obstacles, mais la distance de détection du module d'évitement d'obstacle IR est courte, ce qui peut rendre la voiture trop tardive pour éviter les obstacles.
 
-In this project, we use ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+Dans ce projet, nous utilisons un module ultrasonique pour effectuer une détection à longue distance, afin que la voiture puisse détecter les obstacles à une distance plus éloignée et prendre une décision.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,16 +42,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Wiring**
+**Câblage**
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+Un module de capteur ultrasonique est un instrument qui mesure la distance à un objet à l'aide d'ondes sonores ultrasoniques.
+Il possède deux sondes. L'une est pour envoyer des ondes ultrasoniques et l'autre pour recevoir les ondes et transformer le temps d'envoi et de réception en une distance, détectant ainsi la distance entre l'appareil et un obstacle.
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Now build the circuit according to the following diagram.
+Construisez maintenant le circuit selon le schéma suivant.
 
 .. list-table:: 
     :header-rows: 1
@@ -75,23 +75,22 @@ Now build the circuit according to the following diagram.
 
 .. note::
 
-    * Open the ``6.ultrasonic_module.ino`` file under the path of ``3in1-kit\car_project\6.ultrasonic_module``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``6.ultrasonic_module.ino`` situé dans le dossier ``3in1-kit\car_project\6.ultrasonic_module``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléchargez le code via `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ae97f966-9d72-40e6-aa9f-e0767ddf5bd5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Après le téléchargement réussi du code, orientez la voiture vers un mur. Si la distance est trop grande, elle avancera ; si elle est trop proche, elle reculera ; si elle est à une distance sûre, elle s'arrêtera.
 
-After the code is successfully uploaded, turn the car towards the wall. If the distance is too far, it will move forward; if it is too close, it will move backward; if it is at a safe distance, it will stop.
+**Comment ça fonctionne ?**
 
-**How it works?**
+Ce projet se base sur la distance lue par le module ultrasonique pour faire bouger la voiture en conséquence.
 
-This project is based on the distance read by the ultrasonic module to make the car move accordingly.
-
-#. Add the pin definition for the ultrasonic module, ``trigPin`` is used to transmit ultrasonic wave, so set it to ``OUTPUT``; ``echoPin`` is set to ``INPUT`` to receive ultrasonic wave.
+#. Ajoutez la définition de pin pour le module ultrasonique, ``trigPin`` est utilisé pour transmettre l'onde ultrasonique, réglez-le sur ``OUTPUT`` ; ``echoPin`` est réglé sur ``INPUT`` pour recevoir l'onde ultrasonique.
 
     .. code-block:: arduino
 
@@ -107,7 +106,7 @@ This project is based on the distance read by the ultrasonic module to make the 
             pinMode(trigPin, OUTPUT);
         }
 
-#. First read the distance value obtained from the ultrasonic module, if the distance is greater than 25, let the car move forward; if the distance is between 2-10cm, let the car move backward, otherwise (between 10~25) stop.
+#. Lisez d'abord la valeur de distance obtenue à partir du module ultrasonique, si la distance est supérieure à 25, laissez la voiture avancer ; si la distance est entre 2-10cm, laissez la voiture reculer, sinon (entre 10~25) arrêtez.
 
     .. code-block:: arduino
 
@@ -123,9 +122,9 @@ This project is based on the distance read by the ultrasonic module to make the 
             }
         }
 
-#. About ``readSensorData()`` function.
+#. À propos de la fonction ``readSensorData()``.
 
-    The transmitter of the ultrasonic module transmits a 10us square wave signal every 2us, and the receiver receives a high level signal if there is an obstacle within the range. Use the ``pulseIn()`` function to record the time from sending to receiving, divide by the speed of sound 340m/s, and then divide by 2, the result is the distance between this module and the obstacle with units: cm.
+    L'émetteur du module ultrasonique transmet un signal carré de 10us toutes les 2us, et le récepteur reçoit un signal de niveau haut s'il y a un obstacle dans la portée. Utilisez la fonction ``pulseIn()`` pour enregistrer le temps de l'envoi à la réception, divisez par la vitesse du son 340m/s, puis divisez par 2, le résultat est la distance entre ce module et l'obstacle en unités : cm.
 
     .. code-block:: arduino
 
@@ -141,7 +140,8 @@ This project is based on the distance read by the ultrasonic module to make the 
 
 * `pulseIn(pin, value) <https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/>`_
 
-    * ``pin``: the number of the Arduino pin on which you want to read the pulse. Allowed data types: int.
-    * ``value``: type of pulse to read: either HIGH or LOW. Allowed data types: int.
+    * ``pin`` : le numéro du pin Arduino sur lequel vous voulez lire l'impulsion. Types de données autorisés : int.
+    * ``value`` : type d'impulsion à lire : soit HIGH, soit LOW. Types de données autorisés : int.
 
-    Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, ``pulseIn()`` waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW and stops timing.
+    Lit une impulsion (soit HIGH, soit LOW) sur un pin. Par exemple, si la valeur est HIGH, ``pulseIn()`` attend que le pin passe de LOW à HIGH, commence à chronométrer, puis attend que le pin redevienne LOW et arrête le chronométrage.
+

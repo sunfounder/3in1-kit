@@ -1,50 +1,49 @@
 .. _sh_doorbell:
 
-2.6 Doorbell
+2.6 Sonnette
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+Ici, nous utiliserons le bouton et la cloche sur la scène pour créer une sonnette.
 
-
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+Après avoir cliqué sur le drapeau vert, vous pouvez appuyer sur le bouton et la cloche sur la scène émettra un son.
 
 .. image:: img/7_doorbell.png
 
-You Will Learn
+Vous Apprendrez
 ---------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- Fonctionnement du bouton
+- Lecture d'une broche numérique et ses plages de valeurs
+- Création d'une boucle conditionnelle
+- Ajout d'un arrière-plan
+- Jouer un son
 
-Required Components
+Composants requis
 ---------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DE CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,50 +58,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_capacitor`
         - |link_capacitor_buy|
 
-Build the Circuit
+Construire le Circuit
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Le bouton est un dispositif à 4 broches, puisque la broche 1 est connectée à la broche 2, et la broche 3 à la broche 4, lorsque le bouton est pressé, les 4 broches sont connectées, fermant ainsi le circuit.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construisez le circuit selon le schéma suivant.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Connectez l'une des broches du côté gauche du bouton à la broche 12, qui est connectée à une résistance de tirage vers le bas et un condensateur de 0.1uF (104) (pour éliminer le jitter et produire un niveau stable lorsque le bouton fonctionne).
+* Connectez l'autre extrémité de la résistance et du condensateur à GND, et l'une des broches du côté droit du bouton à 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programmation
 ------------------
 
-**1. Add a Backdrop**
+**1. Ajouter un arrière-plan**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+Cliquez sur le bouton **Choose a Backdrop** dans le coin inférieur droit.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+Choisissez **Bedroom 1**.
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. Sélectionner le sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Supprimez le sprite par défaut, cliquez sur le bouton **Choose a Sprite** dans le coin inférieur droit de la zone des sprites, entrez **bell** dans la boîte de recherche, puis cliquez pour l'ajouter.
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+Ensuite, sélectionnez le sprite **bell** sur la scène et placez-le à la position appropriée.
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. Appuyez sur le bouton et la cloche émet un son**
 
+Utilisez [if then] pour faire une déclaration conditionnelle qui, lorsque la valeur de la broche 12 lue est égale à 1 (la touche est pressée), le son **xylo1** sera joué.
 
-Use [if then] to make a conditional statement that when the value of the pin12 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **Arduino Uno** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: from the Sound palette, used to play specific sounds.
+* [read status of digital pin] : Ce bloc vient de la palette **Arduino Uno** et sert à lire la valeur d'une broche numérique, le résultat est 0 ou 1.
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_] : Ce bloc est un bloc de contrôle et provient de la palette **Contrôle**. Si sa condition booléenne est vraie, les blocs qu'il contient seront exécutés, puis le script concerné continuera. Si la condition est fausse, les scripts à l'intérieur du bloc seront ignorés. La condition n'est vérifiée qu'une seule fois ; si la condition devient fausse pendant que le script à l'intérieur du bloc est en cours d'exécution, il continuera jusqu'à sa fin.
+* [play sound until done] : de la palette Son, utilisé pour jouer des sons spécifiques.
 
 .. image:: img/7_bell.png

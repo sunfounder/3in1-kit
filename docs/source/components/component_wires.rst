@@ -1,31 +1,31 @@
 .. _cpn_wires:
 
-Jumper Wires
+Fils de Cavalier
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Les fils qui connectent deux bornes sont appelés fils de cavalier. Il existe
+divers types de fils de cavalier. Ici, nous nous concentrons sur ceux utilisés dans
+les plaques d'essai. Entre autres, ils servent à transférer des signaux électriques
+de n'importe quel endroit sur la plaque d'essai vers les broches d'entrée/sortie d'un
+microcontrôleur.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Les fils de cavalier sont fixés en insérant leurs "connecteurs d'extrémité" dans les emplacements
+prévus dans la plaque d'essai, sous la surface de laquelle il y a quelques ensembles
+de plaques parallèles qui connectent les emplacements en groupes de rangées ou de colonnes
+selon la zone. Les "connecteurs d'extrémité" sont insérés dans la plaque d'essai,
+sans soudure, dans les emplacements spécifiques qui doivent être
+connectés dans le prototype spécifique.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Il existe trois types de fil de cavalier : Femelle-Femelle, Mâle-Mâle,
+et Mâle-Femelle. On l'appelle Mâle-Femelle car il
+a une pointe saillante à une extrémité ainsi qu'une extrémité femelle enfoncée.
+Mâle-Mâle signifie que les deux côtés sont mâles et Femelle-Femelle signifie que
+les deux extrémités sont femelles.
 
 .. image:: img/image414.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn't mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+Plus d'un type de ces fils peut être utilisé dans un projet. La couleur des
+fils de cavalier est différente mais cela ne signifie pas que leur fonction est différente
+en conséquence ; c'est juste conçu ainsi pour mieux identifier la connexion
+entre chaque circuit.

@@ -1,47 +1,47 @@
 .. _cpn_potentiometer:
 
-Potentiometer
+Potentiomètre
 ===============
 
 .. image:: img/potentiometer.png
     :align: center
     :width: 150
 
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. 
+Le potentiomètre est également un composant de résistance à 3 bornes dont la valeur peut être ajustée selon une variation régulière.
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+Les potentiomètres se présentent sous différentes formes, tailles et valeurs, mais ils ont tous les points communs suivants :
 
-* They have three terminals (or connection points).
-* They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-* The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+* Ils ont trois bornes (ou points de connexion).
+* Ils disposent d'un bouton, d'une vis ou d'un curseur qui peut être déplacé pour faire varier la résistance entre la borne centrale et l'une des bornes extérieures.
+* La résistance entre la borne centrale et l'une des bornes extérieures varie de 0 Ω à la résistance maximale du potentiomètre lorsque le bouton, la vis ou le curseur est déplacé.
 
-Here is the circuit symbol of potentiometer. 
+Voici le symbole de circuit du potentiomètre.
 
 .. image:: img/potentiometer_symbol.png
     :align: center
     :width: 400
 
+Les fonctions du potentiomètre dans le circuit sont les suivantes :
 
-The functions of the potentiometer in the circuit are as follows: 
+#. Agir comme un diviseur de tension
 
-#. Serving as a voltage divider
+    Le potentiomètre est une résistance réglable en continu. Lorsque vous ajustez l'axe ou la poignée coulissante du potentiomètre, le contact mobile glissera sur la résistance. À ce moment, une tension peut être délivrée en fonction de la tension appliquée sur le potentiomètre et de l'angle de rotation ou du déplacement du bras mobile.
 
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor.  At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made. 
+#. Agir comme un rhéostat
 
-#. Serving as a rheostat
+    Lorsque le potentiomètre est utilisé comme un rhéostat, connectez la broche centrale et l'une des 2 autres broches dans le circuit. Ainsi, vous pouvez obtenir une valeur de résistance modifiée en douceur et de manière continue dans le déplacement du contact mobile.
 
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact. 
+#. Agir comme un régulateur de courant
 
-#. Serving as a current controller
+    Lorsque le potentiomètre agit comme un régulateur de courant, la borne de contact coulissante doit être connectée comme l'une des bornes de sortie.
 
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+Si vous souhaitez en savoir plus sur le potentiomètre, consultez : `Potentiomètre - Wikipédia <https://en.wikipedia.org/wiki/Potentiometer>`_
 
-If you want to know more about potentiometer, refer to: `Potentiometer - Wikipedia <https://en.wikipedia.org/wiki/Potentiometer>`_
+**Exemple**
 
-**Example**
+* :ref:`ar_potentiometer` (Projet de base)
+* :ref:`sh_moving_mouse` (Projet Scratch)
+* :ref:`sh_breakout_clone` (Projet Scratch)
 
-* :ref:`ar_potentiometer` (Basic Project)
-* :ref:`sh_moving_mouse` (Scratch Project)
-* :ref:`sh_breakout_clone` (Scratch Project)
 
 

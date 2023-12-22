@@ -1,35 +1,35 @@
 .. _follow_your_hand:
 
-7. Follow Your Hand
+7. Suivez Votre Main
 =========================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+Considérez cette voiture comme votre animal de compagnie ici, et lorsqu'elle vous verra lui faire signe, elle viendra en courant vers vous.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,17 +42,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Câblage**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Connectez le module ultrasonique et les 2 modules d'évitement d'obstacles IR en même temps.
 
-Wire the ultrasonic to the R3 board as follows.
+Connectez l'ultrasonique à la carte R3 comme suit.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Module ultrasonique
+      - Carte R3
     * - Vcc
       - 5V
     * - Trig
@@ -62,7 +62,7 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+Le câblage des 2 modules d'évitement d'obstacles IR à la carte R3 est le suivant.
 
 .. list-table:: 
     :header-rows: 1
@@ -95,28 +95,27 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. note::
 
-    * Open the ``7.follow_your_hand.ino`` file under the path of ``3in1-kit\car_project\7.follow_your_hand``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``7.follow_your_hand.ino`` situé dans le dossier ``3in1-kit\car_project\7.follow_your_hand``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléchargez le code via `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/584e42c8-8842-4db0-93b5-f6f949b6ffca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Place the car on the ground after the code has been uploaded successfully. Place your hand close to 5*10cm in front of the car, and it will follow your hand forward. If you put your hand close to the IR Obstacle module on both sides, it will also turn to the corresponding direction.
+Placez la voiture sur le sol après le téléchargement réussi du code. Placez votre main à environ 5*10cm devant la voiture, et elle suivra votre main vers l'avant. Si vous placez votre main près du module d'obstacle IR de chaque côté, elle tournera également dans la direction correspondante.
 
+**Comment ça fonctionne ?**
 
-**How it works?**
+Ce projet est une combinaison des deux projets précédents :ref:`car_ultrasonic` et :ref:`car_ir_obstacle`, mais l'effet implémenté est différent. Les 2 projets précédents détectent un obstacle en arrière, mais ici, il détecte que votre main suivra la direction avant ou tournera.
+Le déroulement de ce projet est le suivant.
 
-This project is a combination of the previous two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`, but the implemented effect is different. The previous 2 projects are detecting an obstacle backwards, but here it is detecting that your hand will follow the forward or turn direction.
-The workflow of this project is as follows.
-
-* Read the distance detected by the ultrasonic module and the value of both infrared modules.
-* If the distance is 5~10cm, let the car move with your hand.
-* If the left IR module detects your hand, turn left.
-* If the right IR module detects your hand, turn right.
-* If neither the infrared module nor the ultrasonic module detects your hand, let the car stop.
+* Lisez la distance détectée par le module ultrasonique et la valeur des deux modules infrarouges.
+* Si la distance est de 5~10cm, laissez la voiture se déplacer avec votre main.
+* Si le module IR gauche détecte votre main, tournez à gauche.
+* Si le module IR droit détecte votre main, tournez à droite.
+* Si ni le module infrarouge ni le module ultrasonique ne détectent votre main, laissez la voiture s'arrêter.
 
 .. code-block:: arduino
 

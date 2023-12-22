@@ -1,50 +1,50 @@
 .. _speed_calibration:
 
-11. Speed Calibration
-===========================
+11. Calibration de la Vitesse
+=================================
 
-In getting the car to move forward, you may find that the car does not travel in a straight line.
-This is because the two motors may not have the same speed at the factory. 
-But we can write offset to the two motors to make their rotational speeds converge.
+Lors de la mise en mouvement de la voiture, vous pourriez constater que la voiture ne se déplace pas en ligne droite.
+Cela est dû au fait que les deux moteurs peuvent ne pas avoir la même vitesse en sortie d'usine. 
+Mais nous pouvons écrire un décalage aux deux moteurs pour faire converger leurs vitesses de rotation.
 
-In this project, 
-we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, the point of this is that after each calibration, 
-all projects can get the offset value directly from the EEPROM, 
-so that the car can go in a straight line smoothly.
-
-
-**Wiring**
-
-This project is the same wiring as :ref:`car_move_code`.
+Dans ce projet, 
+nous apprendrons à stocker le décalage dans `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_. L'intérêt est que, après chaque calibration, 
+tous les projets peuvent obtenir directement la valeur de décalage depuis l'EEPROM, 
+afin que la voiture puisse avancer en ligne droite de manière fluide.
 
 
+**Câblage**
 
-**How to play?**
+Ce projet a le même câblage que :ref:`car_move_code`.
 
-1. Open the ``11.speed_calibration.ino`` file under the path of ``3in1-kit\car_project\11.speed_calibration``. Or copy this code into **Arduino IDE**.
+
+
+**Comment jouer ?**
+
+1. Ouvrez le fichier ``11.speed_calibration.ino`` situé dans le dossier ``3in1-kit\car_project\11.speed_calibration``. Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/66dc7ee5-31a5-418e-9aa2-43e7820cf5e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-2. After the code is uploaded successfully, connect the car with 9V battery, put it on the ground and let it move forward to see which side it is offset to.
+2. Après le téléchargement réussi du code, connectez la voiture avec une batterie 9V, posez-la sur le sol et laissez-la avancer pour voir de quel côté elle se décale.
 
-* If the car moves to the left front, it means the right motor speed is too fast and needs to be reduced.
+* Si la voiture se déplace vers l'avant gauche, cela signifie que la vitesse du moteur droit est trop rapide et doit être réduite.
 
     .. code-block:: arduino
 
         EEPROM.write(1, 100) // 1 means the right motor, 100 means 100% speed, can be set to 90, 95, etc., depending on the actual situation.
 
-* If the car moves to the right, it means the left motor speed is too fast and needs to be reduced.
+* Si la voiture se déplace vers la droite, cela signifie que la vitesse du moteur gauche est trop rapide et doit être réduite.
 
     .. code-block:: arduino
 
         EEPROM.write(0, 100) // 0 means the right motor, 100 means the speed is 100%, can be set to 90, 95, etc., depending on the actual situation. 3.
 
-3. After modifying the code, upload the code to R3 board to see the effect. Repeat the above steps until the car is almost straight.
+3. Après avoir modifié le code, téléchargez le code sur la carte R3 pour voir l'effet. Répétez les étapes ci-dessus jusqu'à ce que la voiture soit presque droite.
 
-4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
+4. Ce décalage sera enregistré dans `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, vous n'avez besoin de lire ce décalage que lorsque vous l'utilisez dans d'autres projets, prenez :ref:`car_ir_obstacle` comme exemple.
 
 
 .. code-block:: arduino

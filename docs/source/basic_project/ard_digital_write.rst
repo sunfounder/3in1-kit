@@ -1,34 +1,31 @@
 .. _ar_digital_write:
 
-1. Digital Write
+1. Écriture Numérique
 ==============================
 
-**Digital Write** is to output or write a digital signal to a digital pin. The digital signal has only two states, 0 or 1, 0V or 5V, so it allows some components, such as the LED and buzzer, to be on or off.
+L'**Écriture Numérique** consiste à émettre ou écrire un signal numérique sur une broche numérique. Le signal numérique n'a que deux états, 0 ou 1, 0V ou 5V, ce qui permet à certains composants, tels que la LED et le buzzer, d'être allumés ou éteints.
 
-On the Arduino R3 board, there are 14 digital I/0 pins from 0 to 13, now use the ``pinMode()`` and ``digitalWrite()`` functions to write a high or low level to these digital pins.
+Sur la carte Arduino R3, il y a 14 broches d'entrée/sortie numériques de 0 à 13. Utilisez maintenant les fonctions ``pinMode()`` et ``digitalWrite()`` pour écrire un niveau élevé ou bas sur ces broches numériques.
 
+* ``pinMode(pin, mode)`` : Configurez la broche spécifique en tant que ``INPUT`` ou ``OUTPUT``, ici elle doit être définie comme ``OUTPUT``.
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``OUTPUT``. 
-
-   **Syntax**
+   **Syntaxe**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: ``INPUT``, ``OUTPUT``, or ``INPUT_PULLUP``.
+   **Paramètres**
+    * ``pin`` : le numéro de broche Arduino pour définir le mode.
+    * ``mode`` : ``INPUT``, ``OUTPUT``, ou ``INPUT_PULLUP``.
 
+* ``digitalWrite(pin, value)`` : Écrivez un niveau élevé (5V) ou un niveau bas (0V) sur une broche numérique pour changer l'état de fonctionnement du composant. Si la broche a été configurée en tant que sortie avec pinMode(), sa tension sera réglée sur la valeur correspondante : 5V (ou 3,3V sur les cartes 3,3V) pour HIGH, 0V (masse) pour LOW.
 
-* ``digitalWrite(pin, value)``: Write a high level (5V) or a low level (0V) to a digital pin to change the operating state of the component. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
-
-   **Syntax**
+   **Syntaxe**
       digitalWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number.
-    * ``value``: ``HIGH`` or ``LOW``.
+   **Paramètres**
+    * ``pin`` : le numéro de broche Arduino.
+    * ``value`` : ``HIGH`` ou ``LOW``.
 
-**Example of Digital Write:**
+**Exemple d'Écriture Numérique :**
 
 .. code-block:: arduino
 
@@ -47,16 +44,15 @@ On the Arduino R3 board, there are 14 digital I/0 pins from 0 to 13, now use the
 
 .. image:: img/1_led.jpg
 
+**Notes et Avertissements**
 
-**Notes and Warnings**
+* Les broches 0~13 sont toutes des broches numériques.
+* N'utilisez pas les broches 0 et 1, car elles sont utilisées pour communiquer avec l'ordinateur. Connecter quoi que ce soit à ces broches perturbera la communication, y compris provoquant l'échec de la mise en ligne.
+* Si les broches numériques sont toutes utilisées, les broches analogiques (A0-A5) peuvent également être utilisées comme broches numériques.
 
-* The pins 0~13 are all digital pins.
-* Do not use pins 0 and 1, as they are used to communicate with the computer. Connecting anything to these pins will interfere with communication, including causing the upload board to fail.
-* If the digital pins are used up, the analog pins (A0-A5) can also be used as digital pins.
+**Composants Connexes**
 
-**Related Components**
-
-Below are the related components, you can click in to learn how to use them.
+Ci-dessous se trouvent les composants connexes, vous pouvez cliquer pour apprendre comment les utiliser.
 
 .. toctree::
    :maxdepth: 2
@@ -65,5 +61,3 @@ Below are the related components, you can click in to learn how to use them.
    ar_active_buzzer
    ar_turn_the_wheel
    ar_pumping
-
-
