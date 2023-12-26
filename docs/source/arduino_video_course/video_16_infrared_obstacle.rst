@@ -1,0 +1,23 @@
+ビデオ 16: 赤外線障害物回避
+========================================
+
+Arduino を使用して赤外線障害物回避センサーを設定し、障害物を検出してブザーを起動するプログラミングを学びます。
+
+* **IR センサーメカニクスの理解**: 赤外線センサーのコンポーネントと障害物を検出する機能の概要。
+* **センサー-Arduino 接続**: Arduino ボードへの赤外線センサーの配線についてのステップバイステップ指示。
+* **障害物検出のためのプログラミング**: センサーを使用した障害物検出のための Arduino コードの作成と理解に関する紹介。
+* **リアルタイム障害物検出デモ**: 様々な距離と条件での物体を検出するセンサーの能力をデモンストレーション。
+* **感度調整**: 異なる検出範囲のためのセンサーの感度を調整するための詳細なガイド。
+* **ブザーの統合**: 障害物検出時に起動するブザーを含むようにセットアップとコードを変更する。
+
+**ビデオ**
+
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/yXpjd279T6g?si=RLWqy3V9ZYsdISGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <br/><br/>
+
+**関連オンラインチュートリアル**
+
+* :ref:`ar_ir_obstacle`

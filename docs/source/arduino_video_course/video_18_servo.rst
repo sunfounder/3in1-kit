@@ -1,0 +1,23 @@
+ビデオ 18: サーボモーターの制御
+==================================
+
+このチュートリアルでは、Arduino とサーボモーターを使用する基本に深く入り込み、配線、コーディングから実践的なプロジェクトデモンストレーションまでを網羅します。
+
+* **サーボモーターの概要**: サーボモーターの紹介、リモートコントロールおよびロボットアプリケーションでの役割の強調。
+* **タイプと特性**: さまざまなタイプのサーボモーターとそのトルク能力の探究。
+* **サーボコンポーネントの理解**: アームやギアを含むサーボモーター部品の分解。
+* **Arduino 配線ガイド**: Arduino ボードにサーボモーターを接続するためのステップバイステップの指示。
+* **精密のためのプログラミング**: Arduino コードを使用してサーボ角度と動きを制御する方法をデモンストレーション。
+* **実践的なプロジェクト例**: Arduino プロジェクトでのサーボモーターの実世界アプリケーションと改造。
+
+**ビデオ**
+
+.. raw:: html
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/KAt1WUWpHLQ?si=CcQlLCCRHDi2MHY1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <br/><br/>
+
+**関連オンラインチュートリアル**
+
+* :ref:`ar_servo`

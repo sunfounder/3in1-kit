@@ -48,6 +48,7 @@ SunFounder 3 in 1スターターキットでをお選びいただき、ありが
     このキットについて <self>
     components/component_list
     arduino_start/get_start
+    arduino_video_course/arduino_video_course
     download_code
     basic_project/basic_project
     car_project/car_project
