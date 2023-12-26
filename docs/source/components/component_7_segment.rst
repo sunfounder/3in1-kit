@@ -26,5 +26,5 @@ Um Ihnen zu helfen zu verstehen, wie 7-Segment-Anzeigen (Gemeinsame Kathode) Zah
 
 **Beispiel**
 
-* :ref:`ar_74hc_7seg` (Grundlegendes Projekt)
+* :ref:`ar_segment` (Grundlegendes Projekt)
 * :ref:`iot_gate` (IoT-Projekt)

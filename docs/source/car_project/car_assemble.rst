@@ -1,3 +1,5 @@
+.. _car_assemble:
+
 Auto zusammenbauen
 =====================
 **Video**

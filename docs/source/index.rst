@@ -48,6 +48,7 @@ Dieses Dokument ist auch in anderen Sprachen verfügbar. Um die Anzeigesprache z
     About this Kit <self>
     components/component_list
     arduino_start/get_start
+    arduino_video_course/arduino_video_course
     download_code
     basic_project/basic_project
     car_project/car_project
