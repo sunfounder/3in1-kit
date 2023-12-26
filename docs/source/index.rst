@@ -49,6 +49,7 @@ This document is available in other languages as well. To switch the display lan
     About this Kit <self>
     components/component_list
     arduino_start/get_start
+    arduino_video_course/arduino_video_course
     download_code
     basic_project/basic_project
     car_project/car_project
