@@ -1,5 +1,5 @@
-Video 13: Joystick Controls for Interactive Projects
-=======================================================
+Video 13: Joystick 
+===================
 
 This tutorial delves into using an XY joystick with Arduino, covering its structure, wiring, reading its positions, push button detection, and programming Arduino to respond to joystick movements.
 

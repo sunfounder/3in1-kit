@@ -1,5 +1,5 @@
-Video 14: Understanding millis() and map() in Arduino
-========================================================
+Video 14: millis() and map()
+==============================
 
 This tutorial focuses on using millis() for time tracking and map() for value conversion in Arduino, showcasing practical applications like timed button responses and LED brightness control.
 

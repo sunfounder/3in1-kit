@@ -1,5 +1,5 @@
-Video 18: Controlling Servo Motor
-==================================
+Video 18: Servo Motor
+======================
 
 This tutorial delves into the fundamentals of using servo motors with Arduino, covering everything from wiring and coding to practical project demonstrations.
 

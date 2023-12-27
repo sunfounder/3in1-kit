@@ -1,5 +1,5 @@
-Video 17: Interrupts and LDR for Smart Projects
-========================================================
+Video 17: Interrupts and LDR 
+==============================
 
 Explore the functionalities of Arduino interrupts and Light-Dependent Resistors (LDRs) to build smart day/night detection projects.
 
