@@ -1,5 +1,5 @@
-Video 18: Steuerung eines Servomotors
-=====================================
+Video 18: Servomotor
+====================
 
 Dieses Tutorial behandelt die Grundlagen der Verwendung von Servomotoren mit Arduino, von der Verkabelung und Programmierung bis hin zu praktischen Projektvorführungen.
 

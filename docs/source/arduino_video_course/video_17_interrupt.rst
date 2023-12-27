@@ -1,5 +1,5 @@
-Video 17: Unterbrechungen und LDR für intelligente Projekte
-==============================================================
+Video 17: Unterbrechungen und LDR
+=================================
 
 Erforschen Sie die Funktionalitäten von Arduino-Unterbrechungen und lichtabhängigen Widerständen (LDRs), um intelligente Tages-/Nacht-Erkennungsprojekte zu erstellen.
 

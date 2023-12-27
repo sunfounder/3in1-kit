@@ -1,5 +1,5 @@
-Video 13: Joystick-Steuerung für interaktive Projekte
-=====================================================
+Video 13: Joystick
+====================
 
 Dieses Tutorial behandelt die Verwendung eines XY-Joysticks mit Arduino, einschließlich seiner Struktur, Verkabelung, Positionserfassung, Tastendruckerkennung und Programmierung von Arduino zur Reaktion auf Joystick-Bewegungen.
 
