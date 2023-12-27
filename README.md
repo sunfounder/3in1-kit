@@ -18,6 +18,9 @@ In the 3-in-1 starter kit, you will find a complete Arduino course to help begin
 
 <a id="update"></a>
 ## Update:
+2023-12-27:
+- Add Video Tutorial.
+
 2023-12-22:
 - First release in French.
 

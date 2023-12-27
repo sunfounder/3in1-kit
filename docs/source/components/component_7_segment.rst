@@ -26,7 +26,7 @@ Pour vous aider à comprendre comment les affichages à 7 segments (Cathode Comm
 
 **Exemple**
 
-* :ref:`ar_74hc_7seg` (Projet de base)
+* :ref:`ar_segment` (Projet de base)
 * :ref:`iot_gate` (Projet IoT)
 
 

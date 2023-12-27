@@ -49,6 +49,7 @@ Ce document est également disponible dans d'autres langues. Pour changer la lan
     À propos de ce kit <self>
     components/component_list
     arduino_start/get_start
+    arduino_video_course/arduino_video_course
     download_code
     basic_project/basic_project
     car_project/car_project
