@@ -10,6 +10,7 @@ Danke, dass Sie sich für unser 3-in-1 Starterset entschieden haben.
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_es_tutorials|
     
     Bitte klicken Sie auf die jeweiligen Links, um das Dokument in Ihrer bevorzugten Sprache aufzurufen.
 
