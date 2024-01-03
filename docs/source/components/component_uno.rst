@@ -1,6 +1,6 @@
 .. _cpn_uno:
 
-SunFounder R3 Board
+Placa SunFounder R3
 ===========================
 
 .. image:: img/uno_r3.jpg
@@ -9,39 +9,39 @@ SunFounder R3 Board
 
 .. note::
 
-    The SunFounder R3 board is a mainboard with almost the same functions as the `Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_, and the two boards can be used interchangeably.
+    La placa SunFounder R3 es una placa base con funciones casi idénticas a las del `Arduino Uno <https://store.arduino.cc/products/arduino-uno-rev3/>`_, y ambas placas pueden utilizarse de manera intercambiable.
 
-SunFounder R3 board is a microcontroller board based on the ATmega328P (`datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.
+La placa SunFounder R3 es una placa de microcontrolador basada en el ATmega328P (`hoja de datos <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_). Tiene 14 pines de entrada/salida digital (de los cuales 6 pueden usarse como salidas PWM), 6 entradas analógicas, un resonador cerámico de 16 MHz (CSTCE16M0V53-R0), una conexión USB, un conector de alimentación, un encabezado ICSP y un botón de reinicio. Contiene todo lo necesario para soportar el microcontrolador; simplemente conéctalo a un ordenador con un cable USB o aliméntalo con un adaptador de corriente alterna a corriente continua o una batería para empezar.
 
-**Technical Parameters**
+**Parámetros Técnicos**
 
 .. image:: img/uno.jpg
     :align: center
 
-* MICROCONTROLLER: ATmega328P
-* OPERATING VOLTAGE: 5V
-* INPUT VOLTAGE (RECOMMENDED): 7-12V
-* INPUT VOLTAGE (LIMIT): 6-20V
-* DIGITAL I/O PINS: 14 (0-13, of which 6 provide PWM output(3, 5, 6, 9-11))
-* PWM DIGITAL I/O PINS: 6 (3, 5, 6, 9-11)
-* ANALOG INPUT PINS: 6 (A0-A5)
-* DC CURRENT PER I/O PIN: 20 mA
-* DC CURRENT FOR 3.3V PIN: 50 mA
-* FLASH MEMORY: 32 KB (ATmega328P) of which 0.5 KB used by bootloader
+* MICROCONTROLADOR: ATmega328P
+* VOLTAJE DE OPERACIÓN: 5V
+* VOLTAJE DE ENTRADA (RECOMENDADO): 7-12V
+* VOLTAJE DE ENTRADA (LÍMITE): 6-20V
+* PINES DE ENTRADA/SALIDA DIGITAL: 14 (0-13, de los cuales 6 proporcionan salida PWM(3, 5, 6, 9-11))
+* PINES DE ENTRADA/SALIDA DIGITAL PWM: 6 (3, 5, 6, 9-11)
+* PINES DE ENTRADA ANALÓGICA: 6 (A0-A5)
+* CORRIENTE DC POR PIN DE E/S: 20 mA
+* CORRIENTE DC PARA PIN DE 3.3V: 50 mA
+* MEMORIA FLASH: 32 KB (ATmega328P) de los cuales 0.5 KB son utilizados por el gestor de arranque
 * SRAM: 2 KB (ATmega328P)
 * EEPROM: 1 KB (ATmega328P)
-* CLOCK SPEED: 16 MHz
+* VELOCIDAD DE RELOJ: 16 MHz
 * LED_BUILTIN: 13
-* LENGTH: 68.6 mm
-* WIDTH: 53.4 mm
-* WEIGHT: 25 g
-* I2C Port: A4(SDA), A5(SCL)
+* LONGITUD: 68.6 mm
+* ANCHO: 53.4 mm
+* PESO: 25 g
+* Puerto I2C: A4(SDA), A5(SCL)
 
 
-**What's More**
+**Además**
 
-* `Arduino IDE <https://www.arduino.cc/en/software>`_
-* `Arduino Programming Language Reference <https://www.arduino.cc/reference/en/>`_
+* `IDE de Arduino <https://www.arduino.cc/en/software>`_
+* `Referencia del Lenguaje de Programación de Arduino <https://www.arduino.cc/reference/en/>`_
 * :ref:`install_arduino`
-* `ATmega328P Datasheet <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
+* `Hoja de Datos del ATmega328P <http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>`_
 

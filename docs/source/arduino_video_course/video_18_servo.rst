@@ -1,16 +1,16 @@
-Video 18: Servo Motor
+Vídeo 18: Motor Servo
 ======================
 
-This tutorial delves into the fundamentals of using servo motors with Arduino, covering everything from wiring and coding to practical project demonstrations.
+Este tutorial profundiza en los fundamentos del uso de motores servo con Arduino, cubriendo todo desde el cableado y la programación hasta demostraciones prácticas de proyectos.
 
-* **Servo Motors Overview**: Introduction to servo motors, highlighting their role in various remote-controlled and robotic applications.
-* **Types and Characteristics**: Exploring different types of servo motors and their torque capabilities.
-* **Understanding Servo Components**: Breakdown of servo motor parts, including arms and gears.
-* **Arduino Wiring Guide**: Step-by-step instructions on connecting servo motors to Arduino boards.
-* **Programming for Precision**: Demonstrates how to use Arduino code to control servo angles and movement.
-* **Hands-On Project Examples**: Real-world applications and modifications of servo motors in Arduino projects.
+* **Visión General de Motores Servo**: Introducción a los motores servo, destacando su papel en varias aplicaciones de control remoto y robótica.
+* **Tipos y Características**: Exploración de diferentes tipos de motores servo y sus capacidades de torque.
+* **Entendiendo los Componentes del Servo**: Desglose de las partes del motor servo, incluyendo brazos y engranajes.
+* **Guía de Cableado para Arduino**: Instrucciones paso a paso para conectar motores servo a placas Arduino.
+* **Programación para Precisión**: Demuestra cómo usar código de Arduino para controlar los ángulos y movimientos del servo.
+* **Ejemplos de Proyectos Prácticos**: Aplicaciones del mundo real y modificaciones de motores servo en proyectos de Arduino.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This tutorial delves into the fundamentals of using servo motors with Arduino, c
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_servo`

@@ -1,16 +1,16 @@
-Video 6: Buzzer, Motor, and Water Pump Control
+Vídeo 6: Control de Zumbador, Motor y Bomba de Agua
 ============================================================
 
-This video offers hands-on tutorials on controlling an active buzzer, motor, and water pump using Arduino, showcasing essential skills for robotics and automated systems.
+Este vídeo ofrece tutoriales prácticos sobre cómo controlar un zumbador activo, motor y bomba de agua usando Arduino, mostrando habilidades esenciales para la robótica y sistemas automatizados.
 
-* **SunFounder Kit Overview**: Introduction to the SunFounder three-in-one Arduino kit and its utility in robotics and home automation projects.
-* **Active Buzzer Control**: Step-by-step guide on connecting and programming an active buzzer with Arduino.
-* **Motor Control Tutorial**: Detailed instructions on using an L298N motor driver for motor control in smart car applications.
-* **Water Pump Project**: Demonstration of controlling a water pump for automated watering systems.
-* **Arduino Environment Setup**: How to set up and modify Arduino sketches for each project.
-* **Practical Project Execution**: Practical execution of each project with tips for troubleshooting and optimization.
+* **Resumen del Kit SunFounder**: Introducción al kit Arduino tres en uno de SunFounder y su utilidad en proyectos de robótica y automatización del hogar.
+* **Control de Zumbador Activo**: Guía paso a paso para conectar y programar un zumbador activo con Arduino.
+* **Tutorial de Control de Motor**: Instrucciones detalladas sobre el uso de un controlador de motor L298N para el control de motores en aplicaciones de coches inteligentes.
+* **Proyecto de Bomba de Agua**: Demostración del control de una bomba de agua para sistemas de riego automatizados.
+* **Configuración del Entorno Arduino**: Cómo configurar y modificar bocetos de Arduino para cada proyecto.
+* **Ejecución Práctica de Proyectos**: Ejecución práctica de cada proyecto con consejos para la resolución de problemas y optimización.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,7 +18,7 @@ This video offers hands-on tutorials on controlling an active buzzer, motor, and
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_beep`
 * :ref:`ar_motor`

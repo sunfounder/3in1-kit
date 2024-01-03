@@ -1,36 +1,36 @@
 .. _ar_eeprom:
 
-6.2 Digital Dice
+6.2 Dados Digitales
 =============================
 
-Here we use button, 7-segment and 74hc595 to make an electronic dice. 
-Each time the button is pressed, a random number ranging from 1 to 6 is generated and displayed on the 7-segment Display.
+Aquí utilizamos un botón, un display de 7 segmentos y el 74hc595 para hacer un dado electrónico. 
+Cada vez que se presiona el botón, se genera un número aleatorio del 1 al 6 y se muestra en el Display de 7 segmentos.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Comprar un kit completo es definitivamente conveniente, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,51 +47,50 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7_segment`
         - |link_7segment_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_8.9_eeprom.png
 
-**Wiring**
+**Cableado**
 
 .. image:: img/wiring_electronic_dice.png
     :width: 800
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\basic_project\6.2.electronic_dice``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``6.2.electronic_dice.ino`` en la ruta ``3in1-kit\basic_project\6.2.electronic_dice``.
+    * O copia este código en **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8d8ad340-b1de-4518-917b-caaf07e4baf4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the code is uploaded successfully, the 7-segment Display will display 0-7 in a fast scroll, and when you press the button, it will display a random number and stop scrolling. The scrolling display starts again when you press the button again.
+Cuando el código se haya cargado con éxito, el Display de 7 segmentos mostrará del 0-7 en un desplazamiento rápido, y cuando presiones el botón, mostrará un número aleatorio y dejará de desplazarse. El desplazamiento del display comienza nuevamente cuando presionas el botón otra vez.
 
-**How it works?**
+**¿Cómo funciona?**
 
-This project is based on :ref:`ar_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+Este proyecto se basa en :ref:`ar_segment` con un botón para iniciar/pausar el desplazamiento en el Display de 7 segmentos.
 
-#. Initialize each pin and read the value of the button.
+#. Inicializa cada pin y lee el valor del botón.
 
     .. code-block:: arduino
 
         void setup ()
         {
-
             ...
             attachInterrupt(digitalPinToInterrupt(buttonPin), rollDice, FALLING);
         }
 
-    * The interrupt is used here to read the state of the button. The default value of ``buttonPin`` is low, which changes from low to high when the button is pressed.
-    * ``rollDice`` represents the function to be called when the interrupt is triggered, it is used to toggle the value of the variable ``state``.
-    * ``FALLING`` means the interrupt is triggered when the ``buttonPin`` goes from low to high.
+    * Aquí se utiliza la interrupción para leer el estado del botón. El valor predeterminado de ``buttonPin`` es bajo, que cambia de bajo a alto cuando se presiona el botón.
+    * ``rollDice`` representa la función que se llamará cuando se active la interrupción, se utiliza para alternar el valor de la variable ``state``.
+    * ``FALLING`` significa que la interrupción se activa cuando el ``buttonPin`` pasa de bajo a alto.
 
-#. When the variable ``state`` is 0, the function ``showNumber()`` is called to make the 7-segment Display randomly display a number between 1 and 7.
+#. Cuando la variable ``state`` es 0, se llama a la función ``showNumber()`` para hacer que el Display de 7 segmentos muestre aleatoriamente un número entre 1 y 7.
 
     .. code-block:: arduino
 
@@ -103,7 +102,7 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             }
         }
 
-#. About ``rollDice()`` function.
+#. Acerca de la función ``rollDice()``.
 
     .. code-block:: arduino
 
@@ -111,9 +110,9 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             state = !state;
         }
     
-    When this function is called, it toggles the value of state, such as 1 last time and 0 this time.
+    Cuando se llama a esta función, alterna el valor de state, como 1 la última vez y 0 esta vez.
 
-#. About ``showNumber()`` function.
+#. Acerca de la función ``showNumber()``.
 
     .. code-block:: arduino
 
@@ -125,4 +124,4 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
         }
     
-    This is the code inside ``loop()`` in the project :ref:`ar_segment` into the function ``showNumber()``.
+    Este es el código dentro de ``loop()`` en el proyecto :ref:`ar_segment` en la función ``showNumber()``.

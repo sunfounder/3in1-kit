@@ -1,40 +1,40 @@
 .. _sh_fishing:
 
-2.19 GAME - Fishing
+2.19 JUEGO - Pesca
 ===========================
 
-Here, we play a fishing game with a button.
+Aquí, jugamos un juego de pesca con un botón.
 
-When the script is running, the fish swim left and right on the stage, you need to press the button when the fish is almost close to the hook (it is recommended to press it for a longer time) to catch the fish, and the number of fish caught will be recorded automatically.
+Cuando el script está en ejecución, los peces nadan de izquierda a derecha en el escenario. Debes presionar el botón cuando el pez esté casi cerca del anzuelo (se recomienda presionarlo por más tiempo) para atrapar al pez, y el número de peces capturados se registrará automáticamente.
 
 .. image:: img/18_fish.png
 
-Required Components
----------------------
+Componentes Necesarios
+-------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,95 +49,87 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+Construye el Circuito
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+El botón es un dispositivo de 4 pines, ya que el pin 1 está conectado al pin 2 y el pin 3 al pin 4. Cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Conecta uno de los pines en el lado izquierdo del botón al pin 12, que está conectado a un resistor pull-down y un condensador de 0.1uF (104) (para eliminar el jitter y emitir un nivel estable cuando el botón esté en funcionamiento).
+* Conecta el otro extremo del resistor y del condensador a GND, y uno de los pines del lado derecho del botón a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programación
 ------------------
 
-We need to select an **Underwater** backdrop first, then add a **Fish** sprite and let it swim back and forth on the stage. Then draw a **Fishhook** sprite and control it by a button to start fishing. When the **Fish** sprite touches the **Fishhook** sprite in the hooked state (turns red), it will be hooked.
+Primero necesitamos seleccionar un fondo **Underwater**, luego añadir un sprite **Fish** y hacer que nade de un lado a otro en el escenario. Luego dibuja un sprite **Fishhook** y contrólalo con un botón para comenzar a pescar. Cuando el sprite **Fish** toca el sprite **Fishhook** en estado de anzuelo (se vuelve rojo), será atrapado.
 
-**1. Adding a backdrop**
+**1. Añadir un fondo**
 
-Use the **Choose a Backdrop** button to add an **Underwater** backdrop.
+Usa el botón **Choose a Backdrop** para añadir un fondo **Underwater**.
 
 .. image:: img/18_under.png
 
-**2. Fishhook sprite**
+**2. Sprite Anzuelo**
 
-The **Fishhook** sprite usually stays underwater in the yellow state; when the button is pressed, it is in the fishing state (red) and moves above the stage.
+El sprite **Fishhook** normalmente permanece bajo el agua en estado amarillo; cuando se presiona el botón, está en estado de pesca (rojo) y se mueve sobre el escenario.
 
-There is no **Fishhook** sprite in Pictoblox, we can modify the **Glow-J** sprite to look like a fishhook.
+No hay un sprite **Fishhook** en Pictoblox, podemos modificar el sprite **Glow-J** para que parezca un anzuelo.
 
-* Add the **Glow-J** sprite via **Choose a Sprite**.
+* Añade el sprite **Glow-J** a través de **Choose a Sprite**.
 
 .. image:: img/18_hook.png
 
-* Now go to the **Costumes** page of the **Glow-J** sprite, select Cyan's fill in the screen and remove it. Then change the J color to red and also reduce its width. The most important point to note is that you need to have the top of it just at the center point.
+* Ahora ve a la página **Costumes** del sprite **Glow-J**, selecciona el relleno Cyan en la pantalla y elimínalo. Luego cambia el color de la J a rojo y también reduce su ancho. El punto más importante a tener en cuenta es que necesitas tener la parte superior justo en el punto central.
 
 .. image:: img/18_hook1.png
 
-* Use the **Line tool** to draw a line as long as possible from the center point up (line out of the stage). Now that the sprite is drawn, set the sprite name to **Fishhook** and move it to the right position.
+* Usa la **Line tool** para dibujar una línea tan larga como sea posible desde el punto central hacia arriba (línea fuera del escenario). Ahora que el sprite está dibujado, establece el nombre del sprite a **Fishhook** y muévelo a la posición correcta.
 
 .. image:: img/18_hook2.png
 
-* When the green flag is clicked, set the sprite's color effect to 30 (yellow), and set its initial position.
+* Cuando se hace clic en la bandera verde, establece el efecto de color del sprite a 30 (amarillo), y establece su posición inicial.
 
 .. image:: img/18_hook3.png
 
 
-* If the button is pressed, set the color effect to 0 (red, start fishing state), wait for 0.1 and then move the **Fishhook** sprite to the top of the stage. Release the button and let the **Fishhook** return to its initial position.
+* Si se presiona el botón, establece el efecto de color a 0 (rojo, comienza el estado de pesca), espera 0.1 y luego mueve el sprite **Fishhook** a la parte superior del escenario. Suelta el botón y deja que el **Fishhook** regrese a su posición inicial.
 
 .. image:: img/18_hook4.png
 
-**3. Fish sprite**
+**3. Sprite Pez**
 
-The effect to be achieved by the **Fish** sprite is to move left and right on the stage, and when it encounters a **Fishhook** sprite in the fishing state, it shrinks and moves to a specific position and then disappears, and then clones a new **fish** sprite again.
+El efecto que se busca lograr con el sprite **fish** es moverse de izquierda a derecha en el escenario, y cuando se encuentra con un sprite **Fishhook** en estado de pesca, se encoge y se mueve a una posición específica y luego desaparece, y luego clona un nuevo sprite **fish** de nuevo.
 
-* Now add the **fish** sprite and adjust its size and position.
+* Ahora añade el sprite **fish** y ajusta su tamaño y posición.
 
 .. image:: img/18_fish1.png
 
-* Create a variable **score** to store the number of fish caught, hide this sprite and clone it.
+* Crea una variable **score** para almacenar el número de peces capturados, oculta este sprite y clónalo.
 
 .. image:: img/18_fish2.png
 
 
-* Show the clone of the **fish** sprite, switch its costume and finally set the initial position.
+* Muestra el clon del sprite **fish**, cambia su disfraz y finalmente establece la posición inicial.
 
 
 .. image:: img/18_fish3.png
 
 
-* Make the **fish** sprite's clone move left and right and bounce back when it touches the edge.
+* Haz que el clon del sprite **fish** se mueva de izquierda a derecha y rebote cuando toque el borde.
 
 
 .. image:: img/18_fish4.png
 
 
-* The **fish** sprite (of the clone) will not react when it passes the **Fishhook** sprite; when it touches the **Fishhook** sprite in the fishing state (turns red), it will be caught, at which point the score (variable score) +1, and it will also show a score animation (shrinks 40%, quickly moves to the position of the scoreboard and disappears). At the same time, a new fish is created (a new fish sprite clone) and the game continues.
+* El sprite **fish** (del clon) no reaccionará cuando pase por el sprite **Fishhook**; cuando toque el sprite **Fishhook** en estado de pesca (se vuelve rojo), será capturado, en cuyo punto la puntuación (variable puntuación) +1, y también mostrará una animación de puntuación (encoge un 40%, se mueve rápidamente a la posición del marcador y desaparece). Al mismo tiempo, se crea un nuevo pez (un nuevo clon del sprite pez) y el juego continúa.
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the red color of the **Fishhook** sprite on the stage. If you choose a color arbitrarily, this [Touch color] block will not work.
-
-
+    Necesitas hacer clic en el área de color en el bloque [Touch color], y luego seleccionar la herramienta cuentagotas para recoger el color rojo del sprite **Fishhook** en el escenario. Si eliges un color arbitrariamente, este bloque [Touch color] no funcionará.
 
 .. image:: img/18_fish5.png
-
-
-
-
-
-

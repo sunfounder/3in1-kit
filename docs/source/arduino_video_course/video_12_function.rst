@@ -1,16 +1,16 @@
-Video 12: Functions and Switch-Case
+Vídeo 12: Funciones y Switch-Case
 ==========================================
 
-Explore the fundamentals of defining and using functions in Arduino programming, including various types of functions, parameter handling, return values, and the use of switch-case statements.
+Explora los fundamentos de definir y usar funciones en la programación de Arduino, incluyendo varios tipos de funciones, manejo de parámetros, valores de retorno y el uso de declaraciones switch-case.
 
-* **Understanding Functions in Arduino**: Introduces the basic structure and purpose of functions in Arduino programming.
-* **Types of Functions**: Explains the difference between void functions and those that return specific data types like integers or floats.
-* **Using Parameters and Return Values**: Demonstrates how to pass parameters to functions and utilize the values they return in the main program.
-* **Practical Function Examples**: Provides real-world examples of functions for various calculations and conditional operations.
-* **Switch-Case Syntax and Usage**: Offers an alternative to if-else statements, showcasing how switch-case can simplify code structure.
-* **Applying Functions in Projects**: Shows practical applications of functions in Arduino projects, such as controlling devices or processing sensor data.
+* **Entendiendo las Funciones en Arduino**: Presenta la estructura básica y el propósito de las funciones en la programación de Arduino.
+* **Tipos de Funciones**: Explica la diferencia entre funciones void y aquellas que devuelven tipos de datos específicos como enteros o flotantes.
+* **Usando Parámetros y Valores de Retorno**: Demuestra cómo pasar parámetros a las funciones y utilizar los valores que devuelven en el programa principal.
+* **Ejemplos Prácticos de Funciones**: Proporciona ejemplos del mundo real de funciones para varios cálculos y operaciones condicionales.
+* **Sintaxis y Uso de Switch-Case**: Ofrece una alternativa a las declaraciones if-else, mostrando cómo switch-case puede simplificar la estructura del código.
+* **Aplicación de Funciones en Proyectos**: Muestra aplicaciones prácticas de funciones en proyectos de Arduino, como controlar dispositivos o procesar datos de sensores.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 

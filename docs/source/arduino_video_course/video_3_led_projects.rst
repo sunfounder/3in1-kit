@@ -1,16 +1,15 @@
-Video 3: Programming Basics and LED Projects
-======================================================
+Vídeo 3: Fundamentos de Programación y Proyectos con LED
+==========================================================
 
-This tutorial provides a comprehensive introduction to Arduino programming, covering basic code structure, board components, and a beginner-friendly LED blinking project.
+Este tutorial proporciona una introducción exhaustiva a la programación de Arduino, cubriendo la estructura básica del código, los componentes de la placa y un proyecto amigable para principiantes de parpadeo de LED.
 
-* **Code Structure**: Detailed explanation of the `setup()` and `loop()` functions in Arduino programming.
-* **Arduino Uno Board**: In-depth look at the Arduino Uno board, including pin functions and usage.
-* **Understanding Resistors**: Explanation of resistors, including reading color codes and measuring resistance.
-* **LED Basics**: Overview of Light Emitting Diodes (LEDs), including how to identify anode and cathode.
-* **Practical LED Project**: Step-by-step guide to setting up a basic LED blinking project on a breadboard.
+* **Estructura del Código**: Explicación detallada de las funciones `setup()` y `loop()` en la programación de Arduino.
+* **Placa Arduino Uno**: Mirada en profundidad a la placa Arduino Uno, incluyendo las funciones y usos de los pines.
+* **Comprensión de Resistencias**: Explicación de las resistencias, incluyendo cómo leer códigos de colores y medir resistencia.
+* **Fundamentos de los LED**: Visión general de los Diodos Emisores de Luz (LEDs), incluyendo cómo identificar ánodo y cátodo.
+* **Proyecto Práctico con LED**: Guía paso a paso para configurar un proyecto básico de parpadeo de LED en un protoboard.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +17,6 @@ This tutorial provides a comprehensive introduction to Arduino programming, cove
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_blink`

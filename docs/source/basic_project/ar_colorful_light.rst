@@ -1,47 +1,47 @@
 .. _ar_rgb:
 
-2.2 Colorful Light
-==============================================
+2.2 Luz Colorida
+===================
 
-As we know, light can be superimposed. For example, mix blue light and green light give cyan light, red light and green light give yellow light.
-This is called "The additive method of color mixing".
+Como sabemos, la luz puede superponerse. Por ejemplo, mezclar luz azul y verde da luz cian, luz roja y verde da luz amarilla.
+Esto se llama "El método aditivo de mezcla de colores".
 
-* `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
+* `Color aditivo - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different specific gravity. For example, orange can be produced by more red and less green.
+Basado en este método, podemos usar los tres colores primarios para mezclar la luz visible de cualquier color según diferentes proporciones específicas. Por ejemplo, el naranja se puede producir con más rojo y menos verde.
 
-In this chapter, we will use RGB LED to explore the mystery of additive color mixing!
+¡En este capítulo, usaremos el LED RGB para explorar el misterio de la mezcla de colores aditivos!
 
-RGB LED is equivalent to encapsulating Red LED, Green LED, Blue LED under one lamp cap, and the three LEDs share one cathode pin.
-Since the electric signal is provided for each anode pin, the light of the corresponding color can be displayed. 
-By changing the electrical signal intensity of each anode, it can be made to produce various colors.
+El LED RGB es equivalente a encapsular un LED Rojo, un LED Verde y un LED Azul bajo una misma tapa de lámpara, y los tres LED comparten un pin de cátodo común.
+Dado que se proporciona una señal eléctrica para cada pin de ánodo, se puede mostrar la luz del color correspondiente.
+Cambiando la intensidad de la señal eléctrica de cada ánodo, se pueden producir varios colores.
 
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -55,38 +55,38 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_2.2_rgb.png
 
 
-The PWM pins 11, 10 and 9 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. 
-This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
+Los pines PWM 11, 10 y 9 controlan los pines Rojo, Verde y Azul del LED RGB respectivamente, y conectan el pin de cátodo común a GND.
+Esto permite que el LED RGB muestre un color específico al superponer luz en estos pines con diferentes valores de PWM.
 
 
 
-**Wiring**
+**Cableado**
 
 .. image:: img/rgb_led_sch.png
 
-An RGB LED has 4 pins: the longest pin is the common cathode pin, which is usually connected to GND, 
-the left pin next to the longest pin is Red, and the 2 pins on the right are Green and Blue.
+Un LED RGB tiene 4 pines: el pin más largo es el pin de cátodo común, que generalmente se conecta a GND,
+el pin izquierdo junto al pin más largo es Rojo, y los 2 pines a la derecha son Verde y Azul.
 
 
 .. image:: img/colorful_light_bb.jpg
     :width: 500
     :align: center
 
-**Code**
+**Código**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+Aquí, podemos elegir nuestro color favorito en software de dibujo (como paint) y mostrarlo con el LED RGB.
 
 .. note::
 
-   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
-   * Or copy this code into **Arduino IDE**.
+   * Puedes abrir el archivo ``2.2.colorful_light.ino`` en la ruta ``3in1-kit\basic_project\2.analogWrite\2.2.colorful_light``. 
+   * O copia este código en **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 
 .. raw:: html
@@ -95,12 +95,12 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+Escribe el valor RGB en ``color_set()``, y podrás ver el LED RGB iluminarse con los colores que desees.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-In this example, the function used to assign values to the three pins of RGB is packaged in an independent subfunction ``color()``.
+En este ejemplo, la función utilizada para asignar valores a los tres pines de RGB se empaqueta en una subfunción independiente ``color()``.
 
 .. code-block:: arduino
 
@@ -111,7 +111,7 @@ In this example, the function used to assign values to the three pins of RGB is 
         analogWrite(bluePin, blue);
     }
 
-In ``loop()``, RGB value works as an input argument to call the function ``color()`` to realize that the RGB can emit different colors.
+En ``loop()``, el valor RGB funciona como un argumento de entrada para llamar a la función ``color()`` y así lograr que el RGB emita diferentes colores.
 
 .. code-block:: arduino
 

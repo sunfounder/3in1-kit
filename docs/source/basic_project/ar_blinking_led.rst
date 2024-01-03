@@ -1,35 +1,35 @@
 .. _ar_blink:
 
-1.1 Hello, LED! 
+1.1 ¡Hola, LED! 
 =======================================
 
-Just as printing “Hello, world!” is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Así como imprimir “¡Hola, mundo!” es el primer paso para aprender a programar, usar un programa para activar un LED es la introducción tradicional para aprender programación física.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -42,46 +42,43 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_1.1_led.png
 
-The principle of this circuit is simple and the current direction is shown in the figure. When pin 9 outputs high level(5V), the LED will light up after the 220ohm current limiting resistor. When pin 9 outputs low level (0v), the LED will turn off.
+El principio de este circuito es simple y la dirección de la corriente se muestra en la figura. Cuando el pin 9 emite un nivel alto (5V), el LED se encenderá después de la resistencia limitadora de corriente de 220ohm. Cuando el pin 9 emite un nivel bajo (0v), el LED se apagará.
 
-
-**Wiring**
+**Cableado**
 
 .. image:: img/wiring_led.png
     :width: 400
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-   * You can open the file ``1.1.hello_led.ino`` under the path of ``3in1-kit\basic_project\1.1.hello_led``. 
-   * Or copy this code into **Arduino IDE**.
+   * Puedes abrir el archivo ``1.1.hello_led.ino`` en la ruta ``3in1-kit\basic_project\1.1.hello_led``.
+   * O copia este código en **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
-
+   * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0497f915-5bf8-41a2-8e0f-b013130a57f5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the LED blinking.
+Después de cargar el código con éxito, verás el LED parpadeando.
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here, we connect the LED to the digital pin 9, so we need to declare an int variable called ledpin at the beginning of the program and assign a value of 9.
+Aquí, conectamos el LED al pin digital 9, por lo que necesitamos declarar una variable int llamada ledpin al principio del programa y asignarle un valor de 9.
 
 .. code-block:: arduino
 
     const int ledPin = 9;
 
 
-Now, initialize the pin in the ``setup()`` function, where you need to initialize the pin to ``OUTPUT`` mode.
+Ahora, inicializa el pin en la función ``setup()``, donde necesitas inicializar el pin en modo ``OUTPUT``.
 
 .. code-block:: arduino
 
@@ -89,21 +86,20 @@ Now, initialize the pin in the ``setup()`` function, where you need to initializ
         pinMode(ledPin, OUTPUT);
     }
 
-In ``loop()``, ``digitalWrite()`` is used to provide 5V high level signal for ledpin, which will cause voltage difference between LED pins and light LED up.
+En ``loop()``, se utiliza ``digitalWrite()`` para proporcionar una señal de nivel alto de 5V para ledpin, lo que provocará una diferencia de voltaje entre los pines del LED y lo encenderá.
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, HIGH);
 
-If the level signal is changed to LOW, the ledPin's signal will be returned to 0 V to turn LED off.
+Si la señal de nivel se cambia a LOW, la señal de ledPin volverá a 0 V para apagar el LED.
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, LOW);
 
-
-An interval between on and off is required to allow people to see the change, 
-so we use a ``delay(1000)`` code to let the controller do nothing for 1000 ms.
+Se requiere un intervalo entre encendido y apagado para permitir que las personas vean el cambio, 
+por lo que usamos un código ``delay(1000)`` para dejar que el controlador no haga nada durante 1000 ms.
 
 .. code-block:: arduino
 

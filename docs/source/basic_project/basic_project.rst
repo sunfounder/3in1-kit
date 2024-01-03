@@ -1,23 +1,21 @@
 .. _basic_projects:
 
-Basic Projects
+Proyectos Básicos
 ========================
 
-This chapter is used to learn how to control electronic circuits using Arduino.
+Este capítulo se utiliza para aprender a controlar circuitos electrónicos usando Arduino.
 
-Depending on the components, the basic control methods of Arduino can be divided into four types:
+Dependiendo de los componentes, los métodos básicos de control de Arduino se pueden dividir en cuatro tipos:
 
-* :ref:`ar_digital_write`: Set the output voltage of the pin to be high or low, which can be used to turn the light on and off.
-* :ref:`ar_analog_write`: Write the analog value (`PWM wave <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) to the pin, which can be used to adjust the brightness of the light.
-* :ref:`ar_digital_read`: Read the level signal of the digital pin, which can be used to read the working condition of the switch.
-* :ref:`ar_analog_read`: Read the voltage of the analog pin, which can be used to read the working condition of the knob.
+* :ref:`ar_digital_write`: Establece la tensión de salida del pin en alto o bajo, lo que se puede utilizar para encender y apagar la luz.
+* :ref:`ar_analog_write`: Escribe el valor analógico (`onda PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) en el pin, lo que se puede utilizar para ajustar el brillo de la luz.
+* :ref:`ar_digital_read`: Lee la señal de nivel del pin digital, lo que se puede utilizar para leer el estado de funcionamiento del interruptor.
+* :ref:`ar_analog_read`: Lee el voltaje del pin analógico, lo que se puede utilizar para leer el estado de funcionamiento del mando.
 
+También hay algunos componentes que requieren bibliotecas adicionales para su uso, y estos se agrupan bajo la sección :ref:`install_libraries_ar`.
 
-There are also some components that require additional libraries for use, and these are grouped under the section :ref:`install_libraries_ar`.
-
-Finally, the kit also provides some :ref:`ar_funny_project`, which includes many simple and useful manipulations.
-Try this section of code and you will understand how most simple projects work.
-
+Finalmente, el kit también proporciona algunos :ref:`ar_funny_project`, que incluye muchas manipulaciones simples y útiles.
+Prueba esta sección del código y entenderás cómo funcionan la mayoría de los proyectos simples.
 
 .. toctree::
     :maxdepth: 2
@@ -28,5 +26,3 @@ Try this section of code and you will understand how most simple projects work.
     ard_analog_read
     ard_more_syntax
     ard_funny_project
-
-

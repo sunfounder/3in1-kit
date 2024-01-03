@@ -1,16 +1,16 @@
-Video 10: Conditional Statements and Arrays
-=============================================
+Vídeo 10: Declaraciones Condicionales y Arreglos
+==================================================
 
-Explore the fundamentals of conditional statements and arrays in Arduino, including practical applications in LED control and data management.
+Explora los fundamentos de las declaraciones condicionales y los arreglos en Arduino, incluyendo aplicaciones prácticas en el control de LEDs y la gestión de datos.
 
-* **Conditional Statements**: Learning to use if, else, and else-if statements in Arduino for decision-making.
-* **Practical Examples**: Application of conditional logic in scenarios like temperature control and traffic regulation.
-* **Arrays in Arduino**: Demonstrating the creation, modification, and usage of arrays to store and manage data.
-* **Controlling LEDs with Arrays**: How to use arrays for efficient control of multiple LEDs.
-* **Understanding Floats**: Introduction to the float data type and managing precision in numerical operations.
-* **Using Loops with Arrays**: Leveraging 'for' loops to iterate over array elements, simplifying code for tasks like LED sequencing.
+* **Declaraciones Condicionales**: Aprender a usar las declaraciones if, else y else-if en Arduino para la toma de decisiones.
+* **Ejemplos Prácticos**: Aplicación de lógica condicional en escenarios como el control de temperatura y la regulación del tráfico.
+* **Arreglos en Arduino**: Demostración de la creación, modificación y uso de arreglos para almacenar y gestionar datos.
+* **Controlando LEDs con Arreglos**: Cómo usar arreglos para el control eficiente de múltiples LEDs.
+* **Entendiendo los Flotantes**: Introducción al tipo de dato float y manejo de la precisión en operaciones numéricas.
+* **Usando Bucles con Arreglos**: Aprovechamiento de los bucles 'for' para iterar sobre elementos de un arreglo, simplificando el código para tareas como la secuencia de LEDs.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 

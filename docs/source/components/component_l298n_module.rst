@@ -1,45 +1,44 @@
 .. _cpn_l298n:
 
-L298N Module
+Módulo L298N
 ==================================
 
-This L298N Motor Driver Module is a high power motor driver module for driving DC and Stepper Motors. This module consists of an L298 motor driver IC and a 78M05 5V regulator. L298N Module can control up to 4 DC motors, or 2 DC motors with directional and speed control.
+Este Módulo Controlador de Motor L298N es un módulo controlador de motor de alta potencia para la conducción de motores de corriente continua (DC) y motores paso a paso. Este módulo consta de un circuito integrado controlador de motor L298 y un regulador de 5V 78M05. El Módulo L298N puede controlar hasta 4 motores de corriente continua o 2 motores de corriente continua con control direccional y de velocidad.
 
 .. image:: img/l298n_pin.jpg
     :width: 400
     :align: center
 
-* **IN1 & IN2**: Motor A input pins. Used to control the spinning direction of Motor A
-* **IN3 & IN4**: Motor B input pins. Used to control the spinning direction of Motor B
-* **ENA**: Enables PWM signal for Motor A. Here it has been connected to 5V with a jumper cap.
-* **ENB**: Enables PWM signal for Motor B. Here it has been connected to 5V with a jumper cap.
-* **OUT1 & OUT2**: Output pins of Motor A
-* **OUT3 & OUT4**: Output pins of Motor B
-* **12V**: 12V input from DC power Source
-* **5V**: Supplies power for the switching logic circuitry inside L298N IC
-* **GND**: Ground pin
+* **IN1 & IN2**: Pines de entrada del Motor A. Utilizados para controlar la dirección de giro del Motor A.
+* **IN3 & IN4**: Pines de entrada del Motor B. Utilizados para controlar la dirección de giro del Motor B.
+* **ENA**: Habilita la señal PWM para el Motor A. Aquí se ha conectado a 5V con un jumper cap.
+* **ENB**: Habilita la señal PWM para el Motor B. Aquí se ha conectado a 5V con un jumper cap.
+* **OUT1 & OUT2**: Pines de salida del Motor A.
+* **OUT3 & OUT4**: Pines de salida del Motor B.
+* **12V**: Entrada de 12V desde una fuente de poder de corriente continua.
+* **5V**: Suministra energía para el circuito lógico de conmutación dentro del circuito integrado L298N.
+* **GND**: Pin de tierra.
 
-**Features**
+**Características**
 
-* Driver Model: L298N 2A
-* Driver Chip: Double H Bridge L298N
-* Motor Supply Voltage (Maximum): 46V
-* Motor Supply Current (Maximum): 2A
-* Logic Voltage: 5V
-* Driver Voltage: 5-35V
-* Driver Current:2A
-* Logical Current:0-36mA
-* Maximum Power (W): 25W
-* Current Sense for each motor
-* Heatsink for better performance
-* Power-On LED indicator
+* Modelo del Controlador: L298N 2A
+* Chip del Controlador: Doble Puente H L298N
+* Voltaje Máximo de Suministro del Motor: 46V
+* Corriente Máxima de Suministro del Motor: 2A
+* Voltaje Lógico: 5V
+* Voltaje del Controlador: 5-35V
+* Corriente del Controlador: 2A
+* Corriente Lógica: 0-36mA
+* Potencia Máxima (W): 25W
+* Detección de Corriente para cada motor
+* Disipador de calor para un mejor rendimiento
+* Indicador LED de encendido
 
-**Operating Principle**
+**Principio de Funcionamiento**
 
-The driver module can drive two motors. The enabled terminals ENA and ENB are effective at high level. 
+El módulo controlador puede manejar dos motores. Los terminales habilitados ENA y ENB son efectivos a nivel alto.
 
-The working relationship between ENA and IN1,IN2 is as follows: 
-
+La relación de trabajo entre ENA e IN1, IN2 es la siguiente:
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -48,29 +47,29 @@ The working relationship between ENA and IN1,IN2 is as follows:
     * - ENA
       - IN1
       - IN2
-      - The state of Motor A
+      - Estado del Motor A
     * - 0
       - X
       - X
-      - Stop
+      - Detener
     * - 1
       - 0
       - 0
-      - Brake
+      - Frenar
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Girar en sentido de las agujas del reloj
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Girar en sentido contrario a las agujas del reloj
     * - 1
       - 1
       - 1
-      - Brake
+      - Frenar
 
-The working relationship between ENB and IN3,IN4 is as follows.
+La relación de trabajo entre ENB e IN3, IN4 es la siguiente.
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -79,51 +78,42 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of Motor B
+      - Estado del Motor B
     * - 0
       - X
       - X
-      - Stop
+      - Detener
     * - 1
       - 0
       - 0
-      - Brake
+      - Frenar
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Girar en sentido de las agujas del reloj
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Girar en sentido contrario a las agujas del reloj
     * - 1
       - 1
       - 1
-      - Brake
+      - Frenar
 
+**Acerca del Jumper de Habilitación de 5V**
 
-**About 5V Enable Cap**
+El Módulo Controlador de Motor L298N consta de un Circuito Integrado Controlador de Motor L298, Regulador de Voltaje 78M05, resistencias, capacitor, LED de encendido, jumper de 5V en un circuito integrado.
 
-The L298N Motor Driver module consists of an L298 Motor Driver IC, 78M05 Voltage Regulator, resistors, capacitor, Power LED, 5V jumper in an integrated circuit.
+El regulador de voltaje 78M05 solo se habilitará cuando el jumper esté colocado. Cuando la fuente de alimentación es igual o inferior a 12V, entonces la circuitería interna será alimentada por el regulador de voltaje y el pin de 5V puede ser utilizado como un pin de salida para alimentar el microcontrolador.
 
-.. image:: img/l298n_introduce.jpg
-    :width: 500
-    :align: center
+El jumper no debe colocarse cuando la fuente de alimentación es superior a 12V y se debe suministrar 5V separado a través del terminal de 5V para alimentar la circuitería interna.
 
-78M05 Voltage regulator will be enabled only when the jumper is placed. When the power supply is less than or equal to 12V, then the internal circuitry will be powered by the voltage regulator and the 5V pin can be used as an output pin to power the microcontroller. 
+* `Hoja de Datos del L298N <https://www.yerical.com/product/L298N?product/XXXXX?source=adg&gclid=CjwKCAjwkYGVBhArEiwA4sZLuKEC19ydceKs396z1JENqjcbJDEvedRkcsza1aH_swhuNPWzL-CYfRoCMTMQAvD_BwE#g-pd-res>`_
 
-The jumper should not be placed when the power supply is greater than 12V and separate 5V should be given through 5V terminal to power the internal circuitry.
+**Ejemplo**
 
-
-* `L298N datasheet <https://www.yerical.com/product/L298N?product/XXXXX?source=adg&gclid=CjwKCAjwkYGVBhArEiwA4sZLuKEC19ydceKs396z1JENqjcbJDEvedRkcsza1aH_swhuNPWzL-CYfRoCMTMQAvD_BwE#g-pd-res>`_
-
-
-**Example**
-
-* :ref:`ar_motor` (Basic Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
-* :ref:`sh_test` (Scratch Project)
-
-
+* :ref:`ar_motor` (Proyecto Básico)
+* :ref:`car_move` (Proyecto de Coche)
+* :ref:`car_speed` (Proyecto de Coche)
+* :ref:`iot_car` (Proyecto IoT)
+* :ref:`sh_test` (Proyecto Scratch)

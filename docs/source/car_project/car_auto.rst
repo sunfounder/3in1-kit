@@ -1,37 +1,37 @@
 .. _self_driving:
 
-8. Self-Driving Car
+8. Coche Autónomo
 =========================
 
-This project is a combination of the two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`. 
-2 infrared obstacle avoidance modules do short distance or edge detection, 
-and ultrasonic modules do long distance detection to confirm that the car does not hit an obstacle during the free driving process.
+Este proyecto es una combinación de los dos proyectos :ref:`car_ultrasonic` y :ref:`car_ir_obstacle`. 
+2 módulos de evitación de obstáculos infrarrojos realizan detección de corta distancia o de bordes, 
+y los módulos ultrasónicos hacen detección de larga distancia para confirmar que el coche no golpee un obstáculo durante el proceso de conducción libre.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -44,17 +44,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Cableado**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Conecta el módulo ultrasónico y los 2 módulos de evitación de obstáculos IR al mismo tiempo.
 
-Wire the ultrasonic to the R3 board as follows.
+Conecta el ultrasónico a la placa R3 de la siguiente manera.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Módulo Ultrasónico
+      - Placa R3
     * - Vcc
       - 5V
     * - Trig
@@ -64,13 +64,13 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+El cableado de los 2 módulos de evitación de obstáculos IR a la placa R3 es como sigue.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R3 Board
+    * - Módulo IR Izquierdo
+      - Placa R3
     * - OUT
       - 8
     * - GND
@@ -81,8 +81,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R3 Board
+    * - Módulo IR Derecho
+      - Placa R3
     * - OUT
       - 7
     * - GND
@@ -93,35 +93,33 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``8.self_driving_car.ino`` file under the path of ``3in1-kit\car_project\8.self_driving_car``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``8.self_driving_car.ino`` en la ruta ``3in1-kit\car_project\8.self_driving_car``.
+    * O copia este código en el **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0a74a7b1-ead6-4bea-ab5a-4da71f27f82f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will drive freely once the code has been uploaded successfully. When the IR obstruction module on both sides detects an obstacle, it will move in the opposite direction for emergency evasion; if there is an obstacle within 2~10cm directly in front of the car, it will back up to the left, adjust its direction, and then move forward.
+El coche se moverá libremente una vez que el código haya sido cargado con éxito. Cuando el módulo de obstrucción IR en ambos lados detecte un obstáculo, se moverá en la dirección opuesta para una evasión de emergencia; si hay un obstáculo a 2~10cm directamente frente al coche, retrocederá hacia la izquierda, ajustará su dirección y luego avanzará.
 
+**¿Cómo funciona?**
 
-**How it works?**
+El flujo de trabajo de este proyecto es el siguiente.
 
-The workflow of this project is as follows.
-
-* Priority read the value of left and right IR obstacle avoidance module.
-* If the left IR module is 0 (obstacle detected), the right IR module is 1, let the car back up to the left.
-* If the right IR module is 0 (obstacle detected), let the car back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will back up.
-* Otherwise read the distance detected by the ultrasonic module.
-* If the distance is greater than 50cm, let the car go forward.
-* If the distance is between 2-10cm, let the car backward before turning.
-* If the distance is between 10-50cm, let the car go forward at low speed.
-
+* Prioridad para leer el valor del módulo de evitación de obstáculos IR izquierdo y derecho.
+* Si el módulo IR izquierdo es 0 (obstáculo detectado), y el módulo IR derecho es 1, deja que el coche retroceda hacia la izquierda.
+* Si el módulo IR derecho es 0 (obstáculo detectado), deja que el coche retroceda hacia la derecha.
+* Si los 2 módulos IR detectan el obstáculo al mismo tiempo, el coche retrocederá.
+* De lo contrario, lee la distancia detectada por el módulo ultrasónico.
+* Si la distancia es mayor a 50cm, deja que el coche avance.
+* Si la distancia está entre 2-10cm, deja que el coche retroceda antes de girar.
+* Si la distancia está entre 10-50cm, deja que el coche avance a baja velocidad.
 
 .. code-block:: arduino
 

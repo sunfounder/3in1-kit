@@ -1,17 +1,16 @@
-Video 13: Joystick 
+Vídeo 13: Joystick 
 ===================
 
-This tutorial delves into using an XY joystick with Arduino, covering its structure, wiring, reading its positions, push button detection, and programming Arduino to respond to joystick movements.
+Este tutorial profundiza en el uso de un joystick XY con Arduino, cubriendo su estructura, cableado, lectura de sus posiciones, detección de pulsación de botón y programación de Arduino para responder a los movimientos del joystick.
 
-* **Joystick Mechanics and Structure**: An overview of the XY joystick's components, including its potentiometers for directional control and the integrated push button.
-* **Arduino Joystick Connection**: Detailed instructions on properly wiring the joystick to an Arduino board for accurate signal reading.
-* **Interpreting Joystick Movements**: Techniques for reading the X and Y axis movements of the joystick through Arduino programming.
-* **Detecting Button Presses**: Guidance on detecting and programming responses to the joystick's push button activation.
-* **Arduino Code for Joystick Input**: Step-by-step walkthrough of writing Arduino code to interpret and display joystick movements on a serial monitor.
-* **Responsive Actions to Joystick Input**: Demonstrating how to program Arduino to perform specific actions, like triggering a buzzer, based on joystick position.
+* **Mecánica y Estructura del Joystick**: Una visión general de los componentes del joystick XY, incluyendo sus potenciómetros para control direccional y el botón pulsador integrado.
+* **Conexión del Joystick a Arduino**: Instrucciones detalladas para cablear correctamente el joystick a una placa Arduino para una lectura precisa de la señal.
+* **Interpretación de Movimientos del Joystick**: Técnicas para leer los movimientos de los ejes X e Y del joystick mediante programación en Arduino.
+* **Detección de Pulsaciones de Botón**: Orientación sobre cómo detectar y programar respuestas a la activación del botón pulsador del joystick.
+* **Código de Arduino para Entrada de Joystick**: Paso a paso para escribir código de Arduino que interprete y muestre los movimientos del joystick en un monitor serial.
+* **Acciones Responsivas a la Entrada del Joystick**: Demostración de cómo programar Arduino para realizar acciones específicas, como activar un zumbador, basado en la posición del joystick.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,6 +18,6 @@ This tutorial delves into using an XY joystick with Arduino, covering its struct
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_joystick`

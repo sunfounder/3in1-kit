@@ -1,27 +1,27 @@
 .. _ar_analog_read:
 
-4. Analog Read
+4. Lectura Analógica
 ======================
 
-The Arduino can read the connected analog sensors through the analog pins.
+Arduino puede leer los sensores analógicos conectados a través de los pines analógicos.
 
-The R3 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+La placa R3 contiene un convertidor analógico-digital de múltiples canales y 10 bits. Esto significa que mapea el voltaje de entrada entre 0 y el voltaje de operación (5V o 3.3V) a un valor entero entre 0 y 1023.
 
-You need the ``analogRead(pin)`` function to read the value of the analog pin.
+Necesitas la función ``analogRead(pin)`` para leer el valor del pin analógico.
 
-* ``analogRead(pin)``: Read the value from the specified analog pin.
+* ``analogRead(pin)``: Lee el valor del pin analógico especificado.
 
-   **Syntax**
+   **Sintaxis**
       analogRead(pin)
 
-   **Parameters**
-        * ``pin``: the name of the analog input pin to read from (A0 to A5).
+   **Parámetros**
+        * ``pin``: el nombre del pin de entrada analógica a leer (de A0 a A5).
 
-   **Returns**
-      0-1023. Data type: int.
+   **Retorno**
+      0-1023. Tipo de dato: int.
 
 
-**Example of Analog Read**
+**Ejemplo de Lectura Analógica**
 
 .. code-block:: arduino
 
@@ -39,14 +39,14 @@ You need the ``analogRead(pin)`` function to read the value of the analog pin.
    }
 
 
-**Notes and Warnings**
+**Notas y Advertencias**
 
-* The analog pins are A0-A5.
-* You don't need to call ``pinMode()`` before calling the analog pin, but if the pin was previously set to ``OUTPUT``, the function ``analogRead()`` will not work properly, in which case you need to call ``pinMode()`` to set it back to ``INTPUT``.
+* Los pines analógicos son A0-A5.
+* No necesitas llamar a ``pinMode()`` antes de llamar al pin analógico, pero si el pin se configuró previamente como ``OUTPUT``, la función ``analogRead()`` no funcionará correctamente, en cuyo caso necesitas llamar a ``pinMode()`` para volver a configurarlo como ``INTPUT``.
 
-**Related Components**
+**Componentes Relacionados**
 
-Below are the related components, you can click in to learn how to use them.
+A continuación se presentan los componentes relacionados, puedes hacer clic para aprender a utilizarlos.
 
 .. toctree::
     :maxdepth: 2

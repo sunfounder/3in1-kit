@@ -1,44 +1,45 @@
-Introduce of Arduino IDE
+Introducción al IDE de Arduino
 =================================
 
 .. image:: img/sp_ide_2.png
 
-1. **Verify**: Compile your code. Any syntax problem will be prompted with errors.
+1. **Verify**: Compila tu código. Cualquier problema de sintaxis será indicado con errores.
 
-2. **Upload**: Upload the code to your board. When you click the button, the RX and TX LEDs on the board will flicker fast and won't stop until the upload is done.
+2. **Upload**: Sube el código a tu placa. Al hacer clic en el botón, los LEDs RX y TX en la placa parpadearán rápidamente y no se detendrán hasta que la carga esté completa.
 
-3. **Debug**: For line-by-line error checking.
+3. **Debug**: Para la comprobación de errores línea por línea.
 
-4. **Select Board**: Quick setup board and port.
+4. **Select Board**: Configuración rápida de la placa y el puerto.
 
-5. **Serial Plotter**: Check the change of reading value.
+5. **Serial Plotter**: Comprueba el cambio del valor leído.
 
-6. **Serial Monitor**: Click the button and a window will appear. It receives the data sent from your control board. It is very useful for debugging.
+6. **Serial Monitor**: Haz clic en el botón y aparecerá una ventana. Recibe los datos enviados desde tu placa de control. Es muy útil para depuración.
 
-7. **File**: Click the menu and a drop-down list will appear, including file creating, opening, saving, closing, some parameter configuring, etc.
+7. **File**: Haz clic en el menú y aparecerá una lista desplegable, incluyendo la creación, apertura, guardado, cierre de archivos, algunas configuraciones de parámetros, etc.
 
-8. **Edit**: Click the menu. On the drop-down list, there are some editing operations like **Cut**, **Copy**, **Paste**, **Find**, and so on, with their corresponding shortcuts.
+8. **Edit**: Haz clic en el menú. En la lista desplegable, hay algunas operaciones de edición como **Cut**, **Copy**, **Paste**, **Find**, etc., con sus correspondientes atajos.
 
-9. **Sketch**: Includes operations like **Verify**, **Upload**, **Add** files, etc. More important function is **Include Library** – where you can add libraries.
+9. **Sketch**: Incluye operaciones como **Verify**, **Upload**, **Add** archivos, etc. La función más importante es **Include Library** – donde puedes agregar bibliotecas.
 
-10. **Tool**: Includes some tools – the most frequently used Board (the board you use) and Port (the port your board is at). Every time you want to upload the code, you need to select or check them.
+10. **Tool**: Incluye algunas herramientas – las más utilizadas son Placa (la placa que usas) y Puerto (el puerto en el que está tu placa). Cada vez que quieras subir el código, necesitas seleccionarlos o verificarlos.
 
-11. **Help**: If you're a beginner, you may check the options under the menu and get the help you need, including operations in IDE, introduction information, troubleshooting, code explanation, etc.
+11. **Help**: Si eres principiante, puedes revisar las opciones bajo el menú y obtener la ayuda que necesitas, incluyendo operaciones en el IDE, información de introducción, solución de problemas, explicación del código, etc.
 
-12. **Output Bar**: Switch the output tab here.
+12. **Output Bar**: Cambia la pestaña de salida aquí.
 
-13. **Output Window**: Print information.
+13. **Output Window**: Imprime información.
 
-14. **Board and Port**: Here you can preview the board and port selected for code upload. You can select them again by **Tools** -> **Board** / **Port** if any is incorrect.
+14. **Board and Port**: Aquí puedes previsualizar la placa y el puerto seleccionados para la carga del código. Puedes seleccionarlos de nuevo mediante **Tools** -> **Board** / **Port** si alguno es incorrecto.
 
-15. The editing area of the IDE. You can write code here.
+15. El área de edición del IDE. Puedes escribir código aquí.
 
-16. **Sketchbook**: For managing sketch files.
+16. **Sketchbook**: Para gestionar archivos de sketch.
 
-17. **Board Manager**: For managing board driver.
+17. **Board Manager**: Para gestionar el controlador de la placa.
 
-18. **Library Manager**: For managing your library files.
+18. **Library Manager**: Para gestionar tus archivos de biblioteca.
 
-19. **Debug**: Help debugging code.
+19. **Debug**: Ayuda a depurar el código.
 
-20. **Search**: Search the codes from your sketches.
+20. **Search**: Busca los códigos de tus sketches.
+

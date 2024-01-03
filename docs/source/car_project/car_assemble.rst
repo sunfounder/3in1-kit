@@ -1,6 +1,6 @@
 .. _car_assemble:
 
-Assemble the Car
+Ensamblar el Coche
 =====================
 
 **Video**
@@ -9,73 +9,73 @@ Assemble the Car
     
     <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Steps**
+**Pasos**
 
-Please follow the steps below to complete the assembly of the car.
+Por favor, sigue los pasos a continuación para completar el ensamblaje del coche.
 
-1. Remove the protective film on the acrylic.
+1. Retira la película protectora del acrílico.
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Coloca la placa en la mesa como se muestra en la imagen, el lado con el mismo agujero que la placa R3, lo llamamos A; la parte trasera es B. Esto te ayudará a evitar errores durante el ensamblaje.
 
     .. image:: img/IMG_9145.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. Monta el **espaciador M3x24mm** con **tornillos M3x6mm** en la posición que se muestra a continuación.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Gira al lado B, usa **tornillos M3x30mm** y **tuercas M3** para fijar el Motor TT. 2 detalles aquí: 1 - el eje de salida está orientado hacia el lado en forma de murciélago; 2 - el cable del motor está orientado hacia el interior.
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. Monta otro Motor TT, la misma atención debe prestarse a la dirección del eje de salida y la dirección del cable.
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. Usa **tornillos M3x6mm** para montar el **espaciador M3x10mm** en la posición que se muestra a continuación.
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. Fija el **espaciador M2.5x11mm** a la parte trasera del coche con **tornillos M2.5x6mm**.
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. Usa **tornillos M3x6mm** para montar la rueda universal.
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. Colocando las 2 ruedas, la estructura básica del coche ha sido completada.
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#.  Fija el módulo L9110 con **tornillos M2.5x6mm**.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. Ensambla los dos Módulos de Obstáculos IR con **tornillos M3x10mm** y **tuercas M3**.
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. Gira al lado B y fija el módulo de Seguimiento de Línea con cuatro **tornillos M3x6mm** y dos **espaciadores M3x24mm**.
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        Es aconsejable primero asegurar los **espaciadores M3x24mm** en el módulo de Seguimiento de Línea.
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        Una nota importante a tener en cuenta: los pines del sensor de línea son un poco blandos y sobresalen un poco hacia los agujeros. Al atornillar los **espaciadores M3x24mm**, aplica una presión suave para apartar ligeramente los pines del sensor.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Pega el velcro en la batería de 9V y coloca el clip de batería. Pega la otra sección del Velcro en el coche para asegurar la batería.
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R3 board with **M3x6mm screws**.
+#. Voltea al lado A y monta la placa R3 con **tornillos M3x6mm**.
 
     .. image:: img/IMG_9196.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. Fija la placa de prototipos en la parte delantera del coche. Después de esto, podrás agregar diferentes componentes (p. ej., módulo ultrasónico) a la placa de prototipos según lo requiera tu proyecto.
 
     .. image:: img/IMG_9197.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. Poner en funcionamiento el coche también requiere cablearlo y escribir código, lo cual se explicará en las secciones siguientes.

@@ -1,37 +1,37 @@
 .. _ar_servo:
 
-5.5 Use Internal Library
-=======================================
+5.5 Usar Biblioteca Interna
+=============================
 
-In the Arduino IDE, you can use many built-in libraries by adding the corresponding ``.h`` file directly to your code.
+En el IDE de Arduino, puedes utilizar muchas bibliotecas integradas añadiendo directamente el archivo ``.h`` correspondiente a tu código.
 
-This project uses the ``Servo`` library to drive the Servo, so that it can rotate between 0° and 180°.
+Este proyecto utiliza la biblioteca ``Servo`` para controlar el Servo, de modo que pueda rotar entre 0° y 180°.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar todo un kit, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,77 +40,73 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-
-**Schematic**
-
+**Esquemático**
 
 .. image:: img/circuit_6.2_servo.png
 
-In this project, we use PWM pin 9 to drive the Servo, and get the orange
-wire of the servo connected to the PWM pin 9, the red one to 5V, and the
-brown one to GND.
+En este proyecto, usamos el pin PWM 9 para controlar el Servo, y conectamos el cable naranja del servo al pin PWM 9, el rojo a 5V y el marrón a GND.
 
-**Wiring**
+**Cableado**
 
 .. image:: img/swinging_servo_bb.jpg
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.5.use_internal_library.ino`` file under the path of ``3in1-kit\basic_project\5.5.use_internal_library``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``5.5.use_internal_library.ino`` en la ruta ``3in1-kit\basic_project\5.5.use_internal_library``.
+    * O copia este código en el **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fa27db71-b191-4eda-b5c7-bbbe5f2652ca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once you finish uploading the codes to the R3 board, you can see the servo arm rotating in the range 0°~180°.
+Una vez que termines de subir los códigos a la placa R3, puedes ver el brazo del servo rotando en el rango de 0°~180°.
 
-**How it works?**
+**¿Cómo funciona?**
 
-By calling the library ``Servo.h``, you can drive the servo easily. 
+Al llamar a la biblioteca ``Servo.h``, puedes controlar el servo fácilmente.
 
 .. code-block:: arduino
 
     #include <Servo.h> 
 
-Library Functions: 
+Funciones de la Biblioteca:
 
 .. code-block:: arduino
 
     Servo
 
-Create **Servo** object to control a servo.
+Crear objeto **Servo** para controlar un servo.
 
 .. code-block:: arduino
 
     uint8_t attach(int pin); 
 
-Call ``pinMode()`` to turn a pin into a servo driver and return 0 on failure.
+Llamar a ``pinMode()`` para convertir un pin en un controlador de servo y devolver 0 en caso de fallo.
 
 .. code-block:: arduino
 
     void detach();
 
-Release a pin from servo driving.
+Liberar un pin del control del servo.
 
 .. code-block:: arduino
 
     void write(int value); 
 
-Set the angle of the servo in degrees, 0 to 180.
+Establecer el ángulo del servo en grados, de 0 a 180.
 
 .. code-block:: arduino
 
     int read();
 
-Return that value set with the last ``write()``.
+Devolver el valor establecido con el último ``write()``.
 
 .. code-block:: arduino
 
     bool attached(); 
 
-Return 1 if the servo is currently attached.
+Devolver 1 si el servo está actualmente conectado.

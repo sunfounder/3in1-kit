@@ -1,38 +1,38 @@
 .. _sh_line:
 
-3.3 Follow the line
+3.3 Seguir la línea
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+El coche está equipado con un módulo de Seguimiento de Línea, que se puede utilizar para hacer que el coche siga la línea negra.
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+Antes de comenzar el proyecto, necesitas construir un mapa curvo con cinta de línea negra, el ancho de línea recomendado es entre 0.8-1.5cm y el ángulo de la curva no debe ser menor de 90 grados.
 
-Required Components
----------------------
+Componentes Necesarios
+------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -43,17 +43,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-Build the Circuit
+Construye el Circuito
 -----------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Este es un módulo digital de Seguimiento de Línea, cuando detecta una línea negra, emite 1; cuando detecta una línea blanca, emite un valor de 0. Además, puedes ajustar su distancia de detección a través del potenciómetro en el módulo.
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
 .. list-table:: 
 
-    * - Line Tracking Module
-      - R3 Board
+    * - Módulo de Seguimiento de Línea
+      - Placa R3
     * - S
       - 2
     * - V+
@@ -64,43 +64,43 @@ Build the circuit according to the following diagram.
 .. image:: img/car_4.png
     :width: 800
 
-Adjust the Module
+Ajusta el Módulo
 -----------------------
 
-Before starting the project, you need to adjust the sensitivity of the module.
+Antes de comenzar el proyecto, necesitas ajustar la sensibilidad del módulo.
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+Conecta el cableado según el diagrama anterior, luego enciende la placa R3 (ya sea directamente en el cable USB o el cable de botón de batería de 9V), sin subir el código.
 
-Stick a black electrical tape on the table and put the cart on it.
+Pega una cinta eléctrica negra en la mesa y coloca el carrito sobre ella.
 
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+Observa el LED de señal en el módulo para asegurarte de que se ilumine en la mesa blanca y se apague en la cinta negra.
 
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+Si no, necesitas ajustar el potenciómetro en el módulo, para que pueda hacer el efecto anterior.
 
 .. image:: img/line_track_cali.JPG
 
 
-Programming
-------------
+Programación
+--------------
 
-Now create 2 blocks that allow the car to move either to the left front or to the right front.
+Ahora crea 2 bloques que permitan al coche moverse ya sea hacia el frente izquierdo o hacia el frente derecho.
 
-**1. Move to the left front**
+**1. Mover hacia el frente izquierdo**
 
-When the right motor is turned clockwise and the left motor is left unmoved, the car is moved slightly to the left front.
-
-.. image:: img/3_forward_left.png
-
-**2. Moving to the right front**
-
-Similarly, when the left motor is turned counterclockwise and the left motor does not move, the car moves slightly to the right.
+Cuando el motor derecho se gira en sentido horario y el motor izquierdo se deja sin mover, el coche se mueve ligeramente hacia el frente izquierdo.
 
 .. image:: img/3_forward_left.png
 
-**3. Line Tracking**
+**2. Mover hacia el frente derecho**
 
-Read the value of Line Tracking module, if it is 1, it means black line has been detected, let the car move forward to the left, otherwise move forward to the right.
+De manera similar, cuando el motor izquierdo se gira en sentido antihorario y el motor derecho no se mueve, el coche se mueve ligeramente hacia la derecha.
+
+.. image:: img/3_forward_left.png
+
+**3. Seguimiento de línea**
+
+Lee el valor del módulo de Seguimiento de Línea, si es 1, significa que se ha detectado una línea negra, deja que el coche se mueva hacia adelante a la izquierda, de lo contrario se mueve hacia adelante a la derecha.
 
 .. image:: img/3_follow.png
 
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+Después de subir el código a la placa R3, alinea el módulo de Seguimiento de Línea bajo el coche con la línea negra, y verás que el coche sigue la línea.

@@ -1,37 +1,37 @@
 .. _ar_lcd1602:
 
-5.11.1 Liquid Crystal Display
-===============================
+5.11.1 Pantalla de Cristal Líquido
+=====================================
 
-An I2C LCD1602 is composed of an LCD1602 and an I2C module, LCD1602 can be used to display characters, numbers, etc., but need to take up a lot of pins of the main control, after configuring an I2C module, only 2 I/0 pins are needed to drive this LCD1602.
+Un LCD1602 I2C está compuesto por un LCD1602 y un módulo I2C. El LCD1602 puede utilizarse para mostrar caracteres, números, etc., pero necesita ocupar muchos pines del control principal. Al configurar un módulo I2C, solo se necesitan 2 pines I/O para controlar este LCD1602.
 
-Now look at how to make this I2C CDL1602 work.
+Ahora veamos cómo hacer funcionar este LCD1602 I2C.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,27 +41,26 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-**Schematic**
-
+**Esquemático**
 
 .. image:: img/circuit_7.1_lcd1602.png
 
-**Wiring**
+**Cableado**
 
 .. image:: img/lcd_bb.jpg
     :width: 800
     :align: center
 
 .. note::
-    The SDA and SCL of the R3 board are the pins A4 and A5.
+    Los pines SDA y SCL de la placa R3 son los pines A4 y A5.
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.11.liquid_crystal_display.ino`` file under the path of ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Abre el archivo ``5.11.liquid_crystal_display.ino`` en la ruta ``3in1-kit\basic_project\5.11.liquid_crystal_display``.
+    * O copia este código en el **Arduino IDE**.
+    * Aquí se usa la biblioteca ``LiquidCrystal I2C``, puedes instalarla desde el **Library Manager**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
     
@@ -70,80 +69,81 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e49c4936-2530-4890-b86c-1017d11eae6e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you will see "SunFounder", "Hello World" on the I2C LCD1602.
+Una vez que el código se haya cargado con éxito, verás "SunFounder", "Hello World" en el LCD1602 I2C.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    Si el código y la conexión están bien, pero el LCD aún no muestra contenido, puedes ajustar el potenciómetro en la parte trasera.
 
-**How it works?**
+**¿Cómo funciona?**
 
-By calling the library ``LiquidCrystal_I2C.h``, you can easily drive the LCD. 
+Al llamar a la biblioteca ``LiquidCrystal_I2C.h``, puedes manejar fácilmente el LCD.
 
 .. code-block:: arduino
 
     #include "LiquidCrystal_I2C.h"
 
-Library Functions: 
+Funciones de la Biblioteca:
 
 .. code-block:: arduino
 
     LiquidCrystal_I2C(uint8_t lcd_Addr,uint8_t lcd_cols,uint8_t lcd_rows)
 
-Creates a new instance of the ``LiquidCrystal_I2C`` class that represents a
-particular LCD attached to your Arduino board.
+Crea una nueva instancia de la clase ``LiquidCrystal_I2C`` que representa un
+LCD particular conectado a tu placa Arduino.
 
-* ``lcd_AddR``: The address of the LCD defaults to 0x27.
-* ``lcd_cols``: The LCD1602 has 16 columns.
-* ``lcd_rows``: The LCD1602 has 2 rows.
+* ``lcd_AddR``: La dirección del LCD por defecto es 0x27.
+* ``lcd_cols``: El LCD1602 tiene 16 columnas.
+* ``lcd_rows``: El LCD1602 tiene 2 filas.
 
 
 .. code-block:: arduino
 
     void init()
 
-Initialize the lcd.
+Inicializa el lcd.
 
 .. code-block:: arduino
 
     void backlight()
 
-Turn the (optional) backlight on.
+Enciende la retroiluminación (opcional).
 
 .. code-block:: arduino
 
     void nobacklight()
 
-Turn the (optional) backlight off.
+Apaga la retroiluminación (opcional).
 
 .. code-block:: arduino
 
     void display()
 
-Turn the LCD display on.
+Enciende la pantalla del LCD.
 
 .. code-block:: arduino
 
     void nodisplay()
 
-Turn the LCD display off quickly.
+Apaga rápidamente la pantalla del LCD.
 
 .. code-block:: arduino
 
     void clear()
 
-Clear display, set cursor position to zero.
+Limpia la pantalla y establece la posición del cursor en cero.
 
 .. code-block:: arduino
 
     void setCursor(uint8_t col,uint8_t row)
 
-Set the cursor position to col,row.
+Establece la posición del cursor en col, fila.
 
 .. code-block:: arduino
 
     void print(data,BASE)
 
-Prints text to the LCD.
+Imprime texto en el LCD.
 
-* ``data``: The data to print (char, byte, int, long, or string).
-* ``BASE (optional)``: The base in which to print numbers: BIN for binary (base 2), DEC for decimal (base 10), OCT for octal (base 8), HEX for hexadecimal (base 16).
+* ``data``: Los datos a imprimir (char, byte, int, long o string).
+* ``BASE (opcional)``: La base en la que imprimir números: BIN para binario (base 2), DEC para decimal (base 10), OCT para octal (base 8), HEX para hexadecimal (base 16).
+

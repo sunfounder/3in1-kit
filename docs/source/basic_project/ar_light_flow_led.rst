@@ -1,36 +1,38 @@
-6.1 Light-sensitive Array
-=====================================
+.. _ar_light_flow_led:
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits, and light- and darkness-activated switching circuits.
+6.1 Arreglo Fotosensible
+===========================
 
-The resistance of a photoresistor changes with incident light intensity. If the light intensity gets higher, the resistance decreases; if it gets lower, the resistance increases.
-In this experiment, we will use eight LEDs to show the light intensity. The higher the light intensity is, the more LEDs will light up. When the light intensity is high enough, all the LEDs will be on. When there is no light, all the LEDs will go out.
+Un fotoresistor o célula fotoeléctrica es una resistencia variable controlada por luz. La resistencia de un fotoresistor disminuye con el aumento de la intensidad de luz incidente; en otras palabras, muestra fotoconductividad. Un fotoresistor puede aplicarse en circuitos detectores sensibles a la luz, y en circuitos de conmutación activados por luz y oscuridad.
 
-**Required Components**
+La resistencia de un fotoresistor cambia con la intensidad de luz incidente. Si la intensidad de luz aumenta, la resistencia disminuye; si disminuye, la resistencia aumenta.
+En este experimento, utilizaremos ocho LED para mostrar la intensidad de la luz. Cuanto mayor sea la intensidad de luz, más LED se iluminarán. Cuando la intensidad de luz sea suficientemente alta, todos los LED estarán encendidos. Cuando no haya luz, todos los LED se apagarán.
 
-In this project, we need the following components. 
+**Componentes Necesarios**
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Para este proyecto, necesitamos los siguientes componentes.
+
+Comprar un kit completo es definitivamente conveniente, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,33 +47,33 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_6.1_light_led.png
 
-**Wiring**
+**Cableado**
 
 .. image:: img/light_control_led.png
     :width: 800
     :align: center
 
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``6.1.light_control_led.ino`` file under the path of ``3in1-kit\basic_project\6.1.light_control_led``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``6.1.light_control_led.ino`` en la ruta ``3in1-kit\basic_project\6.1.light_control_led``.
+    * O copia este código en **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/859e1688-5801-400e-9409-f844ca9b7da7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Now, shine some light on the photoresistor, and you will see several LEDs light up. Shine more light and you will see more LEDs light up. When you place it in a dark environment, all the LEDs will go out.
+Ahora, ilumina el fotoresistor y verás varios LED encenderse. Ilumina más y verás más LED encenderse. Cuando lo coloques en un ambiente oscuro, todos los LED se apagarán.
 
-**How it works?**
+**¿Cómo funciona?**
 
 
 .. code-block:: arduino
@@ -93,4 +95,5 @@ Now, shine some light on the photoresistor, and you will see several LEDs light 
         }
     }
 
-By using the ``map()`` function, you can map the photoresistor value to the 8 LEDs, for example, if sensorValue is 560, then ledLevel is 4, so at this point, ledPins[0] to ledPins[4] should be lit, and ledPins[5] to ledPins[7] should be off.
+Utilizando la función ``map()``, puedes mapear el valor del fotoresistor a los 8 LEDs, por ejemplo, si sensorValue es 560, entonces ledLevel será 4, por lo que en este punto, ledPins[0] a ledPins[4] deben estar encendidos, y ledPins[5] a ledPins[7] deben estar apagados.
+

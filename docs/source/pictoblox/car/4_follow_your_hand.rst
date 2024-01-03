@@ -1,36 +1,36 @@
 .. _sh_follow1:
 
-3.4 Follow Your Hand
+3.4 Sigue tu Mano
 ===========================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+Piensa en este coche como tu mascota, y cuando le hagas señas, vendrá corriendo hacia ti.
 
-Required Components
----------------------
+Componentes Necesarios
+-------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,18 +41,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-Build the Circuit
+Construye el Circuito
 -----------------------
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+Un módulo de sensor ultrasónico es un instrumento que mide la distancia a un objeto utilizando ondas sonoras ultrasónicas.
+Tiene dos sondas. Una es para enviar ondas ultrasónicas y la otra es para recibir las ondas y transformar el tiempo de envío y recepción en una distancia, detectando así la distancia entre el dispositivo y un obstáculo.
 
-Now build the circuit according to the following diagram.
+Ahora construye el circuito según el siguiente diagrama.
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Módulo Ultrasónico
+      - Placa R3
     * - Vcc
       - 5V
     * - Trig
@@ -65,13 +65,13 @@ Now build the circuit according to the following diagram.
 .. image:: img/car_6.png
     :width: 800
 
-Programming
+Programación
 ------------
 
-Create blocks to make the car go forward and stop.
+Crea bloques para hacer que el coche avance y se detenga.
 
 .. image:: img/4_hand1.png
 
-Put your hand in front of the car, then read the value of the ultrasonic module, if the detected distance of your hand is 5-10cm, then let the car go forward, otherwise stop.
+Pon tu mano frente al coche, luego lee el valor del módulo ultrasónico, si la distancia detectada de tu mano es de 5-10cm, entonces haz que el coche avance, de lo contrario detente.
 
 .. image:: img/4_hand2.png

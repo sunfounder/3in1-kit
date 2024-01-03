@@ -1,37 +1,37 @@
 .. _car_move_code:
 
-2. Move by Code
-======================
+2. Movimiento por Código
+==========================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L9110 module.
+En el proyecto anterior, intentamos controlar el funcionamiento del motor utilizando diferentes señales de nivel para la entrada del módulo L9110.
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
+Si modificamos las señales de nivel a través del programa, entonces podremos controlar el movimiento del coche de manera flexible.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Definitivamente es conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -41,20 +41,20 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Cableado**
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
+Conecta los cables entre el módulo L9110 y la placa R3 de acuerdo con el diagrama a continuación.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L9110 Module
-      - R3 Board
+    * - Módulo L9110
+      - Placa R3
       - Motor
     * - A-1B
       - 5
@@ -70,40 +70,40 @@ Connect the wires between the L9110 module and the R3 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - Cable negro del motor derecho
     * - OA(B)
       - 
-      - Red wire of right motor
+      - Cable rojo del motor derecho
     * - OB(A)
       - 
-      - Black wire of left motor
+      - Cable negro del motor izquierdo
     * - OA(A)
       - 
-      - Red wire of left motor
+      - Cable rojo del motor izquierdo
 
 .. image:: img/car_2.png
     :width: 800
 
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``2.move.ino`` bajo la ruta de ``3in1-kit\car_project\2.move``.
+    * O copia este código en **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
+Después de subir el código, el coche se moverá hacia adelante, hacia atrás, a la izquierda y a la derecha durante dos segundos respectivamente.
 
-**How it works?**
+**¿Cómo funciona?**
 
-This project is essentially the same as the previous one, involving making the car move forward, backward, left, and right, as well as stopping by providing different signal levels to the input pins of the L9110 module.
+Este proyecto es esencialmente el mismo que el anterior, implica hacer que el coche se mueva hacia adelante, hacia atrás, a la izquierda y a la derecha, así como detenerse proporcionando diferentes niveles de señal a los pines de entrada del módulo L9110.
 
-#. Initialize the pins of L9110 module.
+#. Inicializar los pines del módulo L9110.
 
     .. code-block:: arduino
 
@@ -119,7 +119,7 @@ This project is essentially the same as the previous one, involving making the c
             pinMode(B_1A, OUTPUT);
         }
 
-#. Set the input pins to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Establecer los pines de entrada en diferentes niveles alto o bajo para controlar la rotación de los motores izquierdo y derecho, y luego encapsularlos en funciones individuales.
 
     .. code-block:: arduino
 
@@ -137,7 +137,7 @@ This project is essentially the same as the previous one, involving making the c
             digitalWrite(B_1A, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+#. Llamar a estas funciones en ``loop()``.
 
     .. code-block:: arduino
 
@@ -153,23 +153,24 @@ This project is essentially the same as the previous one, involving making the c
             delay(500);
         ...
 
-* `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
+* `digitalWrite(pin, valor) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin``: el número de pin de Arduino.
+    * ``valor``: HIGH o LOW.
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
+    Escribe un valor HIGH o LOW en un pin digital. Si el pin ha sido configurado como ``OUTPUT`` con ``pinMode()``, su voltaje se establecerá en el valor correspondiente: 5V (o 3.3V en placas de 3.3V) para HIGH, 0V (tierra) para LOW.
 
 
-* `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
+* `pinMode(pin, modo) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin``: el número de pin de Arduino para establecer el modo.
+    * ``modo``: INPUT, OUTPUT, o INPUT_PULLUP.
     
-    Configures the specified pin to behave either as an input or an output.
+    Configura el pin especificado para comportarse ya sea como una entrada o una salida.
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms``: la cantidad de milisegundos a pausar. Tipos de datos permitidos: unsigned long.
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    Pausa el programa durante la cantidad de tiempo (en milisegundos) especificada como parámetro. (Hay 1000 milisegundos en un segundo.)
+

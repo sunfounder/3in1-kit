@@ -1,10 +1,9 @@
-Arduino Video Course
-======================
+Curso de Vídeo de Arduino
+============================
 
-Embark on a journey through the Arduino world with the comprehensive Arduino Video Course, using SunFounder's 3 in 1 starter kit. This series begins with an introduction to the Arduino ecosystem and the capabilities of the uno R3 board, setting the stage for a deep dive into practical applications and programming techniques. You'll learn the basics of controlling LEDs, understanding serial communication, and manipulating various components like RGB LEDs, buttons, and shift registers. The course also offers a variety of fun projects such as smart car projects and IoT projects. As long as you follow the course step by step, you will master Arduino, not just copy and paste code, you will write your own code and implement your Arduino projects the way you like.
+Emprende un viaje por el mundo de Arduino con el completo Curso de Vídeo de Arduino, utilizando el kit de inicio 3 en 1 de SunFounder. Esta serie comienza con una introducción al ecosistema de Arduino y las capacidades de la placa uno R3, sentando las bases para una inmersión profunda en aplicaciones prácticas y técnicas de programación. Aprenderás los conceptos básicos de controlar LEDs, entender la comunicación serial y manipular varios componentes como LEDs RGB, botones y registros de desplazamiento. El curso también ofrece una variedad de proyectos divertidos como proyectos de coches inteligentes y proyectos de IoT. Si sigues el curso paso a paso, dominarás Arduino, no solo copiando y pegando código, sino escribiendo tu propio código e implementando tus proyectos de Arduino como prefieras.
 
-**Projects**
-
+**Proyectos**
 
 .. toctree::
     :maxdepth: 1

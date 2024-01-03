@@ -1,24 +1,24 @@
 .. _play_with_scratch:
 
-Play with Scratch
+Jugar con Scratch
 ========================
 
-Besides programming on the Arduino IDE, we can also use graphical programming.
+Además de programar en Arduino IDE, también podemos utilizar la programación gráfica.
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for Arduino boards (Uno, Mega2560 and Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+Aquí recomendamos programar con Scratch, pero el Scratch oficial actualmente solo es compatible con Raspberry Pi, así que nos hemos asociado con una empresa, STEMPedia, que ha desarrollado un software de programación gráfica basado en Scratch 3 para placas Arduino (Uno, Mega2560 y Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+Mantiene las funciones básicas de Scratch 3, pero también añade control de placas como Arduino Uno, Mega, Nano, ESP32, Microbit y placas principales caseras de STEAMPedia, que pueden usar sensores externos, robots para controlar los sprites en el escenario, con fuertes capacidades de interacción con el hardware.
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+Además, cuenta con IA y aprendizaje automático, incluso si no tienes mucha base de programación, puedes aprender y usar estas tecnologías populares y de alta tecnología.
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+¡Solo arrastra y suelta los bloques de código de Scratch y crea juegos geniales, animaciones, proyectos interactivos e incluso controla robots de la manera que quieras!
 
 
-Now let's start the journey of discovery!
+Ahora, ¡comencemos el viaje de descubrimiento!
 
-**1. Get Started**
+**1. Comenzar**
 
 .. toctree::
     :maxdepth: 2
@@ -29,17 +29,17 @@ Now let's start the journey of discovery!
 
     
 
-**2. Projects**
+**2. Proyectos**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Los siguientes proyectos están escritos en orden de dificultad de programación, se recomienda leer estos libros en orden.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+En cada proyecto, hay pasos muy detallados que te enseñan cómo construir el circuito y cómo programarlo paso a paso para lograr el resultado final.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Por supuesto, también puedes abrir el script directamente para ejecutarlo, pero necesitas asegurarte de haber descargado el material relevante de `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+Una vez completada la descarga, descomprímelo. Consulta :ref:`stage_mode` para ejecutar scripts individuales directamente.
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
+Pero el :ref:`sh_humiture` usa el :ref:`upload_mode`.
 
 
 .. toctree::
@@ -70,16 +70,15 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
 
 .. _sh_car:
 
-**3. Play Car with Scratch**
+**3. Jugar con el Coche en Scratch**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+Los siguientes proyectos están escritos en orden de dificultad de programación, se recomienda leer estos libros en orden.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+En cada proyecto, hay pasos muy detallados que te enseñan cómo construir el circuito y cómo programarlo paso a paso para lograr el resultado final.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Por supuesto, también puedes abrir el script directamente para ejecutarlo, pero necesitas asegurarte de haber descargado el material relevante de `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
-
+Una vez completada la descarga, descomprímelo. Consulta :ref:`upload_mode` para ejecutar scripts individuales directamente.
 
 .. toctree::
     :maxdepth: 1

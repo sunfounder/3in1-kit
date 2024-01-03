@@ -1,15 +1,15 @@
-Video 5: Data Types and Variables
+Vídeo 5: Tipos de Datos y Variables
 =======================================================
 
-This video provides an in-depth tutorial on various data types and variables in Arduino, highlighting their declaration, memory usage, and practical applications in sketches.
+Este vídeo proporciona un tutorial detallado sobre los diferentes tipos de datos y variables en Arduino, destacando su declaración, uso de memoria y aplicaciones prácticas en bocetos.
 
-* **Understanding Data Types**: Comprehensive explanation of data types like integers, characters, floats, and Booleans in Arduino.
-* **Variable Declaration and Use**: Detailed guidance on declaring, assigning, and using variables in Arduino sketches.
-* **Numerical Data Representation**: Insights into representing numerical data as binary, hexadecimal, and decimal values.
-* **String Manipulation**: Techniques for string concatenation, conversion, and manipulation in Arduino.
-* **Special Data Types Overview**: Exploration of special data types such as bytes, unsigned characters, and words, including their storage and range.
+* **Comprensión de los Tipos de Datos**: Explicación exhaustiva de tipos de datos como enteros, caracteres, flotantes y Booleanos en Arduino.
+* **Declaración y Uso de Variables**: Orientación detallada sobre la declaración, asignación y uso de variables en bocetos de Arduino.
+* **Representación de Datos Numéricos**: Perspectivas sobre la representación de datos numéricos como valores binarios, hexadecimales y decimales.
+* **Manipulación de Cadenas**: Técnicas para la concatenación, conversión y manipulación de cadenas en Arduino.
+* **Visión General de Tipos de Datos Especiales**: Exploración de tipos de datos especiales como bytes, caracteres sin signo y palabras, incluyendo su almacenamiento y rango.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 

@@ -1,16 +1,16 @@
-Video 11: DHT11 Sensor
+Vídeo 11: Sensor DHT11
 ==========================
 
-This video provides an in-depth tutorial on Arduino libraries and practical usage of the DHT11 temperature and humidity sensor, including installation, coding, and an application example.
+Este vídeo proporciona un tutorial detallado sobre las bibliotecas de Arduino y el uso práctico del sensor de temperatura y humedad DHT11, incluyendo instalación, programación y un ejemplo de aplicación.
 
-* **Introduction to Arduino Libraries**: Explaining the concept, purpose, and installation methods of Arduino libraries.
-* **DHT11 Sensor Capabilities**: Technical specifications, including temperature and humidity range, accuracy, and operating voltage.
-* **Sensor Wiring Guide**: Step-by-step instructions on how to correctly wire the DHT11 sensor to an Arduino board.
-* **Reading Sensor Data**: Techniques for using Arduino code to read and interpret data from the DHT11 sensor.
-* **Coding Walkthrough**: Detailed explanation of the Arduino code necessary for operating the DHT11 sensor.
-* **Practical Demonstration**: Implementing a real-world application by triggering a buzzer based on temperature readings from the DHT11 sensor.
+* **Introducción a las Bibliotecas de Arduino**: Explicación del concepto, propósito y métodos de instalación de las bibliotecas de Arduino.
+* **Capacidades del Sensor DHT11**: Especificaciones técnicas, incluyendo rango de temperatura y humedad, precisión y voltaje de operación.
+* **Guía de Cableado del Sensor**: Instrucciones paso a paso sobre cómo cablear correctamente el sensor DHT11 a una placa Arduino.
+* **Lectura de Datos del Sensor**: Técnicas para usar código de Arduino para leer e interpretar datos del sensor DHT11.
+* **Explicación Detallada del Código**: Explicación detallada del código de Arduino necesario para operar el sensor DHT11.
+* **Demostración Práctica**: Implementación de una aplicación del mundo real activando un zumbador en base a las lecturas de temperatura del sensor DHT11.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This video provides an in-depth tutorial on Arduino libraries and practical usag
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_dht11`

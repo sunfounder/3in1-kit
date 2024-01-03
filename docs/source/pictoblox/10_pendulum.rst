@@ -1,44 +1,44 @@
 .. _sh_pendulum:
 
-2.10 Pendulum
+2.10 Péndulo
 =====================
 
-In this project, we will make an arrow pendulum while the servo will follow the rotation.
+En este proyecto, haremos un péndulo con forma de flecha mientras el servo sigue la rotación.
 
 .. image:: img/12_pun.png
 
-You Will Learn
+Aprenderás
 ---------------------
 
-- How the servo works and the angle range
-- Draw a sprite and put the center point on the tail.
+- Cómo funciona el servo y el rango de ángulos
+- Dibujar un sprite y colocar el punto central en la cola.
 
-Required Components
----------------------
+Componentes Necesarios
+--------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ARTÍCULOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,77 +47,75 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo` 
         - |link_servo_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-A servo is a geared motor that can only rotate 180 degrees. It is
-controlled by sending electrical pulses from your circuit board. These pulses
-tell the servo what position it should move to.
+Un servo es un motor engranado que solo puede girar 180 grados. Se
+controla enviando pulsos eléctricos desde tu placa de circuito. Estos pulsos
+le indican al servo a qué posición debe moverse.
 
-The servo has three wires: the brown wire is GND, the red one is VCC (connect to 3.3V), and the orange one is the signal wire. The angle range is 0-180.
+El servo tiene tres cables: el cable marrón es GND, el rojo es VCC (conectar a 3.3V) y el naranja es el cable de señal. El rango de ángulos es de 0-180.
 
-Now build the circuit according to the diagram below.
+Ahora construye el circuito según el diagrama a continuación.
 
 .. image:: img/circuit/servo_circuit.png
 
-Programming
+Programación
 ------------------
 
-**1. Paint a sprite**
+**1. Pintar un sprite**
 
-Delete the default sprite, select the Sprite button and click **Paint**, a blank sprite **Sprite1** will appear.
+Elimina el sprite predeterminado, selecciona el botón Sprite y haz clic en **Paint**, aparecerá un sprite en blanco **Sprite1**.
 
 .. image:: img/12_paint1.png
 
-On the open **Costumes** page, use the **Line tool** to draw an arrow.
+En la página de **Costumes** abierta, usa la **Line tool** para dibujar una flecha.
 
 .. note::
 
-    * Be sure to start drawing the arrow from the center of the canvas outward so that the arrow is turning in a circle with the center point as the origin.
-    * Hold Shift to make the line angle straight or 45 degrees.
+    * Asegúrate de comenzar a dibujar la flecha desde el centro del lienzo hacia afuera para que la flecha gire en círculo con el punto central como origen.
+    * Mantén presionado Shift para que el ángulo de la línea sea recto o de 45 grados.
 
 .. image:: img/12_paint2.png
 
-After drawing, the **arrow** sprite will be displayed on the stage, name it **arrow**. Then click on the number after **Direction**, a circular dial will appear, now drag this arrow and see if the **arrow** sprite on the stage turns with the tail as the origin.
+Después de dibujar, el sprite **arrow** se mostrará en el escenario, nómbralo **arrow**. Luego haz clic en el número después de **Direction**, aparecerá un dial circular, ahora arrastra esta flecha y observa si el sprite **arrow** en el escenario gira con la cola como origen.
 
 .. image:: img/12_paint3.png
 
-To make the **arrow** sprite swing from the left to the right, the angle range is -90 to -180, 180 to 90.
+Para hacer que el sprite **arrow** se balancee de izquierda a derecha, el rango de ángulos es de -90 a -180, 180 a 90.
 
 .. image:: img/12_paint4.png
 
 .. image:: img/12_paint5.png
 
-**2. Creating a variable**.
+**2. Crear una variable**.
 
-Create a variable called **servo**, which stores the angle value and sets the initial value to 270.
+Crea una variable llamada **servo**, que almacena el valor del ángulo y establece el valor inicial en 270.
 
 .. image:: img/12_servo.png
 
-**3. Swing from the left to the right**
+**3. Balanceo de izquierda a derecha**
 
-Now let the **arrow** sprite swing from the left -90 degree position to the right 90 degree position.
+Ahora haz que el sprite **arrow** se balancee desde la posición de -90 grados a la izquierda hasta la posición de 90 grados a la derecha.
 
-With [repeat] block, add -10 to the variable each time, and you'll get to 90 degrees in 18 passes. Then use [point in block] to make the arrow sprite turn to these angles.
+Con el bloque [repeat], suma -10 a la variable cada vez, y llegarás a 90 grados en 18 pasos. Luego usa [point in block] para hacer que el sprite de la flecha gire a estos ángulos.
 
-Since the sprite rotation angle is -180 ~ 180, angles outside this range are converted by the following conditions.
+Dado que el ángulo de rotación del sprite es de -180 ~ 180, los ángulos fuera de este rango se convierten con las siguientes condiciones.
 
-* If angle > 180, then angle -360.
+* Si el ángulo > 180, entonces ángulo -360.
 
 .. image:: img/12_servo1.png
 
-**4. Turning the Servo**
+**4. Girar el Servo**
 
-When you click on the green flag, you will see the arrow quickly turn to the right and then back to the left, so use a [wait seconds] block here to make the rotation slower. Also use the [set servo on to angle] block to make the servo connected to the Arduino board turn to a specific angle.
+Cuando hagas clic en la bandera verde, verás que la flecha gira rápidamente hacia la derecha y luego hacia la izquierda, así que usa un bloque [wait seconds] aquí para hacer la rotación más lenta. También usa el bloque [set servo on to angle] para hacer que el servo conectado a la placa Arduino gire a un ángulo específico.
 
 .. image:: img/12_servo2.png
 
-**5. Swinging from right to left**
+**5. Balanceo de derecha a izquierda**
 
-By the same method, make the servo and **arrow** sprite slowly rotate from the right to the left.
+Con el mismo método, haz que el servo y el sprite **arrow** giren lentamente de derecha a izquierda.
 
-* If angle > 180, then angle -360.
+* Si el ángulo > 180, entonces ángulo -360.
 
 .. image:: img/12_servo3.png
-
-

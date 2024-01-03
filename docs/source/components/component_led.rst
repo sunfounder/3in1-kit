@@ -6,27 +6,28 @@ LED
 .. image:: img/LED.png
     :width: 400
 
-Semiconductor light-emitting diode is a type of component which can turn electric energy into light energy via PN junctions. By wavelength, it can be categorized into laser diode, infrared light-emitting diode and visible light-emitting diode which is usually known as light-emitting diode (LED). 
-                    
-Diode has unidirectional conductivity, so the current flow will be as the arrow indicates in figure circuit symbol. You can only provide the anode with a positive power and the cathode with a negative. Thus the LED will light up. 
+El diodo emisor de luz semiconductor es un tipo de componente que puede convertir la energía eléctrica en energía lumínica a través de uniones PN. Según la longitud de onda, se puede clasificar en diodo láser, diodo emisor de luz infrarroja y diodo emisor de luz visible, comúnmente conocido como diodo emisor de luz (LED).
+
+El diodo tiene conductividad unidireccional, por lo que el flujo de corriente será como indica la flecha en el símbolo del circuito en la figura. Solo puedes proporcionar al ánodo una potencia positiva y al cátodo una negativa. Así, el LED se iluminará.
 
 .. image:: img/led_symbol.png
 
 
-An LED has two pins. The longer one is the anode, and shorter one, the cathode. Pay attention not to connect them inversely. There is fixed forward voltage drop in the LED, so it cannot be connected with the circuit directly because the supply voltage can outweigh this drop and cause the LED to be burnt. The forward voltage of the red, yellow, and green LED is 1.8 V and that of the white one is 2.6 V. Most LEDs can withstand a maximum current of 20 mA, so we need to connect a current limiting resistor in series.                   
+Un LED tiene dos pines. El más largo es el ánodo y el más corto, el cátodo. Hay que tener cuidado de no conectarlos al revés. Hay una caída de voltaje fija en el LED, por lo que no se puede conectar directamente con el circuito porque el voltaje de suministro puede superar esta caída y causar que el LED se queme. El voltaje directo del LED rojo, amarillo y verde es de 1.8 V y el del blanco es de 2.6 V. La mayoría de los LEDs pueden soportar un máximo de 20 mA, por lo que necesitamos conectar una resistencia limitadora de corriente en serie.
 
-The formula of the resistance value is as follows:
+La fórmula del valor de la resistencia es la siguiente:
 
     R = (Vsupply – VD)/I
 
-**R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
+**R** representa el valor de resistencia de la resistencia limitadora de corriente, **Vsupply** el voltaje de suministro, **VD** la caída de voltaje e **I** la corriente de trabajo del LED.
 
-Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
+Aquí está la introducción detallada del LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_blink` (Basic Project)
-* :ref:`ar_fading` (Basic Project)
-* :ref:`iot_blink` (IoT Project)
-* :ref:`sh_breathing_led` (Scratch Project)
-* :ref:`sh_table_lamp` (Scratch Project)
+* :ref:`ar_blink` (Proyecto Básico)
+* :ref:`ar_fading` (Proyecto Básico)
+* :ref:`iot_blink` (Proyecto IoT)
+* :ref:`sh_breathing_led` (Proyecto Scratch)
+* :ref:`sh_table_lamp` (Proyecto Scratch)
+

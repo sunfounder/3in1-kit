@@ -1,5 +1,5 @@
-FAQ
-==============
+Preguntas Frecuentes
+=====================
 
 .. toctree::
     :maxdepth: 2

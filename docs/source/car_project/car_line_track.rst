@@ -1,42 +1,41 @@
-
 .. _follow_the_line:
 
-4. Follow the line
+4. Seguir la línea
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+El coche está equipado con un módulo de Seguimiento de Línea, que se puede utilizar para hacer que el coche siga la línea negra.
 
-When the line following module detects the black line, the right motor rotates while the left motor does not, so that the car moves one step to the left front.
-As the car moves, the line module will be moved out of the line, then the left motor turns and the right motor does not turn, the car will move one step to the right to return to the line.
-Repeat the above two steps, the car can move along the black line.
+Cuando el módulo de seguimiento detecta la línea negra, el motor derecho rota mientras que el motor izquierdo no, de modo que el coche se mueve un paso hacia la izquierda frontal.
+A medida que el coche se mueve, el módulo de línea se desplaza fuera de la línea, entonces el motor izquierdo gira y el motor derecho no, el coche se moverá un paso hacia la derecha para volver a la línea.
+Repetir los dos pasos anteriores permite que el coche se mueva a lo largo de la línea negra.
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+Antes de comenzar el proyecto, necesitas construir un mapa curvo con cinta de línea negra, el ancho de línea recomendado está entre 0.8-1.5cm y el ángulo de giro no debe ser menor a 90 grados.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitaremos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -47,22 +46,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-**Wiring**
+**Conexión**
 
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Este es un módulo digital de Seguimiento de Línea, cuando detecta una línea negra, emite 1; cuando detecta una línea blanca, emite un valor de 0. Además, puedes ajustar su distancia de detección a través del potenciómetro en el módulo.
 
 .. raw:: html
 
     <iframe width="600" height="400" src="https://www.youtube.com/embed/mlCQgAq4elo?si=ZFmHeA6bVsDCPG0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Line Tracking Module
-      - R3 Board
+    * - Módulo de Seguimiento de Línea
+      - Placa R3
     * - S
       - 2
     * - V+
@@ -74,43 +73,43 @@ Build the circuit according to the following diagram.
     :width: 800
 
 
-**Adjust the Module**
+**Ajustar el Módulo**
 
 
-Before starting the project, you need to adjust the sensitivity of the module.
+Antes de comenzar el proyecto, necesitas ajustar la sensibilidad del módulo.
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+Conecta el cableado según el diagrama anterior, luego enciende la placa R3 (ya sea directamente en el cable USB o el cable del botón de la batería de 9V), sin subir el código.
 
-Stick a black electrical tape on the table and put the cart on it.
+Pega una cinta eléctrica negra en la mesa y coloca el carro sobre ella.
 
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+Observa el LED de señal en el módulo para asegurarte de que se ilumina en la mesa blanca y se apaga en la cinta negra.
 
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+Si no, necesitas ajustar el potenciómetro en el módulo, para que pueda hacer el efecto anterior.
 
 .. image:: img/line_track_cali.JPG
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``4.follow_the_line.ino`` file under the path of ``3in1-kit\car_project\4.follow_the_line``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``4.follow_the_line.ino`` en la ruta ``3in1-kit\car_project\4.follow_the_line``.
+    * O copia este código en el **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2779e9eb-b7b0-4d47-b8c0-78fed39828c3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+Después de subir el código a la placa R3, alinea el módulo de Seguimiento de Línea bajo el coche con la línea negra, y verás al coche siguiendo la línea.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-In this code, it is letting the two motors micro-rotate left and right according to the value of the Line Track module so that you can see the car following the black line.
+En este código, se hace que los dos motores giren microscópicamente a izquierda y derecha según el valor del módulo de Seguimiento de Línea para que puedas ver al coche siguiendo la línea negra.
 
 
-#. Add the pin definition for the Line Tracking module, here it is set to ``INPUT``. Here also initialize the serial monitor and set the baud rate to 9600bps.
+#. Añade la definición de pin para el módulo de Seguimiento de Línea, aquí está configurado como ``INPUT``. Aquí también inicializa el monitor serial y establece la tasa de baudios a 9600bps.
 
     .. code-block:: arduino
 
@@ -122,7 +121,7 @@ In this code, it is letting the two motors micro-rotate left and right according
             pinMode(lineTrack, INPUT);
         }
 
-#. Read the value of the Line Tracking module, if it is 1, then let the car go forward to the left; otherwise go forward to the right. Also you can open the serial monitor by clicking the magnifying glass icon in the upper right corner to see the change of the Line Tracking module value on the black and white line before unplugging the USB cable.
+#. Lee el valor del módulo de Seguimiento de Línea, si es 1, entonces haz que el coche avance hacia la izquierda; de lo contrario, avanza hacia la derecha. También puedes abrir el monitor serial haciendo clic en el icono de la lupa en la esquina superior derecha para ver el cambio del valor del módulo de Seguimiento de Línea en la línea negra y blanca antes de desconectar el cable USB.
 
     .. code-block:: arduino
     
@@ -139,9 +138,9 @@ In this code, it is letting the two motors micro-rotate left and right according
             }
         }
 
-#. About the ``moveLeft()`` and ``moveRight()`` functions.
+#. Acerca de las funciones ``moveLeft()`` y ``moveRight()``.
 
-    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of ``A_1A`` or ``B_1B`` each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to ``A_1A`` and all others to 0, it will make the right motor turn clockwise and the left motor not move.
+    A diferencia de la función de giro izquierda-derecha en el proyecto :ref:`car_move_code`, aquí solo se necesitan pequeños giros a izquierda y derecha, por lo que solo necesitas ajustar el valor de ``A_1A`` o ``B_1B`` cada vez. Por ejemplo, si te mueves hacia la izquierda frontal (``moveLeft()``), solo necesitas configurar la velocidad a ``A_1A`` y todos los demás a 0, hará que el motor derecho gire en el sentido de las agujas del reloj y el motor izquierdo no se mueva.
 
     .. code-block:: arduino
     
@@ -162,11 +161,11 @@ In this code, it is letting the two motors micro-rotate left and right according
 
 * `Serial <https://www.arduino.cc/reference/en/language/functions/communication/serial/>`_
 
-    Used for communication between the Arduino board and a computer or other devices
+    Usado para la comunicación entre la placa Arduino y un ordenador u otros dispositivos.
 
-    * ``Serial.begin()``: Sets the data rate in bits per second (baud) for serial data transmission.
-    * ``Serial.println()``: Prints data to the serial port as human-readable ASCII text followed by a car return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). 
+    * ``Serial.begin()``: Establece la tasa de datos en bits por segundo (baudios) para la transmisión de datos seriales.
+    * ``Serial.println()``: Imprime datos al puerto serial como texto ASCII legible seguido de un carácter de retorno de carro (ASCII 13, o '\r') y un carácter de nueva línea (ASCII 10, o '\n'). 
 
 * `if else <https://www.arduino.cc/reference/en/language/structure/control-structure/else/>`_
 
-    The ``if else`` allows greater control over the flow of code than the basic if statement, by allowing multiple tests to be grouped.
+    La estructura ``if else`` permite un mayor control sobre el flujo del código que la simple declaración if, permitiendo agrupar varias pruebas.

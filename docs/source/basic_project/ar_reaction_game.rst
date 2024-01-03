@@ -1,41 +1,43 @@
-6.5 Reaction Game
+.. _ar_reaction_game:
+
+6.5 Juego de Reacción
 ==========================
 
-Our body has many reaction times, such as audio RT, visual RT, touch RT, etc.
+Nuestro cuerpo tiene varios tiempos de reacción, como el tiempo de reacción auditivo, visual, táctil, etc.
 
-Reaction times have many effects on our daily life, for example, slower than normal reaction times when driving can lead to serious consequences.
+Los tiempos de reacción tienen muchos efectos en nuestra vida diaria, por ejemplo, un tiempo de reacción más lento de lo normal al conducir puede llevar a consecuencias graves.
 
-In this project, we use 3 buttons and 2 LEDs to measure our visual reaction time.
+En este proyecto, usamos 3 botones y 2 LEDs para medir nuestro tiempo de reacción visual.
 
-The serial monitor of the Arduino displays the message "waiting..."
-After pressing the Ready button, one of the two LEDs must light up randomly after a random time interval. It is important that the testee pushes the corresponding button as soon as possible.
-The Arduino records the time difference between when the LED lights up and when the person presses the corresponding button, and prints the measured response time on the Arduino serial monitor.
+El monitor serial de Arduino muestra el mensaje "esperando..."
+Después de presionar el botón Listo, uno de los dos LEDs debe encenderse aleatoriamente después de un intervalo de tiempo aleatorio. Es importante que el examinado presione el botón correspondiente lo más rápido posible.
+Arduino registra la diferencia de tiempo entre cuando se enciende el LED y cuando la persona presiona el botón correspondiente, e imprime el tiempo de respuesta medido en el monitor serial de Arduino.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Comprar un kit completo es definitivamente conveniente, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -50,49 +52,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/wiring_reaction_game.png
     :align: center
 
-**Wiring**
+**Cableado**
 
 .. image:: img/reaction_game.png
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\basic_project\6.5_reversingAid`` directly.
-    * Or copy this code into Arduino IDE .
+    * Puedes abrir directamente el archivo ``6.5_reaction_time.ino`` en la ruta ``3in1-kit\basic_project\6.5_reversingAid``.
+    * O copia este código en Arduino IDE.
     
-    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`install_libraries_ar`.
+    * Por favor, asegúrate de haber añadido la biblioteca ``LiquidCrystal_I2C``, para tutoriales detallados consulta :ref:`install_libraries_ar`.
 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4313dd1c-e1d2-4939-ae20-0a5b82a12390/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. Initialize the buttons and LEDs, 2 interrupt are used here to read the button status.
+#. Inicializa los botones y LEDs, se utilizan 2 interrupciones aquí para leer el estado de los botones.
 
     .. code-block:: arduino
 
         void setup()
         {
-
             ...
-
             attachInterrupt(digitalPinToInterrupt(buttonPin1), pressed1, FALLING);
             attachInterrupt(digitalPinToInterrupt(buttonPin2), pressed2, FALLING);
             ...
         }
 
-
-
-#. If the ``rstBtn`` button is pressed, the game starts again. At a random time between 2 and 5ms, make one of the LEDs light up.
+#. Si se presiona el botón ``rstBtn``, el juego comienza de nuevo. En un tiempo aleatorio entre 2 y 5ms, haz que uno de los LEDs se ilumine.
 
     .. code-block:: arduino
 
@@ -118,11 +116,11 @@ You can also buy them separately from the links below.
             delay(200);
         }
 
-    * When flag is -1 and ``rstBtn`` button is pressed, use ``random()`` function to generate a random time of 2-5s.
-    * This time is then used to control the lighting of the LEDs.
-    * Also the lighting of 2 LEDs is randomly generated by ``randomTime % 2`` with 0 and 1. If flag is 0, then LED1 is lit; if 1, then LED2 is lit.
+    * Cuando la bandera es -1 y se presiona el botón ``rstBtn``, usa la función ``random()`` para generar un tiempo aleatorio de 2-5s.
+    * Este tiempo se utiliza luego para controlar el encendido de los LEDs.
+    * Además, el encendido de los 2 LEDs se genera aleatoriamente con ``randomTime % 2`` con 0 y 1. Si la bandera es 0, se enciende el LED1; si es 1, se enciende el LED2.
 
-#. About ``pressed1()`` function
+#. Acerca de la función ``pressed1()``
 
     .. code-block:: arduino
 
@@ -141,9 +139,9 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 1 is pressed. When button 1 is pressed, if the flag is 0 at this time, the response time will be printed, otherwise the press error will be prompted.
+    Esta es la función que se activará cuando se presione el botón 1. Cuando se presiona el botón 1, si la bandera es 0 en ese momento, se imprimirá el tiempo de respuesta, de lo contrario se indicará el error de presión.
 
-#. About ``pressed2()`` function
+#. Acerca de la función ``pressed2()``
 
     .. code-block:: arduino
 
@@ -162,6 +160,5 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 2 is pressed. When button 2 is pressed, if the flag is 1 at this time, the response time will be printed, otherwise the press error will be prompted.
-
+    Esta es la función que se activará cuando se presione el botón 2. Cuando se presiona el botón 2, si la bandera es 1 en ese momento, se imprimirá el tiempo de respuesta, de lo contrario se indicará el error de presión.
 

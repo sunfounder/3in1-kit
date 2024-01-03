@@ -1,31 +1,30 @@
 .. _cpn_rgb:
 
-RGB LED
+LED RGB
 =================
 
 .. image:: img/rgb_led.png
     :width: 100
     
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+Los LEDs RGB emiten luz en varios colores. Un LED RGB empaqueta tres LEDs de rojo, verde y azul en una carcasa de plástico transparente o semitransparente. Puede mostrar varios colores cambiando el voltaje de entrada de los tres pines y superponiéndolos, lo que, según las estadísticas, puede crear 16,777,216 colores diferentes.
 
 .. image:: img/rgb_light.png
     :width: 600
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+Los LEDs RGB se pueden clasificar en ánodo común y cátodo común. En este kit, se utiliza el último. El **cátodo común**, o CC, significa conectar los cátodos de los tres LEDs. Después de conectarlo con GND y enchufar los tres pines, el LED mostrará el color correspondiente.
 
-Its circuit symbol is shown as figure.
+Su símbolo de circuito se muestra en la figura.
 
 .. image:: img/rgb_symbol.png
     :width: 300
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+Un LED RGB tiene 4 pines: el más largo es GND; los otros son Rojo, Verde y Azul. Toca su carcasa de plástico y encontrarás un corte. El pin más cercano al corte es el primer pin, marcado como Rojo, luego GND, Verde y Azul en orden.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_rgb` (Basic Project)
-* :ref:`ar_threshold` (Basic Project)
-* :ref:`sh_colorful_ball` (Scratch Project)
-
+* :ref:`ar_rgb` (Proyecto Básico)
+* :ref:`ar_threshold` (Proyecto Básico)
+* :ref:`sh_colorful_ball` (Proyecto Scratch)

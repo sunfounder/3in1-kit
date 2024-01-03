@@ -1,27 +1,26 @@
 .. _car_projects:
 
-Car Projects
-=================
+Proyectos de Coches
+======================
 
-I believe you have seen a lot of different smart robot car, their basic functions are similar, basic movement, obstacle avoidance, line following, following and control by remote control, etc..
+Creo que has visto muchos diferentes coches robot inteligentes, cuyas funciones básicas son similares, como movimiento básico, evasión de obstáculos, seguimiento de línea, seguimiento y control por control remoto, etc.
 
-Here, we use the simplest structure to build a smart robot car, which can also achieve all the above functions. In addition you can control it with your cell phone, please refer to :ref:`iot_car` for the tutorial.
+Aquí, utilizamos la estructura más simple para construir un coche robot inteligente, que también puede lograr todas las funciones mencionadas. Además, puedes controlarlo con tu teléfono móvil, por favor consulta :ref:`iot_car` para el tutorial.
 
-**assembly instructions**
+**instrucciones de ensamblaje**
 
 .. toctree::
     :maxdepth: 1
 
     car_assemble
 
+**Proyectos**
 
-**Projects**
+Aquí hay algunos proyectos para el coche, programados en C con el Arduino IDE, si no estás particularmente capacitado con Arduino, puedes consultar :ref:`get_start_arduino_ide`.
 
-Here are some projects for the car, programmed in C with the Arduino IDE, if you are not particularly skilled with Arduino, you can refer to :ref:`get_start_arduino_ide`.
+Los siguientes proyectos están escritos en orden de dificultad de programación, se recomienda leer estos libros en orden.
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
-
-If you want to program a car with Scratch, please refer to: :ref:`play_with_scratch`.
+Si quieres programar un coche con Scratch, por favor consulta: :ref:`play_with_scratch`.
 
 .. toctree::
     :maxdepth: 2
@@ -37,11 +36,3 @@ If you want to program a car with Scratch, please refer to: :ref:`play_with_scra
     car_remote_control
     car_remote_control_plus
     car_speed_calibration
-
-
-
-
-
-
-
-

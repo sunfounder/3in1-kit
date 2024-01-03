@@ -1,35 +1,35 @@
 .. _ar_pump:
 
-1.4 Pumping
+1.4 Bombeo
 ===================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+La bomba de agua también es un motor, que convierte la energía mecánica del motor u otra energía externa a través de una estructura especial para transportar el líquido.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,11 +40,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-**Wiring**
+**Cableado**
 
 
 .. image:: img/1.4_pumping_l9110_bb.png
@@ -52,18 +52,18 @@ You can also buy them separately from the links below.
     :align: center
 
 
-**Code**
+**Código**
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\basic_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * Puedes abrir el archivo ``1.4.pumping.ino`` en la ruta ``3in1-kit\basic_project\1.4.pumping``. 
+   * O copia este código en **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f829508f-2475-4de6-bc2f-ab0a68d707b1/preview?F=undefined?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+Agrega el tubo a la bomba y colócala en la cuenca. Después de cargar el código con éxito, podrás ver que el agua en la cuenca se drena después de un tiempo.
+¡Al realizar este experimento, mantén el circuito alejado del agua para evitar cortocircuitos!

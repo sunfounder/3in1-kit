@@ -1,16 +1,16 @@
-Video 17: Interrupts and LDR 
+Vídeo 17: Interrupciones y LDR 
 ==============================
 
-Explore the functionalities of Arduino interrupts and Light-Dependent Resistors (LDRs) to build smart day/night detection projects.
+Explora las funcionalidades de las interrupciones de Arduino y los Resistores Dependientes de la Luz (LDR) para construir proyectos inteligentes de detección día/noche.
 
-* **Arduino Interrupts Explained**: Delve into the mechanics of Arduino interrupts for more efficient coding.
-* **Effective Use of Interrupt Pins**: Learn which Arduino pins support interrupts and how to use them.
-* **Practical Interrupt Setup**: Demonstrates setting up a push button and buzzer to work with Arduino interrupts.
-* **Introduction to LDRs**: Discover how LDRs change resistance based on light and their applications.
-* **LDR Measurement Techniques**: Learn how to measure LDR resistance in various lighting conditions using a multimeter.
-* **Day/Night Detection Projects**: Implement LDR-based projects for automatic switching of devices like buzzers or lights based on light intensity.
+* **Explicación de Interrupciones en Arduino**: Profundiza en la mecánica de las interrupciones de Arduino para una codificación más eficiente.
+* **Uso Efectivo de Pines de Interrupción**: Aprende qué pines de Arduino admiten interrupciones y cómo utilizarlos.
+* **Configuración Práctica de Interrupciones**: Demuestra cómo configurar un botón pulsador y un zumbador para trabajar con interrupciones de Arduino.
+* **Introducción a los LDRs**: Descubre cómo los LDRs cambian su resistencia en función de la luz y sus aplicaciones.
+* **Técnicas de Medición de LDRs**: Aprende a medir la resistencia de los LDRs en diversas condiciones de iluminación utilizando un multímetro.
+* **Proyectos de Detección Día/Noche**: Implementa proyectos basados en LDR para el cambio automático de dispositivos como zumbadores o luces en función de la intensidad de la luz.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ Explore the functionalities of Arduino interrupts and Light-Dependent Resistors 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_interrupt`

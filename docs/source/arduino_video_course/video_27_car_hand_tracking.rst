@@ -1,16 +1,16 @@
-Video 27: Smart Car Hand Tracking
-==================================
+Vídeo 27: Seguimiento de Mano en Coche Inteligente
+======================================================
 
-In the tutorial, you will learn how to program a smart car to follow hand movements using Arduino, infrared and ultrasonic sensors.
+En este tutorial, aprenderás a programar un coche inteligente para que siga los movimientos de la mano utilizando Arduino, sensores infrarrojos y ultrasónicos.
 
-* **Smart Car Hand-Following Feature**: Overview of the car's ability to track and follow hand movements.
-* **Sensor Integration for Detection**: Utilizing infrared and ultrasonic sensors for hand position and distance detection.
-* **Detailed Wiring Guide**: Step-by-step instructions on correctly wiring the sensors to the Arduino board.
-* **Comprehensive Code Walkthrough**: Explaining the Arduino code for processing sensor inputs and controlling the car.
-* **Responsive Motor Control**: Adjusting the car's motor responses based on sensor data for precise movement.
-* **Code Optimization for Accuracy**: Fine-tuning the code to ensure reliable and consistent sensor readings.
+* **Función de Seguimiento de Mano del Coche Inteligente**: Visión general de la capacidad del coche para rastrear y seguir movimientos de la mano.
+* **Integración de Sensores para Detección**: Uso de sensores infrarrojos y ultrasónicos para la detección de la posición y distancia de la mano.
+* **Guía Detallada de Cableado**: Instrucciones paso a paso para el cableado correcto de los sensores a la placa Arduino.
+* **Explicación Completa del Código**: Explicación del código de Arduino para procesar las entradas de los sensores y controlar el coche.
+* **Control Responsivo del Motor**: Ajuste de las respuestas del motor del coche basado en los datos de los sensores para un movimiento preciso.
+* **Optimización del Código para Precisión**: Ajuste fino del código para asegurar lecturas de sensores fiables y consistentes.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ In the tutorial, you will learn how to program a smart car to follow hand moveme
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`follow_your_hand`

@@ -1,39 +1,39 @@
 .. _ar_beep:
 
-1.2 Beep
+1.2 Pitido
 ==================
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+¡El zumbador activo es un dispositivo típico de salida digital tan fácil de usar como encender un LED!
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+El kit incluye dos tipos de zumbadores.
+Necesitamos usar el zumbador activo. Gíralos, la parte sellada (no la PCB expuesta) es la que queremos.
 
 .. image:: img/buzzer.png
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,29 +45,29 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_1.2_beep.png
 
 
-**Wiring**
+**Cableado**
 
 .. image:: img/wiring_active_buzzer.png
     :width: 400
     :align: center
 
-**Code**
+**Código**
 
 
 .. note::
 
-   * You can open the file ``1.2.beep.ino`` under the path of ``3in1-kit\basic_project\1.2.beep``. 
-   * Or copy this code into **Arduino IDE**.
+   * Puedes abrir el archivo ``1.2.beep.ino`` en la ruta ``3in1-kit\basic_project\1.2.beep``. 
+   * O copia este código en **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/95570ca2-11c6-404c-a23f-bf03094d8085/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Después de cargar el código con éxito, escucharás un pitido cada segundo.

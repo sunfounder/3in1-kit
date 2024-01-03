@@ -1,45 +1,45 @@
 .. _sh_balloon:
 
-2.14 GAME - Inflating the Balloon
+2.14 JUEGO - Inflando el Globo
 =========================================
 
-Here, we will play a game of ballooning.
+Aquí, jugaremos un juego de inflar globos.
 
-After clicking the green flag, the balloon will become bigger and bigger. If the balloon is too big, it will be blown up; if the balloon is too small, it will fall down; you need to judge when to press the button to make it fly upwards.
+Después de hacer clic en la bandera verde, el globo se hará más y más grande. Si el globo es demasiado grande, explotará; si es demasiado pequeño, caerá; debes juzgar cuándo presionar el botón para hacerlo ascender.
 
 .. image:: img/13_balloon0.png
 
-You Will Learn
+Aprenderás
 ---------------------
 
-- Paint costume for the sprite
+- Pintar un disfraz para el sprite
 
-Required Components
----------------------
+Componentes Necesarios
+------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,73 +54,70 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+El botón es un dispositivo de 4 pines, ya que el pin 1 está conectado al pin 2, y el pin 3 al pin 4, cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Conecta uno de los pines del lado izquierdo del botón al pin 12, que está conectado a una resistencia de pull-down y un condensador de 0.1uF (104) (para eliminar el jitter y emitir un nivel estable cuando el botón esté en funcionamiento).
+* Conecta el otro extremo de la resistencia y el condensador a GND, y uno de los pines del lado derecho del botón a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programación
 ------------------
 
-**1. Add a sprite and a backdrop**
+**1. Añadir un sprite y un fondo**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, then select the **Balloon1** sprite.
+Elimina el sprite por defecto, haz clic en el botón **Choose a Sprite** en la esquina inferior derecha del área de sprites y selecciona el sprite **Balloon1**.
 
 .. image:: img/13_balloon1.png
 
-Add a **Boardwalk** backdrop via the **Choose a backdrop** button, or other backbackdrops you like.
+Añade un fondo **Boardwalk** a través del botón **Choose a backdrop**, o cualquier otro fondo que te guste.
 
 .. image:: img/13_balloon2.png
 
-**2. Paint a costume for the Balloon1 sprite**
+**2. Pintar un disfraz para el sprite Balloon1**
 
-Now let's draw an exploding effect costume for the balloon sprite.
+Ahora vamos a dibujar un disfraz de efecto explosión para el sprite del globo.
 
-Go to the **Costumes** page for the **Balloon1** sprite, click the **Choose a Costume** button in the bottom left corner, and select **Paint** to bring up a blank **Costume**.
+Ve a la página **Costumes** para el sprite **Balloon1**, haz clic en el botón **Choose a Costume** en la esquina inferior izquierda y selecciona **Paint** para mostrar un **Costume** en blanco.
 
 .. image:: img/13_balloon7.png
 
-Select a color and then use the **Brush** tool to draw a pattern.
+Selecciona un color y luego usa la herramienta **Brush** para dibujar un patrón.
 
 .. image:: img/13_balloon3.png
 
-Select a color again, click the Fill tool, and move the mouse inside the pattern to fill it with a color.
+Selecciona un color de nuevo, haz clic en la herramienta de Rellenar y mueve el ratón dentro del patrón para llenarlo de color.
 
 .. image:: img/13_balloon4.png
 
-Finally, write the text BOOM, so that an explosion effect costume is complete.
+Finalmente, escribe el texto BOOM, para que el disfraz de efecto explosión esté completo.
 
 .. image:: img/13_balloon5.png
 
-**3. Scripting the Balloon sprite**
+**3. Programar el sprite del Globo**
 
-Set the initial position and size of the **Balloon1** sprite.
+Establece la posición y tamaño iniciales del sprite **Balloon1**.
 
 .. image:: img/13_balloon6.png
 
-Then let the **Balloon** sprite slowly get bigger.
+Luego, haz que el sprite **Balloon** se haga más grande lentamente.
 
 .. image:: img/13_balloon8.png
 
-When the button is pressed (value is 1), the size of the **Balloon1** sprite stops getting bigger.
+Cuando se presiona el botón (valor es 1), el tamaño del sprite **Balloon1** deja de aumentar.
 
-* When the size is less than 90, it will fall (y coordinate decreases).
-* When the size is bigger than 90 and smaller than 120, it will fly to the sky (y coordinate increases).
+* Cuando el tamaño es menor de 90, caerá (la coordenada y disminuye).
+* Cuando el tamaño es mayor de 90 y menor de 120, volará hacia el cielo (la coordenada y aumenta).
 
 .. image:: img/13_balloon9.png
 
-If the button has not been pressed, the balloon slowly gets bigger and when the size is bigger than 120, it will explode (switch to the explode effect costume).
+Si no se ha presionado el botón, el globo se hace más grande lentamente y cuando el tamaño supera los 120, explotará (cambia al disfraz de efecto de explosión).
 
 .. image:: img/13_balloon10.png
-
-
-

@@ -1,17 +1,16 @@
-Video 30: Smart Car Line Tracking
-==================================
+Vídeo 30: Seguimiento de Línea en Coche Inteligente
+=======================================================
 
-This tutorial explores how to program an Arduino smart car for line tracking using infrared sensors.
+Este tutorial explora cómo programar un coche inteligente Arduino para el seguimiento de línea usando sensores infrarrojos.
 
-* **Introduction to Line Tracking**: Understanding the basics of line tracking in Arduino smart cars.
-* **Line Tracking Sensor Details**: Insights into the infrared transmitter and receiver module used for line tracking.
-* **Sensor Adjustment for Accuracy**: Tips on adjusting the sensor for precise line detection.
-* **Arduino Code Walkthrough**: Detailed explanation of the code that governs the car's line tracking ability.
-* **Demonstrating Sensor Values**: How the Arduino differentiates between black and white surfaces using the sensor.
-* **Real-World Line Tracking Demo**: Showing the practical application of line tracking in an Arduino car.
+* **Introducción al Seguimiento de Línea**: Comprensión de los fundamentos del seguimiento de línea en coches inteligentes Arduino.
+* **Detalles del Sensor de Seguimiento de Línea**: Información sobre el módulo de transmisor y receptor infrarrojo utilizado para el seguimiento de línea.
+* **Ajuste del Sensor para Precisión**: Consejos sobre cómo ajustar el sensor para una detección precisa de la línea.
+* **Explicación Detallada del Código**: Explicación detallada del código que rige la capacidad de seguimiento de línea del coche.
+* **Demostración de Valores del Sensor**: Cómo el Arduino diferencia entre superficies negras y blancas usando el sensor.
+* **Demostración Práctica de Seguimiento de Línea**: Mostrando la aplicación práctica del seguimiento de línea en un coche Arduino.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,6 +18,6 @@ This tutorial explores how to program an Arduino smart car for line tracking usi
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`follow_the_line`

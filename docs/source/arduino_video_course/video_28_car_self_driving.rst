@@ -1,16 +1,16 @@
-Video 28: Smart Car Self-Driving 
+Vídeo 28: Coche Inteligente Autónomo 
 ====================================
 
-Learn how to create a simple self-driving car using Arduino, complete with ultrasonic and infrared sensors for navigation and obstacle avoidance.
+Aprende a crear un coche autónomo sencillo usando Arduino, completo con sensores ultrasónicos e infrarrojos para la navegación y la evitación de obstáculos.
 
-* **Project Introduction**: Overview of making a self-driving car with Arduino.
-* **Sensor Integration**: Using ultrasonic and infrared sensors for navigation and obstacle detection.
-* **Detailed Code Breakdown**: Explaining the Arduino code that controls the car's movements in response to sensor data.
-* **Motor and Sensor Setup**: Configuring Arduino pins for motor control and sensor inputs.
-* **Movement Logic via Code**: Implementing conditional statements in the code for intelligent car movements.
-* **Code Functionality Testing**: Observing the car's response to obstacles and its navigation capabilities through the serial monitor.
+* **Introducción al Proyecto**: Visión general de la creación de un coche autónomo con Arduino.
+* **Integración de Sensores**: Uso de sensores ultrasónicos e infrarrojos para la navegación y detección de obstáculos.
+* **Desglose Detallado del Código**: Explicación del código de Arduino que controla los movimientos del coche en respuesta a los datos de los sensores.
+* **Configuración de Motores y Sensores**: Configuración de los pines de Arduino para el control del motor y las entradas de los sensores.
+* **Lógica de Movimiento a través del Código**: Implementación de declaraciones condicionales en el código para movimientos inteligentes del coche.
+* **Pruebas de Funcionalidad del Código**: Observación de la respuesta del coche a los obstáculos y sus capacidades de navegación a través del monitor serial.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ Learn how to create a simple self-driving car using Arduino, complete with ultra
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`self_driving`

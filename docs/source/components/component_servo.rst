@@ -6,25 +6,22 @@ Servo
 .. image:: img/servo.png
     :align: center
 
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.  
+Un servo generalmente está compuesto por las siguientes partes: carcasa, eje, sistema de engranajes, potenciómetro, motor de corriente continua (DC) y placa integrada.
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then motivates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+Funciona de la siguiente manera: El microcontrolador envía señales PWM al servo, y luego la placa integrada en el servo recibe las señales a través del pin de señal y controla el motor interno para que gire. Como resultado, el motor acciona el sistema de engranajes y luego motiva el eje después de la desaceleración. El eje y el potenciómetro del servo están conectados entre sí. Cuando el eje gira, acciona el potenciómetro, por lo que el potenciómetro emite una señal de voltaje a la placa integrada. Luego, la placa determina la dirección y velocidad de rotación según la posición actual, para poder detenerse exactamente en la posición definida y mantenerse allí.
 
 .. image:: img/servo_internal.png
     :align: center
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position).
-When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+El ángulo está determinado por la duración de un pulso que se aplica al cable de control. Esto se llama Modulación por Ancho de Pulso (PWM). El servo espera ver un pulso cada 20 ms. La longitud del pulso determinará cuánto gira el motor. Por ejemplo, un pulso de 1.5 ms hará que el motor gire a la posición de 90 grados (posición neutral).
+Cuando se envía un pulso a un servo que es menor a 1.5 ms, el servo gira a una posición y mantiene su eje de salida algunos grados en sentido antihorario desde el punto neutral. Cuando el pulso es más ancho que 1.5 ms ocurre lo opuesto. El ancho mínimo y máximo de pulso que comandará al servo para girar a una posición válida son funciones de cada servo. Generalmente, el pulso mínimo será de aproximadamente 0.5 ms de ancho y el máximo de 2.5 ms de ancho.
 
 .. image:: img/servo_duty.png
     :width: 600
     :align: center
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_servo` (Basic Project)
-* :ref:`iot_gate` (IoT Project)
-* :ref:`sh_pendulum` (Scratch Project)
-
-
-
+* :ref:`ar_servo` (Proyecto Básico)
+* :ref:`iot_gate` (Proyecto IoT)
+* :ref:`sh_pendulum` (Proyecto Scratch)

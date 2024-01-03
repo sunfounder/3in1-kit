@@ -1,16 +1,16 @@
-Video 14: millis() and map()
+Vídeo 14: millis() y map()
 ==============================
 
-This tutorial focuses on using millis() for time tracking and map() for value conversion in Arduino, showcasing practical applications like timed button responses and LED brightness control.
+Este tutorial se centra en el uso de millis() para el seguimiento del tiempo y map() para la conversión de valores en Arduino, mostrando aplicaciones prácticas como respuestas temporizadas de botones y control de brillo de LED.
 
-* **Millis Functionality**: millis() as a time-keeping function in Arduino, starting from zero at program run and incrementing every millisecond.
-* **Timed Events with millis()**: How to utilize millis() for executing events at specific time intervals without halting the entire program, unlike delay().
-* **Button Press Timing**: Example of using millis() to detect a button press and execute an action after a set duration.
-* **Map Function Introduction**: Introduction to the map() function, which is used for converting numerical values from one range to another.
-* **LED Brightness Adjustment**: Practical demonstration of using map() to adjust LED brightness levels by mapping percentage values to the PWM range.
-* **Efficient Coding with millis() and map()**: Showcasing efficient Arduino coding practices by combining millis() for non-blocking timing and map() for intuitive value conversion.
+* **Funcionalidad de Millis**: millis() como una función de cronometraje en Arduino, comenzando desde cero al ejecutar el programa e incrementándose cada milisegundo.
+* **Eventos Temporizados con millis()**: Cómo utilizar millis() para ejecutar eventos en intervalos de tiempo específicos sin detener todo el programa, a diferencia de delay().
+* **Temporización de Pulsación de Botón**: Ejemplo de uso de millis() para detectar una pulsación de botón y ejecutar una acción después de una duración establecida.
+* **Introducción a la Función map()**: Introducción a la función map(), que se utiliza para convertir valores numéricos de un rango a otro.
+* **Ajuste de Brillo de LED**: Demostración práctica del uso de map() para ajustar los niveles de brillo de un LED mapeando valores porcentuales al rango PWM.
+* **Codificación Eficiente con millis() y map()**: Presentación de prácticas de codificación eficientes en Arduino combinando millis() para temporización no bloqueante y map() para conversión intuitiva de valores.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 

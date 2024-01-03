@@ -1,50 +1,50 @@
 .. _sh_doorbell:
 
-2.6 Doorbell
+2.6 Timbre
 ======================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+Aquí, usaremos el botón y la campana en el escenario para hacer un timbre.
 
 
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+Después de hacer clic en la bandera verde, puedes presionar el botón y la campana en el escenario hará un sonido.
 
 .. image:: img/7_doorbell.png
 
-You Will Learn
+Aprenderás
 ---------------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- Cómo funciona el botón
+- Lectura del pin digital y rangos
+- Creación de un bucle condicional
+- Añadir un fondo
+- Reproducir sonido
 
-Required Components
----------------------
+Componentes Necesarios
+--------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,50 +59,50 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_capacitor`
         - |link_capacitor_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+El botón es un dispositivo de 4 pines, dado que el pin 1 está conectado al pin 2, y el pin 3 al pin 4, cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Conecta uno de los pines del lado izquierdo del botón al pin 12, que está conectado a una resistencia de pull-down y un capacitor de 0.1uF (104) (para eliminar la oscilación y emitir un nivel estable cuando el botón está funcionando).
+* Conecta el otro extremo de la resistencia y el capacitor a GND, y uno de los pines del lado derecho del botón a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programación
 ------------------
 
-**1. Add a Backdrop**
+**1. Añadir un Fondo**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+Haz clic en el botón **Choose a Backdrop** en la esquina inferior derecha.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+Elige **Bedroom 1**.
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. Seleccionar el sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Elimina el sprite predeterminado, haz clic en el botón **Choose a Sprite** en la esquina inferior derecha del área de sprites, introduce **bell** en la caja de búsqueda y luego haz clic para añadirla.
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+Luego selecciona el sprite **bell** en el escenario y muévelo a la posición correcta.
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. Presionar el botón y la campana hace un sonido**
 
 
-Use [if then] to make a conditional statement that when the value of the pin12 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
+Usa [if then] para hacer una declaración condicional que cuando el valor del pin12 leído sea igual a 1 (se presiona el botón), se reproduzca el sonido **xylo1**.
 
-* [read status of digital pin]: This block is from the **Arduino Uno** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: from the Sound palette, used to play specific sounds.
+* [read status of digital pin]: Este bloque es de la paleta **Arduino Uno** y se utiliza para leer el valor de un pin digital, el resultado es 0 o 1.
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: Este bloque es un bloque de control y de la paleta **Control**. Si su condición booleana es verdadera, los bloques que contiene se ejecutarán y luego el script involucrado continuará. Si la condición es falsa, se ignorarán los scripts dentro del bloque. La condición solo se verifica una vez; si la condición se vuelve falsa mientras el script dentro del bloque se está ejecutando, seguirá ejecutándose hasta que haya terminado.
+* [play sound until done]: de la paleta de Sonido, se utiliza para reproducir sonidos específicos.
 
 .. image:: img/7_bell.png

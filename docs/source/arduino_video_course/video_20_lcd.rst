@@ -1,17 +1,16 @@
-Video 20: LCD 1602
+Vídeo 20: LCD 1602
 ==================================
 
-This comprehensive tutorial delves into using the Arduino LCD 1602 for displaying various sensor data, including temperature, humidity, and distance.
+Este tutorial completo profundiza en el uso del LCD 1602 de Arduino para mostrar varios datos de sensores, incluyendo temperatura, humedad y distancia.
 
-* **LCD 1602 Basics**: Introduction to the features and capabilities of the LCD 1602.
-* **I2C Module Usage**: Simplifying LCD connections with the I2C module and its wiring setup.
-* **LCD Address Configuration**: How to correctly set and identify the I2C address for the LCD.
-* **Arduino Library Setup**: Guidance on installing the necessary library for LCD integration.
-* **Displaying Text and Characters**: Demonstrating basic text display and custom character creation on the LCD.
-* **Sensor Integration**: Showcasing the integration of DHT temperature sensor, potentiometer, and ultrasonic sensor with the LCD for real-time data display.
+* **Fundamentos del LCD 1602**: Introducción a las características y capacidades del LCD 1602.
+* **Uso del Módulo I2C**: Simplificación de las conexiones del LCD con el módulo I2C y su configuración de cableado.
+* **Configuración de la Dirección del LCD**: Cómo configurar e identificar correctamente la dirección I2C para el LCD.
+* **Configuración de la Biblioteca de Arduino**: Orientación sobre la instalación de la biblioteca necesaria para la integración del LCD.
+* **Mostrando Texto y Caracteres**: Demostración de la visualización básica de texto y la creación de caracteres personalizados en el LCD.
+* **Integración de Sensores**: Exhibición de la integración del sensor de temperatura DHT, potenciómetro y sensor ultrasónico con el LCD para la visualización de datos en tiempo real.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,7 +18,7 @@ This comprehensive tutorial delves into using the Arduino LCD 1602 for displayin
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_lcd1602`
 * :ref:`ar_serial_read`

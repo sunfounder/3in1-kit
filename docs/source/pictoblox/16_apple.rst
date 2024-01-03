@@ -1,40 +1,40 @@
 .. _sh_eat_apple:
 
-2.16 GAME - Eat Apple
+2.16 JUEGO - Comer Manzana
 ==============================
 
-In this project, we play a game that uses button to control Beetle to eat apple.
+En este proyecto, jugamos un juego que usa un botón para controlar a un Escarabajo para que coma una manzana.
 
-When the green flag is clicked, press the button and Beetle will rotate, press the button again and Beetle stops running and goes forward at that angle. You need to control the angle of Beetle so that it moves forward without touching the black line on the map until it eats the apple. If it touches the black line, the game is over.
+Cuando se hace clic en la bandera verde, presiona el botón y el Escarabajo girará; presiona el botón de nuevo y el Escarabajo se detendrá, avanzando en ese ángulo. Debes controlar el ángulo del Escarabajo para que avance sin tocar la línea negra en el mapa hasta que coma la manzana. Si toca la línea negra, el juego termina.
 
 .. image:: img/14_apple.png
 
-Required Components
----------------------
+Componentes Necesarios
+------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -49,95 +49,93 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+Construir el Circuito
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+El botón es un dispositivo de 4 pines, ya que el pin 1 está conectado al pin 2, y el pin 3 al pin 4, cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Construye el circuito según el siguiente diagrama.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Conecta uno de los pines del lado izquierdo del botón al pin 12, que está conectado a una resistencia de pull-down y un condensador de 0.1uF (104) (para eliminar el jitter y emitir un nivel estable cuando el botón esté en funcionamiento).
+* Conecta el otro extremo de la resistencia y el condensador a GND, y uno de los pines del lado derecho del botón a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programación
 ------------------
-The effect we want to achieve is to use the button to control the direction of the **Beetle** sprite to move forward and eat the apple without touching the black line on the **Maze** backdrop, which will switch the backdrop when eaten.
 
-Now add the relevant backdrops and sprites.
+El efecto que queremos lograr es usar el botón para controlar la dirección del sprite **Beetle** para avanzar y comer la manzana sin tocar la línea negra en el fondo **Maze**, lo que cambiará el fondo cuando se coma la manzana.
 
-**1. Adding backdrops and sprites**
+Ahora añade los fondos y sprites relevantes.
 
-Add a **Maze** backdrop via the **Choose a backdrop** button.
+**1. Añadir fondos y sprites**
+
+Añade un fondo **Maze** a través del botón **Choose a backdrop**.
 
 .. image:: img/14_backdrop.png
 
-Delete the default sprite, then select the **Beetle** sprite.
+Elimina el sprite por defecto, luego selecciona el sprite **Beetle**.
 
 .. image:: img/14_sprite.png
 
-Place the **Beetle** sprite at the entrance of the **Maze** backdrop, remembering the x,y coordinate values at this point, and resize the sprite to 40%.
+Coloca el sprite **Beetle** en la entrada del fondo **Maze**, recordando los valores de las coordenadas x, y en este punto, y redimensiona el sprite al 40%.
 
 .. image:: img/14_sprite1.png
 
-**2. Draw a backdrop**
+**2. Dibujar un fondo**
 
-Now it's time to simply draw a backdrop with the WIN! character appearing on it.
+Ahora es el momento de dibujar simplemente un fondo con el personaje ¡GANAR! apareciendo en él.
 
-First click on the backdrop thumbnail to go to the **Backdrops** page and click on the blank backdrop1.
+Primero haz clic en la miniatura del fondo para ir a la página **Backdrops** y haz clic en el fondo en blanco1.
 
 .. image:: img/14_paint_back.png
     :width: 800
 
-Now start drawing, you can refer to the picture below to draw, or you can draw a backdrop on your own, as long as the expression is winning.
+Ahora comienza a dibujar, puedes referirte a la imagen de abajo para dibujar, o puedes dibujar un fondo propio, siempre y cuando la expresión sea de victoria.
 
-* Using the **Circle** tool, draw an ellipse with the color set to red and no outline.
-* Then use the **Text** tool, write the character \"WIN!\", set the character color to black, and adjust the size and position of the character.
-* Name the backdrop as **Win**.
+* Utilizando la herramienta **Circle**, dibuja una elipse con el color establecido en rojo y sin contorno.
+* Luego usa la herramienta **Text**, escribe el personaje \"WIN!\", establece el color del personaje en negro, y ajusta el tamaño y la posición del personaje.
+* Nombra el fondo como **Win**.
 
 .. image:: img/14_win.png
 
-**3. Scripting for the backdrop**
+**3. Programación para el fondo**
 
-The backdrop needs to be switched to **Maze** every time the game starts.
+El fondo debe cambiarse a **Maze** cada vez que comienza el juego.
 
 .. image:: img/14_switchback.png
 
-**4. Writing scripts for the sprite Beetle**
+**4. Escribir scripts para el sprite Escarabajo**
 
-Now write a script for the sprite **Beetle** to be able to move forward and turn direction under the control of a button. The workflow is as follows.
+Ahora escribe un script para el sprite **Beetle** para poder avanzar y cambiar de dirección bajo el control de un botón. El flujo de trabajo es el siguiente.
 
-* When the green flag is clicked, set the **Beetle** angle to 90, and the position to (-134, -134), or replace it with the coordinate value of your own placed position. Create the variable **flag** and set the initial value to -1.
+* Cuando se hace clic en la bandera verde, establece el ángulo del **Beetle** en 90, y la posición en (-134, -134), o reemplázalo con el valor de coordenada de tu propia posición colocada. Crea la variable **flag** y establece el valor inicial en -1.
 
 .. image:: img/14_bee1.png
 
-Next, in the [forever] block, four [if] blocks are used to determine various possible scenarios.
+A continuación, en el bloque [forever], se utilizan cuatro bloques [if] para determinar varios escenarios posibles.
 
-* If the key is 1 (pressed), use the [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] block to toggle the value of the variable **flag** between 0 and 1 (alternating between 0 for this press and 1 for the next press).
+* Si la clave es 1 (presionada), usa el bloque [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] para alternar el valor de la variable **flag** entre 0 y 1 (alternando entre 0 para esta pulsación y 1 para la siguiente).
 
 .. image:: img/14_bee2.png
 
-* If flag=0 (this key press), let the **Beetle** sprite turn clockwise. Then determine if flag is equal to 1 (key pressed again), the **Beetle** sprite moves forward. Otherwise, it keeps turning clockwise.
+* Si bandera=0 (esta pulsación de tecla), deja que el sprite **Beetle** gire en el sentido de las agujas del reloj. Luego determina si bandera es igual a 1 (tecla presionada de nuevo), el sprite **Beetle** se mueve hacia adelante. De lo contrario, sigue girando en el sentido de las agujas del reloj.
 
 .. image:: img/14_bee3.png
 
-* If the Beetle sprite touches black (the black line on the **Maze** backdrop), the game ends and the script stops running.
+* Si el sprite Escarabajo toca negro (la línea negra en el fondo **Maze**), el juego termina y el script deja de ejecutarse.
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the color of the black line on the stage. If you choose a black arbitrarily, this [Touch color] block will not work.
+    Necesitas hacer clic en el área de color en el bloque [Touch color], y luego seleccionar la herramienta gotero para recoger el color de la línea negra en el escenario. Si eliges un negro arbitrariamente, este bloque [Touch color] no funcionará.
 
 
 .. image:: img/14_bee5.png
 
-* If Beetle touches red (Also use the straw tool to pick up the red color of the apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
+* Si el Escarabajo toca rojo (También usa la herramienta pajita para recoger el color rojo de la manzana), el fondo cambiará a **Win**, lo que significa que el juego tiene éxito y detiene la ejecución del script.
 
 
 .. image:: img/14_bee4.png
-
-
-
 

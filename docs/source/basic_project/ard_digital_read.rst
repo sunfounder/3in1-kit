@@ -1,39 +1,39 @@
 .. _ar_digital_read:
 
-3. Digital Read
+3. Lectura Digital
 ===================
 
-Sensors capture real-world information, which is then communicated to the main board via pins (some digital, some analog) so that the computer can know the reality of the situation.
+Los sensores capturan información del mundo real, que luego se comunica a la placa principal a través de pines (algunos digitales, otros analógicos) para que la computadora pueda conocer la realidad de la situación.
 
-Therefore, the Arduino board can know the working status of digital sensors by reading the value of digital pins like buttons, IR obstacle avoidance module.
+Por lo tanto, la placa Arduino puede conocer el estado de funcionamiento de los sensores digitales leyendo el valor de los pines digitales como botones, módulo de evitación de obstáculos IR.
 
 
-Here are the required functions.
+Aquí están las funciones requeridas.
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``INPUT``. 
+* ``pinMode(pin, mode)``: Configura un pin específico como ``INPUT`` o ``OUTPUT``, aquí se necesita configurar como ``INPUT``. 
 
-   **Syntax**
+   **Sintaxis**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+   **Parámetros**
+    * ``pin``: el número de pin de Arduino para establecer el modo.
+    * ``mode``: INPUT, OUTPUT, o INPUT_PULLUP.
 
 
 
-* ``digitalRead(pin)``: Read the value (level state) from the specified digital pin.
+* ``digitalRead(pin)``: Lee el valor (estado de nivel) del pin digital especificado.
 
-   **Syntax**
+   **Sintaxis**
       digitalRead(pin)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number you want to read
+   **Parámetros**
+    * ``pin``: el número de pin de Arduino que deseas leer
 
-   **Returns**
-      HIGH or LOW
+   **Retorno**
+      HIGH o LOW
 
 
-**Example of Digital Read**
+**Ejemplo de Lectura Digital**
 
 .. code-block:: arduino
 
@@ -52,31 +52,31 @@ Here are the required functions.
    }
 
 
-**Notes and Warnings**
+**Notas y Advertencias**
 
 1. Pull Up & Pull Down.
 
-    ``digitalRead()`` may produce random, indeterminate values if the pin is not getting a level signal. So directing the input pins to a known state can make the project more reliable.
-    When using an input component such as a button, it is usually necessary to connect a pull-up or pull-down resistor in parallel to the digital input pin.
+    ``digitalRead()`` puede producir valores aleatorios e indeterminados si el pin no recibe una señal de nivel. Por lo tanto, dirigir los pines de entrada a un estado conocido puede hacer que el proyecto sea más confiable.
+    Al usar un componente de entrada como un botón, generalmente es necesario conectar una resistencia de pull-up o pull-down en paralelo al pin de entrada digital.
 
-    Apart from connecting a pull-up resistor, you can also set the pin mode to ``INPUT_PULLUP`` in the code, for example ``pinMode(pin,INPUT_PULLUP)``. In this case, the pin will access the Atmega's built-in pull-up resistor via software, and it will have the same effect as connecting a pull-up resistor.
+    Además de conectar una resistencia de pull-up, también puedes configurar el modo del pin a ``INPUT_PULLUP`` en el código, por ejemplo, ``pinMode(pin, INPUT_PULLUP)``. En este caso, el pin accederá a la resistencia de pull-up incorporada del Atmega a través del software, y tendrá el mismo efecto que conectar una resistencia de pull-up.
 
-2. About Pin13.
+2. Acerca del Pin13.
 
-    All digital pins (1-13) on the R3 board can be used as ``digitalRead()``.
-    But digital pin 13 is more difficult to use as a digital input than other digital pins.
-    Because it connects an LED and resistor, it is soldered on most boards.
-    If you enable its internal 20k pull-up resistor, it will hang around 1.7V instead of the expected 5V because the onboard LED and series resistor pull the voltage level low, which means it always returns LOW. If you must use pin 13 as a digital input, set its ``pinMode()`` to INPUT and use an external pull-down resistor.
+    Todos los pines digitales (1-13) en la placa R3 se pueden usar como ``digitalRead()``.
+    Pero el pin digital 13 es más difícil de usar como entrada digital que otros pines digitales.
+    Debido a que conecta un LED y una resistencia, está soldado en la mayoría de las placas.
+    Si habilitas su resistencia de pull-up interna de 20k, se mantendrá alrededor de 1.7V en lugar de los 5V esperados porque el LED y la resistencia en serie a bordo bajan el nivel de voltaje, lo que significa que siempre retorna LOW. Si debes usar el pin 13 como entrada digital, configura su ``pinMode()`` a INPUT y usa una resistencia de pull-down externa.
 
-3. Analog pins.
+3. Pines Analógicos.
 
-    If the digital pins are not enough, the analog pins (A0-A5) can also be used as digital pins.
-    It needs to be set to INPUT with ``pinMode(pin,mode)``.
+    Si los pines digitales no son suficientes, los pines analógicos (A0-A5) también pueden usarse como pines digitales.
+    Necesita configurarse a INPUT con ``pinMode(pin,mode)``.
 
 
-**Related Components**
+**Componentes Relacionados**
 
-Below are the related components, you can click in to learn how to use them.
+A continuación se presentan los componentes relacionados, puedes hacer clic para aprender a utilizarlos.
 
 .. toctree::
     :maxdepth: 2
@@ -86,5 +86,3 @@ Below are the related components, you can click in to learn how to use them.
     ar_reed
     ar_detect_the_obstacle
     ar_detect_the_line
-
-

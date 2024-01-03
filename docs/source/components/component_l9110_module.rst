@@ -1,55 +1,55 @@
 .. _cpn_l9110:
 
-L9110 Motor Driver Module
-=============================
+Módulo Controlador de Motor L9110
+======================================
 
-The L9110 motor driver module is adept at driving two motors in tandem. It houses a pair of independent L9110S driver chips, 
-each channel boasting a steady current output of up to 800mA.
+El módulo controlador de motor L9110 es experto en manejar dos motores en tándem. Aloja un par de chips controladores L9110S independientes, 
+cada canal cuenta con una salida de corriente constante de hasta 800mA.
 
-Spanning a voltage range from 2.5V to 12V, the module comfortably pairs with both 3.3V and 5V microcontrollers.
+Con un rango de voltaje de 2.5V a 12V, el módulo se empareja cómodamente tanto con microcontroladores de 3.3V como de 5V.
 
-Serving as a streamlined solution, the L9110 motor driver module facilitates motor control across a spectrum of applications. 
-Thanks to its dual-channel architecture, it enables the independent orchestration of two motors—ideal for projects where dual motor 
-operations are paramount.
+Sirviendo como una solución optimizada, el módulo controlador de motor L9110 facilita el control de motores en un espectro de aplicaciones. 
+Gracias a su arquitectura de doble canal, permite la orquestación independiente de dos motores, ideal para proyectos donde las operaciones de doble motor 
+son fundamentales.
 
-Given its potent continuous current output, this module confidently powers motors from the petite to the moderately sized, 
-paving the way for diverse robotic, automation, and motor-centric endeavors. Its expansive voltage range further injects adaptability, aligning with varied power supply setups.
+Dado su potente salida de corriente continua, este módulo impulsa con confianza motores desde los más pequeños hasta los de tamaño moderado, 
+abriendo camino para diversos emprendimientos robóticos, de automatización y centrados en motores. Su amplio rango de voltaje inyecta además adaptabilidad, alineándose con variadas configuraciones de suministro de energía.
 
-Designed with user-friendliness in mind, the module offers intuitive input and output terminals, simplifying connections to microcontrollers 
-or akin control devices. Plus, it doesn't skimp on safety—integrated overcurrent and overtemperature safeguards bolster the trustworthiness 
-and security of motor operations.
+Diseñado pensando en la facilidad de uso, el módulo ofrece terminales de entrada y salida intuitivos, simplificando las conexiones a microcontroladores 
+o dispositivos de control similares. Además, no escatima en seguridad: las protecciones integradas contra sobrecorriente y sobrecalentamiento refuerzan la fiabilidad 
+y seguridad de las operaciones de los motores.
 
 .. image:: img/l9110_module.jpg
     :width: 600
     :align: center
 
-* **B-1A & B-1B(B-2A)**: Input pins for controlling the spinning direction of Motor B.
-* **A-1A & A-1B**: Input pins for controlling the spinning direction of Motor A.
-* **0A & OB(A)**: Output pins of Motor A.
-* **0A & OB(B)**: Output pins of Motor B.
-* **VCC**: Power input pin (2.5V-12V).
-* **GND**: Ground pin.
+* **B-1A & B-1B(B-2A)**: Pines de entrada para controlar la dirección de giro del Motor B.
+* **A-1A & A-1B**: Pines de entrada para controlar la dirección de giro del Motor A.
+* **0A & OB(A)**: Pines de salida del Motor A.
+* **0A & OB(B)**: Pines de salida del Motor B.
+* **VCC**: Pin de entrada de energía (2.5V-12V).
+* **GND**: Pin de tierra.
 
-**Features**
+**Características**
 
-* On-board 2 L9110S motor control chip
-* Dual-channel motor control.
-* Independent motor spinning direction control.
-* High current output (800mA per channel).
-* Wide voltage range (2.5V-12V).
-* Compact design.
-* Convenient input and output terminals.
-* Built-in protective features.
-* Versatile applications.
-* PCB Size: 29.2mm x 23mm
-* Operating Temperature: -20°C ~ 80°C
-* Power-On LED indicator
+* Dos chips de control de motor L9110S a bordo.
+* Control de motor de doble canal.
+* Control independiente de la dirección de giro del motor.
+* Alta salida de corriente (800mA por canal).
+* Amplio rango de voltaje (2.5V-12V).
+* Diseño compacto.
+* Terminales de entrada y salida convenientes.
+* Características de protección incorporadas.
+* Aplicaciones versátiles.
+* Tamaño del PCB: 29.2mm x 23mm
+* Temperatura de Operación: -20°C ~ 80°C
+* Indicador LED de encendido
 
-**Operating Principle**
+**Principio de Funcionamiento**
 
-Here is the truth table of Motor B:
+Aquí está la tabla de verdad del Motor B:
 
-This truth table shows the different states of Motor B based on the values of input pins B-1A and B-1B(B-2A). It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor B.
+Esta tabla de verdad muestra los diferentes estados del Motor B basados en los valores de los pines de entrada B-1A y B-1B(B-2A). Indica la dirección de rotación (en el sentido de las agujas del reloj o en sentido contrario), frenado o detención del Motor B.
 
 .. list-table:: 
     :widths: 25 25 50
@@ -57,23 +57,23 @@ This truth table shows the different states of Motor B based on the values of in
 
     * - B-1A
       - B-1B(B-2A)
-      - The state of Motor B
+      - Estado del Motor B
     * - 1
       - 0
-      - Rotate clockwise
+      - Gira en el sentido de las agujas del reloj
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Gira en sentido contrario a las agujas del reloj
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
-      - Stop
+      - Detener
 
-Here is the truth table of Motor A:
+Aquí está la tabla de verdad del Motor A:
 
-This truth table shows the different states of Motor A based on the values of input pins A-1A and A-1B. It indicates the direction of rotation (clockwise or counterclockwise), braking, or stopping of Motor A.
+Esta tabla de verdad muestra los diferentes estados del Motor A basados en los valores de los pines de entrada A-1A y A-1B. Indica la dirección de rotación (en el sentido de las agujas del reloj o en sentido contrario), frenado o detención del Motor A.
 
 .. list-table:: 
     :widths: 25 25 50
@@ -81,21 +81,21 @@ This truth table shows the different states of Motor A based on the values of in
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - Estado del Motor B
     * - 1
       - 0
-      - Rotate clockwise
+      - Gira en el sentido de las agujas del reloj
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Gira en sentido contrario a las agujas del reloj
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
-      - Stop
+      - Detener
 
-* :ref:`ar_motor` (Basic Project)
-* :ref:`car_move` (Car Project)
-* :ref:`car_speed` (Car Project)
-* :ref:`iot_car` (IoT Project)
+* :ref:`ar_motor` (Proyecto Básico)
+* :ref:`car_move` (Proyecto de Coche)
+* :ref:`car_speed` (Proyecto de Coche)
+* :ref:`iot_car` (Proyecto IoT)

@@ -1,61 +1,47 @@
 .. _ar_interval:
 
-5.4 Interval
+5.4 Intervalo
 ================
 
-Sometimes you need to do two things at once. For example you might want
-to blink an LED while reading a button press. In this case, you can't
-use ``delay()``, because Arduino pauses your program during the ``delay()``. If
-the button is pressed while Arduino is paused waiting for the ``delay()`` to
-pass, your program will miss the button press.
+A veces necesitas hacer dos cosas a la vez. Por ejemplo, podrías querer hacer parpadear un LED mientras lees una pulsación de botón. En este caso, no puedes usar ``delay()``, porque Arduino pausa tu programa durante el ``delay()``. Si se presiona el botón mientras Arduino está en pausa esperando a que pase el ``delay()``, tu programa se perderá la pulsación del botón.
 
-An analogy would be warming up a pizza in your microwave, and also
-waiting some important email. You put the pizza in the microwave and set
-it for 10 minutes. The analogy to using ``delay()`` would be to sit in front
-of the microwave watching the timer count down from 10 minutes until the
-timer reaches zero. If the important email arrives during this time you
-will miss it.
+Una analogía sería calentar una pizza en tu microondas y también esperar un correo electrónico importante. Pones la pizza en el microondas y lo programas por 10 minutos. La analogía de usar ``delay()`` sería sentarte frente al microondas viendo el temporizador contar desde 10 minutos hasta que el temporizador llegue a cero. Si el correo electrónico importante llega durante este tiempo, te lo perderás.
 
-What you would do in real life would be to turn on the pizza, and then
-check your email, and then maybe do something else (that doesn't take
-too long!) and every so often you will come back to the microwave to see
-if the timer has reached zero, indicating that your pizza is done.
+Lo que harías en la vida real sería encender la pizza, luego revisar tu correo electrónico, y luego quizás hacer algo más (¡que no tome mucho tiempo!) y de vez en cuando volver al microondas para ver si el temporizador ha llegado a cero, indicando que tu pizza está lista.
 
-This sketch demonstrates how to tone an buzzer without using ``delay()``. 
-It turns the buzzer on and then makes note of the time. Then, each time
-through ``loop()``, it checks to see if the desired interval time has passed.
-If it has, it tone the buzzer and makes note of the new time.
-In this way the buzzer tones continuously while the sketch execution never
-lags on a single instruction.
+Este sketch demuestra cómo hacer sonar un zumbador sin usar ``delay()``. 
+Enciende el zumbador y luego toma nota del tiempo. Luego, cada vez que pasa por ``loop()``, verifica si ha pasado el tiempo de intervalo deseado.
+Si ha pasado, hace sonar el zumbador y toma nota del nuevo tiempo.
+De esta manera, el zumbador suena continuamente mientras la ejecución del sketch nunca se retrasa en una sola instrucción.
 
-Based on this condition, we can add the code of the button to control the LED, 
-it will not be disturbed by the buzzer playing music.
+Basándonos en esta condición, podemos agregar el código del botón para controlar el LED, 
+no será perturbado por el zumbador tocando música.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -73,60 +59,59 @@ You can also buy them separately from the links below.
         - |link_passive_buzzer_buy|
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_8.5_interval.png
 
 
-**Wiring**
+**Cableado**
 
 .. image:: img/interval_bb.jpg
     :width: 600
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\basic_project\5.4.interval``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``5.4.interval.ino`` en la ruta ``3in1-kit\basic_project\5.4.interval``.
+    * O copia este código en **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
+Después de cargar el código con éxito, el zumbador tocará música; cada vez que presiones el botón, el LED se encenderá. El trabajo del LED y el zumbador no se interfiere entre sí.
 
-**How it works?**
+**¿Cómo funciona?**
 
-
-Initial a variable named ``previousMillis`` to store previous operating time of microcontroller.
+Inicializar una variable llamada ``previousMillis`` para almacenar el tiempo de operación anterior del microcontrolador.
 
 .. code-block:: arduino
 
     unsigned long previousMillis = 0;     
 
-Mark which note is played.
+Marcar qué nota se está tocando.
 
 .. code-block:: arduino
 
     int thisNote=0; 
 
-The interval time of each note.
+El tiempo de intervalo de cada nota.
 
 .. code-block:: arduino
 
     long interval = 1000; 
 
-In ``loop()``, declare ``currentMillis`` to store the current time.
+En ``loop()``, declara ``currentMillis`` para almacenar el tiempo actual.
 
 .. code-block:: arduino
 
     unsigned long currentMillis = millis();
 
-When the interval between the current operating time and last updating time is larger than 1000ms, certain functions are triggered. Meanwhile, update the previousMillis to the current time for the next triggering that is to happen 1 second latter.  
+Cuando el intervalo entre el tiempo de operación actual y el último tiempo de actualización es mayor que 1000ms, se activan ciertas funciones. Mientras tanto, actualiza el previousMillis al tiempo actual para la próxima activación que ocurrirá 1 segundo después.  
 
 .. code-block:: arduino
 
@@ -135,7 +120,7 @@ When the interval between the current operating time and last updating time is l
         //...
     }
 
-Play the notes in the melody one by one.
+Tocar las notas de la melodía una por una.
 
 .. code-block:: arduino
 
@@ -143,7 +128,7 @@ Play the notes in the melody one by one.
     interval=1000/noteDurations[thisNote]; // interval at which to tone
     thisNote=(thisNote+1)%(sizeof(melody)/2); //iterate over the notes of the melody
 
-The button control the LED.
+El botón controla el LED.
 
 .. code-block:: arduino
 

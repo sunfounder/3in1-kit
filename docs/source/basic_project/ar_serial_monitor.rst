@@ -1,20 +1,20 @@
 .. _ard_serial_monitor:
 
-3.0 Serial Monitor
+3.0 Monitor Serial
 =============================
 
-In the Arduino IDE, there is a serial monitor that allows you to send messages from your computer to the Arduino board (via USB) and also to receive messages from the Arduino.
+En el IDE de Arduino, hay un monitor serial que te permite enviar mensajes desde tu computadora a la placa Arduino (a través de USB) y también recibir mensajes desde Arduino.
 
-So in this project we will learn how to receive data from the Arduino board.
+Así que en este proyecto aprenderemos a recibir datos de la placa Arduino.
 
 .. note::
 
-    On Uno, Nano, Mini, and Mega, pins 0 and 1 are used for communication with the computer. Connecting anything to these pins can interfere with that communication, including causing failed uploads to the board.
+    En Uno, Nano, Mini y Mega, los pines 0 y 1 se utilizan para la comunicación con la computadora. Conectar algo a estos pines puede interferir con esa comunicación, incluyendo causar fallas en las cargas a la placa.
 
 
-**Using the Serial Monitor**
+**Usando el Monitor Serial**
 
-1. Open the Arduino IDE, and paste the following code in it.
+1. Abre el IDE de Arduino y pega el siguiente código en él.
 
     .. code-block:: arduino
 
@@ -32,29 +32,30 @@ So in this project we will learn how to receive data from the Arduino board.
             delay(100);         // delay in between reads for stability
         }
 
-   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Sets the data rate in bits per second (baud) for serial data transmission, here set to 9600.
+   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Establece la tasa de datos en bits por segundo (baudios) para la transmisión de datos seriales, aquí configurado a 9600.
    * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_.
 
-2. Select the correct board and port to upload the code.
-3. In the toolbar, click the magnifying glass icon to turn on Serial Monitor.
+2. Selecciona la placa y el puerto correctos para subir el código.
+3. En la barra de herramientas, haz clic en el icono de la lupa para activar el Monitor Serial.
 
 .. image:: img/serial1.png
     :align: center
 
-4. Here is the Serial Monitor.
+4. Aquí está el Monitor Serial.
 
 .. image:: img/serial2.png
     :align: center
 
-* **1**: Option to select between automatically scroll and not scroll.
-* **2**: Option to show timestamp prior to data displayed on Serial Monitor.
-* **3**: Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
+* **1**: Opción para seleccionar entre desplazamiento automático y no desplazamiento.
+* **2**: Opción para mostrar la marca de tiempo antes de los datos mostrados en el Monitor Serial.
+* **3**: Selección de finalización, selecciona los caracteres finales que se añaden a los datos enviados a Arduino. Las opciones incluyen:
 
-        * **No line Ending** just sends what you type; 
-        * **Newline** is ``\n`` and will sends an ASCII new line code after what you type;
-        * **Carriage Return** is ``\r``, which will send an ASCII carriage return character after what you type; 
-        * **Both NL & CR** is ``\r\n`` which will send both a carriage return and a new line character after what you type.
-* **4**: Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
-* **5**: Clear all text on the output console.
-* **6**: A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
+        * **Sin finalización de línea** solo envía lo que escribes; 
+        * **Nueva línea** es ``\n`` y enviará un código de nueva línea ASCII después de lo que escribas;
+        * **Retorno de carro** es ``\r``, que enviará un carácter de retorno de carro ASCII después de lo que escribas; 
+        * **Ambos NL & CR** es ``\r\n`` que enviará tanto un retorno de carro como un carácter de nueva línea después de lo que escribas.
+* **4**: Selecciona la velocidad de comunicación entre la placa Arduino y la PC. Este valor DEBE ser el mismo que el valor establecido en ``Serial.begin()``.
+* **5**: Borra todo el texto en la consola de salida.
+* **6**: Un cuadro de texto para enviar caracteres a la placa Arduino, consulta :ref:`ar_serial_read` para un tutorial.
+
 

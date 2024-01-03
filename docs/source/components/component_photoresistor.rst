@@ -1,28 +1,27 @@
 .. _cpn_photoresistor:
 
-Photoresistor
+Fotoresistor
 ==============
 
 .. image:: img/photoresistor.png
     :width: 200
     :align: center
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity. 
+Un fotoresistor o célula fotoeléctrica es una resistencia variable controlada por la luz. La resistencia de un fotoresistor disminuye con el aumento de la intensidad de luz incidente; en otras palabras, exhibe fotocoductividad.
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+Un fotoresistor se puede aplicar en circuitos detectores sensibles a la luz y en circuitos de conmutación activados por luz y oscuridad actuando como un semiconductor de resistencia. En la oscuridad, un fotoresistor puede tener una resistencia tan alta como varios megaohmios (MΩ), mientras que en la luz, un fotoresistor puede tener una resistencia tan baja como unos pocos cientos de ohmios.
 
-Here is the electronic symbol of photoresistor.
+Aquí está el símbolo electrónico del fotoresistor.
 
 .. image:: img/photoresistor_symbol.png
     :width: 200
     :align: center
 
-* `Photoresistor - Wikipedia <https://en.wikipedia.org/wiki/Photoresistor#:~:text=A%20photoresistor%20(also%20known%20as,on%20the%20component's%20sensitive%20surface>`_
+* `Fotoresistor - Wikipedia <https://en.wikipedia.org/wiki/Photoresistor#:~:text=A%20photoresistor%20(also%20known%20as,on%20the%20component's%20sensitive%20surface>`_
 
-**Example**
+**Ejemplo**
 
 
-* :ref:`ar_photoresistor` (Basic Project)
-* :ref:`iot_home` (IoT Project)
-* :ref:`iot_plant` (IoT Project)
-
+* :ref:`ar_photoresistor` (Proyecto Básico)
+* :ref:`iot_home` (Proyecto IoT)
+* :ref:`iot_plant` (Proyecto IoT)

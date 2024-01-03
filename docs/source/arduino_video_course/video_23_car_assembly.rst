@@ -1,15 +1,15 @@
-Video 23: Smart Car Assembly
-==================================
+Vídeo 23: Montaje de un Coche Inteligente
+===========================================
 
-Learn how to assemble and wire a smart car using the Arduino platform, detailed from start to finish including motor and driver setup.
+Aprende a ensamblar y cablear un coche inteligente utilizando la plataforma Arduino, detallado desde el inicio hasta el final, incluyendo la configuración de motores y controladores.
 
-* **Smart Car Assembly**: Guidance on assembling the car’s base, wheels, and motors, ensuring correct setup.
-* **DC Motor Basics**: Explains the working principle of DC motors and their role in the smart car's functionality.
-* **Motor Driver Wiring**: Detailed instructions on wiring the L298N Dual Full Bridge Motor Driver for optimal control.
-* **Motor Wiring Test**: Conducting a basic test to verify the correct wiring and functionality of the motors.
-* **Movement Demonstration**: Showcasing the car's basic movement capabilities, demonstrating successful assembly and wiring.
+* **Montaje del Coche Inteligente**: Orientación para ensamblar la base del coche, ruedas y motores, asegurando una configuración correcta.
+* **Fundamentos de Motores de CC**: Explica el principio de funcionamiento de los motores de corriente continua y su papel en la funcionalidad del coche inteligente.
+* **Cableado del Controlador de Motor**: Instrucciones detalladas para cablear el Controlador de Motor de Puente Completo Dual L298N para un control óptimo.
+* **Prueba de Cableado del Motor**: Realización de una prueba básica para verificar el cableado correcto y la funcionalidad de los motores.
+* **Demostración de Movimiento**: Exhibición de las capacidades básicas de movimiento del coche, demostrando un montaje y cableado exitosos.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -17,7 +17,7 @@ Learn how to assemble and wire a smart car using the Arduino platform, detailed 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`car_assemble`
 * :ref:`car_move`

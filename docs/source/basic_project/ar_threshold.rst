@@ -1,48 +1,48 @@
 .. _ar_threshold:
 
-5.2 Threshold
-=======================
+5.2 Umbral
+=============
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+En muchos proyectos, te encontrarás con una necesidad como esta.
+"Cuando xxx alcance cierto nivel, entonces..."
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+Por ejemplo, en una casa inteligente, cuando la intensidad de la luz sea menor a 50Lux, encender la luz;
+Otro ejemplo es en la placa madre del ordenador, si la temperatura operativa de la CPU es superior a 65 grados Celsius, encender el ventilador, y así sucesivamente.
 
-In these requirements, the keyword "threshold" is reflected.
+En estos requisitos, se refleja la palabra clave "umbral".
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+Podemos ajustar el valor del umbral para hacer que el circuito opere más en línea con las necesidades individuales.
+Por ejemplo, si me gusta un ambiente más iluminado, puedo aumentar el umbral de las luces automáticas de la casa inteligente a 80Lux.
+Otro ejemplo es que el ambiente de ventilación de mi estudio no es muy bueno y la demanda de disipación de calor es mayor, entonces el valor umbral de apertura automática del ventilador puede ajustarse a 50 grados Celsius.
 
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+Aquí usamos un sensor de humedad del suelo y 2 LEDs para hacer un monitor de maceta. Si el suelo está demasiado seco, se encenderá el LED rojo; si el suelo está suficientemente húmedo, se encenderá el LED verde. Necesitas ajustar manualmente los umbrales para determinar la sequedad y humedad del suelo.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,31 +57,31 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**Cableado**
 
 .. image:: img/threshold_bb.png
     :width: 600
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\basic_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``5.2.threshold.ino`` en la ruta ``3in1-kit\basic_project\5.2.threshold``.
+    * O copia este código en **Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
+Después de cargar el código con éxito, si tu umbral está configurado correctamente, verás el LED rojo encenderse cuando el suelo esté seco para recordarte que necesitas regar; después de regar, se encenderá el LED verde.
 
-**How it works**
+**¿Cómo funciona?**
 
 .. code-block:: Arduino
 
@@ -100,8 +100,6 @@ After the code is uploaded successfully, if your threshold is set correctly, you
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+Primero establece un valor ``threshold`` y luego lee el valor del módulo de humedad del suelo, su valor disminuye a medida que aumenta el nivel de humedad. Si el valor leído actualmente es mayor que el ``threshold`` establecido, entonces deja que el LED rojo se ilumine, de lo contrario, se encenderá el LED verde.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
-
-
+Este valor ``threshold`` necesita ser ajustado según la situación real, puedes cargar primero el código, luego abrir el monitor serial para verificar el valor, registrar el valor en condiciones húmedas y secas, y luego elegir un valor medio como el valor ``threshold``.

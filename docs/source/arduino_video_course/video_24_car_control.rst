@@ -1,16 +1,15 @@
-Video 24: Smart Car Control
-==================================
+Vídeo 24: Control de Coche Inteligente
+=========================================
 
-This tutorial guides viewers through controlling a smart car using Arduino, focusing on directional movement, stopping, and speed adjustments.
+Este tutorial guía a los espectadores en el control de un coche inteligente usando Arduino, centrándose en el movimiento direccional, la parada y los ajustes de velocidad.
 
-* **Basic Car Movements**: Introduction to programming the smart car for basic movements like forward, backward, left, right, and stop.
-* **Wiring Setup and Configuration**: Step-by-step guidance on setting up the wiring between the Arduino and the smart car.
-* **Arduino Code for Movement**: Detailed explanation of the Arduino code required for directional control of the smart car.
-* **Speed Control Techniques**: Techniques to program the car for speed variations, including acceleration and deceleration.
-* **Practical Movement Demonstrations**: Live demonstrations showcasing the implementation of car movements and speed control.
+* **Movimientos Básicos del Coche**: Introducción a la programación del coche inteligente para movimientos básicos como adelante, atrás, izquierda, derecha y parada.
+* **Configuración y Cableado**: Orientación paso a paso para configurar el cableado entre el Arduino y el coche inteligente.
+* **Código de Arduino para Movimiento**: Explicación detallada del código de Arduino requerido para el control direccional del coche inteligente.
+* **Técnicas de Control de Velocidad**: Técnicas para programar el coche en variaciones de velocidad, incluyendo aceleración y desaceleración.
+* **Demostraciones Prácticas de Movimiento**: Demostraciones en vivo mostrando la implementación de movimientos del coche y control de velocidad.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +17,6 @@ This tutorial guides viewers through controlling a smart car using Arduino, focu
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`car_speed`

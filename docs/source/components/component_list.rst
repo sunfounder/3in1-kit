@@ -1,17 +1,15 @@
-Learn about the Components in Your Kit
+Aprende sobre los Componentes de tu Kit
 =========================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Tras abrir el paquete, por favor verifica si la cantidad de componentes está conforme con la descripción del producto y si todos los componentes están en buen estado.
 
 .. image:: img/components_list.jpg
     :width: 800
     :align: center
 
+A continuación, se presenta la introducción de cada componente, que incluye el principio de funcionamiento del componente y los proyectos correspondientes.
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
-
-**Control Board**
+**Placa de Control**
 
 .. toctree::
     :maxdepth: 1
@@ -19,10 +17,7 @@ Below is the introduction to each component, which contains the operating princi
     component_uno
     component_esp8266
 
-
-
-
-**Basic**
+**Básico**
 
 .. toctree::
     :maxdepth: 1
@@ -39,9 +34,7 @@ Below is the introduction to each component, which contains the operating princi
 
     component_74hc595
 
-
-
-**Display**
+**Pantalla**
 
 .. toctree::
     :maxdepth: 1
@@ -51,15 +44,14 @@ Below is the introduction to each component, which contains the operating princi
     component_7_segment
     component_i2c_lcd
 
-
-**Sound**
+**Sonido**
 
 .. toctree::
     :maxdepth: 1
 
     component_buzzer
 
-**Driver**
+**Controlador**
 
 .. toctree::
     :maxdepth: 1
@@ -69,8 +61,7 @@ Below is the introduction to each component, which contains the operating princi
     component_pump
     component_l9110_module
 
-
-**Controller**
+**Mando**
 
 .. toctree::
     :maxdepth: 1
@@ -80,8 +71,6 @@ Below is the introduction to each component, which contains the operating princi
     component_potentiometer
     component_joystick_module
     component_receiver
-
-
 
 **Sensor**
 

@@ -1,16 +1,16 @@
-Video 21: IR Remote Control
+Vídeo 21: Control Remoto IR
 ==================================
 
-This tutorial demonstrates how to use an infrared remote with Arduino to control various functions, focusing on signal decoding and practical applications like activating a buzzer.
+Este tutorial demuestra cómo usar un control remoto infrarrojo con Arduino para controlar varias funciones, enfocándose en la decodificación de señales y aplicaciones prácticas como activar un zumbador.
 
-* **Understanding Infrared Technology**: Insight into how infrared remotes and receivers work with Arduino.
-* **IR Receiver Wiring**: Detailed guidance on correctly wiring the infrared receiver to the Arduino board.
-* **Installing Necessary Libraries**: Step-by-step process to install the IR remote library in Arduino IDE.
-* **Decoding IR Signals**: Explanation of how to decode signals from an IR remote using Arduino.
-* **Action on Key Press**: Programming Arduino to perform specific actions based on remote control inputs.
-* **Future Project Insights**: Preview of upcoming advanced projects using Arduino and infrared technology.
+* **Entendiendo la Tecnología Infrarroja**: Perspectivas sobre cómo funcionan los controles remotos y receptores infrarrojos con Arduino.
+* **Cableado del Receptor IR**: Orientación detallada sobre cómo cablear correctamente el receptor infrarrojo a la placa Arduino.
+* **Instalación de Bibliotecas Necesarias**: Proceso paso a paso para instalar la biblioteca de control remoto IR en el IDE de Arduino.
+* **Decodificación de Señales IR**: Explicación de cómo decodificar señales de un control remoto IR usando Arduino.
+* **Acción al Presionar una Tecla**: Programación de Arduino para realizar acciones específicas basadas en entradas del control remoto.
+* **Avances de Proyectos Futuros**: Avance de proyectos avanzados futuros utilizando Arduino y tecnología infrarroja.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This tutorial demonstrates how to use an infrared remote with Arduino to control
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_receiver`

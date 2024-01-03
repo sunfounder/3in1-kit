@@ -1,16 +1,15 @@
-Video 22: 7-segment Display
-===============================
+Vídeo 22: Pantalla de 7 Segmentos
+===================================
 
-This tutorial walks you through creating a digital counter and electronic dice using Arduino, showcasing both assembly and coding aspects.
+Este tutorial te guía en la creación de un contador digital y dados electrónicos usando Arduino, mostrando tanto los aspectos de montaje como de programación.
 
-* **Seven-Segment Display Assembly**: Instructions on assembling and understanding a seven-segment display.
-* **Display Datasheet Insights**: Explanation of the datasheet for the 5161AS model, focusing on specifications and optimal usage.
-* **Counter Wiring Guide**: Detailed guidance on wiring the digital counter with a focus on the 74HC595 chip and display connections.
-* **Counter Code Breakdown**: In-depth explanation of the Arduino code for operating the digital counter.
-* **Electronic Dice Project**: Step-by-step guide to building and coding an electronic dice, including the implementation of a push button interrupt.
+* **Montaje de Pantalla de 7 Segmentos**: Instrucciones para ensamblar y comprender una pantalla de 7 segmentos.
+* **Detalles del Datasheet**: Explicación del datasheet para el modelo 5161AS, centrado en especificaciones y uso óptimo.
+* **Guía de Cableado del Contador**: Orientación detallada sobre el cableado del contador digital, con enfoque en el chip 74HC595 y las conexiones de la pantalla.
+* **Desglose del Código del Contador**: Explicación detallada del código de Arduino para operar el contador digital.
+* **Proyecto de Dados Electrónicos**: Guía paso a paso para construir y programar unos dados electrónicos, incluyendo la implementación de una interrupción por botón pulsador.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +17,6 @@ This tutorial walks you through creating a digital counter and electronic dice u
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_segment`

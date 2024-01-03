@@ -1,43 +1,43 @@
 .. _ar_guess_number:
 
-6.6 Guess Number
-==================
+6.6 Adivina el Número
+=======================
 
-Guessing Numbers is a fun party game where you and your friends take
-turns inputting a number (0~99). The range will be smaller with the
-inputting of the number till a player answers the riddle correctly. Then
-the player is defeated and punished. For example, if the lucky number is
-51 which the players cannot see, and the player 1 inputs 50, the prompt
-of number range changes to 50~99; if the player 2 inputs 70, the range
-of number can be 50~70; if the player 3 inputs 51, he or she is the
-unlucky one. Here, we use IR Remote Controller to input numbers and use
-LCD to output outcomes.
+Adivinar Números es un divertido juego de fiesta donde tú y tus amigos
+se turnan para introducir un número (0~99). El rango se reducirá con la
+introducción del número hasta que un jugador responda correctamente al acertijo. Entonces
+el jugador es derrotado y castigado. Por ejemplo, si el número afortunado es
+51, que los jugadores no pueden ver, y el jugador 1 introduce 50, el rango
+de números cambia a 50~99; si el jugador 2 introduce 70, el rango
+de números puede ser 50~70; si el jugador 3 introduce 51, él o ella es el
+desafortunado. Aquí, usamos un Controlador Remoto IR para introducir números y usar
+LCD para mostrar los resultados.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Comprar un kit completo es definitivamente conveniente, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -51,71 +51,56 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_guess_number.png
     :align: center
 
-**Wiring**
+**Cableado**
 
-In this example, the wiring of LCD1602 and infrared receiving module is
-as follows.
+En este ejemplo, la conexión del LCD1602 y el módulo receptor infrarrojo es
+la siguiente.
 
 .. image:: img/wiring_guess_number.png
     :align: center
 
-
-**Code**
-
+**Código**
 
 .. note::
 
-    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\basic_project\6.6.guess_number`` directly.
-    * Or copy this code into Arduino IDE .
-    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
-
+    * Puedes abrir directamente el archivo ``6.6.guess_number.ino`` en la ruta ``3in1-kit\basic_project\6.6.guess_number``.
+    * O copia este código en Arduino IDE.
+    * Aquí se utilizan las bibliotecas ``LiquidCrystal I2C`` y ``IRremote``, puedes instalarlas desde el **Library Manager**.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6bafb36d-6763-460c-98b7-aba48120e718/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
-After the code is successfully uploaded, the welcome characters will appear on the LCD1602. Now press the number according to the range prompt on the screen, the display will get smaller and smaller unless you guess that lucky number.
+Después de que el código se haya cargado con éxito, los caracteres de bienvenida aparecerán en el LCD1602. Ahora presiona el número según el rango indicado en la pantalla, la visualización se irá reduciendo hasta que adivines ese número afortunado.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back to increase the contrast.
+    Si el código y la conexión están bien, pero el LCD todavía no muestra contenido, puedes girar el potenciómetro en la parte trasera para aumentar el contraste.
 
+**¿Cómo funciona?**
 
-**How it works?**
+Para que el juego de adivinar números sea vívido y divertido, necesitamos lograr las siguientes funciones:
 
-In order to make the number guessing game become vivid and funny, we
-need to achieve the following functions:
+1. El número afortunado se mostrará cuando iniciemos y reiniciemos el juego, y el rango numérico se restablece a 0 ~ 99.
 
-1. The lucky number will be displayed when we start and reset the game,
-   and the number range prompt is reset to 0 ~ 99.
+2. El LCD mostrará el número que se está introduciendo y el rango numérico.
 
-2. LCD will display the number being input and the number range prompt.
+3. Después de introducir dos dígitos, aparecerá automáticamente el juicio del resultado.
 
-3. After inputting two digits, there appears result judgment
-   automatically.
+4. Si introduces un solo dígito, puedes presionar la tecla CYCLE (la tecla en el centro del Controlador) para iniciar el juicio del resultado.
 
-4. If you input a single digit, you can press the CYCLE key (the key at
-   the center of the Controller) to start the result judgment.
+5. Si la respuesta no se adivina, se mostrará el nuevo rango numérico (si el número afortunado es 51 y tú introduces 50, el rango numérico cambiará a 50~99).
 
-5. If the answer is not guessed, the new number range prompt will be
-   displayed (if the lucky number is 51 and you enter 50, the number
-   range prompt will change to 50~99).
+6. El juego se reinicia automáticamente después de adivinar el número afortunado, para que el jugador pueda jugar una nueva ronda.
 
-6. The game is automatically reset after the lucky number is guessed, so
-   that the player can play a new round.
+7. El juego se puede reiniciar presionando directamente el botón POWER (el botón en la esquina superior izquierda).
 
-7. The game can be reset by directly pressing the POWER button (the
-   button in the upper left corner).
-
-In conclusion, the work flow of the project is shown in the flow chart.
+En conclusión, el flujo de trabajo del proyecto se muestra en el diagrama de flujo.
 
 .. image:: img/Part_three_4_Example_Explanation.png
     :align: center
-
-
 

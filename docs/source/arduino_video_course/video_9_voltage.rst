@@ -1,16 +1,16 @@
-Video 9: Voltage Measurement
+Vídeo 9: Medición de Voltaje
 =============================
 
-Learn how to read and measure DC voltage using Arduino's analogRead function, understand ADC, and explore the use of potentiometers for precise voltage measurements.
+Aprende a leer y medir el voltaje de corriente continua usando la función analogRead de Arduino, comprende el ADC y explora el uso de potenciómetros para mediciones de voltaje precisas.
 
-* **AnalogRead Function**: An introduction to using Arduino's analogRead for DC voltage measurement.
-* **Analog Pins Overview**: Understanding the role of analog pins (A0 - A5) in voltage reading.
-* **Signal Types**: Differentiating between digital and analog signals and their voltage levels.
-* **ADC Basics**: Explaining analog-to-digital conversion and the importance of 10-bit and 12-bit resolutions.
-* **Potentiometer Types**: Demonstrating various potentiometers for voltage measurement.
-* **Voltage Measurement Methods**: Detailed methods for accurately reading and displaying voltage values.
+* **Función AnalogRead**: Una introducción al uso de la función analogRead de Arduino para la medición de voltaje de CC.
+* **Resumen de Pines Analógicos**: Comprensión del papel de los pines analógicos (A0 - A5) en la lectura de voltaje.
+* **Tipos de Señal**: Diferenciación entre señales digitales y analógicas y sus niveles de voltaje.
+* **Fundamentos de ADC**: Explicación de la conversión analógica a digital y la importancia de las resoluciones de 10 bits y 12 bits.
+* **Tipos de Potenciómetros**: Demostración de varios potenciómetros para la medición de voltaje.
+* **Métodos de Medición de Voltaje**: Métodos detallados para leer y mostrar valores de voltaje de manera precisa.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,7 +18,6 @@ Learn how to read and measure DC voltage using Arduino's analogRead function, un
 
     <br/><br/>
 
-
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_potentiometer`

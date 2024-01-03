@@ -1,42 +1,42 @@
 .. _cpn_resistor:
 
-Resistor
+Resistencia
 ============
 
 .. image:: img/resistor.png
     :width: 300
 
-Resistor is an electronic element that can limit the branch current. 
-A fixed resistor is a kind of resistor whose resistance cannot be changed, while that of a potentiometer or a variable resistor can be adjusted. 
+La resistencia es un elemento electrónico que puede limitar la corriente de una rama. 
+Una resistencia fija es un tipo de resistencia cuyo valor no se puede cambiar, mientras que el de un potenciómetro o una resistencia variable sí se puede ajustar.
 
-Two generally used circuit symbols for resistor. Normally, the resistance is marked on it. So if you see these symbols in a circuit, it stands for a resistor. 
+Se utilizan dos símbolos de circuito comunes para la resistencia. Normalmente, la resistencia está marcada en ella. Así que si ves estos símbolos en un circuito, representan una resistencia.
 
 .. image:: img/resistor_symbol.png
     :width: 400
 
-**Ω** is the unit of resistance and the larger units include KΩ, MΩ, etc. 
-Their relationship can be shown as follows: 1 MΩ=1000 KΩ, 1 KΩ = 1000 Ω. Normally, the value of resistance is marked on it. 
+**Ω** es la unidad de resistencia y las unidades mayores incluyen KΩ, MΩ, etc. 
+Su relación se puede mostrar de la siguiente manera: 1 MΩ = 1000 KΩ, 1 KΩ = 1000 Ω. Normalmente, el valor de la resistencia está marcado en ella.
 
-When using a resistor, we need to know its resistance first. Here are two methods: you can observe the bands on the resistor, or use a multimeter to measure the resistance. You are recommended to use the first method as it is more convenient and faster. 
+Cuando se utiliza una resistencia, primero necesitamos conocer su valor. Aquí hay dos métodos: puedes observar las bandas en la resistencia o usar un multímetro para medir la resistencia. Se recomienda utilizar el primer método, ya que es más conveniente y rápido.
 
 .. image:: img/resistance_card.jpg
 
-As shown in the card, each color stands for a number. 
+Como se muestra en la tarjeta, cada color representa un número.
 
 .. list-table::
 
-   * - Black
-     - Brown
-     - Red
-     - Orange
-     - Yellow
-     - Green
-     - Blue
-     - Violet
-     - Grey
-     - White
-     - Gold
-     - Silver
+   * - Negro
+     - Marrón
+     - Rojo
+     - Naranja
+     - Amarillo
+     - Verde
+     - Azul
+     - Violeta
+     - Gris
+     - Blanco
+     - Oro
+     - Plata
    * - 0
      - 1
      - 2
@@ -50,48 +50,49 @@ As shown in the card, each color stands for a number.
      - 0.1
      - 0.01
 
-The 4- and 5-band resistors are frequently used, on which there are 4 and 5 chromatic bands. 
+Las resistencias de 4 y 5 bandas son comúnmente utilizadas, en las que hay 4 y 5 bandas cromáticas.
 
-Normally, when you get a resistor, you may find it hard to decide which end to start for reading the color. 
-The tip is that the gap between the 4th and 5th band will be comparatively larger.
+Normalmente, cuando obtienes una resistencia, puede resultar difícil decidir por qué extremo comenzar a leer el color.
+La pista es que el espacio entre la 4ª y la 5ª banda será comparativamente más grande.
 
-Therefore, you can observe the gap between the two chromatic bands at one end of the resistor; 
-if it's larger than any other band gaps, then you can read from the opposite side. 
+Por lo tanto, puedes observar el espacio entre las dos bandas cromáticas en un extremo de la resistencia; 
+si es más grande que cualquier otro espacio entre bandas, entonces puedes leer desde el lado opuesto.
 
-Let's see how to read the resistance value of a 5-band resistor as shown below.
+Veamos cómo leer el valor de la resistencia de una resistencia de 5 bandas como se muestra a continuación.
 
 .. image:: img/220ohm.jpg
     :width: 500
 
-So for this resistor, the resistance should be read from left to right. 
-The value should be in this format: 1st Band 2nd Band 3rd Band x 10^Multiplier (Ω) and the permissible error is ±Tolerance%. 
-So the resistance value of this resistor is 2(red) 2(red) 0(black) x 10^0(black) Ω = 220 Ω, 
-and the permissible error is ± 1% (brown). 
+Entonces, para esta resistencia, el valor se debe leer de izquierda a derecha. 
+El valor debe ser en este formato: 1ª Banda 2ª Banda 3ª Banda x 10^Multiplicador (Ω) y el error permisible es ±Tolerancia%. 
+Así que el valor de la resistencia de esta resistencia es 2(rojo) 2(rojo) 0(negro) x 10^0(negro) Ω = 220 Ω, 
+y el error permisible es ± 1% (marrón).
 
-.. list-table::Common resistor color band
+.. list-table::Colores comunes de bandas de resistencia
     :header-rows: 1
 
-    * - Resistor 
-      - Color Band  
+    * - Resistencia 
+      - Banda de Color  
     * - 10Ω   
-      - brown black black silver brown
+      - marrón negro negro plata marrón
     * - 100Ω   
-      - brown black black black brown
+      - marrón negro negro negro marrón
     * - 220Ω 
-      - red red black black brown
+      - rojo rojo negro negro marrón
     * - 330Ω 
-      - orange orange black black brown
+      - naranja naranja negro negro marrón
     * - 1kΩ 
-      - brown black black brown brown
+      - marrón negro negro marrón marrón
     * - 2kΩ 
-      - red black black brown brown
+      - rojo negro negro marrón marrón
     * - 5.1kΩ 
-      - green brown black brown brown
+      - verde marrón negro marrón marrón
     * - 10kΩ 
-      - brown black black red brown 
+      - marrón negro negro rojo marrón 
     * - 100kΩ 
-      - brown black black orange brown 
+      - marrón negro negro naranja marrón 
     * - 1MΩ 
-      - brown black black green brown 
+      - marrón negro negro verde marrón 
 
-You can learn more about resistor from Wiki: `Resistor - Wikipedia <https://en.wikipedia.org/wiki/Resistor>`_.
+Puedes aprender más sobre las resistencias en Wiki: `Resistencia - Wikipedia <https://en.wikipedia.org/wiki/Resistor>`_.
+

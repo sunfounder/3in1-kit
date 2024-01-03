@@ -1,31 +1,30 @@
 .. _cpn_button:
 
-Button
+Botón
 ==========
 
 .. image:: img/button_1212.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Los botones son un componente común utilizado para controlar dispositivos electrónicos. Suelen usarse como interruptores para conectar o interrumpir circuitos. Aunque los botones vienen en una variedad de tamaños y formas, el que se utiliza aquí es un mini-botón de 6mm como se muestra en las siguientes imágenes.
+El pin 1 está conectado al pin 2 y el pin 3 al pin 4. Por lo tanto, solo necesitas conectar cualquiera de los pines 1 y 2 a los pines 3 o 4.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+A continuación se muestra la estructura interna de un botón. El símbolo en la parte inferior derecha se utiliza habitualmente para representar un botón en los circuitos.
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Dado que el pin 1 está conectado al pin 2, y el pin 3 al pin 4, cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/button_1212_size.png
     :width: 600
     :align: center
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_button` (Basic Project)
-* :ref:`sh_doorbell` (Scratch Project)
-* :ref:`sh_eat_apple` (Scratch Project)
-* :ref:`sh_fishing` (Scratch Project)
-
+* :ref:`ar_button` (Proyecto Básico)
+* :ref:`sh_doorbell` (Proyecto Scratch)
+* :ref:`sh_eat_apple` (Proyecto Scratch)
+* :ref:`sh_fishing` (Proyecto Scratch)

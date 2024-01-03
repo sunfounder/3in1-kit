@@ -1,16 +1,16 @@
-Video 25: Smart Car Obstacle Avoidance
-========================================
+Vídeo 25: Evitación de Obstáculos en Coche Inteligente
+========================================================
 
-This tutorial teaches how to program a smart car for obstacle avoidance using infrared sensors, part of the Robojax Arduino course featuring the SunFounder kit.
+Este tutorial enseña cómo programar un coche inteligente para la evitación de obstáculos usando sensores infrarrojos, parte del curso de Arduino Robojax con el kit de SunFounder.
 
-* **Obstacle Avoidance Basics**: Overview of using infrared sensors for smart car obstacle detection and avoidance.
-* **Required Knowledge**: Emphasis on the prerequisite knowledge of car movement control and infrared sensor basics.
-* **Sensor Setup and Alignment**: Details on correctly aligning sensors for optimal obstacle detection.
-* **Wiring for Obstacle Detection**: Step-by-step guide to connecting sensors to the Arduino and car.
-* **Code Walkthrough for Obstacle Avoidance**: Comprehensive explanation of the Arduino code for obstacle detection and response.
-* **Live Obstacle Avoidance Demonstration**: Real-time demonstration showing the smart car navigating through obstacles.
+* **Fundamentos de la Evitación de Obstáculos**: Visión general del uso de sensores infrarrojos para la detección y evitación de obstáculos en coches inteligentes.
+* **Conocimientos Requeridos**: Énfasis en el conocimiento previo necesario sobre el control de movimiento del coche y fundamentos de los sensores infrarrojos.
+* **Configuración y Alineación de Sensores**: Detalles sobre la alineación correcta de los sensores para una detección óptima de obstáculos.
+* **Cableado para la Detección de Obstáculos**: Guía paso a paso para conectar los sensores al Arduino y al coche.
+* **Explicación del Código para la Evitación de Obstáculos**: Explicación comprensiva del código de Arduino para la detección de obstáculos y la respuesta.
+* **Demostración en Vivo de la Evitación de Obstáculos**: Demostración en tiempo real mostrando el coche inteligente navegando a través de obstáculos.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This tutorial teaches how to program a smart car for obstacle avoidance using in
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`car_ir_obstacle`

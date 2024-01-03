@@ -1,16 +1,16 @@
-Video 8: PWM and Loop Structures
+Vídeo 8: PWM y Estructuras de Bucle
 =====================================
 
-This Arduino tutorial delves into the use of PWM for controlling devices like motors and LEDs, along with a comprehensive guide on programming loops such as for, while, and do-while.
+Este tutorial de Arduino profundiza en el uso de PWM para controlar dispositivos como motores y LEDs, junto con una guía comprensiva sobre la programación de bucles como for, while y do-while.
 
-* **PWM Fundamentals**: Understanding PWM and duty cycles for controlling device behaviors.
-* **Analog Writing with Arduino**: Using `analogWrite` to modulate signal strength for motors and LEDs.
-* **For Loop Demonstrations**: Practical examples of for loops for gradual LED fading.
-* **While Loop Usage**: Implementing while loops for efficient program execution.
-* **Do-While Loop Mechanics**: Exploring the unique structure and applications of do-while loops in Arduino projects.
-* **Practical LED Control**: Step-by-step setup and code for adjusting LED brightness using PWM.
+* **Fundamentos de PWM**: Entendimiento de PWM y ciclos de trabajo para controlar el comportamiento de dispositivos.
+* **Escritura Analógica con Arduino**: Uso de `analogWrite` para modular la intensidad de la señal en motores y LEDs.
+* **Demostraciones de Bucle For**: Ejemplos prácticos de bucles for para el desvanecimiento gradual de LEDs.
+* **Uso del Bucle While**: Implementación de bucles while para una ejecución eficiente del programa.
+* **Mecánica del Bucle Do-While**: Exploración de la estructura única y aplicaciones de los bucles do-while en proyectos de Arduino.
+* **Control Práctico de LED**: Configuración paso a paso y código para ajustar el brillo del LED usando PWM.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This Arduino tutorial delves into the use of PWM for controlling devices like mo
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_fading`

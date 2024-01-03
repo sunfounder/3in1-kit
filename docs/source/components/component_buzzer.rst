@@ -6,28 +6,25 @@ Buzzer
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+Como un tipo de zumbador electrónico con estructura integrada, los buzzers, que son alimentados por corriente continua (DC), se utilizan ampliamente en computadoras, impresoras, fotocopiadoras, alarmas, juguetes electrónicos, dispositivos electrónicos automotrices, teléfonos, temporizadores y otros productos electrónicos o dispositivos de voz.
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+Los buzzers se pueden clasificar en activos y pasivos (ver la siguiente imagen). Gira el buzzer de modo que sus pines queden hacia arriba, y el buzzer con una placa de circuito verde es un buzzer pasivo, mientras que el que está envuelto con cinta negra es un buzzer activo.
 
-The difference between an active buzzer and a passive buzzer: 
+La diferencia entre un buzzer activo y uno pasivo:
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+Un buzzer activo tiene una fuente oscilante incorporada, por lo que emitirá sonidos al ser electrificado. Pero un buzzer pasivo no tiene tal fuente, por lo que no emitirá un pitido si se usan señales de DC; en su lugar, necesitas usar ondas cuadradas cuya frecuencia esté entre 2K y 5K para activarlo. El buzzer activo suele ser más caro que el pasivo debido a sus múltiples circuitos oscilantes incorporados.
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+A continuación se muestra el símbolo eléctrico de un buzzer. Tiene dos pines con polos positivo y negativo. Con un + en la superficie representa el ánodo y el otro es el cátodo.
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don't mix them up when connecting, otherwise the buzzer will not make sound. 
+Puedes verificar los pines del buzzer, el más largo es el ánodo y el más corto es el cátodo. Por favor, no los confundas al conectar, de lo contrario, el buzzer no emitirá sonido.
 
 `Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_beep` (Basic Project)
-* :ref:`ar_passive_buzzer` (Basic Project)
-* :ref:`iot_music` (IoT Project)
-
-
-
+* :ref:`ar_beep` (Proyecto Básico)
+* :ref:`ar_passive_buzzer` (Proyecto Básico)
+* :ref:`iot_music` (Proyecto IoT)

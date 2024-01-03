@@ -1,17 +1,16 @@
-Video 16: Infrared Obstacle Avoidance 
-========================================
+Vídeo 16: Evitación de Obstáculos por Infrarrojos 
+======================================================
 
-Learn to set up and program an infrared obstacle avoidance sensor with Arduino to detect obstacles and activate a buzzer.
+Aprende a configurar y programar un sensor de evitación de obstáculos por infrarrojos con Arduino para detectar obstáculos y activar un zumbador.
 
-* **Understanding IR Sensor Mechanics**: Overview of the infrared sensor's components and how they function to detect obstacles.
-* **Sensor-Arduino Connection**: Step-by-step instructions for wiring the infrared sensor to the Arduino board.
-* **Programming for Obstacle Detection**: Introduction to writing and understanding Arduino code for obstacle detection using the sensor.
-* **Real-Time Obstacle Detection Demo**: Demonstrating the sensor's ability to detect objects at various distances and conditions.
-* **Sensitivity Adjustment**: Detailed guide on adjusting the sensor's sensitivity for different detection ranges.
-* **Integrating a Buzzer**: Modifying the setup and code to include a buzzer that activates upon obstacle detection.
+* **Entendiendo la Mecánica del Sensor IR**: Descripción general de los componentes del sensor infrarrojo y cómo funcionan para detectar obstáculos.
+* **Conexión del Sensor-Arduino**: Instrucciones paso a paso para conectar el sensor infrarrojo a la placa Arduino.
+* **Programación para la Detección de Obstáculos**: Introducción a la escritura y comprensión del código de Arduino para la detección de obstáculos usando el sensor.
+* **Demostración de Detección de Obstáculos en Tiempo Real**: Demostración de la capacidad del sensor para detectar objetos a varias distancias y en diferentes condiciones.
+* **Ajuste de Sensibilidad**: Guía detallada para ajustar la sensibilidad del sensor a diferentes rangos de detección.
+* **Integración de un Zumbador**: Modificación de la configuración y el código para incluir un zumbador que se activa al detectar un obstáculo.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,6 +18,6 @@ Learn to set up and program an infrared obstacle avoidance sensor with Arduino t
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_ir_obstacle`

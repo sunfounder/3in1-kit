@@ -1,17 +1,16 @@
-Video 15: Automating Plant Watering
-======================================
+Vídeo 15: Automatización del Riego de Plantas
+===============================================
 
-This tutorial covers the use of a soil moisture sensor with Arduino to monitor soil wetness and automate watering through code and hardware demonstrations.
+Este tutorial abarca el uso de un sensor de humedad del suelo con Arduino para monitorear la humedad del suelo y automatizar el riego a través de demostraciones de código y hardware.
 
-* **Soil Moisture Sensor Basics**: Introduction to the soil moisture sensor, its pins, and how it measures soil moisture.
-* **Sensor-Arduino Wiring**: Step-by-step instructions on connecting the moisture sensor to the Arduino.
-* **Arduino Code for Moisture Reading**: Explanation of Arduino code to read and interpret moisture levels from the sensor.
-* **Understanding Sensor Output**: Analysis of the sensor's output values to determine soil moisture conditions.
-* **Automated Watering Logic**: Development of an advanced Arduino code to automate watering based on soil moisture levels.
-* **Practical Implementation and Testing**: Demonstrations of the sensor in action within soil, showing how the system can trigger a buzzer or control a water pump for automated watering.
+* **Fundamentos del Sensor de Humedad del Suelo**: Introducción al sensor de humedad del suelo, sus pines y cómo mide la humedad del suelo.
+* **Cableado del Sensor-Arduino**: Instrucciones paso a paso para conectar el sensor de humedad al Arduino.
+* **Código de Arduino para Lectura de Humedad**: Explicación del código de Arduino para leer e interpretar los niveles de humedad del sensor.
+* **Entendiendo la Salida del Sensor**: Análisis de los valores de salida del sensor para determinar las condiciones de humedad del suelo.
+* **Lógica de Riego Automatizado**: Desarrollo de un código avanzado de Arduino para automatizar el riego en función de los niveles de humedad del suelo.
+* **Implementación Práctica y Pruebas**: Demostraciones del sensor en acción dentro del suelo, mostrando cómo el sistema puede activar un zumbador o controlar una bomba de agua para el riego automatizado.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,6 +18,6 @@ This tutorial covers the use of a soil moisture sensor with Arduino to monitor s
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_moisture`

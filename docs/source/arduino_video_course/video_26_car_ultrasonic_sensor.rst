@@ -1,14 +1,14 @@
-Video 26: Smart Car Ultrasonic Sensor
-========================================
+Vídeo 26: Sensor Ultrasónico en Coche Inteligente
+===================================================
 
-In this tutorial, you will learn how to program a smart car with an Arduino and ultrasonic sensors for advanced obstacle detection and navigation features.
+En este tutorial, aprenderás a programar un coche inteligente con un Arduino y sensores ultrasónicos para funciones avanzadas de detección de obstáculos y navegación.
 
-* **Ultrasonic Sensor Introduction**: Exploring the capabilities of ultrasonic sensors in smart car navigation.
-* **Sensor Wiring Instructions**: Step-by-step guide on connecting the ultrasonic sensor to the Arduino board.
-* **Arduino Code Breakdown**: In-depth explanation of the code used for processing sensor data and controlling the car.
-* **Motor Control via Sensor Data**: How to use ultrasonic sensor readings to control the car's motors.
+* **Introducción al Sensor Ultrasónico**: Exploración de las capacidades de los sensores ultrasónicos en la navegación de coches inteligentes.
+* **Instrucciones de Cableado del Sensor**: Guía paso a paso para conectar el sensor ultrasónico a la placa Arduino.
+* **Desglose del Código de Arduino**: Explicación detallada del código utilizado para procesar los datos del sensor y controlar el coche.
+* **Control de Motores a Través de Datos del Sensor**: Cómo utilizar las lecturas del sensor ultrasónico para controlar los motores del coche.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -16,6 +16,6 @@ In this tutorial, you will learn how to program a smart car with an Arduino and 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`car_ultrasonic`

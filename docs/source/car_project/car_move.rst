@@ -1,15 +1,15 @@
 .. _car_move:
 
-1. Move
+1. Mover
 ===============
 
 .. image:: ../components/img/l9110_module.jpg
     :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110 module.
+Antes de comenzar a programar, revisemos el principio de funcionamiento del módulo L9110.
 
-Here is the truth table of Motor B:
+Aquí está la tabla de verdad del Motor B:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -17,21 +17,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B(B-2A)
-      - The state of Motor B
+      - El estado del Motor B
     * - 1
       - 0
-      - Rotate clockwise
+      - Gira en sentido horario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Gira en sentido antihorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
-      - Stop
+      - Parada
 
-Here is the truth table of Motor A:
+Aquí está la tabla de verdad del Motor A:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -39,54 +39,54 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - El estado del Motor B
     * - 1
       - 0
-      - Rotate clockwise
+      - Gira en sentido horario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Gira en sentido antihorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
-      - Stop
+      - Parada
 
 
 * :ref:`cpn_l9110`
 
-**Forward**
+**Hacia adelante**
 
-Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
+Ahora conectemos la entrada del módulo L9110 directamente a 12V y GND respectivamente para hacer que el coche se mueva.
 
 .. raw:: html
     
   <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-1. Connect R3 board, L9110 module and 2 motors.
+1. Conectar la placa R3, el módulo L9110 y 2 motores.
 
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B(B-2A) and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
+2. Conectar B-1B(B-2A) y A-1A a VCC, y B-1A y A-1B a GND, luego podrás ver el coche avanzando.
 
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, 
-you need to readjust the wiring of the two motors.
+Si no ambos giran hacia adelante, sino que ocurren las siguientes situaciones, 
+necesitarás reajustar el cableado de los dos motores.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Si ambos motores giran hacia atrás al mismo tiempo (el motor izquierdo gira en sentido horario, el motor derecho gira en sentido antihorario), intercambia el cableado de los motores izquierdo y derecho al mismo tiempo, OA(A) y OB(A) se intercambian, OA(B) y OB(B) se intercambian.
+* Si el motor izquierdo gira hacia atrás (rotación en sentido horario), intercambia el cableado de OA(B) y OB(B) del motor izquierdo.
+* Si el motor derecho gira hacia atrás (rotación en sentido antihorario), intercambia el cableado de OA(A) y OB(A) del motor derecho.
 
 
-**Backward**
+**Hacia atrás**
 
-Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
+Conectar B-1B(B-2A) y A-1A a GND, y B-1A y A-1B a VCC, luego podrás ver el coche retrocediendo.
 
 
 .. image:: img/1.move_back.png 
@@ -94,20 +94,20 @@ Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be
 
 
 
-**Turn Left**
+**Girar a la izquierda**
 
-If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B(B-2A)  and A-1B to VCC.
+Si quieres hacer que el coche gire a la izquierda, es decir, hacer que ambos motores giren en sentido horario. 
+Necesitas conectar B-1A y A-1A a GND, y B-1B(B-2A) y A-1B a VCC.
 
 
 .. image:: img/1.move_left.png 
     :width: 800
 
 
-**Turn Right**
+**Girar a la derecha**
 
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
+Por el contrario, si quieres girar el coche a la derecha, es decir, hacer que ambos motores giren en sentido antihorario. 
+Necesitas conectar B-1A y A-1A a VCC y B-1B(B-2A) y A-1B a GND.
 
 
 .. image:: img/1.move_right.png 
@@ -115,8 +115,8 @@ You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
 
 
 
-**Stop**
+**Detener**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B(B-2A)  to 12V or 5V at the same time, and the same for A-1A and A-1B.
+Para detener el motor, conecta las entradas del mismo lado a 12V o GND al mismo tiempo, por ejemplo, conecta B-1A y B-1B(B-2A) a 12V o 5V al mismo tiempo, y lo mismo para A-1A y A-1B.
 
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+Esto es por supuesto teórico y se necesitará más adelante al controlar con código. Aquí quita la fuente de alimentación al coche para detenerlo.

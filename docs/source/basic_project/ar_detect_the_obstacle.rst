@@ -1,37 +1,36 @@
 .. _ar_ir_obstacle:
 
-3.3 Detect the Obstacle
+3.3 Detectar el Obstáculo
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+Este módulo se instala comúnmente en automóviles y robots para juzgar la
+existencia de obstáculos por delante. También se utiliza ampliamente en dispositivos portátiles, grifos de agua y otros.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -40,32 +39,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_3.3_obstacle.png
 
-The digital pin 2 is used to read the
-signal of IR Obstacle Avoidance Module. We get the VCC of IR
-Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
+El pin digital 2 se usa para leer la
+señal del Módulo de Evitación de Obstáculos IR. Conectamos el VCC del
+Módulo Sensor IR a 5V, GND a GND, OUT al pin digital 2.
 
-**Wiring**
+**Cableado**
 
 .. image:: img/detect_the_obstacle_bb.jpg
     :width: 800
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-   * You can open the file ``3.3.detect_the_obstacle.ino`` under the path of ``3in1-kit\basic_project\3.3.detect_the_obstacle``. 
-   * Or copy this code into **Arduino IDE**.
+   * Puedes abrir el archivo ``3.3.detect_the_obstacle.ino`` en la ruta ``3in1-kit\basic_project\3.3.detect_the_obstacle``. 
+   * O copia este código en **Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * O carga el código a través del `Editor Web de Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/535a0304-684e-481d-b85d-403911b3a4e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the IR obstacle avoidance module detects something blocking in front of it, [0] will appear on the serial monitor, otherwise [1] will be displayed.
+Cuando el módulo de evitación de obstáculos IR detecta algo bloqueando su frente, aparecerá [0] en el monitor serial, de lo contrario, se mostrará [1].

@@ -1,31 +1,32 @@
 .. _cpn_7_segment:
 
-7-segment Display
+Display de 7 Segmentos
 ======================
 
 .. image:: img/7_segment.png
     :width: 200
     :align: center
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+Un display de 7 segmentos es un componente en forma de 8 que agrupa 7 LEDs. Cada LED se llama segmento; al ser energizado, un segmento forma parte de un numeral a mostrar.
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+Hay dos tipos de conexión de pines: Cátodo Común (CC) y Ánodo Común (CA). Como su nombre indica, un display CC tiene todos los cátodos de los 7 LEDs conectados, mientras que un display CA tiene todos los ánodos de los 7 segmentos conectados.
 
-In this kit, we use the Common Cathode 7-segment display, here is the electronic symbol.
+En este kit, utilizamos el display de 7 segmentos de Cátodo Común, aquí está el símbolo electrónico.
 
 .. image:: img/segment_cathode.png
     :width: 800
 
-Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package. These LED pins are labeled from "a" through to "g" representing each individual LED. The other LED pins are connected together forming a common pin. So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+Cada uno de los LEDs en el display tiene un segmento posicional con uno de sus pines de conexión sacados del paquete plástico rectangular. Estos pines de LED están etiquetados de "a" a "g", representando cada LED individual. Los otros pines de LED están conectados juntos formando un pin común. Por lo tanto, al polarizar directamente los pines apropiados de los segmentos de LED en un orden particular, algunos segmentos se iluminarán y otros permanecerán apagados, mostrando así el carácter correspondiente en el display.
 
-**Display Codes** 
+**Códigos de Display**
 
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1, For example, 00111111 means that DP and G are set to 0, while others are set to 1. Therefore, the number 0 is displayed on the 7-segment display, while HEX Code corresponds to hexadecimal number.
+Para ayudarte a entender cómo los displays de 7 segmentos (Cátodo Común) muestran los números, hemos dibujado la siguiente tabla. Los números son el número 0-F mostrado en el display de 7 segmentos; (DP) GFEDCBA se refiere al conjunto de LEDs correspondiente configurado en 0 o 1, Por ejemplo, 00111111 significa que DP y G están configurados en 0, mientras que los demás están en 1. Por lo tanto, el número 0 se muestra en el display de 7 segmentos, mientras que HEX Code corresponde al número hexadecimal.
 
 .. image:: img/segment_code.png
 
-**Example**
+**Ejemplo**
 
-* :ref:`ar_segment` (Basic Project)
-* :ref:`iot_gate` (IoT Project)
+* :ref:`ar_segment` (Proyecto Básico)
+* :ref:`iot_gate` (Proyecto IoT)
+
 

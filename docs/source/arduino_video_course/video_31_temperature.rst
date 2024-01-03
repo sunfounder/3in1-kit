@@ -1,17 +1,16 @@
-Video 31: Wi-Fi Temperature Monitoring
-=========================================
+Vídeo 31: Monitoreo de Temperatura por Wi-Fi
+==============================================
 
-A comprehensive guide on setting up ESP8266 ESP-01 with a DHT11 sensor to monitor temperature over Wi-Fi and display it on various devices.
+Una guía completa para configurar el ESP8266 ESP-01 con un sensor DHT11 para monitorear la temperatura a través de Wi-Fi y mostrarla en varios dispositivos.
 
-* **ESP8266 and DHT11 Introduction**: Exploring the components used for Wi-Fi-based temperature monitoring.
-* **Web Server Fundamentals**: Understanding how web servers work in the context of remote data access.
-* **Arduino IDE Setup for ESP8266**: Configuring the Arduino IDE to program the ESP8266 module.
-* **Sensor Wiring Guide**: Detailed instructions on connecting the DHT11 sensor to the ESP8266.
-* **Temperature Data on Serial Monitor**: Programming ESP8266 to display temperature readings on a serial monitor.
-* **Remote Temperature Data Display**: Demonstrating how to view temperature data on mobile and desktop devices via Wi-Fi.
+* **Introducción al ESP8266 y DHT11**: Exploración de los componentes utilizados para el monitoreo de temperatura basado en Wi-Fi.
+* **Fundamentos de Servidores Web**: Comprensión de cómo funcionan los servidores web en el contexto del acceso remoto a datos.
+* **Configuración del IDE de Arduino para ESP8266**: Configuración del IDE de Arduino para programar el módulo ESP8266.
+* **Guía de Cableado del Sensor**: Instrucciones detalladas para conectar el sensor DHT11 al ESP8266.
+* **Datos de Temperatura en el Monitor Serial**: Programación del ESP8266 para mostrar lecturas de temperatura en un monitor serial.
+* **Visualización Remota de Datos de Temperatura**: Demostración de cómo ver datos de temperatura en dispositivos móviles y de escritorio a través de Wi-Fi.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -19,7 +18,6 @@ A comprehensive guide on setting up ESP8266 ESP-01 with a DHT11 sensor to monito
 
     <br/><br/>
 
-
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`iot_home`

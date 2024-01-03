@@ -1,38 +1,38 @@
 .. _sh_follow2:
 
-3.6 Follow Your Hand 2
+3.6 Sigue tu Mano 2
 ==============================
 
-In the :ref:`sh_follow1` project only the ultrasonic module is used, it can only follow your hand forward.
+En el proyecto :ref:`sh_follow1` solo se usa el módulo ultrasónico, puede seguir tu mano solo hacia adelante.
 
-In this project, we use 2 IR obstacle avoidance modules at the same time, so that the car can follow your hand left or right.
+En este proyecto, utilizamos 2 módulos de evitación de obstáculos IR al mismo tiempo, para que el coche pueda seguir tu mano a la izquierda o a la derecha.
 
-Required Components
----------------------
+Componentes Necesarios
+-------------------------
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -45,17 +45,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
+Construye el Circuito
 -----------------------
 
-Connect the ultrasonic module and the two IR obstacle avoidance modules at the same time.
+Conecta el módulo ultrasónico y los dos módulos IR de evitación de obstáculos al mismo tiempo.
 
-The wiring between the ultrasonic and the R3 board is as follows.
+El cableado entre el ultrasónico y la placa R3 es el siguiente.
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Módulo Ultrasónico
+      - Placa R3
     * - Vcc
       - 5V
     * - Trig
@@ -65,12 +65,12 @@ The wiring between the ultrasonic and the R3 board is as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+El cableado de los 2 módulos IR de evitación de obstáculos a la placa R3 es el siguiente.
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - Módulo IR Izquierdo
+      - Placa R3
     * - OUT
       - 8
     * - GND
@@ -80,8 +80,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - Módulo IR Derecho
+      - Placa R3
     * - OUT
       - 7
     * - GND
@@ -92,33 +92,33 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-Programming
+Programación
 ---------------
 
-The effect to be achieved by this project is as follows
+El efecto que se desea lograr con este proyecto es el siguiente
 
-* Ultrasonic detects your hand about 5-10cm in front and let the car follow.
-* The infrared module on the left detects your hand and turns to the left.
-* The right IR module detects your hand and turns to the right.
+* El ultrasónico detecta tu mano a unos 5-10 cm de distancia y hace que el coche siga.
+* El módulo infrarrojo de la izquierda detecta tu mano y gira hacia la izquierda.
+* El módulo IR derecho detecta tu mano y gira hacia la derecha.
 
-**1. Create a block**
+**1. Crear un bloque**
 
-Create blocks that allow the car to move forward, turn left, turn right and stop.
+Crea bloques que permitan al coche moverse hacia adelante, girar a la izquierda, girar a la derecha y detenerse.
 
 .. image:: img/6_follow2_1.png
 
-**2. Follow to move forward**
+**2. Seguir para avanzar**
 
-Read the ultrasonic value and if your hand is detected at a distance of 5-10cm, then let the car follow.
+Lee el valor ultrasónico y si detecta tu mano a una distancia de 5-10 cm, haz que el coche siga.
 
 .. image:: img/6_follow2_2.png
 
-**3. Follow to turn left and right**
+**3. Seguir para girar a la izquierda y a la derecha**
 
-Read the values of the left and right IR modules.
+Lee los valores de los módulos IR izquierdo y derecho.
 
-* If the left IR module detects your hand, turn left.
-* If the right IR module detects your hand, turn right.
-* If neither IR module and ultrasonic module detect your hand, make the car stop.
+* Si el módulo IR izquierdo detecta tu mano, gira hacia la izquierda.
+* Si el módulo IR derecho detecta tu mano, gira hacia la derecha.
+* Si ninguno de los módulos IR ni el módulo ultrasónico detectan tu mano, haz que el coche se detenga.
 
 .. image:: img/6_follow2_3.png

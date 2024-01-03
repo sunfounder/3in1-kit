@@ -1,15 +1,14 @@
 .. _iot_projects:
 
-IoT Projects
+Proyectos IoT
 ====================
 
-This kit has the ESP8266 Wifi module which allows Arduino to connect to the internet for IoT experiments.
+Este kit incluye el módulo Wifi ESP8266, que permite a Arduino conectarse a internet para experimentos de IoT.
 
-Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>`_ platform with the help of ESP8266 Wifi module to do some interesting IoT projects. Also you can use the Blynk APP on your cell phone to control the smart car.
+Aquí te guiaremos sobre cómo hacer que Arduino se conecte a la plataforma `BLYNK <https://blynk.io/>`_ con la ayuda del módulo Wifi ESP8266 para realizar algunos proyectos interesantes de IoT. También puedes usar la aplicación Blynk en tu teléfono celular para controlar el coche inteligente.
 
-
-Blynk is a full suite of software required to prototype, deploy, and remotely manage connected electronic devices at any scale: from personal IoT projects to millions of commercial connected products.
-With Blynk anyone can connect their hardware to the cloud and build a no-code iOS, Android, and web applications to analyze real-time and historical data coming from devices, control them remotely from anywhere in the world, receive important notifications, and much more…
+Blynk es un conjunto completo de software necesario para prototipar, implementar y gestionar de forma remota dispositivos electrónicos conectados a cualquier escala: desde proyectos personales de IoT hasta millones de productos conectados comerciales.
+Con Blynk, cualquiera puede conectar su hardware a la nube y crear aplicaciones iOS, Android y web sin código para analizar datos en tiempo real e históricos provenientes de dispositivos, controlarlos de forma remota desde cualquier parte del mundo, recibir notificaciones importantes y mucho más…
 
 .. image:: img/blynk-iot.png
 

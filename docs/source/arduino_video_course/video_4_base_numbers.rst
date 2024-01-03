@@ -1,15 +1,15 @@
-Video 4: Number Systems and Serial Monitor
-==========================================
+Vídeo 4: Sistemas Numéricos y Monitor Serial
+===============================================
 
-This video delves into the fundamentals of different number systems used in Arduino and demonstrates practical applications of the Serial Monitor for programming and debugging.
+Este vídeo profundiza en los fundamentos de los diferentes sistemas numéricos utilizados en Arduino y demuestra aplicaciones prácticas del Monitor Serial para la programación y depuración.
 
-* **Number Systems Explained**: Detailed explanation of decimal, binary, octal, and hexadecimal number systems and their relevance in Arduino.
-* **Data Conversion Techniques**: Methods for converting data among different number systems.
-* **Serial Monitor Usage**: Guide to using the Arduino Serial Monitor for debugging and data visualization.
-* **Printing Data in Serial Monitor**: Techniques for printing ASCII values, characters, and numerical data in the Serial Monitor.
-* **User Input Handling**: Demonstrations of reading and interpreting user inputs via the Serial Monitor.
+* **Sistemas Numéricos Explicados**: Explicación detallada de los sistemas numéricos decimal, binario, octal y hexadecimal y su relevancia en Arduino.
+* **Técnicas de Conversión de Datos**: Métodos para convertir datos entre diferentes sistemas numéricos.
+* **Uso del Monitor Serial**: Guía para usar el Monitor Serial de Arduino para la depuración y visualización de datos.
+* **Impresión de Datos en el Monitor Serial**: Técnicas para imprimir valores ASCII, caracteres y datos numéricos en el Monitor Serial.
+* **Manejo de Entradas de Usuario**: Demostraciones de lectura e interpretación de entradas de usuario a través del Monitor Serial.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 

@@ -1,22 +1,22 @@
 .. _car_remote_plus:
 
-10. One Touch Start
+10. Arranque con un Toque
 =============================
 
-In this project, we have integrated the previous projects - line following, following, obstacle avoidance, self-driving, etc. together. They can be switched by buttons on the remote control, so you can start the car and experience all functions at once.
+En este proyecto, hemos integrado los proyectos anteriores - seguimiento de línea, seguimiento, evitación de obstáculos, conducción autónoma, etc., juntos. Se pueden cambiar mediante botones en el control remoto, así que puedes arrancar el coche y experimentar todas las funciones a la vez.
 
-**Wiring**
+**Cableado**
 
 .. image:: img/car_10.png
     :width: 800
 
-**Code**
+**Código**
 
 .. note::
 
-    * Open the ``10.one_touch_start.ino`` file under the path of ``3in1-kit\car_project\10.one_touch_start``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Abre el archivo ``10.one_touch_start.ino`` en la ruta ``3in1-kit\car_project\10.one_touch_start``.
+    * O copia este código en el **Arduino IDE**.
+    * Aquí se utiliza la biblioteca ``IRremote``, puedes instalarla desde el **Library Manager**.
   
         .. image:: ../img/lib_irremote.png
     
@@ -25,24 +25,22 @@ In this project, we have integrated the previous projects - line following, foll
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d873724f-120e-4679-b4ec-8d72ad583c8c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Una vez subido el código con éxito, el LED parpadeará rápidamente 3 veces por cada señal recibida del control remoto por el receptor IR. Puedes presionar las siguientes teclas para operar el carro.
 
-After the code is uploaded successfully, the LED will flash rapidly 3 times for every signal received from the remote control by the IR receiver. You can press the following keys to operate the cart.
-
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Move to the left front
-* **2**: Forward
-* **3**: Move to the right.
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward.
-* **9**: Backward to the right
-* **CYCLE**: Follow the line
-* **U/SD**: Self-driving
-* **▷▷|**: Obstacle avoidance with ultrasonic module
-* **|◁◁**: Obstacle avoidance with IR Obstacle module
-* **EQ**: Follow your hand
-* **0**: Stop
-
+* **+**: Acelerar
+* **-**: Desacelerar
+* **1**: Moverse hacia el frente izquierdo
+* **2**: Hacia adelante
+* **3**: Moverse hacia la derecha
+* **4**: Girar a la izquierda
+* **6**: Girar a la derecha
+* **7**: Hacia atrás a la izquierda
+* **8**: Hacia atrás
+* **9**: Hacia atrás a la derecha
+* **CYCLE**: Seguir la línea
+* **U/SD**: Conducción autónoma
+* **▷▷|**: Evitación de obstáculos con módulo ultrasónico
+* **|◁◁**: Evitación de obstáculos con módulo IR Obstacle
+* **EQ**: Seguir tu mano
+* **0**: Detener
 

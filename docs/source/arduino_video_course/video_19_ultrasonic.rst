@@ -1,16 +1,16 @@
-Video 19: Ultrasonic Sensor
+Vídeo 19: Sensor Ultrasónico
 ==================================
 
-This tutorial explores the use of an ultrasonic sensor with Arduino, demonstrating how to wire, program, and accurately measure distances.
+Este tutorial explora el uso de un sensor ultrasónico con Arduino, demostrando cómo conectar, programar y medir distancias con precisión.
 
-* **Ultrasonic Sensor Basics**: Introduction to ultrasonic sensors and their functionality in distance measurement.
-* **Operational Mechanism**: Understanding the ultrasonic waves and their reflection principle for measuring distances.
-* **Sensor Wiring to Arduino**: Step-by-step guide on connecting the ultrasonic sensor to Arduino.
-* **Library Setup**: How to download and install the necessary library for the sensor.
-* **Programming for Measurement**: Detailed explanation of the Arduino code for operating the ultrasonic sensor.
-* **Practical Measurement Tests**: Demonstrating the sensor's ability to measure different distances with precision.
+* **Fundamentos del Sensor Ultrasónico**: Introducción a los sensores ultrasónicos y su funcionalidad en la medición de distancias.
+* **Mecanismo Operativo**: Comprensión de las ondas ultrasónicas y su principio de reflexión para medir distancias.
+* **Cableado del Sensor a Arduino**: Guía paso a paso para conectar el sensor ultrasónico a Arduino.
+* **Configuración de la Biblioteca**: Cómo descargar e instalar la biblioteca necesaria para el sensor.
+* **Programación para Medición**: Explicación detallada del código de Arduino para operar el sensor ultrasónico.
+* **Pruebas de Medición Práctica**: Demostración de la capacidad del sensor para medir diferentes distancias con precisión.
 
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -18,6 +18,6 @@ This tutorial explores the use of an ultrasonic sensor with Arduino, demonstrati
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`ar_ultrasonic`

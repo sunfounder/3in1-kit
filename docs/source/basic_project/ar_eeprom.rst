@@ -3,37 +3,37 @@
 5.15 EEPROM
 ==============
 
-`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ is a memory, so the data it stores will not be erased when the main control board is turned off. You can use it to record some data and read it the next time you turn it on.
+`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ es una memoria que conserva los datos almacenados incluso cuando se apaga la placa controladora principal. Puedes usarla para registrar algunos datos y leerlos la próxima vez que la enciendas.
 
-As an example, you can make a sports counter that keeps track of how many rope skippings you do every day.
+Por ejemplo, puedes crear un contador deportivo que lleve la cuenta de cuántas veces saltas la cuerda cada día.
 
-You can also write data to it in one program and read it in another. For example, when you are working on a car project, the speeds of the two motors are inconsistent. You can write a calibration program to record the compensation value of the motor speed.
+También es posible escribir datos en ella mediante un programa y leerlos en otro. Por ejemplo, en un proyecto de automóviles, si las velocidades de los dos motores son diferentes, puedes escribir un programa de calibración para registrar el valor de compensación de la velocidad del motor.
 
-**Required Components**
+**Componentes Necesarios**
 
-In this project, we need the following components. 
+Para este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Comprar un kit completo es definitivamente conveniente, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS DE ESTE KIT
+        - ENLACE
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los siguientes enlaces.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -52,35 +52,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/circuit_515_eeprom.png
 
-**Wiring**
+**Cableado**
 
 .. image:: img/eeprom_servo.png
 
-**Code**
+**Código**
 
 
 .. note::
 
-    * Open the ``5.15.eeproom.ino`` file under the path of ``3in1-kit\basic_project\5.15.eeproom``.
-    * Or copy this code into **Arduino IDE**.
+    * Abre el archivo ``5.15.eeproom.ino`` en la ruta ``3in1-kit\basic_project\5.15.eeproom``.
+    * O copia este código en **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * O sube el código a través del `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7378341f-9c1a-4171-814f-c76c109e1e67/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-To use this circuit, you simply press the button to begin recording and input the desired information through a potentiometer. Now, the board will repeat your actions endlessly (and it blinks an led each iteration) until you press the button again to record new actions. You may also vary the amount of time recorded by changing the values of resolution and recordTime.
+Para usar este circuito, simplemente presiona el botón para comenzar a grabar e introduce la información deseada a través de un potenciómetro. Ahora, la placa repetirá tus acciones indefinidamente (y parpadeará un led en cada iteración) hasta que presiones de nuevo el botón para grabar nuevas acciones. También puedes variar la cantidad de tiempo grabado cambiando los valores de resolución y tiempo de grabación.
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-#. Import the ``EEPROM.h`` library, and initialize the EEPROM memory. 
+#. Importa la biblioteca ``EEPROM.h`` e inicializa la memoria EEPROM.
 
     .. code-block:: arduino
 
@@ -93,9 +93,9 @@ To use this circuit, you simply press the button to begin recording and input th
         bool recording = false;
         ...
     
-    Please note that ``/MUST be less than EEPROM.length()``, in ``setup()`` it will print the memory of your board's EEPROM, which should be 1024 for SunFounder R3 board. If you are using a different board, you can change the value of the variable ``resolution``.
+    Ten en cuenta que ``/MUST be less than EEPROM.length()``, en ``setup()`` se imprimirá la memoria EEPROM de tu placa, que debería ser 1024 para la placa SunFounder R3. Si estás utilizando una placa diferente, puedes cambiar el valor de la variable ``resolution``.
 
-#. Print the EEPROM memory of your board.
+#. Imprime la memoria EEPROM de tu placa.
 
     .. code-block:: arduino
 
@@ -105,9 +105,9 @@ To use this circuit, you simply press the button to begin recording and input th
             //Serial.println(EEPROM.length());
         }
 
-    To find the size of your board's EEPROM memory, uncomment the line ``Serial.println(EEPROM.read(i))``. This will print the size of EEPROM in the serial monitor, and you can change the value of the variable ``resolution`` accordingly.
+    Para encontrar el tamaño de la memoria EEPROM de tu placa, descomenta la línea ``Serial.println(EEPROM.read(i))``. Esto imprimirá el tamaño de la EEPROM en el monitor serie, y puedes cambiar el valor de la variable ``resolution`` en consecuencia.
 
-#. As soon as a button press is detected, then recording begins and the required information is entered via a potentiometer. Now the board repeats your action endlessly (and flashes an LED for each repetition) until you press the button again, recording a new action.
+#. Tan pronto como se detecta una pulsación de botón, comienza la grabación y se introduce la información requerida a través de un potenciómetro. Ahora la placa repite tu acción indefinidamente (y hace parpadear un LED en cada repetición) hasta que presiones el botón nuevamente, grabando una nueva acción.
 
     .. code-block:: arduino
 
@@ -142,38 +142,36 @@ To use this circuit, you simply press the button to begin recording and input th
             }
         }
 
-    * Make the variable ``recording`` true when the button is pressed.
-    * When the variable ``recording`` is true, start recording the action in the memory range.
-    * Read the value of the potentiometer and map it to 0-180 to store it in EEPROM and control the rotation of the servo.
-    * The LED lights up at the start of recording and goes off at the end.
-    * Repeat the recorded action with a quick flash of the LED to remind you of a new repeat.
+    * Haz que la variable ``recording`` sea verdadera cuando se presione el botón.
+    * Cuando la variable ``recording`` sea verdadera, comienza a grabar la acción en el rango de memoria.
+    * Lee el valor del potenciómetro y mapealo de 0 a 180 para almacenarlo en la EEPROM y controlar la rotación del servo.
+    * El LED se enciende al comienzo de la grabación y se apaga al final.
+    * Repite la acción grabada con un parpadeo rápido del LED para recordarte una nueva repetición.
 
 
-#. About the ``EEPROM`` library.
+#. Acerca de la biblioteca ``EEPROM``.
 
-    Here are some of its functions.
+    Aquí algunas de sus funciones.
         
-    * ``write(address,value)``: Write a byte to the EEPROM.
+    * ``write(address,value)``: Escribe un byte en la EEPROM.
 
-        * ``address``: the location to write to, starting from 0 (int)
-        * ``value``: the value to write, from 0 to 255 (byte)
-        * An EEPROM write takes 3.3 ms to complete. The EEPROM memory has a specified life of 100,000 write/erase cycles, so you may need to be careful about how often you write to it.
+        * ``address``: la ubicación donde escribir, comenzando desde 0 (int)
+        * ``value``: el valor a escribir, de 0 a 255 (byte)
+        * Una escritura en la EEPROM tarda 3.3 ms en completarse. La memoria EEPROM tiene una vida especificada de 100,000 ciclos de escritura/borrado, por lo que podrías necesitar tener cuidado con la frecuencia con la que escribes en ella.
 
-    * ``Read(address)``: Reads a byte from the EEPROM. Locations that have never been written to have the value of 255.
+    * ``Read(address)``: Lee un byte de la EEPROM. Las ubicaciones que nunca se han escrito tienen el valor de 255.
 
-    * ``update(address,value)``: Write a byte to the EEPROM. The value is written only if differs from the one already saved at the same address.
+    * ``update(address,value)``: Escribe un byte en la EEPROM. El valor se escribe solo si es diferente del que ya está guardado en la misma dirección.
 
-        * An EEPROM write takes 3.3 ms to complete. The EEPROM memory has a specified life of 100,000 write/erase cycles, so using this function instead of write() can save cycles if the written data does not change often
+        * Una escritura en la EEPROM tarda 3.3 ms en completarse. La memoria EEPROM tiene una vida especificada de 100,000 ciclos de escritura/borrado, así que usar esta función en lugar de write() puede ahorrar ciclos si los datos escritos no cambian con frecuencia.
 
-    * ``EEPROM.put(address, data)``: Write any data type or object to the EEPROM.
+    * ``EEPROM.put(address, data)``: Escribe cualquier tipo de dato u objeto en la EEPROM.
 
-        * ``address``: the location to read from, starting from 0 (int).
-        * ``data``: the data to read, can be a primitive type (eg. float) or a custom struct.
-        * This function uses EEPROM.update() to perform the write, so does not rewrites the value if it didn't change.
+        * ``address``: la ubicación donde leer, comenzando desde 0 (int).
+        * ``data``: el dato a leer, puede ser un tipo primitivo (p.ej. float) o una estructura personalizada.
+        * Esta función usa EEPROM.update() para realizar la escritura, por lo que no reescribe el valor si no ha cambiado.
 
-    * ``EEPROM.get(address, data)``: Read any data type or object from the EEPROM.
+    * ``EEPROM.get(address, data)``: Lee cualquier tipo de dato u objeto de la EEPROM.
 
-        * ``address``: the location to read from, starting from 0 (int).
-        * ``data``: the data to read, can be a primitive type (eg. float) or a custom struct.
-
-
+        * ``address``: la ubicación donde leer, comenzando desde 0 (int).
+        * ``data``: el dato a leer, puede ser un tipo primitivo (p.ej. float) o una estructura personalizada.

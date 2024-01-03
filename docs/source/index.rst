@@ -1,52 +1,53 @@
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
-==================================================
+SunFounder Kit 3 en 1 de IoT/Coche Inteligente/Aprendizaje
+==============================================================
 
-Thanks for choosing our 3 in 1 starter kit.
+Gracias por elegir nuestro kit de inicio 3 en 1.
 
 .. note::
-    This document is available in the following languages.
+    Este documento está disponible en los siguientes idiomas.
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_es_tutorials|
     
-    Please click on the respective links to access the document in your preferred language.
+    Haz clic en los enlaces correspondientes para acceder al documento en tu idioma preferido.
 
 
 .. image:: img/3in_kit.png
     :width: 800
 
-When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
+¿Cuando compraste un kit de aprendizaje en línea, vino solo con un simple PDF o folleto que incluía únicamente los pasos para construir el proyecto?
 
-Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
+¿O quizás quieres construir tu propio coche inteligente, pero los que encuentras en línea son caros y complicados?
 
-Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
+¿O has visto proyectos de IoT útiles e interesantes realizados por otros, pero no tienes idea de por dónde empezar?
 
-All these problems can be solved with our 3 in 1 starter kit.
+Todos estos problemas se pueden resolver con nuestro kit de inicio 3 en 1.
 
-In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+En el kit de inicio 3 en 1, encontrarás un curso completo de Arduino para ayudar a los principiantes a aprender sobre Arduino, así como una amplia variedad de proyectos interesantes que otros kits de aprendizaje no ofrecen, como proyectos de coches inteligentes y proyectos de IoT. Dominarás Arduino siempre que sigas paso a paso el curso del kit, en lugar de solo copiar y pegar código, escribirás tu propio código e implementarás tu proyecto Arduino como quieras.
 
-In addition, the kit also provides 30+ Scratch programming projects for younger students and enthusiasts, so beginners don't need any programming experience to write and make their own creations!
+Además, el kit también proporciona más de 30 proyectos de programación con Scratch para estudiantes más jóvenes y entusiastas, ¡así que los principiantes no necesitan experiencia previa en programación para escribir y crear sus propias invenciones!
 
-Come on! Start programing Arduino with confidence from zero to hero!
+¡Vamos! ¡Empieza a programar en Arduino con confianza desde cero hasta ser un héroe!
 
-If you have any questions, please send an email to service@sunfounder.com and we will respond as soon as possible.
+Si tienes alguna pregunta, por favor envía un correo electrónico a service@sunfounder.com y responderemos lo antes posible.
 
-**About the display language**
+**Sobre el idioma de visualización**
 
-This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
+Este documento también está disponible en otros idiomas. Para cambiar el idioma de visualización, por favor haz clic en el icono de **Read the Docs** ubicado en la esquina inferior izquierda de la página.
 
 .. image:: img/translation.png
 
 
-**Contents**
+**Contenidos**
 
 .. toctree::
     :maxdepth: 2
 
 
-    About this Kit <self>
+    Acerca de este Kit <self>
     components/component_list
     arduino_start/get_start
     arduino_video_course/arduino_video_course
@@ -59,7 +60,8 @@ This document is available in other languages as well. To switch the display lan
     faq/faq
     thank-learning
 
-Copyright Notice
------------------------
+Aviso de Derechos de Autor
+------------------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Todos los contenidos, incluyendo pero no limitándose a textos, imágenes y código en este manual, son propiedad de la Compañía SunFounder. Solo debes utilizarlo para estudio personal, investigación, disfrute u otros fines no comerciales o sin ánimo de lucro, bajo las regulaciones y leyes de derechos de autor correspondientes, sin infringir los derechos legales del autor y los titulares de derechos relevantes. Para cualquier individuo u organización que utilice estos contenidos con fines de lucro comercial sin permiso, la Compañía se reserva el derecho de emprender acciones legales.
+

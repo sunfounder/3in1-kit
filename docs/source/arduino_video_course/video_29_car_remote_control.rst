@@ -1,15 +1,14 @@
-Video 29: Smart Car Remote Control 
-==================================
+Vídeo 29: Control Remoto de Coche Inteligente 
+===============================================
 
-This tutorial teaches how to use an infrared remote to control an Arduino smart car, including movement directions and speed adjustments.
+Este tutorial enseña cómo usar un control remoto infrarrojo para controlar un coche inteligente con Arduino, incluyendo direcciones de movimiento y ajustes de velocidad.
 
-* **Introduction to Remote Control**: Understanding the basics of controlling an Arduino car with an infrared remote.
-* **Remote Control Key Functions**: Detailed explanation of each key's function on the remote for car control.
-* **Wiring Instructions**: Step-by-step wiring setup for the infrared receiver and additional LED.
-* **Code Explanation and Demonstration**: In-depth walkthrough of the Arduino code and its impact on car control.
+* **Introducción al Control Remoto**: Comprensión de los fundamentos del control de un coche Arduino con un control remoto infrarrojo.
+* **Funciones Clave del Control Remoto**: Explicación detallada de la función de cada tecla en el control remoto para el control del coche.
+* **Instrucciones de Cableado**: Configuración paso a paso del cableado para el receptor infrarrojo y LED adicional.
+* **Explicación y Demostración del Código**: Recorrido detallado del código de Arduino y su impacto en el control del coche.
 
-
-**Video**
+**Vídeo**
 
 .. raw:: html
 
@@ -17,6 +16,6 @@ This tutorial teaches how to use an infrared remote to control an Arduino smart 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutoriales Relacionados en Línea**
 
 * :ref:`car_remote`

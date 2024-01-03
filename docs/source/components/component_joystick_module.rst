@@ -1,26 +1,26 @@
 .. _cpn_joystick:
 
-Joystick Module
+Módulo de Joystick
 =======================
 
 .. image:: img/joystick_pic.png
     :align: center
     :width: 600
 
-The basic idea of a joystick is to translate the movement of a stick into electronic information that a computer can process.
+La idea básica de un joystick es traducir el movimiento de una palanca en información electrónica que una computadora pueda procesar.
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick's position on two axes – the X-axis (left to right) and the Y-axis (up and down). Just as in basic geometry, the X-Y coordinates pinpoint the stick's position exactly.
+Para comunicar un rango completo de movimiento a la computadora, un joystick necesita medir la posición de la palanca en dos ejes: el eje X (de izquierda a derecha) y el eje Y (de arriba abajo). Al igual que en la geometría básica, las coordenadas X-Y determinan exactamente la posición de la palanca.
 
-To determine the location of the stick, the joystick control system simply monitors the position of each shaft. The conventional analog joystick design does this with two potentiometers, or variable resistors.
+Para determinar la ubicación de la palanca, el sistema de control del joystick simplemente monitorea la posición de cada eje. El diseño convencional del joystick analógico hace esto con dos potenciómetros, o resistencias variables.
 
-The joystick also has a digital input that is actuated when the joystick is pressed down.
+El joystick también tiene una entrada digital que se activa cuando se presiona hacia abajo.
 
 .. image:: img/joystick318.png
     :align: center
     :width: 600
 	
-**Example**
+**Ejemplo**
 
-* :ref:`ar_joystick` (Basic Project)
-* :ref:`sh_star_crossed` (Scratch Project)
-* :ref:`sh_dragon` (Scratch Project)
+* :ref:`ar_joystick` (Proyecto Básico)
+* :ref:`sh_star_crossed` (Proyecto Scratch)
+* :ref:`sh_dragon` (Proyecto Scratch)
