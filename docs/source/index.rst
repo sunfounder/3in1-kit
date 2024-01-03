@@ -10,6 +10,7 @@ SunFounder 3 in 1スターターキットでをお選びいただき、ありが
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_es_tutorials|
 
     ご希望の言語でドキュメントにアクセスするために、それぞれのリンクをクリックしてください。
 
