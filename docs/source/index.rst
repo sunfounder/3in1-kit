@@ -10,6 +10,7 @@ Merci d'avoir choisi notre kit de démarrage 3 en 1.
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_es_tutorials|
     
     Veuillez cliquer sur les liens respectifs pour accéder au document dans votre langue préférée.
 
