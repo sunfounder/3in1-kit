@@ -54,7 +54,7 @@ Hier sind einige Dinge, die Sie über Steckbretter wissen sollten.
 
 **Lasst uns die Richtung des Stroms folgen, um den Schaltkreis aufzubauen!**
 
-.. image:: img/sp221014_182229.png
+.. image:: img/connect_led.png
 
 1. In diesem Schaltkreis verwenden wir den 5V-Pin des Boards, um die LED mit Strom zu versorgen. Verwenden Sie ein Stecker-zu-Stecker (M2M) Jumper-Kabel, um es mit der roten Stromschiene zu verbinden.
 #. Um die LED zu schützen, muss der Strom durch einen 1k Ohm-Widerstand fließen. Verbinden Sie ein Ende (beliebiges Ende) des Widerstands mit der roten Stromschiene und das andere Ende mit der freien Reihe des Steckbretts.
@@ -85,7 +85,7 @@ Ausrichtung des Schaltkreises
 
 Schaltkreise haben eine Orientierung, und die Ausrichtung spielt bei bestimmten elektronischen Komponenten eine bedeutende Rolle. Es gibt einige Geräte mit Polarität, was bedeutet, dass sie basierend auf ihren positiven und negativen Polen korrekt verbunden werden müssen. Falsch ausgerichtete Schaltkreise funktionieren nicht ordnungsgemäß.
 
-.. image:: img/sp221014_182229.png
+.. image:: img/connect_led_reverse.png
 
 Wenn Sie die LED in diesem einfachen Schaltkreis, den wir zuvor gebaut haben, umkehren, werden Sie feststellen, dass sie nicht mehr funktioniert.
 
