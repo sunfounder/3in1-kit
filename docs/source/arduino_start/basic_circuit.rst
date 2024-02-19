@@ -59,8 +59,7 @@ Here are some things you should know about breadboards.
 
 **Let us follow the direction of the current to build the circuit!**
 
-.. image:: img/sp221014_182229.png
-
+.. image:: img/connect_led.png
 
 1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
 #. To protect the LED, the current must pass through a 220 ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
@@ -89,7 +88,7 @@ Direction of the circuit
 -------------------------------
 There is an orientation to circuits, and the orientation plays a significant role in certain electronic components. There are some devices with polarity, which means they must be connected correctly based on their positive and negative poles. Circuits built with the wrong orientation will not function properly.
 
-.. image:: img/sp221014_182229.png
+.. image:: img/connect_led_reverse.png
 
 If you reverse the LED in this simple circuit that we built earlier, you will find that it no longer works.
 
