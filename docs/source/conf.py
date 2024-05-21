@@ -96,6 +96,9 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_sf_facebook| raw:: html
+
+    <a href="https://bit.ly/4aotw9J" target="_blank">hier</a>
 
 .. |link_download_arduino| raw:: html
 
