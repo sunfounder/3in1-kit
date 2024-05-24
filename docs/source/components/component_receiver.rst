@@ -23,9 +23,9 @@ IR Receiver
     :width: 400
     :align: center
 
-* OUT: Signal output
-* GND: GND
-* VCC: power supply, 3.3v~5V
+* **S**: Signal output
+* **-**: GND
+* **+**: power supply, 3.3v~5V
 
 SL838 infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
 
