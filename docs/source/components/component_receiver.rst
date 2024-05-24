@@ -23,9 +23,9 @@ IR-Empfänger
     :width: 400
     :align: center
 
-* OUT: Signalausgang
-* GND: Erdung
-* VCC: Stromversorgung, 3,3V~5V
+* **S**: Signalausgang
+* **-**: Erdung
+* **+**: Stromversorgung, 3,3V~5V
 
 SL838 Infrarot-Empfänger ist eine Komponente, die Infrarotsignale empfängt und in der Lage ist, eigenständig Infrarotstrahlen zu empfangen und Signale auszugeben, die mit dem TTL-Niveau kompatibel sind. Er ähnelt in der Größe einem normalen in Plastik verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarot-Übertragungen.
 
