@@ -19,25 +19,25 @@ IR Receiver
 
 **IR Receiver**
 
-.. image:: img/ir_receiver_hs0038b.jpg
+.. image:: img/ir_receiver_sl838.png
+    :width: 400
     :align: center
 
-* OUT: Signal output
-* GND: GND
-* VCC: power supply, 3.3v~5V
+* **S**: Signal output
+* **-**: GND
+* **+**: power supply, 3.3v~5V
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+SL838 infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
 
 Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
 
 
-* Adopted `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_ IR Receiver Sensor, high sensitivity
 * Can be used for remote control
-* Power Supply: 5V
-* Interface: Digital
-* Modulate Frequency: 38Khz
-* Pin Definitions: (1) Output (2) Vcc (3) GND
-* Size: 23.5mm x 21.5mm
+* Wide operating voltage: 2.7~5V
+* Internal filter for PCM frequency
+* TTL and CMOS compatibility
+* Strong anti-interference ability
+* Compliant RoHS
 
 
 **Remote Control**
