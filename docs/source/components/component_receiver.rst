@@ -19,24 +19,23 @@ Récepteur IR
 
 **Récepteur IR**
 
-.. image:: img/ir_receiver_hs0038b.jpg
+.. image:: img/ir_receiver_sl838.png
+    :width: 400
     :align: center
 
-* OUT: Sortie du signal
-* GND: Masse
-* VCC: alimentation électrique, 3.3v~5V
+* **S**: Sortie signal
+* **-**: GND
+* **+**: alimentation, 3,3v~5V
 
-Un récepteur infrarouge est un composant qui reçoit des signaux infrarouges et peut recevoir de manière indépendante des rayons infrarouges et sortir des signaux compatibles avec le niveau TTL. Il est de taille similaire à un transistor classique emballé dans du plastique et convient à toutes sortes de télécommandes infrarouges et de transmissions infrarouges.
+Le récepteur infrarouge SL838 est un composant qui reçoit des signaux infrarouges et peut recevoir des rayons infrarouges indépendamment et émettre des signaux compatibles avec le niveau TTL. Il est similaire en taille à un transistor classique emballé en plastique et convient pour tous types de télécommande infrarouge et de transmission infrarouge.
 
-La communication infrarouge, ou IR, est une technologie de communication sans fil populaire, peu coûteuse et facile à utiliser. La lumière infrarouge a une longueur d'onde légèrement plus longue que la lumière visible, elle est donc imperceptible à l'œil humain - idéale pour la communication sans fil. Un schéma de modulation courant pour la communication infrarouge est la modulation à 38KHz.
-
-* Capteur de Réception IR `HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_, haute sensibilité
 * Peut être utilisé pour la télécommande
-* Alimentation Électrique : 5V
-* Interface : Numérique
-* Fréquence de Modulation : 38Khz
-* Définitions des Broches : (1) Sortie (2) Vcc (3) Masse
-* Taille : 23.5mm x 21.5mm
+* Large tension de fonctionnement : 2,7~5V
+* Filtre interne pour fréquence PCM
+* Compatibilité TTL et CMOS
+* Forte capacité anti-interférence
+* Conforme RoHS
+
 
 **Télécommande**
 
