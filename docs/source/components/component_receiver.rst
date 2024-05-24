@@ -19,25 +19,24 @@ Receptor IR
 
 **Receptor IR**
 
-.. image:: img/ir_receiver_hs0038b.jpg
+.. image:: img/ir_receiver_sl838.png
+    :width: 400
     :align: center
 
-* OUT: Salida de señal
-* GND: GND
-* VCC: suministro de energía, 3.3v~5V
+* **S**: Salida de señal
+* **-**: GND
+* **+**: fuente de alimentación, 3,3v~5V
 
-Un receptor infrarrojo es un componente que recibe señales infrarrojas y puede recibir independientemente rayos infrarrojos y emitir señales compatibles con el nivel TTL. Es similar en tamaño a un transistor normal empaquetado en plástico y es adecuado para todo tipo de control remoto infrarrojo y transmisión infrarroja.
+El receptor de infrarrojos SL838 es un componente que recibe señales infrarrojas y puede recibir rayos infrarrojos de manera independiente y emitir señales compatibles con el nivel TTL. Tiene un tamaño similar a un transistor común encapsulado en plástico y es adecuado para todo tipo de controles remotos infrarrojos y transmisión infrarroja.
 
-La comunicación infrarroja, o IR, es una tecnología de comunicación inalámbrica popular, de bajo costo y fácil de usar. La luz infrarroja tiene una longitud de onda ligeramente más larga que la luz visible, por lo que es imperceptible para el ojo humano, ideal para la comunicación inalámbrica. Un esquema de modulación común para la comunicación infrarroja es la modulación de 38KHz.
+La comunicación infrarroja, o IR, es una tecnología de comunicación inalámbrica popular, económica y fácil de usar. La luz infrarroja tiene una longitud de onda ligeramente más larga que la luz visible, por lo que es imperceptible para el ojo humano, ideal para la comunicación inalámbrica. Un esquema de modulación común para la comunicación infrarroja es la modulación de 38KHz.
 
-* Adopta el `Sensor Receptor IR HS0038B <https://pdf1.alldatasheet.com/datasheet-pdf/view/103034/VISHAY/HS0038B.html>`_, de alta sensibilidad
 * Puede ser utilizado para control remoto
-* Fuente de Alimentación: 5V
-* Interfaz: Digital
-* Frecuencia de Modulación: 38Khz
-* Definiciones de Pines: (1) Salida (2) Vcc (3) GND
-* Tamaño: 23.5mm x 21.5mm
-
+* Amplio voltaje de operación: 2.7~5V
+* Filtro interno para frecuencia PCM
+* Compatibilidad con TTL y CMOS
+* Fuerte capacidad de anti-interferencia
+* Cumple con RoHS
 
 **Control Remoto**
 
