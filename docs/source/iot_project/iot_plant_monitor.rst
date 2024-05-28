@@ -68,7 +68,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**1. Build the Cirduit**
+**1. Build the Circuit**
 
 .. note::
 
