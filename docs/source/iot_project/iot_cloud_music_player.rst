@@ -58,7 +58,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-**1. Build the Cirduit**
+**1. Build the Circuit**
 
 .. note::
 

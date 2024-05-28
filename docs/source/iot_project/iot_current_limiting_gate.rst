@@ -67,7 +67,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**1. Build the Cirduit**
+**1. Build the Circuit**
 
 .. note::
 

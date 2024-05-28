@@ -58,7 +58,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-**1. Build the Cirduit**
+**1. Build the Circuit**
 
 .. note::
 
