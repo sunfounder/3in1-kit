@@ -20,7 +20,7 @@
 We used the Blynk APP on the cell phone to control the car for this project. But you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
 In the era of 5G network popularity, this mode may become one of the main production methods in many industries, so let's experience this play in advance.
 
-**1. Build the Cirduit**
+**1. Build the Circuit**
 
 .. image:: img/wiring_iot_car.png
     :width: 800
