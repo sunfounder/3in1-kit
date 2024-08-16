@@ -346,10 +346,10 @@ rst_epilog += """
 
 .. |link_3_in_1_Starter_Kit| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-iot-smart-car-learning-ultimate-starter-kit?_pos=1&_sid=89e5bf9b4&_ss=r" target="_blank">Purchase Link for 3 in 1 Starter Kit</a>
+    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-ultimate-starter-kit-with-original-arduino-uno-r4-minima?_pos=2&_sid=fe39d2a1d&_ss=r" target="_blank">Purchase Link for 3 in 1 Starter Kit</a>
 
 .. |link_3_in_1_Kit| raw:: html
 
-    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-iot-smart-car-learning-ultimate-starter-kit?_pos=1&_sid=89e5bf9b4&_ss=r" target="_blank">3 in 1 Starter Kit</a>
+    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-ultimate-starter-kit-with-original-arduino-uno-r4-minima?_pos=2&_sid=fe39d2a1d&_ss=r" target="_blank">3 in 1 Starter Kit</a>
 
 """
