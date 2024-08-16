@@ -17,7 +17,7 @@ SunFounder 3 in 1 IoT/Smart Car/Learning Kit
 
 * |link_3_in_1_Starter_Kit|
 
-SunFounder |link_3_in_1_Kit|スターターキットでをお選びいただき、ありがとうございます。
+SunFounder 3 in 1 IoT/Smart Car/Learning Kit スターターキットでをお選びいただき、ありがとうございます。
 
 .. note::
     このドキュメントは以下の言語で利用可能です。
