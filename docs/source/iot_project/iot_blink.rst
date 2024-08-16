@@ -68,37 +68,43 @@ You can also buy them separately from the links below.
 
 **2. Edit Dashboard**
 
-#. Go to the **Quickstart Device** you created earlier, click on the menu icon in the upper right corner and select **edit dashboard**.
+#. Go to the **Quickstart Device** you created earlier, click on the **edit dashboard** icon.
 
-    .. image:: img/sp220609_112825.png
+    .. image:: img/blynk_edit_dashboard.png
 
-#. Datastreams allow the widgets on Blynk and the code on the R3 board to recognize each other. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
+#. Datastreams allow the widgets on Blynk and the code on the R3 board to recognize each other. 
 
-    .. image:: img/sp220609_114723.png
+    .. image:: img/blynk_edit_datastream.png
 
-#. Please read the warning carefully and confirm it is correct before deleting the Datastreams.
+#. To experience the complete configuration process, remove all Datastreams from the Datastreams page.
 
-    .. image:: img/sp220609_114929.png
+    .. image:: img/blynk_edit_datastream_delete.png
 
 #. Create a Datastream of type **Virtual Pin**, which will be used to control the LED using Blynk's switch.
 
-    .. image:: img/sp220609_115124.png
+    .. image:: img/blynk_edit_virtualpin.png
 
 #. Configure the **Virtual Pin**. As the button and LED only need to be ON and OFF, set DATA TYPE to ``Integer`` and MIN and MAX to ``0`` and ``1``. 
 
     .. image:: img/sp220609_115520.png
 
-#. Go to the **Web Dashboard** page and delete the existing widgets.
+#. Go to the **Web Dashboard** page.
 
-    .. image:: img/sp220609_133707.png
+
+    .. image:: img/blynk_edit_web_dashboard.png
+
+#. And delete the existing widgets.
+
+    .. image:: img/blynk_edit_delete_dashboard.png
 
 #. Drag and drop a **switch** widget from the **Widget Box** on the left.
 
-    .. image:: img/sp220609_114508.png
+
+    .. image:: img/blynk_edit_drag_switch_widget.png
 
 #. Now to set it up.
 
-    .. image:: img/sp20220615180127.png
+    .. image:: img/blynk_edit_edit_widget.png
 
 #. Select **Datastream** as the one you set earlier.
 
@@ -142,7 +148,7 @@ You can also buy them separately from the links below.
 
 #. Back at Blynk, you can see that the status has changed to online and you can now use the switch widget on blynk to control the LED connected to the R3 board.
 
-    .. image:: img/2_blynk_button.png
+    .. image:: img/blynk_button_on.png
 
 #. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
 

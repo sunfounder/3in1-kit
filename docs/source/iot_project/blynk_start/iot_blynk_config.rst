@@ -18,7 +18,7 @@
 
 #. Go to the `BLYNK <https://blynk.io/>`_ and click **START FREE**. 
 
-    .. image:: img/sp220607_142551.png
+    .. image:: img/blynk_start_free.png
 
 #. Fill in your email address to register an account.
 
@@ -31,6 +31,11 @@
 #. Afterwards, **Blynk Tour** will appear and you can read it to learn the basic information about the Blynk.
 
     .. image:: img/sp220607_143244.png
+
+    .. note:: if not, please click the swim ring icon in the upper right corner.
+
+        .. image:: img/blynk_start_help.png
+
 
 #. Next we need to create a template and device with this **Quick Start**, click **Let's go**.
 
@@ -53,11 +58,11 @@
 
     .. image:: img/sp20220614174006.png
 
-#. Click the **Search** button and you will see the new device you just created.
+.. #. Click the **Search** button and you will see the new device you just created.
 
-    .. image:: img/sp20220614174410.png
+..     .. image:: img/sp20220614174410.png
 
-#. Go to this **Quickstart Device** and you will see ``TEMPLATE_ID``, ``DEVICE_NAME`` and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
+.. #. Go to this **Quickstart Device** and you will see ``TEMPLATE_ID``, ``DEVICE_NAME`` and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
 
 
-    .. image:: img/sp20220614174721.png
+..     .. image:: img/sp20220614174721.png
