@@ -12,10 +12,12 @@
 
     👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
 
-SunFounder 3-in-1 Starterkit
+SunFounder |link_3_in_1_Kit|
 ==============================================
 
-Vielen Dank für die Auswahl unseres 3-in-1 Starterkits.
+* |link_3_in_1_Starter_Kit|
+
+Vielen Dank für die Auswahl unseres |link_3_in_1_Kit|.
 
 .. note::
     Dieses Dokument ist in den folgenden Sprachen verfügbar.
