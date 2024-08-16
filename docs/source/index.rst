@@ -13,9 +13,11 @@
     👉 Prêt à explorer et à créer avec nous ? Cliquez [|link_sf_facebook|] et rejoignez-nous aujourd'hui !
 
 Kit de démarrage SunFounder 3 en 1 pour IoT/Voiture Intelligente/Apprentissage
-==================================================================================
+=====================================================================================
 
-Merci d'avoir choisi notre kit de démarrage 3 en 1.
+* |link_3_in_1_Starter_Kit|
+
+Merci d'avoir choisi notre |link_3_in_1_Kit|.
 
 .. note::
     Ce document est disponible dans les langues suivantes :
