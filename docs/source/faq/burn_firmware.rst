@@ -46,6 +46,8 @@ Connect ESP8266 and Arduino UNO R4 board.
         }
     }
 
+    Then, close the Arduino IDE.
+
 **3. Burning the firmware**
 
 * Follow the steps below to burn the firmware if you are using **Windows**.
@@ -70,6 +72,7 @@ Connect ESP8266 and Arduino UNO R4 board.
         .. note::
             If the burn-in fails, please check the following points.
 
+            * Close the Arduino IED.
             * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
             * Check if the wiring is correct.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
@@ -114,6 +117,7 @@ Connect ESP8266 and Arduino UNO R4 board.
         .. note::
             If the burn-in fails, please check the following points.
 
+            * Close the Arduino IED.
             * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
             * Check if the wiring is correct.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
@@ -177,6 +181,7 @@ Connect ESP8266 and SunFounder R3 board.
         .. note::
             If the burn-in fails, please check the following points.
 
+            * Close the Arduino IED.
             * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
             * Check if the wiring is correct.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
@@ -221,6 +226,7 @@ Connect ESP8266 and SunFounder R3 board.
         .. note::
             If the burn-in fails, please check the following points.
 
+            * Close the Arduino IED.
             * Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.
             * Check if the wiring is correct.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
