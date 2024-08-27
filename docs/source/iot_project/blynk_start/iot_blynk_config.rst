@@ -12,7 +12,7 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-1.2 Configuring the Blynk
+1.1 Configuring the Blynk
 =============================
 
 

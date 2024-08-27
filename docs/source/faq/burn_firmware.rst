@@ -119,26 +119,26 @@ Connect ESP8266 and Arduino UNO R4 board.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
             * Reopen the install.bat file.
 
-**4. Test**
+.. **4. Test**
 
-#. On the basis of the original wiring, connect IO1 to 3V3.
+.. #. On the basis of the original wiring, connect IO1 to 3V3.
 
-    .. image:: img/faq_at_burn_check_bb.jpg
-        :width: 800
+..     .. image:: img/faq_at_burn_check_bb.jpg
+..         :width: 800
 
-#. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+.. #. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
 
-    .. image:: img/sp20220524113020.png
+..     .. image:: img/sp20220524113020.png
 
-    .. note::
+..     .. note::
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+..         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
+.. #. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
 
-    .. image:: img/sp20220524113702.png
+..     .. image:: img/sp20220524113702.png
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+.. Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
 
 
 
@@ -226,23 +226,24 @@ Connect ESP8266 and SunFounder R3 board.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
             * Reopen the install.bat file.
 
-**3. Test**
+.. **3. Test**
 
-#. On the basis of the original wiring, connect IO1 to 3V3.
+.. #. On the basis of the original wiring, connect IO1 to 3V3.
 
-    .. image:: img/connect_esp826612.png
-        :width: 800
+..     .. image:: img/connect_esp826612.png
+..         :width: 800
 
-#. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+.. #. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
 
-    .. image:: img/sp20220524113020.png
+..     .. image:: img/sp20220524113020.png
 
-    .. note::
+..     .. note::
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+..         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+.. #. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
 
-    .. image:: img/sp20220524113702.png
+..     .. image:: img/sp20220524113702.png
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+
+.. xx .. Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
