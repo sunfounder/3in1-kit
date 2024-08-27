@@ -120,7 +120,7 @@ Connect ESP8266 and SunFounder R3 board.
 
     .. image:: img/sp20220524113702.png
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+.. Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
 
 
 
@@ -227,25 +227,27 @@ Connect ESP8266 and Arduino UNO R4 board.
             * Whether the computer has recognized your board properly, and make sure the port is not occupied.
             * Reopen the install.bat file.
 
-**4. Test**
+.. **4. Test**
 
-#. On the basis of the original wiring, connect IO1 to 3V3.
+.. #. 
 
-    .. image:: img/faq_at_burn_check_bb.jpg
-        :width: 800
+.. #. On the basis of the original wiring, connect IO1 to 3V3.
 
-#. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
+..     .. image:: img/faq_at_burn_check_bb.jpg
+..         :width: 800
 
-    .. image:: img/sp20220524113020.png
+.. #. You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to **115200**.
 
-    .. note::
+..     .. image:: img/sp20220524113020.png
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+..     .. note::
 
-#. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
+..         * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
 
-    .. image:: img/sp20220524113702.png
+.. #. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with your board.
 
-Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
+..     .. image:: img/sp20220524113702.png
+
+.. Now you can continue to follow :ref:`config_esp8266` to set the working mode and baud rate of the ESP8266 module.
 
 

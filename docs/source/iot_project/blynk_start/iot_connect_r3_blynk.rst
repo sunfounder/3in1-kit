@@ -14,7 +14,7 @@
 
 .. _connect_blynk:
 
-1.4 Connecting the R3 board to Blynk
+1.3 Connecting the R3 board to Blynk
 =======================================
 
 #. Reconnect the ESP8266 module and R3 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R3 board respectively.
