@@ -1,6 +1,6 @@
 .. _config_esp8266:
 
-1.1 Configuring the ESP8266
+1.0 Configuring the ESP8266
 ===============================
 
 The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below.

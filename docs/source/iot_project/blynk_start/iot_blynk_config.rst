@@ -1,4 +1,4 @@
-1.2 Configuring the Blynk
+1.1 Configuring the Blynk
 -----------------------------------
 
 
