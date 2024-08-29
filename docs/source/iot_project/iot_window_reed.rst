@@ -68,7 +68,7 @@ You can also buy them separately from the links below.
 
 #. Drag and drop an **LED widget** on the **Wed Dashboard** page, at a value of 1, it will light up (with color), otherwise it will be white.
 
-    .. image:: img/sp220609_163350.png
+    .. image:: img/blynk_edit_drag_led_widget.png
 
 #. In the settings page of the **LED widget**, select **Datastream** as **Reed(V1)**, and save it.
 
