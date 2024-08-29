@@ -1,6 +1,6 @@
 .. _config_blynk:
 
-1.2 Blynk konfigurieren
+1.1 Blynk konfigurieren
 -----------------------------------
 
 #. Besuchen Sie die `BLYNK <https://blynk.io/>`_-Seite und klicken Sie auf **START FREE**.

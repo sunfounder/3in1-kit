@@ -1,6 +1,6 @@
 .. _config_esp8266:
 
-1.1 Konfiguration des ESP8266
+1.0 Konfiguration des ESP8266
 ===============================
 
 Das ESP8266-Modul, das im Kit enthalten ist, ist bereits mit der AT-Firmware vorgebrannt. Sie müssen jedoch seine Konfiguration ändern, indem Sie den untenstehenden Schritten folgen.

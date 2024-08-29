@@ -1,6 +1,6 @@
 .. _iot_add_library:
 
-1.3 Die benötigten Bibliotheken hinzufügen
+1.2 Die benötigten Bibliotheken hinzufügen
 ---------------------------------------------
 
 Um Blynk in der Arduino IDE zu nutzen, müssen Sie die richtigen Bibliotheken hinzufügen.
