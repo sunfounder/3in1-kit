@@ -15,7 +15,7 @@
 .. _iot_home:
 
 5. Home Environment Monitoring
-================================
+====================================================
 
 In this chapter, we will use Blynk to create a home environment monitor.
 You can measure the temperature, humidity, and light intensity of a room using the DHT11 and photoresistor.
