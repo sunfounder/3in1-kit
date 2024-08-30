@@ -70,37 +70,43 @@
 
 **2. ダッシュボードを編集**
 
-#. 以前に作成した **Quickstart Device** に移動し、右上のメニューアイコンをクリックして **edit dashboard** を選択します。
 
-    .. image:: img/sp220609_112825.png
 
-#. Datastreamsは、Blynkのウィジェットとボード上のコードがお互いを認識することを可能にします。完全な設定プロセスを体験するために、DatastreamsページからすべてのDatastreamsを削除します。
+#. 以前作成した **Quickstart Device** に移動し、 **edit dashboard** アイコンをクリックします。
 
-    .. image:: img/sp220609_114723.png
+    .. image:: img/blynk_edit_dashboard.png
 
-#. Datastreamsを削除する前に、警告を慎重に読み、それが正しいことを確認してください。
+#. データストリームは、Blynk上のウィジェットとR3ボード上のコードが互いを認識できるようにします。
 
-    .. image:: img/sp220609_114929.png
+    .. image:: img/blynk_edit_datastream.png
 
-#. Blynkのスイッチを使用してLEDを制御するために使用される **Virtual Pin** タイプのDatastreamを作成します。
+#. 完全な設定プロセスを体験するには、データストリームページからすべてのデータストリームを削除します。
 
-    .. image:: img/sp220609_115124.png
+    .. image:: img/blynk_edit_datastream_delete.png
 
-#. **Virtual Pin** を設定します。ボタンとLEDはONとOFFのみ必要なので、DATA TYPEを ``Integer`` に設定し、MINとMAXを ``0`` と ``1`` に設定します。
+#.  **Virtual Pin** タイプのデータストリームを作成し、これを使用してBlynkのスイッチでLEDを制御します。
+
+    .. image:: img/blynk_edit_virtualpin.png
+
+#.  **Virtual Pin** を設定します。ボタンとLEDはONとOFFのみが必要なので、データタイプを ``Integer`` に設定し、最小値と最大値を ``0`` と ``1`` に設定します。
 
     .. image:: img/sp220609_115520.png
 
-#. **Web Dashboard** ページに移動し、既存のウィジェットを削除します。
+#. **Web Dashboard** ページに移動します。
 
-    .. image:: img/sp220609_133707.png
+    .. image:: img/blynk_edit_web_dashboard.png
 
-#. 左の **Widget Box** から **switch** ウィジェットをドラッグアンドドロップします。
+#. 既存のウィジェットを削除します。
 
-    .. image:: img/sp220609_114508.png
+    .. image:: img/blynk_edit_delete_dashboard.png
 
-#. 次に、それを設定します。
+#. 左側の **Widget Box** から **switch** ウィジェットをドラッグ＆ドロップします。
 
-    .. image:: img/sp20220615180127.png
+    .. image:: img/blynk_edit_drag_switch_widget.png
+
+#. 今、設定します。
+
+    .. image:: img/blynk_edit_edit_widget.png
 
 #. **Datastream** を以前に設定したものとして選択します。
 
