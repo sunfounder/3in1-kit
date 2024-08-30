@@ -104,132 +104,132 @@ ESP8266とSunFounder R3ボードを接続します。
 
     .. image:: img/sp20220524113702.png
 
-次に、 :ref:`config_esp8266` に従って、ESP8266モジュールの動作モードとボーレートを設定することができます。
+.. 次に、 :ref:`config_esp8266` に従って、ESP8266モジュールの動作モードとボーレートを設定することができます。
 
 
 
 
-R4でファームウェアを再書き込み
----------------------------------------
+.. R4でファームウェアを再書き込み
+.. ---------------------------------------
 
-**1. 回路を作成する**
+.. **1. 回路を作成する**
 
-ESP8266とArduino UNO R4ボードを接続します。
+.. ESP8266とArduino UNO R4ボードを接続します。
 
-    .. image:: img/faq_at_burn_bb.jpg
-        :width: 800
+..     .. image:: img/faq_at_burn_bb.jpg
+..         :width: 800
 
-**2. R4に以下のコードをアップロードする**
+.. **2. R4に以下のコードをアップロードする**
 
-.. code-block:: Arduino
+.. .. code-block:: Arduino
 
-    void setup() {
-        Serial.begin(115200);
-        Serial1.begin(115200);
-    }
+..     void setup() {
+..         Serial.begin(115200);
+..         Serial1.begin(115200);
+..     }
 
-    void loop() {
-        if (Serial.available()) {      // シリアル（USB）から何かが入力された場合
-            Serial1.write(Serial.read());   // それを読み取り、Serial1（ピン0 & 1）で送信する
-        }
-        if (Serial1.available()) {     // Serial1（ピン0 & 1）から何かが入力された場合
-            Serial.write(Serial1.read());   // それを読み取り、シリアル（USB）で送信する
-        }
-    }
+..     void loop() {
+..         if (Serial.available()) {      // シリアル（USB）から何かが入力された場合
+..             Serial1.write(Serial.read());   // それを読み取り、Serial1（ピン0 & 1）で送信する
+..         }
+..         if (Serial1.available()) {     // Serial1（ピン0 & 1）から何かが入力された場合
+..             Serial.write(Serial1.read());   // それを読み取り、シリアル（USB）で送信する
+..         }
+..     }
 
-**3. ファームウェアの書き込み**
+.. **3. ファームウェアの書き込み**
 
-* **Windows** を使用している場合は、以下の手順でファームウェアを書き込む方法に従ってください。
+.. * **Windows** を使用している場合は、以下の手順でファームウェアを書き込む方法に従ってください。
 
-    #. ファームウェアと書き込みツールをダウンロードします。
+..     #. ファームウェアと書き込みツールをダウンロードします。
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+..         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. 解凍すると、4つのファイルが表示されます。
+..     #. 解凍すると、4つのファイルが表示されます。
 
-        .. .. image:: img/bat_firmware.png
+..         .. .. image:: img/bat_firmware.png
     
-        * ``BAT_AT_V1.7.1.0_1M.bin``: ESP8266モジュールに書き込むファームウェア。
-        * ``esptool.exe``: Windows用のコマンドラインユーティリティ。
-        * ``install_r3.bat``: Windowsシステム用のコマンドパッケージ。このファイルをダブルクリックすると、ファイル内のすべてのコマンドが実行されます。
-        * ``install_r4.bat``: ``install_r3.bat`` と同じですが、UNO R4ボード専用です。
+..         * ``BAT_AT_V1.7.1.0_1M.bin``: ESP8266モジュールに書き込むファームウェア。
+..         * ``esptool.exe``: Windows用のコマンドラインユーティリティ。
+..         * ``install_r3.bat``: Windowsシステム用のコマンドパッケージ。このファイルをダブルクリックすると、ファイル内のすべてのコマンドが実行されます。
+..         * ``install_r4.bat``: ``install_r3.bat`` と同じですが、UNO R4ボード専用です。
 
-    #. ``install_r4.bat`` をダブルクリックしてファームウェアの書き込みを開始します。以下のプロンプトが表示されたら、ファームウェアが正常にインストールされました。
+..     #. ``install_r4.bat`` をダブルクリックしてファームウェアの書き込みを開始します。以下のプロンプトが表示されたら、ファームウェアが正常にインストールされました。
 
-        .. image:: img/install_firmware.png
+..         .. image:: img/install_firmware.png
 
-        .. note::
-            書き込みに失敗した場合は、以下の点を確認してください。
+..         .. note::
+..             書き込みに失敗した場合は、以下の点を確認してください。
 
-            * ESP8266 AdapterのRSTをGNDに挿入してから取り外すことで、ESP8266モジュールをリセットします。
-            * 配線が正しいか確認してください。
-            * コンピュータがボードを正しく認識しているか、およびポートが占有されていないか確認してください。
-            * install.batファイルを再度開きます。
+..             * ESP8266 AdapterのRSTをGNDに挿入してから取り外すことで、ESP8266モジュールをリセットします。
+..             * 配線が正しいか確認してください。
+..             * コンピュータがボードを正しく認識しているか、およびポートが占有されていないか確認してください。
+..             * install.batファイルを再度開きます。
 
 
-* **Mac OS** システムを使用している場合、以下の手順に従ってファームウェアを書き込む方法に従ってください。
+.. * **Mac OS** システムを使用している場合、以下の手順に従ってファームウェアを書き込む方法に従ってください。
 
-    #. Esptoolをインストールするには、以下のコマンドを使用します。EsptoolはPythonベースのオープンソース、プラットフォームに依存しないユーティリティで、EspressifチップのROMブートローダーと通信します。
+..     #. Esptoolをインストールするには、以下のコマンドを使用します。EsptoolはPythonベースのオープンソース、プラットフォームに依存しないユーティリティで、EspressifチップのROMブートローダーと通信します。
 
-        .. code-block::
+..         .. code-block::
 
-            python3 -m pip install --upgrade pip
-            python3 -m pip install esptool
+..             python3 -m pip install --upgrade pip
+..             python3 -m pip install esptool
 
-    #. esptoolが正しくインストールされている場合、 ``python3 -m esptool`` を実行すると[usage: esptool]というメッセージが出力されます。
+..     #. esptoolが正しくインストールされている場合、 ``python3 -m esptool`` を実行すると[usage: esptool]というメッセージが出力されます。
 
-    #. ファームウェアをダウンロードします。
+..     #. ファームウェアをダウンロードします。
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+..         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. 解凍すると、4つのファイルが表示されます。
+..     #. 解凍すると、4つのファイルが表示されます。
 
-        .. .. image:: img/bat_firmware.png
+..         .. .. image:: img/bat_firmware.png
 
-        * ``BAT_AT_V1.7.1.0_1M.bin``: ESP8266モジュールに書き込むファームウェア。
-        * ``esptool.exe``: Windows用のコマンドラインユーティリティ。
-        * ``install_r3.bat``: Windowsシステム用のコマンドパッケージ。
-        * ``install_r4.bat``: ``install_r3.bat`` と同じですが、UNO R4ボード専用です。
+..         * ``BAT_AT_V1.7.1.0_1M.bin``: ESP8266モジュールに書き込むファームウェア。
+..         * ``esptool.exe``: Windows用のコマンドラインユーティリティ。
+..         * ``install_r3.bat``: Windowsシステム用のコマンドパッケージ。
+..         * ``install_r4.bat``: ``install_r3.bat`` と同じですが、UNO R4ボード専用です。
 
-    #. ターミナルを開き、ダウンロードしたファームウェアのフォルダに移動するために ``cd`` コマンドを使用します。その後、以下のコマンドを実行して既存のファームウェアを消去し、新しいファームウェアを再書き込みします。
+..     #. ターミナルを開き、ダウンロードしたファームウェアのフォルダに移動するために ``cd`` コマンドを使用します。その後、以下のコマンドを実行して既存のファームウェアを消去し、新しいファームウェアを再書き込みします。
 
-        .. code-block::
+..         .. code-block::
 
-            python3 -m esptool --chip esp8266 --before no_reset_no_sync erase_flash
-            python3 -m esptool --chip esp8266 --before no_reset_no_sync write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
+..             python3 -m esptool --chip esp8266 --before no_reset_no_sync erase_flash
+..             python3 -m esptool --chip esp8266 --before no_reset_no_sync write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
 
-    #. 以下のプロンプトが表示されたら、ファームウェアが正常にインストールされました。
+..     #. 以下のプロンプトが表示されたら、ファームウェアが正常にインストールされました。
 
-        .. image:: img/install_firmware_macos.png
+..         .. image:: img/install_firmware_macos.png
 
-        .. note::
-            書き込みに失敗した場合は、以下の点を確認してください。
+..         .. note::
+..             書き込みに失敗した場合は、以下の点を確認してください。
 
-            * ESP8266 AdapterのRSTをGNDに挿入してから取り外すことで、ESP8266モジュールをリセットします。
-            * 配線が正しいか確認してください。
-            * コンピュータがボードを正しく認識しているか、およびポートが占有されていないか確認してください。
-            * install.batファイルを再度開きます。
+..             * ESP8266 AdapterのRSTをGNDに挿入してから取り外すことで、ESP8266モジュールをリセットします。
+..             * 配線が正しいか確認してください。
+..             * コンピュータがボードを正しく認識しているか、およびポートが占有されていないか確認してください。
+..             * install.batファイルを再度開きます。
 
-**4. テスト**
+.. **4. テスト**
 
-#. 元の配線に基づいて、IO1を3V3に接続します。
+.. #. 元の配線に基づいて、IO1を3V3に接続します。
 
-    .. image:: img/faq_at_burn_check_bb.jpg
-        :width: 800
+..     .. image:: img/faq_at_burn_check_bb.jpg
+..         :width: 800
 
-#. 右上隅の虫眼鏡アイコン（シリアルモニタ）をクリックし、ボーレートを **115200** に設定すると、ESP8266モジュールに関する情報が表示されます。
+.. #. 右上隅の虫眼鏡アイコン（シリアルモニタ）をクリックし、ボーレートを **115200** に設定すると、ESP8266モジュールに関する情報が表示されます。
 
-    .. image:: img/sp20220524113020.png
+..     .. image:: img/sp20220524113020.png
 
-    .. note::
+..     .. note::
 
-        * ``ready`` が表示されない場合、ESP8266モジュールをリセット（RSTをGNDに接続）し、シリアルモニタを再度開くことができます。
+..         * ``ready`` が表示されない場合、ESP8266モジュールをリセット（RSTをGNDに接続）し、シリアルモニタを再度開くことができます。
 
-#. **NEWLINE DROPDOWN BOX** をクリックし、ドロップダウンオプションで ``both NL & CR`` を選択し、 ``AT`` を入力します。OKが返されると、ESP8266がボードとの接続を正常に確立したことを意味します。
+.. #. **NEWLINE DROPDOWN BOX** をクリックし、ドロップダウンオプションで ``both NL & CR`` を選択し、 ``AT`` を入力します。OKが返されると、ESP8266がボードとの接続を正常に確立したことを意味します。
 
-    .. image:: img/sp20220524113702.png
+..     .. image:: img/sp20220524113702.png
 
-次に、 :ref:`config_esp8266` を参照して、ESP8266モジュールの動作モードとボーレートを設定できます。
+.. 次に、 :ref:`config_esp8266` を参照して、ESP8266モジュールの動作モードとボーレートを設定できます。
 
 
 

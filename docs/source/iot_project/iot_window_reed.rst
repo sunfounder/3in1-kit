@@ -66,7 +66,7 @@ Blynk.cloudはこの値を受け取るので、家を離れていても家のド
 
 #. **Wed Dashboard** ページに **LED widget** をドラッグアンドドロップします。値が1の場合、それは光る（色付き）、それ以外の場合、それは白になります。
 
-    .. image:: img/sp220609_163350.png
+    .. image:: img/blynk_edit_drag_led_widget.png
 
 #. **LED widget** の設定ページで、 **Datastream** として **Reed(V1)** を選択し、保存します。
 

@@ -54,43 +54,49 @@
 
 **2. ダッシュボードを編集**
 
-#. 以前に作成した **Quickstart Device** にアクセスし、右上のメニューアイコンをクリックして **edit dashboard** を選択します。
 
-    .. image:: img/sp220609_112825.png
 
-#. Datastreamsは、BlynkのウィジェットとR3ボードのコードが相互に認識するための機能です。完全な設定プロセスを体験するために、DatastreamsページからすべてのDatastreamsを削除してください。
+#. 以前作成した **Quickstart Device** に移動し、 **edit dashboard** アイコンをクリックします。
 
-    .. image:: img/sp220609_114723.png
+    .. image:: img/blynk_edit_dashboard.png
 
-#. Datastreamsを削除する前に、警告を注意深く読んで正しいことを確認してください。
+#. データストリームは、Blynk上のウィジェットとR3ボード上のコードが互いを認識できるようにします。
 
-    .. image:: img/sp220609_114929.png
+    .. image:: img/blynk_edit_datastream.png
 
-#. Blynkのスイッチを使用してLEDを制御するための **Virtual Pin** タイプのDatastreamを作成します。
+#. 完全な設定プロセスを体験するには、データストリームページからすべてのデータストリームを削除します。
 
-    .. image:: img/sp220609_115124.png
+    .. image:: img/blynk_edit_datastream_delete.png
 
-#. **Virtual Pin** を設定します。ボタンとLEDはONとOFFのみが必要なので、DATA TYPEを ``Integer`` に設定し、MINとMAXを ``0`` と ``1`` に設定します。
+#.  **Virtual Pin** タイプのデータストリームを作成し、これを使用してBlynkのスイッチでLEDを制御します。
+
+    .. image:: img/blynk_edit_virtualpin.png
+
+#.  **Virtual Pin** を設定します。ボタンとLEDはONとOFFのみが必要なので、データタイプを ``Integer`` に設定し、最小値と最大値を ``0`` と ``1`` に設定します。
 
     .. image:: img/sp220609_115520.png
 
-#. **Web Dashboard** ページに移動し、既存のウィジェットを削除します。
+#. **Web Dashboard** ページに移動します。
 
-    .. image:: img/sp220609_133707.png
+    .. image:: img/blynk_edit_web_dashboard.png
 
-#. 左の **Widget Box** から **switch** ウィジェットをドラッグアンドドロップします。
+#. 既存のウィジェットを削除します。
 
-    .. image:: img/sp220609_114508.png
+    .. image:: img/blynk_edit_delete_dashboard.png
 
-#. これで設定します。
+#. 左側の **Widget Box** から **switch** ウィジェットをドラッグ＆ドロップします。
 
-    .. image:: img/sp20220615180127.png
+    .. image:: img/blynk_edit_drag_switch_widget.png
 
-#. 以前に設定した **Datastream** を選択します。
+#. 今、設定します。
+
+    .. image:: img/blynk_edit_edit_widget.png
+
+#. **Datastream** を以前に設定したものとして選択します。
 
     .. image:: img/sp220609_133741.png
 
-#. Datastreamを選択すると、いくつかのカスタム設定が表示されます。それらを設定した後、保存をクリックします。
+#. Datastreamを選択すると、いくつかのカスタム設定が表示されます。それを確認したら、保存をクリックします。
 
     .. image:: img/sp220609_133950.png
 
@@ -129,7 +135,7 @@
 
 #. Blynkに戻ると、ステータスがオンラインに変わっているのがわかります。これで、blynkのスイッチウィジェットを使用してR3ボードに接続されているLEDを制御することができます。
 
-    .. image:: img/2_blynk_button.png
+    .. image:: img/blynk_button_on.png
 
 #. モバイルデバイスでBlynkを使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 
