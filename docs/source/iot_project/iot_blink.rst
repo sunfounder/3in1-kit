@@ -68,38 +68,43 @@ Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 **2. Éditer le Tableau de Bord**
 
-#. Allez sur le **Quickstart Device** que vous avez créé précédemment, cliquez sur l'icône du menu en haut à droite et sélectionnez **edit dashboard**.
+#. Accédez au **Quickstart Device** que vous avez créé précédemment, cliquez sur l'icône **edit dashboard**.
 
-    .. image:: img/sp220609_112825.png
+    .. image:: img/blynk_edit_dashboard.png
 
-#. Les Datastreams permettent aux widgets sur Blynk et au code sur la carte R3 de se reconnaître mutuellement. Pour expérimenter le processus de configuration complet, supprimez tous les Datastreams de la page Datastreams.
+#. Les flux de données permettent aux widgets sur Blynk et au code sur la carte R3 de se reconnaître mutuellement.
 
-    .. image:: img/sp220609_114723.png
+    .. image:: img/blynk_edit_datastream.png
 
-#. Veuillez lire attentivement l'avertissement et confirmer qu'il est correct avant de supprimer les Datastreams.
+#. Pour expérimenter le processus de configuration complet, supprimez tous les flux de données de la page des flux de données.
 
-    .. image:: img/sp220609_114929.png
+    .. image:: img/blynk_edit_datastream_delete.png
 
-#. Créez un Datastream de type **Virtual Pin**, qui sera utilisé pour contrôler la LED en utilisant l'interrupteur Blynk.
+#. Créez un flux de données de type **Virtual Pin**, qui sera utilisé pour contrôler la LED via l'interrupteur de Blynk.
 
-    .. image:: img/sp220609_115124.png
+    .. image:: img/blynk_edit_virtualpin.png
 
-
-#. Configurez le **Virtual Pin**. Comme le bouton et la LED n'ont besoin que d'être ON et OFF, réglez DATA TYPE sur ``Integer`` et MIN et MAX sur ``0`` et ``1``. 
+#. Configurez la **Virtual Pin**. Comme le bouton et la LED n'ont besoin que d'être ON et OFF, réglez le TYPE DE DONNÉE sur ``Integer`` et MIN et MAX sur ``0`` et ``1``.
 
     .. image:: img/sp220609_115520.png
 
-#. Allez sur la page **Web Dashboard** et supprimez les widgets existants.
+#. Rendez-vous sur la page du **Web Dashboard**.
 
-    .. image:: img/sp220609_133707.png
 
-#. Faites glisser et déposez un widget **switch** depuis la **Widget Box** à gauche.
+    .. image:: img/blynk_edit_web_dashboard.png
 
-    .. image:: img/sp220609_114508.png
+#. Et supprimez les widgets existants.
 
-#. Maintenant pour le configurer.
+    .. image:: img/blynk_edit_delete_dashboard.png
 
-    .. image:: img/sp20220615180127.png
+#. Glissez-déposez un widget **switch** depuis la **Widget Box** à gauche.
+
+
+    .. image:: img/blynk_edit_drag_switch_widget.png
+
+#. Maintenant, paramétrez-le.
+
+    .. image:: img/blynk_edit_edit_widget.png
 
 #. Sélectionnez **Datastream** comme celui que vous avez configuré précédemment.
 
@@ -143,7 +148,7 @@ Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 #. De retour sur Blynk, vous pouvez voir que le statut a changé en ligne et vous pouvez maintenant utiliser l'interrupteur widget sur Blynk pour contrôler la LED connectée à la carte R3.
 
-    .. image:: img/2_blynk_button.png
+    .. image:: img/blynk_button_on.png
 
 #. Si vous souhaitez utiliser Blynk sur des appareils mobiles, veuillez vous référer à :ref:`blynk_mobile`.
 

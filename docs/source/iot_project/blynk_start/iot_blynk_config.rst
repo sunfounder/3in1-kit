@@ -12,13 +12,13 @@
 
     👉 Prêt à explorer et à créer avec nous ? Cliquez [|link_sf_facebook|] et rejoignez-nous aujourd'hui !
 
-1.2 Configuration de Blynk
+1.1 Configuration de Blynk
 ==============================
 
 
 #. Allez sur `BLYNK <https://blynk.io/>`_ et cliquez sur **START FREE**. 
 
-    .. image:: img/sp220607_142551.png
+    .. image:: img/blynk_start_free.png
 
 #. Remplissez votre adresse e-mail pour enregistrer un compte.
 
@@ -31,6 +31,12 @@
 #. Par la suite, **Blynk Tour** apparaîtra et vous pourrez le lire pour apprendre les informations de base sur Blynk.
 
     .. image:: img/sp220607_143244.png
+
+
+    .. note:: sinon, veuillez cliquer sur l'icône de l'anneau de natation dans le coin supérieur droit.
+        
+        .. image:: img/blynk_start_help.png
+
 
 #. Ensuite, nous devons créer un modèle et un appareil avec ce **Quick Start**, cliquez sur **Let's go**.
 
@@ -52,12 +58,3 @@
 #. Les étapes suivantes consistent à télécharger le code pertinent et à connecter votre carte à Blynk, mais étant donné qu'il y a un problème avec la bibliothèque fournie plus tôt, vous devez ajouter d'autres bibliothèques à nouveau. Donc, cliquez sur **Cancel** ici pour arrêter **Quick Start**.
 
     .. image:: img/sp20220614174006.png
-
-#. Cliquez sur le bouton **Search** et vous verrez le nouvel appareil que vous venez de créer.
-
-    .. image:: img/sp20220614174410.png
-
-#. Allez sur ce **Quickstart Device** et vous verrez ``TEMPLATE_ID``, ``DEVICE_NAME`` et ``AUTH_TOKEN`` sur la page **Device info**, et vous aurez besoin de les copier plus tard.
-
-
-    .. image:: img/sp20220614174721.png
