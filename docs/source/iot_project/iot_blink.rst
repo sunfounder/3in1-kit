@@ -53,37 +53,42 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 **2. Dashboard bearbeiten**
 
-#. Gehen Sie zum **Quickstart Device**, das Sie zuvor erstellt haben, klicken Sie auf das Menüsymbol in der oberen rechten Ecke und wählen Sie **edit dashboard**.
+#. Rufen Sie das zuvor erstellte **Schnellstartgerät** auf und klicken Sie auf das Symbol **Dashboard bearbeiten**.
 
-    .. image:: img/sp220609_112825.png
+    .. image:: img/blynk_edit_dashboard.png
 
-#. Datastreams ermöglichen es den Widgets auf Blynk und dem Code auf dem R3-Board, sich gegenseitig zu erkennen. Um den vollständigen Konfigurationsprozess zu erleben, entfernen Sie alle Datastreams von der Datastreams-Seite.
+#. Datenströme ermöglichen die Erkennung zwischen den Widgets auf Blynk und dem Code auf dem R3-Board.
 
-    .. image:: img/sp220609_114723.png
+    .. image:: img/blynk_edit_datastream.png
 
-#. Bitte lesen Sie die Warnung sorgfältig durch und bestätigen Sie vor dem Löschen der Datastreams, dass sie korrekt ist.
+#. Um den gesamten Konfigurationsprozess zu erleben, entfernen Sie alle Datenströme von der Datenstromseite.
 
-    .. image:: img/sp220609_114929.png
+    .. image:: img/blynk_edit_datastream_delete.png
 
-#. Erstellen Sie einen Datastream des Typs **Virtual Pin**, der zum Steuern der LED mit Blynks Schalter verwendet wird.
+#. Erstellen Sie einen Datenstrom vom Typ **Virtueller Pin**, der verwendet wird, um die LED über Blynks Schalter zu steuern.
 
-    .. image:: img/sp220609_115124.png
+    .. image:: img/blynk_edit_virtualpin.png
 
-#. Konfigurieren Sie den **Virtual Pin**. Da der Knopf und die LED nur EIN und AUS sein müssen, setzen Sie DEN DATENTYP auf ``Integer`` und MIN und MAX auf ``0`` und ``1``.
+#. Konfigurieren Sie den **Virtuellen Pin**. Da der Knopf und die LED nur EIN und AUS benötigen, stellen Sie den DATENTYP auf ``Integer`` und MIN und MAX auf ``0`` und ``1`` ein.
 
     .. image:: img/sp220609_115520.png
 
-#. Gehen Sie zur **Web Dashboard**-Seite und löschen Sie die vorhandenen Widgets.
+#. Wechseln Sie zur Seite **Web-Dashboard**.
 
-    .. image:: img/sp220609_133707.png
+    .. image:: img/blynk_edit_web_dashboard.png
 
-#. Ziehen Sie ein **switch**-Widget aus dem **Widget Box** links in den Arbeitsbereich.
+#. Und löschen Sie die vorhandenen Widgets.
 
-    .. image:: img/sp220609_114508.png
+    .. image:: img/blynk_edit_delete_dashboard.png
 
-#. Nun geht es an die Einrichtung.
+#. Ziehen Sie ein **Schalter**-Widget aus der **Widget-Box** links.
 
-    .. image:: img/sp20220615180127.png
+    .. image:: img/blynk_edit_drag_switch_widget.png
+
+#. Richten Sie es jetzt ein.
+
+    .. image:: img/blynk_edit_edit_widget.png
+
 
 #. Wählen Sie **Datastream** wie zuvor eingestellt.
 
@@ -128,7 +133,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 #. Zurück bei Blynk sehen Sie, dass der Status auf online geändert wurde und Sie können nun das Schalter-Widget auf Blynk verwenden, um die an das R3-Board angeschlossene LED zu steuern.
 
-    .. image:: img/2_blynk_button.png
+    .. image:: img/blynk_button_on.png
 
 #. Wenn Sie Blynk auf mobilen Geräten verwenden möchten, verweisen Sie bitte auf :ref:`blynk_mobile`.
 
