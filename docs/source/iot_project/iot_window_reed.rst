@@ -84,7 +84,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 #. Auf der Einstellungsseite des **LED widget** wählen Sie **Datastream** als **Reed(V1)** und speichern es.
 
-    .. image:: img/sp220609_163502.png
+    .. image:: img/blynk_edit_drag_led_widget.png
 
 **3. Den Code ausführen**
 

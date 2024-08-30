@@ -14,12 +14,12 @@
 
 .. _config_blynk:
 
-1.2 Blynk konfigurieren
+1.1 Blynk konfigurieren
 ==========================
 
 #. Besuchen Sie die `BLYNK <https://blynk.io/>`_-Seite und klicken Sie auf **START FREE**.
 
-    .. image:: img/sp220607_142551.png
+    .. image:: img/blynk_start_free.png
 
 #. Geben Sie Ihre E-Mail-Adresse ein, um ein Konto zu registrieren.
 
@@ -32,6 +32,10 @@
 #. Danach erscheint die **Blynk Tour**. Sie können sie lesen, um grundlegende Informationen über Blynk zu erhalten.
 
     .. image:: img/sp220607_143244.png
+
+    .. note:: Wenn nicht, klicken Sie bitte auf das Schwimmring-Symbol in der oberen rechten Ecke.
+
+        .. image:: img/blynk_start_help.png
 
 #. Als nächstes müssen wir mit diesem **Quick Start** eine Vorlage und ein Gerät erstellen. Klicken Sie auf **Let's go**.
 
@@ -52,11 +56,3 @@
 #. Die nächsten Schritte wären, den relevanten Code hochzuladen und Ihr Board mit Blynk zu verbinden. Da es jedoch ein Problem mit der zuvor bereitgestellten Bibliothek gibt, müssen Sie erneut andere Bibliotheken hinzufügen. Klicken Sie also hier auf **Cancel**, um den **Quick Start** zu beenden.
 
     .. image:: img/sp20220614174006.png
-
-#. Klicken Sie auf den **Search**-Button und Sie sehen das Gerät, das Sie gerade erstellt haben.
-
-    .. image:: img/sp20220614174410.png
-
-#. Gehen Sie zu diesem **Quickstart Device** und auf der **Device info**-Seite sehen Sie ``TEMPLATE_ID``, ``DEVICE_NAME`` und ``AUTH_TOKEN``. Diese Informationen werden Sie später benötigen und müssen sie kopieren.
-
-    .. image:: img/sp20220614174721.png

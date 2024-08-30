@@ -118,125 +118,125 @@ Verbinden Sie das ESP8266 mit dem SunFounder R3 Board.
 
     .. image:: img/sp20220524113702.png
 
-Jetzt können Sie :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.
+.. Jetzt können Sie :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.
 
-Wie man die Firmware mit R4 neu aufspielt
------------------------------------------------
+.. Wie man die Firmware mit R4 neu aufspielt
+.. -----------------------------------------------
 
-**1. Den Schaltkreis aufbauen**
+.. **1. Den Schaltkreis aufbauen**
 
-Verbinden Sie ESP8266 und das Arduino UNO R4 Board.
+.. Verbinden Sie ESP8266 und das Arduino UNO R4 Board.
 
-    .. image:: img/faq_at_burn_bb.jpg
-        :width: 800
+..     .. image:: img/faq_at_burn_bb.jpg
+..         :width: 800
 
-**2. Laden Sie den folgenden Code auf R4 hoch**
+.. **2. Laden Sie den folgenden Code auf R4 hoch**
 
-.. code-block:: Arduino
+.. .. code-block:: Arduino
 
-    void setup() {
-        Serial.begin(115200);
-        Serial1.begin(115200);
-    }
+..     void setup() {
+..         Serial.begin(115200);
+..         Serial1.begin(115200);
+..     }
 
-    void loop() {
-        if (Serial.available()) {      // Wenn Daten über Serial (USB) eintreffen,
-            Serial1.write(Serial.read());   // werden diese gelesen und über Serial1 (Pins 0 & 1) gesendet.
-        }
-            if (Serial1.available()) {     // Wenn Daten über Serial1 (Pins 0 & 1) eintreffen,
-            Serial.write(Serial1.read());   // werden diese gelesen und über Serial (USB) gesendet.
-        }
-    }
+..     void loop() {
+..         if (Serial.available()) {      // Wenn Daten über Serial (USB) eintreffen,
+..             Serial1.write(Serial.read());   // werden diese gelesen und über Serial1 (Pins 0 & 1) gesendet.
+..         }
+..             if (Serial1.available()) {     // Wenn Daten über Serial1 (Pins 0 & 1) eintreffen,
+..             Serial.write(Serial1.read());   // werden diese gelesen und über Serial (USB) gesendet.
+..         }
+..     }
 
-**3. Firmware aufspielen**
+.. **3. Firmware aufspielen**
 
-* Folgen Sie diesen Schritten, um die Firmware unter **Windows** aufzuspielen.
+.. * Folgen Sie diesen Schritten, um die Firmware unter **Windows** aufzuspielen.
 
-    #. Firmware und Brenn-Tool herunterladen.
+..     #. Firmware und Brenn-Tool herunterladen.
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+..         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. Nach dem Entpacken werden Sie 4 Dateien sehen.
+..     #. Nach dem Entpacken werden Sie 4 Dateien sehen.
 
-        .. image:: img/bat_firmware.png
+..         .. image:: img/bat_firmware.png
     
-        * ``BAT_AT_V1.7.1.0_1M.bin``: Die auf das ESP8266 Modul aufzuspielende Firmware.
-        * ``esptool.exe``: Ein Kommandozeilen-Tool für Windows.
-        * ``install_r3.bat``: Ein Befehlspaket für das Windows-System. Ein Doppelklick auf diese Datei führt alle enthaltenen Befehle aus.
-        * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, jedoch speziell für das UNO R4 Board.
+..         * ``BAT_AT_V1.7.1.0_1M.bin``: Die auf das ESP8266 Modul aufzuspielende Firmware.
+..         * ``esptool.exe``: Ein Kommandozeilen-Tool für Windows.
+..         * ``install_r3.bat``: Ein Befehlspaket für das Windows-System. Ein Doppelklick auf diese Datei führt alle enthaltenen Befehle aus.
+..         * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, jedoch speziell für das UNO R4 Board.
 
-    #. Doppelklicken Sie auf ``install_r4.bat``, um das Aufspielen der Firmware zu starten. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
+..     #. Doppelklicken Sie auf ``install_r4.bat``, um das Aufspielen der Firmware zu starten. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
-        .. image:: img/install_firmware.png
+..         .. image:: img/install_firmware.png
 
-        .. note::
-            Wenn das Aufspielen fehlschlägt, überprüfen Sie bitte die folgenden Punkte:
+..         .. note::
+..             Wenn das Aufspielen fehlschlägt, überprüfen Sie bitte die folgenden Punkte:
 
-            * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann wieder entfernen.
-            * Überprüfen Sie, ob die Verkabelung korrekt ist.
-            * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
-            * Öffnen Sie die install.bat-Datei erneut.
+..             * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann wieder entfernen.
+..             * Überprüfen Sie, ob die Verkabelung korrekt ist.
+..             * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
+..             * Öffnen Sie die install.bat-Datei erneut.
 
-* Um die Firmware unter **Mac OS** aufzuspielen, befolgen Sie diese Schritte:
+.. * Um die Firmware unter **Mac OS** aufzuspielen, befolgen Sie diese Schritte:
 
-    #. Installieren Sie Esptool mit den folgenden Befehlen. Esptool ist ein Python-basiertes, Open-Source-Tool, um mit dem ROM-Bootloader in Espressif-Chips zu kommunizieren.
+..     #. Installieren Sie Esptool mit den folgenden Befehlen. Esptool ist ein Python-basiertes, Open-Source-Tool, um mit dem ROM-Bootloader in Espressif-Chips zu kommunizieren.
 
-        .. code-block::
+..         .. code-block::
 
-            python3 -m pip install --upgrade pip
-            python3 -m pip install esptool
+..             python3 -m pip install --upgrade pip
+..             python3 -m pip install esptool
 
-    #. Wenn esptool korrekt installiert wurde, gibt es eine Nachricht wie [usage: esptool] aus, wenn Sie ``python3 -m esptool`` ausführen.
+..     #. Wenn esptool korrekt installiert wurde, gibt es eine Nachricht wie [usage: esptool] aus, wenn Sie ``python3 -m esptool`` ausführen.
 
-    #. Firmware herunterladen.
+..     #. Firmware herunterladen.
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+..         * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
 
-    #. Nach dem Entpacken werden Sie 4 Dateien sehen.
+..     #. Nach dem Entpacken werden Sie 4 Dateien sehen.
 
-        .. image:: img/bat_firmware.png
+..         .. image:: img/bat_firmware.png
 
-        * ``BAT_AT_V1.7.1.0_1M.bin``: Die auf das ESP8266 Modul aufzuspielende Firmware.
-        * ``esptool.exe``: Ein Kommandozeilen-Tool für Windows.
-        * ``install_r3.bat``: Ein Befehlspaket für das Windows-System.
-        * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, jedoch speziell für das UNO R4 Board.
+..         * ``BAT_AT_V1.7.1.0_1M.bin``: Die auf das ESP8266 Modul aufzuspielende Firmware.
+..         * ``esptool.exe``: Ein Kommandozeilen-Tool für Windows.
+..         * ``install_r3.bat``: Ein Befehlspaket für das Windows-System.
+..         * ``install_r4.bat``: Ähnlich wie ``install_r3.bat``, jedoch speziell für das UNO R4 Board.
 
-    #. Öffnen Sie ein Terminal und navigieren Sie mit dem ``cd``-Befehl in den gerade heruntergeladenen Firmware-Ordner. Führen Sie dann den folgenden Befehl aus, um die vorhandene Firmware zu löschen und die neue Firmware aufzuspielen.
+..     #. Öffnen Sie ein Terminal und navigieren Sie mit dem ``cd``-Befehl in den gerade heruntergeladenen Firmware-Ordner. Führen Sie dann den folgenden Befehl aus, um die vorhandene Firmware zu löschen und die neue Firmware aufzuspielen.
 
-        .. code-block::
+..         .. code-block::
 
-            python3 -m esptool --chip esp8266 --before no_reset_no_sync erase_flash
-            python3 -m esptool --chip esp8266 --before no_reset_no_sync write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
+..             python3 -m esptool --chip esp8266 --before no_reset_no_sync erase_flash
+..             python3 -m esptool --chip esp8266 --before no_reset_no_sync write_flash 0 "BAT_AT_V1.7.1.0_1M.bin"
 
-    #. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
+..     #. Wenn Sie die folgende Aufforderung sehen, wurde die Firmware erfolgreich installiert.
 
-        .. image:: img/install_firmware_macos.png
+..         .. image:: img/install_firmware_macos.png
 
-        .. note::
-            Wenn das Aufspielen fehlschlägt, überprüfen Sie bitte die folgenden Punkte:
+..         .. note::
+..             Wenn das Aufspielen fehlschlägt, überprüfen Sie bitte die folgenden Punkte:
 
-            * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann wieder entfernen.
-            * Überprüfen Sie, ob die Verkabelung korrekt ist.
-            * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
-            * Öffnen Sie die install.bat-Datei erneut.
+..             * Setzen Sie das ESP8266-Modul zurück, indem Sie RST am ESP8266-Adapter an GND anschließen und dann wieder entfernen.
+..             * Überprüfen Sie, ob die Verkabelung korrekt ist.
+..             * Stellen Sie sicher, dass Ihr Computer Ihr Board korrekt erkannt hat und der Port nicht belegt ist.
+..             * Öffnen Sie die install.bat-Datei erneut.
 
-**4. Testen**
+.. **4. Testen**
 
-#. Auf Basis der ursprünglichen Verkabelung verbinden Sie IO1 mit 3V3.
+.. #. Auf Basis der ursprünglichen Verkabelung verbinden Sie IO1 mit 3V3.
 
-    .. image:: img/faq_at_burn_check_bb.jpg
-        :width: 800
+..     .. image:: img/faq_at_burn_check_bb.jpg
+..         :width: 800
 
-#. Sie werden Informationen über das ESP8266-Modul sehen, wenn Sie auf das Lupen-Icon (Serial Monitor) in der oberen rechten Ecke klicken und die Baudrate auf **115200** einstellen.
+.. #. Sie werden Informationen über das ESP8266-Modul sehen, wenn Sie auf das Lupen-Icon (Serial Monitor) in der oberen rechten Ecke klicken und die Baudrate auf **115200** einstellen.
 
-    .. image:: img/sp20220524113020.png
+..     .. image:: img/sp20220524113020.png
 
-    .. note::
+..     .. note::
 
-        * Wenn ``ready`` nicht erscheint, können Sie versuchen, das ESP8266-Modul zurückzusetzen (RST mit GND verbinden) und den Serial Monitor erneut zu öffnen.
+..         * Wenn ``ready`` nicht erscheint, können Sie versuchen, das ESP8266-Modul zurückzusetzen (RST mit GND verbinden) und den Serial Monitor erneut zu öffnen.
 
-#. Klicken Sie auf das **NEWLINE DROPDOWN BOX** und wählen Sie im Dropdown-Menü ``both NL & CR`` aus. Geben Sie ``AT`` ein. Wenn "OK" zurückgegeben wird, bedeutet dies, dass ESP8266 erfolgreich eine Verbindung mit Ihrem Board hergestellt hat.
+.. #. Klicken Sie auf das **NEWLINE DROPDOWN BOX** und wählen Sie im Dropdown-Menü ``both NL & CR`` aus. Geben Sie ``AT`` ein. Wenn "OK" zurückgegeben wird, bedeutet dies, dass ESP8266 erfolgreich eine Verbindung mit Ihrem Board hergestellt hat.
 
-    .. image:: img/sp20220524113702.png
+..     .. image:: img/sp20220524113702.png
 
-Nun können Sie :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.
+.. Nun können Sie :ref:`config_esp8266` folgen, um den Arbeitsmodus und die Baudrate des ESP8266-Moduls einzustellen.
