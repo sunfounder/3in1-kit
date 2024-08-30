@@ -80,7 +80,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 #. Ziehen Sie ein **LED widget** auf die **Wed Dashboard**-Seite. Bei einem Wert von 1 leuchtet es (farbig), sonst ist es weiß.
 
-    .. image:: img/sp220609_163350.png
+    .. image:: img/blynk_edit_drag_led_widget.png
 
 #. Wählen Sie auf der Einstellungsseite des **LED widget** als **Datastream** **Reed(V1)** aus und speichern Sie es.
 

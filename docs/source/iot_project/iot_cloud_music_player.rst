@@ -80,7 +80,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 #. Gehen Sie zur **Wed Dashboard**-Seite, ziehen Sie ein **Switch**-Widget und setzen Sie **Datastream** auf V0 (V0 ist bereits in :ref:`iot_blink` eingestellt); ziehen Sie ein **Label**-Widget und setzen Sie es auf V3; ziehen Sie ein **Slider**-Widget und setzen Sie es auf V2.
 
-    .. image:: img/sp220610_110105.png
+    .. image:: img/blynk_music_cloud.png
 
 .. note::
 
@@ -116,7 +116,7 @@ Sie können sie auch separat über die untenstehenden Links kaufen.
 
 #. Nun können Sie Blynks Button Control Widget verwenden, um die Musik zu starten/pausieren und den Slider, um den Wiedergabefortschritt anzupassen. Sie sehen auch den Namen des Musikstücks.
 
-    .. image:: img/sp220610_110105.png
+    .. image:: img/blynk_music_cloud.png
 
 #. Wenn Sie Blynk auf mobilen Geräten verwenden möchten, verweisen Sie bitte auf :ref:`blynk_mobile`.
 

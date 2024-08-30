@@ -15,7 +15,7 @@
 .. _iot_home:
 
 5. Überwachung des häuslichen Umfelds
-=========================================
+==========================================================
 
 In diesem Kapitel werden wir Blynk verwenden, um einen Umweltmonitor für das Zuhause zu erstellen.
 Sie können mit dem DHT11 und dem Fotowiderstand die Temperatur, die Luftfeuchtigkeit und die Lichtintensität eines Raumes messen.

@@ -14,7 +14,7 @@
     
 .. _connect_blynk:
 
-1.4 Verbindung des R4-Boards mit Blynk herstellen
+1.3 Verbindung des R4-Boards mit Blynk herstellen
 ======================================================
 
 #. Schließen Sie das ESP8266-Modul und das R4-Board erneut an. Hier wird die Software-Serielle verwendet, daher sind TX und RX jeweils an die Pins 2 und 3 des R4-Boards angeschlossen.
@@ -25,13 +25,23 @@
 
     .. image:: img/iot_1.4_bb.png
 
+
+#. Klicken Sie auf die Seite **devices** und Sie sehen das neue Gerät, das Sie gerade erstellt haben. Klicken Sie dann auf Entwicklertools.
+
+    .. image:: img/blynk_copy_developer.png
+
+#. Und Sie sehen ``TEMPLATE_ID``, ``DEVICE_NAME`` und ``AUTH_TOKEN`` in den **Firmware info** und müssen diese später kopieren.
+
+    .. image:: img/blynk_copy_firmwareinfo.png
+
+
 #. Öffnen Sie die Datei ``1.connect.ino`` unter dem Pfad ``3in1-kit\iot_project\1.connect``. Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1c0c1a8f-2551-484f-9f4f-d5d4117cc864/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Ersetzen Sie die folgenden drei Codezeilen, die Sie von der **Device info**-Seite Ihres Kontos kopieren können. Diese drei Codezeilen ermöglichen es Ihrem R4-Board, Ihr Blynk-Konto zu finden.
+#. Ersetzen Sie die folgenden drei Codezeilen, die Sie von der **Firmware info**-Seite Ihres Kontos kopieren können. Diese drei Codezeilen ermöglichen es Ihrem R4-Board, Ihr Blynk-Konto zu finden.
 
     .. code-block:: arduino
 
@@ -39,7 +49,6 @@
         #define BLYNK_DEVICE_NAME "Device"
         #define BLYNK_AUTH_TOKEN "YourAuthToken"
     
-    .. image:: img/sp20220614174721.png
 
 #. Tragen Sie die ``ssid`` und das ``password`` des von Ihnen verwendeten WLANs ein.
 
@@ -50,8 +59,8 @@
 
 #. Laden Sie den Code auf das R4-Board, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 115200 ein. Wenn das R4-Board erfolgreich mit Blynk kommuniziert, zeigt der serielle Monitor den Schriftzug ``ready`` an.
 
-    .. image:: img/sp220607_170223.png
-
+    .. image:: img/blynk_connect_network.png
+        
     .. note::
     
         Wenn beim Verbinden die Meldung ``ESP reagiert nicht`` erscheint, befolgen Sie bitte diese Schritte.

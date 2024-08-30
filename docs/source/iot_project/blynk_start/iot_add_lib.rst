@@ -14,18 +14,18 @@
     
 .. _iot_add_library:
 
-1.3 Hinzufügen der benötigten Bibliotheken
+1.2 Hinzufügen der benötigten Bibliotheken
 ================================================
 
 Um Blynk mit der Arduino IDE zu nutzen, müssen Sie die richtigen Bibliotheken hinzufügen.
 
 #. Klicken Sie `HIER <https://github.com/blynkkk/blynk-library/releases>`_, scrollen Sie bis zum Ende der Seite und laden Sie die erste ``.zip`` Datei herunter.
 
-    .. image:: img/sp220607_154840.png
+    .. image:: img/blynk_download_lib.png
 
 #. Entpacken Sie diese Datei und Sie werden die folgenden Ordner sehen.
 
-    .. image:: img/sp220607_155155.png
+    .. image:: img/blynk_unzip_lib.png
     
 #. Kopieren Sie alle und fügen Sie sie in das Standard-Bibliothekenverzeichnis der Arduino IDE ein, welches üblicherweise unter ``C:\Users\xxx\Documents\Arduino\libraries`` zu finden ist.
 
