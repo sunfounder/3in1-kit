@@ -12,7 +12,7 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
-1.2 Blynkの設定
+1.1 Blynkの設定
 ==========================
 
 #. `BLYNK <https://blynk.io/>`_ にアクセスして、 **START FREE** をクリックします。
@@ -30,6 +30,11 @@
 #. その後、 **Blynk Tour** が表示されるので、Blynkに関する基本情報を読むことができます。
 
     .. image:: img/sp220607_143244.png
+
+    .. note:: そうでない場合は、右上隅にある水泳リングアイコンをクリックしてください。
+
+        .. image:: img/blynk_start_help.png
+
 
 #. 次に、この **Quick Start** でテンプレートとデバイスを作成する必要があります。 **Let's go** をクリックします。
 
@@ -51,10 +56,3 @@
 
     .. image:: img/sp20220614174006.png
 
-#. **Search** ボタンをクリックすると、作成した新しいデバイスが表示されます。
-
-    .. image:: img/sp20220614174410.png
-
-#. この **Quickstart Device** にアクセスすると、 **Device info** ページに ``TEMPLATE_ID`` 、 ``DEVICE_NAME`` 、 ``AUTH_TOKEN`` が表示されます。これらの情報は後でコピーする必要があります。
-
-    .. image:: img/sp20220614174721.png

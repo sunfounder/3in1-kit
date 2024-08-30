@@ -79,7 +79,7 @@
 
 #. **Wed Dashboard** ページに移動して、 **Switch** ウィジェットをドラッグし、 **Datastream** をV0に設定します( :ref:`iot_blink` で既に設定済み); **Label** ウィジェットをドラッグしてV3に設定; **Slider** ウィジェットをドラッグしてV2に設定します。
 
-    .. image:: img/sp220610_110105.png
+    .. image:: img/blynk_music_cloud.png
 
 .. note::
 
@@ -114,7 +114,7 @@
 
 #. これで、Blynkのボタンコントロールウィジェットを使用して音楽の再生/一時停止を切り替えたり、スライダーで再生の進行状況を調整したりできます。また、音楽の名前も表示されます。
 
-    .. image:: img/sp220610_110105.png
+    .. image:: img/blynk_music_cloud.png
 
 #. Blynkをモバイルデバイスで使用したい場合は、 :ref:`blynk_mobile` を参照してください。
 

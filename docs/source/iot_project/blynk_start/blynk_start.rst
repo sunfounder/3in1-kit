@@ -22,7 +22,6 @@ R3ボードをBlynkと通信させるには、Blynkを初めて使用する際�
 .. toctree::
     :maxdepth: 2
 
-    iot_esp8266_config
     iot_blynk_config
     iot_add_lib
     iot_connect_r3_blynk

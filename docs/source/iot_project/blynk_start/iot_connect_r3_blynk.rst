@@ -14,7 +14,7 @@
 
 .. _connect_blynk:
 
-1.4 R3ボードをBlynkに接続
+1.3 R3ボードをBlynkに接続
 =========================
 
 #. ESP8266モジュールとR3ボードを再接続します。ここではソフトウェアシリアルが使用されているため、TXとRXはR3ボードのピン2と3にそれぞれ接続されます。
@@ -25,13 +25,24 @@
 
     .. image:: img/wiring_23.jpg
 
+#. **devices** ページをクリックすると、作成した新しいデバイスが表示されます。次に、開発者ツールをクリックします。
+
+.. image:: img/blynk_copy_developer.png
+
+#. **Firmware info** に ``TEMPLATE_ID``、 ``DEVICE_NAME``、 ``AUTH_TOKEN`` が表示されます。後でコピーする必要があります。
+
+.. image:: img/blynk_copy_firmwareinfo.png
+
+
+
+
 #. ``3in1-kit\iot_project\1.connect`` のパスの下の ``1.connect.ino`` ファイルを開きます。または、このコードを **Arduino IDE** にコピーします。
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1c0c1a8f-2551-484f-9f4f-d5d4117cc864/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. **Device info** ページからコピーできる以下の3行のコードを置き換えます。これらの3行のコードにより、R3ボードがあなたのblynkアカウントを見つけることができます。
+#. **Firmware info**  ページからコピーできる以下の3行のコードを置き換えます。これらの3行のコードにより、R3ボードがあなたのblynkアカウントを見つけることができます。
 
     .. code-block:: arduino
 
@@ -39,7 +50,6 @@
         #define BLYNK_DEVICE_NAME "Device"
         #define BLYNK_AUTH_TOKEN "YourAuthToken"
     
-    .. image:: img/sp20220614174721.png
 
 #. 使用しているWiFiの ``ssid`` と ``password`` を入力します。
 
@@ -50,7 +60,7 @@
 
 #. コードをR3ボードにアップロードします。次に、シリアルモニタを開き、ボーレートを115200に設定します。R3ボードがBlynkと正常に通信すると、シリアルモニタに ``ready`` 文字が表示されます。
 
-    .. image:: img/sp220607_170223.png
+    .. image:: img/blynk_connect_network.png
 
     .. note::
     
