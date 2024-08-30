@@ -12,12 +12,12 @@
 
     👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy!
     
-1.2 Configuración de Blynk
+1.1 Configuración de Blynk
 =============================
 
 1. Ve a `BLYNK <https://blynk.io/>`_ y haz clic en **START FREE**.
 
-    .. image:: img/sp220607_142551.png
+    .. image:: img/blynk_start_free.png
 
 2. Rellena tu dirección de correo electrónico para registrar una cuenta.
 
@@ -30,6 +30,13 @@
 4. Después, aparecerá **Blynk Tour** y puedes leerlo para aprender información básica sobre Blynk.
 
     .. image:: img/sp220607_143244.png
+
+
+
+    .. note:: si no, haga clic en el ícono del anillo de natación en la esquina superior derecha.
+
+        .. image:: img/blynk_start_help.png
+
 
 5. A continuación, necesitamos crear una plantilla y un dispositivo con este **Quick Start**, haz clic en **Let's go**.
 
@@ -50,11 +57,3 @@
 9. Los siguientes pasos son subir el código relevante y conectar tu placa a Blynk, pero como hay un problema con la biblioteca proporcionada anteriormente, necesitas agregar otras bibliotecas de nuevo. Así que haz clic en **Cancel** aquí para detener **Quick Start**.
 
     .. image:: img/sp20220614174006.png
-
-10. Haz clic en el botón **Search** y verás el nuevo dispositivo que acabas de crear.
-
-    .. image:: img/sp20220614174410.png
-
-11. Ve a este **Quickstart Device** y verás ``TEMPLATE_ID``, ``DEVICE_NAME`` y ``AUTH_TOKEN`` en la página **Device info**, y necesitarás copiarlos más adelante.
-
-    .. image:: img/sp20220614174721.png

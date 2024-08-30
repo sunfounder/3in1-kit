@@ -22,7 +22,6 @@ Sigue los pasos a continuación, y ten en cuenta que debes hacerlos en orden y n
 .. toctree::
     :maxdepth: 2
 
-    iot_esp8266_config
     iot_blynk_config
     iot_add_lib
     iot_connect_r3_blynk

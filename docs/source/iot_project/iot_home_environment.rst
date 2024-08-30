@@ -15,7 +15,7 @@
 .. _iot_home:
 
 5. Monitoreo del Ambiente Doméstico
-====================================
+=====================================================
 
 En este capítulo, utilizaremos Blynk para crear un monitor de ambiente doméstico.
 Puedes medir la temperatura, humedad e intensidad lumínica de una habitación usando el DHT11 y un fotoresistor.

@@ -80,7 +80,7 @@ También puedes comprarlos por separado en los siguientes enlaces.
 
 2. Arrastra y suelta un widget **LED widget** en la página **Web Dashboard**, con un valor de 1, se iluminará (con color), de lo contrario será blanco.
 
-    .. image:: img/sp220609_163350.png
+    .. image:: img/blynk_edit_drag_led_widget.png
 
 3. En la página de configuración del widget **LED widget**, selecciona **Datastream** como **Reed(V1)**, y guárdalo.
 
