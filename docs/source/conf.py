@@ -342,3 +342,17 @@ rst_epilog += """
     <a href="https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/" target="_blank">English Online-tutorials</a>
 
 """
+
+# purchase links
+
+rst_epilog += """
+
+.. |link_3_in_1_Starter_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-ultimate-starter-kit-with-original-arduino-uno-r4-minima?_pos=2&_sid=fe39d2a1d&_ss=r" target="_blank">購入リンク： 3 in 1 Starter Kit</a>
+
+.. |link_3_in_1_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-ultimate-starter-kit-with-original-arduino-uno-r4-minima?_pos=2&_sid=fe39d2a1d&_ss=r" target="_blank">3 in 1 Starter Kit</a>
+
+"""
