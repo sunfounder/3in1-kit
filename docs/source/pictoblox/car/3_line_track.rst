@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue abilità.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni e concorsi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_line:
 
-3.3 Follow the line
+3.3 Segui la linea
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+L'auto è dotata di un modulo di tracciamento della linea, che può essere utilizzato per far seguire all'auto una linea nera.
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+Prima di iniziare il progetto, è necessario creare un percorso curvo con del nastro nero, la larghezza consigliata della linea è compresa tra 0,8 e 1,5 cm e l'angolo della curva non deve essere inferiore a 90 gradi.
 
-Required Components
----------------------
+Componenti Necessari
+-----------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È decisamente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit 3 in 1 Starter
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,17 +57,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-Build the Circuit
------------------------
+Costruisci il Circuito
+--------------------------
 
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Questo è un modulo digitale di tracciamento della linea, quando rileva una linea nera emette 1; quando rileva una linea bianca emette un valore di 0. Inoltre, è possibile regolare la distanza di rilevamento tramite il potenziometro sul modulo.
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo lo schema seguente.
 
 .. list-table:: 
 
-    * - Line Tracking Module
-      - R3 Board
+    * - Modulo di Tracciamento della Linea
+      - Scheda R3
     * - S
       - 2
     * - V+
@@ -78,43 +78,43 @@ Build the circuit according to the following diagram.
 .. image:: img/car_4.png
     :width: 800
 
-Adjust the Module
+Regola il Modulo
 -----------------------
 
-Before starting the project, you need to adjust the sensitivity of the module.
+Prima di iniziare il progetto, è necessario regolare la sensibilità del modulo.
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+Collega i fili secondo lo schema sopra, quindi alimenta la scheda R3 (collegando il cavo USB o la batteria a 9V), senza caricare il codice.
 
-Stick a black electrical tape on the table and put the cart on it.
+Attacca un nastro nero isolante sul tavolo e posiziona il carrello su di esso.
 
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
+Osserva il LED del segnale sul modulo per assicurarti che si accenda sul tavolo bianco e si spenga sul nastro nero.
 
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+Se ciò non accade, è necessario regolare il potenziometro sul modulo affinché produca questo effetto.
 
 .. image:: img/line_track_cali.JPG
 
 
-Programming
-------------
+Programmazione
+----------------
 
-Now create 2 blocks that allow the car to move either to the left front or to the right front.
+Ora crea 2 blocchi che permettano all'auto di muoversi leggermente verso il fronte sinistro o verso il fronte destro.
 
-**1. Move to the left front**
+**1. Muoversi verso il fronte sinistro**
 
-When the right motor is turned clockwise and the left motor is left unmoved, the car is moved slightly to the left front.
-
-.. image:: img/3_forward_left.png
-
-**2. Moving to the right front**
-
-Similarly, when the left motor is turned counterclockwise and the left motor does not move, the car moves slightly to the right.
+Quando il motore destro gira in senso orario e il motore sinistro rimane fermo, l'auto si sposta leggermente verso il fronte sinistro.
 
 .. image:: img/3_forward_left.png
 
-**3. Line Tracking**
+**2. Muoversi verso il fronte destro**
 
-Read the value of Line Tracking module, if it is 1, it means black line has been detected, let the car move forward to the left, otherwise move forward to the right.
+Allo stesso modo, quando il motore sinistro gira in senso antiorario e il motore destro non si muove, l'auto si sposta leggermente verso destra.
+
+.. image:: img/3_forward_left.png
+
+**3. Tracciamento della linea**
+
+Leggi il valore del modulo di tracciamento della linea, se è 1 significa che è stata rilevata la linea nera, quindi fai muovere l'auto verso il fronte sinistro, altrimenti falla muovere verso destra.
 
 .. image:: img/3_follow.png
 
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+Dopo aver caricato il codice sulla scheda R3, allinea il modulo di tracciamento della linea sotto l'auto con la linea nera e vedrai l'auto seguire la linea.

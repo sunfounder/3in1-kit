@@ -1,52 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia suggerimenti e tutorial per migliorare le tue abilità.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Omaggi Festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_receiver:
 
-5.11.2 IR Receiver
+5.11.2 Ricevitore IR
 =========================
 
-In this project, you will learn to use IR Receiver. 
+In questo progetto, imparerai a utilizzare il ricevitore IR.
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Un ricevitore a infrarossi è un componente che riceve segnali a infrarossi e può ricevere raggi infrarossi in modo indipendente e fornire segnali compatibili con il livello TTL. Ha dimensioni simili a un normale transistor incapsulato in plastica ed è adatto a tutti i tipi di telecomandi a infrarossi e trasmissioni IR.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,25 +56,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**Collegamenti**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+In questo esempio, colleghiamo il pin sinistro del ricevitore IR al pin 11,
+il pin centrale a GND e il pin destro a 5V.
 
 .. image:: img/ir_remote_control_bb.jpg
 
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\basic_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Apri il file ``5.11.ir_receiver.ino`` nel percorso ``3in1-kit\basic_project\5.11.ir_receiver``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
+    * La libreria ``IRremote`` viene utilizzata qui, puoi installarla dal **Library Manager**.
   
         .. image:: ../img/lib_irremote.png
 
@@ -85,27 +84,26 @@ the middle pin to GND, and the right pin to 5V.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After uploading the codes to the R3 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+Dopo aver caricato il codice sulla scheda R3, puoi vedere il valore corrente 
+del pulsante premuto del telecomando IR visualizzato sul monitor seriale.
 
-**How it works?**
+**Come funziona?**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Questo codice è progettato per funzionare con un telecomando a infrarossi (IR) utilizzando la libreria ``IRremote``. Ecco una descrizione del funzionamento:
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. Includi le librerie: Viene inclusa la libreria ``IRremote``, che fornisce funzioni per lavorare con i telecomandi IR.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected.
+#. Definisci il pin di Arduino a cui è collegato il pin del segnale del sensore IR.
 
     .. code-block:: arduino
 
         const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Inizializza la comunicazione seriale a un baud rate di 9600. Inizializza il ricevitore IR sul pin specificato (``IR_RECEIVE_PIN``) e abilita il feedback LED (se applicabile).
 
     .. code-block:: arduino
 
@@ -114,7 +112,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
             IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
         }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. Il ciclo loop viene eseguito continuamente per elaborare i segnali in arrivo dal telecomando IR.
 
     .. code-block:: arduino
 
@@ -129,8 +127,8 @@ This code is designed to work with an infrared (IR) remote control using the ``I
             }
         }
     
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error.
-    * Prints the decoded IR value to the serial monitor.
-    * Resumes IR signal reception for the next signal.
+    * Verifica se un segnale IR è stato ricevuto e decodificato correttamente.
+    * Decodifica il comando IR e lo memorizza in ``decodedValue`` utilizzando una funzione personalizzata ``decodeKeyValue()``.
+    * Verifica che il valore decodificato non sia un errore.
+    * Stampa il valore decodificato IR sul monitor seriale.
+    * Riprende la ricezione dei segnali IR per il prossimo segnale.

@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri nuovi prodotti.
+    - **Promozioni festive e omaggi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_reversing_aid:
 
-6.4 Reversing Aid
-===================
+6.4 Sistema di Assistenza al Parcheggio
+===========================================
 
-With the development of science and technology, a lot of high-tech
-products have been installed in cars, among which the reversing assist
-system is one of them. Here we use ultrasonic module, LCD, LED and
-buzzer to make a simple ultrasonic reversing assist system.
+Con lo sviluppo della scienza e della tecnologia, molti prodotti high-tech 
+sono stati installati nelle auto, tra cui il sistema di assistenza al parcheggio. 
+In questo progetto, utilizzeremo un modulo a ultrasuoni, un display LCD, LED e un 
+buzzer per creare un semplice sistema di assistenza al parcheggio.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+Per questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -65,25 +65,25 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Schematic**
+**Schema elettrico**
 
 .. image:: img/image265.png
     :width: 800
     :align: center
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/backcar.png
     :width: 800
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``6.4_reversingAid.ino`` under the path of ``3in1-kit\basic_project\6.4_reversingAid`` directly.
-    * Or copy this code into Arduino IDE .
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Puoi aprire il file ``6.4_reversingAid.ino`` nel percorso ``3in1-kit\basic_project\6.4_reversingAid`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
+    * La libreria ``LiquidCrystal I2C`` è utilizzata qui, puoi installarla dal **Library Manager**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
 
@@ -91,21 +91,21 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d6848669-fe79-42e9-afd7-0f083f96a6d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, the current detected distance will be displayed on the LCD. Then the buzzer will change the sounding frequency according to different distances.
+Dopo aver caricato correttamente il codice, la distanza rilevata verrà visualizzata sull'LCD. Successivamente, il buzzer cambierà la frequenza del suono in base alle diverse distanze.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    Se il codice e i collegamenti sono corretti, ma l'LCD non mostra nulla, puoi regolare il potenziometro sul retro.
 
 
-**How it works?**
+**Come funziona?**
 
-This code helps us create a simple distance measuring device that can measure the distance between objects and provide feedback through an LCD display and a buzzer.
+Questo codice ci aiuta a creare un semplice dispositivo di misurazione della distanza che può rilevare la distanza tra oggetti e fornire un feedback tramite un display LCD e un buzzer.
 
-The ``loop()`` function contains the main logic of the program and runs continuously. Let's take a closer look at the ``loop()`` function.
+La funzione ``loop()`` contiene la logica principale del programma e viene eseguita continuamente. Vediamo più da vicino la funzione ``loop()``.
 
-#. Loop to read distance and update parameters
+#. Ciclo per leggere la distanza e aggiornare i parametri
 
-    In the ``loop``, the code first reads the distance measured by the ultrasonic module and updates the interval parameter based on the distance. 
+    Nel ciclo ``loop``, il codice legge prima la distanza misurata dal modulo a ultrasuoni e aggiorna il parametro dell'intervallo in base alla distanza.
 
     .. code-block:: arduino
 
@@ -123,9 +123,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             intervals = 2000;
         }
 
-#. Check if it's time to beep
+#. Verifica se è il momento di emettere un beep
 
-    The code calculates the difference between the current time and the previous beep time, and if the difference is greater than or equal to the interval time, it triggers the buzzer and updates the previous beep time.
+    Il codice calcola la differenza tra il tempo attuale e il tempo del beep precedente, e se la differenza è maggiore o uguale al tempo dell'intervallo, attiva il buzzer e aggiorna il tempo del beep precedente.
 
     .. code-block:: arduino
 
@@ -136,9 +136,9 @@ The ``loop()`` function contains the main logic of the program and runs continuo
             previousMillis = currentMillis;
         }
 
-#. Update LCD display
+#. Aggiornamento del display LCD
 
-    The code clears the LCD display and then displays "Dis:" and the current distance in centimeters on the first line.
+    Il codice pulisce il display LCD e visualizza "Dis:" e la distanza attuale in centimetri sulla prima linea.
 
     .. code-block:: arduino
 

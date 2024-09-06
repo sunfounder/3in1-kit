@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue abilità.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni e concorsi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_test:
 
-3.1 Test the Car
+3.1 Testare l'Auto
 ======================
 
-Here, you will learn how to write scripts to make the car go forward, but you need to refer to :ref:`car_projects` to assemble the car and to get a basic understanding of it.
+Qui imparerai a scrivere script per far avanzare l'auto, ma devi fare riferimento a :ref:`car_projects` per assemblare l'auto e ottenere una comprensione di base del funzionamento.
 
-But before you start the project, you need to know the steps to use PictoBlox in :ref:`upload_mode`.
+Prima di iniziare il progetto, è necessario conoscere i passaggi per utilizzare PictoBlox in :ref:`upload_mode`.
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Starter Kit 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -55,22 +55,20 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
-Build the Circuit
------------------------
+Costruisci il Circuito
+--------------------------
 
-The L9110 motor driver module is a high power motor driver module for driving DC and stepper motors. The L9110 module can control up to 4 DC motors, or 2 DC motors with direction and speed control.
+Il modulo driver motore L9110 è un modulo ad alta potenza per pilotare motori DC e stepper. Il modulo L9110 può controllare fino a 4 motori DC, o 2 motori DC con controllo di direzione e velocità.
 
-
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
-
+Collega i cavi tra il modulo L9110 e la scheda R3 secondo il diagramma sottostante.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L9110 Module
-      - R3 Board
-      - Motor
+    * - Modulo L9110
+      - Scheda R3
+      - Motore
     * - A-1B
       - 5
       - 
@@ -85,67 +83,66 @@ Connect the wires between the L9110 module and the R3 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - Filo nero del motore destro
     * - OA(B)
       - 
-      - Red wire of right motor
+      - Filo rosso del motore destro
     * - OB(A)
       - 
-      - Black wire of left motor
+      - Filo nero del motore sinistro
     * - OA(A)
       - 
-      - Red wire of left motor
+      - Filo rosso del motore sinistro
 
 .. image:: img/car_2.png
     :width: 800
 
-Programming
+Programmazione
 -------------------
 
-**1. Let the car go forward**
+**1. Far avanzare l'auto**
 
-Based on the above wiring, we know that pins 5 and 6 are used to control the right motor rotation and pins 9 and 10 are used for the left motor rotation. Now let's write a script to make the car go forward.
+Basandosi sul cablaggio sopra descritto, sappiamo che i pin 5 e 6 sono utilizzati per controllare la rotazione del motore destro e i pin 9 e 10 per la rotazione del motore sinistro. Ora scriviamo uno script per far avanzare l'auto.
 
-After selecting Board as Arduino Uno, switch to :ref:`upload_mode` and write the script according to the following diagram.
+Dopo aver selezionato la scheda Arduino Uno, passa a :ref:`upload_mode` e scrivi lo script seguendo il diagramma qui sotto.
 
 .. image:: img/1_test1.png
 
-Click the **Upload Code** button to upload the code to the R3 board. When it's done, you will see the two motors of the car moving forward (if you put the car on the ground, it will move forward in a straight line, but maybe the car will go in a curve because the speed of the two motors is a bit different). 
+Fai clic sul pulsante **Carica Codice** per caricare il codice sulla scheda R3. Una volta fatto, vedrai i due motori dell'auto avanzare (se metti l'auto a terra, si muoverà in linea retta, ma potrebbe andare in curva a causa della differenza di velocità tra i due motori).
 
-If not both turn forward, but the following situations occur, you need to readjust the wiring of the two motors.
+Se entrambi i motori non avanzano, ma si verificano le seguenti situazioni, devi regolare il cablaggio dei due motori.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Se entrambi i motori ruotano all'indietro contemporaneamente (il motore sinistro ruota in senso orario, il motore destro in senso antiorario), scambia il cablaggio dei motori sinistro e destro contemporaneamente: scambia OA(A) con OB(A) e OA(B) con OB(B).
+* Se il motore sinistro ruota all'indietro (rotazione in senso orario), scambia i cavi di OA(B) e OB(B) del motore sinistro.
+* Se il motore destro ruota all'indietro (rotazione in senso antiorario), scambia i cavi di OA(A) e OB(A) del motore destro.
 
+**2. Creare un blocco**
 
-**2. Creating block**
+Per rendere lo script più pulito e facile da usare, inseriamo tutti i blocchi che controllano il movimento in avanti in un unico blocco, e quando lo usiamo, basta richiamare direttamente questo blocco.
 
-In order to make the script more clean and easy to use, here we put all the blocks that control the forward movement into a block, and when using it, just call this block directly.
-
-Click **Make a Block** in the **My Blocks** palette.
+Clicca su **Crea un Blocco** nella palette **I Miei Blocchi**.
 
 .. image:: img/1_test31.png
 
-Enter the name of the block - **forward** and check **Add an input**, set the input name to **speed**.
+Inserisci il nome del blocco - **avanti** e seleziona **Aggiungi un input**, impostando il nome dell'input su **velocità**.
 
 .. image:: img/1_test32.png
 
-Drag and drop the blocks that control the cars forward into **forward**, note that you need to add the parameter - **speed** to pin6 and pin9.
+Trascina i blocchi che controllano l'avanzamento dell'auto in **avanti**, nota che devi aggiungere il parametro - **velocità** ai pin 6 e 9.
 
 .. image:: img/1_test33.png
 
-Call the created block in the [Forward] block - **forward**. In Upload mode, the [When Arduino Uno starts up] block must be added at the beginning.
+Richiama il blocco creato nel blocco [Avanti] - **avanti**. In modalità Carica, il blocco [Quando Arduino Uno si avvia] deve essere aggiunto all'inizio.
 
-* The motor rotation speed range is 100 ~ 255.
+* Il range di velocità di rotazione del motore è 100 ~ 255.
 
 .. image:: img/1_test3.png
     
-**3. Adjusting the speed of motors**
+**3. Regolazione della velocità dei motori**
 
-Since there may be a slight difference in the speed of the 2 motors, resulting in the car not being able to move along a straight line, we can give the left and right motors different speeds to keep the car moving along a straight line as much as possible.
+Poiché potrebbe esserci una leggera differenza nella velocità dei 2 motori, che porta l'auto a non muoversi in linea retta, possiamo assegnare velocità diverse ai motori sinistro e destro per mantenere l'auto il più possibile in linea retta.
 
-Since my car will move slowly to the right front, so here reduce the speed of the left motor.
+Dato che la mia auto tende a spostarsi lentamente verso destra, qui riduco la velocità del motore sinistro.
 
 .. image:: img/1_test2.png
 

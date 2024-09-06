@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 21: IR Remote Control
-==================================
+Video 21: Controllo a Distanza con Infrarossi
+=======================================================
 
-This tutorial demonstrates how to use an infrared remote with Arduino to control various functions, focusing on signal decoding and practical applications like activating a buzzer.
+Questo tutorial dimostra come utilizzare un telecomando a infrarossi con Arduino per controllare varie funzioni, concentrandosi sulla decodifica dei segnali e su applicazioni pratiche come l'attivazione di un buzzer.
 
-* **Understanding Infrared Technology**: Insight into how infrared remotes and receivers work with Arduino.
-* **IR Receiver Wiring**: Detailed guidance on correctly wiring the infrared receiver to the Arduino board.
-* **Installing Necessary Libraries**: Step-by-step process to install the IR remote library in Arduino IDE.
-* **Decoding IR Signals**: Explanation of how to decode signals from an IR remote using Arduino.
-* **Action on Key Press**: Programming Arduino to perform specific actions based on remote control inputs.
-* **Future Project Insights**: Preview of upcoming advanced projects using Arduino and infrared technology.
+* **Comprendere la Tecnologia a Infrarossi**: Panoramica sul funzionamento dei telecomandi e dei ricevitori a infrarossi con Arduino.
+* **Collegamento del Ricevitore IR**: Guida dettagliata su come collegare correttamente il ricevitore a infrarossi alla scheda Arduino.
+* **Installazione delle Librerie Necessarie**: Procedura passo passo per installare la libreria per il telecomando IR nell'IDE di Arduino.
+* **Decodifica dei Segnali IR**: Spiegazione su come decodificare i segnali di un telecomando IR utilizzando Arduino.
+* **Azione al Pressione dei Tasti**: Programmare Arduino per eseguire azioni specifiche in base agli input del telecomando.
+* **Anticipazioni su Progetti Futuri**: Anteprima di progetti avanzati futuri utilizzando Arduino e la tecnologia a infrarossi.
 
 **Video**
 
@@ -32,6 +32,6 @@ This tutorial demonstrates how to use an infrared remote with Arduino to control
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_receiver`

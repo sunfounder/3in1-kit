@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _car_assemble:
 
-Assemble the Car
-=====================
+Assemblaggio dell'Auto
+============================
 
 **Video**
 
@@ -23,73 +23,74 @@ Assemble the Car
     
     <iframe width="600" height="400" src="https://www.youtube.com/embed/pdn3gko3C30?si=G397ah7ribyDX4TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Steps**
+**Passaggi**
 
-Please follow the steps below to complete the assembly of the car.
+Segui i passaggi riportati di seguito per completare l'assemblaggio dell'auto.
 
-1. Remove the protective film on the acrylic.
+1. Rimuovi la pellicola protettiva dall'acrilico.
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R3 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Posiziona la scheda sul tavolo come mostrato nell'immagine, il lato con lo stesso foro della scheda R3 lo chiameremo A; il retro è B. Questo ti aiuterà a evitare errori durante l'assemblaggio.
 
     .. image:: img/IMG_9145.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. Monta il **distanziatore M3x24mm** con le **viti M3x6mm** nella posizione mostrata di seguito.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Gira il lato B, usa le **viti M3x30mm** e i **dadi M3** per fissare il motore TT. Due dettagli importanti: 1 - l'albero di uscita è rivolto verso il lato a forma di pipistrello; 2 - il cavo del motore è rivolto verso l'interno.
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. Monta l'altro motore TT, prestando attenzione alla direzione dell'albero di uscita e del cavo.
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. Usa le **viti M3x6mm** per montare il **distanziatore M3x10mm** nella posizione indicata di seguito.
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. Fissa il **distanziatore M2.5x11mm** al retro dell'auto con le **viti M2.5x6mm**.
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. Usa le **viti M3x6mm** per montare la ruota universale.
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. Monta le 2 ruote e la struttura di base dell'auto sarà completata.
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#. Fissa il modulo L9110 con le **viti M2.5x6mm**.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. Monta i due moduli IR Obstacle con le **viti M3x10mm** e i **dadi M3**.
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. Gira il lato B e monta il modulo Line Track con quattro **viti M3x6mm** e due **distanziatori M3x24mm**.
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        È consigliabile fissare prima i **distanziatori M3x24mm** al modulo Line Track.
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        Una nota importante: i pin del sensore di linea sono leggermente flessibili e sporgono verso i fori. Quando avviti i **distanziatori M3x24mm**, applica una leggera pressione per spostare leggermente i pin del sensore.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Attacca il velcro sulla batteria da 9V e fissa la clip della batteria. Attacca l'altra sezione del velcro sull'auto per fissare la batteria.
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R3 board with **M3x6mm screws**.
+#. Gira sul lato A e monta la scheda R3 con le **viti M3x6mm**.
 
     .. image:: img/IMG_9196.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. Fissa la breadboard alla parte anteriore dell'auto. Successivamente, potrai aggiungere diversi componenti (ad esempio, il modulo ultrasonico) sulla breadboard come richiesto per il tuo progetto.
 
     .. image:: img/IMG_9197.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. Far funzionare l'auto richiede anche il cablaggio e la scrittura del codice, che verranno trattati nelle sezioni successive.
+

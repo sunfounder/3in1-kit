@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 7: Push Buttons and Reed Switches
-===========================================
+Video 7: Pulsanti e Interruttori Reed
+============================================
 
-This Arduino tutorial explores the fundamentals of digital reading, focusing on detecting push button presses and sensing magnetic fields with reed switches.
+Questo tutorial Arduino esplora i fondamenti della lettura digitale, concentrandosi sulla rilevazione della pressione dei pulsanti e sul rilevamento dei campi magnetici con gli interruttori reed.
 
-* **Digital Reading Basics**: Understanding the concept of digital reading in Arduino, distinguishing between high and low signals.
-* **Push Button Detection**: Detailed instructions on connecting a push button and reading its state using Arduino.
-* **Reed Switch Sensing**: Demonstration of using a reed switch to detect magnetic fields, including wiring and code setup.
-* **Arduino IDE Setup**: Step-by-step guidance on preparing the Arduino IDE for digital reading projects.
-* **Using Internal Pull-Up Resistors**: Techniques for using a push button without an external resistor by leveraging Arduino's built-in pull-up resistors.
-* **Troubleshooting Tips**: Solutions for common issues encountered in digital reading, such as floating pins.
+* **Basi della Lettura Digitale**: Comprensione del concetto di lettura digitale in Arduino, distinguendo tra segnali alti e bassi.
+* **Rilevazione dei Pulsanti**: Istruzioni dettagliate su come collegare un pulsante e leggere il suo stato utilizzando Arduino.
+* **Rilevamento con Interruttore Reed**: Dimostrazione di come utilizzare un interruttore reed per rilevare campi magnetici, inclusa la configurazione del cablaggio e del codice.
+* **Configurazione dell'IDE di Arduino**: Guida passo-passo alla preparazione dell'IDE Arduino per progetti di lettura digitale.
+* **Uso delle Resistenze Pull-Up Interne**: Tecniche per utilizzare un pulsante senza una resistenza esterna sfruttando le resistenze pull-up integrate di Arduino.
+* **Suggerimenti per la Risoluzione dei Problemi**: Soluzioni per i problemi comuni riscontrati nella lettura digitale, come i pin fluttuanti.
 
 **Video**
 
@@ -32,7 +32,7 @@ This Arduino tutorial explores the fundamentals of digital reading, focusing on 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_button`
 * :ref:`ar_reed`

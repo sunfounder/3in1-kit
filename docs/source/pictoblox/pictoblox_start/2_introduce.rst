@@ -1,56 +1,59 @@
-.. _sh_introduce:.. note::
+.. _sh_introduce:
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+.. note::
 
-    **Why Join?**
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Immergiti più a fondo in Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    **Perché unirsi?**
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara & Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato alle nuove comunicazioni sui prodotti e anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
+
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 
 
-1.2 Interface Introduction
-================================
+1.2 Introduzione all'interfaccia
+====================================
 
 .. image:: img/pictoblox_interface.jpg
 
 
-**Sprites**
+**Sprite**
 
-A sprite is an object, or a character, that performs different actions in a project. It understands and obeys the commands given to it. Each sprite has specific costumes and sounds that you can also customize.
+Uno sprite è un oggetto, o un personaggio, che esegue diverse azioni in un progetto. Comprende e obbedisce ai comandi che gli vengono dati. Ogni sprite ha costumi e suoni specifici che puoi anche personalizzare.
 
-**Stage**
+**Palcoscenico**
 
-The stage is the area where the sprite performs actions in backdrops according to your program. 
+Il palcoscenico è l'area in cui lo sprite esegue azioni sugli sfondi in base al tuo programma.
 
-**Backdrops**
+**Sfondi**
 
-Backdrops are used to decorate the stage. You can choose a backdrop from PictoBlox, draw one yourself or upload an image from your computer.
+Gli sfondi vengono utilizzati per decorare il palcoscenico. Puoi scegliere uno sfondo da PictoBlox, disegnarne uno tu stesso o caricare un'immagine dal tuo computer.
 
-**Script Area**
+**Area degli script**
 
-A script is a program or a code in PictoBlox/Scratch lingo.  It is a set of "blocks" arranged in a specific order to perform a task or a series of tasks. You can write multiple scripts, all of which can run simultaneously. You can only write scripts in the script area in the center of the screen.
+Uno script è un programma o un codice nel linguaggio di PictoBlox/Scratch. È un insieme di "blocchi" disposti in un ordine specifico per eseguire un compito o una serie di compiti. Puoi scrivere più script, tutti i quali possono essere eseguiti contemporaneamente. Puoi scrivere script solo nell'area script al centro dello schermo.
 
-**Blocks**
+**Blocchi**
 
-Blocks are like pieces of a puzzle that are used to write programs by simply stacking them together in the script area. Using blocks to write code can make programming easier and reduce the probability of errors.
+I blocchi sono come pezzi di un puzzle che vengono utilizzati per scrivere programmi semplicemente impilandoli insieme nell'area degli script. Utilizzare blocchi per scrivere codice può semplificare la programmazione e ridurre la probabilità di errori.
 
-**Block Palette**
+**Paletta dei blocchi**
 
-The block palettes are located in the left area and are named by their functions, such as motion, sound and control. Each palette has different blocks, for example, the blocks in the Motion palette will control the movement of the sprites, and the blocks in the Control palette will control the work of the script based on specific conditions.
+Le palette dei blocchi si trovano nell'area a sinistra e sono denominate in base alle loro funzioni, come movimento, suono e controllo. Ogni paletta ha diversi blocchi, ad esempio, i blocchi nella paletta Movimento controlleranno il movimento degli sprite, mentre i blocchi nella paletta Controllo gestiranno il funzionamento dello script in base a condizioni specifiche.
 
-There are other kinds of block palettes that can be loaded from the **Add Extension** button located at the bottom left.
+Esistono altri tipi di palette di blocchi che possono essere caricate dal pulsante **Aggiungi Estensione** situato in basso a sinistra.
 
-**Modes**
 
-Unlike Scratch, PictoBlox has two modes:
+**Modalità**
 
-* :ref:`stage_mode`: In this mode, you can write scripts for the sprite and boards to interact with sprites in real-time. If you disconnect the board with Pictoblox, you cannot interact anymore.
-* :ref:`upload_mode`: This mode allows you to write scripts and upload it to the board so that you can use even when it is not connected to your computer, for example, you need to upload a script for making moving robots.
+A differenza di Scratch, PictoBlox ha due modalità:
 
-For more information, please refer to: https://thestempedia.com/tutorials/getting-started-pictoblox
+* :ref:`stage_mode`: In questa modalità, puoi scrivere script per lo sprite e le schede per interagire con gli sprite in tempo reale. Se scolleghi la scheda da Pictoblox, non potrai più interagire.
+* :ref:`upload_mode`: Questa modalità ti consente di scrivere script e caricarli sulla scheda, così potrai usarla anche quando non è collegata al computer, ad esempio, è necessario caricare uno script per far muovere i robot.
+
+Per maggiori informazioni, consulta: https://thestempedia.com/tutorials/getting-started-pictoblox

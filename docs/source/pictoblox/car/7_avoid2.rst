@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Immergiti più a fondo in Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato alle nuove comunicazioni sui prodotti e alle anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_avoid2:
 
-3.7 Obstacle avoidance 2
+3.7 Evitamento ostacoli 2
 ==================================
 
-In :ref:`sh_avoid1` project, only 2 IR obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+Nel progetto :ref:`sh_avoid1`, sono stati utilizzati solo 2 moduli IR di evitamento ostacoli per l'evitamento, ma la distanza di rilevamento dei moduli IR è breve, il che potrebbe far sì che l'auto non riesca a evitare gli ostacoli in tempo.
 
-In this project, we also add ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+In questo progetto, aggiungiamo anche un modulo a ultrasuoni per eseguire un rilevamento a lunga distanza, in modo che l'auto possa percepire ostacoli a una distanza maggiore e prendere decisioni tempestive.
 
-Required Components
----------------------
+Componenti necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Starter Kit 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,17 +59,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
------------------------
+Costruire il circuito
+--------------------------
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Collega il modulo a ultrasuoni e i 2 moduli IR di evitamento ostacoli contemporaneamente.
 
-Wire the ultrasonic to the R3 board as follows.
+Collega il modulo a ultrasuoni alla scheda R3 come segue.
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Modulo Ultrasuoni
+      - Scheda R3
     * - Vcc
       - 5V
     * - Trig
@@ -79,12 +79,12 @@ Wire the ultrasonic to the R3 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
+Il cablaggio dei 2 moduli IR di evitamento ostacoli alla scheda R3 è il seguente.
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - Modulo IR sinistro
+      - Scheda R3
     * - OUT
       - 8
     * - GND
@@ -94,8 +94,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - Modulo IR destro
+      - Scheda R3
     * - OUT
       - 7
     * - GND
@@ -106,35 +106,35 @@ The wiring of the 2 IR obstacle avoidance modules to the R3 board is as follows.
 .. image:: img/car_7_8.png
     :width: 800
 
-Programming
----------------
+Programmazione
+------------------
 
-**1. Create function**
+**1. Crea una funzione**
 
-Make the car go forward and backward.
+Fai avanzare e indietreggiare l'auto.
 
 .. image:: img/7_avoid2_1.png
 
-Make the car to go backward to the left and backward to the right.
+Fai indietreggiare l'auto a sinistra e a destra.
 
 .. image:: img/7_avoid2_2.png
 
-Make the car stop.
+Ferma l'auto.
 
 .. image:: img/7_avoid2_3.png
 
-**2. Emergency obstacle avoidance**
+**2. Evitamento ostacoli di emergenza**
 
-The 2 infrared obstacle avoidance modules on the car are used for emergency obstacle avoidance, detecting obstacles at short distances, corners or relatively small obstacles.
+I 2 moduli IR di evitamento ostacoli sull'auto vengono utilizzati per l'evitamento di emergenza, rilevando ostacoli a breve distanza, angoli o ostacoli relativamente piccoli.
 
-* If the left infrared module detects an obstacle, the car backs up to the left.
-* If the right IR module detects an obstacle, the car recedes to the right rear.
-* If 2 modules detect the obstacle at the same time, the car goes backward directly.
+* Se il modulo IR sinistro rileva un ostacolo, l'auto indietreggia a sinistra.
+* Se il modulo IR destro rileva un ostacolo, l'auto indietreggia a destra.
+* Se entrambi i moduli rilevano l'ostacolo contemporaneamente, l'auto arretra direttamente.
 
 .. image:: img/7_avoid2_4.png
 
-**3. Long range obstacle avoidance**
+**3. Evitamento ostacoli a lungo raggio**
 
-Read the value of ultrasonic module, when the detected value is less than 10, the car will go backward; otherwise it keeps going forward.
+Leggi il valore del modulo a ultrasuoni, quando il valore rilevato è inferiore a 10, l'auto arretra; altrimenti continua ad avanzare.
 
 .. image:: img/7_avoid2_5.png

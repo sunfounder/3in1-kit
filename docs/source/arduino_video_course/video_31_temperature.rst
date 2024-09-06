@@ -1,29 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 31: Wi-Fi Temperature Monitoring
-=========================================
+Video 31: Monitoraggio della Temperatura Wi-Fi
+==================================================
 
-A comprehensive guide on setting up ESP8266 ESP-01 with a DHT11 sensor to monitor temperature over Wi-Fi and display it on various devices.
+Una guida completa per configurare l'ESP8266 ESP-01 con un sensore DHT11 per monitorare la temperatura tramite Wi-Fi e visualizzarla su vari dispositivi.
 
-* **ESP8266 and DHT11 Introduction**: Exploring the components used for Wi-Fi-based temperature monitoring.
-* **Web Server Fundamentals**: Understanding how web servers work in the context of remote data access.
-* **Arduino IDE Setup for ESP8266**: Configuring the Arduino IDE to program the ESP8266 module.
-* **Sensor Wiring Guide**: Detailed instructions on connecting the DHT11 sensor to the ESP8266.
-* **Temperature Data on Serial Monitor**: Programming ESP8266 to display temperature readings on a serial monitor.
-* **Remote Temperature Data Display**: Demonstrating how to view temperature data on mobile and desktop devices via Wi-Fi.
-
+* **Introduzione a ESP8266 e DHT11**: Esplorazione dei componenti utilizzati per il monitoraggio della temperatura via Wi-Fi.
+* **Fondamenti del Web Server**: Comprendere come funzionano i web server nel contesto dell'accesso remoto ai dati.
+* **Configurazione di Arduino IDE per ESP8266**: Configurare Arduino IDE per programmare il modulo ESP8266.
+* **Guida al Cablaggio del Sensore**: Istruzioni dettagliate su come collegare il sensore DHT11 all'ESP8266.
+* **Visualizzazione dei Dati di Temperatura su Serial Monitor**: Programmare ESP8266 per visualizzare le letture della temperatura su un monitor seriale.
+* **Visualizzazione Remota dei Dati di Temperatura**: Dimostrazione di come visualizzare i dati di temperatura su dispositivi mobili e desktop tramite Wi-Fi.
 
 **Video**
 
@@ -33,7 +32,6 @@ A comprehensive guide on setting up ESP8266 ESP-01 with a DHT11 sensor to monito
 
     <br/><br/>
 
-
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`iot_home`

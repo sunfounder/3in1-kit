@@ -1,29 +1,29 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e concorsi**: Partecipa a concorsi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _car_move:
 
-1. Move
-===============
+1. Movimento
+=================
 
 .. image:: ../components/img/l9110_module.jpg
     :width: 500
     :align: center
 
-Before we start programming, let's review the working principle of L9110 module.
+Prima di iniziare a programmare, rivediamo il principio di funzionamento del modulo L9110.
 
-Here is the truth table of Motor B:
+Ecco la tabella della verità per il Motore B:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -31,21 +31,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B(B-2A)
-      - The state of Motor B
+      - Stato del Motore B
     * - 1
       - 0
-      - Rotate clockwise
+      - Rotazione in senso orario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Rotazione in senso antiorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
       - Stop
 
-Here is the truth table of Motor A:
+Ecco la tabella della verità per il Motore A:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -53,16 +53,16 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - Stato del Motore A
     * - 1
       - 0
-      - Rotate clockwise
+      - Rotazione in senso orario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Rotazione in senso antiorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
       - Stop
@@ -70,37 +70,37 @@ Here is the truth table of Motor A:
 
 * :ref:`cpn_l9110`
 
-**Forward**
+**Avanti**
 
-Now let's connect the input of L9110 module directly to 12V and GND respectively to make the car move.
+Ora colleghiamo l'ingresso del modulo L9110 rispettivamente a 12V e GND per far muovere l'auto.
 
 .. raw:: html
     
   <iframe width="600" height="400" src="https://www.youtube.com/embed/ulD40OtsL7c?si=hJ9nyf8ePAWNp0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-1. Connect R3 board, L9110 module and 2 motors.
+1. Collega la scheda R3, il modulo L9110 e 2 motori.
 
 
 .. image:: img/car_1.png
     :width: 800
 
-2. Connect B-1B(B-2A) and A-1A to VCC, and B-1A and A-1B to GND, then you will be able to see the car moving forward.
+2. Collega B-1B(B-2A) e A-1A a VCC, e B-1A e A-1B a GND, quindi vedrai l'auto muoversi in avanti.
 
 
 .. image:: img/1.move_4.png 
     :align: center
 
-If not both turn forward, but the following situations occur, 
-you need to readjust the wiring of the two motors.
+Se i motori non si muovono entrambi in avanti ma si verificano le seguenti situazioni, 
+è necessario regolare nuovamente il cablaggio dei due motori.
 
-* If both motors turn backward at the same time (left motor turns clockwise, right motor turns counterclockwise), swap the wiring of the left and right motors at the same time, OA(A) and OB(A) swap, OA(B) and OB(B) swap.
-* If the left motor turns backward (clockwise rotation), exchange the wiring of OA(B) and OB(B) of the left motor.
-* If the right motor turns backward (counterclockwise rotation), swap the wiring of OA(A) and OB(A) of the right motor.
+* Se entrambi i motori girano all'indietro contemporaneamente (il motore sinistro gira in senso orario, il motore destro in senso antiorario), scambia il cablaggio dei motori sinistro e destro contemporaneamente, OA(A) e OB(A) si scambiano, OA(B) e OB(B) si scambiano.
+* Se il motore sinistro gira all'indietro (rotazione oraria), scambia il cablaggio di OA(B) e OB(B) del motore sinistro.
+* Se il motore destro gira all'indietro (rotazione antioraria), scambia il cablaggio di OA(A) e OB(A) del motore destro.
 
 
-**Backward**
+**Indietro**
 
-Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be able to see the car moving backward.
+Collega B-1B(B-2A) e A-1A a GND, e B-1A e A-1B a VCC, quindi vedrai l'auto muoversi all'indietro.
 
 
 .. image:: img/1.move_back.png 
@@ -108,20 +108,20 @@ Connect B-1B(B-2A)  and A-1A to GND, and B-1A  and A-1B to VCC, then you will be
 
 
 
-**Turn Left**
+**Gira a sinistra**
 
-If you want to make the car turn left, that is, make both motors turn clockwise. 
-You need to connect B-1A  and A-1A to GND, and B-1B(B-2A)  and A-1B to VCC.
+Se vuoi far girare l'auto a sinistra, cioè far girare entrambi i motori in senso orario, 
+devi collegare B-1A e A-1A a GND, e B-1B(B-2A) e A-1B a VCC.
 
 
 .. image:: img/1.move_left.png 
     :width: 800
 
 
-**Turn Right**
+**Gira a destra**
 
-Conversely, if you want to turn the car to the right, that is, make both motors turn counterclockwise. 
-You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
+Al contrario, se vuoi girare l'auto a destra, cioè far girare entrambi i motori in senso antiorario, 
+devi collegare B-1A e A-1A a VCC e B-1B(B-2A) e A-1B a GND.
 
 
 .. image:: img/1.move_right.png 
@@ -131,6 +131,8 @@ You need to connect B-1A  and A-1A to VCC and B-1B(B-2A)  and A-1B to GND.
 
 **Stop**
 
-To stop the motor, connect the inputs on the same side to 12V or GND at the same time, e.g. connect B-1A  and B-1B(B-2A)  to 12V or 5V at the same time, and the same for A-1A and A-1B.
+Per fermare il motore, collega gli ingressi dello stesso lato contemporaneamente a 12V o GND, ad esempio collega B-1A e B-1B(B-2A) contemporaneamente a 12V o 5V, e lo stesso per A-1A e A-1B.
 
-This is of course theoretical and needed later on when controlling with code. Here remove the power supply to the car can stop it.
+
+
+Questo ovviamente è teorico e sarà necessario più avanti per il controllo tramite codice. Qui rimuovi l'alimentazione dell'auto per fermarla.

@@ -1,75 +1,74 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e affronta sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _ar_interval:
 
-5.4 Interval
+5.4 Intervallo
 ================
 
-Sometimes you need to do two things at once. For example you might want
-to blink an LED while reading a button press. In this case, you can't
-use ``delay()``, because Arduino pauses your program during the ``delay()``. If
-the button is pressed while Arduino is paused waiting for the ``delay()`` to
-pass, your program will miss the button press.
+A volte è necessario fare due cose contemporaneamente. Ad esempio, potresti 
+voler far lampeggiare un LED mentre leggi la pressione di un pulsante. In 
+questo caso, non puoi usare ``delay()``, perché Arduino mette in pausa il 
+tuo programma durante ``delay()``. Se il pulsante viene premuto mentre Arduino 
+è in pausa, il programma perderà la pressione del pulsante.
 
-An analogy would be warming up a pizza in your microwave, and also
-waiting some important email. You put the pizza in the microwave and set
-it for 10 minutes. The analogy to using ``delay()`` would be to sit in front
-of the microwave watching the timer count down from 10 minutes until the
-timer reaches zero. If the important email arrives during this time you
-will miss it.
+Un'analogia sarebbe riscaldare una pizza nel forno a microonde e attendere 
+anche una e-mail importante. Metti la pizza nel microonde e imposti il timer 
+per 10 minuti. L'analogia con l'uso di ``delay()`` sarebbe quella di sedersi 
+di fronte al microonde a guardare il timer che conta alla rovescia da 10 minuti 
+fino a quando non raggiunge lo zero. Se l'e-mail importante arriva durante questo 
+tempo, la perderai.
 
-What you would do in real life would be to turn on the pizza, and then
-check your email, and then maybe do something else (that doesn't take
-too long!) and every so often you will come back to the microwave to see
-if the timer has reached zero, indicating that your pizza is done.
+Quello che faresti nella vita reale sarebbe accendere il microonde, poi controllare 
+la tua e-mail e magari fare qualcos'altro (che non richieda troppo tempo!) e 
+di tanto in tanto tornare al microonde per vedere se il timer ha raggiunto lo 
+zero, indicando che la tua pizza è pronta.
 
-This sketch demonstrates how to tone an buzzer without using ``delay()``. 
-It turns the buzzer on and then makes note of the time. Then, each time
-through ``loop()``, it checks to see if the desired interval time has passed.
-If it has, it tone the buzzer and makes note of the new time.
-In this way the buzzer tones continuously while the sketch execution never
-lags on a single instruction.
+Questo sketch dimostra come far suonare un buzzer senza usare ``delay()``. 
+Accende il buzzer e segna l'orario. Poi, ad ogni passaggio nel ``loop()``, 
+controlla se è trascorso il tempo desiderato. Se lo è, suona il buzzer e 
+aggiorna l'orario. In questo modo, il buzzer suona continuamente mentre 
+l'esecuzione dello sketch non si blocca mai su una singola istruzione.
 
-Based on this condition, we can add the code of the button to control the LED, 
-it will not be disturbed by the buzzer playing music.
+In base a questa condizione, possiamo aggiungere il codice del pulsante per 
+controllare il LED, che non sarà disturbato dalla riproduzione della musica del buzzer.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -87,60 +86,59 @@ You can also buy them separately from the links below.
         - |link_passive_buzzer_buy|
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/circuit_8.5_interval.png
 
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/interval_bb.jpg
     :width: 600
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.4.interval.ino`` file under the path of ``3in1-kit\basic_project\5.4.interval``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``5.4.interval.ino`` nel percorso ``3in1-kit\basic_project\5.4.interval``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oppure carica il codice tramite l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0d430b04-ef2d-4e32-8d76-671a3a917cb1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the buzzer will play music; whenever you press the button, the LED will light up. The work of LED and buzzer does not interfere with each other.
+Dopo aver caricato correttamente il codice, il buzzer suonerà; ogni volta che premi il pulsante, il LED si accenderà. Il funzionamento del LED e del buzzer non interferiscono tra loro.
 
-**How it works?**
+**Come funziona?**
 
-
-Initial a variable named ``previousMillis`` to store previous operating time of microcontroller.
+Inizializza una variabile chiamata ``previousMillis`` per memorizzare l'ora precedente del microcontrollore.
 
 .. code-block:: arduino
 
     unsigned long previousMillis = 0;     
 
-Mark which note is played.
+Segna quale nota viene suonata.
 
 .. code-block:: arduino
 
     int thisNote=0; 
 
-The interval time of each note.
+L'intervallo di tempo di ciascuna nota.
 
 .. code-block:: arduino
 
     long interval = 1000; 
 
-In ``loop()``, declare ``currentMillis`` to store the current time.
+Nel ``loop()``, dichiara ``currentMillis`` per memorizzare l'ora attuale.
 
 .. code-block:: arduino
 
     unsigned long currentMillis = millis();
 
-When the interval between the current operating time and last updating time is larger than 1000ms, certain functions are triggered. Meanwhile, update the previousMillis to the current time for the next triggering that is to happen 1 second latter.  
+Quando l'intervallo tra l'ora attuale e l'ultima ora aggiornata è maggiore di 1000ms, vengono attivate determinate funzioni. Nel frattempo, aggiorna ``previousMillis`` all'ora attuale per il prossimo attivarsi, che avverrà 1 secondo dopo.  
 
 .. code-block:: arduino
 
@@ -149,7 +147,7 @@ When the interval between the current operating time and last updating time is l
         //...
     }
 
-Play the notes in the melody one by one.
+Suona le note nella melodia una per una.
 
 .. code-block:: arduino
 
@@ -157,7 +155,7 @@ Play the notes in the melody one by one.
     interval=1000/noteDurations[thisNote]; // interval at which to tone
     thisNote=(thisNote+1)%(sizeof(melody)/2); //iterate over the notes of the melody
 
-The button control the LED.
+Il pulsante controlla il LED.
 
 .. code-block:: arduino
 

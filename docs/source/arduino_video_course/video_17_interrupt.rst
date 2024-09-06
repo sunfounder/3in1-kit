@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 17: Interrupts and LDR 
+Video 17: Interrupt e LDR
 ==============================
 
-Explore the functionalities of Arduino interrupts and Light-Dependent Resistors (LDRs) to build smart day/night detection projects.
+Esplora le funzionalità degli interrupt su Arduino e dei resistori dipendenti dalla luce (LDR) per costruire progetti intelligenti di rilevamento giorno/notte.
 
-* **Arduino Interrupts Explained**: Delve into the mechanics of Arduino interrupts for more efficient coding.
-* **Effective Use of Interrupt Pins**: Learn which Arduino pins support interrupts and how to use them.
-* **Practical Interrupt Setup**: Demonstrates setting up a push button and buzzer to work with Arduino interrupts.
-* **Introduction to LDRs**: Discover how LDRs change resistance based on light and their applications.
-* **LDR Measurement Techniques**: Learn how to measure LDR resistance in various lighting conditions using a multimeter.
-* **Day/Night Detection Projects**: Implement LDR-based projects for automatic switching of devices like buzzers or lights based on light intensity.
+* **Interrupt su Arduino Spiegati**: Approfondisci la meccanica degli interrupt su Arduino per un codice più efficiente.
+* **Uso Efficace dei Pin Interrupt**: Impara quali pin di Arduino supportano gli interrupt e come utilizzarli.
+* **Impostazione Pratica degli Interrupt**: Dimostrazione della configurazione di un pulsante e un cicalino per funzionare con gli interrupt di Arduino.
+* **Introduzione agli LDR**: Scopri come gli LDR cambiano la resistenza in base alla luce e le loro applicazioni.
+* **Tecniche di Misurazione degli LDR**: Impara come misurare la resistenza degli LDR in varie condizioni di illuminazione usando un multimetro.
+* **Progetti di Rilevamento Giorno/Notte**: Implementa progetti basati su LDR per l'attivazione automatica di dispositivi come cicalini o luci in base all'intensità della luce.
 
 **Video**
 
@@ -32,6 +32,7 @@ Explore the functionalities of Arduino interrupts and Light-Dependent Resistors 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_interrupt`
+

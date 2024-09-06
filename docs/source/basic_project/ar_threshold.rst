@@ -1,62 +1,61 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi tecnici e post-vendita con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_threshold:
 
-5.2 Threshold
+5.2 Soglia
 =======================
 
-In many projects, you will encounter such a need.
-"When xxx reaches a certain level, then..."
+In molti progetti ti capiterà di avere questa necessità:
+"Quando xxx raggiunge un certo livello, allora..."
 
-For example, in a smart home, when the light intensity is lower than 50Lux, turn on the light;
-Another example is in the computer motherboard, if the operating temperature of the CPU is higher than 65 degrees Celsius, turn on the fan, and so on.
+Ad esempio, in una casa intelligente, quando l'intensità luminosa scende sotto i 50Lux, accendere la luce;
+Un altro esempio è sulla scheda madre di un computer: se la temperatura operativa della CPU supera i 65 gradi Celsius, accendere la ventola, e così via.
 
-In these requirements, the keyword "threshold" is reflected.
+In questi casi, la parola chiave è "soglia".
 
-We can adjust the value of the threshold to make the circuit operate more in line with individual needs.
-For example, if I like a brighter living environment, I can increase the threshold of the automatic lights of the smart home to 80Lux.
-Another example is that the ventilation environment of my studio is not very good, and the heat dissipation demand is higher, then the threshold value of automatic fan opening can be adjusted to 50 degrees Celsius.
+Possiamo regolare il valore della soglia per far funzionare il circuito in modo più adeguato alle esigenze personali.
+Ad esempio, se preferisco un ambiente più luminoso, posso aumentare la soglia delle luci automatiche della casa intelligente a 80Lux.
+Un altro esempio è che la ventilazione del mio studio non è delle migliori e ho una maggiore necessità di dissipazione del calore, quindi posso regolare la soglia di accensione automatica della ventola a 50 gradi Celsius.
 
+In questo progetto utilizziamo un sensore di umidità del suolo e 2 LED per creare un monitor per piante. Se il terreno è troppo secco, si accenderà il LED rosso; se il terreno è abbastanza umido, si accenderà il LED verde. È necessario regolare manualmente le soglie per determinare la secchezza e l'umidità del terreno.
 
-Here we use soil moisture sensor and 2 LEDs to make a pot monitor. If the soil is too dry, the red LED will light up; if the soil is moist enough, the green LED will light up. You need to manually adjust the thresholds for determining the dryness and wetness of the soil.
+**Componenti necessari**
 
-**Required Components**
+In questo progetto ci servono i seguenti componenti.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -71,31 +70,31 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_8.2_threshold.png
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/threshold_bb.png
     :width: 600
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.2.threshold.ino`` file under the path of ``3in1-kit\basic_project\5.2.threshold``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``5.2.threshold.ino`` nel percorso ``3in1-kit\basic_project\5.2.threshold``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9936413a-6e6c-4e57-b0c6-5df58dd48a3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, if your threshold is set correctly, you will see the red LED light up when the soil is dry to remind you that you need to water; after watering, the green LED will light up.
+Dopo che il codice è stato caricato correttamente, se la soglia è impostata correttamente, vedrai il LED rosso accendersi quando il terreno è secco per ricordarti di annaffiare; dopo l'annaffiatura si accenderà il LED verde.
 
-**How it works**
+**Come funziona**
 
 .. code-block:: Arduino
 
@@ -114,8 +113,6 @@ After the code is uploaded successfully, if your threshold is set correctly, you
     }
     ...
 
-First set a ``threshold`` value and then read the value of the soil moisture module, its value decreases as the moisture level increases. If the value currently read is greater than the set ``threshold``, then let the red LED light up, otherwise it will turn on the green LED.
+Imposta prima un valore di ``threshold`` e poi leggi il valore del modulo di umidità del suolo; il suo valore diminuisce all'aumentare dell'umidità. Se il valore attualmente letto è maggiore della ``threshold`` impostata, si accenderà il LED rosso, altrimenti si accenderà il LED verde.
 
-This ``threshold`` value needs to be adjusted according to the actual situation, you can upload the code first, then open the serial monitor to check the value, record the value in both wet and dry conditions, and then choose a middle value as the ``threshold`` value.
-
-
+Questo valore di ``threshold`` deve essere regolato in base alla situazione reale: puoi caricare prima il codice, aprire il monitor seriale per controllare il valore, registrare il valore in condizioni di umidità e di secchezza e poi scegliere un valore intermedio come soglia.

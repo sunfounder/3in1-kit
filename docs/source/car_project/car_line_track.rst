@@ -1,56 +1,54 @@
-
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _follow_the_line:
 
-4. Follow the line
+4. Segui la linea
 ======================
 
-The car is equipped with a Line Track module, which can be used to make the car follow the black line.
+L'auto è dotata di un modulo Line Track, che può essere utilizzato per far seguire all'auto la linea nera.
 
-When the line following module detects the black line, the right motor rotates while the left motor does not, so that the car moves one step to the left front.
-As the car moves, the line module will be moved out of the line, then the left motor turns and the right motor does not turn, the car will move one step to the right to return to the line.
-Repeat the above two steps, the car can move along the black line.
+Quando il modulo di rilevamento della linea rileva la linea nera, il motore destro ruota mentre il motore sinistro no, facendo così avanzare l'auto di un passo verso sinistra. Man mano che l'auto si muove, il modulo della linea si sposta fuori dalla linea, quindi il motore sinistro si accende e quello destro si spegne, facendo avanzare l'auto di un passo verso destra per tornare sulla linea.
+Ripetendo questi due passaggi, l'auto può seguire la linea nera.
 
-Before starting the project, you need to build a curve map with black line tape, the recommended line width is between 0.8-1.5cm and the angle of the turn should not be less than 90 degrees.
+Prima di iniziare il progetto, è necessario creare una mappa curvilinea con del nastro nero. La larghezza della linea consigliata è compresa tra 0,8 e 1,5 cm, e l'angolo della curva non deve essere inferiore a 90 gradi.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI NEL KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK D'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -61,22 +59,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_track`
         - |link_track_buy|
 
-**Wiring**
+**Cablaggio**
 
-
-This is a digital Line Tracking module, when a black line is detected, it outputs 1; when a white line is detected, it outputs a value of 0. In addition, you can adjust its sensing distance through the potentiometer on the module.
+Questo è un modulo di tracciamento della linea digitale, quando rileva una linea nera, emette 1; quando rileva una linea bianca, emette un valore di 0. Inoltre, è possibile regolare la distanza di rilevamento tramite il potenziometro sul modulo.
 
 .. raw:: html
 
     <iframe width="600" height="400" src="https://www.youtube.com/embed/mlCQgAq4elo?si=ZFmHeA6bVsDCPG0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Build the circuit according to the following diagram.
+Costruisci il circuito secondo il diagramma seguente.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Line Tracking Module
-      - R3 Board
+    * - Modulo di tracciamento della linea
+      - Scheda R3
     * - S
       - 2
     * - V+
@@ -87,44 +84,41 @@ Build the circuit according to the following diagram.
 .. image:: img/car_4.png
     :width: 800
 
+**Regolazione del modulo**
 
-**Adjust the Module**
+Prima di iniziare il progetto, è necessario regolare la sensibilità del modulo.
 
+Collega i fili secondo il diagramma precedente, quindi alimenta la scheda R3 (collegandola direttamente con il cavo USB o il cavo della batteria da 9V), senza caricare il codice.
 
-Before starting the project, you need to adjust the sensitivity of the module.
+Applica un nastro adesivo nero sul tavolo e posiziona il carrello sopra di esso.
 
-Wiring according to the above diagram, then power up the R3 board (either directly into the USB cable or the 9V battery button cable), without uploading the code.
+Osserva il LED del segnale sul modulo per assicurarti che si accenda sul tavolo bianco e si spenga sul nastro nero.
 
-Stick a black electrical tape on the table and put the cart on it.
-
-Observe the signal LED on the module to make sure it lights up on the white table and goes off on the black tape.
-
-If not, you need to adjust the potentiometer on the module, so that it can do the above effect.
+Se ciò non accade, dovrai regolare il potenziometro sul modulo affinché funzioni correttamente.
 
 .. image:: img/line_track_cali.JPG
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``4.follow_the_line.ino`` file under the path of ``3in1-kit\car_project\4.follow_the_line``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``4.follow_the_line.ino`` nel percorso ``3in1-kit\car_project\4.follow_the_line``.
+    * Oppure copia questo codice nell'IDE Arduino.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oppure carica il codice tramite l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2779e9eb-b7b0-4d47-b8c0-78fed39828c3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After uploading the code to the R3 board, then align the Line Tracking module under the car with the black line, and you will see the car following the line.
+Dopo aver caricato il codice sulla scheda R3, allinea il modulo di tracciamento della linea sotto l'auto con la linea nera e vedrai l'auto seguire la linea.
 
 
-**How it works?**
+**Come funziona?**
 
-In this code, it is letting the two motors micro-rotate left and right according to the value of the Line Track module so that you can see the car following the black line.
+In questo codice, si fa ruotare i due motori a sinistra e a destra in base al valore del modulo di tracciamento della linea, in modo che l'auto possa seguire la linea nera.
 
-
-#. Add the pin definition for the Line Tracking module, here it is set to ``INPUT``. Here also initialize the serial monitor and set the baud rate to 9600bps.
+#. Aggiungi la definizione del pin per il modulo di tracciamento della linea, qui è impostato su ``INPUT``. Qui viene anche inizializzato il monitor seriale e impostata la velocità di trasmissione a 9600bps.
 
     .. code-block:: arduino
 
@@ -136,7 +130,7 @@ In this code, it is letting the two motors micro-rotate left and right according
             pinMode(lineTrack, INPUT);
         }
 
-#. Read the value of the Line Tracking module, if it is 1, then let the car go forward to the left; otherwise go forward to the right. Also you can open the serial monitor by clicking the magnifying glass icon in the upper right corner to see the change of the Line Tracking module value on the black and white line before unplugging the USB cable.
+#. Leggi il valore del modulo di tracciamento della linea, se è 1, l'auto si sposta in avanti a sinistra; altrimenti, si sposta in avanti a destra. Puoi anche aprire il monitor seriale cliccando sull'icona della lente d'ingrandimento nell'angolo in alto a destra per vedere il cambiamento del valore del modulo di tracciamento della linea sulla linea bianca e nera prima di scollegare il cavo USB.
 
     .. code-block:: arduino
     
@@ -153,9 +147,9 @@ In this code, it is letting the two motors micro-rotate left and right according
             }
         }
 
-#. About the ``moveLeft()`` and ``moveRight()`` functions.
+#. Sulle funzioni ``moveLeft()`` e ``moveRight()``.
 
-    Unlike the left-right turn function in project :ref:`car_move_code`, only small left-right turns are needed here, so you only need to adjust the value of ``A_1A`` or ``B_1B`` each time. For example, if you move to the left front (``moveLeft()``), you only need to set the speed to ``A_1A`` and all others to 0, it will make the right motor turn clockwise and the left motor not move.
+    A differenza della funzione di svolta a sinistra e a destra nel progetto :ref:`car_move_code`, qui sono necessarie solo piccole svolte a sinistra e a destra, quindi è sufficiente regolare il valore di ``A_1A`` o ``B_1B`` ogni volta. Ad esempio, se ti sposti a sinistra in avanti (``moveLeft()``), devi solo impostare la velocità su ``A_1A`` e impostare gli altri valori a 0; in questo modo, il motore destro ruoterà in senso orario e il motore sinistro non si muoverà.
 
     .. code-block:: arduino
     
@@ -176,11 +170,11 @@ In this code, it is letting the two motors micro-rotate left and right according
 
 * `Serial <https://www.arduino.cc/reference/en/language/functions/communication/serial/>`_
 
-    Used for communication between the Arduino board and a computer or other devices
+    Utilizzato per la comunicazione tra la scheda Arduino e un computer o altri dispositivi.
 
-    * ``Serial.begin()``: Sets the data rate in bits per second (baud) for serial data transmission.
-    * ``Serial.println()``: Prints data to the serial port as human-readable ASCII text followed by a car return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). 
+    * ``Serial.begin()``: Imposta la velocità di trasmissione dati in bit al secondo (baud) per la trasmissione dei dati seriali.
+    * ``Serial.println()``: Stampa i dati sulla porta seriale come testo ASCII leggibile dall'uomo, seguito da un carattere di ritorno a capo (ASCII 13, o '\r') e un carattere di nuova riga (ASCII 10, o '\n').
 
 * `if else <https://www.arduino.cc/reference/en/language/structure/control-structure/else/>`_
 
-    The ``if else`` allows greater control over the flow of code than the basic if statement, by allowing multiple tests to be grouped.
+    ``if else`` consente un maggiore controllo sul flusso delle operazioni.

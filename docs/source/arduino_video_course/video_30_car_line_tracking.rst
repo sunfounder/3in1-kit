@@ -1,29 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa ai giveaway e alle promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
-Video 30: Smart Car Line Tracking
-==================================
+Video 30: Tracciamento della Linea per la Smart Car
+=====================================================
 
-This tutorial explores how to program an Arduino smart car for line tracking using infrared sensors.
+Questo tutorial esplora come programmare una smart car Arduino per il tracciamento della linea utilizzando sensori a infrarossi.
 
-* **Introduction to Line Tracking**: Understanding the basics of line tracking in Arduino smart cars.
-* **Line Tracking Sensor Details**: Insights into the infrared transmitter and receiver module used for line tracking.
-* **Sensor Adjustment for Accuracy**: Tips on adjusting the sensor for precise line detection.
-* **Arduino Code Walkthrough**: Detailed explanation of the code that governs the car's line tracking ability.
-* **Demonstrating Sensor Values**: How the Arduino differentiates between black and white surfaces using the sensor.
-* **Real-World Line Tracking Demo**: Showing the practical application of line tracking in an Arduino car.
-
+* **Introduzione al Tracciamento della Linea**: Comprendere le basi del tracciamento della linea nelle smart car Arduino.
+* **Dettagli del Sensore di Tracciamento della Linea**: Approfondimento sul modulo trasmettitore e ricevitore a infrarossi utilizzato per il tracciamento della linea.
+* **Regolazione del Sensore per Maggiore Precisione**: Consigli su come regolare il sensore per una rilevazione precisa della linea.
+* **Spiegazione del Codice Arduino**: Descrizione dettagliata del codice che regola la capacità di tracciamento della linea della smart car.
+* **Dimostrazione dei Valori del Sensore**: Come Arduino distingue tra superfici nere e bianche utilizzando il sensore.
+* **Dimostrazione Pratica del Tracciamento della Linea**: Esempio applicativo del tracciamento della linea in una smart car Arduino.
 
 **Video**
 
@@ -33,6 +32,6 @@ This tutorial explores how to program an Arduino smart car for line tracking usi
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`follow_the_line`

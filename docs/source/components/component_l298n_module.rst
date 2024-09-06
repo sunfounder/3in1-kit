@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_l298n:
 
-L298N Module
+Modulo L298N
 ==================================
 
-This L298N Motor Driver Module is a high power motor driver module for driving DC and Stepper Motors. This module consists of an L298 motor driver IC and a 78M05 5V regulator. L298N Module can control up to 4 DC motors, or 2 DC motors with directional and speed control.
+Il modulo driver motore L298N è un driver di potenza elevata per controllare motori DC e motori passo-passo. Questo modulo include un IC driver L298 e un regolatore 78M05 a 5V. Il modulo L298N può controllare fino a 4 motori DC, o 2 motori DC con controllo di direzione e velocità.
 
 .. image:: img/l298n_pin.jpg
     :width: 400
     :align: center
 
-* **IN1 & IN2**: Motor A input pins. Used to control the spinning direction of Motor A
-* **IN3 & IN4**: Motor B input pins. Used to control the spinning direction of Motor B
-* **ENA**: Enables PWM signal for Motor A. Here it has been connected to 5V with a jumper cap.
-* **ENB**: Enables PWM signal for Motor B. Here it has been connected to 5V with a jumper cap.
-* **OUT1 & OUT2**: Output pins of Motor A
-* **OUT3 & OUT4**: Output pins of Motor B
-* **12V**: 12V input from DC power Source
-* **5V**: Supplies power for the switching logic circuitry inside L298N IC
-* **GND**: Ground pin
+* **IN1 & IN2**: Pin di ingresso del motore A. Utilizzati per controllare la direzione di rotazione del motore A.
+* **IN3 & IN4**: Pin di ingresso del motore B. Utilizzati per controllare la direzione di rotazione del motore B.
+* **ENA**: Abilita il segnale PWM per il motore A. Qui è collegato a 5V con un jumper.
+* **ENB**: Abilita il segnale PWM per il motore B. Qui è collegato a 5V con un jumper.
+* **OUT1 & OUT2**: Pin di uscita del motore A.
+* **OUT3 & OUT4**: Pin di uscita del motore B.
+* **12V**: Ingresso 12V da una fonte di alimentazione DC.
+* **5V**: Fornisce alimentazione per il circuito logico interno dell'IC L298N.
+* **GND**: Pin di massa.
 
-**Features**
+**Caratteristiche**
 
-* Driver Model: L298N 2A
-* Driver Chip: Double H Bridge L298N
-* Motor Supply Voltage (Maximum): 46V
-* Motor Supply Current (Maximum): 2A
-* Logic Voltage: 5V
-* Driver Voltage: 5-35V
-* Driver Current:2A
-* Logical Current:0-36mA
-* Maximum Power (W): 25W
-* Current Sense for each motor
-* Heatsink for better performance
-* Power-On LED indicator
+* Modello driver: L298N 2A
+* Chip driver: Ponte H doppio L298N
+* Tensione di alimentazione del motore (massima): 46V
+* Corrente di alimentazione del motore (massima): 2A
+* Tensione logica: 5V
+* Tensione di alimentazione del driver: 5-35V
+* Corrente del driver: 2A
+* Corrente logica: 0-36mA
+* Potenza massima (W): 25W
+* Rilevamento di corrente per ogni motore
+* Dissipatore di calore per migliori prestazioni
+* Indicatore LED di accensione
 
-**Operating Principle**
+**Principio di funzionamento**
 
-The driver module can drive two motors. The enabled terminals ENA and ENB are effective at high level. 
+Il modulo driver può controllare due motori. I terminali abilitati ENA e ENB sono efficaci a livello alto.
 
-The working relationship between ENA and IN1,IN2 is as follows: 
+La relazione di funzionamento tra ENA e IN1, IN2 è la seguente:
 
 
 .. list-table:: 
@@ -62,7 +62,7 @@ The working relationship between ENA and IN1,IN2 is as follows:
     * - ENA
       - IN1
       - IN2
-      - The state of Motor A
+      - Stato del motore A
     * - 0
       - X
       - X
@@ -70,21 +70,21 @@ The working relationship between ENA and IN1,IN2 is as follows:
     * - 1
       - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Rotazione oraria
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Rotazione antioraria
     * - 1
       - 1
       - 1
-      - Brake
+      - Freno
 
-The working relationship between ENB and IN3,IN4 is as follows.
+La relazione di funzionamento tra ENB e IN3, IN4 è la seguente.
 
 .. list-table:: 
     :widths: 25 25 25 50
@@ -93,7 +93,7 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - ENB
       - IN3
       - IN4
-      - The state of Motor B
+      - Stato del motore B
     * - 0
       - X
       - X
@@ -101,38 +101,38 @@ The working relationship between ENB and IN3,IN4 is as follows.
     * - 1
       - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 0
       - 1
-      - Rotate clockwise
+      - Rotazione oraria
     * - 1
       - 1
       - 0
-      - Rotate counterclockwise
+      - Rotazione antioraria
     * - 1
       - 1
       - 1
-      - Brake
+      - Freno
 
 
-**About 5V Enable Cap**
+**Informazioni sul cappuccio di abilitazione a 5V**
 
-The L298N Motor Driver module consists of an L298 Motor Driver IC, 78M05 Voltage Regulator, resistors, capacitor, Power LED, 5V jumper in an integrated circuit.
+Il modulo driver motore L298N include un IC driver motore L298, un regolatore di tensione 78M05, resistenze, condensatore, LED di alimentazione e jumper 5V in un circuito integrato.
 
 .. image:: img/l298n_introduce.jpg
     :width: 500
     :align: center
 
-78M05 Voltage regulator will be enabled only when the jumper is placed. When the power supply is less than or equal to 12V, then the internal circuitry will be powered by the voltage regulator and the 5V pin can be used as an output pin to power the microcontroller. 
+Il regolatore di tensione 78M05 sarà abilitato solo quando il jumper è inserito. Quando l'alimentazione è inferiore o uguale a 12V, il circuito interno sarà alimentato dal regolatore di tensione e il pin 5V può essere utilizzato come pin di uscita per alimentare il microcontrollore.
 
-The jumper should not be placed when the power supply is greater than 12V and separate 5V should be given through 5V terminal to power the internal circuitry.
+Il jumper non deve essere inserito quando l'alimentazione supera i 12V e deve essere fornita un'alimentazione separata di 5V tramite il terminale 5V per alimentare il circuito interno.
 
 
 * `L298N datasheet <https://www.yerical.com/product/L298N?product/XXXXX?source=adg&gclid=CjwKCAjwkYGVBhArEiwA4sZLuKEC19ydceKs396z1JENqjcbJDEvedRkcsza1aH_swhuNPWzL-CYfRoCMTMQAvD_BwE#g-pd-res>`_
 
 
-**Example**
+**Esempio**
 
 * :ref:`ar_motor` (Basic Project)
 * :ref:`car_move` (Car Project)

@@ -1,63 +1,63 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder di appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara & Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_table_lamp:
 
-2.1 Table Lamp
-================
+2.1 Lampada da tavolo
+=========================
 
-Here, we connect an LED on the breadboard and have the sprite control the blinking of this LED.
+In questo progetto, collegheremo un LED sulla breadboard e faremo in modo che lo sprite controlli il lampeggiamento di questo LED.
 
-When the Button sprite on the stage is clicked, the LED will blink 5 times and then stop.
+Quando il pulsante sprite sul palco viene cliccato, il LED lampeggerà 5 volte e poi si fermerà.
 
 .. image:: img/2_button.png
 
-You Will Learn
----------------------
+Cosa imparerai
+-----------------
 
-- Breadboard, LEDs and Resistors
-- Building a circuit on a breadboard
-- Delete and select sprites
-- Switching costumes
-- Set a limited number of repeat loops
+- Breadboard, LED e resistori
+- Costruire un circuito su una breadboard
+- Eliminare e selezionare sprite
+- Cambiare costumi
+- Impostare un numero limitato di cicli di ripetizione
 
-Required Components
----------------------
+Componenti necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -70,45 +70,45 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Build the Circuit
------------------------
+Costruire il circuito
+-------------------------
 
-Follow the diagram below to build the circuit on the breadboard.
+Segui il diagramma qui sotto per costruire il circuito sulla breadboard.
 
-Since the anode of the LED (the longer pin) is connected to pin 9 through a 220Ω resistor, and the cathode of the LED is connected to GND, you can light up the LED by giving pin 9 a high level.
+Poiché l'anodo del LED (il piedino più lungo) è collegato al pin 9 tramite una resistenza da 220Ω, e il catodo del LED è collegato a GND, puoi accendere il LED fornendo un livello alto al pin 9.
 
 .. image:: img/circuit/led_circuit.png
 
-Programming
-------------------
+Programmazione
+-----------------
 
-The whole programming is divided into 3 parts, the first part is to select the desired sprite, the second part is to switch the costume for the sprite to make it look clickable, and the third part is to make the LED blink.
+L'intera programmazione è suddivisa in 3 parti: la prima parte riguarda la selezione dello sprite desiderato, la seconda parte il cambio del costume dello sprite per renderlo cliccabile, e la terza parte per far lampeggiare il LED.
 
-**1. Select Button3 sprite**
+**1. Selezionare lo sprite Button3**
 
-Delete the existing Tobi sprite by using the Delete button in the upper right corner, and select a sprite again.
+Elimina lo sprite Tobi esistente utilizzando il pulsante Elimina nell'angolo in alto a destra e seleziona nuovamente uno sprite.
 
 .. image:: img/2_tobi.png
 
-Here, we select the **Button3** sprite.
+Qui, selezioniamo lo sprite **Button3**.
 
 .. image:: img/2_button3.png
 
-Click on Costumes in the top right corner and you will see that the Button3 sprite has 2 costumes, we set **button3-a** to be released and **button3-b** to be pressed.
+Clicca su Costumi nell'angolo in alto a destra e vedrai che lo sprite Button3 ha 2 costumi, imposta **button3-a** come rilasciato e **button3-b** come premuto.
 
 .. image:: img/2_button3_2.png
 
-**2. Switching costumes**.
+**2. Cambio dei costumi**
 
-When the sprite is clicked (**Events** palette), it switches to costume for **button3-b** (**looks** palette).
+Quando lo sprite viene cliccato (paletta **Eventi**), cambia il costume in **button3-b** (paletta **Aspetto**).
 
 .. image:: img/2_switch.png
 
-**3. Make the LED blink 5 times**
+**3. Far lampeggiare il LED 5 volte**
 
-Use the [Repeat] block to make the LED blink 5 times (High-> LOW cycle), remember to change pin 13 to pin 9, and finally switch the costume back to **button3-a**.
+Utilizza il blocco [Ripeti] per far lampeggiare il LED 5 volte (ciclo High-> Low), ricordati di cambiare il pin 13 con il pin 9, e infine torna al costume **button3-a**.
 
-* [Repeat 10]: limited number of repeat loops, you can set the number of repeats yourself, from the **Control** palette.
+* [Ripeti 10]: ciclo di ripetizione limitato, puoi impostare tu stesso il numero di ripetizioni, dalla paletta **Controllo**.
 
 .. image:: img/2_led_on_off.png
 

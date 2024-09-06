@@ -1,26 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 26: Smart Car Ultrasonic Sensor
-========================================
+Video 26: Sensore Ultrasonico per la Smart Car
+==================================================
 
-In this tutorial, you will learn how to program a smart car with an Arduino and ultrasonic sensors for advanced obstacle detection and navigation features.
+In questo tutorial, imparerai a programmare una smart car con Arduino e sensori ultrasonici per funzionalità avanzate di rilevamento ostacoli e navigazione.
 
-* **Ultrasonic Sensor Introduction**: Exploring the capabilities of ultrasonic sensors in smart car navigation.
-* **Sensor Wiring Instructions**: Step-by-step guide on connecting the ultrasonic sensor to the Arduino board.
-* **Arduino Code Breakdown**: In-depth explanation of the code used for processing sensor data and controlling the car.
-* **Motor Control via Sensor Data**: How to use ultrasonic sensor readings to control the car's motors.
+* **Introduzione al sensore ultrasonico**: Esplorazione delle capacità dei sensori ultrasonici nella navigazione della smart car.
+* **Istruzioni per il collegamento del sensore**: Guida passo-passo per collegare il sensore ultrasonico alla scheda Arduino.
+* **Analisi del codice Arduino**: Spiegazione dettagliata del codice utilizzato per elaborare i dati del sensore e controllare l'auto.
+* **Controllo del motore tramite dati del sensore**: Come utilizzare le letture del sensore ultrasonico per controllare i motori dell'auto.
 
 **Video**
 
@@ -30,6 +30,6 @@ In this tutorial, you will learn how to program a smart car with an Arduino and 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`car_ultrasonic`

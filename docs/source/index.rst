@@ -1,63 +1,62 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-SunFounder 3 in 1 IoT/Smart Car/Learning Kit
-==================================================
+SunFounder 3 in 1 IoT/Smart Car/Kit di Apprendimento
+======================================================
 
 * |link_3_in_1_Starter_Kit|
 
-Thanks for choosing our |link_3_in_1_Kit|.
+Grazie per aver scelto il nostro |link_3_in_1_Kit|.
 
 .. note::
-    This document is available in the following languages.
+    Questo documento è disponibile nelle seguenti lingue.
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
         * |link_es_tutorials|
+        * |link_it_tutorials|
     
-    Please click on the respective links to access the document in your preferred language.
-
+    Clicca sui rispettivi link per accedere al documento nella lingua desiderata.
 
 .. image:: img/3in_kit.png
     :width: 800
 
-When you bought a learning kit online, did it come with a simple PDF or booklet with only the steps to build the project?
+Hai mai acquistato un kit di apprendimento online che includeva solo un semplice PDF o libretto con i passaggi per costruire il progetto?
 
-Or maybe you want to build your own smart car, but the ones you find online are pricey and complicated？
+O magari vuoi costruire la tua smart car, ma quelle che trovi online sono costose e complicate?
 
-Or have you seen useful and interesting IoT projects made by others, but have no idea where to start?
+O hai visto progetti IoT utili e interessanti realizzati da altri, ma non sai da dove cominciare?
 
-All these problems can be solved with our 3 in 1 starter kit.
+Tutti questi problemi possono essere risolti con il nostro kit 3 in 1.
 
-In the 3-in-1 starter kit, you will find a complete Arduino course to help beginners learn Arduino, as well as a wide variety of interesting projects that other learning kits do not offer, such as smart car projects and IoT projects. You will master Arduino as long as you follow the kit's course step by step, instead of just copying and pasting code, you will write your own code and implement your Arduino project however you like.
+Nel kit 3-in-1 troverai un corso completo di Arduino che aiuta i principianti a imparare Arduino, oltre a una vasta gamma di progetti interessanti che altri kit di apprendimento non offrono, come progetti di smart car e IoT. Seguendo il corso del kit passo dopo passo, diventerai padrone di Arduino, non solo copiando e incollando codice, ma scrivendo il tuo codice e realizzando i tuoi progetti Arduino come preferisci.
 
-In addition, the kit also provides 30+ Scratch programming projects for younger students and enthusiasts, so beginners don't need any programming experience to write and make their own creations!
+Inoltre, il kit offre anche 30+ progetti di programmazione Scratch per studenti e appassionati più giovani, quindi i principianti non hanno bisogno di alcuna esperienza di programmazione per creare le loro opere!
 
-Come on! Start programing Arduino with confidence from zero to hero!
+Dai, comincia a programmare Arduino con fiducia, da principiante a esperto!
 
-If you have any questions, please send an email to service@sunfounder.com and we will respond as soon as possible.
+Se hai domande, invia un'email a service@sunfounder.com e ti risponderemo il prima possibile.
 
-**About the display language**
+**Informazioni sulla lingua di visualizzazione**
 
-This document is available in other languages as well. To switch the display language, kindly click on the **Read the Docs** icon located in the lower left corner of the page.
+Questo documento è disponibile anche in altre lingue. Per cambiare la lingua di visualizzazione, clicca sull'icona **Read the Docs** situata nell'angolo inferiore sinistro della pagina.
 
 .. image:: img/translation.png
 
-
-**Contents**
+**Contenuti**
 
 .. toctree::
     :maxdepth: 2
@@ -76,7 +75,8 @@ This document is available in other languages as well. To switch the display lan
     faq/faq
     thank-learning
 
-Copyright Notice
------------------------
+Avviso sul Copyright
+--------------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Tutti i contenuti, inclusi ma non limitati a testi, immagini e codice presenti in questo manuale, sono di proprietà della SunFounder Company. L'uso di tali contenuti è consentito solo per studio personale, ricerca, svago o altri scopi non commerciali o senza fini di lucro, in conformità alle leggi sui diritti d'autore, senza violare i diritti legali dell'autore e dei relativi titolari. Per qualsiasi utilizzo a scopo di lucro senza autorizzazione, la Società si riserva il diritto di intraprendere azioni legali.
+

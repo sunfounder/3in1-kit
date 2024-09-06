@@ -1,57 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Unisciti agli appassionati per approfondire Raspberry Pi, Arduino ed ESP32 insieme a noi.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e affronta sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti riservati sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _ar_guess_number:
 
-6.6 Guess Number
-==================
+6.6 Indovina il Numero
+=============================
 
-Guessing Numbers is a fun party game where you and your friends take
-turns inputting a number (0~99). The range will be smaller with the
-inputting of the number till a player answers the riddle correctly. Then
-the player is defeated and punished. For example, if the lucky number is
-51 which the players cannot see, and the player 1 inputs 50, the prompt
-of number range changes to 50~99; if the player 2 inputs 70, the range
-of number can be 50~70; if the player 3 inputs 51, he or she is the
-unlucky one. Here, we use IR Remote Controller to input numbers and use
-LCD to output outcomes.
+"Indovina il Numero" è un divertente gioco di società in cui tu e i 
+tuoi amici vi alternate a inserire un numero (0~99). L'intervallo si 
+riduce con ogni numero inserito fino a quando un giocatore indovina 
+correttamente il numero fortunato. A quel punto, il giocatore viene 
+sconfitto e punito. Ad esempio, se il numero fortunato è 51, che i 
+giocatori non possono vedere, e il giocatore 1 inserisce 50, l'intervallo 
+numerico cambia da 50~99; se il giocatore 2 inserisce 70, l'intervallo 
+diventa 50~70; se il giocatore 3 inserisce 51, lui o lei è lo sfortunato. 
+Qui utilizziamo un telecomando a infrarossi per inserire i numeri e un 
+display LCD per mostrare i risultati.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -65,28 +66,27 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_guess_number.png
     :align: center
 
-**Wiring**
+**Collegamenti**
 
-In this example, the wiring of LCD1602 and infrared receiving module is
-as follows.
+In questo esempio, i collegamenti dell'LCD1602 e del modulo di ricezione a infrarossi sono i seguenti.
 
 .. image:: img/wiring_guess_number.png
     :align: center
 
 
-**Code**
+**Codice**
 
 
 .. note::
 
-    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\basic_project\6.6.guess_number`` directly.
-    * Or copy this code into Arduino IDE .
-    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
+    * Puoi aprire il file ``6.6.guess_number.ino`` nel percorso ``3in1-kit\basic_project\6.6.guess_number`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
+    * Vengono utilizzate le librerie ``LiquidCrystal I2C`` e ``IRremote``, che puoi installare dal **Library Manager**.
 
 
 .. raw:: html
@@ -94,42 +94,39 @@ as follows.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6bafb36d-6763-460c-98b7-aba48120e718/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, the welcome characters will appear on the LCD1602. Now press the number according to the range prompt on the screen, the display will get smaller and smaller unless you guess that lucky number.
+Dopo aver caricato correttamente il codice, i caratteri di benvenuto appariranno sull'LCD1602. Ora premi i numeri secondo l'intervallo visualizzato sullo schermo, l'intervallo si ridurrà sempre di più fino a quando non indovini il numero fortunato.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back to increase the contrast.
+    Se il codice e i collegamenti sono corretti, ma l'LCD non visualizza ancora nulla, puoi regolare il contrasto ruotando il potenziometro sul retro.
 
 
-**How it works?**
+**Come funziona?**
 
-In order to make the number guessing game become vivid and funny, we
-need to achieve the following functions:
+Per rendere il gioco dell'indovina numero più vivace e divertente, dobbiamo 
+raggiungere le seguenti funzioni:
 
-1. The lucky number will be displayed when we start and reset the game,
-   and the number range prompt is reset to 0 ~ 99.
+1. Il numero fortunato verrà visualizzato all'avvio e al reset del gioco, 
+e l'intervallo numerico sarà ripristinato a 0 ~ 99.
 
-2. LCD will display the number being input and the number range prompt.
+2. L'LCD visualizzerà il numero inserito e l'intervallo numerico.
 
-3. After inputting two digits, there appears result judgment
-   automatically.
+3. Dopo aver inserito due cifre, verrà effettuata automaticamente la verifica 
+   del risultato.
 
-4. If you input a single digit, you can press the CYCLE key (the key at
-   the center of the Controller) to start the result judgment.
+4. Se inserisci una singola cifra, puoi premere il tasto CYCLE (il tasto al 
+   centro del telecomando) per avviare la verifica del risultato.
 
-5. If the answer is not guessed, the new number range prompt will be
-   displayed (if the lucky number is 51 and you enter 50, the number
-   range prompt will change to 50~99).
+5. Se il numero non viene indovinato, verrà visualizzato un nuovo intervallo 
+   numerico (se il numero fortunato è 51 e inserisci 50, l'intervallo cambierà in 50~99).
 
-6. The game is automatically reset after the lucky number is guessed, so
-   that the player can play a new round.
+6. Il gioco verrà automaticamente resettato dopo che il numero fortunato è stato 
+   indovinato, così da poter iniziare un nuovo round.
 
-7. The game can be reset by directly pressing the POWER button (the
-   button in the upper left corner).
+7. Il gioco può essere resettato direttamente premendo il pulsante POWER 
+   (il pulsante nell'angolo in alto a sinistra).
 
-In conclusion, the work flow of the project is shown in the flow chart.
+In conclusione, il flusso di lavoro del progetto è mostrato nel diagramma di flusso.
 
 .. image:: img/Part_three_4_Example_Explanation.png
     :align: center
-
-
 

@@ -1,48 +1,47 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a promozioni speciali e giveaway durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _connect_blynk:
 
-1.3 Connecting the R3 board to Blynk
+1.3 Collegare la scheda R3 a Blynk
 =======================================
 
-#. Reconnect the ESP8266 module and R3 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R3 board respectively.
+#. Ricollega il modulo ESP8266 e la scheda R3, qui viene utilizzata la seriale software, quindi TX e RX sono collegati rispettivamente ai pin 2 e 3 della scheda R3.
 
     .. note::
 
-        The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+        Il modulo ESP8266 richiede un'elevata corrente per fornire un ambiente operativo stabile, quindi assicurati che la batteria da 9V sia collegata.
 
     .. image:: img/wiring_23.jpg
 
 
-#. Click the **devices** page and you will see the new device you just created. Then, click developer tools.
+#. Clicca sulla pagina **dispositivi** e vedrai il nuovo dispositivo che hai appena creato. Quindi, fai clic su strumenti per sviluppatori.
 
     .. image:: img/blynk_copy_developer.png
 
-#. And you will see ``TEMPLATE_ID``, ``DEVICE_NAME`` and ``AUTH_TOKEN`` on the **Firmware info**, and you will need to copy them later.
-
+#. Vedrai ``TEMPLATE_ID``, ``DEVICE_NAME`` e ``AUTH_TOKEN`` nelle **Firmware info**, e dovrai copiarli successivamente.
 
     .. image:: img/blynk_copy_firmwareinfo.png
 
-#. Open the ``1.connect.ino`` file under the path of ``3in1-kit\iot_project\1.connect``. Or copy this code into **Arduino IDE**.
+#. Apri il file ``1.connect.ino`` sotto il percorso ``3in1-kit\iot_project\1.connect``. Oppure copia questo codice nell'**Arduino IDE**.
 
     .. raw:: html
         
         <iframe src=https://create.arduino.cc/editor/sunfounder01/1c0c1a8f-2551-484f-9f4f-d5d4117cc864/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. Replace the following three lines of code that you can copy from your account's **Firmware info**  These three lines of code will allow your R3 board to find your blynk account.
+#. Sostituisci le seguenti tre righe di codice che puoi copiare dalle **Firmware info** del tuo account. Queste tre righe di codice permetteranno alla tua scheda R3 di trovare il tuo account Blynk.
 
     .. code-block:: arduino
 
@@ -50,27 +49,27 @@
         #define BLYNK_DEVICE_NAME "Device"
         #define BLYNK_AUTH_TOKEN "YourAuthToken"
 
-#. Fill in the ``ssid`` and ``password`` of the WiFi you are using.
+#. Inserisci ``ssid`` e ``password`` del WiFi che stai utilizzando.
 
     .. code-block:: arduino
 
         char ssid[] = "ssid";
         char pass[] = "password";
 
-#. Upload the code to the R3 board, then open the serial monitor and set the baud rate to 115200. when the R3 board communicates with Blynk successfully, the serial monitor will show the ``ready`` character.
+#. Carica il codice sulla scheda R3, quindi apri il monitor seriale e imposta il baud rate su 115200. Quando la scheda R3 comunica correttamente con Blynk, il monitor seriale mostrerà il carattere ``ready``.
 
     .. image:: img/blynk_connect_network.png
 
     .. note::
     
-        If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+        Se compare il messaggio ``ESP non risponde`` quando ti connetti, segui questi passaggi.
 
-        * Make sure the 9V battery is plugged in.
-        * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-        * Press the reset button on the R3 board.
+        * Assicurati che la batteria da 9V sia collegata.
+        * Resetta il modulo ESP8266 collegando il pin RST a GND per 1 secondo, quindi scollegalo.
+        * Premi il pulsante di reset sulla scheda R3.
 
-        Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+        A volte, potrebbe essere necessario ripetere l'operazione sopra 3-5 volte, sii paziente.
 
-#. The status of Blynk will change from **offline** to **online**.
+#. Lo stato di Blynk passerà da **offline** a **online**.
 
     .. image:: img/sp220607_170326.png

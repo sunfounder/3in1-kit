@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 18: Servo Motor
-======================
+Video 18: Servo Motore
+==========================
 
-This tutorial delves into the fundamentals of using servo motors with Arduino, covering everything from wiring and coding to practical project demonstrations.
+Questo tutorial esplora i fondamenti dell'uso dei servomotori con Arduino, trattando tutto, dalla connessione e programmazione alle dimostrazioni pratiche dei progetti.
 
-* **Servo Motors Overview**: Introduction to servo motors, highlighting their role in various remote-controlled and robotic applications.
-* **Types and Characteristics**: Exploring different types of servo motors and their torque capabilities.
-* **Understanding Servo Components**: Breakdown of servo motor parts, including arms and gears.
-* **Arduino Wiring Guide**: Step-by-step instructions on connecting servo motors to Arduino boards.
-* **Programming for Precision**: Demonstrates how to use Arduino code to control servo angles and movement.
-* **Hands-On Project Examples**: Real-world applications and modifications of servo motors in Arduino projects.
+* **Panoramica sui Servomotori**: Introduzione ai servomotori, evidenziando il loro ruolo in varie applicazioni robotiche e a controllo remoto.
+* **Tipi e Caratteristiche**: Esplorazione dei diversi tipi di servomotori e delle loro capacità di coppia.
+* **Comprendere i Componenti del Servo**: Analisi delle parti del servomotore, inclusi bracci e ingranaggi.
+* **Guida al Collegamento con Arduino**: Istruzioni dettagliate su come collegare i servomotori alle schede Arduino.
+* **Programmazione per la Precisione**: Dimostrazione di come utilizzare il codice Arduino per controllare angoli e movimenti del servo.
+* **Esempi Pratici di Progetti**: Applicazioni reali e modifiche dei servomotori nei progetti Arduino.
 
 **Video**
 
@@ -32,6 +32,6 @@ This tutorial delves into the fundamentals of using servo motors with Arduino, c
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_servo`

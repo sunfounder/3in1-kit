@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue abilità.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni e concorsi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_follow1:
 
-3.4 Follow Your Hand
-===========================
+3.4 Segui la tua mano
+============================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+Pensa a questa macchina come se fosse il tuo animale domestico: quando gli fai un cenno con la mano, verrà correndo verso di te.
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È decisamente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit 3 in 1 Starter
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -55,18 +55,18 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-Build the Circuit
------------------------
+Costruisci il Circuito
+---------------------------
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+Un modulo sensore a ultrasuoni è uno strumento che misura la distanza da un oggetto utilizzando onde sonore ultrasoniche.
+Ha due sonde: una invia le onde ultrasoniche, l'altra le riceve e trasforma il tempo di invio e ricezione in una distanza, rilevando così la distanza tra il dispositivo e un ostacolo.
 
-Now build the circuit according to the following diagram.
+Ora costruisci il circuito seguendo lo schema seguente.
 
 .. list-table:: 
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Modulo Ultrasonico
+      - Scheda R3
     * - Vcc
       - 5V
     * - Trig
@@ -79,13 +79,13 @@ Now build the circuit according to the following diagram.
 .. image:: img/car_6.png
     :width: 800
 
-Programming
-------------
+Programmazione
+-----------------
 
-Create blocks to make the car go forward and stop.
+Crea blocchi per far avanzare la macchina e fermarla.
 
 .. image:: img/4_hand1.png
 
-Put your hand in front of the car, then read the value of the ultrasonic module, if the detected distance of your hand is 5-10cm, then let the car go forward, otherwise stop.
+Metti la mano davanti alla macchina, poi leggi il valore del modulo ultrasonico: se la distanza rilevata della tua mano è tra 5 e 10 cm, fai avanzare la macchina, altrimenti fermala.
 
 .. image:: img/4_hand2.png

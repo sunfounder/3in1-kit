@@ -1,32 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a promozioni speciali e giveaway durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _config_esp8266:
 
-1.0 Configuring the ESP8266
+1.0 Configurare l'ESP8266
 ===============================
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware.
-If you want to modify its configuration, please following the steps below.
-If you use UNO R4, you will not be able to configure ESP8266 in this way.
+Il modulo ESP8266 fornito con il kit è già pre-configurato con firmware AT.
+Se desideri modificarne la configurazione, segui i passaggi qui sotto.
+Se usi UNO R4, non sarà possibile configurare l'ESP8266 in questo modo.
 
-1. Build the circuit.
+1. Costruisci il circuito.
 
     .. image:: img/iot_1_at_set_bb.jpg
         :width: 800
 
-2. Open the ``1.set_software_serial.ino`` file under the path of ``3in1-kit\iot_project\1.set_software_serial``. Or copy this code into **Arduino IDE**.
+2. Apri il file ``1.set_software_serial.ino`` sotto il percorso ``3in1-kit\iot_project\1.set_software_serial``. Oppure copia questo codice nell'**Arduino IDE**.
 
     .. code-block:: Arduino
 
@@ -49,21 +49,21 @@ If you use UNO R4, you will not be able to configure ESP8266 in this way.
         }
 
 
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn't matter, just go to the next step.)
+3. Clicca sull'icona della lente d'ingrandimento (Monitor Seriale) in alto a destra e imposta il baud rate su **115200**. (Potresti vedere alcune informazioni stampate come me, oppure no, non importa, passa al passaggio successivo.)
 
     .. image:: img/sp20220524113020.png
 
     .. warning::
 
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * Se non appare ``ready``, puoi provare a resettare il modulo ESP8266 (collega RST a GND) e riapri il Monitor Seriale.
 
-        * In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
+        * Inoltre, se il risultato è ``OK``, potrebbe essere necessario ri-masterizzare il firmware. Per favore fai riferimento a :ref:`burn_firmware` per maggiori dettagli. Se non riesci ancora a risolvere, fai uno screenshot del monitor seriale e invialo a service@sunfounder.com, ti aiuteremo a risolvere il problema il prima possibile.
 
-4. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+4. Clicca su **NEWLINE DROPDOWN BOX**, seleziona ``both NL & CR`` nell'opzione a tendina, inserisci ``AT``, se ritorna OK, significa che l'ESP8266 ha stabilito con successo la connessione con la scheda R3.
 
     .. image:: img/sp20220524113702.png
 
-5. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
+5. Inserisci ``AT+CWMODE=3`` e la modalità sarà cambiata a **coesistenza di Station e AP**.
 
     .. image:: img/sp20220524114032.png
 

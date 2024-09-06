@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder di appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato a nuovi annunci di prodotto e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_humiture:
 
-2.9 Read Temperature and Humidity
+2.9 Leggere Temperatura e Umidità
 =================================================
 
-Previous projects have been using stage mode, but some functions are only available in upload mode, such as serial communication function. 
-In this project, we will print the temperature and humidity of the DHT11 using the Serial Monitor in :ref:`upload_mode`.
+Nei progetti precedenti abbiamo utilizzato la modalità Stage, ma alcune funzioni sono disponibili solo in modalità Upload, come la funzione di comunicazione seriale.
+In questo progetto, stamperemo la temperatura e l'umidità rilevate dal DHT11 utilizzando il Monitor Seriale in :ref:`upload_mode`.
 
 .. image:: img/11_serial.png
 
-You Will Learn
----------------------
+Cosa Imparerai
+-----------------
 
-- Get the temperature and humidity from the DHT11 module
-- Serial Monitor for :ref:`upload_mode`
-- Add extension
+- Ottenere temperatura e umidità dal modulo DHT11
+- Monitor Seriale per la :ref:`upload_mode`
+- Aggiungere estensioni
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -62,57 +62,57 @@ You can also buy them separately from the links below.
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
-    *   - :ref:`cpn_dht11` 
+    *   - :ref:`cpn_dht11`
         - \-
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-------------------------
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity.
+Il sensore digitale di temperatura e umidità DHT11 è un sensore composito che contiene un'uscita digitale calibrata del segnale di temperatura e umidità.
 
-Now build the circuit according to the following diagram.
+Ora costruisci il circuito secondo il diagramma seguente.
 
 .. image:: img/circuit/dht11_circuit.png
 
-Programming
+Programmazione
 ------------------
 
-**1. Adding Extensions**
+**1. Aggiungere Estensioni**
 
-Switch to **Upload** mode, click the **Add Extension** button in the bottom left corner, then select **Communication** to add it, and it will appear at the end of the palette area.
+Passa alla modalità **Upload**, clicca sul pulsante **Aggiungi Estensione** nell'angolo in basso a sinistra, poi seleziona **Comunicazione** per aggiungerla, e apparirà alla fine dell'area della palette.
 
 .. image:: img/11_addcom.png
 
-**2. Initializing the Arduino Uno and Serial Monitor**
+**2. Inizializzare l'Arduino Uno e il Monitor Seriale**
 
-In **Upload** mode, start Arduino Uno and then set the serial port baud rate.
+In modalità **Upload**, avvia Arduino Uno e poi imposta la velocità della porta seriale.
 
-* [when Arduino Starts up]: In **Upload** mode, start Arduino Uno.
-* [set serial baud rate to]: From the **Communications** palette, used to set the baud rate of serial port 0, default is 115200. If you are using Mega2560, then you can choose to set baud rate in serial port 0~3.
+* [quando Arduino si avvia]: In modalità **Upload**, avvia Arduino Uno.
+* [imposta velocità baud seriale a]: Dal palette **Comunicazione**, usato per impostare la velocità della porta seriale 0, il default è 115200. Se stai utilizzando Mega2560, puoi scegliere di impostare la velocità della porta seriale da 0 a 3.
 
 .. image:: img/11_init.png
 
-**3. Read temperature and humidity**
+**3. Leggere temperatura e umidità**
 
-Create 2 variables **tem** and **humi** to store the temperature and humidity respectively, the code will appear on the right side while you drag and drop the block.
+Crea 2 variabili **tem** e **humi** per memorizzare rispettivamente temperatura e umidità, il codice apparirà sul lato destro mentre trascini e rilasci il blocco.
 
 .. image:: img/11_readtem.png
 
-**4. Print them on the Serial Monitor**
+**4. Stampare i valori nel Monitor Seriale**
 
-Write the read temperature and humidity to the Serial Monitor. To avoid transferring too fast and causing PictoBlox to jam, use the [wait seconds] block, to add some time interval for the next print.
+Scrivi la temperatura e l'umidità lette nel Monitor Seriale. Per evitare trasferimenti troppo veloci che potrebbero bloccare PictoBlox, utilizza il blocco [aspetta secondi] per aggiungere un intervallo di tempo prima della prossima stampa.
 
 .. image:: img/11_writeserial.png
 
-**5. Uploading code**
+**5. Caricare il codice**
 
-Unlike the **Stage** mode, the code in **Upload** mode needs to be uploaded to the Arduino board using the **Upload Code** button to see the effect. This also allows you to unplug the USB cable and still have the program running.
+A differenza della modalità **Stage**, in modalità **Upload** il codice deve essere caricato sulla scheda Arduino utilizzando il pulsante **Carica Codice** per vedere l'effetto. Questo ti permette anche di scollegare il cavo USB e continuare a far funzionare il programma.
 
 .. image:: img/11_upload.png
 
-**6. Turn on the serial monitor**
+**6. Accendi il monitor seriale**
 
-Now open the **Serial Monitor** to see the temperature and humidity.
+Ora apri il **Monitor Seriale** per vedere la temperatura e l'umidità.
 
 .. image:: img/11_serial.png
 

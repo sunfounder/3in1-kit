@@ -1,27 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue abilità.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Esclusivi**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni e concorsi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_move:
 
-3.2 Movement
+3.2 Movimento
 ==================
 
-This project is based on :ref:`sh_test` to make the car move in all directions.
+Questo progetto si basa su :ref:`sh_test` per far muovere l'auto in tutte le direzioni.
 
-Before we start programming, let's review the working principle of L9110 module.
+Prima di iniziare la programmazione, rivediamo il principio di funzionamento del modulo L9110.
 
-Here is the truth table of Motor B:
+Ecco la tabella della verità del Motore B:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -29,21 +29,21 @@ Here is the truth table of Motor B:
 
     * - B-1A
       - B-1B(B-2A)
-      - The state of Motor B
+      - Stato del Motore B
     * - 1
       - 0
-      - Rotate clockwise
+      - Ruota in senso orario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Ruota in senso antiorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
       - Stop
 
-Here is the truth table of Motor A:
+Ecco la tabella della verità del Motore A:
 
 .. list-table:: 
     :widths: 25 25 50
@@ -51,60 +51,58 @@ Here is the truth table of Motor A:
 
     * - A-1A
       - A-1B
-      - The state of Motor B
+      - Stato del Motore A
     * - 1
       - 0
-      - Rotate clockwise
+      - Ruota in senso orario
     * - 0
       - 1
-      - Rotate counterclockwise
+      - Ruota in senso antiorario
     * - 0
       - 0
-      - Brake
+      - Freno
     * - 1
       - 1
       - Stop
 
-
-
-Programming
+Programmazione
 -------------------
 
-Now create blocks to make the car, forward, backward, left and right rotation and stop respectively.
+Ora crea dei blocchi per far muovere l'auto in avanti, indietro, girare a sinistra, a destra e fermarsi rispettivamente.
 
 
-**1. Move Forward**
+**1. Avanzare**
 
-The right motor turns clockwise and the left motor turns counterclockwise to move the car forward.
+Il motore destro ruota in senso orario e il motore sinistro in senso antiorario per far avanzare l'auto.
 
 .. image:: img/2_forward.png
 
-**2. Move Backward**
+**2. Andare all'indietro**
 
-Backward is just the opposite, the right motor needs to turn counterclockwise, the left motor clockwise.
+Per andare indietro, è l'opposto: il motore destro deve ruotare in senso antiorario e il motore sinistro in senso orario.
 
 .. image:: img/2_backward.png
 
-**3. Turn Left**
+**3. Girare a sinistra**
 
-The left and right motors turn clockwise at the same time to make the car turn left.
+Entrambi i motori, sinistro e destro, ruotano in senso orario per far girare l'auto a sinistra.
 
 .. image:: img/2_turn_left.png
 
-**4. Turn Right**
+**4. Girare a destra**
 
-Similarly, turn the left and right motors counterclockwise to turn the car to the right.
+Allo stesso modo, per girare a destra, entrambi i motori ruotano in senso antiorario.
 
 .. image:: img/2_turn_right.png
 
-**5. Stop**
+**5. Fermare**
 
-Stop the car by setting all motors to 0.
+Ferma l'auto impostando tutti i motori a 0.
 
 .. image:: img/2_stop.png
 
-**6. Make the car move**
+**6. Far muovere l'auto**
 
-Make the car move forward, backward, left and right for 1 second, then stop. Since all blocks are placed in the [Forever] block, you will see that the car repeats the above actions.
+Fai muovere l'auto in avanti, indietro, a sinistra e a destra per 1 secondo, poi fermala. Poiché tutti i blocchi sono posizionati nel blocco [Per sempre], vedrai l'auto ripetere le azioni descritte.
 
 .. image:: img/2_move.png

@@ -1,27 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 23: Smart Car Assembly
-==================================
+Video 23: Assemblaggio della Smart Car
+===========================================
 
-Learn how to assemble and wire a smart car using the Arduino platform, detailed from start to finish including motor and driver setup.
+Impara come assemblare e cablare una smart car utilizzando la piattaforma Arduino, con istruzioni dettagliate dall'inizio alla fine, inclusa l'installazione del motore e del driver.
 
-* **Smart Car Assembly**: Guidance on assembling the car’s base, wheels, and motors, ensuring correct setup.
-* **DC Motor Basics**: Explains the working principle of DC motors and their role in the smart car's functionality.
-* **Motor Driver Wiring**: Detailed instructions on wiring the L298N Dual Full Bridge Motor Driver for optimal control.
-* **Motor Wiring Test**: Conducting a basic test to verify the correct wiring and functionality of the motors.
-* **Movement Demonstration**: Showcasing the car's basic movement capabilities, demonstrating successful assembly and wiring.
+* **Assemblaggio della Smart Car**: Guida all'assemblaggio della base dell'auto, delle ruote e dei motori, assicurandosi che tutto sia configurato correttamente.
+* **Basi del Motore DC**: Spiegazione del principio di funzionamento dei motori DC e del loro ruolo nella funzionalità della smart car.
+* **Cablatura del Driver del Motore**: Istruzioni dettagliate su come cablare il driver motore L298N Dual Full Bridge per un controllo ottimale.
+* **Test della Cablatura del Motore**: Esecuzione di un test di base per verificare la corretta cablatura e funzionalità dei motori.
+* **Dimostrazione del Movimento**: Mostra delle capacità di movimento di base dell'auto, dimostrando il successo dell'assemblaggio e del cablaggio.
 
 **Video**
 
@@ -31,7 +31,7 @@ Learn how to assemble and wire a smart car using the Arduino platform, detailed 
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`car_assemble`
 * :ref:`car_move`

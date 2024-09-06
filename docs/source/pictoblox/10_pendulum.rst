@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati SunFounder per Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni festive e concorsi con premi.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_pendulum:
 
-2.10 Pendulum
+2.10 Pendolo
 =====================
 
-In this project, we will make an arrow pendulum while the servo will follow the rotation.
+In questo progetto, creeremo un pendolo con una freccia mentre il servo seguirà la rotazione.
 
 .. image:: img/12_pun.png
 
-You Will Learn
----------------------
+Cosa Imparerai
+----------------------
 
-- How the servo works and the angle range
-- Draw a sprite and put the center point on the tail.
+- Come funziona il servo e il range degli angoli
+- Disegnare uno sprite e posizionare il punto centrale sulla coda.
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -61,77 +61,75 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo` 
         - |link_servo_buy|
 
-Build the Circuit
------------------------
+Costruire il Circuito
+------------------------
 
-A servo is a geared motor that can only rotate 180 degrees. It is
-controlled by sending electrical pulses from your circuit board. These pulses
-tell the servo what position it should move to.
+Un servo è un motore con ingranaggi che può ruotare solo di 180 gradi. È 
+controllato inviando impulsi elettrici dalla tua scheda, che indicano al 
+servo quale posizione raggiungere.
 
-The servo has three wires: the brown wire is GND, the red one is VCC (connect to 3.3V), and the orange one is the signal wire. The angle range is 0-180.
+Il servo ha tre fili: il filo marrone è GND, quello rosso è VCC (collegare a 3.3V) e quello arancione è il filo di segnale. Il range di angolazione è 0-180 gradi.
 
-Now build the circuit according to the diagram below.
+Ora costruisci il circuito seguendo il diagramma qui sotto.
 
 .. image:: img/circuit/servo_circuit.png
 
-Programming
+Programmazione
 ------------------
 
-**1. Paint a sprite**
+**1. Disegna uno sprite**
 
-Delete the default sprite, select the Sprite button and click **Paint**, a blank sprite **Sprite1** will appear.
+Elimina lo sprite predefinito, seleziona il pulsante Sprite e clicca su **Disegna**, apparirà uno sprite vuoto chiamato **Sprite1**.
 
 .. image:: img/12_paint1.png
 
-On the open **Costumes** page, use the **Line tool** to draw an arrow.
+Nella pagina **Costumi**, utilizza lo strumento **Linea** per disegnare una freccia.
 
 .. note::
 
-    * Be sure to start drawing the arrow from the center of the canvas outward so that the arrow is turning in a circle with the center point as the origin.
-    * Hold Shift to make the line angle straight or 45 degrees.
+    * Assicurati di iniziare a disegnare la freccia dal centro del canvas verso l'esterno, in modo che la freccia ruoti con il punto centrale come origine.
+    * Tieni premuto Shift per mantenere l'angolo della linea dritto o a 45 gradi.
 
 .. image:: img/12_paint2.png
 
-After drawing, the **arrow** sprite will be displayed on the stage, name it **arrow**. Then click on the number after **Direction**, a circular dial will appear, now drag this arrow and see if the **arrow** sprite on the stage turns with the tail as the origin.
+Dopo aver disegnato, lo sprite **freccia** apparirà sul palco. Nominalo **freccia**. Poi clicca sul numero dopo **Direzione**, apparirà un quadrante circolare. Trascina questa freccia e verifica se lo sprite **freccia** ruota sul palco con la coda come origine.
 
 .. image:: img/12_paint3.png
 
-To make the **arrow** sprite swing from the left to the right, the angle range is -90 to -180, 180 to 90.
+Per far oscillare lo sprite **freccia** da sinistra a destra, il range di angolazione è -90 a -180, e da 180 a 90.
 
 .. image:: img/12_paint4.png
 
 .. image:: img/12_paint5.png
 
-**2. Creating a variable**.
+**2. Creazione di una variabile**
 
-Create a variable called **servo**, which stores the angle value and sets the initial value to 270.
+Crea una variabile chiamata **servo**, che memorizza il valore dell'angolo e imposta il valore iniziale a 270.
 
 .. image:: img/12_servo.png
 
-**3. Swing from the left to the right**
+**3. Oscillazione da sinistra a destra**
 
-Now let the **arrow** sprite swing from the left -90 degree position to the right 90 degree position.
+Ora fai oscillare lo sprite **freccia** dalla posizione di -90 gradi a sinistra fino alla posizione di 90 gradi a destra.
 
-With [repeat] block, add -10 to the variable each time, and you'll get to 90 degrees in 18 passes. Then use [point in block] to make the arrow sprite turn to these angles.
+Con il blocco [ripeti], aggiungi -10 alla variabile ogni volta, e raggiungerai i 90 gradi in 18 passaggi. Usa poi il blocco [puntare in direzione] per far ruotare lo sprite freccia verso questi angoli.
 
-Since the sprite rotation angle is -180 ~ 180, angles outside this range are converted by the following conditions.
+Poiché l'angolo di rotazione dello sprite va da -180 a 180, gli angoli al di fuori di questo range vengono convertiti secondo le seguenti condizioni.
 
-* If angle > 180, then angle -360.
+* Se l'angolo > 180, allora angolo -360.
 
 .. image:: img/12_servo1.png
 
-**4. Turning the Servo**
+**4. Ruotare il Servo**
 
-When you click on the green flag, you will see the arrow quickly turn to the right and then back to the left, so use a [wait seconds] block here to make the rotation slower. Also use the [set servo on to angle] block to make the servo connected to the Arduino board turn to a specific angle.
+Quando clicchi sulla bandiera verde, vedrai la freccia ruotare rapidamente verso destra e poi tornare a sinistra. Usa quindi un blocco [aspetta secondi] per rallentare la rotazione. Usa anche il blocco [imposta servo su angolo] per fare in modo che il servo collegato alla scheda Arduino ruoti a un angolo specifico.
 
 .. image:: img/12_servo2.png
 
-**5. Swinging from right to left**
+**5. Oscillazione da destra a sinistra**
 
-By the same method, make the servo and **arrow** sprite slowly rotate from the right to the left.
+Con lo stesso metodo, fai ruotare lentamente il servo e lo sprite **freccia** da destra a sinistra.
 
-* If angle > 180, then angle -360.
+* Se l'angolo > 180, allora angolo -360.
 
 .. image:: img/12_servo3.png
-
-

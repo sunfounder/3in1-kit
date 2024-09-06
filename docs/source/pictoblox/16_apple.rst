@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni festive e concorsi con premi.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_eat_apple:
 
-2.16 GAME - Eat Apple
-==============================
+2.16 GIOCO - Mangia la Mela
+================================
 
-In this project, we play a game that uses button to control Beetle to eat apple.
+In questo progetto, giochiamo a un gioco che utilizza un pulsante per controllare lo Scarabeo nel mangiare una mela.
 
-When the green flag is clicked, press the button and Beetle will rotate, press the button again and Beetle stops running and goes forward at that angle. You need to control the angle of Beetle so that it moves forward without touching the black line on the map until it eats the apple. If it touches the black line, the game is over.
+Quando viene cliccata la bandiera verde, premi il pulsante e lo Scarabeo inizierà a ruotare; premi nuovamente il pulsante e lo Scarabeo smetterà di girare e si muoverà in avanti con l'angolazione stabilita. Devi controllare l'angolazione dello Scarabeo in modo che avanzi senza toccare la linea nera sulla mappa fino a mangiare la mela. Se tocca la linea nera, il gioco finisce.
 
 .. image:: img/14_apple.png
 
-Required Components
----------------------
+Componenti Necessari
+-----------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -63,95 +63,89 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-Build the Circuit
+Costruire il Circuito
 -----------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Il pulsante è un dispositivo a 4 pin, poiché il pin 1 è collegato al pin 2 e il pin 3 al pin 4; quando il pulsante viene premuto, i 4 pin sono connessi, chiudendo così il circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo lo schema riportato di seguito.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Collega uno dei pin sul lato sinistro del pulsante al pin 12, che è connesso a una resistenza pull-down e a un condensatore da 0.1uF (104) (per eliminare il jitter e fornire un livello stabile quando il pulsante funziona).
+* Collega l'altra estremità della resistenza e del condensatore a GND e uno dei pin sul lato destro del pulsante a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
+Programmazione
 ------------------
-The effect we want to achieve is to use the button to control the direction of the **Beetle** sprite to move forward and eat the apple without touching the black line on the **Maze** backdrop, which will switch the backdrop when eaten.
+L'effetto che vogliamo ottenere è usare il pulsante per controllare la direzione dello sprite **Scarabeo** in modo che avanzi e mangi la mela senza toccare la linea nera dello sfondo **Labirinto**, cambiando sfondo una volta mangiata la mela.
 
-Now add the relevant backdrops and sprites.
+Ora aggiungi gli sfondi e gli sprite rilevanti.
 
-**1. Adding backdrops and sprites**
+**1. Aggiungere sfondi e sprite**
 
-Add a **Maze** backdrop via the **Choose a backdrop** button.
+Aggiungi uno sfondo **Labirinto** tramite il pulsante **Scegli uno sfondo**.
 
 .. image:: img/14_backdrop.png
 
-Delete the default sprite, then select the **Beetle** sprite.
+Elimina lo sprite predefinito e seleziona lo sprite **Scarabeo**.
 
 .. image:: img/14_sprite.png
 
-Place the **Beetle** sprite at the entrance of the **Maze** backdrop, remembering the x,y coordinate values at this point, and resize the sprite to 40%.
+Posiziona lo sprite **Scarabeo** all'entrata dello sfondo **Labirinto**, ricordando i valori delle coordinate x,y in questo punto, e ridimensiona lo sprite al 40%.
 
 .. image:: img/14_sprite1.png
 
-**2. Draw a backdrop**
+**2. Disegnare uno sfondo**
 
-Now it's time to simply draw a backdrop with the WIN! character appearing on it.
+Ora è il momento di disegnare semplicemente uno sfondo con la scritta WIN! che appare sopra.
 
-First click on the backdrop thumbnail to go to the **Backdrops** page and click on the blank backdrop1.
+Per prima cosa, fai clic sulla miniatura dello sfondo per andare alla pagina **Sfondi** e fai clic sullo sfondo vuoto backdrop1.
 
 .. image:: img/14_paint_back.png
     :width: 800
 
-Now start drawing, you can refer to the picture below to draw, or you can draw a backdrop on your own, as long as the expression is winning.
+Ora inizia a disegnare, puoi fare riferimento all'immagine sotto o disegnare uno sfondo a tuo piacimento, purché esprima la vittoria.
 
-* Using the **Circle** tool, draw an ellipse with the color set to red and no outline.
-* Then use the **Text** tool, write the character \"WIN!\", set the character color to black, and adjust the size and position of the character.
-* Name the backdrop as **Win**.
+* Utilizzando lo strumento **Cerchio**, disegna un'ellisse con il colore impostato su rosso e senza contorno.
+* Poi usa lo strumento **Testo** per scrivere il testo \"WIN!\", imposta il colore del carattere su nero e regola la dimensione e la posizione del testo.
+* Assegna il nome **Win** allo sfondo.
 
 .. image:: img/14_win.png
 
-**3. Scripting for the backdrop**
+**3. Script per lo sfondo**
 
-The backdrop needs to be switched to **Maze** every time the game starts.
+Lo sfondo deve essere impostato su **Labirinto** ogni volta che il gioco inizia.
 
 .. image:: img/14_switchback.png
 
-**4. Writing scripts for the sprite Beetle**
+**4. Scrivere script per lo sprite Scarabeo**
 
-Now write a script for the sprite **Beetle** to be able to move forward and turn direction under the control of a button. The workflow is as follows.
+Ora scrivi uno script per lo sprite **Scarabeo** in modo che possa muoversi in avanti e cambiare direzione sotto il controllo di un pulsante. Il flusso di lavoro è il seguente.
 
-* When the green flag is clicked, set the **Beetle** angle to 90, and the position to (-134, -134), or replace it with the coordinate value of your own placed position. Create the variable **flag** and set the initial value to -1.
+* Quando viene cliccata la bandiera verde, imposta l'angolazione dello **Scarabeo** a 90 e la posizione a (-134, -134), o sostituisci questi valori con le tue coordinate. Crea la variabile **flag** e imposta il valore iniziale a -1.
 
 .. image:: img/14_bee1.png
 
-Next, in the [forever] block, four [if] blocks are used to determine various possible scenarios.
+Successivamente, nel blocco [forever], utilizza quattro blocchi [if] per determinare vari scenari possibili.
 
-* If the key is 1 (pressed), use the [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] block to toggle the value of the variable **flag** between 0 and 1 (alternating between 0 for this press and 1 for the next press).
+* Se il valore del pulsante è 1 (premuto), utilizza il blocco [`mod <https://en.scratch-wiki.info/wiki/Boolean_Block>`_] per alternare il valore della variabile **flag** tra 0 e 1 (alternando tra 0 per questo click e 1 per il click successivo).
 
 .. image:: img/14_bee2.png
 
-* If flag=0 (this key press), let the **Beetle** sprite turn clockwise. Then determine if flag is equal to 1 (key pressed again), the **Beetle** sprite moves forward. Otherwise, it keeps turning clockwise.
+* Se flag=0 (questo click), fai ruotare lo sprite **Scarabeo** in senso orario. Poi, se flag è uguale a 1 (premuto nuovamente), lo sprite **Scarabeo** si muove in avanti. Altrimenti, continua a ruotare in senso orario.
 
 .. image:: img/14_bee3.png
 
-* If the Beetle sprite touches black (the black line on the **Maze** backdrop), the game ends and the script stops running.
+* Se lo sprite Scarabeo tocca il nero (la linea nera dello sfondo **Labirinto**), il gioco finisce e lo script si interrompe.
 
 .. note::
     
-    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the color of the black line on the stage. If you choose a black arbitrarily, this [Touch color] block will not work.
-
+    Devi fare clic sull'area del colore nel blocco [Tocca colore] e poi selezionare lo strumento contagocce per prelevare il colore della linea nera sul palco. Se scegli un nero a caso, questo blocco [Tocca colore] non funzionerà.
 
 .. image:: img/14_bee5.png
 
-* If Beetle touches red (Also use the straw tool to pick up the red color of the apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
-
+* Se lo Scarabeo tocca il rosso (utilizzando nuovamente lo strumento contagocce per prelevare il colore rosso della mela), lo sfondo verrà cambiato su **Win**, il che significa che il gioco è vinto e lo script si interrompe.
 
 .. image:: img/14_bee4.png
-
-
-
-

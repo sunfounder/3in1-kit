@@ -120,7 +120,9 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/es/latest/" target="_blank">Tutoriales de español en línea</a>
 
+.. |link_it_tutorials| raw:: html
 
+    <a href="https://docs.sunfounder.com/projects/3in1-kit-v2/it/latest/" target="_blank">Tutorial online in italiano</a>
 
 
 .. |link_download_arduino| raw:: html
@@ -144,8 +146,6 @@ rst_epilog = """
     <a href="https://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
 
 
-
-    
 .. |link_Raphael_kit| raw:: html
 
     <a href="https://www.sunfounder.com/products/raphael-kit?_pos=1&_sid=e78196ab0&_ss=r" target="_blank">Raphael Kit</a>

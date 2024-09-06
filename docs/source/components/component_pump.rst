@@ -1,48 +1,47 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_pump:
 
-Centrifugal Pump
-================
+Pompa Centrifuga
+====================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+La pompa centrifuga converte l'energia cinetica rotazionale in energia idrodinamica per trasportare il fluido. L'energia di rotazione proviene dal motore elettrico. Il fluido entra nella girante della pompa lungo o vicino all'albero rotante, viene accelerato dalla girante, fluisce radialmente verso l'esterno nel diffusore o nella camera a voluta, e poi esce da lì.
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
-
+Gli usi comuni delle pompe centrifughe includono il pompaggio di acqua, liquami, applicazioni agricole, petrolifere e petrolchimiche.
 
 * `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**Caratteristiche**
+    * **Tensione di funzionamento**: DC 3 ~ 4.5V
+    * **Corrente operativa**: 120 ~ 180mA
+    * **Potenza**: 0.36 ~ 0.91W
+    * **Altezza massima dell'acqua**: 0.35 ~ 0.55M
+    * **Portata massima**: 80 ~ 100 L/H
+    * **Durata di funzionamento continuo**: 100 ore
+    * **Grado di impermeabilità**: IP68
+    * **Modalità di guida**: DC, guida magnetica
+    * **Materiale**: Plastica ingegneristica
+    * **Diametro esterno dell'uscita**: 7.8 mm
+    * **Diametro interno dell'uscita**: 6.5 mm
+    * È una pompa sommersa e deve essere utilizzata in questo modo. Tende a surriscaldarsi, quindi c'è il rischio di surriscaldamento se accesa fuori dall'acqua.
 
-**Example**
+**Esempio**
 
 * :ref:`ar_pump` (Basic Project)
 * :ref:`iot_plant` (IoT Project)

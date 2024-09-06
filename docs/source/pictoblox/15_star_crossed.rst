@@ -1,62 +1,62 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati SunFounder per Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni festive e concorsi con premi.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_star_crossed:
 
-2.15 GAME - Star-Crossed
-==========================
+2.15 GIOCO - Attraversare le Stelle
+===========================================
 
-In the next projects, we will play some fun mini-games in PictoBlox.
+Nei prossimi progetti, giocheremo a dei mini-giochi divertenti su PictoBlox.
 
-Here we use Joystick module to play a Star-Crossed game.
+In questo progetto, utilizziamo il modulo Joystick per giocare ad "Attraversare le Stelle".
 
-After the script is run, stars will appear randomly on the stage, you need to use Joystick to control Rocketship to avoid the stars, if you touch it, the game will be over.
+Dopo aver avviato lo script, le stelle appariranno casualmente sullo stage e dovrai usare il Joystick per controllare l'Astronave, cercando di evitare le stelle. Se tocchi una stella, il gioco finisce.
 
 .. image:: img/16_rocket.png
 
-You Will Learn
----------------------
+Cosa Imparerai
+-----------------------
 
-- How Joystick module works
-- Set the x and y coordinates of the sprite
+- Come funziona il modulo Joystick
+- Impostare le coordinate x e y dello sprite
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -65,76 +65,74 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-------------------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots.
+Un joystick è un dispositivo di input costituito da una leva che ruota su una base e comunica l'angolo o la direzione al dispositivo che controlla. I joystick sono spesso usati per controllare videogiochi e robot.
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick's position on two axes – the X-axis (left to right) and the Y-axis (up and down).
+Per trasmettere l'intera gamma di movimenti al computer, un joystick deve misurare la posizione della leva su due assi – l'asse X (da sinistra a destra) e l'asse Y (dal basso verso l'alto).
 
-The motion coordinates of the joystick are shown in the following figure.
+Le coordinate di movimento del joystick sono mostrate nella figura seguente.
 
 .. note::
 
-    * The x coordinate is from left to right, the range is 0-1023.
-    * y coordinate is from top to bottom, range is 0-1023.
+    * La coordinata x è da sinistra a destra, con un intervallo di 0-1023.
+    * La coordinata y è dall'alto verso il basso, con un intervallo di 0-1023.
 
 .. image:: img/16_joystick.png
 
-
-Now build the circuit according to the following diagram.
+Ora costruisci il circuito seguendo lo schema riportato di seguito.
 
 .. image:: img/circuit/joystick_circuit.png
 
-Programming
+Programmazione
 ------------------
-The whole script is to achieve the effect that when the green flag is clicked, the **Stars** sprite moves in a curve on the stage and you need to use the joystick to move the **Rocketship**, so that it will not be touched by the **Star** sprite.
+L'intero script ha lo scopo di far muovere lo sprite **Stelle** in una curva sullo stage quando viene cliccata la bandiera verde, e dovrai usare il joystick per muovere l'**Astronave**, in modo da evitare il contatto con lo sprite **Stelle**.
 
-**1. Add sprites and backdrops**
+**1. Aggiungi gli sprite e gli sfondi**
 
-Delete the default sprite, and use the **Choose a Sprite** button to add the **Rocketship** sprite and the **Star** sprite. Note that the **Rocket** sprite size is set to 50%.
+Elimina lo sprite predefinito e utilizza il pulsante **Scegli uno Sprite** per aggiungere lo sprite **Astronave** e lo sprite **Stella**. Nota che la dimensione dello sprite **Rocket** è impostata al 50%.
 
 .. image:: img/16_sprite.png
 
-Now add the **Stars** backdrop by **Choose a Backdrop**.
+Ora aggiungi lo sfondo **Stars** tramite **Scegli uno Sfondo**.
 
 .. image:: img/16_sprite1.png
 
-**2. Scripting for Rocketship**
+**2. Script per l'Astronave**
 
-The **Rocketship** sprite is to achieve the effect that it will appear at a random position and then be controlled by the joystick to move it up, down, left, and right.
+Lo sprite **Astronave** deve apparire in una posizione casuale e poi essere controllato dal joystick per muoversi su, giù, a sinistra e a destra.
 
-The workflow is as follows.
+Il flusso di lavoro è il seguente.
 
-* When the green flag is clicked, have the sprite go to a random location and create 2 variables **x** and **y**, which store the values read from A0 (VRX of Joystick) and A1 (VRY of Joystick), respectively. You can let the script run, toggling the joystick up and down, left and right, to see the range of values for x and y.
+* Quando viene cliccata la bandiera verde, fai sì che lo sprite vada in una posizione casuale e crea 2 variabili **x** e **y**, che memorizzano i valori letti da A0 (VRX del Joystick) e A1 (VRY del Joystick). Puoi eseguire lo script, muovendo il joystick su e giù, a sinistra e a destra, per vedere l'intervallo di valori per x e y.
 
 .. image:: img/16_roc2.png
 
-* The value of A0 is in the range 0-1023 (the middle is about 512). Use ``x-512>200`` to determine if Joystick is toggling to the right, and if so, make the x coordinate of the sprite +30 (to move the sprite to the right).
+* Il valore di A0 è compreso tra 0 e 1023 (il centro è circa 512). Usa ``x-512>200`` per determinare se il Joystick è spostato a destra, e in tal caso fai in modo che la coordinata x dello sprite aumenti di 30 (per muovere lo sprite a destra).
 
 .. image:: img/16_roc3.png
 
-* If the Joystick is toggled to the left (``x-512<-200``), let the x coordinate of the sprite be -30 (let the sprite move to the left).
+* Se il Joystick è spostato a sinistra (``x-512<-200``), la coordinata x dello sprite diminuisce di 30 (spostando lo sprite a sinistra).
 
 .. image:: img/16_roc4.png
 
-* Since the Joystick's y coordinate is from up (0) to down (1023), and the sprite's y coordinate is from down to up. So in order to move the Joystick upwards and the sprite upwards, the y-coordinate must be -30 in the script.
+* Poiché la coordinata y del Joystick va da su (0) a giù (1023), e la coordinata y dello sprite va da giù a su. Quindi, per far muovere il Joystick verso l'alto e lo sprite verso l'alto, la coordinata y deve essere diminuita di 30 nello script.
 
 .. image:: img/16_roc5.png
 
-* If the joystick is flicked down, the y-coordinate of the sprite is +30.
-
+* Se il joystick viene spostato verso il basso, la coordinata y dello sprite aumenta di 30.
 
 .. image:: img/16_roc6.png
 
-**3. Scripting for Star**
+**3. Script per la Stella**
 
-The effect to be achieved by the **Star** sprite is to appear at a random location, and if it hits **Rocketship**, the script stops running and the game ends.
+L'effetto che si vuole ottenere con lo sprite **Stella** è che appaia in una posizione casuale, e se tocca l'**Astronave**, lo script si ferma e il gioco termina.
 
-* When the green flag is clicked and the sprite goes to a random location, the [turn degrees] block is to make the **Star** sprite move forward with a bit of an angle change so you can see that it is moving in a curve and if on edge, bounce.
+* Quando viene cliccata la bandiera verde e lo sprite va in una posizione casuale, il blocco [turn degrees] serve a far muovere lo sprite **Stella** in avanti con un po' di variazione nell'angolo, così che si possa vedere che si muove in una curva e rimbalza sui bordi dello stage.
 
 .. image:: img/16_star1.png
 
-* If the sprite touches the **Rocketship** sprite while it's moving, stop the script from running.
+* Se lo sprite tocca l'**Astronave** mentre si muove, ferma lo script.
 
 .. image:: img/16_star2.png

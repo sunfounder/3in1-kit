@@ -1,31 +1,29 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
-Learn about the Components in Your Kit
+Scopri i componenti nel tuo kit
 =========================================
 
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Dopo aver aperto la confezione, controlla che la quantità dei componenti sia conforme alla descrizione del prodotto e che tutti i componenti siano in buone condizioni.
 
 .. image:: img/components_list.jpg
     :width: 800
     :align: center
 
+Di seguito trovi una panoramica di ciascun componente, che include il principio di funzionamento e i progetti correlati.
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
-
-**Control Board**
+**Scheda di controllo**
 
 .. toctree::
     :maxdepth: 1
@@ -33,10 +31,7 @@ Below is the introduction to each component, which contains the operating princi
     component_uno
     component_esp8266
 
-
-
-
-**Basic**
+**Base**
 
 .. toctree::
     :maxdepth: 1
@@ -65,8 +60,7 @@ Below is the introduction to each component, which contains the operating princi
     component_7_segment
     component_i2c_lcd
 
-
-**Sound**
+**Suono**
 
 .. toctree::
     :maxdepth: 1
@@ -83,7 +77,6 @@ Below is the introduction to each component, which contains the operating princi
     component_pump
     component_l9110_module
 
-
 **Controller**
 
 .. toctree::
@@ -95,9 +88,7 @@ Below is the introduction to each component, which contains the operating princi
     component_joystick_module
     component_receiver
 
-
-
-**Sensor**
+**Sensore**
 
 .. toctree::
     :maxdepth: 1
@@ -109,3 +100,4 @@ Below is the introduction to each component, which contains the operating princi
     component_moisture_module
     component_avoidance_module
     component_ultrasonic_module
+

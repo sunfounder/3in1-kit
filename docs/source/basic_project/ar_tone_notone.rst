@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi tecnici e post-vendita con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_passive_buzzer:
 
-5.7 ``Tone()`` or ``noTone()``
-===============================
+5.7 ``Tone()`` o ``noTone()``
+==================================
 
-``Tone()`` is used to generate a square wave of the specified frequency (and 50% duty cycle) on a pin. A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
+``Tone()`` viene utilizzato per generare un'onda quadra con una frequenza specificata (e un ciclo di lavoro del 50%) su un pin. Si può specificare una durata, altrimenti l'onda continua fino a una chiamata a ``noTone()``.
 
-In this project, use this two functions to make the passive buzzer vibrate to make sound. 
-Like the active buzzer, the passive buzzer also uses the phenomenon of electromagnetic induction to work. 
-The difference is that a passive buzzer does not have oscillating source, so it will not beep if DC signals are used. 
-But this allows the passive buzzer to adjust its own oscillation frequency and can emit different notes such as “doh, re, mi, fa, sol, la, ti”.
+In questo progetto, usiamo queste due funzioni per far vibrare il buzzer passivo emettendo suoni. 
+Come il buzzer attivo, anche quello passivo sfrutta il fenomeno dell'induzione elettromagnetica per funzionare. 
+La differenza è che il buzzer passivo non ha una sorgente di oscillazione interna, quindi non emette suoni se si usano segnali in continua. 
+Ma questo permette al buzzer passivo di regolare la propria frequenza di oscillazione ed emettere note diverse come "do, re, mi, fa, sol, la, si".
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -59,93 +59,85 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_6.1_passive.png
 
-Connect the cathode of the Buzzer to GND, and the anode to the digital pin 9. 
+Collega il catodo del buzzer al GND e l'anodo al pin digitale 9.
 
-
-**Wiring**
+**Collegamenti**
 
 .. image:: img/custom_tone_bb.jpg
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.7.tone_notone.ino`` file under the path of ``3in1-kit\basic_project\5.7.tone_notone``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``5.7.tone_notone.ino`` nel percorso ``3in1-kit\basic_project\5.7.tone_notone``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
-
+    * Oppure carica il codice tramite il `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9212e985-1f31-4bd9-bee6-f29357035aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R3 board, you can hear a melody containing seven notes. 
+Dopo aver caricato correttamente il codice sulla scheda R3, sentirai una melodia composta da sette note.
 
-**How it works?**
+**Come funziona?**
 
-There are two points needing your attention:
+Ci sono due punti da considerare:
 
-1. ``tone()`` & ``noTone()``: This function is used to control the sound of the passive buzzer directly and its prototype is as follows: 
+1. ``tone()`` & ``noTone()``: Questa funzione viene utilizzata per controllare direttamente il suono del buzzer passivo e il suo prototipo è il seguente:
 
-
-**Syntax**
+**Sintassi**
     void tone(int pin, unsigned int frequency)
 
     void tone(int pin, unsigned int frequency, unsigned long duration)
 
-**Parameters**
-    * ``pin``: The Arduino pin on which to generate the tone.
-    * ``frequency``: The frequency of the tone in hertz.
-    * ``duration``: The duration of the tone in milliseconds (optional)
+**Parametri**
+    * ``pin``: Il pin di Arduino su cui generare il tono.
+    * ``frequency``: La frequenza del tono in hertz.
+    * ``duration``: La durata del tono in millisecondi (opzionale).
 
+Genera un'onda quadra alla frequenza specificata (e con ciclo di lavoro al 50%) su un pin, facendo vibrare il buzzer passivo. Si può specificare una durata, altrimenti l'onda continua fino alla chiamata di ``noTone()``. 
+Il pin può essere collegato a un buzzer piezoelettrico o ad un altro altoparlante per riprodurre toni.
 
-Generates a square wave of the specified frequency (and 50% duty cycle) on a pin (so as to make the passive buzzer vibrate to make sound). A duration can be specified, otherwise the wave continues until a call to ``noTone()``. 
-The pin can be connected to a piezo buzzer or other speaker to play tones.
+Si può generare solo un tono alla volta. Se un tono è già in riproduzione su un altro pin, la chiamata a ``tone()`` non avrà effetto. Se il tono è in riproduzione sullo stesso pin, la chiamata ne imposterà la frequenza.
 
-Only one tone can be generated at a time. If a tone is already playing on a different pin, the call to ``tone()`` will have no effect. If the tone is playing on the same pin, the call will set its frequency.
+L'uso della funzione ``tone()`` interferirà con l'output PWM sui pin 3 e 11.
 
-Use of the ``tone()`` function will interfere with PWM output on pins 3 and 11.
+Non è possibile generare toni inferiori a 31Hz.
 
-It is not possible to generate tones lower than 31Hz.
-
-
-**Syntax**
+**Sintassi**
     void noTone(int pin)
 
-**Parameters**
-    ``pin``: The Arduino pin on which to generate the tone.
+**Parametri**
+    ``pin``: Il pin di Arduino su cui generare il tono.
 
-Stops the generation of a square wave triggered by ``tone()``. Has no effect if no tone is being generated.
+Interrompe la generazione di un'onda quadra attivata da ``tone()``. Non ha effetto se non viene generato alcun tono.
 
-Having known the two functions, you may grasp the codes—the installation of the array ``melody[]`` and the array ``noteDurations[]`` is the preparation of the subsequently several times of calling of the function ``tone()`` and the changing of tone and duration in the loop for better effect of music play.
+Conoscendo queste due funzioni, si può comprendere il codice: l'installazione dell'array ``melody[]`` e dell'array ``noteDurations[]`` serve a preparare le successive chiamate alla funzione ``tone()`` e la variazione di tono e durata nel ciclo per migliorare l'effetto della riproduzione musicale.
 
-2. ``pitches.h``: The code uses an extra file, ``pitches.h``. This file contains all the pitch values for typical notes. For example, NOTE_C4 is middle C. NOTE_FS4 is F sharp, and so forth. This note table was originally written by Brett Hagman, on whose work the ``tone()`` command was based. You may find it useful whenever you want to make musical notes.
+2. ``pitches.h``: Il codice utilizza un file aggiuntivo, ``pitches.h``. Questo file contiene tutti i valori delle note musicali standard. Ad esempio, NOTE_C4 è il DO centrale. NOTE_FS4 è il FA diesis, e così via. Questa tabella delle note è stata originariamente scritta da Brett Hagman, il cui lavoro ha ispirato il comando ``tone()``. Potrebbe risultarti utile ogni volta che vorrai riprodurre note musicali.
 
 .. code-block:: arduino
 
     #include "pitches.h"
-
 .. note::
-    There is already a ``pitches.h`` file in this sample program. If we put it together with the main code in one folder, the successive steps of installing ``pitches.h`` can be omitted.
+    Questo programma di esempio contiene già un file ``pitches.h``. Se lo posizioniamo insieme al codice principale in una cartella, i passaggi successivi per l'installazione di ``pitches.h`` possono essere omessi.
 
 .. image:: img/image123.png
 
-After you open the code file, if you cannot open the
-``pitches.h`` code, you can just create one manually. The steps are as
-follows:
+Dopo aver aperto il file del codice, se non riesci ad aprire
+``pitches.h``, puoi crearne uno manualmente. I passaggi sono i seguenti:
 
-To make the ``pitches.h`` file, either click on the button just below the
-serial monitor icon and choose **New Tab**, or use **Ctrl+Shift+N**.
+Per creare il file ``pitches.h``, clicca sul pulsante appena sotto l'icona 
+del monitor seriale e seleziona **Nuova scheda**, oppure utilizza **Ctrl+Shift+N**.
 
 .. image:: img/image124.png
 
-Then paste in the following code and save it as ``pitches.h``:
+Poi incolla il seguente codice e salvalo come ``pitches.h``:
 
 .. code-block:: arduino
 

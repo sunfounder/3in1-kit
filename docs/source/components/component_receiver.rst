@@ -1,61 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_receiver:
 
-IR Receiver
+Ricevitore IR
 ===========================
 
-**IR Receiver**
+**Ricevitore IR**
 
 .. image:: img/ir_receiver_sl838.png
     :width: 400
     :align: center
 
-* **S**: Signal output
+* **S**: Uscita segnale
 * **-**: GND
-* **+**: power supply, 3.3v~5V
+* **+**: Alimentazione, 3.3V~5V
 
-SL838 infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Il ricevitore a infrarossi SL838 è un componente che riceve segnali infrarossi e può ricevere indipendentemente i raggi infrarossi ed emettere segnali compatibili con il livello TTL. Ha dimensioni simili a quelle di un normale transistor in plastica ed è adatto per tutti i tipi di telecomandi a infrarossi e trasmissione a infrarossi.
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+La comunicazione a infrarossi, o IR, è una tecnologia di comunicazione wireless popolare, a basso costo e facile da usare. La luce a infrarossi ha una lunghezza d'onda leggermente superiore alla luce visibile, quindi è impercettibile all'occhio umano, rendendola ideale per la comunicazione wireless. Uno schema di modulazione comune per la comunicazione a infrarossi è la modulazione a 38KHz.
+
+* Può essere utilizzato per il controllo remoto
+* Ampia tensione operativa: 2.7~5V
+* Filtro interno per la frequenza PCM
+* Compatibilità con TTL e CMOS
+* Forte capacità anti-interferenza
+* Conforme alla RoHS
 
 
-* Can be used for remote control
-* Wide operating voltage: 2.7~5V
-* Internal filter for PCM frequency
-* TTL and CMOS compatibility
-* Strong anti-interference ability
-* Compliant RoHS
-
-
-**Remote Control**
+**Telecomando**
 
 .. image:: img/image186.jpeg
     :width: 400
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+Questo è un mini telecomando wireless a infrarossi con 21 pulsanti funzionali e una distanza di trasmissione fino a 8 metri, ideale per comandare una vasta gamma di dispositivi in una stanza per bambini.
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* Dimensioni: 85x39x6mm
+* Portata del telecomando: 8-10m
+* Batteria: Batteria al litio manganese da 3V tipo a bottone
+* Frequenza portante a infrarossi: 38KHz
+* Materiale superficiale: PET da 0.125mm
+* Vita utile: oltre 20.000 utilizzi
 
 
-**Example**
+**Esempio**
 
 * :ref:`ar_receiver` (Basic Project)
 * :ref:`car_remote` (Car Project)

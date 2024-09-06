@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e concorsi**: Partecipa a concorsi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _car_move_code:
 
-2. Move by Code
-======================
+2. Movimento tramite codice
+==============================
 
-In the previous project, we have tried to control the operation of the motor by using different level signals for the input of the L9110 module.
+Nel progetto precedente, abbiamo controllato il funzionamento del motore utilizzando diversi segnali di livello per l'input del modulo L9110.
 
-If we modify the level signals through the program, then we can control the movement of the car in a flexible way.
+Se modifichiamo i segnali di livello attraverso il programma, possiamo controllare il movimento dell'auto in modo più flessibile.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+Per questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -54,22 +54,21 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tt_motor`
         - \-
 
-
-**Wiring**
+**Collegamenti**
 
 .. raw:: html
 
     <iframe width="600" height="400" src="https://www.youtube.com/embed/Dpxpb4wSq5k?si=ep6p_jzhm-DPU9w4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Connect the wires between the L9110 module and the R3 board according to the diagram below.
+Collega i fili tra il modulo L9110 e la scheda R3 seguendo lo schema qui sotto.
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
-    * - L9110 Module
-      - R3 Board
-      - Motor
+    * - Modulo L9110
+      - Scheda R3
+      - Motore
     * - A-1B
       - 5
       - 
@@ -84,40 +83,41 @@ Connect the wires between the L9110 module and the R3 board according to the dia
       - 
     * - OB(B)
       - 
-      - Black wire of right motor
+      - Filo nero del motore destro
     * - OA(B)
       - 
-      - Red wire of right motor
+      - Filo rosso del motore destro
     * - OB(A)
       - 
-      - Black wire of left motor
+      - Filo nero del motore sinistro
     * - OA(A)
       - 
-      - Red wire of left motor
+      - Filo rosso del motore sinistro
 
 .. image:: img/car_2.png
     :width: 800
 
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``2.move.ino`` file under the path of ``3in1-kit\car_project\2.move``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``2.move.ino`` nel percorso ``3in1-kit\car_project\2.move``.
+    * Oppure copia questo codice nell'**IDE di Arduino**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6ff67dfb-a1c1-474b-a106-6acbb3a39e6f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded, the car will move forward, backward, left and right for two seconds respectively.
+Dopo il caricamento del codice, l'auto si muoverà avanti, indietro, a sinistra e a destra per due secondi rispettivamente.
 
-**How it works?**
 
-This project is essentially the same as the previous one, involving making the car move forward, backward, left, and right, as well as stopping by providing different signal levels to the input pins of the L9110 module.
+**Come funziona?**
 
-#. Initialize the pins of L9110 module.
+Questo progetto è essenzialmente lo stesso del precedente, e consiste nel far muovere l'auto in avanti, indietro, a sinistra e a destra, nonché fermarsi, fornendo diversi segnali di livello ai pin di input del modulo L9110.
+
+#. Inizializza i pin del modulo L9110.
 
     .. code-block:: arduino
 
@@ -133,7 +133,7 @@ This project is essentially the same as the previous one, involving making the c
             pinMode(B_1A, OUTPUT);
         }
 
-#. Set the input pins to different high or low levels to control the rotation of the left and right motors, and then encapsulate them in individual functions.
+#. Imposta i pin di input su diversi livelli alti o bassi per controllare la rotazione dei motori sinistro e destro, quindi incapsulali in singole funzioni.
 
     .. code-block:: arduino
 
@@ -151,7 +151,7 @@ This project is essentially the same as the previous one, involving making the c
             digitalWrite(B_1A, HIGH);
         }
         ...
-#. Call these functions in ``loop()``.
+#. Chiama queste funzioni in ``loop()``.
 
     .. code-block:: arduino
 
@@ -169,21 +169,21 @@ This project is essentially the same as the previous one, involving making the c
 
 * `digitalWrite(pin, value) <https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/>`_
 
-    * ``pin``: the Arduino pin number.
-    * ``value``: HIGH or LOW.
+    * ``pin``: il numero del pin di Arduino.
+    * ``value``: HIGH o LOW.
     
-    Write a HIGH or a LOW value to a digital pin. If the pin has been configured as an ``OUTPUT`` with ``pinMode()``, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
+    Scrive un valore HIGH o LOW su un pin digitale. Se il pin è stato configurato come ``OUTPUT`` con ``pinMode()``, la sua tensione verrà impostata sul valore corrispondente: 5V (o 3.3V su schede a 3.3V) per HIGH, 0V (massa) per LOW.
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+    * ``pin``: il numero del pin di Arduino da impostare.
+    * ``mode``: INPUT, OUTPUT o INPUT_PULLUP.
     
-    Configures the specified pin to behave either as an input or an output.
+    Configura il pin specificato per comportarsi come input o output.
 
 * `delay(ms) <https://www.arduino.cc/reference/en/language/functions/time/delay/>`_
 
-    * ``ms``: the number of milliseconds to pause. Allowed data types: unsigned long.
+    * ``ms``: il numero di millisecondi di pausa. Tipi di dati consentiti: unsigned long.
 
-    Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.)
+    Mette in pausa il programma per il tempo specificato (in millisecondi) come parametro. (Ci sono 1000 millisecondi in un secondo.)
+

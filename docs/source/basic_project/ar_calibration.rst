@@ -1,57 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Unisciti agli appassionati per approfondire Raspberry Pi, Arduino ed ESP32 insieme a noi.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche grazie all'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime speciali.
+    - **Sconti esclusivi**: Approfitta di sconti riservati sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _ar_calibration:
 
-5.14 Calibration
+5.14 Calibrazione
 ==========================
 
-When you use analog input components, such as photoresistors, soil moisture sensors, etc., you may find that their reading range is not 0 to 1023, but rather a range like 0 to 800 or 600 to 1000, because it is impossible to reach the limits of these devices with normal use.
+Quando si utilizzano componenti con ingresso analogico, come fotoresistenze, sensori di umidità del terreno, ecc., si può notare che il loro intervallo di lettura non è 0-1023, ma piuttosto un intervallo come 0-800 o 600-1000, poiché è impossibile raggiungere i limiti di questi dispositivi con un uso normale.
 
-In this case, a technique for calibrating the sensor inputs can be used. During startup, have the control board measure the sensor readings for five seconds and record the highest and lowest readings. This five-second reading defines the minimum and maximum expected values of the readings taken during the cycle.
+In questo caso, è possibile utilizzare una tecnica di calibrazione degli ingressi dei sensori. Durante l'avvio, la scheda di controllo misura i valori dei sensori per cinque secondi e registra le letture massime e minime. Questo intervallo di cinque secondi definisce i valori minimi e massimi previsti per le letture che verranno effettuate durante il ciclo.
 
-
-In this project, we use a photoresistor and a passive buzzer to implement a `theremin <https://en.wikipedia.org/wiki/Theremin>`_ -like game using the calibration technique described above.
+In questo progetto, utilizziamo una fotoresistenza e un buzzer passivo per realizzare un gioco simile a un `theremin <https://en.wikipedia.org/wiki/Theremin>`_, sfruttando la tecnica di calibrazione descritta sopra.
 
 .. note::
-    The `theremin <https://en.wikipedia.org/wiki/Theremin>`_ is an electronic musical instrument that requires no physical contact. It generates different tones by sensing the position of the player's hands.
+    Il `theremin <https://en.wikipedia.org/wiki/Theremin>`_ è uno strumento musicale elettronico che non richiede contatto fisico. Genera diversi toni rilevando la posizione delle mani del musicista.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -68,43 +67,42 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_8.8_calibration.png
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/calibration_bb.jpg
     :width: 600
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.14.calibration.ino`` file under the path of ``3in1-kit\basic_project\5.14.calibration``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``5.14.calibration.ino`` nel percorso ``3in1-kit\basic_project\5.14.calibration``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oppure carica il codice tramite `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9cbcaae0-3c9d-4e33-9957-548f92a9aab7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, the LED will light up, and we will have 5 seconds to calibrate the detection range of the photoresistor. This is because we may be in a different light environment each time we use it (e.g. the light intensity is different between midday and dusk).
+Dopo che il codice è stato caricato con successo, il LED si accenderà e avremo 5 secondi per calibrare l'intervallo di rilevamento della fotoresistenza. Questo perché ogni volta che lo usiamo, potremmo trovarci in un ambiente con illuminazione diversa (ad esempio, la luce può variare tra mezzogiorno e il crepuscolo).
 
-At this time, we need to swing our hands up and down on top of the photoresistor, and the movement range of the hand will be calibrated to the playing range of this instrument.
+In questo momento, dobbiamo muovere le mani sopra la fotoresistenza, e il movimento della mano verrà calibrato per determinare l'intervallo di gioco di questo strumento.
 
-After 5 seconds, the LED will go out and we can wave our hands on the photoresistor to play.
+Dopo 5 secondi, il LED si spegnerà e potremo muovere le mani sopra la fotoresistenza per suonare.
 
 
 
-**How it works?**
 
-**How it works?**
+**Come funziona?**
 
-#. Set the initial values and pins of all components.
+#. Imposta i valori iniziali e i pin di tutti i componenti.
 
     .. code-block:: arduino
 
@@ -121,7 +119,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
         unsigned long previousMillis = 0;
         const long interval = 5000;
 
-#. Set up a calibration process in ``setup()``.
+#. Imposta un processo di calibrazione nel ``setup()``.
 
     .. code-block:: arduino
 
@@ -145,9 +143,9 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             digitalWrite(ledPin, LOW);
         }
 
-    The work flow is as follows.
+    Il flusso di lavoro è il seguente.
 
-    * using ``millis()`` for timing with an interval of 5000ms.
+    * Usare ``millis()`` per il temporizzatore con un intervallo di 5000ms.
 
     .. code-block:: arduino
 
@@ -157,7 +155,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
         ...
         }
 
-    * During these five seconds, wave a hand around the photoresistor, the maximum and minimum values ​​of the detected light are recorded and assigned to ``lightHigh`` and ``lightLow`` respectively.
+    * Durante questi cinque secondi, muovi la mano attorno alla fotoresistenza; i valori massimi e minimi rilevati vengono registrati e assegnati rispettivamente a ``lightHigh`` e ``lightLow``.
 
     .. code-block:: arduino
         
@@ -169,7 +167,7 @@ After 5 seconds, the LED will go out and we can wave our hands on the photoresis
             lightLow = sensorValue;
         }
 
-#. Now you can start playing this Thermin. Read the value of the photoresistor to ``sensorValue`` and map it from the small range to the large range to be used as the frequency of the buzzer. 
+#. Ora puoi iniziare a suonare questo Thermin. Leggi il valore della fotoresistenza in ``sensorValue`` e mappalo da un intervallo piccolo a uno grande, utilizzandolo come frequenza per il buzzer.
 
     .. code-block:: arduino
 

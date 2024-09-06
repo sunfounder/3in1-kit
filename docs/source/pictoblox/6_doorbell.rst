@@ -1,64 +1,63 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder di appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara & Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_doorbell:
 
-2.6 Doorbell
-======================
+2.6 Campanello
+=================
 
-Here, we will use the button and the bell on the stage to make a doorbell.
+In questo progetto, utilizzeremo il pulsante e la campanella sullo stage per creare un campanello.
 
-
-After the green flag is clicked, you can press the button and the bell on the stage will make a sound.
+Dopo aver cliccato sulla bandierina verde, puoi premere il pulsante e la campanella sullo stage emetterà un suono.
 
 .. image:: img/7_doorbell.png
 
-You Will Learn
----------------------
+Cosa imparerai
+-----------------
 
-- How the button work
-- Reading digital pin and ranges
-- Creating a conditional loop
-- Adding a backdrop
-- Playing sound
+- Come funziona un pulsante
+- Leggere i valori da un pin digitale
+- Creare un ciclo condizionale
+- Aggiungere uno sfondo
+- Riprodurre suoni
 
-Required Components
----------------------
+Componenti necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -73,50 +72,49 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_capacitor`
         - |link_capacitor_buy|
 
-Build the Circuit
------------------------
+Costruire il circuito
+-------------------------
 
-The button is a 4-pin device, since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Il pulsante è un dispositivo a 4 pin. Poiché il pin 1 è collegato al pin 2 e il pin 3 al pin 4, quando il pulsante viene premuto, i 4 pin sono collegati, chiudendo il circuito.
 
 .. image:: img/5_buttonc.png
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo il diagramma sottostante.
 
-* Connect one of the pins on the left side of the button to pin 12, which is connected to a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working).
-* Connect the other end of the resistor and capacitor to GND, and one of the pins on the right side of the button to 5V.
+* Collega uno dei pin sul lato sinistro del pulsante al pin 12, che è collegato a una resistenza pull-down e a un condensatore da 0,1uF (104) (per eliminare i disturbi e fornire un livello stabile quando il pulsante è attivo).
+* Collega l'altra estremità della resistenza e del condensatore a GND e uno dei pin sul lato destro del pulsante a 5V.
 
 .. image:: img/circuit/button_circuit.png
 
-Programming
-------------------
+Programmazione
+-----------------
 
-**1. Add a Backdrop**
+**1. Aggiungi uno sfondo**
 
-Click the **Choose a Backdrop** button in the lower right corner.
+Clicca sul pulsante **Scegli uno Sfondo** nell'angolo in basso a destra.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 1**.
+Scegli **Bedroom 1**.
 
 .. image:: img/7_bedroom2.png
 
-**2. Select the sprite**
+**2. Seleziona lo sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Elimina lo sprite predefinito, clicca sul pulsante **Scegli uno Sprite** nell'angolo in basso a destra dell'area sprite, inserisci **campanella** nella barra di ricerca e poi clicca per aggiungerla.
 
 .. image:: img/7_sprite.png
 
-Then select the **bell** sprite on the stage and move it to the right position.
+Quindi seleziona lo sprite **campanella** sullo stage e spostalo nella posizione corretta.
 
 .. image:: img/7_doorbell.png
 
-**3. Press the button and the bell makes a sound**
+**3. Premi il pulsante e la campanella emette un suono**
 
+Usa [se allora] per creare una condizione che, quando il valore del pin 12 letto è uguale a 1 (il pulsante è premuto), il suono **xylo1** verrà riprodotto.
 
-Use [if then] to make a conditional statement that when the value of the pin12 read is equal to 1 (the key is pressed), the sound **xylo1** will be played.
-
-* [read status of digital pin]: This block is from the **Arduino Uno** palette and used to read the value of a digital pin, the result is 0 or 1.
-* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: This block is a control block and from **Control** palette. If its boolean condition is true, the blocks held inside it will run, and then the script involved will continue. If the condition is false, the scripts inside the block will be ignored. The condition is only checked once; if the condition turns to false while the script inside the block is running, it will keep running until it has finished.
-* [play sound until done]: from the Sound palette, used to play specific sounds.
+* [leggi stato del pin digitale]: Questo blocco proviene dalla palette **Arduino Uno** e viene utilizzato per leggere il valore di un pin digitale, il risultato sarà 0 o 1.
+* [`if then <https://en.scratch-wiki.info/wiki/If_()_Then_(block)>`_]: Questo blocco è un blocco di controllo della palette **Controllo**. Se la sua condizione booleana è vera, i blocchi all'interno verranno eseguiti, altrimenti verranno ignorati.
+* [riproduci suono fino al termine]: dalla palette Suoni, utilizzato per riprodurre suoni specifici.
 
 .. image:: img/7_bell.png

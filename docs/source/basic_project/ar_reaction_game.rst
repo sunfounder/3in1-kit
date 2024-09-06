@@ -1,55 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e alle anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri nuovi prodotti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-6.5 Reaction Game
+.. _ar_reaction_game:
+
+6.5 Gioco di Reazione
 ==========================
 
-Our body has many reaction times, such as audio RT, visual RT, touch RT, etc.
+Il nostro corpo ha diversi tempi di reazione, come quello uditivo, visivo, tattile, ecc.
 
-Reaction times have many effects on our daily life, for example, slower than normal reaction times when driving can lead to serious consequences.
+I tempi di reazione influenzano molte attività della nostra vita quotidiana; ad esempio, tempi di reazione più lenti alla guida possono avere conseguenze gravi.
 
-In this project, we use 3 buttons and 2 LEDs to measure our visual reaction time.
+In questo progetto, utilizziamo 3 pulsanti e 2 LED per misurare il tempo di reazione visiva.
 
-The serial monitor of the Arduino displays the message "waiting..."
-After pressing the Ready button, one of the two LEDs must light up randomly after a random time interval. It is important that the testee pushes the corresponding button as soon as possible.
-The Arduino records the time difference between when the LED lights up and when the person presses the corresponding button, and prints the measured response time on the Arduino serial monitor.
+Il monitor seriale di Arduino visualizza il messaggio "waiting..."
+Dopo aver premuto il pulsante Ready, uno dei due LED si accenderà casualmente dopo un intervallo di tempo casuale. È importante che il partecipante preme il pulsante corrispondente il più velocemente possibile.
+Arduino registra il tempo che intercorre tra l'accensione del LED e la pressione del pulsante e stampa il tempo di reazione misurato sul monitor seriale di Arduino.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -64,33 +66,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/wiring_reaction_game.png
     :align: center
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/reaction_game.png
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\basic_project\6.5_reversingAid`` directly.
-    * Or copy this code into Arduino IDE .
+    * Puoi aprire il file ``6.5_reaction_time.ino`` nel percorso ``3in1-kit\basic_project\6.5_reversingAid`` direttamente.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
-    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`install_libraries_ar`.
-
+    * Assicurati di aver aggiunto la libreria ``LiquidCrystal_I2C``, fai riferimento al tutorial dettagliato: :ref:`install_libraries_ar`.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4313dd1c-e1d2-4939-ae20-0a5b82a12390/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Come funziona?**
 
-#. Initialize the buttons and LEDs, 2 interrupt are used here to read the button status.
+#. Inizializza i pulsanti e i LED, qui vengono utilizzati 2 interrupt per leggere lo stato dei pulsanti.
 
     .. code-block:: arduino
 
@@ -104,9 +105,7 @@ You can also buy them separately from the links below.
             ...
         }
 
-
-
-#. If the ``rstBtn`` button is pressed, the game starts again. At a random time between 2 and 5ms, make one of the LEDs light up.
+#. Se il pulsante ``rstBtn`` viene premuto, il gioco ricomincia. Dopo un intervallo di tempo casuale compreso tra 2 e 5ms, uno dei LED si accende.
 
     .. code-block:: arduino
 
@@ -132,11 +131,11 @@ You can also buy them separately from the links below.
             delay(200);
         }
 
-    * When flag is -1 and ``rstBtn`` button is pressed, use ``random()`` function to generate a random time of 2-5s.
-    * This time is then used to control the lighting of the LEDs.
-    * Also the lighting of 2 LEDs is randomly generated by ``randomTime % 2`` with 0 and 1. If flag is 0, then LED1 is lit; if 1, then LED2 is lit.
+    * Quando il flag è -1 e il pulsante ``rstBtn`` viene premuto, utilizza la funzione ``random()`` per generare un tempo casuale tra 2 e 5 secondi.
+    * Questo tempo viene poi utilizzato per controllare l'accensione dei LED.
+    * L'accensione dei 2 LED viene generata casualmente tramite ``randomTime % 2`` con 0 e 1. Se il flag è 0, si accende il LED1; se 1, si accende il LED2.
 
-#. About ``pressed1()`` function
+#. Funzione ``pressed1()``
 
     .. code-block:: arduino
 
@@ -155,9 +154,9 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 1 is pressed. When button 1 is pressed, if the flag is 0 at this time, the response time will be printed, otherwise the press error will be prompted.
+    Questa è la funzione che viene attivata quando viene premuto il pulsante 1. Se il flag è 0, viene stampato il tempo di reazione; altrimenti viene segnalato l'errore di pressione.
 
-#. About ``pressed2()`` function
+#. Funzione ``pressed2()``
 
     .. code-block:: arduino
 
@@ -176,6 +175,4 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 2 is pressed. When button 2 is pressed, if the flag is 1 at this time, the response time will be printed, otherwise the press error will be prompted.
-
-
+    Questa è la funzione che viene attivata quando viene premuto il pulsante 2. Se il flag è 1, viene stampato il tempo di reazione; altrimenti viene segnalato l'errore di pressione.

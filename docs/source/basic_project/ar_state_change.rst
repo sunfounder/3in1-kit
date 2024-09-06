@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi tecnici e post-vendita con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_state_change:
 
-5.3 State Change Detection
-===========================
+5.3 Rilevamento del Cambio di Stato
+=========================================
 
-When the button controls other devices, it can not only work when it is pressed, but stop when it is released.
-It is also possible to switch the working state each time the button is pressed.
+Quando il pulsante controlla altri dispositivi, non solo può attivarli quando viene premuto, ma anche fermarli quando viene rilasciato.
+È inoltre possibile commutare lo stato operativo ogni volta che il pulsante viene premuto.
 
-In order to achieve this effect, you need to know how to toggle the working state between off and on when the button is pressed,
-That is "state change detection".
+Per ottenere questo effetto, è necessario sapere come alternare lo stato di funzionamento tra acceso e spento quando il pulsante viene premuto, 
+ovvero il "rilevamento del cambio di stato".
 
-In this project, we will use the button to control the motor.
+In questo progetto, utilizzeremo il pulsante per controllare il motore.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -66,35 +66,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_8.3_statechange.png
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/5.3_state_change_l9110_bb.png
     :width: 800
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.3.state_change_detection.ino`` file under the path of ``3in1-kit\basic_project\5.3.state_change_detection``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``5.3.state_change_detection.ino`` nel percorso ``3in1-kit\basic_project\5.3.state_change_detection``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oppure carica il codice tramite l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/67a62a3d-46d3-4f5f-889c-364cbdf9b66f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you press the button and the motor will turn; until you press the button again, the motor will stop.
+Dopo aver caricato correttamente il codice, premi il pulsante e il motore si avvierà; fino a quando non premi nuovamente il pulsante, il motore si fermerà.
 
 
-**How it works?**
+**Come funziona?**
 
-#. Create variables and define pins for the motor and button.
+#. Crea variabili e definisci i pin per il motore e il pulsante.
 
     .. code-block:: arduino
 
@@ -103,10 +103,10 @@ After the code is uploaded successfully, you press the button and the motor will
         int buttonState = 0;         
         int lastButtonState = 0;    
 
-    * ``detectionState`` is a flag whose value changes each time the button is pressed, e.g., 0 this time, 1 the next, and so on alternately.
-    * ``buttonState`` and ``lastButtonState`` are used to record the state of the button this time and the last time, to compare whether the button was pressed or released.
+    * ``detectionState`` è una variabile che cambia il suo valore ogni volta che viene premuto il pulsante, ad esempio, 0 questa volta, 1 la prossima e così via alternativamente.
+    * ``buttonState`` e ``lastButtonState`` vengono utilizzati per registrare lo stato del pulsante questa volta e l'ultima volta, per confrontare se il pulsante è stato premuto o rilasciato.
 
-#. Initialize each pin and set the baud rate of the serial monitor.
+#. Inizializza ogni pin e imposta la velocità di trasmissione del monitor seriale.
 
     .. code-block:: arduino
 
@@ -118,7 +118,7 @@ After the code is uploaded successfully, you press the button and the motor will
         }
 
 
-#. First read the state of the button, and if the button is pressed, the variable ``detectionState`` will switch its value from 0 to 1 or 1 to 0. When ``detectionState`` is 1, the motor will be turned. It has the effect that this time the button is pressed, the motor turns, the next time the button is pressed, the motor stops, and so on alternately.
+#. Leggi lo stato del pulsante e, se premuto, la variabile ``detectionState`` cambierà il suo valore da 0 a 1 o da 1 a 0. Quando ``detectionState`` è 1, il motore si avvierà. L'effetto sarà che questa volta il pulsante viene premuto, il motore gira, la prossima volta che viene premuto, il motore si fermerà, e così via alternativamente.
 
     .. code-block:: arduino
 
@@ -145,16 +145,16 @@ After the code is uploaded successfully, you press the button and the motor will
         }
         }
 
-    The entire workflow is as follows.
+    Il flusso di lavoro completo è il seguente.
 
-    * Read the button value.
+    * Leggi il valore del pulsante.
 
     .. code-block:: arduino
 
         buttonState = digitalRead(buttonPin);
 
-    * If ``buttonState`` and ``lastButtonState`` are not equal, it means that the button state has changed, continue with the next judgment, and store the button state at this time into the variable ``lastButtonState``. ``delay(50)`` is used to eliminate jitter.
-    
+    * Se ``buttonState`` e ``lastButtonState`` non sono uguali, significa che lo stato del pulsante è cambiato, procedi con il successivo controllo, e memorizza lo stato del pulsante attuale nella variabile ``lastButtonState``. ``delay(50)`` viene utilizzato per eliminare il rimbalzo.
+
     .. code-block:: arduino
 
         if (buttonState != lastButtonState) {
@@ -163,7 +163,7 @@ After the code is uploaded successfully, you press the button and the motor will
         }
         lastButtonState = buttonState;
 
-    * When the button is pressed, its value is HIGH. Here, when the button is pressed, the value of the variable ``detectionState`` is changed, e.g., from 0 to 1 after an operation.
+    * Quando il pulsante è premuto, il suo valore è HIGH. Qui, quando il pulsante è premuto, il valore della variabile ``detectionState`` cambia, ad esempio, da 0 a 1 dopo un'operazione.
 
     .. code-block:: arduino
 
@@ -173,7 +173,7 @@ After the code is uploaded successfully, you press the button and the motor will
             Serial.println(detectionState);
             }
 
-    * When the variable ``detectionState`` is 1, let the motor rotate, otherwise stop.
+    * Quando la variabile ``detectionState`` è 1, fai ruotare il motore, altrimenti fermalo.
 
     .. code-block:: arduino
 

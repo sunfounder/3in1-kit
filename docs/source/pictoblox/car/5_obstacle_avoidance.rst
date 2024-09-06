@@ -1,52 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Immergiti più a fondo in Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue abilità.
+    - **Anteprime esclusive**: Ottieni accesso anticipato a nuove comunicazioni di prodotto e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _sh_avoid1:
 
-3.5 Obstacle avoidance
+3.5 Evitamento degli ostacoli
 ==================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+Due moduli di evitamento ostacoli a infrarossi sono montati sulla parte anteriore dell'auto e possono essere utilizzati per rilevare ostacoli vicini.
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+In questo progetto, l'auto può muoversi liberamente in avanti, e quando incontra un ostacolo, è in grado di evitarlo e continuare a muoversi in altre direzioni.
 
-Required Components
----------------------
+Componenti necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Starter Kit 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -57,17 +57,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
------------------------
+Costruire il circuito
+--------------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Il modulo di evitamento degli ostacoli è un sensore di prossimità a infrarossi con distanza regolabile, il cui output è normalmente alto e diventa basso quando viene rilevato un ostacolo.
 
-Now build the circuit according to the diagram below.
+Ora costruisci il circuito secondo il diagramma qui sotto.
 
 .. list-table:: 
 
-    * - Left IR Module
-      - R3 Board
+    * - Modulo IR sinistro
+      - Scheda R3
     * - OUT
       - 8
     * - GND
@@ -77,8 +77,8 @@ Now build the circuit according to the diagram below.
 
 .. list-table:: 
 
-    * - Right IR Module
-      - R3 Board
+    * - Modulo IR destro
+      - Scheda R3
     * - OUT
       - 7
     * - GND
@@ -89,68 +89,68 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-Adjust the Module
+Regolare il modulo
 -----------------------
 
-Before starting the project, you need to adjust the detection distance of the module.
+Prima di iniziare il progetto, è necessario regolare la distanza di rilevamento del modulo.
 
-Wiring according to the above diagram, power up the R3 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Cablare secondo lo schema sopra, alimenta la scheda R3 (collegando direttamente il cavo USB o il cavo della batteria da 9V), senza caricare il codice.
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+Posiziona un quaderno o qualsiasi altro oggetto piatto a circa 5 cm davanti al modulo di evitamento ostacoli IR.
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+Quindi usa un cacciavite per ruotare il potenziometro sul modulo finché l'indicatore di segnale sul modulo si illumina appena, per regolare la distanza massima di rilevamento a 5 cm.
 
-Follow the same method to adjust another infrared module.
+Segui lo stesso metodo per regolare un altro modulo a infrarossi.
 
 .. image:: img/ir_obs_cali.jpg
 
-Programming
----------------
+Programmazione
+------------------
 
-The effect we want to achieve.
+L'effetto che vogliamo ottenere.
 
-* When the left IR module detects an obstacle, the car goes backward to the left
-* When the right IR module detects an obstacle, the car goes backward to the right.
-* If both IR modules detect the obstacle, the car will go back directly.
-* Otherwise the car will go forward.
+* Quando il modulo IR sinistro rileva un ostacolo, l'auto arretra a sinistra.
+* Quando il modulo IR destro rileva un ostacolo, l'auto arretra a destra.
+* Se entrambi i moduli IR rilevano l'ostacolo, l'auto arretra direttamente.
+* Altrimenti, l'auto va avanti.
 
-Now create the corresponding blocks.
+Ora crea i blocchi corrispondenti.
 
-**1. The car goes backward to the left**
+**1. L'auto arretra a sinistra**
 
-When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left.
+Quando il motore destro gira in senso antiorario e il motore sinistro non gira, l'auto arretra a sinistra.
 
 .. image:: img/5_avoid1.png
 
-**2. The car goes backward to the right**
+**2. L'auto arretra a destra**
 
-When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+Quando il motore sinistro gira in senso orario e il motore destro non gira, l'auto arretra a destra.
 
 .. image:: img/5_avoid2.png
 
-**3. The car moves forward, backward and stops**
+**3. L'auto va avanti, indietro e si ferma**
 
 .. image:: img/5_avoid3.png
 
-**4. Read the values of the 2 IR modules**
+**4. Leggi i valori dei 2 moduli IR**
 
-Click **Make a variable** in the **Variables** palette.
+Fai clic su **Crea una variabile** nella palette **Variabili**.
 
 .. image:: img/5_avoid4.png
 
-Enter the variable name and click **OK** to create a new variable.
+Inserisci il nome della variabile e fai clic su **OK** per creare una nuova variabile.
 
 .. image:: img/5_avoid5.png
 
-Read the values of the left and right IR obstacle avoidance modules and store them in the 2 new variables.
+Leggi i valori dei moduli di evitamento ostacoli IR sinistro e destro e memorizzali nelle 2 nuove variabili.
 
 .. image:: img/5_avoid6.png
 
-**5. obstacle avoidance**
+**5. Evitamento degli ostacoli**
 
-* When the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-* When the right IR module is 0 (obstacle detected), let the car go back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will go backward.
-* Otherwise the car will keep going forward.
+* Quando il modulo IR sinistro è 0 (ostacolo rilevato) e il modulo IR destro è 1, fai arretrare l'auto a sinistra.
+* Quando il modulo IR destro è 0 (ostacolo rilevato), fai arretrare l'auto a destra.
+* Se 2 moduli IR rilevano l'ostacolo contemporaneamente, l'auto arretrerà.
+* Altrimenti l'auto continuerà ad andare avanti.
 
 .. image:: img/5_avoid7.png

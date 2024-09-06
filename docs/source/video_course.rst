@@ -1,53 +1,45 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video Courses
+Corsi video
 ===================
 
+* Per la sezione :ref:`basic_projects`
 
-* For :ref:`basic_projects` Sections
-
-    If you find the content in the online documentation difficult to comprehend, you can enhance your learning experience by following a progressive video course. These videos will make Arduino more engaging and visually appealing for you.
-
+    Se trovi difficile comprendere il contenuto della documentazione online, puoi migliorare la tua esperienza di apprendimento seguendo un corso video progressivo. Questi video renderanno Arduino più coinvolgente e visivamente accattivante per te.
 
     .. image:: img/video_learn.png
         :width: 800
 
+    Puoi accedere al corso video qui: |link_video_scott|.
 
+    In questi video scoprirai esperimenti e progetti affascinanti che presentano i concetti e i principi di Arduino in modo divertente e interattivo. Guardando i video e partecipando alle attività pratiche, vivrai un'esperienza di apprendimento entusiasmante e divertente con Arduino.
 
-    You can access the video course at: |link_video_scott|.
+* Per la sezione :ref:`car_projects`
 
-    In these videos, you'll discover fascinating experiments and projects that present Arduino concepts and principles in a fun and interactive manner. By watching the videos and participating in hands-on activities, you'll have an exciting and enjoyable learning experience with Arduino.
-
-
-* For the :ref:`car_projects` Sections
-
-    I recommend watching the following YouTube playlists to gain more guidance and hands-on experience: |link_video_roboja|.
+    Ti consiglio di guardare le seguenti playlist di YouTube per ottenere maggiore guida ed esperienza pratica: |link_video_roboja|.
 
     .. image:: img/video_car.png
         :width: 800
 
-    In these video, you will learn the fundamentals of robotics and Arduino through captivating video lessons. Step-by-step, you'll assemble a robot car while understanding the workings of motors, obstacle avoidance modules, line tracking modules, and infrared receivers. Explore how the car achieves various functions and unleash your creativity in the world of robotics and technology.
+    In questi video imparerai le basi della robotica e di Arduino attraverso lezioni video coinvolgenti. Passo dopo passo, assemblerai una macchina robotica mentre comprenderai il funzionamento di motori, moduli di evitamento ostacoli, moduli di tracciamento linee e ricevitori a infrarossi. Esplora come l'auto realizza varie funzioni e libera la tua creatività nel mondo della robotica e della tecnologia.
 
+* Riguardo la funzione WiFi
 
+    Nella sezione :ref:`iot_projects` del nostro tutorial online, imparerai a comunicare con la piattaforma IoT Blynk.
 
+    Nel video |link_video_roboja_iot|, verrai guidato nella scrittura di un server web e nel caricamento dei dati del sensore su di esso. Questo tutorial ti insegnerà come stabilire una connessione tra il tuo progetto Arduino e un server web utilizzando il WiFi.
 
-* About the WiFi Function
-
-    In the :ref:`iot_projects` section of our online tutorial, you will learn how to communicate with the IoT platform Blynk.
-
-    In |link_video_roboja_iot|, you will be guided on writing a web server and uploading sensor data to it. This tutorial will teach you how to establish a connection between your Arduino project and a web server using WiFi.
-    
     .. image:: img/video_iot.png
         :width: 800

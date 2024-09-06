@@ -1,63 +1,63 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Unisciti agli appassionati per approfondire Raspberry Pi, Arduino ed ESP32 insieme a noi.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e affronta sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti riservati sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _ar_dht11:
 
 
-5.11.3 Temperature - Humidity
+5.11.3 Temperatura - Umidità
 =======================================
 
-Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
-The temperature and humidity of human environment will directly affect the thermoregulatory function and heat transfer effect of human body.
-It will further affect the thinking activity and mental state, thus affecting the efficiency of our study and work.
+Temperatura e umidità sono strettamente correlate, sia come grandezze fisiche che nella vita quotidiana delle persone.
+La temperatura e l'umidità dell'ambiente umano influiscono direttamente sulla funzione di termoregolazione e sull'effetto di trasferimento del calore del corpo umano.
+Questo influisce ulteriormente sull'attività mentale e sullo stato psicologico, e di conseguenza sull'efficienza del nostro studio e lavoro.
 
-Temperature is one of the seven basic physical quantities in the International System of Units, which is used to measure the degree of hot and cold of an object.
-Celsius is one of the more widely used temperature scales in the world, expressed by the symbol "℃".
+La temperatura è una delle sette grandezze fisiche fondamentali nel Sistema Internazionale di Unità, utilizzata per misurare il grado di calore o freddo di un oggetto.
+Il Celsius è una delle scale di temperatura più utilizzate al mondo, rappresentata dal simbolo "℃".
 
-Humidity is the concentration of water vapor present in the air.
-The relative humidity of air is commonly used in life and is expressed in %RH. Relative humidity is closely related to temperature.
-For a certain volume of sealed gas, the higher the temperature, the lower the relative humidity, and the lower the temperature, the higher the relative humidity.
+L'umidità è la concentrazione di vapore acqueo presente nell'aria.
+Nella vita quotidiana si utilizza comunemente l'umidità relativa dell'aria, espressa in %RH. L'umidità relativa è strettamente legata alla temperatura.
+Per un certo volume di gas sigillato, maggiore è la temperatura, minore è l'umidità relativa, e minore è la temperatura, maggiore è l'umidità relativa.
 
 .. image:: img/Dht11.png
 
-The dht11, a digital temperature and humidity sensor, is provided in this kit. It uses a capacitive humidity sensor and thermistor to measure the surrounding air and outputs a digital signal on the data pin.
+Il dht11, un sensore digitale di temperatura e umidità, è incluso in questo kit. Utilizza un sensore capacitivo di umidità e un termistore per misurare l'aria circostante ed emette un segnale digitale sul pin dei dati.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente comodo acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK DI ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -69,21 +69,21 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_7.3_dht11.png
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/dht11_bb.jpg
 
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``5.11.temperature_humidity.ino`` file under the path of ``3in1-kit\basic_project\5.11.temperature_humidity``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``DHT sensor library`` is used here, you can install it from the **Library Manager**.
+    * Apri il file ``5.11.temperature_humidity.ino`` nel percorso ``3in1-kit\basic_project\5.11.temperature_humidity``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
+    * Qui viene utilizzata la ``DHT sensor library``, che puoi installare dal **Library Manager**.
 
         .. image:: ../img/lib_dht11.png
 
@@ -91,11 +91,11 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c5b4c902-f39d-45a6-9a17-1308056041a8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Dopo aver caricato correttamente il codice, vedrai il Monitor Seriale stampare continuamente la temperatura e l'umidità, e man mano che il programma si stabilizza, questi due valori diventeranno sempre più accurati.
 
-**How it works?**
+**Come funziona?**
 
-#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
+#.  Includi la libreria ``DHT.h``, che fornisce funzioni per interagire con i sensori DHT. Successivamente, imposta il pin e il tipo per il sensore DHT.
 
     .. code-block:: arduino
 
@@ -106,7 +106,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
 
         DHT dht(DHTPIN, DHTTYPE);
 
-#. Initializes serial communication at a baud rate of 115200 and initializes the DHT sensor.
+#. Inizializza la comunicazione seriale a una velocità di trasmissione di 115200 e inizializza il sensore DHT.
 
     .. code-block:: arduino
 
@@ -116,7 +116,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             dht.begin();
         }
 
-#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the serial monitor.
+#. Nella funzione ``loop()``, leggi i valori di temperatura e umidità dal sensore DHT11 e stampali sul monitor seriale.
 
     .. code-block:: arduino
 
@@ -144,6 +144,7 @@ After the code is uploaded successfully, you will see the Serial Monitor continu
             Serial.println(" *C");
         }
 
-    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
-    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
-    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.
+    * La funzione ``dht.readHumidity()`` viene chiamata per leggere il valore dell'umidità dal sensore DHT.
+    * La funzione ``dht.readTemperature()`` viene chiamata per leggere il valore della temperatura dal sensore DHT.
+    * La funzione ``isnan()`` viene utilizzata per verificare se le letture sono valide. Se il valore dell'umidità o della temperatura è NaN (not a number), indica una lettura fallita dal sensore, e viene stampato un messaggio di errore.
+

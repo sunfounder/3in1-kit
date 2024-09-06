@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e concorsi**: Partecipa a concorsi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _car_ultrasonic:
 
-6. Play with Ultrasonic Module
+6. Gioca con il Modulo Ultrasonico
 =====================================
 
-In :ref:`car_ir_obstacle` project, the 2 infrared obstacle avoidance modules are used for obstacle avoidance, but the detection distance of IR obstacle avoidance module is short, which may make the car too late to avoid the obstacles.
+Nel progetto :ref:`car_ir_obstacle`, i 2 moduli a infrarossi vengono utilizzati per l'evitamento degli ostacoli, ma la distanza di rilevamento del modulo IR è corta, il che potrebbe far sì che l'auto reagisca troppo tardi agli ostacoli.
 
-In this project, we use ultrasonic module to do some long-distance detection, so that the car can sense obstacles at a farther distance to make a judgment.
+In questo progetto, utilizziamo il modulo ultrasonico per eseguire un rilevamento a lunga distanza, in modo che l'auto possa percepire gli ostacoli da una distanza maggiore e prendere decisioni di conseguenza.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+Per questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,22 +56,22 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ultrasonic`
         - |link_ultrasonic_buy|
 
-**Wiring**
+**Collegamenti**
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. 
-It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle.
+Un modulo sensore ultrasonico è uno strumento che misura la distanza di un oggetto utilizzando onde sonore ultrasoniche.
+Ha due sonde. Una invia onde ultrasoniche e l'altra riceve le onde, trasformando il tempo di invio e ricezione in una distanza, rilevando così la distanza tra il dispositivo e un ostacolo.
 
 .. raw:: html
 
     <iframe width="600" height="400" src="https://www.youtube.com/embed/qx9ZH-YnAkg?si=wfrsDrmGCPa2nYPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Now build the circuit according to the following diagram.
+Ora costruisci il circuito secondo il seguente schema.
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R3 Board
+    * - Modulo Ultrasonico
+      - Scheda R3
     * - Vcc
       - 5V
     * - Trig
@@ -84,28 +84,28 @@ Now build the circuit according to the following diagram.
 .. image:: img/car_6.png
     :width: 800
 
-
-**Code**
+**Codice**
 
 .. note::
 
-    * Open the ``6.ultrasonic_module.ino`` file under the path of ``3in1-kit\car_project\6.ultrasonic_module``.
-    * Or copy this code into **Arduino IDE**.
+    * Apri il file ``6.ultrasonic_module.ino`` nel percorso ``3in1-kit\car_project\6.ultrasonic_module``.
+    * Oppure copia questo codice nell'**IDE di Arduino**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Oppure carica il codice tramite `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ae97f966-9d72-40e6-aa9f-e0767ddf5bd5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, turn the car towards the wall. If the distance is too far, it will move forward; if it is too close, it will move backward; if it is at a safe distance, it will stop.
+Dopo che il codice sarà caricato con successo, gira l'auto verso il muro. Se la distanza è troppo grande, l'auto avanzerà; se è troppo vicina, arretrerà; se si trova a una distanza di sicurezza, si fermerà.
 
-**How it works?**
 
-This project is based on the distance read by the ultrasonic module to make the car move accordingly.
+**Come funziona?**
 
-#. Add the pin definition for the ultrasonic module, ``trigPin`` is used to transmit ultrasonic wave, so set it to ``OUTPUT``; ``echoPin`` is set to ``INPUT`` to receive ultrasonic wave.
+Questo progetto si basa sulla distanza letta dal modulo ultrasonico per far muovere l'auto di conseguenza.
+
+#. Aggiungi la definizione dei pin per il modulo ultrasonico, ``trigPin`` viene utilizzato per trasmettere l'onda ultrasonica, quindi impostalo su ``OUTPUT``; ``echoPin`` è impostato su ``INPUT`` per ricevere l'onda ultrasonica.
 
     .. code-block:: arduino
 
@@ -121,7 +121,7 @@ This project is based on the distance read by the ultrasonic module to make the 
             pinMode(trigPin, OUTPUT);
         }
 
-#. First read the distance value obtained from the ultrasonic module, if the distance is greater than 25, let the car move forward; if the distance is between 2-10cm, let the car move backward, otherwise (between 10~25) stop.
+#. Leggi il valore della distanza ottenuto dal modulo ultrasonico: se la distanza è maggiore di 25, fai avanzare l'auto; se la distanza è compresa tra 2 e 10 cm, fai arretrare l'auto; altrimenti (tra 10 e 25) fermati.
 
     .. code-block:: arduino
 
@@ -137,9 +137,9 @@ This project is based on the distance read by the ultrasonic module to make the 
             }
         }
 
-#. About ``readSensorData()`` function.
+#. A proposito della funzione ``readSensorData()``.
 
-    The transmitter of the ultrasonic module transmits a 10us square wave signal every 2us, and the receiver receives a high level signal if there is an obstacle within the range. Use the ``pulseIn()`` function to record the time from sending to receiving, divide by the speed of sound 340m/s, and then divide by 2, the result is the distance between this module and the obstacle with units: cm.
+    Il trasmettitore del modulo ultrasonico trasmette un segnale a onda quadra da 10us ogni 2us, e il ricevitore riceve un segnale di livello alto se c'è un ostacolo entro il raggio di rilevamento. Utilizza la funzione ``pulseIn()`` per registrare il tempo dall'invio alla ricezione, dividi per la velocità del suono 340m/s, e poi dividi per 2; il risultato è la distanza tra il modulo e l'ostacolo in cm.
 
     .. code-block:: arduino
 
@@ -155,7 +155,7 @@ This project is based on the distance read by the ultrasonic module to make the 
 
 * `pulseIn(pin, value) <https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/>`_
 
-    * ``pin``: the number of the Arduino pin on which you want to read the pulse. Allowed data types: int.
-    * ``value``: type of pulse to read: either HIGH or LOW. Allowed data types: int.
+    * ``pin``: il numero del pin di Arduino da cui vuoi leggere l'impulso. Tipi di dati ammessi: int.
+    * ``value``: tipo di impulso da leggere: HIGH o LOW. Tipi di dati ammessi: int.
 
-    Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, ``pulseIn()`` waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW and stops timing.
+    Legge un impulso (HIGH o LOW) su un pin. Ad esempio, se il valore è HIGH, ``pulseIn()`` attende che il pin passi da LOW a HIGH, avvia il conteggio del tempo, poi attende che il pin torni a LOW e ferma il conteggio.

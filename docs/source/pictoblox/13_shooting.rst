@@ -1,63 +1,63 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati SunFounder per Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a promozioni festive e concorsi con premi.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_shooting:
 
-2.13 GAME - Shooting
+2.13 GIOCO - Tiro al Bersaglio
 ====================================
 
-Have you seen those shooting games on TV? The closer a contestant shoots a bullet on the target to the bullseye, the higher his score.
+Hai mai visto quei giochi di tiro in TV? Più vicino un concorrente spara un proiettile al centro del bersaglio, più alto sarà il suo punteggio.
 
-Today we are also doing a shooting game in Scratch. In the game, let the Crosshair shoot as far as possible to the bullseye to get a higher score.
+Oggi realizziamo anche noi un gioco di tiro con Scratch. Nel gioco, fai in modo che il mirino spari il più vicino possibile al centro del bersaglio per ottenere un punteggio più alto.
 
-Click on the green flag to start. Use the Obstacle Avoidance module to shoot an bullet.
+Clicca sulla bandiera verde per iniziare. Usa il modulo di evitamento ostacoli per sparare un proiettile.
 
 .. image:: img/14_shooting.png
 
-You Will Learn
+Cosa Imparerai
 ---------------------
 
-- How the Obstacle Avoidance module works and the angle range
-- Paint different sprites
-- Touch colors
+- Come funziona il modulo di evitamento ostacoli e il suo intervallo angolare
+- Disegnare diversi sprite
+- Riconoscimento dei colori
 
-Required Components
----------------------
+Componenti Necessari
+------------------------
 
-In this project, we need the following components. 
+In questo progetto, ci servono i seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Kit Starter 3 in 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -66,79 +66,79 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-Build the Circuit
------------------------
+Costruire il Circuito
+------------------------
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Il modulo di evitamento ostacoli è un sensore di prossimità a infrarossi regolabile in distanza il cui output è normalmente alto e diventa basso quando viene rilevato un ostacolo.
 
-Now build the circuit according to the diagram below.
+Ora costruisci il circuito seguendo lo schema sottostante.
 
 .. image:: img/circuit/avoid_circuit.png
 
-Programming
-------------------
+Programmazione
+-------------------
 
-**1. Paint the Crosshair sprite**
+**1. Disegna lo sprite Mirino**
 
-Delete the default sprite, select the **Sprite** button and click **Paint**, a blank sprite **Sprite1** will appear and name it **Crosshair**.
+Elimina lo sprite predefinito, seleziona il pulsante **Sprite** e clicca su **Disegna**, apparirà uno sprite vuoto chiamato **Sprite1** che rinominerai in **Mirino**.
 
 .. image:: img/14_shooting0.png
 
 
-Go to the **Crosshair** sprite's **Costumes** page. Click on the **Circle** tool, remove the fill color, and set the color and width of the outline.
+Vai alla pagina **Costumi** dello sprite **Mirino**. Clicca sullo strumento **Cerchio**, rimuovi il colore di riempimento e imposta il colore e lo spessore del contorno.
 
 .. image:: img/14_shooting02.png
 
-Now draw a circle with the **Circle** tool. After drawing, you can click to the **Select** tool and move the circle so that the original point is aligned with the center of the canvas.
+Ora disegna un cerchio con lo strumento **Cerchio**. Dopo averlo disegnato, puoi cliccare sullo strumento **Seleziona** e spostare il cerchio in modo che il punto originale sia allineato con il centro della tela.
 
 .. image:: img/14_shooting03.png
 
-Using the **Line** tool, draw a cross inside the circle.
+Usando lo strumento **Linea**, disegna una croce all'interno del cerchio.
 
 .. image:: img/14_shooting033.png
 
-**Paint the Target sprite**
+**Disegna lo sprite Bersaglio**
 
-Create a new sprite called **Target** sprite.
+Crea un nuovo sprite chiamato **Bersaglio**.
 
 .. image:: img/14_shooting01.png
 
-Go to the Costumes page of the **Target** sprite, click on the **Circle** tool, select a fill color and remove the Outline and paint a large circle.
+Vai alla pagina Costumi dello sprite **Bersaglio**, clicca sullo strumento **Cerchio**, seleziona un colore di riempimento e rimuovi il contorno, poi disegna un grande cerchio.
 
 .. image:: img/14_shooting05.png
 
-Use the same method to draw additional circles, each with a different color, and you can use the **Forward** or **Backbard** tool to change the position of the overlapping circles. Note that you also need to select the tool to move the circles, so that the origin of all the circles and the center of the canvas are aligned.
+Usa lo stesso metodo per disegnare ulteriori cerchi, ciascuno con un colore diverso, e puoi utilizzare lo strumento **Avanti** o **Indietro** per modificare la posizione dei cerchi sovrapposti. Nota che devi anche selezionare lo strumento per spostare i cerchi, in modo che l'origine di tutti i cerchi e il centro della tela siano allineati.
 
 .. image:: img/14_shooting04.png
 
-**3. Add a backdrop**
+**3. Aggiungi uno sfondo**
 
-Add a suitable background which preferably does not have too many colors and does not match the colors in the **Target** sprite. Here I have chosen **Wall1** backdrop.
+Aggiungi uno sfondo adeguato che preferibilmente non abbia troppi colori e non corrisponda ai colori dello sprite **Bersaglio**. Qui ho scelto lo sfondo **Wall1**.
 
 .. image:: img/14_shooting06.png
 
-**4. Script the Crosshair sprite**
+**4. Script per lo sprite Mirino**
 
-Set the random position and size of the **Crosshair** sprite, and let it move randomly.
+Imposta la posizione e la dimensione casuale dello sprite **Mirino** e fallo muovere in modo casuale.
 
 .. image:: img/14_shooting4.png
 
-When a hand is placed in front of the obstacle avoidance module, it will output a low level as a transmit signal.
+Quando una mano viene posta di fronte al modulo di evitamento ostacoli, esso emetterà un segnale basso come segnale di trasmissione.
 
 .. image:: img/14_shooting5.png
 
-When the **shooting** message is received, the sprite stops moving and slowly shrinks, thus simulating the effect of a bullet being shot.
+Quando viene ricevuto il messaggio **sparo**, lo sprite smette di muoversi e si restringe lentamente, simulando così l'effetto di un proiettile sparato.
 
 .. image:: img/14_shooting6.png
 
-Use the [Touch color ()] block to determine the position of the shot.
+Usa il blocco [Tocca colore ()] per determinare la posizione del colpo.
 
 .. image:: img/14_shooting7.png
 
-When the shot is inside the yellow circle, 10 is reported.
+Quando il colpo è all'interno del cerchio giallo, viene segnalato un punteggio di 10.
 
 .. image:: img/14_shooting8.png
 
-Use the same method to determine the position of the bullet shot, if it is not set on the **Target** sprite, it means it is out of the circle.
+Usa lo stesso metodo per determinare la posizione del proiettile sparato, se non è impostato sullo sprite **Bersaglio**, significa che è fuori dal cerchio.
 
 .. image:: img/14_shooting9.png

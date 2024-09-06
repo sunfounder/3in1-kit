@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community SunFounder di appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato a nuovi annunci di prodotto e anteprime esclusive.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _sh_light_alarm:
 
-2.8 Light Alarm Clock
+2.8 Sveglia a Luce
 ======================
 
-In life, there are various kinds of time alarm clocks. Now let's make a light-controlled alarm clock. When morning comes, the brightness of light increases and this light-controlled alarm clock will remind you that it's time to get up.
+Nella vita quotidiana ci sono vari tipi di sveglie. Ora realizziamo una sveglia controllata dalla luce. Quando arriva il mattino e la luminosità della luce aumenta, questa sveglia ti ricorderà che è ora di alzarsi.
 
 .. image:: img/10_clock.png
 
-You Will Learn
----------------------
+Cosa Imparerai
+-----------------
 
-- Photoresistor working principle
-- Stopping sound playback and stopping scripts from running
+- Principio di funzionamento della fotoresistenza
+- Interrompere la riproduzione del suono e fermare l'esecuzione degli script
 
-Required Components
----------------------
+Componenti Necessari
+-------------------------
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - COMPONENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -62,52 +62,52 @@ You can also buy them separately from the links below.
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
         - |link_resistor_buy|
-    *   - :ref:`cpn_photoresistor` 
+    *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Build the Circuit
------------------------
+Costruire il Circuito
+-------------------------
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity.
+Un fotoresistore, o cellula fotoelettrica, è un resistore variabile controllato dalla luce. La resistenza di un fotoresistore diminuisce all'aumentare dell'intensità della luce incidente.
 
-Build the circuit according to the following diagram.
+Costruisci il circuito seguendo il diagramma sottostante.
 
-Connect one end of the photoresistor to 5V, the other end to A0, and connect a 10K resistor in series with GND at this end.
+Collega un'estremità del fotoresistore a 5V, l'altra estremità ad A0, e collega una resistenza da 10K in serie con GND a questa estremità.
 
-So when the light intensity increases, the resistance of a photoresistor decreases, the voltage division of the 10K resistor increases, and the value obtained by A0 becomes larger.
+Così, quando l'intensità della luce aumenta, la resistenza del fotoresistore diminuisce, il partitore di tensione sulla resistenza da 10K aumenta, e il valore ottenuto da A0 diventa più grande.
 
 .. image:: img/circuit/photoresistor_circuit.png
 
-Programming
+Programmazione
 ------------------
 
-**1. Select a sprite**
+**1. Seleziona uno sprite**
 
-Delete the default sprite, click the **Choose a Sprite** button in the lower right corner of the sprite area, enter **bell** in the search box, and then click to add it.
+Elimina lo sprite predefinito, clicca sul pulsante **Scegli uno Sprite** nell'angolo in basso a destra dell'area degli sprite, inserisci **campanello** nella barra di ricerca, e poi clicca per aggiungerlo.
 
 .. image:: img/10_sprite.png
 
-**2. Read the value of A0**
+**2. Leggi il valore di A0**
 
-Create two variables **before** and **current**. When green flag is clicked, read the value of A0 and store it in variable **before** as a reference value. In [forever], read the value of A0 again, store it in the variable **current**.
+Crea due variabili **prima** e **corrente**. Quando viene cliccata la bandierina verde, leggi il valore di A0 e memorizzalo nella variabile **prima** come valore di riferimento. Nel blocco [forever], leggi di nuovo il valore di A0 e memorizzalo nella variabile **corrente**.
 
 .. image:: img/10_reada0.png
 
-**3. Make a sound**
+**3. Emetti un suono**
 
-When the value of current A0 is greater than the previous 50, which represents the current light intensity is greater than the threshold, then let the sprite make a sound.
+Quando il valore di A0 corrente è maggiore di 50 rispetto al valore precedente, il che rappresenta un aumento dell'intensità della luce sopra la soglia, fai emettere un suono allo sprite.
 
 .. image:: img/10_sound.png
 
-**4. Turning the sprite**
+**4. Ruota lo sprite**
 
-Use [turn block] to make the **bell** sprite turn left and right to achieve the alarm effect.
+Utilizza il blocco [gira] per far ruotare lo sprite **campanello** a sinistra e a destra per ottenere l'effetto sveglia.
 
 .. image:: img/10_turn.png
 
-**5. stop all**
+**5. Ferma tutto**
 
-Stops the alarm when it has been ringing for a while.
+Interrompi l'allarme dopo che ha suonato per un po'.
 
 .. image:: img/10_stop.png
 

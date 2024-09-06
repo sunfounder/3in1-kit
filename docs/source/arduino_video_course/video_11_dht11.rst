@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 11: DHT11 Sensor
+Video 11: Sensore DHT11
 ==========================
 
-This video provides an in-depth tutorial on Arduino libraries and practical usage of the DHT11 temperature and humidity sensor, including installation, coding, and an application example.
+Questo video offre un tutorial approfondito sulle librerie Arduino e sull'uso pratico del sensore di temperatura e umidità DHT11, inclusa l'installazione, la codifica e un esempio applicativo.
 
-* **Introduction to Arduino Libraries**: Explaining the concept, purpose, and installation methods of Arduino libraries.
-* **DHT11 Sensor Capabilities**: Technical specifications, including temperature and humidity range, accuracy, and operating voltage.
-* **Sensor Wiring Guide**: Step-by-step instructions on how to correctly wire the DHT11 sensor to an Arduino board.
-* **Reading Sensor Data**: Techniques for using Arduino code to read and interpret data from the DHT11 sensor.
-* **Coding Walkthrough**: Detailed explanation of the Arduino code necessary for operating the DHT11 sensor.
-* **Practical Demonstration**: Implementing a real-world application by triggering a buzzer based on temperature readings from the DHT11 sensor.
+* **Introduzione alle Librerie Arduino**: Spiegazione del concetto, dello scopo e dei metodi di installazione delle librerie Arduino.
+* **Capacità del Sensore DHT11**: Specifiche tecniche, inclusi intervalli di temperatura e umidità, precisione e tensione di funzionamento.
+* **Guida al Collegamento del Sensore**: Istruzioni passo-passo su come collegare correttamente il sensore DHT11 a una scheda Arduino.
+* **Lettura dei Dati del Sensore**: Tecniche per utilizzare il codice Arduino per leggere e interpretare i dati dal sensore DHT11.
+* **Guida alla Codifica**: Spiegazione dettagliata del codice Arduino necessario per far funzionare il sensore DHT11.
+* **Dimostrazione Pratica**: Implementazione di un'applicazione reale attivando un cicalino in base alle letture di temperatura del sensore DHT11.
 
 **Video**
 
@@ -32,6 +32,6 @@ This video provides an in-depth tutorial on Arduino libraries and practical usag
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial Online Correlati**
 
 * :ref:`ar_dht11`

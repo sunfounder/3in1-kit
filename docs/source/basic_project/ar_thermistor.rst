@@ -1,59 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi tecnici e post-vendita con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato ai nuovi annunci di prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a promozioni e omaggi durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _ar_temp:
 
-4.5 Thermometer
+4.5 Termometro
 ===========================
 
-A thermometer is a device that measures temperature or a temperature gradient (the degree of hotness or coldness of an object). 
-A thermometer has two important elements: (1) a temperature sensor (e.g. the bulb of a mercury-in-glass thermometer or the pyrometric sensor in an infrared thermometer) in which some change occurs with a change in temperature; 
-and (2) some means of converting this change into a numerical value (e.g. the visible scale that is marked on a mercury-in-glass thermometer or the digital readout on an infrared model). 
-Thermometers are widely used in technology and industry to monitor processes, in meteorology, in medicine, and in scientific research.
+Un termometro è un dispositivo che misura la temperatura o un gradiente di temperatura (il grado di caldo o freddo di un oggetto).
+Un termometro ha due elementi importanti: (1) un sensore di temperatura (ad es. il bulbo di un termometro a mercurio o il sensore pirometrico di un termometro a infrarossi) in cui avviene una variazione in base alla temperatura; 
+e (2) un mezzo per convertire questa variazione in un valore numerico (ad es. la scala visibile su un termometro a mercurio o il display digitale su un modello a infrarossi).
+I termometri sono ampiamente utilizzati in tecnologia e nell'industria per monitorare i processi, in meteorologia, in medicina e nella ricerca scientifica.
 
+Un termistore è un tipo di sensore di temperatura la cui resistenza dipende fortemente dalla temperatura, ed esistono due tipi:
+Coefficiente di Temperatura Negativo (NTC) e Coefficiente di Temperatura Positivo (PTC),
+noti anche come NTC e PTC. La resistenza del termistore PTC aumenta con l'aumentare della temperatura, mentre per l'NTC accade l'opposto.
 
-A thermistor is a type of temperature sensor whose resistance is strongly dependent on temperature, and it has two types: 
-Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC), 
-also known as NTC and PTC. The resistance of PTC thermistor increases with temperature, while the condition of NTC is opposite to the former.
+In questo esperimento utilizziamo un **termistore NTC** per realizzare un termometro.
 
-In this experiment we use an **NTC thermistor** to make a thermometer.
+**Componenti necessari**
 
-**Required Components**
+In questo progetto, ci servono i seguenti componenti.
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -66,58 +65,55 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-**Schematic**
+**Schema**
 
 .. image:: img/circuit_5.5_thermistor.png
 
-Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius. 
+Ogni termistore ha una resistenza nominale. In questo caso è di 10k ohm, misurata a 25 gradi Celsius.
 
-When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. 
+Quando la temperatura aumenta, la resistenza del termistore diminuisce. Poi i dati di tensione vengono convertiti in quantità digitali dall'adattatore A/D.
 
-The temperature in Celsius or Fahrenheit is output via programming. 
+La temperatura in Celsius o Fahrenheit viene visualizzata tramite programmazione.
 
-Here is the relation between the resistance and temperature: 
+Ecco la relazione tra la resistenza e la temperatura:
 
-    **RT =RN expB(1/TK – 1/TN)** 
+    **RT =RN expB(1/TK – 1/TN)**
 
-    * **RT** is the resistance of the NTC thermistor when the temperature is **TK**. 
-    * **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k. 
-    * **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of **TK** is ``273.15 + degree Celsius``. 
-    * **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is ``273.15+25``.
-    * And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value ``3950``. 
-    * **exp** is the abbreviation of exponential, and the base number ``e`` is a natural number and equals 2.7 approximately. 
+    * **RT** è la resistenza del termistore NTC alla temperatura **TK**.
+    * **RN** è la resistenza del termistore NTC alla temperatura nominale TN. Qui il valore numerico di RN è 10k.
+    * **TK** è una temperatura Kelvin e l'unità è K. Qui, il valore numerico di **TK** è ``273,15 + gradi Celsius``.
+    * **TN** è una temperatura nominale in Kelvin; anche l'unità è K. Qui, il valore numerico di TN è ``273,15+25``.
+    * E **B(beta)**, la costante di materiale del termistore NTC, è chiamata indice di sensibilità termica con un valore numerico ``3950``.
+    * **exp** è l'abbreviazione di esponenziale, e il numero base ``e`` è un numero naturale ed è approssimativamente uguale a 2,7.
 
-    Convert this formula ``TK=1/(ln(RT/RN)/B+1/TN)`` to get Kelvin temperature that minus 273.15 equals degree Celsius. 
+    Converti questa formula ``TK=1/(ln(RT/RN)/B+1/TN)`` per ottenere la temperatura in Kelvin, che sottraendo 273,15 dà i gradi Celsius.
 
-    This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+    Questa relazione è una formula empirica. È accurata solo quando la temperatura e la resistenza sono all'interno del range effettivo.
 
-
-**Wiring**
+**Collegamenti**
 
 .. note::
-    * The thermistor is black or green and marked 103.
+    * Il termistore è nero o verde e contrassegnato con 103.
 
 .. image:: img/thermistor_bb.png
     :width: 600
     :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-   * You can open the file ``4.5_thermometer.ino`` under the path of ``euler-kit/arduino/4.5_thermometer``. 
-   * Or copy this code into **Arduino IDE**.
+   * Apri il file ``4.5_thermometer.ino`` nel percorso ``euler-kit/arduino/4.5_thermometer``.
+   * Oppure copia questo codice nell'**Arduino IDE**.
    
-   * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+   * Oppure carica il codice tramite l'`Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
-    Don't forget to select the Raspberry Pi Pico board and the correct port before clicking the Upload button.
-
+    Non dimenticare di selezionare la scheda Raspberry Pi Pico e la porta corretta prima di cliccare sul pulsante di caricamento.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1ceb0ea2-a330-4052-824d-bd6762c6f0e0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After the code is successfully uploaded, the Serial Monitor will print out the Celsius and Fahrenheit temperatures.
-
+Dopo che il codice è stato caricato con successo, il Monitor Seriale stamperà le temperature in Celsius e Fahrenheit.
 

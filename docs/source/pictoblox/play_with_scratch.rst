@@ -1,38 +1,38 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino ed ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e alle anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _play_with_scratch:
 
-Play with Scratch
+Gioca con Scratch
 ========================
 
-Besides programming on the Arduino IDE, we can also use graphical programming.
+Oltre alla programmazione su Arduino IDE, possiamo anche utilizzare la programmazione grafica.
 
-Here we recommend programming with Scratch, but the official Scratch is currently only compatible with Raspberry Pi, so we have partnered with a company, STEMPedia, who has developed a Scratch 3 based graphical programming software for Arduino boards (Uno, Mega2560 and Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
+Qui ti consigliamo di programmare con Scratch, ma la versione ufficiale di Scratch è attualmente compatibile solo con Raspberry Pi, quindi abbiamo collaborato con un'azienda, STEMPedia, che ha sviluppato un software di programmazione grafica basato su Scratch 3 per le schede Arduino (Uno, Mega2560 e Nano) - `PictoBlox <https://thestempedia.com/product/pictoblox/>`_.
 
 .. image:: img/1_pictoblox.png
 
-It keeps the basic functions of Scratch 3, but also adds control boards, such as Arduino Uno, Mega, Nano, ESP32, Microbit and STEAMPedia homemade main boards, which can use external sensors, robots to control the sprites on the stage, with strong hardware interaction capabilities.
+Mantiene le funzioni di base di Scratch 3, ma aggiunge anche il controllo delle schede come Arduino Uno, Mega, Nano, ESP32, Microbit e le schede principali fatte in casa da STEMPedia, permettendo di utilizzare sensori esterni, robot per controllare gli sprite sul palco, con potenti capacità di interazione hardware.
 
-In addition, it has AI and machine learning, even if you do not have much programming foundation, you can learn and use these popular and high-tech.
+Inoltre, ha funzionalità di intelligenza artificiale e machine learning, quindi anche se non hai molta esperienza di programmazione, puoi imparare e utilizzare queste tecnologie popolari e all'avanguardia.
 
-Just drag and drop the Scratch coding blocks and make cool games, animations, interactive projects, and even control robots the way you want!
+Basta trascinare e rilasciare i blocchi di codice di Scratch e creare giochi fantastici, animazioni, progetti interattivi e persino controllare robot come desideri!
 
 
-Now let's start the journey of discovery!
+Iniziamo subito il viaggio alla scoperta!
 
-**1. Get Started**
+**1. Primi Passi**
 
 .. toctree::
     :maxdepth: 2
@@ -43,17 +43,17 @@ Now let's start the journey of discovery!
 
     
 
-**2. Projects**
+**2. Progetti**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+I seguenti progetti sono scritti in ordine di difficoltà di programmazione, è consigliabile leggerli in sequenza.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+In ogni progetto, ci sono passaggi molto dettagliati per insegnarti come costruire il circuito e programmare passo dopo passo per ottenere il risultato finale.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Ovviamente, puoi anche aprire direttamente lo script per eseguirlo, ma devi assicurarti di aver scaricato il materiale pertinente da `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`stage_mode` to run individual scripts directly.
+Una volta completato il download, decomprimilo. Fai riferimento a :ref:`stage_mode` per eseguire direttamente gli script individuali.
 
-But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
+Tuttavia, il :ref:`sh_humiture` utilizza la modalità :ref:`upload_mode`.
 
 
 .. toctree::
@@ -84,15 +84,15 @@ But the :ref:`sh_humiture` is used the :ref:`upload_mode`.
 
 .. _sh_car:
 
-**3. Play Car with Scratch**
+**3. Gioca con l'auto in Scratch**
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
+I seguenti progetti sono scritti in ordine di difficoltà di programmazione, è consigliabile leggerli in sequenza.
 
-In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
+In ogni progetto, ci sono passaggi molto dettagliati per insegnarti come costruire il circuito e programmare passo dopo passo per ottenere il risultato finale.
 
-Of course, you can also open the script directly to run it, but you need to make sure you have downloaded the relevant material from `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
+Ovviamente, puoi anche aprire direttamente lo script per eseguirlo, ma devi assicurarti di aver scaricato il materiale pertinente da `github <https://github.com/sunfounder/3in1-kit/archive/refs/heads/main.zip>`_.
 
-Once the download is complete, unzip it. Refer to :ref:`upload_mode` to run individual scripts directly.
+Una volta completato il download, decomprimilo. Fai riferimento a :ref:`upload_mode` per eseguire direttamente gli script.
 
 
 .. toctree::

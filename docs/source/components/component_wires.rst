@@ -1,45 +1,43 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_wires:
 
-Jumper Wires
-=====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Cavi di Collegamento
+=======================
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+I cavi che collegano due terminali sono chiamati cavi di collegamento. Esistono 
+diversi tipi di cavi di collegamento, ma qui ci concentriamo su quelli utilizzati 
+nelle breadboard. Tra le altre cose, vengono impiegati per trasferire segnali 
+elettrici da qualsiasi punto della breadboard ai pin di input/output di un microcontrollore.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+I cavi di collegamento vengono inseriti tramite i loro "connettori terminali" 
+negli slot presenti sulla breadboard, al di sotto della cui superficie si trovano 
+diverse piastre parallele che collegano gli slot in gruppi di righe o colonne a 
+seconda dell'area. I "connettori terminali" vengono inseriti nella breadboard, 
+senza saldatura, negli slot specifici che devono essere collegati nel prototipo specifico.
+
+Esistono tre tipi di cavi di collegamento: Femmina-Femmina, Maschio-Maschio e 
+Maschio-Femmina. Li chiamiamo Maschio-Femmina perché hanno una punta sporgente 
+da un lato e una presa femmina dall'altro. Maschio-Maschio significa che entrambi 
+i lati sono maschi, mentre Femmina-Femmina significa che entrambi i terminali sono femmine.
 
 .. image:: img/image414.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn't mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+In un progetto possono essere utilizzati più tipi di questi cavi. Il colore dei 
+cavi è diverso, ma ciò non significa che la loro funzione cambi; il colore serve 
+solo per identificare meglio le connessioni tra i vari circuiti.
+

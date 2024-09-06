@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci il mondo di Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni l'accesso anticipato agli annunci dei nuovi prodotti e alle anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-Video 27: Smart Car Hand Tracking
-==================================
+Video 27: Tracciamento della Mano con la Smart Car
+=====================================================
 
-In the tutorial, you will learn how to program a smart car to follow hand movements using Arduino, infrared and ultrasonic sensors.
+In questo tutorial, imparerai a programmare una smart car per seguire i movimenti della mano utilizzando Arduino, sensori a infrarossi e ultrasonici.
 
-* **Smart Car Hand-Following Feature**: Overview of the car's ability to track and follow hand movements.
-* **Sensor Integration for Detection**: Utilizing infrared and ultrasonic sensors for hand position and distance detection.
-* **Detailed Wiring Guide**: Step-by-step instructions on correctly wiring the sensors to the Arduino board.
-* **Comprehensive Code Walkthrough**: Explaining the Arduino code for processing sensor inputs and controlling the car.
-* **Responsive Motor Control**: Adjusting the car's motor responses based on sensor data for precise movement.
-* **Code Optimization for Accuracy**: Fine-tuning the code to ensure reliable and consistent sensor readings.
+* **Funzione di tracciamento della mano della Smart Car**: Panoramica sulla capacità della macchina di tracciare e seguire i movimenti della mano.
+* **Integrazione dei sensori per il rilevamento**: Utilizzo di sensori a infrarossi e ultrasonici per il rilevamento della posizione e della distanza della mano.
+* **Guida dettagliata al cablaggio**: Istruzioni passo-passo su come collegare correttamente i sensori alla scheda Arduino.
+* **Analisi completa del codice**: Spiegazione del codice Arduino per l'elaborazione degli input dei sensori e il controllo della macchina.
+* **Controllo reattivo del motore**: Regolazione delle risposte del motore della macchina in base ai dati dei sensori per movimenti precisi.
+* **Ottimizzazione del codice per l'accuratezza**: Messa a punto del codice per garantire letture dei sensori affidabili e costanti.
 
 **Video**
 
@@ -32,6 +32,6 @@ In the tutorial, you will learn how to program a smart car to follow hand moveme
 
     <br/><br/>
 
-**Related On-line Tutorials**
+**Tutorial online correlati**
 
 * :ref:`follow_your_hand`

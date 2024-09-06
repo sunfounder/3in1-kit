@@ -1,46 +1,46 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati di SunFounder per Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto di esperti**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci dei nuovi prodotti e alle anteprime esclusive.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a omaggi e promozioni speciali durante le festività.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Sei pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _cpn_capacitor:
 
 
-Capacitor
-=============
+Condensatore
+================
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+Il condensatore si riferisce alla quantità di carica immagazzinata sotto una determinata differenza di potenziale, indicata con C, e l'unità internazionale è il farad (F).
+In generale, le cariche elettriche si muovono sotto l'azione di una forza in un campo elettrico. Quando c'è un mezzo tra i conduttori, il movimento delle cariche viene ostacolato e queste si accumulano sui conduttori, provocando un accumulo di carica.
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+La quantità di cariche immagazzinate è chiamata capacità. Poiché i condensatori sono tra i componenti elettronici più utilizzati nei dispositivi elettronici, sono ampiamente impiegati in isolamento della corrente continua, accoppiamento, bypass, filtraggio, circuiti di sintonia, conversione di energia e circuiti di controllo. I condensatori si dividono in condensatori elettrolitici, condensatori solidi, ecc.
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+Secondo le caratteristiche del materiale, i condensatori possono essere classificati in: condensatori elettrolitici in alluminio, condensatori a film, condensatori al tantalio, condensatori ceramici, supercondensatori, ecc.
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+In questo kit vengono utilizzati condensatori ceramici ed elettrolitici.
 
 * `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
 * `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+Sui condensatori ceramici è presente una sigla 103 o 104, che rappresenta il valore di capacità, 103=10x10^3pF, 104=10x10^4pF.
 
-**Unit Conversion**
+**Conversione delle unità**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
+**Esempio**
 
 * :ref:`sh_doorbell` (Scratch Project)
 * :ref:`sh_eat_apple` (Scratch Project)
