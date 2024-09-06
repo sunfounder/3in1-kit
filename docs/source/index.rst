@@ -27,6 +27,7 @@ Gracias por elegir nuestro |link_3_in_1_Kit|.
         * |link_en_tutorials|
         * |link_fr_tutorials|
         * |link_es_tutorials|
+        * |link_it_tutorials|
     
     Haz clic en los enlaces correspondientes para acceder al documento en tu idioma preferido.
 
