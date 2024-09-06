@@ -1,4 +1,6 @@
-.. _.. _sh_introduce:.. note::
+.. _.. _sh_introduce:
+
+.. note::
 
     Bonjour et bienvenue dans la Communauté Facebook des passionnés de Raspberry Pi, Arduino et ESP32 de SunFounder ! Plongez plus profondément dans l'univers des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
