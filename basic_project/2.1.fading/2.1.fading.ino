@@ -1,5 +1,4 @@
 //the number of the LED pin
-const int ledPin = 9;
 
 int ledPin = 9;    
 
