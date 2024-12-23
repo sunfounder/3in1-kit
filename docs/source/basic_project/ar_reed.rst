@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des promotions et à des cadeaux festifs.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_reed:
 
-3.2 Feel the Magnetism
+3.2 Ressentir le magnétisme
 ===============================
 
-The most common type of reed switch contains a pair of magnetizable, flexible, metal reeds whose end portions are separated by a small gap when the switch is open. 
+Le type de commutateur à lame le plus courant contient une paire de lamelles métalliques flexibles et magnétisables, dont les extrémités sont séparées par un petit écart lorsque le commutateur est ouvert.
 
-A magnetic field from an electromagnet or a permanent magnet will cause the reeds to attract each other, thus completing an electrical circuit.
-The spring force of the reeds causes them to separate, and open the circuit, when the magnetic field ceases.
+Un champ magnétique provenant d'un électroaimant ou d'un aimant permanent provoque l'attraction des lamelles, complétant ainsi un circuit électrique.
+La force de rappel des lamelles les fait se séparer et ouvrir le circuit lorsque le champ magnétique cesse.
 
-A common example of a reed switch application is to detect the opening of a door or windows, for a security alarm.
+Un exemple courant d'application d'un commutateur à lame est la détection de l'ouverture d'une porte ou d'une fenêtre pour un système d'alarme.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -61,15 +61,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_reed`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_3.2_reed.png
 
-By default, pin 2 is low; and will go high when the magnet is near the reed switch.
+Par défaut, la broche 2 est à l'état bas ; elle passe à l'état haut lorsque l'aimant est proche du commutateur à lame.
 
-The purpose of the 10K resistor is to keep the pin 2 at a steady low level when no magnet is near.
+Le rôle de la résistance de 10 kΩ est de maintenir la broche 2 à un niveau bas stable lorsqu'aucun aimant n'est à proximité.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/3.2_feel_the_magnetism_bb.png
     :width: 600
@@ -79,14 +79,11 @@ The purpose of the 10K resistor is to keep the pin 2 at a steady low level when 
 
 .. note::
 
-   * You can open the file ``3.2.feel_the_magnetism.ino`` under the path of ``3in1-kit\learning_project\3.2.feel_the_magnetism``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
+   * Vous pouvez ouvrir le fichier ``3.2.feel_the_magnetism.ino`` dans le répertoire ``3in1-kit\learning_project\3.2.feel_the_magnetism``.
+   * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d28c942e-5144-44a1-85d8-d5e6894fc5df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, when a magnet is near the reed switch, the serial monitor will print 1.
-
+Après avoir téléchargé le code avec succès, lorsque l'aimant est proche du commutateur à lame, le moniteur série affiche 1.

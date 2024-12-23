@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _car_remote:
 
-9. Remote Control
-=================================
+9. Télécommande
+==========================
 
-This kit comes with an IR receiver, which allows you to use an IR remote control to control the movement of the car.
+Ce kit est équipé d'un récepteur IR, qui vous permet d'utiliser une télécommande infrarouge pour contrôler les mouvements de la voiture.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - Éléments dans ce kit
+        - Lien
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - Présentation des composants
+        - Lien d'achat
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,15 +56,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Wiring**
+**Câblage**
 
-Now build the circuit according to the diagram below.
+Assemblez le circuit selon le schéma ci-dessous.
 
-.. list-table:: 
+.. list-table::
     :header-rows: 1
 
-    * - IR Receiver
-      - R4 Board
+    * - Récepteur IR
+      - Carte R4
     * - OUT
       - 12
     * - GND
@@ -72,12 +72,12 @@ Now build the circuit according to the diagram below.
     * - VCC
       - 5V
 
-.. list-table:: 
+.. list-table::
     :header-rows: 1
 
     * - LED
-      - R4 Board
-    * - Anode(The longer pin)
+      - Carte R4
+    * - Anode (la broche la plus longue)
       - 13
     * - Cathode
       - GND
@@ -89,46 +89,42 @@ Now build the circuit according to the diagram below.
 
 .. note::
 
-    * Open the ``9.remote_control.ino`` file under the path of ``3in1-kit\car_project\9.remote_control``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
-  
+    * Ouvrez le fichier ``9.remote_control.ino`` dans le répertoire ``3in1-kit\car_project\9.remote_control``.
+    * Ou copiez ce code dans **Arduino IDE**.
+    * La bibliothèque ``IRremote`` est utilisée ici, vous pouvez l'installer depuis le **Gestionnaire de bibliothèques**.
+
         .. image:: ../img/lib_irremote.png
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7c78450d-fcd2-4288-a00d-499c71ad2d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+Après avoir téléversé le code avec succès, appuyez sur un bouton de la télécommande. La LED clignotera une fois pour indiquer que le signal a été reçu, et la voiture se déplacera selon le bouton que vous avez pressé. Vous pouvez utiliser les touches suivantes pour contrôler la voiture :
 
-After the code is uploaded successfully, press the button on the remote control, the LED will blink once to represent that the signal has been received, and the car will move according to the button you pressed. You can press the following keys to control the car.
+* **+** : Accélérer
+* **-** : Décélérer
+* **1** : Avancer vers la gauche
+* **2** : Avancer
+* **3** : Avancer vers la droite
+* **4** : Tourner à gauche
+* **6** : Tourner à droite
+* **7** : Reculer vers la gauche
+* **8** : Reculer
+* **9** : Reculer vers la droite
 
-* **+**: Accelerate
-* **-**: Decelerate
-* **1**: Forward to the left
-* **2**: Forward
-* **3**: Forward to the right
-* **4**: Turn left
-* **6**: Turn right
-* **7**: Backward to the left
-* **8**: Backward
-* **9**: Backward to the right
+**Comment ça fonctionne ?**
 
+L'effet de ce projet est de faire bouger la voiture en lisant la valeur des touches de la télécommande IR. De plus, une LED est ajoutée pour indiquer que le signal IR a été reçu avec succès.
 
-**How it works?**
-
-The effect of this project is to make the car move by reading the key value of the IR remote control. In addition, an LED is added to indicate that the IR signal has been successfully received.
-
-#. Import the ``IRremote`` library, you can install it from the **Library Manager**.
-
+#. Importez la bibliothèque ``IRremote``. Installez-la via le **Gestionnaire de bibliothèques**.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-        const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+        const int IR_RECEIVE_PIN = 12;  // Définir le numéro de broche pour le capteur IR
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
-
+#. Initialisez la communication série avec un débit en bauds de 9600. Activez le récepteur IR sur la broche spécifiée (``IR_RECEIVE_PIN``) et activez le retour LED (si applicable).
 
     .. code-block:: arduino
 
@@ -137,15 +133,14 @@ The effect of this project is to make the car move by reading the key value of t
         void setup() {
 
             ...
-            //IR remote
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+            // Télécommande IR
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Démarrer le récepteur IR
             Serial.println("REMOTE CONTROL START");
 
         }
 
 
-#. When you press the keys on the remote control, the infrared receiver will know which key is pressed, and then the car will move according to the corresponding key value.
-
+#. Lorsque vous appuyez sur les touches de la télécommande, le récepteur infrarouge identifie la touche appuyée, et la voiture agit en fonction de la valeur correspondante.
 
     .. code-block:: arduino
 
@@ -155,7 +150,7 @@ The effect of this project is to make the car move by reading the key value of t
                 //    Serial.println(results.value,HEX);
                 String key = decodeKeyValue(IrReceiver.decodedIRData.command);
                 if (key != "ERROR") {
-                Serial.println(key);
+                    Serial.println(key);
 
                     if (key == "+") {
                         speed += 50;
@@ -166,13 +161,13 @@ The effect of this project is to make the car move by reading the key value of t
                         delay(1000);
                     ...
                     }
-                    IrReceiver.resume();  // Enable receiving of the next value
-
+                    IrReceiver.resume();  // Réactiver la réception pour la prochaine commande
             }
         }
 
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``key`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error.
-    * Prints the decoded IR value to the serial monitor.
-    * Resumes IR signal reception for the next signal.
+    * Vérifie si un signal IR est reçu et décodé avec succès.
+    * Décode la commande IR et la stocke dans ``key`` en utilisant une fonction personnalisée ``decodeKeyValue()``.
+    * Vérifie si la valeur décodée n'est pas une erreur.
+    * Affiche la valeur IR décodée sur le moniteur série.
+    * Réactive la réception du signal IR pour le prochain signal.
+

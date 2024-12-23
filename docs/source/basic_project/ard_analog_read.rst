@@ -1,66 +1,66 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Explorez en profondeur Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_analog_read:
 
-4. Analog Read
-======================
+4. Lecture analogique
+==========================
 
-The Arduino can read the connected analog sensors through the analog pins.
+L'Arduino peut lire les capteurs analogiques connectés via les broches analogiques.
 
-The R4 board contains a multi-channel, 10-bit analog-to-digital converter. This means it maps the input voltage between 0 and the operating voltage (5V or 3.3V) to an integer value between 0 and 1023.
+La carte R4 contient un convertisseur analogique-numérique à plusieurs canaux, 10 bits. Cela signifie qu'elle convertit la tension d'entrée entre 0 et la tension d'alimentation (5V ou 3,3V) en une valeur entière comprise entre 0 et 1023.
 
-You need the ``analogRead(pin)`` function to read the value of the analog pin.
+Vous avez besoin de la fonction ``analogRead(pin)`` pour lire la valeur de la broche analogique.
 
-* ``analogRead(pin)``: Read the value from the specified analog pin.
+* ``analogRead(pin)`` : Lit la valeur de la broche analogique spécifiée.
 
-   **Syntax**
+   **Syntaxe**
       analogRead(pin)
 
-   **Parameters**
-        * ``pin``: the name of the analog input pin to read from (A0 to A5).
+   **Paramètres**
+        * ``pin`` : le nom de la broche d'entrée analogique à lire (A0 à A5).
 
-   **Returns**
-      0-1023. Data type: int.
+   **Retourne**
+      Une valeur entre 0 et 1023. Type de données : int.
 
 
-**Example of Analog Read**
+**Exemple de lecture analogique**
 
 .. code-block:: arduino
 
-   int analogPin = A0; // device connected to analog pin A0
-                     // outside leads to ground and +5V
-   int val = 0;  // variable to store the value read
+   int analogPin = A0; // appareil connecté à la broche analogique A0
+                     // les bornes extérieures mènent à la masse et au +5V
+   int val = 0;  // variable pour stocker la valeur lue
 
    void setup() {
-      Serial.begin(9600);           //  setup serial
+      Serial.begin(9600);           //  initialisation du port série
    }
 
    void loop() {
-      val = analogRead(analogPin);  // read the input pin
-      Serial.println(val);          // debug value
+      val = analogRead(analogPin);  // lire la broche d'entrée
+      Serial.println(val);          // afficher la valeur pour le débogage
    }
 
 
-**Notes and Warnings**
+**Notes et avertissements**
 
-* The analog pins are A0-A5.
-* You don't need to call ``pinMode()`` before calling the analog pin, but if the pin was previously set to ``OUTPUT``, the function ``analogRead()`` will not work properly, in which case you need to call ``pinMode()`` to set it back to ``INTPUT``.
+* Les broches analogiques sont A0-A5.
+* Il n'est pas nécessaire d'appeler ``pinMode()`` avant d'utiliser une broche analogique, mais si la broche a été précédemment définie sur ``OUTPUT``, la fonction ``analogRead()`` ne fonctionnera pas correctement. Dans ce cas, vous devez appeler ``pinMode()`` pour la définir à nouveau sur ``INPUT``.
 
-**Related Components**
+**Composants associés**
 
-Below are the related components, you can click in to learn how to use them.
+Vous trouverez ci-dessous les composants associés. Vous pouvez cliquer pour apprendre à les utiliser.
 
 .. toctree::
     :maxdepth: 2

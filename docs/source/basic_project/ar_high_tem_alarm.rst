@@ -1,54 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans le monde de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_high_tem_alarm:
 
-6.3 High Temperature Alarm
+6.3 Alarme de haute température
 ====================================
 
 
-Next, we will make a high temperature alarm device using thermistor, push button, potentiometer and LCD. 
-The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, 
-which can be adjusted using a potentiometer. 
-The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, 
-the buzzer will sound.
+Ensuite, nous allons fabriquer un dispositif d'alarme de haute température à l'aide d'une thermistance, d'un bouton-poussoir, d'un potentiomètre et d'un écran LCD. 
+Le LCD1602 affiche la température détectée par la thermistance ainsi que la valeur seuil de température élevée, 
+qui peut être ajustée à l'aide d'un potentiomètre. 
+La valeur seuil est simultanément stockée dans l'EEPROM, de sorte que si la température actuelle dépasse la valeur seuil, 
+le buzzer se déclenche.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -69,13 +69,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/wiring_high_tem.png
    :align: center
 
 
-**Wiring**
+**Câblage**
 
 .. image:: img/6.3_high_tem_alarm_bb.png
     :width: 800
@@ -86,9 +86,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``6.3.high_tem_alarm.ino`` under the path of ``3in1-kit\learning_project\6.3.high_tem_alarm`` directly.
-    * Or copy this code into Arduino IDE.
-    * The ``LiquidCrystal I2C`` library is used here, you can install it from the **Library Manager**.
+    * Vous pouvez ouvrir le fichier ``6.3.high_tem_alarm.ino`` directement dans le répertoire ``3in1-kit\learning_project\6.3.high_tem_alarm``.
+    * Ou copiez ce code dans l'Arduino IDE.
+    * La bibliothèque ``LiquidCrystal I2C`` est utilisée ici, vous pouvez l'installer via le **Gestionnaire de bibliothèques**.
 
         .. image:: ../img/lib_liquidcrystal_i2c.png
     
@@ -97,14 +97,14 @@ You can also buy them separately from the links below.
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1341b79d-c87e-4cea-ad90-189c2ebf40ee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded, The LCD1602 shows the temperature detected by the thermistor and the high temperature threshold value, which can be adjusted using a potentiometer. The threshold value is stored on EEPROM at the same time, so if the current temperature exceeds the threshold value, the buzzer will sound.
+Après le téléchargement du code avec succès, le LCD1602 affiche la température détectée par la thermistance ainsi que la valeur seuil de température élevée, qui peut être ajustée à l'aide d'un potentiomètre. La valeur seuil est stockée dans l'EEPROM en même temps, et si la température actuelle dépasse la valeur seuil, le buzzer émet un son.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back.
+    Si le code et le câblage sont corrects mais que le LCD ne s'affiche pas, vous pouvez ajuster le potentiomètre à l'arrière.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-#. Initialize the button, buzzer and I2C LCD1602, and read the EEPROM values. An interrupt is also used here to read the button status.
+#. Initialisez le bouton, le buzzer et le LCD1602 I2C, puis lisez les valeurs de l'EEPROM. Une interruption est également utilisée ici pour lire l'état du bouton.
 
     .. code-block:: arduino
 
@@ -119,11 +119,11 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             attachInterrupt(digitalPinToInterrupt(buttonPin), buttonState, FALLING);
         }
     
-    * The interrupt is used here to read the button's state. When the button is pressed, ``buttonPin`` changes from low to high.
-    * The function buttonState is called when the interrupt triggers, and it toggles the value of the variable state.
-    * ``FALLING`` means the interrupt occurs when ``buttonPin`` goes from low to high.
+    * L'interruption est utilisée ici pour lire l'état du bouton. Lorsque le bouton est enfoncé, ``buttonPin`` passe de bas à haut.
+    * La fonction `buttonState` est appelée lorsqu'une interruption est déclenchée, et elle bascule la valeur de la variable `state`.
+    * ``FALLING`` signifie que l'interruption se produit lorsque ``buttonPin`` passe de bas à haut.
 
-#. To set the high temperature threshold, the function ``upperTemSetting()`` is called when state is 1 (state switches between 0 and 1 with button press) in the main program, otherwise ``monitoringTemp()`` is called to display the current temperature and the set threshold.
+#. Pour définir la valeur seuil de température élevée, la fonction ``upperTemSetting()`` est appelée lorsque `state` vaut 1 (state bascule entre 0 et 1 avec l'appui du bouton) dans le programme principal, sinon ``monitoringTemp()`` est appelée pour afficher la température actuelle et le seuil défini.
 
     .. code-block:: arduino
 
@@ -139,7 +139,7 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             }
         }
 
-#. About ``upperTemSetting()`` function.
+#. À propos de la fonction ``upperTemSetting()``.
 
     .. code-block:: arduino
 
@@ -167,9 +167,9 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             }
         }
 
-    * A threshold can be set with this function. When you enter this function, the LCD1602 displays the current threshold value, which can be modified using the potentiometer. This threshold value will be stored in EEPROM and exited when the button is pressed again.
+    * Vous pouvez définir une valeur seuil avec cette fonction. Lors de son exécution, le LCD1602 affiche la valeur seuil actuelle, qui peut être modifiée à l'aide du potentiomètre. Cette valeur est enregistrée dans l'EEPROM et la fonction quitte lorsqu'on appuie à nouveau sur le bouton.
 
-#. About ``monitoringTemp()`` function.
+#. À propos de la fonction ``monitoringTemp()``.
 
     .. code-block:: arduino
 
@@ -202,7 +202,7 @@ After the code is successfully uploaded, The LCD1602 shows the temperature detec
             }
         }
 
-    * Using this function, you can display temperature and set an alarm.
-    * The thermistor value is read and then converted to Celsius temperature by the formula and displayed on the LCD1602.
-    * The set threshold is also displayed on the LCD.
-    * If the current temperature is greater than the threshold, the buzzer will sound an alarm.
+    * Cette fonction permet d'afficher la température et de définir une alarme.
+    * La valeur de la thermistance est lue puis convertie en température Celsius selon la formule, puis affichée sur le LCD1602.
+    * Le seuil défini est également affiché sur le LCD.
+    * Si la température actuelle dépasse le seuil, le buzzer émet une alarme.

@@ -1,55 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 .. _ar_moisture:
 
-4.4 Measure Soil Moisture
-==========================
+4.4 Mesurer l'humidité du sol
+================================
 
-In the planting industry, the crops themselves cannot directly obtain the inorganic elements in the soil,
-Water in the soil acts as a solvent for dissolving these inorganic elements.
+Dans l'industrie agricole, les cultures ne peuvent pas directement absorber les éléments 
+inorganiques du sol. L'eau présente dans le sol agit comme un solvant pour dissoudre ces 
+éléments inorganiques.
 
-Crops absorb soil moisture through the root system, obtain nutrients, and promote growth.
+Les cultures absorbent l'humidité du sol via leur système racinaire, ce qui leur permet 
+d'acquérir des nutriments et de favoriser leur croissance.
 
-In the process of crop growth and development, the requirements for soil temperature are also different.
-Therefore, a soil moisture sensor is required.
+Au cours du processus de croissance et de développement des cultures, les exigences en 
+matière de température et d'humidité du sol varient également. Par conséquent, un capteur 
+d'humidité du sol est nécessaire.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -58,11 +60,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_5.4_soil.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/4.4_measure_the_moisture_bb.png
     :width: 800
@@ -72,15 +74,16 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``4.4.measure_soil_moisture.ino`` file under the path of ``3in1-kit\learning_project\4.4.measure_soil_moisture``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Ouvrez le fichier ``4.4.measure_soil_moisture.ino`` dans le répertoire ``3in1-kit\learning_project\4.4.measure_soil_moisture``.
+    * Ou copiez ce code dans l'IDE Arduino.
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b6f7e756-0f14-4117-9bb2-ee5083b6445f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+Une fois le code téléchargé avec succès, le moniteur série affichera la valeur d'humidité du sol.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+
+
+En insérant le module dans le sol et en l'arrosant, la valeur du capteur d'humidité du sol diminuera.

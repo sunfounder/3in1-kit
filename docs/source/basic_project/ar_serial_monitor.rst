@@ -1,74 +1,74 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des promotions et à des cadeaux festifs.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ard_serial_monitor:
 
-3.0 Serial Monitor
+3.0 Moniteur Série
 =============================
 
-In the Arduino IDE, there is a serial monitor that allows you to send messages from your computer to the Arduino board (via USB) and also to receive messages from the Arduino.
+Dans l'IDE Arduino, il existe un moniteur série qui vous permet d'envoyer des messages de votre ordinateur à la carte Arduino (via USB) et également de recevoir des messages de l'Arduino.
 
-So in this project we will learn how to receive data from the Arduino board.
+Dans ce projet, nous allons apprendre à recevoir des données de la carte Arduino.
 
 .. note::
 
-    On Uno, Nano, Mini, and Mega, pins 0 and 1 are used for communication with the computer. Connecting anything to these pins can interfere with that communication, including causing failed uploads to the board.
+    Sur les cartes Uno, Nano, Mini et Mega, les broches 0 et 1 sont utilisées pour la communication avec l'ordinateur. Toute connexion à ces broches peut perturber cette communication, y compris entraîner l'échec des téléversements vers la carte.
 
 
-**Using the Serial Monitor**
+**Utilisation du Moniteur Série**
 
-1. Open the Arduino IDE, and paste the following code in it.
+1. Ouvrez l'IDE Arduino, et collez le code suivant :
 
     .. code-block:: arduino
 
-        // the setup routine runs once when you press reset:
+        // La routine setup s'exécute une fois au démarrage ou après un reset :
         void setup() {
-            // initialize serial communication at 9600 bits per second:
+            // initialise la communication série à 9600 bits par seconde :
             Serial.begin(9600);
         }
 
-        // the loop routine runs over and over again forever:
+        // La routine loop s'exécute en continu :
         void loop() {
             int number = 100;
             Serial.println(number);
             Serial.println("Hello world");
-            delay(100);         // delay in between reads for stability
+            delay(100);         // délai entre les lectures pour la stabilité
         }
 
-   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_: Sets the data rate in bits per second (baud) for serial data transmission, here set to 9600.
-   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_: Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n'). This command takes the same forms as `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_.
+   * `Serial.begin() <https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/>`_ : Définit le débit en bits par seconde (baud) pour la transmission de données série, ici défini à 9600.
+   * `Serial.println() <https://www.arduino.cc/reference/en/language/functions/communication/serial/println/>`_ : Envoie des données au port série sous forme de texte ASCII lisible suivi d'un caractère de retour chariot (ASCII 13, ou '\r') et d'un saut de ligne (ASCII 10, ou '\n'). Cette commande accepte les mêmes formats que `Serial.print() <https://www.arduino.cc/reference/en/language/functions/communication/serial/print/>`_.
 
-2. Select the correct board and port to upload the code.
-3. In the toolbar, click the magnifying glass icon to turn on Serial Monitor.
+2. Sélectionnez la carte et le port corrects pour téléverser le code.
+3. Dans la barre d'outils, cliquez sur l'icône en forme de loupe pour activer le Moniteur Série.
 
 .. image:: img/serial1.png
     :align: center
 
-4. Here is the Serial Monitor.
+4. Voici le Moniteur Série.
 
 .. image:: img/serial2.png
     :align: center
 
-* **1**: Option to select between automatically scroll and not scroll.
-* **2**: Option to show timestamp prior to data displayed on Serial Monitor.
-* **3**: Ending selection, select the ending characters appended to data sent to Arduino. Selection includes:
+* **1** : Option pour sélectionner le défilement automatique ou non.
+* **2** : Option pour afficher un horodatage avant les données affichées sur le Moniteur Série.
+* **3** : Choix de terminaison, sélection des caractères de fin ajoutés aux données envoyées à l'Arduino. Les choix incluent :
 
-        * **No line Ending** just sends what you type; 
-        * **Newline** is ``\n`` and will sends an ASCII new line code after what you type；
-        * **Carriage Return** is ``\r``, which will send an ASCII carriage return character after what you type; 
-        * **Both NL & CR** is ``\r\n`` which will send both a carriage return and a new line character after what you type.
-* **4**: Select communication speed between Arduino board and PC. This value MUST be the same as the value set in ``Serial.begin()``.
-* **5**: Clear all text on the output console.
-* **6**: A textbox to send characters to the Arduino board, see :ref:`ar_serial_read` for a tutorial.
+        * **Pas de fin de ligne** : envoie uniquement ce que vous tapez ;
+        * **Nouvelle ligne** est ``\n`` et envoie un code ASCII de nouvelle ligne après ce que vous tapez ;
+        * **Retour chariot** est ``\r``, qui envoie un caractère ASCII de retour chariot après ce que vous tapez ;
+        * **NL et CR** est ``\r\n``, qui envoie à la fois un retour chariot et un saut de ligne après ce que vous tapez.
 
+* **4** : Sélectionnez la vitesse de communication entre la carte Arduino et le PC. Cette valeur DOIT être identique à celle définie dans ``Serial.begin()``.
+* **5** : Efface tout le texte de la console de sortie.
+* **6** : Une zone de texte pour envoyer des caractères à la carte Arduino, voir :ref:`ar_serial_read` pour un tutoriel.

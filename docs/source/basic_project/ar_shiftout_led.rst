@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des promotions et à des cadeaux festifs.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_shiftout:
 
-5.9 ShiftOut(LED)
+5.9 ShiftOut (LED)
 =======================
 
-``shiftOut()`` will make 74HC595 output 8 digital signals. It outputs the last bit of the binary number to Q0, and the output of the first bit to Q7. In other words, writing the binary number “00000001” will make Q0 output high level and Q1~Q7 output low level.
+La fonction ``shiftOut()`` permet au 74HC595 de produire 8 signaux numériques. Elle envoie le dernier bit du nombre binaire vers Q0 et le premier bit vers Q7. Autrement dit, écrire le nombre binaire “00000001” fera que Q0 produira un niveau haut et que Q1~Q7 produiront un niveau bas.
 
-In this project, you will learn how to use 74HC595. 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
+Dans ce projet, vous apprendrez à utiliser le 74HC595. Le 74HC595 se compose d’un registre à décalage de 8 bits et d’un registre de stockage avec sorties parallèles à trois états. Il convertit une entrée série en une sortie parallèle, permettant ainsi d’économiser des ports d’E/S sur un microcontrôleur.
 
-Specifically, 74hc595 can replace 8 pins for digital signal output by writing an 8-bit binary number.
+Plus précisément, le 74HC595 peut remplacer 8 broches pour produire des signaux numériques en écrivant un nombre binaire de 8 bits.
 
-* `Binary number - Wikipedia <https://en.wikipedia.org/wiki/Binary_number>`_
+* `Nombre binaire - Wikipédia <https://en.wikipedia.org/wiki/Binary_number>`_
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est vraiment pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -64,17 +64,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_6.4_74hc595.png
 
-* When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp.
-* If the two clocks are connected together, the shift register is always one pulse earlier than the memory register.
-* There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register.
-* The memory register outputs a Bus with a parallel 8-bit and in three states.
-* When OE is enabled (low level), the data in memory register is output to the bus(Q0 ~ Q7).
+* Lorsque MR (pin10) est à un niveau haut et OE (pin13) à un niveau bas, les données sont saisies sur le front montant de SHcp et transférées au registre mémoire sur le front montant de SHcp.
+* Si les deux horloges sont connectées ensemble, le registre à décalage est toujours une impulsion avant le registre mémoire.
+* Il y a une broche d'entrée de décalage série (Ds), une broche de sortie série (Q) et un bouton de réinitialisation asynchrone (niveau bas) dans le registre mémoire.
+* Le registre mémoire produit un bus parallèle à 8 bits et à trois états.
+* Lorsque OE est activé (niveau bas), les données dans le registre mémoire sont sorties vers le bus (Q0 ~ Q7).
 
-**Wiring**
+**Câblage**
 
 .. image:: img/5.9_74hc595_bb.png
     :width: 800
@@ -84,48 +84,47 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.9.shiftout_led.ino`` file under the path of ``3in1-kit\learning_project\5.9.shiftout_led``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``5.9.shiftout_led.ino`` dans le chemin ``3in1-kit\learning_project\5.9.shiftout_led``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
     
 
 .. raw:: html
-
+    
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4c208eb3-67f0-40f7-999a-0eeca8b6b466/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-When you finish uploading the codes to the R4 board, you can see the LEDs turning on one after another.
+Après avoir téléversé le code sur la carte R4, vous verrez les LED s’allumer une par une.
 
-**How it works?**
+**Comment cela fonctionne-t-il ?**
 
-Declare an array, 
-store several 8 bit binary numbers that are used to change the working state of the eight LEDs controlled by 74HC595. 
+Déclarez un tableau pour stocker plusieurs nombres binaires sur 8 bits qui sont utilisés pour changer l’état de fonctionnement des huit LED contrôlées par le 74HC595.
 
 .. code-block:: arduino
 
     int datArray[] = {B00000000, B00000001, B00000011, B00000111, B00001111, B00011111, B00111111, B01111111, B11111111};
 
-Set ``STcp`` to low level first and then high level. 
-It will generate a rising edge pulse of STcp.
+Réglez ``STcp`` à un niveau bas puis à un niveau haut pour générer une impulsion de front montant pour STcp.
 
 .. code-block:: arduino
 
     digitalWrite(STcp,LOW); 
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, 
-which means to shift a byte of data in ``datArray[num]`` to the shifting register with 
-the ``DS`` pin. **MSBFIRST** means to move from high bits.
+La fonction ``shiftOut()`` est utilisée pour décaler un octet de données, bit par bit, 
+ce qui signifie décaler un octet de données de ``datArray[num]`` vers le registre de 
+décalage via la broche ``DS``. **MSBFIRST** signifie décaler les bits de poids fort en premier.
 
 .. code-block:: arduino
 
     shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 
-After ``digitalWrite(STcp,HIGH)`` is run, the ``STcp`` will be at the rising edge. 
-At this time, the data in the shift register will be moved to the memory register. 
+Après l'exécution de ``digitalWrite(STcp,HIGH)``, STcp passe au front montant. 
+À ce moment, les données du registre de décalage seront transférées vers le registre mémoire.
 
 .. code-block:: arduino
 
     digitalWrite(STcp,HIGH);
 
-A byte of data will be transferred into the memory register after 8 times. 
-Then the data of memory register are output to the bus (Q0-Q7). 
-For example, shiftout ``B00000001`` will light up the LED controlled by Q0 and turn off the LED controlled by Q1~Q7. 
+Un octet de données sera transféré dans le registre mémoire après 8 décalages. 
+Ensuite, les données du registre mémoire sont sorties vers le bus (Q0-Q7). 
+Par exemple, ``shiftOut(B00000001)`` allumera la LED contrôlée par Q0 et éteindra 
+celles contrôlées par Q1~Q7.

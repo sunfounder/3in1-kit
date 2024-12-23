@@ -1,96 +1,94 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Explorez en profondeur Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_digital_read:
 
-3. Digital Read
-===================
+3. Lecture Numérique
+========================
 
-Sensors capture real-world information, which is then communicated to the main board via pins (some digital, some analog) so that the computer can know the reality of the situation.
+Les capteurs capturent des informations du monde réel, qui sont ensuite communiquées à la carte principale via des broches (certaines numériques, d'autres analogiques) pour que l'ordinateur puisse connaître l'état réel de la situation.
 
-Therefore, the Arduino board can know the working status of digital sensors by reading the value of digital pins like buttons, IR obstacle avoidance module.
+Ainsi, la carte Arduino peut connaître l'état de fonctionnement des capteurs numériques en lisant la valeur des broches numériques, comme les boutons ou le module d'évitement d'obstacles IR.
 
 
-Here are the required functions.
+Voici les fonctions nécessaires.
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``INPUT``. 
+* ``pinMode(pin, mode)`` : Configurez la broche spécifique comme ``INPUT`` ou ``OUTPUT`` ; ici, elle doit être définie comme ``INPUT``.
 
-   **Syntax**
+   **Syntaxe**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: INPUT, OUTPUT, or INPUT_PULLUP.
+   **Paramètres**
+    * ``pin`` : le numéro de la broche Arduino à configurer.
+    * ``mode`` : INPUT, OUTPUT ou INPUT_PULLUP.
 
 
+* ``digitalRead(pin)`` : Lit la valeur (état du niveau) de la broche numérique spécifiée.
 
-* ``digitalRead(pin)``: Read the value (level state) from the specified digital pin.
-
-   **Syntax**
+   **Syntaxe**
       digitalRead(pin)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number you want to read
+   **Paramètres**
+    * ``pin`` : le numéro de la broche Arduino à lire.
 
-   **Returns**
-      HIGH or LOW
+   **Retourne**
+      HIGH ou LOW.
 
 
-**Example of Digital Read**
+**Exemple de Lecture Numérique**
 
 .. code-block:: arduino
 
-   int ledPin = 13;  // LED connected to digital pin 13
-   int inPin = 7;    // pushbutton connected to digital pin 7
-   int val = 0;      // variable to store the read value
+   int ledPin = 13;  // LED connectée à la broche numérique 13
+   int inPin = 7;    // bouton poussoir connecté à la broche numérique 7
+   int val = 0;      // variable pour stocker la valeur lue
 
    void setup() {
-      pinMode(ledPin, OUTPUT);  // sets the digital pin 13 as output
-      pinMode(inPin, INPUT);    // sets the digital pin 7 as input
+      pinMode(ledPin, OUTPUT);  // configure la broche numérique 13 comme sortie
+      pinMode(inPin, INPUT);    // configure la broche numérique 7 comme entrée
    }
 
    void loop() {
-      val = digitalRead(inPin);   // read the input pin
-      digitalWrite(ledPin, val);  // sets the LED to the button's value
+      val = digitalRead(inPin);   // lit la broche d'entrée
+      digitalWrite(ledPin, val);  // ajuste la LED selon la valeur du bouton
    }
 
 
-**Notes and Warnings**
+**Notes et Avertissements**
 
-1. Pull Up & Pull Down.
+1. Résistances Pull-Up & Pull-Down.
 
-    ``digitalRead()`` may produce random, indeterminate values if the pin is not getting a level signal. So directing the input pins to a known state can make the project more reliable.
-    When using an input component such as a button, it is usually necessary to connect a pull-up or pull-down resistor in parallel to the digital input pin.
+    ``digitalRead()`` peut produire des valeurs aléatoires ou indéterminées si la broche ne reçoit pas de signal de niveau. Diriger les broches d'entrée vers un état connu peut rendre le projet plus fiable. 
+    Lors de l'utilisation d'un composant d'entrée tel qu'un bouton, il est généralement nécessaire de connecter une résistance pull-up ou pull-down en parallèle avec la broche d'entrée numérique.
 
-    Apart from connecting a pull-up resistor, you can also set the pin mode to ``INPUT_PULLUP`` in the code, for example ``pinMode(pin,INPUT_PULLUP)``. In this case, the pin will access the Atmega's built-in pull-up resistor via software, and it will have the same effect as connecting a pull-up resistor.
+    En plus de connecter une résistance pull-up, vous pouvez également définir le mode de la broche sur ``INPUT_PULLUP`` dans le code, par exemple ``pinMode(pin, INPUT_PULLUP)``. Dans ce cas, la broche accède à la résistance pull-up intégrée de l'Atmega via le logiciel, ce qui a le même effet que de connecter une résistance pull-up.
 
-2. About Pin13.
+2. À propos de la broche 13.
 
-    All digital pins (1-13) on the R4 board can be used as ``digitalRead()``.
-    But digital pin 13 is more difficult to use as a digital input than other digital pins.
-    Because it connects an LED and resistor, it is soldered on most boards.
-    If you enable its internal 20k pull-up resistor, it will hang around 1.7V instead of the expected 5V because the onboard LED and series resistor pull the voltage level low, which means it always returns LOW. If you must use pin 13 as a digital input, set its ``pinMode()`` to INPUT and use an external pull-down resistor.
+    Toutes les broches numériques (1-13) de la carte R4 peuvent être utilisées avec ``digitalRead()``.
+    Cependant, la broche numérique 13 est plus difficile à utiliser comme entrée numérique que les autres broches numériques. Cela est dû au fait qu'elle est connectée à une LED et à une résistance sur la carte.
+    Si vous activez sa résistance pull-up interne de 20k, elle restera à environ 1,7V au lieu des 5V attendus, car la LED embarquée et la résistance en série abaissent le niveau de tension, ce qui signifie qu'elle renvoie toujours LOW. Si vous devez utiliser la broche 13 comme entrée numérique, configurez son ``pinMode()`` sur INPUT et utilisez une résistance pull-down externe.
 
-3. Analog pins.
+3. Broches Analogiques.
 
-    If the digital pins are not enough, the analog pins (A0-A5) can also be used as digital pins.
-    It needs to be set to INPUT with ``pinMode(pin,mode)``.
+    Si les broches numériques ne suffisent pas, les broches analogiques (A0-A5) peuvent également être utilisées comme broches numériques. 
+    Elles doivent être configurées sur INPUT avec ``pinMode(pin, mode)``.
 
 
-**Related Components**
+**Composants Associés**
 
-Below are the related components, you can click in to learn how to use them.
+Vous trouverez ci-dessous les composants associés. Cliquez pour apprendre à les utiliser.
 
 .. toctree::
     :maxdepth: 2

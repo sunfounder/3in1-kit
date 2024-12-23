@@ -1,65 +1,61 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aperçus exclusifs.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _speed_calibration:
 
-11. Speed Calibration
-===========================
+11. Calibration de la vitesse
+================================
 
-In getting the car to move forward, you may find that the car does not travel in a straight line.
-This is because the two motors may not have the same speed at the factory. 
-But we can write offset to the two motors to make their rotational speeds converge.
+Lorsqu'il s'agit de faire avancer la voiture, vous pourriez constater qu'elle ne se déplace pas en ligne droite. 
+Cela est dû au fait que les deux moteurs n'ont peut-être pas la même vitesse en usine. 
+Cependant, nous pouvons ajuster un décalage sur les deux moteurs pour aligner leurs vitesses de rotation.
 
-In this project, 
-we will learn to store the offset into `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, the point of this is that after each calibration, 
-all projects can get the offset value directly from the EEPROM, 
-so that the car can go in a straight line smoothly.
-
-
-**Wiring**
-
-This project is the same wiring as :ref:`car_move_code`.
+Dans ce projet, nous allons apprendre à stocker le décalage dans l'`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_. 
+Cela permet qu'après chaque calibration, tous les projets puissent accéder directement à cette valeur de décalage dans l'EEPROM, pour 
+que la voiture puisse avancer en ligne droite sans difficulté.
 
 
+**Câblage**
 
-**How to play?**
+Ce projet utilise le même câblage que celui du :ref:`car_move_code`.
 
-1. Open the ``11.speed_calibration.ino`` file under the path of ``3in1-kit\car_project\11.speed_calibration``. Or copy this code into **Arduino IDE**.
+**Comment jouer ?**
+
+1. Ouvrez le fichier ``11.speed_calibration.ino`` dans le chemin ``3in1-kit\car_project\11.speed_calibration``. Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/66dc7ee5-31a5-418e-9aa2-43e7820cf5e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-2. After the code is uploaded successfully, connect the car with 9V battery, put it on the ground and let it move forward to see which side it is offset to.
+2. Une fois le code téléchargé avec succès, connectez la voiture à une batterie 9V, posez-la sur le sol et laissez-la avancer pour voir de quel côté elle dévie.
 
-* If the car moves to the left front, it means the right motor speed is too fast and needs to be reduced.
-
-    .. code-block:: arduino
-
-        EEPROM.write(1, 100) // 1 means the right motor, 100 means 100% speed, can be set to 90, 95, etc., depending on the actual situation.
-
-* If the car moves to the right, it means the left motor speed is too fast and needs to be reduced.
+* Si la voiture se déplace vers l'avant gauche, cela signifie que la vitesse du moteur droit est trop rapide et doit être réduite.
 
     .. code-block:: arduino
 
-        EEPROM.write(0, 100) // 0 means the right motor, 100 means the speed is 100%, can be set to 90, 95, etc., depending on the actual situation. 3.
+        EEPROM.write(1, 100) // 1 correspond au moteur droit, 100 signifie 100% de vitesse, cela peut être réglé à 90, 95, etc., en fonction de la situation réelle.
 
-3. After modifying the code, upload the code to R4 board to see the effect. Repeat the above steps until the car is almost straight.
+* Si la voiture se déplace vers la droite, cela signifie que la vitesse du moteur gauche est trop rapide et doit être réduite.
 
-4. This offset will be recorded in `EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_, you only need to read this offset when you use it in other projects, take :ref:`car_ir_obstacle` as an example.
+    .. code-block:: arduino
 
+        EEPROM.write(0, 100) // 0 correspond au moteur gauche, 100 signifie 100% de vitesse, cela peut être réglé à 90, 95, etc., en fonction de la situation réelle.
+
+3. Après avoir modifié le code, téléchargez-le à nouveau sur la carte R4 pour vérifier l'effet. Répétez les étapes ci-dessus jusqu'à ce que la voiture avance presque en ligne droite.
+
+4. Ce décalage sera enregistré dans l'`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_. Vous n'aurez qu'à lire ce décalage lorsque vous l'utiliserez dans d'autres projets, comme dans :ref:`car_ir_obstacle`.
 
 .. code-block:: arduino
     :emphasize-lines: 1,3,4,27,28,50,51
@@ -80,23 +76,23 @@ This project is the same wiring as :ref:`car_move_code`.
     void setup() {
         Serial.begin(9600);
 
-        //motor
+        // Moteurs
         pinMode(A_1B, OUTPUT);
         pinMode(A_1A, OUTPUT);
         pinMode(B_1B, OUTPUT);
         pinMode(B_1A, OUTPUT);
 
-        //IR obstacle
+        // Obstacle IR
         pinMode(leftIR, INPUT);
         pinMode(rightIR, INPUT);
 
-        leftOffset = EEPROM.read(0) * 0.01;//read the offset of the left motor
-        rightOffset = EEPROM.read(1) * 0.01;//read the offset of the right motor
+        leftOffset = EEPROM.read(0) * 0.01; // Lit le décalage du moteur gauche
+        rightOffset = EEPROM.read(1) * 0.01; // Lit le décalage du moteur droit
     }
 
     void loop() {
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0 : Obstrué, 1 : Libre
         int right = digitalRead(rightIR);
         int speed = 150;
 

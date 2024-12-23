@@ -1,49 +1,47 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_pump:
 
-Centrifugal Pump
-================
+Pompe centrifuge
+====================
 
 .. image:: img/pump.png
     :width: 300
     :align: center
 
-The centrifugal pump converts rotational kinetic energy into hydrodynamic energy to transport fluid. The rotation energy comes from the electric motor. The fluid enters the pump impeller along or near the rotating shaft, is accelerated by the impeller, flows radially outward into the diffuser or volute chamber, and then flows out from there.
+La pompe centrifuge convertit l'énergie cinétique de rotation en énergie hydrodynamique pour transporter un fluide. L'énergie de rotation est générée par un moteur électrique. Le fluide pénètre dans la roue de la pompe le long de l'arbre rotatif ou à proximité de celui-ci, est accéléré par la roue, s'écoule radialement vers l'extérieur dans le diffuseur ou la volute, puis en ressort.
 
-Common uses of centrifugal pumps include water, sewage, agricultural, petroleum, and petrochemical pumping.
+Les utilisations courantes des pompes centrifuges incluent le pompage d'eau, d'eaux usées, en agriculture, dans les secteurs pétrolier et pétrochimique.
 
+* `Pompe centrifuge - Wikipédia <https://fr.wikipedia.org/wiki/Pompe_centrifuge>`_
 
-* `Centrifugal Pump - Wikipedia <https://en.wikipedia.org/wiki/Centrifugal_pump>`_
+**Caractéristiques**
+    * **Plage de tension** : DC 3 ~ 4,5V
+    * **Courant de fonctionnement** : 120 ~ 180mA
+    * **Puissance** : 0,36 ~ 0,91W
+    * **Hauteur maximale d’eau** : 0,35 ~ 0,55M
+    * **Débit maximal** : 80 ~ 100 L/H
+    * **Durée de vie en fonctionnement continu** : 100 heures
+    * **Indice d'étanchéité** : IP68
+    * **Mode de fonctionnement** : DC, entraînement magnétique
+    * **Matériau** : Plastique technique
+    * **Diamètre extérieur de la sortie** : 7,8 mm
+    * **Diamètre intérieur de la sortie** : 6,5 mm
+    * Il s'agit d'une pompe submersible qui doit être utilisée immergée. Elle a tendance à surchauffer si elle fonctionne sans être immergée, ce qui présente un risque de surchauffe.
 
-**Features**
-    * **Voltage Scope**: DC 3 ~ 4.5V
-    * **Operating Current**: 120 ~ 180mA
-    * **Power**: 0.36 ~ 0.91W
-    * **Max Water Head**: 0.35 ~ 0.55M
-    * **Max Flow Rate**: 80 ~ 100 L/H
-    * **Continuous Working Life**: 100 hours
-    * **Water Fing Grade**: IP68
-    * **Driving Mode**: DC, Magnetic Driving
-    * **Material**: Engineering Plastic
-    * **Outlet Outside Diameter**: 7.8 mm
-    * **Outlet Inside Diameter**: 6.5 mm
-    * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
+**Exemple**
 
-**Example**
-
-* :ref:`ar_pump` (Basic Project)
-* :ref:`iot_plant` (IoT Project)
-
+* :ref:`ar_pump` (Projet de base)
+* :ref:`iot_plant` (Projet IoT)

@@ -1,51 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Explorez en profondeur Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_potentiometer:
 
-4.1 Turn the Knob
-===================
+4.1 Tournez le bouton
+=========================
 
-Potentiometer is a resistor component with 3 terminals and its resistance value can be
-adjusted according to some regular variation.
+Le potentiomètre est un composant résistif à 3 terminaux dont la valeur de résistance peut être ajustée selon une variation régulière.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d’acheter un kit complet. Voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
-
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
     *   - :ref:`cpn_uno`
         - \-
     *   - :ref:`cpn_breadboard`
@@ -55,21 +53,20 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_5.1_potentiometer.png
 
-In this example, we use the analog pin (A0) to read the value
-of the potentiometer. By rotating the axis of the potentiometer, you can
-change the distribution of resistance among these three pins, changing
-the voltage on the middle pin. When the resistance between the middle
-and a outside pin connected to 5V is close to zero (and the resistance
-between the middle and the other outside pin is close to 10kΩ), the
-voltage at the middle pin is close to 5V. The reverse operation (the
-resistance between the middle and a outside pin connected to 5V is close
-to 10kΩ) will make the voltage at the middle pin be close to 0V.
+Dans cet exemple, nous utilisons la broche analogique (A0) pour lire la valeur du 
+potentiomètre. En tournant l'axe du potentiomètre, vous pouvez modifier la répartition 
+de la résistance entre ses trois bornes, ce qui change la tension sur la borne centrale. 
+Lorsque la résistance entre la borne centrale et une borne extérieure connectée à 5V est 
+proche de zéro (et que la résistance entre la borne centrale et l'autre borne extérieure 
+est proche de 10 kΩ), la tension à la borne centrale est proche de 5V. L'opération inverse 
+(la résistance entre la borne centrale et une borne extérieure connectée à 5V est proche 
+de 10 kΩ) rendra la tension à la borne centrale proche de 0V.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/4.1_turn_thek_knob_bb.png
     :width: 600
@@ -79,14 +76,13 @@ to 10kΩ) will make the voltage at the middle pin be close to 0V.
 
 .. note::
 
-   * You can open the file ``4.1.turn_the_knob.ino`` under the path of ``3in1-kit\learning_project\4.1.turn_the_knob``. 
-   * Or copy this code into **Arduino IDE**.
+   * Vous pouvez ouvrir le fichier ``4.1.turn_the_knob.ino`` dans le chemin ``3in1-kit\learning_project\4.1.turn_the_knob``. 
+   * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d931f2c9-74bc-4a53-8531-39a21a07dbaf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-After uploading the codes to the board, you can open the serial
-monitor to see the reading value of the pin. When rotating the axis of
-the potentiometer, the serial monitor will print the value
-「0」~「1023」. 
+
+Après avoir téléversé le code sur la carte, vous pouvez ouvrir le moniteur série pour voir 
+la valeur lue par la broche. En tournant l'axe du potentiomètre, le moniteur série affichera 
+une valeur comprise entre 「0」 et 「1023」.

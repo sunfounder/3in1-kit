@@ -1,55 +1,50 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_soil_moisture:
 
-Soil Moisture Module
-================================
+Module de capteur d'humidité du sol
+======================================
 
 .. image:: img/soil_mositure.png
 
-* GND: Ground
-* VCC: Power supply, 3.3v~5V
-* AOUT: Outputs the soil moisture value, the wetter the soil, the smaller its value.
+* GND : Masse
+* VCC : Alimentation, 3.3V~5V
+* AOUT : Sort la valeur de l'humidité du sol. Plus le sol est humide, plus la valeur est faible.
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
+Ce capteur capacitif d'humidité du sol se distingue des capteurs résistifs traditionnels en utilisant le principe de l'induction capacitive pour détecter l'humidité du sol. Il évite les problèmes de corrosion fréquents avec les capteurs résistifs et prolonge considérablement sa durée de vie.
 
+Fabriqué avec des matériaux résistants à la corrosion, ce capteur garantit une excellente longévité. Insérez-le dans le sol autour des plantes pour surveiller les données d'humidité du sol en temps réel. Le module intègre un régulateur de tension intégré, lui permettant de fonctionner dans une plage de tension de 3,3 ~ 5,5 V. Il est idéal pour les microcontrôleurs à faible tension alimentés en 3,3 V ou 5 V.
 
-It is made of corrosion-resistant materials and has an excellent service life. Insert it into the soil around plants and monitor real-time soil moisture data. The module includes an on-board voltage regulator that allows it to operate over a voltage range of 3.3 ~ 5.5 V. It is ideal for low-voltage microcontrollers with 3.3 V and 5 V supplies.
-
-The hardware schematic of the capacitive soil moisture sensor is shown below.
+Le schéma matériel du capteur capacitif d'humidité du sol est présenté ci-dessous.
 
 .. image:: img/solid_schematic.png
 
-There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
+Le capteur comprend un oscillateur à fréquence fixe construit avec un circuit intégré de minuterie 555. L'onde carrée générée est ensuite transmise au capteur comme un condensateur. Pour le signal d'onde carrée, le condensateur présente une certaine réactance qui forme, avec une résistance pure (résistance de 10k sur la broche 3), un diviseur de tension.
 
-The higher the soil moisture, the higher the capacitance of the sensor. As a result, the square wave has less reactance, which reduces the voltage on the signal line, and the smaller the value of the analog input through the microcontroller.
+Plus l'humidité du sol est élevée, plus la capacité du capteur est importante. En conséquence, la réactance diminue, réduisant la tension sur la ligne de signal et donc la valeur d'entrée analogique capturée par le microcontrôleur.
 
+**Spécifications**
 
-**Specification**
+* Tension de fonctionnement : 3.3 ~ 5.5 VDC
+* Tension de sortie : 0 ~ 3.0VDC
+* Courant de fonctionnement : 5mA
+* Interface : PH2.0-3P
+* Dimensions : 3.86 x 0.905 pouces (L x l)
+* Poids : 15g
 
-* Operating Voltage: 3.3 ~ 5.5 VDC
-* Output Voltage: 0 ~ 3.0VDC
-* Operating Current: 5mA
-* Interface: PH2.0-3P
-* Dimensions: 3.86 x 0.905 inches (L x W)
-* Weight: 15g
+**Exemples**
 
-**Example**
-
-* :ref:`ar_moisture` (Basic Project)
-* :ref:`iot_plant` (IoT Project)
-
-
-
+* :ref:`ar_moisture` (Projet de base)
+* :ref:`iot_plant` (Projet IoT)

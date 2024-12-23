@@ -1,51 +1,51 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aperçus exclusifs.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_ir_obstacle:
 
-3.3 Detect the Obstacle
+3.3 Détecter un obstacle
 ===================================
 
-This module is commonly installed on the car and robot to judge the
-existence of the obstacles ahead. Also it is widely used in hand held
-device, water faucet and so on.
+Ce module est couramment installé sur les voitures et les robots pour détecter la présence 
+d'obstacles devant eux. Il est également largement utilisé dans les appareils portables, 
+les robinets automatiques, et bien plus encore.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -54,15 +54,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_3.3_obstacle.png
 
-The digital pin 2 is used to read the
-signal of IR Obstacle Avoidance Module. We get the VCC of IR
-Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
+La broche numérique 2 est utilisée pour lire le signal du module d'évitement 
+d'obstacles IR. Nous connectons le VCC du module capteur IR au 5V, 
+le GND au GND, et la broche OUT à la broche numérique 2.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/3.3_detect_the_obstacle_bb.png
     :width: 800
@@ -72,14 +72,11 @@ Sensor Module connected to 5V, GND to GND, OUT to digital pin 2.
 
 .. note::
 
-   * You can open the file ``3.3.detect_the_obstacle.ino`` under the path of ``3in1-kit\learning_project\3.3.detect_the_obstacle``. 
-   * Or copy this code into **Arduino IDE**.
+   * Vous pouvez ouvrir le fichier ``3.3.detect_the_obstacle.ino`` sous le chemin ``3in1-kit\learning_project\3.3.detect_the_obstacle``. 
+   * Ou copiez ce code dans **Arduino IDE**.
    
-   
-
-
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/535a0304-684e-481d-b85d-403911b3a4e2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the IR obstacle avoidance module detects something blocking in front of it, [0] will appear on the serial monitor, otherwise [1] will be displayed.
+Lorsque le module d'évitement d'obstacles IR détecte quelque chose bloquant devant lui, un [0] apparaîtra sur le moniteur série ; sinon, un [1] sera affiché.

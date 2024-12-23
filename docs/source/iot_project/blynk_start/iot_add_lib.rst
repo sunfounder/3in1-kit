@@ -1,36 +1,36 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans le monde de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Obtenez un accès anticipé aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des promotions et concours pendant les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _iot_add_library:
 
-1.2 Adding the required libraries
-=======================================
+1.2 Ajouter les bibliothèques nécessaires
+==============================================
 
-You need to add the correct libraries for the Arduino IDE to use Blynk.
+Vous devez ajouter les bibliothèques appropriées pour permettre à l'IDE Arduino d'utiliser Blynk.
 
-#. Click `HERE <https://github.com/blynkkk/blynk-library/releases>`_, scroll down to the bottom of the page and download the first ``.zip`` file.
+#. Cliquez sur `ICI <https://github.com/blynkkk/blynk-library/releases>`_, descendez en bas de la page et téléchargez le premier fichier ``.zip``.
 
     .. image:: img/blynk_download_lib.png
 
-#. Unzip this file and you can see the following folders.
+#. Décompressez ce fichier et vous verrez les dossiers suivants.
 
     .. image:: img/blynk_unzip_lib.png
     
-#. Copy them all and paste them to the default libraries directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+#. Copiez-les tous et collez-les dans le répertoire des bibliothèques par défaut de l'IDE Arduino, qui se trouve généralement à l'adresse suivante : ``C:\Users\xxx\Documents\Arduino\libraries``.
 
     .. image:: img/sp20220614180720.png
 
-#. If your libraries directory is different, you can check it by going to **File** -> **Preferences**.
+#. Si le répertoire de vos bibliothèques est différent, vous pouvez le vérifier en allant dans **Fichier** -> **Préférences**.
 
     .. image:: img/install_lib1.png

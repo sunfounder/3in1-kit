@@ -1,51 +1,51 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _car_ir_obstacle:
 
-5. Play with Obstacle Avoidance Module
-===============================================
+5. Jouez avec le Module d'Évitement d'Obstacles
+===================================================
 
-Two infrared obstacle avoidance modules are mounted on the front of the car, which can be used to detect some close obstacles.
+Deux modules infrarouges d'évitement d'obstacles sont montés à l'avant de la voiture, permettant de détecter des obstacles proches.
 
-In this project, the car is allowed to move forward freely, and when it encounters an obstacle it is able to avoid it and continue to move in other directions.
+Dans ce projet, la voiture avance librement et, lorsqu'elle rencontre un obstacle, elle est capable de l'éviter et de continuer dans une autre direction.
 
-**Required Components**
+**Composants Requis**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,11 +56,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid` 
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Câblage**
 
-The obstacle avoidance module is a distance-adjustable infrared proximity sensor whose output is normally high and low when an obstacle is detected.
+Le module d'évitement d'obstacles est un capteur de proximité infrarouge à distance réglable, dont la sortie est normalement haute et devient basse lorsqu'un obstacle est détecté.
 
-Now build the circuit according to the diagram below.
+Construisez maintenant le circuit selon le schéma ci-dessous.
 
 .. list-table:: 
     :header-rows: 1
@@ -89,17 +89,17 @@ Now build the circuit according to the diagram below.
 .. image:: img/car_5.png
     :width: 800
 
-**Adjust the Module**
+**Ajustez le Module**
 
-Before starting the project, you need to adjust the detection distance of the module.
+Avant de commencer le projet, vous devez ajuster la distance de détection du module.
 
-Wiring according to the above diagram, power up the R4 board (either by plugging in the USB cable directly or by snapping the 9V battery cable), without uploading the code.
+Câblez selon le schéma ci-dessus, alimentez la carte R4 (soit en branchant directement le câble USB, soit en connectant le câble de batterie 9V), sans téléverser le code.
 
-Place a notebook or any other flat object about 5cm in front of the IR obstacle avoidance.
+Placez un cahier ou tout autre objet plat à environ 5 cm devant le module d'évitement d'obstacles IR.
 
-Then use a screwdriver to rotate the potentiometer on the module until the signal indicator on the module just lights up, so as to adjust its maximum detection distance of 5cm.
+Utilisez ensuite un tournevis pour tourner le potentiomètre sur le module jusqu'à ce que l'indicateur de signal sur le module s'allume juste, afin de régler sa distance de détection maximale à 5 cm.
 
-Follow the same method to adjust another infrared module.
+Suivez la même méthode pour ajuster l'autre module infrarouge.
 
 .. image:: img/ir_obs_cali.jpg
 
@@ -107,22 +107,22 @@ Follow the same method to adjust another infrared module.
 
 .. note::
 
-    * Open the ``5.obstacle_avoidance_module.ino`` file under the path of ``3in1-kit\car_project\5.obstacle_avoidance_module``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``5.obstacle_avoidance_module.ino`` sous le chemin ``3in1-kit\car_project\5.obstacle_avoidance_module``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléversez le code via l'`Éditeur Web Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/289ca80d-009f-4f60-b36d-1da6c5e10233/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will move forward once the code has been successfully uploaded. When the left infrared module detects an obstacle, it will go backwards to the left; when the right infrared module detects an obstacle, it will go backwards to the right; if both sides detect an obstacle, it will go backwards squarely.
+La voiture avancera dès que le code sera téléversé avec succès. Lorsque le module infrarouge gauche détecte un obstacle, elle reculera à gauche ; lorsque le module infrarouge droit détecte un obstacle, elle reculera à droite ; si les deux côtés détectent un obstacle, elle reculera droit.
 
-**How it works?**
+**Comment ça marche ?**
 
-This project is based on the value of the left and right infrared obstacle avoidance modules to make the car make the appropriate action.
+Ce projet repose sur les valeurs des modules infrarouges d'évitement d'obstacles gauche et droit pour que la voiture effectue les actions appropriées.
 
-#. Add the pin definition for the 2 obstacle avoidance modules, here they are set to ``INPUT``.
+#. Ajoutez la définition des broches pour les 2 modules d'évitement d'obstacles, ici elles sont définies comme ``INPUT``.
 
     .. code-block:: arduino
 
@@ -139,13 +139,13 @@ This project is based on the value of the left and right infrared obstacle avoid
         }
 
 
-#. Read the values of the left and right infrared modules and let the car to make the corresponding action.
+#. Lisez les valeurs des modules infrarouges gauche et droit et laissez la voiture effectuer l'action correspondante.
 
     .. code-block:: arduino
 
         void loop() {
 
-            int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+            int left = digitalRead(leftIR);   // 0 : Obstrué  1 : Libre
             int right = digitalRead(rightIR);
             int speed = 150;
 
@@ -160,15 +160,14 @@ This project is based on the value of the left and right infrared obstacle avoid
             }
         }
 
-    * If the left IR module is 0 (obstacle detected) and the right IR module is 1, let the car back up to the left.
-    * If the right IR module is 0 (obstacle detected), let the car go back up to the right.
-    * If 2 IR modules detect the obstacle at the same time, the car will go backward.
-    * Otherwise the car will keep going forward.
+    * Si le module IR gauche est à 0 (obstacle détecté) et le module IR droit est à 1, laissez la voiture reculer à gauche.
+    * Si le module IR droit est à 0 (obstacle détecté), laissez la voiture reculer à droite.
+    * Si les 2 modules IR détectent un obstacle en même temps, la voiture reculera.
+    * Sinon, la voiture continuera à avancer.
 
+#. À propos de la fonction ``backLeft()``.
 
-#. About the ``backLeft()`` function.
-
-    When the right motor is turning counterclockwise and the left motor is not turning, the car will go backward to the left. 
+    Lorsque le moteur droit tourne dans le sens antihoraire et que le moteur gauche ne tourne pas, la voiture reculera vers la gauche. 
 
     .. code-block:: arduino
 
@@ -179,9 +178,9 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, 0);
         }
 
-#. About the ``backLeft()`` function.
+#. À propos de la fonction ``backRight()``.
 
-    When the left motor is turning clockwise and the right motor is not turning, the car will go backward to the right.
+    Lorsque le moteur gauche tourne dans le sens horaire et que le moteur droit ne tourne pas, la voiture reculera vers la droite.
 
     .. code-block:: arduino
 
@@ -192,6 +191,6 @@ This project is based on the value of the left and right infrared obstacle avoid
             analogWrite(B_1A, speed);
         }
 
-* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: Logical AND results in true only if both operands are true.
+* `&& <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/>`_: ET logique donne un résultat vrai uniquement si les deux opérandes sont vrais.
 
-* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: Logical NOT results in a true if the operand is false and vice versa.
+* `! <https://www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/>`_: NON logique donne un résultat vrai si l'opérande est faux, et vice versa.

@@ -1,50 +1,51 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprenez & partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces et aperçus de nouveaux produits.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_eeprom:
 
-6.2 Digital Dice
+6.2 Dé électronique
 =============================
 
-Here we use button, 7-segment and 74hc595 to make an electronic dice. 
-Each time the button is pressed, a random number ranging from 1 to 6 is generated and displayed on the 7-segment Display.
+Dans ce projet, nous utilisons un bouton, un afficheur 7 segments et un 74hc595 pour 
+créer un dé électronique. À chaque pression sur le bouton, un nombre aléatoire compris 
+entre 1 et 6 est généré et affiché sur l'afficheur 7 segments.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -61,11 +62,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7_segment`
         - |link_7segment_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_8.9_eeprom.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/6.2_electronic_dice_bb.png
     :width: 800
@@ -75,22 +76,22 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``6.2.electronic_dice.ino`` file under the path of ``3in1-kit\learning_project\6.2.electronic_dice``.
-    * Or copy this code into **Arduino IDE**.
-    
-    
+    * Ouvrez le fichier ``6.2.electronic_dice.ino`` sous le chemin ``3in1-kit\learning_project\6.2.electronic_dice``.
+    * Ou copiez ce code dans **Arduino IDE**.
+
+
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8d8ad340-b1de-4518-917b-caaf07e4baf4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-When the code is uploaded successfully, the 7-segment Display will display 0-7 in a fast scroll, and when you press the button, it will display a random number and stop scrolling. The scrolling display starts again when you press the button again.
+Lorsque le code est téléversé avec succès, l'afficheur 7 segments affiche un défilement rapide de 0 à 7. Lorsque vous appuyez sur le bouton, il affiche un nombre aléatoire et arrête le défilement. Le défilement redémarre lorsque vous appuyez à nouveau sur le bouton.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-This project is based on :ref:`ar_segment` with a button to start/pause the scrolling display on the 7-segment Display.
+Ce projet est basé sur :ref:`ar_segment` avec un bouton pour démarrer/mettre en pause le défilement sur l'afficheur 7 segments.
 
-#. Initialize each pin and read the value of the button.
+#. Initialisez chaque broche et lisez la valeur du bouton.
 
     .. code-block:: arduino
 
@@ -101,11 +102,11 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             attachInterrupt(digitalPinToInterrupt(buttonPin), rollDice, FALLING);
         }
 
-    * The interrupt is used here to read the state of the button. The default value of ``buttonPin`` is low, which changes from low to high when the button is pressed.
-    * ``rollDice`` represents the function to be called when the interrupt is triggered, it is used to toggle the value of the variable ``state``.
-    * ``FALLING`` means the interrupt is triggered when the ``buttonPin`` goes from low to high.
+    * Une interruption est utilisée ici pour lire l'état du bouton. La valeur par défaut de ``buttonPin`` est LOW, qui passe de LOW à HIGH lorsqu'on appuie sur le bouton.
+    * ``rollDice`` représente la fonction appelée lorsque l'interruption est déclenchée. Elle permet de basculer la valeur de la variable ``state``.
+    * ``FALLING`` signifie que l'interruption est déclenchée lorsque ``buttonPin`` passe de LOW à HIGH.
 
-#. When the variable ``state`` is 0, the function ``showNumber()`` is called to make the 7-segment Display randomly display a number between 1 and 7.
+#. Lorsque la variable ``state`` est à 0, la fonction ``showNumber()`` est appelée pour afficher aléatoirement un nombre entre 1 et 7 sur l'afficheur 7 segments.
 
     .. code-block:: arduino
 
@@ -117,7 +118,7 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             }
         }
 
-#. About ``rollDice()`` function.
+#. À propos de la fonction ``rollDice()``.
 
     .. code-block:: arduino
 
@@ -125,18 +126,18 @@ This project is based on :ref:`ar_segment` with a button to start/pause the scro
             state = !state;
         }
     
-    When this function is called, it toggles the value of state, such as 1 last time and 0 this time.
+    Lorsque cette fonction est appelée, elle bascule la valeur de ``state``, par exemple de 1 à 0 ou inversement.
 
-#. About ``showNumber()`` function.
+#. À propos de la fonction ``showNumber()``.
 
     .. code-block:: arduino
 
         void showNumber(int num) {
-            digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
+            digitalWrite(STcp, LOW); // Mettez ST_CP à LOW et maintenez-le tant que vous transmettez
             shiftOut(DS, SHcp, MSBFIRST, datArray[num]);
             //return the latch pin high to signal chip that it
             //no longer needs to listen for information
-            digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
+            digitalWrite(STcp, HIGH); // Tirez ST_CP à HIGH pour enregistrer les données
         }
     
-    This is the code inside ``loop()`` in the project :ref:`ar_segment` into the function ``showNumber()``.
+    Ce code est tiré du projet :ref:`ar_segment` et encapsulé dans la fonction ``showNumber()``.

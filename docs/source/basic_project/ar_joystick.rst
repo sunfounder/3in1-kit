@@ -1,57 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_joystick:
 
-4.3 Toggle the Joystick
+4.3 Basculer le Joystick
 ================================
 
-The joystick should be very familiar to anyone who plays video games regularly.
-It is usually used to move characters or rotate the screen.
+Le joystick est très familier pour quiconque joue régulièrement aux jeux vidéo. 
+Il est généralement utilisé pour déplacer des personnages ou faire pivoter l'écran.
 
-Our movements can be read by the Joystick, which works on a very simple principle.
-It consists of two potentiometers that are perpendicular to each other.
-These two potentiometers measure the analog value of the joystick in both vertical and horizontal directions, producing a value (x,y) in a planar right-angle coordinate system.
+Nos mouvements peuvent être captés par le joystick, qui fonctionne selon un principe 
+très simple. Il se compose de deux potentiomètres perpendiculaires l'un à l'autre. 
+Ces deux potentiomètres mesurent la valeur analogique du joystick dans les directions 
+verticale et horizontale, produisant une valeur (x, y) dans un système de coordonnées 
+rectangulaire planaire.
 
+Ce kit comprend également un joystick avec une entrée numérique, activée lorsque le 
+joystick est pressé.
 
-This kit also includes a joystick with a digital input. It is activated when the joystick is pressed.
+**Composants nécessaires**
 
-**Required Components**
+Dans ce projet, nous avons besoin des composants suivants :
 
-In this project, we need the following components. 
-
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -64,16 +66,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_5.3_joystick.png
 
 .. note::
-    The SW pin is connected to a 10K pull-up resistor, 
-    the reason is to be able to get a stable high level on the SW pin (Z axis) when the joystick is not pressed; 
-    otherwise the SW is in a suspended state and the output value may vary between 0/1.
+    La broche SW est connectée à une résistance de pull-up de 10K, 
+    afin d'obtenir un niveau haut stable sur la broche SW (axe Z) lorsque le joystick n'est pas pressé ; 
+    sinon, la broche SW est en état suspendu et la valeur de sortie peut varier entre 0 et 1.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/4.3_toggle_the_joystick_bb.png
     :width: 800
@@ -83,8 +85,8 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``4.3.toggle_the_joystick.ino`` file under the path of ``3in1-kit\learning_project\4.3.toggle_the_joystick``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``4.3.toggle_the_joystick.ino`` dans le répertoire ``3in1-kit\learning_project\4.3.toggle_the_joystick``.
+    * Ou copiez ce code dans l'IDE Arduino.
     
     
 
@@ -92,7 +94,8 @@ You can also buy them separately from the links below.
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f678a03f-546c-42ed-bfae-b8c7daa5eec9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Open the serial monitor after the code has been uploaded successfully to see the x,y,z values of the joystick.
+Ouvrez le moniteur série après avoir téléversé le code avec succès pour voir les valeurs x, y, z du joystick.
 
-* The x-axis and y-axis values are analog values that vary from 0 to 1023.
-* The Z-axis is a digital value with a status of 1 or 0 ( when pressed , it is 0 ).
+
+* Les valeurs des axes x et y sont des valeurs analogiques variant de 0 à 1023.
+* L'axe Z est une valeur numérique avec un état de 1 ou 0 (lorsqu'il est pressé, il est à 0).

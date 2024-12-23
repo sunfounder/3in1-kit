@@ -1,27 +1,27 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _car_projects:
 
-Car Projects
-=================
+Projets de Voiture
+======================
 
-I believe you have seen a lot of different smart robot car, their basic functions are similar, basic movement, obstacle avoidance, line following, following and control by remote control, etc..
+Je suppose que vous avez déjà vu de nombreuses voitures robots intelligentes, leurs fonctions de base étant similaires : déplacements de base, évitement d'obstacles, suivi de ligne, suivi d'objet, contrôle par télécommande, etc.
 
-Here, we use the simplest structure to build a smart robot car, which can also achieve all the above functions. In addition you can control it with your cell phone, please refer to :ref:`iot_car` for the tutorial.
+Ici, nous utilisons la structure la plus simple pour construire une voiture robot intelligente qui peut également réaliser toutes les fonctions ci-dessus. En outre, vous pouvez la contrôler avec votre téléphone portable. Veuillez consulter :ref:`iot_car` pour le tutoriel.
 
-**assembly instructions**
+**Instructions d'assemblage**
 
 .. toctree::
     :maxdepth: 1
@@ -29,12 +29,11 @@ Here, we use the simplest structure to build a smart robot car, which can also a
     car_assemble
 
 
-**Projects**
+**Projets**
 
-Here are some projects for the car, programmed in C with the Arduino IDE, if you are not particularly skilled with Arduino, you can refer to :ref:`get_start_arduino_ide`.
+Voici quelques projets pour la voiture, programmés en C avec l'Arduino IDE. Si vous n'êtes pas particulièrement à l'aise avec Arduino, vous pouvez consulter :ref:`get_start_arduino_ide`.
 
-The following projects are written in order of programming difficulty, it is recommended to read these books in order.
-
+Les projets suivants sont rédigés par ordre de difficulté en programmation. Il est recommandé de les lire dans cet ordre.
 
 .. toctree::
     :maxdepth: 2

@@ -1,16 +1,16 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_servo:
 
@@ -20,26 +20,24 @@ Servo
 .. image:: img/servo.png
     :align: center
 
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.  
+Un servo est généralement composé des éléments suivants : boîtier, axe, système d'engrenages, potentiomètre, moteur à courant continu et carte embarquée.
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then motivates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+Son fonctionnement est le suivant : le microcontrôleur envoie des signaux PWM au servo, qui sont ensuite reçus par la carte embarquée via la broche de signal. Celle-ci contrôle le moteur interne pour le faire tourner. En conséquence, le moteur actionne le système d'engrenages, qui entraîne l'axe après réduction. L'axe et le potentiomètre du servo sont connectés ensemble. Lorsque l'axe tourne, il fait tourner le potentiomètre, lequel envoie un signal de tension à la carte embarquée. La carte détermine alors la direction et la vitesse de rotation en fonction de la position actuelle, ce qui permet d'arrêter précisément l'axe à la position définie et de le maintenir en place.
 
 .. image:: img/servo_internal.png
     :align: center
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position).
-When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+L'angle est déterminé par la durée d'une impulsion appliquée au fil de commande. Ce processus est appelé modulation de largeur d'impulsion (PWM). Le servo attend une impulsion toutes les 20 ms. La durée de l'impulsion détermine l'angle de rotation du moteur. Par exemple, une impulsion de 1,5 ms positionne le moteur à 90 degrés (position neutre). 
+
+Lorsque l'impulsion est inférieure à 1,5 ms, le servo tourne dans le sens antihoraire à partir de la position neutre. Lorsqu'elle est supérieure à 1,5 ms, le mouvement est dans le sens horaire. La largeur minimale et maximale des impulsions nécessaires pour commander le servo dépendent de chaque modèle. En général, l'impulsion minimale est d'environ 0,5 ms et la maximale de 2,5 ms.
 
 .. image:: img/servo_duty.png
     :width: 600
     :align: center
 
-**Example**
+**Exemple**
 
-* :ref:`ar_servo` (Basic Project)
-* :ref:`iot_gate` (IoT Project)
+* :ref:`ar_servo` (Projet de base)
+* :ref:`iot_gate` (Projet IoT)
 
-.. * :ref:`sh_pendulum` (Scratch Project)
-
-
-
+.. * :ref:`sh_pendulum` (Projet Scratch)

@@ -1,63 +1,62 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Explorez en profondeur Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_motor:
 
-1.3 Turn the Wheel
-============================
+1.3 Faites tourner la roue
+=============================
 
-A motor is a typical digital output device, and it is used in the same way as an LED.
-However, the motor needs to be driven with a large current, 
-and the large current may damage the main control board such as R4 board.
-Therefore, an motor driver module is used in this occasion, 
-which is a good helper for the R4 board to control the motor safely.
+Un moteur est un dispositif de sortie numérique typique, et il est utilisé de la même manière qu'une LED.
+Cependant, le moteur nécessite un courant élevé pour fonctionner, 
+et ce courant élevé pourrait endommager la carte principale, comme la carte R4.
+C'est pourquoi un module de commande moteur est utilisé dans ce cas, 
+offrant une solution fiable pour que la carte R4 contrôle le moteur en toute sécurité.
 
-.. **Schematic**
+.. **Schéma**
 
 .. .. image:: img/circuit_1.3_wheel.png
 
-.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 sont les entrées du module L298N, et OUT1~OUT4 en sont les sorties.
 
-.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. Une méthode simple consiste à entrer un niveau haut pour INx, OUTx produira un niveau haut ; entrez un niveau bas pour INx, OUTx produira un niveau bas.
+.. En connectant les deux extrémités du moteur à OUT1 et OUT2, en entrant des signaux de niveau opposés pour IN1 et IN2, le moteur commencera à tourner. OUT3 et OUT4 peuvent être utilisés de la même manière.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d’acheter un kit complet. Voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
-
+    *   - INTRODUCTION AUX COMPOSANTS
+        - LIEN D'ACHAT
     *   - :ref:`cpn_uno`
         - \-
     *   - :ref:`cpn_wires`
@@ -67,21 +66,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_l9110`
         - \-
 
-**Schematic**
-
+**Schéma**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-
-**Wiring**
+**Câblage**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L9110S
-      - R4 Board
-      - Motor
+      - Carte R4
+      - Moteur
     * - VCC
       - 5V
       - 
@@ -96,10 +93,10 @@ You can also buy them separately from the links below.
       - 
     * - OA
       - 
-      - one wire of the motor
+      - un fil du moteur
     * - OB
       - 
-      - one wire of the motor
+      - un fil du moteur
 
 .. image:: img/1.3_turn_the_wheel_bb.png
     :width: 800
@@ -109,11 +106,9 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``1.3.turn_the_wheel.ino`` under the path of ``3in1-kit\learning_project\1.3.turn_the_wheel``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
+   * Vous pouvez ouvrir le fichier ``1.3.turn_the_wheel.ino`` dans le chemin ``3in1-kit\learning_project\1.3.turn_the_wheel``. 
+   * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5f8e4f33-883b-4c06-9516-f1754ea2121d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

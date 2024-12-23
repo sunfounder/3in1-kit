@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_photoresistor:
 
-4.2 Feel the Light
-===========================
+4.2 Ressentir la lumière
+============================
 
-The photoresistor is a typical device for analog inputs and it is used in a very similar way to a potentiometer. Its resistance value depends on the intensity of the light, the stronger the irradiated light, the smaller its resistance value; conversely, it increases.
+La photorésistance est un dispositif typique pour les entrées analogiques, utilisé de manière très similaire à un potentiomètre. Sa valeur de résistance dépend de l'intensité de la lumière : plus la lumière irradiée est forte, plus la résistance est faible ; inversement, la résistance augmente.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -56,20 +56,20 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_5.2_light.png
 
-In this circuit, the 10K resistor and the photoresistor are connected in series, and the current passing through them is the same. The 10K resistor acts as a protection, and the pin A0 reads the value after the voltage conversion of the photoresistor.
+Dans ce circuit, la résistance de 10 kΩ et la photorésistance sont connectées en série, et le courant qui les traverse est le même. La résistance de 10 kΩ agit comme une protection, et la broche A0 lit la valeur après la conversion de tension de la photorésistance.
 
-When the light is enhanced, the resistance of the photoresistor decreases, then its voltage decreases, so the value from pin A0 will increase; 
-if the light is strong enough, the resistance of the photoresistor will be close to 0, and the value of pin A0 will be close to 1023. 
-At this time, the 10K resistor plays a protective role, so that 5V and GND are not connected together, resulting in a short circuit.
+Lorsque la lumière est renforcée, la résistance de la photorésistance diminue, alors sa tension diminue, ce qui fait augmenter la valeur de la broche A0. 
+Si la lumière est suffisamment forte, la résistance de la photorésistance sera proche de 0, et la valeur de la broche A0 sera proche de 1023. 
+Dans ce cas, la résistance de 10 kΩ joue un rôle de protection, empêchant ainsi que le 5V et le GND soient connectés ensemble, ce qui entraînerait un court-circuit.
 
-If you place the photoresistor in a dark situation, the value of pin A0 will decrease. 
-In a dark enough situation, the resistance of the photoresistor will be infinite, and its voltage will be close to 5V (the 10K resistor is negligible), and the value of pin A0 will be close to 0.
+Si vous placez la photorésistance dans l'obscurité, la valeur de la broche A0 diminuera. 
+Dans une obscurité suffisante, la résistance de la photorésistance sera infinie, et sa tension sera proche de 5V (la résistance de 10 kΩ est négligeable), ce qui entraînera une valeur de la broche A0 proche de 0.
 
-**Wiring**
+**Câblage**
 
 .. image:: img/4.2_feel_the_light_bb.png
     :width: 600
@@ -79,14 +79,13 @@ In a dark enough situation, the resistance of the photoresistor will be infinite
 
 .. note::
 
-    * Open the ``4.2.feel_the_light.ino`` file under the path of ``3in1-kit\learning_project\4.2.feel_the_light``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Ouvrez le fichier ``4.2.feel_the_light.ino`` dans le répertoire ``3in1-kit\learning_project\4.2.feel_the_light``.
+    * Ou copiez ce code dans l'IDE Arduino.
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e1bc4c8b-788e-4bfe-a0a1-532d4fdc7753/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, the serial monitor prints out the photoresistor values. 
-The stronger the current ambient brightness, the larger the value displayed on the serial monitor.
+Après avoir téléchargé le code avec succès, le moniteur série imprimera les valeurs de la photorésistance. 
+Plus la luminosité ambiante est forte, plus la valeur affichée sur le moniteur série sera grande.

@@ -1,16 +1,16 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_uno:
 
@@ -19,51 +19,51 @@
 Arduino Uno R4 Minima
 =================================
 
-**Overview**
+**Vue d'ensemble**
 
-Enhanced and improved, the Arduino UNO R4 Minima is armed with a powerful 32-bit microcontroller courtesy of Renesas. Brace yourself for increased processing power, expanded memory, and a whole new level of on-board peripherals. The best part? Compatibility with existing shields and accessories remains intact, and there's no need to make any changes to the standard form factor or 5 V operating voltage.
+Améliorée et perfectionnée, l'Arduino UNO R4 Minima est équipée d'un puissant microcontrôleur 32 bits fourni par Renesas. Préparez-vous à une puissance de traitement accrue, une mémoire élargie et une nouvelle gamme de périphériques intégrés. Le meilleur dans tout ça ? La compatibilité avec les shields et accessoires existants reste intacte, sans modification du facteur de forme standard ni de la tension de fonctionnement de 5 V.
 
-Joining the Arduino ecosystem, the UNO R4 is a trusty addition suitable for both beginners and seasoned electronics enthusiasts. Whether you're just starting out or looking to push the boundaries of your projects, this robust board delivers reliable performance every time.
+S'intégrant parfaitement à l'écosystème Arduino, l'UNO R4 est une alliée de confiance pour les débutants comme pour les amateurs d'électronique chevronnés. Que vous débutiez ou cherchiez à repousser les limites de vos projets, cette carte robuste offre des performances fiables à chaque fois.
 
 .. image:: img/uno_r4.png
 
-Here's what the UNO R4 Minima brings to the table:
+Voici ce que l'UNO R4 Minima vous apporte :
 
-* Hardware compatibility with UNO form factor: The UNO R4 Minima maintains the same form factor, pinout, and 5 V operating voltage as its predecessor, the UNO R3. This ensures a seamless transition for existing shields and projects, leveraging the extensive and unique ecosystem already established for the Arduino UNO.
-* Expanded memory and faster clock: Prepare for more precise calculations and the ability to handle complex projects with ease. The UNO R4 Minima boasts increased memory and a faster clock speed, empowering you to tackle demanding tasks effortlessly.
-* Extra on-board peripherals: The UNO R4 Minima introduces a range of on-board peripherals, including a 12-bit DAC, CAN BUS, and OP AMP. These additional components provide you with expanded capabilities and flexibility in your designs.
-* Extended 24 V tolerance: The UNO R4 Minima now supports a wider input voltage range, allowing power supplies up to 24 V. This enables seamless integration with motors, LED strips, and other actuators, simplifying your projects by utilizing a single power source.
-* SWD connector: Debugging is a critical aspect of any project. Simply connect an external debugger to the UNO R4 Minima and effortlessly monitor the inner workings of your system. Stay in control and gain valuable insights.
-* HID support: The UNO R4 Minima comes with built-in HID (Human Interface Device) support, enabling it to simulate a mouse or keyboard when connected to a computer via a USB cable. This convenient feature makes it a breeze to send keystrokes and mouse movements to a computer, enhancing usability and functionality.
+* Compatibilité matérielle avec le facteur de forme UNO : L'UNO R4 Minima conserve le même facteur de forme, le même brochage et la même tension de fonctionnement de 5 V que son prédécesseur, l'UNO R3. Cela garantit une transition fluide pour les shields et projets existants, en tirant parti de l'écosystème étendu et unique déjà établi pour l'Arduino UNO.
+* Mémoire élargie et horloge plus rapide : Préparez-vous à des calculs plus précis et à la possibilité de gérer facilement des projets complexes. L'UNO R4 Minima offre une mémoire accrue et une vitesse d'horloge plus rapide, vous permettant de relever des défis exigeants sans effort.
+* Périphériques intégrés supplémentaires : L'UNO R4 Minima introduit une gamme de périphériques intégrés, y compris un DAC 12 bits, un CAN BUS et un OP AMP. Ces composants supplémentaires vous offrent des capacités et une flexibilité accrues dans vos conceptions.
+* Tolérance étendue à 24 V : L'UNO R4 Minima prend désormais en charge une plage de tension d'entrée plus large, permettant des alimentations allant jusqu'à 24 V. Cela permet une intégration transparente avec des moteurs, des bandes LED et d'autres actionneurs, simplifiant vos projets en utilisant une seule source d'alimentation.
+* Connecteur SWD : Le débogage est un aspect critique de tout projet. Connectez simplement un débogueur externe à l'UNO R4 Minima pour surveiller facilement le fonctionnement interne de votre système. Gardez le contrôle et obtenez des informations précieuses.
+* Support HID : L'UNO R4 Minima est dotée d'un support HID (Human Interface Device) intégré, lui permettant de simuler une souris ou un clavier lorsqu'elle est connectée à un ordinateur via un câble USB. Cette fonctionnalité pratique simplifie l'envoi de frappes et de mouvements de souris à un ordinateur, améliorant ainsi la convivialité et les fonctionnalités.
 
-**Tech specs**
+**Spécifications techniques**
 
-* Board:
-    * Name: Arduino® UNO R4 Minima
-    * SKU: ABX00080
-* Microcontroller: Renesas RA4M1 (Arm® Cortex®-M4)
-* USB: USB-C® Programming Port
-* Pins:
-    * Digital I/O Pins: 14
-    * Analog input pin: 6
-    * DAC: 1
-    * PWM pins: 6
-* Communication
-    *  UART: Yes, 1x
-    * I2C: Yes, 1x
-    * SPI: Yes, 1x
-    * CAN: Yes 1 CAN Bus
-* Power
-    * Circuit operating voltage: 5 V
-    * Input voltage (VIN): 6-24 V
-    * DC Current per I/O Pin: 8 mA
-* Clock speed Main core 48 MHz
-* Memory RA4M1 256 kB Flash, 32 kB RAM
-* Dimensions
-    * Width: 68.85 mm
-    * Length: 53.34 mm
+* Carte :
+    * Nom : Arduino® UNO R4 Minima
+    * SKU : ABX00080
+* Microcontrôleur : Renesas RA4M1 (Arm® Cortex®-M4)
+* USB : Port de programmation USB-C®
+* Broches :
+    * Broches d'entrée/sortie numériques : 14
+    * Broches d'entrée analogique : 6
+    * DAC : 1
+    * Broches PWM : 6
+* Communication :
+    * UART : Oui, 1x
+    * I2C : Oui, 1x
+    * SPI : Oui, 1x
+    * CAN : Oui, 1x CAN Bus
+* Alimentation :
+    * Tension de fonctionnement du circuit : 5 V
+    * Tension d'entrée (VIN) : 6-24 V
+    * Courant DC par broche I/O : 8 mA
+* Vitesse d'horloge principale : 48 MHz
+* Mémoire : RA4M1 256 kB Flash, 32 kB RAM
+* Dimensions :
+    * Largeur : 68,85 mm
+    * Longueur : 53,34 mm
 
-**Pinout**
+**Schéma des broches**
 
 .. image:: img/uno_r4_pinsout.png
     :width: 800

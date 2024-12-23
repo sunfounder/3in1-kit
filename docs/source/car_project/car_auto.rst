@@ -1,51 +1,51 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _self_driving:
 
-8. Self-Driving Car
-=========================
+8. Voiture Autonome
+=======================
 
-This project is a combination of the two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`. 
-2 infrared obstacle avoidance modules do short distance or edge detection, 
-and ultrasonic modules do long distance detection to confirm that the car does not hit an obstacle during the free driving process.
+Ce projet est une combinaison des deux projets :ref:`car_ultrasonic` et :ref:`car_ir_obstacle`. 
+Deux modules infrarouges d'évitement d'obstacles effectuent une détection à courte distance ou des 
+bords, tandis que les modules ultrasoniques effectuent une détection à longue distance pour garantir que la voiture ne heurte aucun obstacle pendant son processus de conduite autonome.
 
-**Required Components**
+**Composants requis**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -58,11 +58,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Câblage**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Connectez simultanément le module ultrasonique et les 2 modules infrarouges d'évitement d'obstacles.
 
-Wire the ultrasonic to the R4 board as follows.
+Câblez le module ultrasonique à la carte R4 comme suit.
 
 .. list-table:: 
     :header-rows: 1
@@ -78,7 +78,7 @@ Wire the ultrasonic to the R4 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
+Le câblage des 2 modules infrarouges à la carte R4 est le suivant.
 
 .. list-table:: 
     :header-rows: 1
@@ -111,37 +111,35 @@ The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 
 .. note::
 
-    * Open the ``8.self_driving_car.ino`` file under the path of ``3in1-kit\car_project\8.self_driving_car``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``8.self_driving_car.ino`` sous le chemin ``3in1-kit\car_project\8.self_driving_car``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléversez le code via l'`Éditeur Web Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/0a74a7b1-ead6-4bea-ab5a-4da71f27f82f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-The car will drive freely once the code has been uploaded successfully. When the IR obstruction module on both sides detects an obstacle, it will move in the opposite direction for emergency evasion; if there is an obstacle within 2~10cm directly in front of the car, it will back up to the left, adjust its direction, and then move forward.
+La voiture roulera librement une fois le code téléversé avec succès. Lorsque le module IR d'obstruction des deux côtés détecte un obstacle, elle se déplacera dans la direction opposée pour une évitement d'urgence. Si un obstacle est détecté à une distance de 2 à 10 cm directement devant la voiture, elle reculera vers la gauche, ajustera sa direction, puis avancera.
 
+**Comment ça marche ?**
 
-**How it works?**
+Le flux de travail de ce projet est le suivant :
 
-The workflow of this project is as follows.
-
-* Priority read the value of left and right IR obstacle avoidance module.
-* If the left IR module is 0 (obstacle detected), the right IR module is 1, let the car back up to the left.
-* If the right IR module is 0 (obstacle detected), let the car back up to the right.
-* If 2 IR modules detect the obstacle at the same time, the car will back up.
-* Otherwise read the distance detected by the ultrasonic module.
-* If the distance is greater than 50cm, let the car go forward.
-* If the distance is between 2-10cm, let the car backward before turning.
-* If the distance is between 10-50cm, let the car go forward at low speed.
-
+* Lire en priorité la valeur des modules IR gauche et droit.
+* Si le module IR gauche est à 0 (obstacle détecté) et le droit à 1, la voiture recule vers la gauche.
+* Si le module IR droit est à 0 (obstacle détecté), la voiture recule vers la droite.
+* Si les 2 modules IR détectent un obstacle en même temps, la voiture recule.
+* Sinon, lire la distance détectée par le module ultrasonique.
+* Si la distance est supérieure à 50 cm, la voiture avance.
+* Si la distance est comprise entre 2 et 10 cm, la voiture recule avant de tourner.
+* Si la distance est comprise entre 10 et 50 cm, la voiture avance à basse vitesse.
 
 .. code-block:: arduino
 
     void loop() {
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0: Obstrué  1: Libre
         int right = digitalRead(rightIR);
 
         if (!left && right) {
@@ -153,7 +151,7 @@ The workflow of this project is as follows.
         } else {
             float distance = readSensorData();
             Serial.println(distance);
-            if (distance > 50) { // Safe
+            if (distance > 50) { // Sécurisé
                 moveForward(200);
             } else if (distance < 10 && distance > 2) { // Attention
                 moveBackward(200);

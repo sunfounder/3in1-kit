@@ -1,85 +1,85 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Assemble the Car
-=====================
+Assembler la Voiture
+=========================
 
-Please follow the steps below to complete the assembly of the car.
+Veuillez suivre les étapes ci-dessous pour compléter l'assemblage de la voiture.
 
-1. Remove the protective film on the acrylic.
+1. Retirez le film protecteur de l'acrylique.
 
     .. image:: img/IMG_9118.JPG
 
-2. Place the board on the table as shown in the picture, the side with the same hole as the R4 board, we call A; the back is B. This will help you avoid mistakes during assembly.
+2. Placez la plaque sur la table comme indiqué sur l'image. Le côté avec les mêmes trous que la carte R4 est appelé côté A, et l'autre côté est le côté B. Cela vous aidera à éviter des erreurs pendant l'assemblage.
 
     .. image:: img/IMG_9147.JPG
 
-#. Mount the **M3x24mm standoff** with **M3x6mm screws** in the position as shown below.
+#. Fixez les entretoises **M3x24mm** avec des vis **M3x6mm** aux positions indiquées ci-dessous.
 
     .. image:: img/IMG_9151.JPG
 
-#. Turn to the B side, use **M3x30mm screws** and **M3 nuts** to attach the TT Motor. 2 details here: 1 - the output shaft is facing the bat-shaped side; 2 - the motor cable is facing the inside.
+#. Passez au côté B et utilisez des vis **M3x30mm** et des écrous **M3** pour fixer le moteur TT. Deux détails importants : 1 - l’arbre de sortie est orienté vers le côté en forme de chauve-souris ; 2 - les câbles du moteur sont dirigés vers l'intérieur.
 
     .. image:: img/IMG_9153.JPG
 
-#. Mount another TT Motor, the same attention needs to be paid to the direction of the output shaft and the direction of the cable.
+#. Fixez l'autre moteur TT en respectant les mêmes consignes concernant la direction de l’arbre de sortie et celle des câbles.
 
     .. image:: img/IMG_9154.JPG
 
-#. Use **M3x6mm screws** to mount the **M3x10mm standoff** in the position as shown below.
+#. Utilisez des vis **M3x6mm** pour monter les entretoises **M3x10mm** aux positions indiquées ci-dessous.
 
     .. image:: img/IMG_9157.JPG
 
-#. Attach the **M2.5x11mm standoff** to the rear of the car with **M2.5x6mm screws**.
+#. Attachez les entretoises **M2.5x11mm** à l’arrière de la voiture avec des vis **M2.5x6mm**.
 
     .. image:: img/IMG_9174.JPG
 
-#. Use **M3x6mm screws** to mount the universal wheel.
+#. Fixez la roue universelle avec des vis **M3x6mm**.
 
     .. image:: img/IMG_9175.JPG
 
-#. Putting on the 2 wheels and the car's basic structure has been completed.
+#. Installez les 2 roues ; la structure de base de la voiture est maintenant terminée.
 
     .. image:: img/IMG_9179.JPG
 
-#.  Attach the L9110 module with **M2.5x6mm screws**.
+#. Fixez le module L9110 avec des vis **M2.5x6mm**.
 
     .. image:: img/IMG_9182.JPG
 
-#. Assemble the two IR Obstacle Modules with **M3x10mm screws** and **M3 nuts**.
+#. Assemblez les deux modules infrarouges d'évitement d'obstacles avec des vis **M3x10mm** et des écrous **M3**.
 
     .. image:: img/IMG_9185.JPG
 
-#. Turn to side B and attach the Line Track module with four **M3x6mm screws** and two **M3x24mm standoffs**.
+#. Passez au côté B et attachez le module de suivi de ligne avec quatre vis **M3x6mm** et deux entretoises **M3x24mm**.
 
     .. note::
-        It's advisable to first secure the **M3x24mm standoffs** onto the Line Track module.
+        Il est conseillé de d'abord fixer les entretoises **M3x24mm** sur le module de suivi de ligne.
 
-        One important note to keep in mind: the pins of the line sensor are slightly soft and protrude a bit towards the holes. When screwing in the **M3x24mm standoffs**, apply gentle pressure to push aside the sensor pins slightly.
+        Un point important à noter : les broches du capteur de ligne sont légèrement souples et dépassent un peu vers les trous. Lorsque vous vissez les entretoises **M3x24mm**, appliquez une légère pression pour écarter légèrement les broches du capteur.
 
     .. image:: img/IMG_9186.JPG
 
-#. Stick the velcro on the 9V battery and put on the battery clip. Stick the other section of the Velcro on the car to secure the battery.
+#. Collez le Velcro sur la batterie 9V et installez le clip de batterie. Collez l'autre section de Velcro sur la voiture pour fixer la batterie.
 
     .. image:: img/IMG_9189.JPG
 
-#. Turn over to side A and mount the R4 board with **M3x6mm screws**.
+#. Retournez au côté A et fixez la carte R4 avec des vis **M3x6mm**.
 
     .. image:: img/IMG_9193.JPG
 
-#. Attach the breadboard to the front of the car. Thereafter, you will be able to add different components (e.g. ultrasonic module) to the breadboard as required for your project.
+#. Fixez la plaque d'expérimentation à l'avant de la voiture. Ensuite, vous pourrez ajouter différents composants (par exemple, un module ultrasonique) sur la plaque d'expérimentation en fonction des besoins de votre projet.
 
     .. image:: img/IMG_9195.JPG
 
-#. Getting the car running also requires wiring it up and writing code, which will be written in subsequent sections.
+#. Faire fonctionner la voiture nécessite également de la câbler et de coder, ce qui sera expliqué dans les sections suivantes.

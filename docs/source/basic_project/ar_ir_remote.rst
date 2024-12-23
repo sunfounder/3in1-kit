@@ -1,52 +1,54 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_receiver:
 
-5.11.2 IR Receiver
+5.11.2 Récepteur IR
 =========================
 
-In this project, you will learn to use IR Receiver. 
+Dans ce projet, vous apprendrez à utiliser un récepteur IR.
 
-An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. 
-It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+Un récepteur infrarouge est un composant qui reçoit des signaux infrarouges et peut 
+indépendamment recevoir des rayons infrarouges et émettre des signaux compatibles 
+avec le niveau TTL. Il est de taille similaire à un transistor classique emballé dans 
+du plastique et convient à tous types de télécommandes infrarouges et de transmissions infrarouges.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -57,14 +59,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_7.2_receiver.png
 
-**Wiring**
+**Câblage**
 
-In this example, we wire up the left pin of IR Receiver to pin 11, 
-the middle pin to GND, and the right pin to 5V.
+Dans cet exemple, connectez la broche gauche du récepteur IR à la broche 11, 
+la broche du milieu à GND, et la broche droite à 5V.
 
 .. image:: img/5.11_ir_recv_bb.png
 
@@ -72,9 +74,9 @@ the middle pin to GND, and the right pin to 5V.
 
 .. note::
 
-    * Open the ``5.11.ir_receiver.ino`` file under the path of ``3in1-kit\learning_project\5.11.ir_receiver``.
-    * Or copy this code into **Arduino IDE**.
-    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+    * Ouvrez le fichier ``5.11.ir_receiver.ino`` dans le répertoire ``3in1-kit\learning_project\5.11.ir_receiver``.
+    * Ou copiez ce code dans l'IDE Arduino.
+    * La bibliothèque ``IRremote`` est utilisée ici, vous pouvez l'installer via le **Library Manager**.
   
         .. image:: ../img/lib_irremote.png
 
@@ -85,37 +87,38 @@ the middle pin to GND, and the right pin to 5V.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1141d808-cc26-4589-ae5c-d1834033ac3d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
 
-After uploading the codes to the R4 board, you can see that the
-current value of the pressed button of IR Remote Controller displays on
-the serial monitor.
+Après avoir téléversé le code sur la carte R4, vous verrez que la valeur actuelle du 
+bouton pressé de la télécommande IR s'affiche sur le moniteur série.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Ce code est conçu pour fonctionner avec une télécommande infrarouge (IR) en utilisant la 
+bibliothèque ``IRremote``. Voici les étapes :
 
-#. Include Libraries: This includes the ``IRremote`` library, which provides functions to work with IR remote controls.
+#. Inclure les bibliothèques : Cela inclut la bibliothèque ``IRremote``, qui fournit des 
+fonctions pour travailler avec des télécommandes IR.
 
     .. code-block:: arduino
 
         #include <IRremote.h>
 
-#. Defines the Arduino pin to which the IR sensor's signal pin is connected.
+#. Définir la broche Arduino à laquelle est connectée la broche signal du capteur IR.
 
     .. code-block:: arduino
 
-        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
+        const int IR_RECEIVE_PIN = 11;  // Définir le numéro de broche pour le capteur IR
 
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Initialiser la communication série à un débit de 9600 bauds. Initialiser le récepteur IR sur la broche spécifiée (``IR_RECEIVE_PIN``) et activer le retour LED (si applicable).
 
     .. code-block:: arduino
 
         void setup() {
-            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+            Serial.begin(9600);                                     // Démarrer la communication série à 9600 bauds
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Démarrer le récepteur IR
         }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. La boucle s'exécute continuellement pour traiter les signaux entrants de la télécommande IR.
 
     .. code-block:: arduino
 
@@ -126,12 +129,12 @@ This code is designed to work with an infrared (IR) remote control using the ``I
                     Serial.println(decodedValue);
                     delay(100);
                 }
-                IrReceiver.resume();  // Enable receiving of the next value
+                IrReceiver.resume();  // Activer la réception du prochain signal
             }
         }
     
-    * Checks if an IR signal is received and successfully decoded.
-    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-    * Checks if the decoded value is not an error.
-    * Prints the decoded IR value to the serial monitor.
-    * Resumes IR signal reception for the next signal.
+    * Vérifie si un signal IR est reçu et correctement décodé.
+    * Décode la commande IR et la stocke dans ``decodedValue`` à l'aide d'une fonction personnalisée ``decodeKeyValue()``.
+    * Vérifie si la valeur décodée n'est pas une erreur.
+    * Affiche la valeur IR décodée sur le moniteur série.
+    * Reprend la réception des signaux IR pour le prochain signal.

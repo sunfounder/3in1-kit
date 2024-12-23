@@ -1,48 +1,48 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans le monde de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _install_libraries_ar:
 
-5.11 Install External Libraries
-=======================================
+5.11 Installation de bibliothèques externes
+===============================================
 
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+Une bibliothèque est un ensemble de code ou de fonctions pré-écrites qui étendent les capacités de l'IDE Arduino. Les bibliothèques offrent du code prêt à l'emploi pour diverses fonctionnalités, vous permettant de gagner du temps et de réduire l'effort nécessaire pour coder des fonctionnalités complexes.
 
-There are two main ways to install libraries:
+Il existe deux principales façons d'installer des bibliothèques :
 
 
-Many libraries are available directly through the Arduino **Library Manager**. You can access the **Library Manager** by following these steps:
+De nombreuses bibliothèques sont disponibles directement via le **Gestionnaire de bibliothèques** d'Arduino. Vous pouvez accéder au **Gestionnaire de bibliothèques** en suivant ces étapes :
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. Dans le **Gestionnaire de bibliothèques**, vous pouvez rechercher la bibliothèque souhaitée par son nom ou parcourir les différentes catégories.
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The ``DHT sensor library`` is used here, you can install it from the **Library Manager**." Simply install the recommended libraries as prompted.
+      Dans les projets nécessitant l'installation de bibliothèques, des instructions indiqueront quelles bibliothèques installer. Suivez les instructions fournies, telles que "La bibliothèque ``DHT sensor library`` est utilisée ici, vous pouvez l'installer depuis le **Gestionnaire de bibliothèques**." Installez simplement les bibliothèques recommandées comme indiqué.
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. Une fois que vous avez trouvé la bibliothèque que vous souhaitez installer, cliquez dessus, puis sur le bouton **Installer**.
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. L'IDE Arduino téléchargera et installera automatiquement la bibliothèque pour vous.
 
 
-**Related Components**
+**Composants associés**
 
-Below are the related components, you can click in to learn how to use them.
+Voici les composants associés. Vous pouvez cliquer pour apprendre à les utiliser.
 
 .. toctree::
    :maxdepth: 2

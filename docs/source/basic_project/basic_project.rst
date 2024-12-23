@@ -1,37 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance experte** : Résolvez les problèmes après-vente et relevez des défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des offres spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_projects:
 
-Basic Projects
-========================
+Projets de base
+=========================
 
-This chapter is used to learn how to control electronic circuits using Arduino.
+Ce chapitre est dédié à l'apprentissage du contrôle des circuits électroniques à l'aide d'Arduino.
 
-Depending on the components, the basic control methods of Arduino can be divided into four types:
+En fonction des composants, les méthodes de contrôle de base d'Arduino peuvent être divisées en quatre catégories :
 
-* :ref:`ar_digital_write`: Set the output voltage of the pin to be high or low, which can be used to turn the light on and off.
-* :ref:`ar_analog_write`: Write the analog value (`PWM wave <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) to the pin, which can be used to adjust the brightness of the light.
-* :ref:`ar_digital_read`: Read the level signal of the digital pin, which can be used to read the working condition of the switch.
-* :ref:`ar_analog_read`: Read the voltage of the analog pin, which can be used to read the working condition of the knob.
+* :ref:`ar_digital_write`: Définir la tension de sortie de la broche sur haut ou bas, ce qui permet d'allumer ou d'éteindre une lumière.
+* :ref:`ar_analog_write`: Écrire une valeur analogique (`onde PWM <https://docs.arduino.cc/learn/microcontrollers/analog-output>`_) sur la broche, ce qui permet d'ajuster la luminosité de la lumière.
+* :ref:`ar_digital_read`: Lire le signal de niveau d'une broche numérique, ce qui permet de connaître l'état de fonctionnement d'un interrupteur.
+* :ref:`ar_analog_read`: Lire la tension d'une broche analogique, ce qui permet de connaître l'état de fonctionnement d'un potentiomètre.
 
+Certains composants nécessitent des bibliothèques supplémentaires pour fonctionner et sont regroupés dans la section :ref:`install_libraries_ar`.
 
-There are also some components that require additional libraries for use, and these are grouped under the section :ref:`install_libraries_ar`.
-
-Finally, the kit also provides some :ref:`ar_funny_project`, which includes many simple and useful manipulations.
-Try this section of code and you will understand how most simple projects work.
-
+Enfin, le kit propose également quelques :ref:`ar_funny_project`, qui comprennent de nombreuses manipulations simples et utiles.
+Essayez cette section de code et vous comprendrez comment fonctionnent la plupart des projets simples.
 
 .. toctree::
     :maxdepth: 2

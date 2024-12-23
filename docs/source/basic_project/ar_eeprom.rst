@@ -1,53 +1,53 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprenez & partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces et aperçus de nouveaux produits.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_74hc_7seg:
 
 5.15 EEPROM
 ==============
 
-`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ is a memory, so the data it stores will not be erased when the main control board is turned off. You can use it to record some data and read it the next time you turn it on.
+`EEPROM <https://docs.arduino.cc/learn/built-in-libraries/eeprom>`_ est une mémoire non volatile, ce qui signifie que les données qu'elle stocke ne sont pas effacées lorsque la carte de contrôle principale est éteinte. Vous pouvez l'utiliser pour enregistrer des données et les lire lors de la prochaine mise sous tension.
 
-As an example, you can make a sports counter that keeps track of how many rope skippings you do every day.
+Par exemple, vous pouvez créer un compteur de sport qui suit le nombre de sauts à la corde effectués chaque jour.
 
-You can also write data to it in one program and read it in another. For example, when you are working on a car project, the speeds of the two motors are inconsistent. You can write a calibration program to record the compensation value of the motor speed.
+Vous pouvez également écrire des données dans un programme et les lire dans un autre. Par exemple, lorsque vous travaillez sur un projet de voiture, les vitesses des deux moteurs peuvent être incohérentes. Vous pouvez écrire un programme de calibration pour enregistrer la valeur de compensation de la vitesse des moteurs.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -66,11 +66,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_515_eeprom.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/5.15_eeprom_bb.png
 
@@ -79,37 +79,34 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.15.eeproom.ino`` file under the path of ``3in1-kit\learning_project\5.15.eeproom``.
-    * Or copy this code into **Arduino IDE**.
-    
-    
-
+    * Ouvrez le fichier ``5.15.eeproom.ino`` sous le chemin ``3in1-kit\learning_project\5.15.eeproom``.
+    * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7378341f-9c1a-4171-814f-c76c109e1e67/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-To use this circuit, you simply press the button to begin recording and input the desired information through a potentiometer. Now, the board will repeat your actions endlessly (and it blinks an led each iteration) until you press the button again to record new actions. You may also vary the amount of time recorded by changing the values of resolution and recordTime.
+Pour utiliser ce circuit, appuyez simplement sur le bouton pour commencer l'enregistrement et saisissez les informations souhaitées via un potentiomètre. Ensuite, la carte répétera vos actions en boucle (et fera clignoter une LED à chaque itération) jusqu'à ce que vous appuyiez à nouveau sur le bouton pour enregistrer de nouvelles actions. Vous pouvez également modifier le temps d'enregistrement en ajustant les valeurs de ``resolution`` et ``recordTime``.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-#. Import the ``EEPROM.h`` library, and initialize the EEPROM memory. 
+#. Importez la bibliothèque ``EEPROM.h`` et initialisez la mémoire EEPROM. 
 
     .. code-block:: arduino
 
         ...
-        #include <EEPROM.h>//used to store recorded values
+        #include <EEPROM.h>//utilisée pour stocker les valeurs enregistrées
 
         ...
-        float resolution = 1000;//MUST be less than EEPROM.length()
-        float recordTime = 5; //delay time
+        float resolution = 1000;//DOIT être inférieur à EEPROM.length()
+        float recordTime = 5; //temps de délai
         bool recording = false;
         ...
     
-    Please note that ``/MUST be less than EEPROM.length()``, in ``setup()`` it will print the memory of your board's EEPROM, which should be 1024 for your board. If you are using a different board, you can change the value of the variable ``resolution``.
+    Notez que ``DOIT être inférieur à EEPROM.length()``. Dans ``setup()``, la mémoire de l'EEPROM de votre carte sera imprimée, qui devrait être de 1024 pour votre carte. Si vous utilisez une carte différente, vous pouvez modifier la valeur de la variable ``resolution``.
 
-#. Print the EEPROM memory of your board.
+#. Imprimez la mémoire EEPROM de votre carte.
 
     .. code-block:: arduino
 
@@ -119,29 +116,29 @@ To use this circuit, you simply press the button to begin recording and input th
             //Serial.println(EEPROM.length());
         }
 
-    To find the size of your board's EEPROM memory, uncomment the line ``Serial.println(EEPROM.read(i))``. This will print the size of EEPROM in the serial monitor, and you can change the value of the variable ``resolution`` accordingly.
+    Pour connaître la taille de la mémoire EEPROM de votre carte, décommentez la ligne ``Serial.println(EEPROM.read(i))``. La taille de l'EEPROM sera imprimée dans le moniteur série, et vous pourrez ajuster la valeur de ``resolution`` en conséquence.
 
-#. As soon as a button press is detected, then recording begins and the required information is entered via a potentiometer. Now the board repeats your action endlessly (and flashes an LED for each repetition) until you press the button again, recording a new action.
+#. Lorsqu'une pression sur le bouton est détectée, l'enregistrement commence et les informations requises sont saisies via un potentiomètre. La carte répète ensuite vos actions en boucle (et fait clignoter une LED pour chaque répétition) jusqu'à ce que vous appuyiez à nouveau sur le bouton pour enregistrer une nouvelle action.
 
     .. code-block:: arduino
 
         void loop() {
-            if (recording == true) {//record
+            if (recording == true) {//enregistrer
                 for (int i = 1; i <= resolution; i++) {
-                    digitalWrite(ledPin, HIGH); //light status led
+                    digitalWrite(ledPin, HIGH); //allumer la LED de statut
                     int val = map(analogRead(A0), 0, 1023, 0, 180);
                     EEPROM.write(i, val);
                     //Serial.println(EEPROM.read(i));
                     myServo.write(val);
                     delay(recordTime);
                 }
-                digitalWrite(ledPin, LOW); //turn off status led
-                delay(1000);//give time for person
+                digitalWrite(ledPin, LOW); //éteindre la LED de statut
+                delay(1000);//donner du temps à la personne
                 recording = false;
             }
             else {
-                for (int i = 1; i <= resolution; i++) {//playback
-                    if (digitalRead(buttonPin) == 0) {//stop playback and record new values
+                for (int i = 1; i <= resolution; i++) {//relecture
+                    if (digitalRead(buttonPin) == 0) {//arrêter la relecture et enregistrer de nouvelles valeurs
                         recording = true;
                         break;
                     }
@@ -150,44 +147,42 @@ To use this circuit, you simply press the button to begin recording and input th
                     //Serial.println(readval);
                     delay(recordTime);
                 }
-                digitalWrite(ledPin, HIGH); //show a new repeat
+                digitalWrite(ledPin, HIGH); //montrer une nouvelle répétition
                 delay(100);
                 digitalWrite(ledPin, LOW);
             }
         }
 
-    * Make the variable ``recording`` true when the button is pressed.
-    * When the variable ``recording`` is true, start recording the action in the memory range.
-    * Read the value of the potentiometer and map it to 0-180 to store it in EEPROM and control the rotation of the servo.
-    * The LED lights up at the start of recording and goes off at the end.
-    * Repeat the recorded action with a quick flash of the LED to remind you of a new repeat.
+    * Passez la variable ``recording`` à ``true`` lorsque le bouton est pressé.
+    * Lorsque la variable ``recording`` est ``true``, commencez à enregistrer l'action dans la plage de mémoire.
+    * Lisez la valeur du potentiomètre et mappez-la de 0-180 pour la stocker dans l'EEPROM et contrôler la rotation du servo.
+    * La LED s'allume au début de l'enregistrement et s'éteint à la fin.
+    * Répétez l'action enregistrée avec un clignotement rapide de la LED pour signaler une nouvelle répétition.
 
 
-#. About the ``EEPROM`` library.
+#. À propos de la bibliothèque ``EEPROM`` 
 
-    Here are some of its functions.
+    Voici quelques-unes de ses fonctions :
         
-    * ``write(address,value)``: Write a byte to the EEPROM.
+    * ``write(address,value)`` : Écrit un octet dans l'EEPROM.
 
-        * ``address``: the location to write to, starting from 0 (int)
-        * ``value``: the value to write, from 0 to 255 (byte)
-        * An EEPROM write takes 3.3 ms to complete. The EEPROM memory has a specified life of 100,000 write/erase cycles, so you may need to be careful about how often you write to it.
+        * ``address`` : l'emplacement où écrire, à partir de 0 (int)
+        * ``value`` : la valeur à écrire, de 0 à 255 (byte)
+        * Une écriture dans l'EEPROM prend 3,3 ms pour s'achever. La mémoire EEPROM a une durée de vie spécifiée de 100 000 cycles d'écriture/effacement, donc il est conseillé de limiter la fréquence des écritures.
 
-    * ``Read(address)``: Reads a byte from the EEPROM. Locations that have never been written to have the value of 255.
+    * ``Read(address)`` : Lit un octet depuis l'EEPROM. Les emplacements qui n'ont jamais été écrits contiennent la valeur 255.
 
-    * ``update(address,value)``: Write a byte to the EEPROM. The value is written only if differs from the one already saved at the same address.
+    * ``update(address,value)`` : Écrit un octet dans l'EEPROM uniquement si la valeur diffère de celle déjà enregistrée à la même adresse.
 
-        * An EEPROM write takes 3.3 ms to complete. The EEPROM memory has a specified life of 100,000 write/erase cycles, so using this function instead of write() can save cycles if the written data does not change often
+        * Une écriture dans l'EEPROM prend 3,3 ms pour s'achever. La mémoire EEPROM a une durée de vie spécifiée de 100 000 cycles d'écriture/effacement, donc utiliser cette fonction au lieu de write() peut économiser des cycles si les données écrites ne changent pas souvent.
 
-    * ``EEPROM.put(address, data)``: Write any data type or object to the EEPROM.
+    * ``EEPROM.put(address, data)`` : Écrit tout type de données ou d'objet dans l'EEPROM.
 
-        * ``address``: the location to read from, starting from 0 (int).
-        * ``data``: the data to read, can be a primitive type (eg. float) or a custom struct.
-        * This function uses EEPROM.update() to perform the write, so does not rewrites the value if it didn't change.
+        * ``address`` : l'emplacement où écrire, à partir de 0 (int).
+        * ``data`` : les données à écrire, pouvant être un type primitif (par exemple : float) ou une structure personnalisée.
+        * Cette fonction utilise ``EEPROM.update()`` pour effectuer l'écriture, ce qui évite de réécrire la valeur si elle n'a pas changé.
 
-    * ``EEPROM.get(address, data)``: Read any data type or object from the EEPROM.
+    * ``EEPROM.get(address, data)`` : Lit tout type de données ou d'objet depuis l'EEPROM.
 
-        * ``address``: the location to read from, starting from 0 (int).
-        * ``data``: the data to read, can be a primitive type (eg. float) or a custom struct.
-
-
+        * ``address`` : l'emplacement où lire, à partir de 0 (int).
+        * ``data`` : les données à lire, pouvant être un type primitif (par exemple : float) ou une structure personnalisée.

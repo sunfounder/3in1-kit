@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-6.1 Light-sensitive Array
-=====================================
+6.1 Matrice de sensibilité à la lumière
+===========================================
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits, and light- and darkness-activated switching circuits.
+Une photo-résistance, ou cellule photoélectrique, est une résistance variable contrôlée par la lumière. La résistance d'une photo-résistance diminue à mesure que l'intensité de la lumière incidente augmente ; en d'autres termes, elle présente une photoconductivité. Une photo-résistance peut être utilisée dans des circuits de détection de lumière et des circuits activés par la lumière ou l'obscurité.
 
-The resistance of a photoresistor changes with incident light intensity. If the light intensity gets higher, the resistance decreases; if it gets lower, the resistance increases.
-In this experiment, we will use eight LEDs to show the light intensity. The higher the light intensity is, the more LEDs will light up. When the light intensity is high enough, all the LEDs will be on. When there is no light, all the LEDs will go out.
+La résistance d'une photo-résistance varie avec l'intensité de la lumière incidente. Si l'intensité lumineuse augmente, la résistance diminue ; si elle diminue, la résistance augmente.
+Dans cette expérience, nous utiliserons huit LED pour indiquer l'intensité lumineuse. Plus la lumière est intense, plus les LED s'allument. Lorsque l'intensité lumineuse est suffisante, toutes les LED s'allument. Dans l'obscurité, toutes les LED s'éteignent.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -59,11 +59,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_6.1_light_led.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/6.1_light_flow_led_bb.png
     :width: 600
@@ -73,37 +73,35 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``6.1.light_control_led.ino`` file under the path of ``3in1-kit\learning_project\6.1.light_control_led``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Ouvrez le fichier ``6.1.light_control_led.ino`` dans le répertoire ``3in1-kit\learning_project\6.1.light_control_led``.
+    * Ou copiez ce code dans l'IDE Arduino.
     
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/859e1688-5801-400e-9409-f844ca9b7da7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Now, shine some light on the photoresistor, and you will see several LEDs light up. Shine more light and you will see more LEDs light up. When you place it in a dark environment, all the LEDs will go out.
+Maintenant, éclairez la photo-résistance avec une lumière et vous verrez plusieurs LED s'allumer. Augmentez la lumière et vous verrez plus de LED s'allumer. Placez-la dans un environnement sombre, et toutes les LED s'éteindront.
 
-**How it works?**
-
+**Comment ça fonctionne ?**
 
 .. code-block:: arduino
 
     void loop() 
     {
-        sensorValue = analogRead(photocellPin); //read the value of A0
-        ledLevel = map(sensorValue, 300, 1023, 0, NbrLEDs); // map to the number of LEDs
+        sensorValue = analogRead(photocellPin); // lire la valeur sur A0
+        ledLevel = map(sensorValue, 300, 1023, 0, NbrLEDs); // mapper au nombre de LEDs
         for (int led = 0; led < NbrLEDs; led++)//
         {
-            if (led < ledLevel ) //When led is smaller than ledLevel, run the following code. 
+            if (led < ledLevel ) // Si led est inférieur à ledLevel, exécuter le code suivant.
             {
-                digitalWrite(ledPins[led], HIGH); // turn on pins less than the level
+                digitalWrite(ledPins[led], HIGH); // allumer les broches inférieures au niveau
             }
             else 
             {
-                digitalWrite(ledPins[led],LOW); // turn off pins higher than 
+                digitalWrite(ledPins[led],LOW); // éteindre les broches supérieures
             }
         }
     }
 
-By using the ``map()`` function, you can map the photoresistor value to the 8 LEDs, for example, if sensorValue is 560, then ledLevel is 4, so at this point, ledPins[0] to ledPins[4] should be lit, and ledPins[5] to ledPins[7] should be off.
+En utilisant la fonction ``map()``, vous pouvez mapper la valeur de la photo-résistance sur les 8 LED. Par exemple, si ``sensorValue`` est 560, alors ``ledLevel`` est 4, donc à ce moment-là, ``ledPins[0]`` à ``ledPins[4]`` devraient être allumées, et ``ledPins[5]`` à ``ledPins[7]`` devraient être éteintes.

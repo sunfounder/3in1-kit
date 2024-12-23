@@ -1,50 +1,50 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aperçus exclusifs.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_button:
 
-3.1 Reading Button Value
+3.1 Lecture de la valeur du bouton
 ==============================================
 
 
-In the previous projects, we used the output function, in this chapter we will use the input function to input read the button value.
+Dans les projets précédents, nous avons utilisé la fonction de sortie. Dans ce chapitre, nous allons utiliser la fonction d'entrée pour lire la valeur d'un bouton.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -57,23 +57,23 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_3.1_button.png
 
-One side of the button pin is connected to 5V, 
-and the other side pin is connected to pin 2, 
-so when the button is pressed, 
-pin 2 will be high. However, 
-when the button is not pressed, 
-pin 2 is in a suspended state and may be high or low. 
-In order to get a stable low level when the button is not pressed, 
-pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
+Un côté de la broche du bouton est connecté à 5V, 
+et l'autre côté est connecté à la broche 2. 
+Ainsi, lorsque le bouton est pressé, 
+la broche 2 sera à un niveau haut. Cependant, 
+lorsque le bouton n'est pas pressé, 
+la broche 2 est dans un état flottant et peut être à un niveau haut ou bas. 
+Pour obtenir un niveau bas stable lorsque le bouton n'est pas pressé, 
+la broche 2 doit être reliée à la masse (GND) via une résistance de tirage de 10K.
 
 
 
-**Wiring**
 
+**Câblage**
 
 .. image:: img/3.1_reading_button_value_bb.png
     :width: 600
@@ -83,20 +83,15 @@ pin 2 needs to be reconnected to GND through a 10K pull-down resistor.
 
 .. note::
 
-   * You can open the file ``3.1.read_button_value.ino`` under the path of ``3in1-kit\learning_project\3.1.read_button_value``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
-
+   * Vous pouvez ouvrir le fichier ``3.1.read_button_value.ino`` sous le chemin ``3in1-kit\learning_project\3.1.read_button_value``.
+   * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b456ff57-4dfb-4231-9d91-f1e9a5777de2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, click the magnifying glass icon in the upper right corner of the Arduino IDE (Serial Monitor).
+Après avoir téléchargé le code avec succès, cliquez sur l'icône en forme de loupe dans le coin supérieur droit de l'IDE Arduino (Moniteur Série).
 
 .. image:: img/sp220614_152922.png
 
-When you press the button, the Serial Monitor will print "1".
-
-
+Lorsque vous appuyez sur le bouton, le Moniteur Série affichera "1".

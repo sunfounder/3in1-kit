@@ -1,61 +1,61 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_thermistor:
 
-Thermistor
+Thermistance
 ===============
 
 .. image:: img/thermistor.png
     :width: 150
     :align: center
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors. The word is a combination of thermal and resistor. Thermistors are widely used as inrush current limiters, temperature sensors (negative temperature coefficient or NTC type typically), self-resetting overcurrent protectors, and self-regulating heating elements (positive temperature coefficient or PTC type typically).
+Une thermistance est un type de résistance dont la valeur dépend fortement de la température, bien plus que celle des résistances standards. Le terme est une combinaison de "thermique" et "résistance". Les thermistances sont largement utilisées comme limiteurs de courant d'appel, capteurs de température (généralement de type à coefficient de température négatif ou NTC), protecteurs contre les surintensités réinitialisables et éléments chauffants autorégulateurs (généralement de type à coefficient de température positif ou PTC).
 
-* `Thermistor - Wikipedia <https://en.wikipedia.org/wiki/Thermistor>`_
+* `Thermistance - Wikipedia <https://fr.wikipedia.org/wiki/Thermistance>`_
 
-Here is the electronic symbol of thermistor.
+Voici le symbole électronique d'une thermistance.
 
 .. image:: img/thermistor_symbol.png
     :width: 300
     :align: center
 
-Thermistors are of two opposite fundamental types:
+Les thermistances se divisent en deux types fondamentaux opposés :
 
-* With NTC thermistors, resistance decreases as temperature rises usually due to an increase in conduction electrons bumped up by thermal agitation from valency band. An NTC is commonly used as a temperature sensor, or in series with a circuit as an inrush current limiter.
-* With PTC thermistors, resistance increases as temperature rises usually due to increased thermal lattice agitations particularly those of impurities and imperfections. PTC thermistors are commonly installed in series with a circuit, and used to protect against overcurrent conditions, as resettable fuses.
+* Avec les thermistances NTC, la résistance diminue lorsque la température augmente, en général en raison d'une augmentation des électrons de conduction stimulés par l'agitation thermique de la bande de valence. Une NTC est couramment utilisée comme capteur de température ou en série avec un circuit comme limiteur de courant d'appel.
+* Avec les thermistances PTC, la résistance augmente lorsque la température augmente, en général en raison des agitations thermiques accrues du réseau, notamment celles des impuretés et imperfections. Les thermistances PTC sont généralement installées en série avec un circuit et utilisées comme fusibles réinitialisables pour protéger contre les conditions de surintensité.
 
-In this kit we use an NTC one. Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius.
+Dans ce kit, nous utilisons une NTC. Chaque thermistance possède une résistance normale, ici de 10 kΩ, mesurée à 25 degrés Celsius.
 
-Here is the relation between the resistance and temperature:
+Voici la relation entre la résistance et la température :
 
     RT = RN * expB(1/TK – 1/TN)   
 
-* **RT** is the resistance of the NTC thermistor when the temperature is TK. 
-* **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k.
-* **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of TK is 273.15 + degree Celsius.
-* **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is 273.15+25.
-* And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value 3950.      
-* **exp** is the abbreviation of exponential, and the base number e is a natural number and equals 2.7 approximately.  
+* **RT** est la résistance de la thermistance NTC à la température TK. 
+* **RN** est la résistance de la thermistance NTC à la température nominale TN. Ici, RN vaut 10 kΩ.
+* **TK** est une température exprimée en Kelvin et son unité est K. Ici, TK vaut 273,15 + degrés Celsius.
+* **TN** est une température nominale exprimée en Kelvin. Ici, TN vaut 273,15+25.
+* **B(beta)**, la constante de matériau de la thermistance NTC, est également appelée indice de sensibilité thermique et sa valeur est 3950.      
+* **exp** est l'abréviation de "exponentielle", et le nombre de base e est une constante naturelle et vaut environ 2,7.  
 
-Convert this formula TK=1/(ln(RT/RN)/B+1/TN) to get Kelvin temperature that minus 273.15 equals degree Celsius.
+On peut transformer cette formule en :  TK=1/(ln(RT/RN)/B+1/TN)  pour obtenir la température en Kelvin, à laquelle on soustrait 273,15 pour obtenir la température en degrés Celsius.
 
-This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+Cette relation est une formule empirique. Elle est précise uniquement lorsque la température et la résistance se situent dans la plage effective.
 
-**Example**
+**Exemple**
 
-* :ref:`ar_high_tem_alarm` (Basic Project)
-* :ref:`ar_temp` (Basic Project)
+* :ref:`ar_high_tem_alarm` (Projet de base)
+* :ref:`ar_temp` (Projet de base)
 
-.. * :ref:`sh_low_temperature` (Scratch Project)
+.. * :ref:`sh_low_temperature` (Projet Scratch)

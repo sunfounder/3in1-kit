@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_pump:
 
-1.4 Pumping
-===================
+1.4 Pompage
+==================
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+La pompe à eau est également un moteur, qui convertit l'énergie mécanique du moteur ou une autre source d'énergie externe, via une structure spéciale, pour transporter un liquide.
 
-.. **Schematic**
+.. **Schéma**
 
 .. .. image:: img/circuit_1.3_wheel.png
 
-.. IN1~IN4 are the inputs of the L298N module, and OUT1~OUT4 are the outputs.
+.. IN1~IN4 sont les entrées du module L298N, et OUT1~OUT4 sont les sorties.
 
-.. A simple way to use them is: input high level for INx, OUTx will output high level; input low level for INx, OUTx will output low level.
-.. Connecting the two ends of the motor to OUT1 and OUT2, inputting opposite level signals for IN1 and IN2 will make the motor rotate. OUT3 and OUT4 can be used in the same way.
+.. Une utilisation simple consiste à fournir un signal haut à INx, ce qui fait que OUTx produit un signal haut ; fournir un signal bas à INx fait que OUTx produit un signal bas.
+.. En connectant les deux bornes du moteur à OUT1 et OUT2, et en envoyant des signaux opposés à IN1 et IN2, le moteur tourne. OUT3 et OUT4 peuvent être utilisés de la même manière.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -63,19 +63,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pump`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_1.3_wheel_l9110.png
 
-**Wiring**
+**Câblage**
 
 .. list-table:: 
     :widths: 25 25 50
     :header-rows: 1
 
     * - L9110S
-      - R4 Board
-      - Motor
+      - Carte R4
+      - Moteur
     * - VCC
       - 5V
       - 
@@ -84,16 +84,17 @@ You can also buy them separately from the links below.
       - 
     * - B-1B(B-2A)
       - 9
-      -
+      - 
     * - B-1A
       - 10
       - 
     * - OA
       - 
-      - one wire of the motor
+      - un fil du moteur
     * - OB
       - 
-      - one wire of the motor
+      - un fil du moteur
+      
 .. image:: img/1.4_pumping_bb.png
     :width: 800
     :align: center
@@ -102,14 +103,12 @@ You can also buy them separately from the links below.
 
 .. note::
 
-   * You can open the file ``1.4.pumping.ino`` under the path of ``3in1-kit\learning_project\1.4.pumping``. 
-   * Or copy this code into **Arduino IDE**.
+   * Ouvrez le fichier ``1.4.pumping.ino`` dans le répertoire ``3in1-kit\learning_project\1.4.pumping``. 
+   * Ou copiez ce code dans l'IDE Arduino.
    
-   
-
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f829508f-2475-4de6-bc2f-ab0a68d707b1/preview?F=undefined?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Add the tubing to the pump and place it in the basin. After the code is uploaded successfully, you can see that the water in the basin is drained after a while.
-When doing this experiment, please keep the circuit away from water to avoid short circuit!
+Ajoutez le tuyau à la pompe et placez-la dans le bassin. Après avoir téléchargé le code avec succès, vous verrez que l'eau du bassin est évacuée après un certain temps.
+Lors de cet exercice, veillez à garder le circuit éloigné de l'eau pour éviter tout court-circuit !

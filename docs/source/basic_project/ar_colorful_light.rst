@@ -1,60 +1,60 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprenez et partagez** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aperçus exclusifs.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_rgb:
 
-2.2 Colorful Light
+2.2 Lumière colorée
 ==============================================
 
-As we know, light can be superimposed. For example, mix blue light and green light give cyan light, red light and green light give yellow light.
-This is called "The additive method of color mixing".
+Comme nous le savons, la lumière peut se superposer. Par exemple, mélanger une lumière bleue et une lumière verte donne une lumière cyan, tandis que la lumière rouge et la lumière verte donnent une lumière jaune. 
+Ceci est appelé "la méthode additive de mélange des couleurs".
 
 * `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different specific gravity. For example, orange can be produced by more red and less green.
+En utilisant cette méthode, nous pouvons utiliser les trois couleurs primaires pour créer une lumière visible de n'importe quelle couleur selon des proportions spécifiques. Par exemple, l'orange peut être obtenu avec plus de rouge et moins de vert.
 
-In this chapter, we will use RGB LED to explore the mystery of additive color mixing!
+Dans ce chapitre, nous allons utiliser une LED RGB pour explorer le mystère du mélange additif des couleurs !
 
-RGB LED is equivalent to encapsulating Red LED, Green LED, Blue LED under one lamp cap, and the three LEDs share one cathode pin.
-Since the electric signal is provided for each anode pin, the light of the corresponding color can be displayed. 
-By changing the electrical signal intensity of each anode, it can be made to produce various colors.
+Une LED RGB équivaut à encapsuler une LED rouge, une LED verte et une LED bleue sous un même capot, et les trois LED partagent une broche cathodique commune.
+Puisque le signal électrique est fourni pour chaque broche anodique, la lumière de la couleur correspondante peut être affichée.
+En modifiant l'intensité du signal électrique de chaque anode, il est possible de produire diverses couleurs.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous aurons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - 3 in 1 Starter Kit
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -68,23 +68,19 @@ You can also buy them separately from the links below.
         - |link_rgb_led_buy|
 
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_2.2_rgb.png
 
+Les broches PWM 11, 10 et 9 contrôlent respectivement les broches Rouge, Vert et Bleu de la LED RGB, et la broche cathodique commune est connectée à la masse (GND). 
+Cela permet à la LED RGB d'afficher une couleur spécifique en superposant la lumière sur ces broches avec différentes valeurs PWM.
 
-The PWM pins 11, 10 and 9 control the Red, Green and Blue pins of the RGB LED respectively, and connect the common cathode pin to GND. 
-This allows the RGB LED to display a specific color by superimposing light on these pins with different PWM values.
-
-
-
-**Wiring**
+**Câblage**
 
 .. image:: img/rgb_led_sch.png
 
-An RGB LED has 4 pins: the longest pin is the common cathode pin, which is usually connected to GND, 
-the left pin next to the longest pin is Red, and the 2 pins on the right are Green and Blue.
-
+Une LED RGB a 4 broches : la plus longue est la broche cathodique commune, qui est généralement connectée à GND, 
+la broche à gauche de la plus longue est Rouge, et les deux broches à droite sont Vert et Bleu.
 
 .. image:: img/2.2_colorful_light_bb.png
     :width: 600
@@ -92,15 +88,12 @@ the left pin next to the longest pin is Red, and the 2 pins on the right are Gre
 
 **Code**
 
-Here, we can choose our favorite color in drawing software (such as paint) and display it with RGB LED.
+Ici, nous pouvons choisir notre couleur préférée dans un logiciel de dessin (comme Paint) et l'afficher avec la LED RGB.
 
 .. note::
 
-   * You can open the file ``2.2.colorful_light.ino`` under the path of ``3in1-kit\learning_project\2.analogWrite\2.2.colorful_light``. 
-   * Or copy this code into **Arduino IDE**.
-   
-   
-
+   * Vous pouvez ouvrir le fichier ``2.2.colorful_light.ino`` sous le chemin ``3in1-kit\learning_project\2.analogWrite\2.2.colorful_light``. 
+   * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
     
@@ -108,12 +101,12 @@ Here, we can choose our favorite color in drawing software (such as paint) and d
 
 .. image:: img/edit_colors.png
 
-Write the RGB value into ``color_set()``, you will be able to see the RGB light up the colors you want.
+Écrivez la valeur RGB dans ``color_set()``, vous pourrez voir la LED RGB afficher les couleurs souhaitées.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-In this example, the function used to assign values to the three pins of RGB is packaged in an independent subfunction ``color()``.
+Dans cet exemple, la fonction utilisée pour attribuer des valeurs aux trois broches de la LED RGB est encapsulée dans une sous-fonction indépendante ``color()``.
 
 .. code-block:: arduino
 
@@ -124,16 +117,16 @@ In this example, the function used to assign values to the three pins of RGB is 
         analogWrite(bluePin, blue);
     }
 
-In ``loop()``, RGB value works as an input argument to call the function ``color()`` to realize that the RGB can emit different colors.
+Dans ``loop()``, la valeur RGB fonctionne comme un argument d'entrée pour appeler la fonction ``color()`` et permettre à la LED RGB d'émettre différentes couleurs.
 
 .. code-block:: arduino
 
     void loop() 
     {    
-        color(255, 0, 0); //  red 
+        color(255, 0, 0); // rouge 
         delay(1000); 
-        color(0,255, 0); //  green  
+        color(0, 255, 0); // vert  
         delay(1000);  
-        color(0, 0, 255); //  blue  
+        color(0, 0, 255); // bleu  
         delay(1000);
     }

@@ -1,57 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans le monde de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_guess_number:
 
-6.6 Guess Number
-==================
+6.6 Devinez le nombre
+========================
 
-Guessing Numbers is a fun party game where you and your friends take
-turns inputting a number (0~99). The range will be smaller with the
-inputting of the number till a player answers the riddle correctly. Then
-the player is defeated and punished. For example, if the lucky number is
-51 which the players cannot see, and the player 1 inputs 50, the prompt
-of number range changes to 50~99; if the player 2 inputs 70, the range
-of number can be 50~70; if the player 3 inputs 51, he or she is the
-unlucky one. Here, we use IR Remote Controller to input numbers and use
-LCD to output outcomes.
+"Deviner le nombre" est un jeu amusant où vous et vos amis tour à tour saisissez un nombre 
+(de 0 à 99). La plage de nombres devient plus petite à chaque saisie jusqu'à ce qu'un joueur 
+trouve le bon numéro. Ce joueur perd alors et subit une pénalité. Par exemple, si le nombre 
+mystère est 51 (non visible pour les joueurs), et que le joueur 1 entre 50, l'indication de 
+plage passe à 50~99 ; si le joueur 2 entre 70, la plage devient 50~70 ; si le joueur 3 entre 
+51, il ou elle est le joueur malchanceux. Ici, nous utilisons une télécommande infrarouge 
+pour saisir les nombres et un écran LCD pour afficher les résultats.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -64,16 +62,15 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_receiver`
         - \-
 
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_guess_number.png
     :align: center
 
 
-**Wiring**
+**Câblage**
 
-In this example, the wiring of LCD1602 and infrared receiving module is
-as follows.
+Dans cet exemple, le câblage de l'écran LCD1602 et du module récepteur infrarouge est le suivant.
 
 .. image:: img/6.6_guess_number_bb.png
     :align: center
@@ -84,9 +81,9 @@ as follows.
 
 .. note::
 
-    * You can open the file ``6.6.guess_number.ino`` under the path of ``3in1-kit\learning_project\6.6.guess_number`` directly.
-    * Or copy this code into Arduino IDE.
-    * The ``LiquidCrystal I2C`` and ``IRremote libraries`` are used here, you can install them from the **Library Manager**.
+    * Vous pouvez ouvrir le fichier ``6.6.guess_number.ino`` dans le répertoire ``3in1-kit\learning_project\6.6.guess_number``.
+    * Ou copiez ce code dans Arduino IDE.
+    * Les bibliothèques ``LiquidCrystal I2C`` et ``IRremote`` sont utilisées ici, vous pouvez les installer via le **Gestionnaire de bibliothèques**.
 
 
 .. raw:: html
@@ -94,39 +91,38 @@ as follows.
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6bafb36d-6763-460c-98b7-aba48120e718/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is successfully uploaded, the welcome characters will appear on the LCD1602. Now press the number according to the range prompt on the screen, the display will get smaller and smaller unless you guess that lucky number.
+Après avoir téléchargé le code avec succès, les caractères de bienvenue apparaîtront sur l'écran LCD1602. Appuyez maintenant sur un numéro selon l'indication de plage affichée à l'écran. La plage deviendra de plus en plus petite jusqu'à ce que vous trouviez le numéro mystère.
 
 .. note::
-    If the code and wiring are fine, but the LCD still does not display content, you can turn the potentiometer on the back to increase the contrast.
+    Si le code et le câblage sont corrects mais que l'écran LCD ne s'affiche pas, vous pouvez ajuster le potentiomètre à l'arrière pour augmenter le contraste.
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-In order to make the number guessing game become vivid and funny, we
-need to achieve the following functions:
+Pour rendre le jeu de devinette amusant et dynamique, nous devons réaliser 
+les fonctions suivantes :
 
-1. The lucky number will be displayed when we start and reset the game,
-   and the number range prompt is reset to 0 ~ 99.
+1. Le numéro mystère sera affiché au démarrage et à la réinitialisation du jeu, 
+   et l'indication de plage de numéros sera réinitialisée à 0 ~ 99.
 
-2. LCD will display the number being input and the number range prompt.
+2. Le LCD affichera le numéro saisi et l'indication de plage de numéros.
 
-3. After inputting two digits, there appears result judgment
-   automatically.
+3. Après avoir saisi deux chiffres, le résultat est automatiquement jugé.
 
-4. If you input a single digit, you can press the CYCLE key (the key at
-   the center of the Controller) to start the result judgment.
+4. Si vous saisissez un seul chiffre, vous pouvez appuyer sur la touche CYCLE 
+   (au centre de la télécommande) pour lancer le jugement du résultat.
 
-5. If the answer is not guessed, the new number range prompt will be
-   displayed (if the lucky number is 51 and you enter 50, the number
-   range prompt will change to 50~99).
+5. Si le numéro n'est pas deviné, une nouvelle indication de plage de numéros 
+   s'affiche (par exemple, si le numéro mystère est 51 et que vous entrez 50, 
+   la plage devient 50~99).
 
-6. The game is automatically reset after the lucky number is guessed, so
-   that the player can play a new round.
+6. Le jeu se réinitialise automatiquement après que le numéro mystère a été deviné, 
+   permettant aux joueurs de commencer une nouvelle manche.
 
-7. The game can be reset by directly pressing the POWER button (the
-   button in the upper left corner).
+7. Le jeu peut être réinitialisé directement en appuyant sur le bouton POWER 
+   (en haut à gauche).
 
-In conclusion, the work flow of the project is shown in the flow chart.
+En résumé, le flux de travail du projet est illustré dans le diagramme ci-dessous.
 
 .. image:: img/Part_three_4_Example_Explanation.png
     :align: center

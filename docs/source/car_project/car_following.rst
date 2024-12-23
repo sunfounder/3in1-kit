@@ -1,49 +1,49 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _follow_your_hand:
 
-7. Follow Your Hand
-=========================
+7. Suivez Votre Main
+========================
 
-Think of this car as your pet here, and when you will wave to him, it comes running to you.
+Considérez cette voiture comme votre animal de compagnie : lorsque vous lui faites signe, elle vient vers vous.
 
-**Required Components**
+**Composants Requis**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - |link_Uno_R3_buy|
@@ -56,17 +56,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_avoid`
         - |link_obstacle_avoidance_buy|
 
-**Wiring**
+**Câblage**
 
-Connect the ultrasonic module and the 2 IR obstacle avoidance modules at the same time.
+Connectez simultanément le module ultrasonique et les 2 modules infrarouges d'évitement d'obstacles.
 
-Wire the ultrasonic to the R4 board as follows.
+Câblez le module ultrasonique à la carte R4 comme suit :
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Ultrasonic Module
-      - R4 Board
+    * - Module Ultrasonique
+      - Carte R4
     * - Vcc
       - 5V
     * - Trig
@@ -76,13 +76,13 @@ Wire the ultrasonic to the R4 board as follows.
     * - Gnd
       - GND
 
-The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
+Le câblage des 2 modules infrarouges à la carte R4 est le suivant :
 
 .. list-table:: 
     :header-rows: 1
 
-    * - Left IR Module
-      - R4 Board
+    * - Module IR Gauche
+      - Carte R4
     * - OUT
       - 8
     * - GND
@@ -93,8 +93,8 @@ The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 .. list-table:: 
     :header-rows: 1
 
-    * - Right IR Module
-      - R4 Board
+    * - Module IR Droit
+      - Carte R4
     * - OUT
       - 7
     * - GND
@@ -109,28 +109,28 @@ The wiring of the 2 IR obstacle avoidance modules to the R4 board is as follows.
 
 .. note::
 
-    * Open the ``7.follow_your_hand.ino`` file under the path of ``3in1-kit\car_project\7.follow_your_hand``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``7.follow_your_hand.ino`` sous le chemin ``3in1-kit\car_project\7.follow_your_hand``.
+    * Ou copiez ce code dans **Arduino IDE**.
     
-    * Or upload the code through the `Arduino Web Editor <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
+    * Ou téléversez le code via l'`Éditeur Web Arduino <https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor>`_.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/584e42c8-8842-4db0-93b5-f6f949b6ffca/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Place the car on the ground after the code has been uploaded successfully. Place your hand close to 5*10cm in front of the car, and it will follow your hand forward. If you put your hand close to the IR Obstacle module on both sides, it will also turn to the corresponding direction.
+Placez la voiture sur le sol après avoir téléversé le code avec succès. Approchez votre main à une distance de 5 à 10 cm devant la voiture, et elle suivra votre main en avant. Si vous placez votre main près du module infrarouge sur l'un des côtés, la voiture tournera dans la direction correspondante.
 
+**Comment ça marche ?**
 
-**How it works?**
+Ce projet combine les deux projets précédents :ref:`car_ultrasonic` et :ref:`car_ir_obstacle`, mais l'effet implémenté est différent. Les deux projets précédents détectaient un obstacle pour reculer, tandis qu'ici, la détection de votre main permet à la voiture de suivre en avant ou de tourner.
 
-This project is a combination of the previous two projects :ref:`car_ultrasonic` and :ref:`car_ir_obstacle`, but the implemented effect is different. The previous 2 projects are detecting an obstacle backwards, but here it is detecting that your hand will follow the forward or turn direction.
-The workflow of this project is as follows.
+Le flux de travail de ce projet est le suivant :
 
-* Read the distance detected by the ultrasonic module and the value of both infrared modules.
-* If the distance is 5~10cm, let the car move with your hand.
-* If the left IR module detects your hand, turn left.
-* If the right IR module detects your hand, turn right.
-* If neither the infrared module nor the ultrasonic module detects your hand, let the car stop.
+* Lire la distance détectée par le module ultrasonique et les valeurs des deux modules infrarouges.
+* Si la distance est de 5 à 10 cm, la voiture se déplace avec votre main.
+* Si le module IR gauche détecte votre main, tourner à gauche.
+* Si le module IR droit détecte votre main, tourner à droite.
+* Si aucun des modules infrarouges ni le module ultrasonique ne détectent votre main, la voiture s'arrête.
 
 .. code-block:: arduino
 
@@ -138,7 +138,7 @@ The workflow of this project is as follows.
 
         float distance = readSensorData();
 
-        int left = digitalRead(leftIR);   // 0: Obstructed  1: Empty
+        int left = digitalRead(leftIR);   // 0 : Obstrué  1 : Libre
         int right = digitalRead(rightIR);
         int speed = 150;
 

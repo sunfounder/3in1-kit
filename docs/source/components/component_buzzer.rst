@@ -1,47 +1,44 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté Facebook des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_buzzer:
 
 Buzzer
-=======
+========
 
 .. image:: img/buzzer.png
     :width: 600
 
-As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
+Le buzzer, un type de composant électronique doté d'une structure intégrée, est largement utilisé dans les ordinateurs, imprimantes, photocopieurs, alarmes, jouets électroniques, appareils électroniques automobiles, téléphones, minuteurs et autres produits électroniques ou dispositifs sonores fonctionnant à courant continu.
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+Les buzzers peuvent être classés en deux catégories : actifs et passifs (voir l'image ci-dessous). Lorsque les broches du buzzer sont orientées vers le haut, celui avec un circuit imprimé vert est un buzzer passif, tandis que celui entouré d'un ruban noir est un buzzer actif.
 
-The difference between an active buzzer and a passive buzzer: 
+Différence entre un buzzer actif et un buzzer passif :
 
-An active buzzer has a built-in oscillating source, so it will make sounds when electrified. But a passive buzzer does not have such source, so it will not beep if DC signals are used; instead, you need to use square waves whose frequency is between 2K and 5K to drive it. The active buzzer is often more expensive than the passive one because of multiple built-in oscillating circuits.
+Un buzzer actif dispose d'une source d'oscillation intégrée, ce qui lui permet de produire des sons lorsqu'il est alimenté. En revanche, un buzzer passif n'a pas de source d'oscillation et ne produit pas de son si un signal continu est utilisé. Il doit être alimenté par des ondes carrées dont la fréquence se situe entre 2 kHz et 5 kHz pour fonctionner. Le buzzer actif est généralement plus coûteux que le passif en raison de ses circuits oscillateurs intégrés.
 
-The following is the electrical symbol of a buzzer. It has two pins with positive and negative poles. With a + in the surface represents the anode and the other is the cathode. 
+Voici le symbole électrique d'un buzzer. Il comporte deux broches, une positive et une négative. La broche portant un "+" sur la surface correspond à l'anode, tandis que l'autre est la cathode.
 
 .. image:: img/buzzer_symbol.png
     :width: 150
 
-You can check the pins of the buzzer, the longer one is the anode and the shorter one is the cathode. Please don’t mix them up when connecting, otherwise the buzzer will not make sound. 
+Pour identifier les broches du buzzer, la broche la plus longue est l'anode, et la plus courte est la cathode. Veillez à ne pas inverser les connexions, sinon le buzzer ne produira aucun son.
 
 `Buzzer - Wikipedia <https://en.wikipedia.org/wiki/Buzzer>`_
 
-**Example**
+**Exemple**
 
-* :ref:`ar_beep` (Basic Project)
-* :ref:`ar_passive_buzzer` (Basic Project)
-* :ref:`iot_music` (IoT Project)
-
-
-
+* :ref:`ar_beep` (Projet de base)
+* :ref:`ar_passive_buzzer` (Projet de base)
+* :ref:`iot_music` (Projet IoT)

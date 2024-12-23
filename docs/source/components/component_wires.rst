@@ -1,45 +1,40 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_wires:
 
-Jumper Wires
-=====================
+Fils de Liaison (Jump Wires)
+===============================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Les fils qui relient deux terminaux sont appelés **fils de liaison**. Il existe différents 
+types de fils de liaison, mais ici nous nous concentrons sur ceux utilisés avec une plaque 
+d'expérimentation. Ils servent notamment à transférer des signaux électriques de n'importe 
+quel point de la plaque d'expérimentation vers les broches d'entrée/sortie d'un microcontrôleur.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Les fils de liaison sont fixés en insérant leurs "connecteurs d'extrémité" dans les emplacements 
+prévus sur la plaque d'expérimentation. Sous la surface de celle-ci, des ensembles de plaques 
+parallèles connectent les emplacements en groupes de rangées ou de colonnes selon l'endroit. 
+Les connecteurs sont insérés sans soudure dans les emplacements spécifiques nécessaires au prototype.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Il existe trois types de fils de liaison : **Femelle-à-Femelle**, **Mâle-à-Mâle** et **Mâle-à-Femelle**. 
+On les appelle ainsi car leurs connecteurs diffèrent : un connecteur mâle possède une extrémité saillante, 
+tandis qu'un connecteur femelle a une extrémité creuse. **Mâle-à-Mâle** signifie que les deux côtés sont des 
+connecteurs mâles, et **Femelle-à-Femelle** que les deux côtés sont des connecteurs femelles.
 
 .. image:: img/image414.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+Plus d’un type de ces fils peut être utilisé dans un projet. Les couleurs des fils de 
+liaison varient, mais cela ne signifie pas que leur fonction change ; elles sont 
+simplement conçues pour faciliter l'identification des connexions entre les circuits.

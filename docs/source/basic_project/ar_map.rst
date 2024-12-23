@@ -1,56 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 .. _ar_map:
 
-5.6 Map
-===================
+5.6 Mappage
+==============
 
-If you observe carefully, you will notice that many values have different ranges in programming.
-For example, the range of values for analog inputs is (0~1023).
-The value range for the analog output is (0~255).
-The output angle of the servo is (0~180).
+Si vous observez attentivement, vous remarquerez que de nombreuses valeurs ont des plages différentes en programmation.
+Par exemple, la plage des valeurs des entrées analogiques est (0~1023).
+La plage des valeurs de sortie analogique est (0~255).
+L'angle de sortie du servo est (0~180).
 
-This means that if we want to use the potentiometer to control the brightness of the LED or the angle of the servo, we need to go through a mapping operation.
+Cela signifie que si nous voulons utiliser un potentiomètre pour contrôler la luminosité d'une LED ou l'angle d'un servo, nous devons effectuer une opération de mappage.
 
-Now let's see how to achieve it.
+Voyons maintenant comment y parvenir.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -63,12 +62,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-
-**Schematic**
+**Schéma**
 
 .. image:: img/circuit_8.3_amp.png
 
-**Wiring**
+**Câblage**
 
 .. image:: img/5.6_map_bb.png
     :width: 800
@@ -78,33 +76,32 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * Open the ``5.6.map.ino`` file under the path of ``3in1-kit\learning_project\5.6.map``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Ouvrez le fichier ``5.6.map.ino`` dans le répertoire ``3in1-kit\learning_project\5.6.map``.
+    * Ou copiez ce code dans l'IDE Arduino.
     
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f00e4c4c-fb13-4445-9d89-eb2857b5fe87/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-After the code is uploaded successfully, you can rotate the potentiometer back and forth, and the output shaft of the servo will rotate back and forth.
+Une fois le code téléchargé avec succès, vous pouvez tourner le potentiomètre dans les deux sens, et l'arbre de sortie du servo se déplacera en conséquence.
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-``map(value, fromLow, fromHigh, toLow, toHigh)``: Map a number from one range to another.
-That is, a fromLow value is mapped to toLow, and a fromHigh value is mapped to toHigh.
+``map(value, fromLow, fromHigh, toLow, toHigh)`` : Permet de mapper un nombre d'une plage à une autre.
+Ainsi, une valeur fromLow est mappée à toLow, et une valeur fromHigh est mappée à toHigh.
 
-    **Syntax**
+    **Syntaxe**
         map(value, fromLow, fromHigh, toLow, toHigh)
 
-    **Parameters**
-        * ``value``: the number to map.
-        * ``fromLow``: the lower bound of the value’s current range.
-        * ``fromHigh``: the upper bound of the value’s curr+ent range.
-        * ``toLow``: the lower bound of the value’s target range.
-        * ``toHigh``: the upper bound of the value’s target range.
+    **Paramètres**
+        * ``value`` : la valeur à mapper.
+        * ``fromLow`` : la borne inférieure de la plage actuelle de la valeur.
+        * ``fromHigh`` : la borne supérieure de la plage actuelle de la valeur.
+        * ``toLow`` : la borne inférieure de la plage cible.
+        * ``toHigh`` : la borne supérieure de la plage cible.
 
-If the potentiometer controls the LED, you can also use the map to complete the task.
+Si le potentiomètre contrôle la LED, vous pouvez également utiliser la fonction map() pour réaliser la tâche.
 
 .. code-block:: arduino
 
@@ -113,18 +110,18 @@ If the potentiometer controls the LED, you can also use the map to complete the 
     analogWrite(led,y);
 
 
-**Notes and Warnings**
+**Notes et avertissements**
 
-* The "lower bound" of both ranges may be larger or smaller than the "upper bound", which means that the ``map()`` function can be used to reverse a range of numbers.
+* Les "bornes inférieures" des deux plages peuvent être plus grandes ou plus petites que les "bornes supérieures", ce qui signifie que la fonction ``map()`` peut également être utilisée pour inverser une plage de nombres.
 
   .. code-block:: arduino
 
     y = map(x,0,180,180,0);
 
-* Mapping also works well for negative numbers.
+* Le mappage fonctionne également pour les nombres négatifs.
 
   .. code-block:: arduino
 
     y = map(x,0,1023,-90,90);
 
-* The mapping uses integers, and the decimal places of floats are discarded.
+* Le mappage utilise des entiers, les décimales des nombres flottants sont donc supprimées.

@@ -1,76 +1,74 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans le monde de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Assistance d'experts** : Résolvez les problèmes après-vente et relevez des défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits.
+    - **Réductions spéciales** : Profitez de remises exclusives sur nos derniers produits.
+    - **Promotions et concours festifs** : Participez à des concours et des offres spéciales.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _ar_digital_write:
 
-1. Digital Write
-==============================
+1. Écriture Numérique
+=====================
 
-**Digital Write** is to output or write a digital signal to a digital pin. The digital signal has only two states, 0 or 1, 0V or 5V, so it allows some components, such as the LED and buzzer, to be on or off.
+**Écriture numérique** consiste à envoyer ou écrire un signal numérique à une broche numérique. Le signal numérique n’a que deux états : 0 ou 1, 0V ou 5V. Cela permet de contrôler certains composants, comme une LED ou un buzzer, pour les allumer ou les éteindre.
 
-On the Arduino R4 board, there are 14 digital I/0 pins from 0 to 13, now use the ``pinMode()`` and ``digitalWrite()`` functions to write a high or low level to these digital pins.
+Sur la carte Arduino R4, il y a 14 broches numériques d'entrée/sortie (I/O) numérotées de 0 à 13. Utilisez les fonctions ``pinMode()`` et ``digitalWrite()`` pour envoyer un niveau haut ou bas à ces broches numériques.
 
 
-* ``pinMode(pin, mode)``: Configure the specific pin as ``INPUT`` or ``OUTPUT``, here it needs to be set as ``OUTPUT``. 
+* ``pinMode(pin, mode)`` : Configurez une broche spécifique comme ``INPUT`` ou ``OUTPUT`` ; ici, elle doit être définie comme ``OUTPUT``.
 
-   **Syntax**
+   **Syntaxe**
       pinMode(pin, mode)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number to set the mode of.
-    * ``mode``: ``INPUT``, ``OUTPUT``, or ``INPUT_PULLUP``.
+   **Paramètres**
+    * ``pin`` : le numéro de la broche Arduino à configurer.
+    * ``mode`` : ``INPUT``, ``OUTPUT`` ou ``INPUT_PULLUP``.
 
+* ``digitalWrite(pin, value)`` : Écrit un niveau haut (5V) ou un niveau bas (0V) sur une broche numérique pour changer l'état de fonctionnement du composant. Si la broche a été configurée comme sortie avec ``pinMode()``, sa tension sera réglée en conséquence : 5V (ou 3,3V sur les cartes 3,3V) pour HIGH, 0V (masse) pour LOW.
 
-* ``digitalWrite(pin, value)``: Write a high level (5V) or a low level (0V) to a digital pin to change the operating state of the component. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.
-
-
-   **Syntax**
+   **Syntaxe**
       digitalWrite(pin, value)
 
-   **Parameters**
-    * ``pin``: the Arduino pin number.
-    * ``value``: ``HIGH`` or ``LOW``.
+   **Paramètres**
+    * ``pin`` : le numéro de la broche Arduino.
+    * ``value`` : ``HIGH`` ou ``LOW``.
 
-**Example of Digital Write:**
+**Exemple d'Écriture Numérique :**
 
 .. code-block:: arduino
 
    const int pin = 13;
 
    void setup() {
-      pinMode(pin, OUTPUT);    // sets the digital pin as output
+      pinMode(pin, OUTPUT);    // configure la broche numérique comme sortie
    }
 
    void loop() {
-      digitalWrite(pin, HIGH); // sets the digital pin on
-      delay(1000);            // waits for a second
-      digitalWrite(pin, LOW);  // sets the digital pin off
-      delay(1000);            // waits for a second
+      digitalWrite(pin, HIGH); // allume la broche numérique
+      delay(1000);            // attend une seconde
+      digitalWrite(pin, LOW);  // éteint la broche numérique
+      delay(1000);            // attend une seconde
    }
 
 .. image:: img/1_led.jpg
 
 
-**Notes and Warnings**
+**Notes et Avertissements**
 
-* The pins 0~13 are all digital pins.
-* Do not use pins 0 and 1, as they are used to communicate with the computer. Connecting anything to these pins will interfere with communication, including causing the upload board to fail.
-* If the digital pins are used up, the analog pins (A0-A5) can also be used as digital pins.
+* Les broches 0 à 13 sont toutes des broches numériques.
+* Évitez d'utiliser les broches 0 et 1, car elles sont utilisées pour communiquer avec l'ordinateur. Connecter quoi que ce soit à ces broches peut interférer avec la communication, y compris provoquer un échec du téléchargement vers la carte.
+* Si toutes les broches numériques sont utilisées, les broches analogiques (A0-A5) peuvent également être utilisées comme broches numériques.
 
-**Related Components**
+**Composants Associés**
 
-Below are the related components, you can click in to learn how to use them.
+Vous trouverez ci-dessous les composants associés. Cliquez pour apprendre à les utiliser.
 
 .. toctree::
    :maxdepth: 2

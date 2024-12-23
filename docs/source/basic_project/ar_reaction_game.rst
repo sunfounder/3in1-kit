@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-6.5 Reaction Game
+6.5 Jeu de Réaction
 ==========================
 
-Our body has many reaction times, such as audio RT, visual RT, touch RT, etc.
+Notre corps réagit à différents types de stimuli tels que les sons (RT audio), les images (RT visuel), ou le toucher (RT tactile).
 
-Reaction times have many effects on our daily life, for example, slower than normal reaction times when driving can lead to serious consequences.
+Les temps de réaction jouent un rôle clé dans notre vie quotidienne. Par exemple, un temps de réaction plus lent que la normale lors de la conduite peut avoir des conséquences graves.
 
-In this project, we use 3 buttons and 2 LEDs to measure our visual reaction time.
+Dans ce projet, nous utilisons 3 boutons et 2 LEDs pour mesurer le temps de réaction visuel.
 
-The serial monitor of the Arduino displays the message "waiting..."
-After pressing the Ready button, one of the two LEDs must light up randomly after a random time interval. It is important that the testee pushes the corresponding button as soon as possible.
-The Arduino records the time difference between when the LED lights up and when the person presses the corresponding button, and prints the measured response time on the Arduino serial monitor.
+Le moniteur série de l'Arduino affiche le message "waiting...".
+Après avoir appuyé sur le bouton Ready, l'une des deux LEDs s'allume de manière aléatoire après un intervalle de temps aléatoire. Le participant doit appuyer sur le bouton correspondant le plus rapidement possible.
+L'Arduino enregistre la différence de temps entre le moment où la LED s'allume et celui où le bouton correspondant est pressé, et affiche le temps de réaction mesuré sur le moniteur série.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants :
 
-It's definitely convenient to buy a whole kit, here's the link: 
+C'est pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - 3 in 1 Starter Kit
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
+    *   - Kit de démarrage 3 en 1
         - 380+
         - |link_3IN1_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`cpn_uno`
         - \-
@@ -64,12 +64,12 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_button`
         - |link_button_buy|
 
-**Schematic**
+**Schéma**
 
 .. image:: img/wiring_reaction_game.png
     :align: center
 
-**Wiring**
+**Câblage**
 
 .. image:: img/6.5_reaction_game_bb.png
     :width: 600
@@ -79,18 +79,17 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``6.5_reaction_time.ino`` under the path of ``3in1-kit\learning_project\6.5_reversingAid`` directly.
-    * Or copy this code into Arduino IDE.
-    
-    * Please make sure you have added the ``LiquidCrystal_I2C`` library, detailed tutorials refer to :ref:`install_libraries_ar`.
+    * Ouvrez le fichier ``6.5.reaction_time.ino`` dans le répertoire ``3in1-kit\learning_project\6.5_reversingAid``.
+    * Ou copiez ce code dans l'IDE Arduino.
+    * Assurez-vous d'avoir ajouté la bibliothèque ``LiquidCrystal_I2C``, les tutoriels détaillés sont disponibles ici : :ref:`install_libraries_ar`.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4313dd1c-e1d2-4939-ae20-0a5b82a12390/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Comment ça marche ?**
 
-#. Initialize the buttons and LEDs, 2 interrupt are used here to read the button status.
+#. Initialisez les boutons et LEDs. Deux interruptions sont utilisées ici pour lire l'état des boutons.
 
     .. code-block:: arduino
 
@@ -104,9 +103,7 @@ You can also buy them separately from the links below.
             ...
         }
 
-
-
-#. If the ``rstBtn`` button is pressed, the game starts again. At a random time between 2 and 5ms, make one of the LEDs light up.
+#. Si le bouton ``rstBtn`` est pressé, le jeu recommence. Après un délai aléatoire compris entre 2 et 5ms, l'une des LEDs s'allume.
 
     .. code-block:: arduino
 
@@ -132,11 +129,11 @@ You can also buy them separately from the links below.
             delay(200);
         }
 
-    * When flag is -1 and ``rstBtn`` button is pressed, use ``random()`` function to generate a random time of 2-5s.
-    * This time is then used to control the lighting of the LEDs.
-    * Also the lighting of 2 LEDs is randomly generated by ``randomTime % 2`` with 0 and 1. If flag is 0, then LED1 is lit; if 1, then LED2 is lit.
+    * Lorsque flag vaut -1 et que le bouton ``rstBtn`` est pressé, utilisez la fonction ``random()`` pour générer un délai aléatoire de 2 à 5 secondes.
+    * Ce délai est utilisé pour contrôler l'allumage des LEDs.
+    * L'allumage des 2 LEDs est généré aléatoirement par ``randomTime % 2``, soit 0 pour la LED1, soit 1 pour la LED2.
 
-#. About ``pressed1()`` function
+#. À propos de la fonction ``pressed1()``
 
     .. code-block:: arduino
 
@@ -155,9 +152,9 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 1 is pressed. When button 1 is pressed, if the flag is 0 at this time, the response time will be printed, otherwise the press error will be prompted.
+    Cette fonction est déclenchée lorsque le bouton 1 est pressé. Si flag vaut 0 à ce moment-là, le temps de réaction est affiché ; sinon, une erreur de clic est signalée.
 
-#. About ``pressed2()`` function
+#. À propos de la fonction ``pressed2()``
 
     .. code-block:: arduino
 
@@ -176,6 +173,4 @@ You can also buy them separately from the links below.
             flag = -1;
         }
 
-    This is the function that will be triggered when button 2 is pressed. When button 2 is pressed, if the flag is 1 at this time, the response time will be printed, otherwise the press error will be prompted.
-
-
+    Cette fonction est déclenchée lorsque le bouton 2 est pressé. Si flag vaut 1 à ce moment-là, le temps de réaction est affiché ; sinon, une erreur de clic est signalée.
