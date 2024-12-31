@@ -1,5 +1,4 @@
 //the number of the LED pin
-
 int ledPin = 9;    
 
 void setup() {
