@@ -29,11 +29,11 @@
 
 モバイルのBlynkではDatastreamを編集することができないので、これらのステップはウェブサイドで行う必要があります。
 
-#. **Datastream** ページで、ジョイスティックのX軸の値を記録するための **Virtual Pin** タイプの **Datastream** を作成します。NAMEを ``Xvalue``、DATA TYPEを ``Integer``、MINとMAXを ``-10`` と ``10`` に設定します。
+#. **Datastream** ページで、ジョイスティックのX軸の値を記録するための **Virtual Pin** タイプの **Datastream** を作成します。NAMEを ``Xvalue`` 、DATA TYPEを ``Integer`` 、MINとMAXを ``-10`` と ``10`` に設定します。
 
     .. image:: img/sp220613_164507.png
 
-#. ジョイスティックのY軸の値を記録するための **Virtual Pin** タイプの **Datastream** を作成します。NAMEを ``Yvalue``、DATA TYPEを ``Integer``、MINとMAXを ``-10`` と ``10`` に設定します。
+#. ジョイスティックのY軸の値を記録するための **Virtual Pin** タイプの **Datastream** を作成します。NAMEを ``Yvalue`` 、DATA TYPEを ``Integer`` 、MINとMAXを ``-10`` と ``10`` に設定します。
 
     .. image:: img/sp220613_164717.png
 

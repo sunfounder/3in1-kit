@@ -28,7 +28,7 @@ Arduino R4ボードには、0から13までの14のデジタルI/Oピンがあ�
 
    **パラメータ**
     * ``pin``: モードを設定するArduinoのピン番号。
-    * ``mode``: ``INPUT``, ``OUTPUT``, または ``INPUT_PULLUP``。
+    * ``mode``: ``INPUT`` , ``OUTPUT`` , または ``INPUT_PULLUP`` 。
 
 * ``digitalWrite(pin, value)``: デジタルピンに高レベル（5V）または低レベル（0V）を書き込み、コンポーネントの動作状態を変更します。もしピンがpinMode()でOUTPUTとして設定されていれば、その電圧は対応する値に設定されます：HIGHの場合は5V（または3.3Vボードの場合は3.3V）、LOWの場合は0V（グラウンド）。
 
@@ -37,7 +37,7 @@ Arduino R4ボードには、0から13までの14のデジタルI/Oピンがあ�
 
    **パラメータ**
     * ``pin``: Arduinoのピン番号。
-    * ``value``: ``HIGH`` または ``LOW``。
+    * ``value``: ``HIGH`` または ``LOW`` 。
 
 **デジタルライトの例：**
 

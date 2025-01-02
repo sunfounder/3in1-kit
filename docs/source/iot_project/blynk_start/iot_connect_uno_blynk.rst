@@ -29,7 +29,7 @@
 
 .. image:: img/blynk_copy_developer.png
 
-#. **Firmware info** に ``TEMPLATE_ID``、 ``DEVICE_NAME``、 ``AUTH_TOKEN`` が表示されます。後でコピーする必要があります。
+#. **Firmware info** に ``TEMPLATE_ID`` 、 ``DEVICE_NAME`` 、 ``AUTH_TOKEN`` が表示されます。後でコピーする必要があります。
 
 .. image:: img/blynk_copy_firmwareinfo.png
 
