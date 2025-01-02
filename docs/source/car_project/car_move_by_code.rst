@@ -171,7 +171,7 @@
     * ``pin``: Arduinoのピン番号。
     * ``value``: HIGHまたはLOW。
     
-    ピンをデジタルに設定して、HIGHまたはLOWの値を書き込みます。もしピンが``pinMode()``で``OUTPUT``として設定されていれば、その電圧は対応する値に設定されます：HIGHの場合は5V（3.3Vのボードでは3.3V）、LOWの場合は0V（接地）。
+    ピンをデジタルに設定して、HIGHまたはLOWの値を書き込みます。もしピンが ``pinMode()`` で ``OUTPUT`` として設定されていれば、その電圧は対応する値に設定されます：HIGHの場合は5V（3.3Vのボードでは3.3V）、LOWの場合は0V（接地）。
 
 * `pinMode(pin, mode) <https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/>`_
 

@@ -174,7 +174,7 @@
         pinMode(ledPin,OUTPUT);
     }
 
-ledPinの ``pinMode`` と ``digitalWrite`` については、すでにお馴染みだと思いますので、再度説明しません。注目すべきは、``BLYNK_WRITE(V0)`` 関数です。
+ledPinの ``pinMode`` と ``digitalWrite`` については、すでにお馴染みだと思いますので、再度説明しません。注目すべきは、 ``BLYNK_WRITE(V0)`` 関数です。
 
 この関数が行うのは、Blynkの ``V0`` の値が変更されると、Blynk.Cloudがあなたのデバイスに「 **Virtual Pin** V0に書き込みをしています」と通知し、この情報を受け取ったデバイスが何かの動作をすることができることです。
 

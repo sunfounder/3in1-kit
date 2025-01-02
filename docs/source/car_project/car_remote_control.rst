@@ -94,7 +94,7 @@
 
 .. note::
 
-    * ``3in1-kit\car_project\9.remote_control``のパスの下にある ``9.remote_control.ino`` ファイルを開きます。
+    * ``3in1-kit\car_project\9.remote_control`` のパスの下にある ``9.remote_control.ino`` ファイルを開きます。
     * または、このコードを **Arduino IDE** にコピーします。
     * ここで ``IRremote`` ライブラリが使用されています。 **Library Manager** からインストールできます。
   

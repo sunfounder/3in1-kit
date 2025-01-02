@@ -28,7 +28,7 @@ Arduino R3ボードには、0から13までの14個のデジタルI/0ピンが�
 
    **パラメータ**
     * ``pin``: モードを設定するArduinoピン番号。
-    * ``mode``: ``INPUT``, ``OUTPUT``, または ``INPUT_PULLUP``。
+    * ``mode``: ``INPUT`` , ``OUTPUT`` , または ``INPUT_PULLUP`` 。
 
 * ``digitalWrite(pin, value)``: デジタルピンに高レベル(5V)または低レベル(0V)を書き込み、コンポーネントの動作状態を変更します。pinがpinMode()でOUTPUTとして設定されている場合、その電圧は次の値に設定されます：HIGHの場合は5V（3.3Vボードでは3.3V）、LOWの場合は0V（グラウンド）。
 
@@ -37,7 +37,7 @@ Arduino R3ボードには、0から13までの14個のデジタルI/0ピンが�
 
    **パラメータ**
     * ``pin``: Arduinoのピン番号。
-    * ``value``: ``HIGH`` または ``LOW``。
+    * ``value``: ``HIGH`` または ``LOW`` 。
 
 **デジタルライトの例:**
 
